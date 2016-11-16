@@ -4,9 +4,9 @@
   <subtitle>The more effort ,the more lucky</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="https://yangyiyuan.github.io/"/>
   <updated>2016-11-16T05:04:39.000Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>https://yangyiyuan.github.io/</id>
   
   <author>
     <name>Ewan</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>My New Post</title>
-    <link href="http://yoursite.com/2016/11/15/My-New-Post/"/>
-    <id>http://yoursite.com/2016/11/15/My-New-Post/</id>
+    <link href="https://yangyiyuan.github.io/2016/11/15/My-New-Post/"/>
+    <id>https://yangyiyuan.github.io/2016/11/15/My-New-Post/</id>
     <published>2016-11-15T05:37:43.000Z</published>
     <updated>2016-11-16T05:04:39.000Z</updated>
     
@@ -34,19 +34,19 @@
     
     </summary>
     
-      <category term="杂谈" scheme="http://yoursite.com/categories/%E6%9D%82%E8%B0%88/"/>
+      <category term="杂谈" scheme="https://yangyiyuan.github.io/categories/%E6%9D%82%E8%B0%88/"/>
     
     
-      <category term="开篇" scheme="http://yoursite.com/tags/%E5%BC%80%E7%AF%87/"/>
+      <category term="开篇" scheme="https://yangyiyuan.github.io/tags/%E5%BC%80%E7%AF%87/"/>
     
-      <category term="胡侃" scheme="http://yoursite.com/tags/%E8%83%A1%E4%BE%83/"/>
+      <category term="胡侃" scheme="https://yangyiyuan.github.io/tags/%E8%83%A1%E4%BE%83/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/2016/11/15/hello-world/"/>
-    <id>http://yoursite.com/2016/11/15/hello-world/</id>
+    <link href="https://yangyiyuan.github.io/2016/11/15/hello-world/"/>
+    <id>https://yangyiyuan.github.io/2016/11/15/hello-world/</id>
     <published>2016-11-15T02:48:51.000Z</published>
     <updated>2016-11-15T02:48:51.000Z</updated>
     
