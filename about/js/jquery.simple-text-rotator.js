@@ -62,9 +62,9 @@
             if((index + 1) == array.length) index = -1
             
             el.html("");
-            $("<span class="front">" + initial + "</span>").appendTo(el);
-            $("<span class="back">" + array[index + 1] + "</span>").appendTo(el);
-            el.wrapInner("<span class="rotating">").find(".rotating").hide().addClass("flip").show().css({
+            $("<span class='front'>" + initial + "</span>").appendTo(el);
+            $("<span class='back'>" + array[index + 1] + "</span>").appendTo(el);
+            el.wrapInner("<span class='rotating' />").find(".rotating").hide().addClass("flip").show().css({
               "-webkit-transform": " rotateY(-180deg)",
               "-moz-transform": " rotateY(-180deg)",
               "-o-transform": " rotateY(-180deg)",
@@ -83,9 +83,9 @@
             if((index + 1) == array.length) index = -1
             
             el.html("");
-            $("<span class="front">" + initial + "</span>").appendTo(el);
-            $("<span class="back">" + array[index + 1] + "</span>").appendTo(el);
-            el.wrapInner("<span class="rotating">").find(".rotating").hide().addClass("flip up").show().css({
+            $("<span class='front'>" + initial + "</span>").appendTo(el);
+            $("<span class='back'>" + array[index + 1] + "</span>").appendTo(el);
+            el.wrapInner("<span class='rotating' />").find(".rotating").hide().addClass("flip up").show().css({
               "-webkit-transform": " rotateX(-180deg)",
               "-moz-transform": " rotateX(-180deg)",
               "-o-transform": " rotateX(-180deg)",
@@ -104,9 +104,9 @@
             if((index + 1) == array.length) index = -1
             
             el.html("");
-            $("<span class="front">" + initial + "</span>").appendTo(el);
-            $("<span class="back">" + array[index + 1] + "</span>").appendTo(el);
-            el.wrapInner("<span class="rotating">").find(".rotating").hide().addClass("flip cube").show().css({
+            $("<span class='front'>" + initial + "</span>").appendTo(el);
+            $("<span class='back'>" + array[index + 1] + "</span>").appendTo(el);
+            el.wrapInner("<span class='rotating' />").find(".rotating").hide().addClass("flip cube").show().css({
               "-webkit-transform": " rotateY(180deg)",
               "-moz-transform": " rotateY(180deg)",
               "-o-transform": " rotateY(180deg)",
@@ -125,9 +125,9 @@
             if((index + 1) == array.length) index = -1
             
             el.html("");
-            $("<span class="front">" + initial + "</span>").appendTo(el);
-            $("<span class="back">" + array[index + 1] + "</span>").appendTo(el);
-            el.wrapInner("<span class="rotating">").find(".rotating").hide().addClass("flip cube up").show().css({
+            $("<span class='front'>" + initial + "</span>").appendTo(el);
+            $("<span class='back'>" + array[index + 1] + "</span>").appendTo(el);
+            el.wrapInner("<span class='rotating' />").find(".rotating").hide().addClass("flip cube up").show().css({
               "-webkit-transform": " rotateX(180deg)",
               "-moz-transform": " rotateX(180deg)",
               "-o-transform": " rotateX(180deg)",
@@ -143,7 +143,7 @@
             index = $.inArray(el.text(), array)
             if((index + 1) == array.length) index = -1
             
-            el.wrapInner("<span class="rotating spin">").find(".rotating").hide().text(array[index + 1]).show().css({
+            el.wrapInner("<span class='rotating spin' />").find(".rotating").hide().text(array[index + 1]).show().css({
               "-webkit-transform": "rotate(0) scale(1)",
               "-moz-transform": "rotate(0) scale(1)",
               "-o-transform": "rotate(0) scale(1)",
@@ -167,4 +167,4 @@
     });
   }
   
-}(window.jQuery);</span></span></span></span></span>
+}(window.jQuery);
