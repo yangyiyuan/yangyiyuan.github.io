@@ -86,22 +86,22 @@
 
 
 
-<meta name="description" content="近期貌似对 laravel 有使用的需求，就自己安装了一次，发现对于有些人来说确实有点文档不够全面的感觉，现将具体的安装方法总结如下。
-Composer安装：
-Laravel 框架使用 Composer 来管理代码依赖性。在Windows操作系统中，你可以使用 Composer 的Windows安装工具(https://getcomposer.org/Composer-Setup.exe)。对P">
+<meta name="description" content="近期貌似对 laravel 有使用的需求，就自己安装了一次，发现对于有些人来说确实有点文档不够全面的感觉，现将具体的安装方法总结如下。Composer安装：
+
+Laravel 框架使用 Composer 来管理代码依赖性。在Windows操作系统中，你可以使用 Composer 的Windows安装工具(https://getcomposer.org/Composer-Setup.exe)。对PH">
 <meta property="og:type" content="article">
 <meta property="og:title" content="laravel安装">
 <meta property="og:url" content="https://yangyiyuan.github.io/2014/10/13/laravel安装/index.html">
 <meta property="og:site_name" content="Ewan's Blog">
-<meta property="og:description" content="近期貌似对 laravel 有使用的需求，就自己安装了一次，发现对于有些人来说确实有点文档不够全面的感觉，现将具体的安装方法总结如下。
-Composer安装：
-Laravel 框架使用 Composer 来管理代码依赖性。在Windows操作系统中，你可以使用 Composer 的Windows安装工具(https://getcomposer.org/Composer-Setup.exe)。对P">
-<meta property="og:updated_time" content="2016-11-17T10:08:39.000Z">
+<meta property="og:description" content="近期貌似对 laravel 有使用的需求，就自己安装了一次，发现对于有些人来说确实有点文档不够全面的感觉，现将具体的安装方法总结如下。Composer安装：
+
+Laravel 框架使用 Composer 来管理代码依赖性。在Windows操作系统中，你可以使用 Composer 的Windows安装工具(https://getcomposer.org/Composer-Setup.exe)。对PH">
+<meta property="og:updated_time" content="2016-11-17T10:10:18.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="laravel安装">
-<meta name="twitter:description" content="近期貌似对 laravel 有使用的需求，就自己安装了一次，发现对于有些人来说确实有点文档不够全面的感觉，现将具体的安装方法总结如下。
-Composer安装：
-Laravel 框架使用 Composer 来管理代码依赖性。在Windows操作系统中，你可以使用 Composer 的Windows安装工具(https://getcomposer.org/Composer-Setup.exe)。对P">
+<meta name="twitter:description" content="近期貌似对 laravel 有使用的需求，就自己安装了一次，发现对于有些人来说确实有点文档不够全面的感觉，现将具体的安装方法总结如下。Composer安装：
+
+Laravel 框架使用 Composer 来管理代码依赖性。在Windows操作系统中，你可以使用 Composer 的Windows安装工具(https://getcomposer.org/Composer-Setup.exe)。对PH">
 
 
 
@@ -394,19 +394,9 @@ Laravel 框架使用 Composer 来管理代码依赖性。在Windows操作系统�
       
 
       
-        <ul>
-<li>近期貌似对 <code>laravel</code> 有使用的需求，就自己安装了一次，发现对于有些人来说确实有点文档不够全面的感觉，现将具体的安装方法总结如下。</li>
-<li>Composer安装：<blockquote>
-<p>Laravel 框架使用 Composer 来管理代码依赖性。<br>在Windows操作系统中，你可以使用 Composer 的Windows安装工具(<a href="https://getcomposer.org/Composer-Setup.exe)。" target="_blank" rel="external">https://getcomposer.org/Composer-Setup.exe)。</a><br>对PHP版本有要求(最好5.4.0以上)</p>
-</blockquote>
-</li>
-<li>laravel安装：<blockquote>
-<p>Composer安装完成后，在dos模式中，你的网站目录执行下面命令即可：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ composer create-project laravel/laravel your-project-name</div></pre></td></tr></table></figure>
-</blockquote>
-</li>
-</ul>
+        <p>近期貌似对 <code>laravel</code> 有使用的需求，就自己安装了一次，发现对于有些人来说确实有点文档不够全面的感觉，现将具体的安装方法总结如下。<br>Composer安装：</p>
 <blockquote>
+<p>Laravel 框架使用 Composer 来管理代码依赖性。<br>在Windows操作系统中，你可以使用 Composer 的Windows安装工具(<a href="https://getcomposer.org/Composer-Setup.exe)。" target="_blank" rel="external">https://getcomposer.org/Composer-Setup.exe)。</a><br>对PHP版本有要求(最好5.4.0以上)<br>laravel安装：<br>Composer安装完成后，在dos模式中，你的网站目录执行下面命令即可：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ composer create-project laravel/laravel your-project-name</div></pre></td></tr></table></figure></p>
 <p>Composer会自动帮你下载Laravel及安装。<br>部署虚拟主机(Apache相关知识)：<br>如果之前对Apache的配置环境没有设置过：<br>(1) Apache配置设置，打开(路径看个人项目环境而定)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">C:\wamp\bin\apache\apache2.4.9\conf\httpd.conf</div></pre></td></tr></table></figure></p>
 </blockquote>
 <p>第512~513行，将默认的虚拟主机设置打开(默认是关闭的，前边#去掉即可)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># Virtual hosts</div><div class="line">Include conf/extra/httpd-vhosts.conf</div></pre></td></tr></table></figure></p>
