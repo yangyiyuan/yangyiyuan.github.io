@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yangyiyuan.github.io/"/>
-  <updated>2016-11-17T08:27:59.000Z</updated>
+  <updated>2016-11-17T08:31:07.000Z</updated>
   <id>https://yangyiyuan.github.io/</id>
   
   <author>
@@ -20,13 +20,17 @@
     <link href="https://yangyiyuan.github.io/2016/11/17/Firing%EF%BC%81%EF%BC%81%EF%BC%81/"/>
     <id>https://yangyiyuan.github.io/2016/11/17/Firing！！！/</id>
     <published>2016-11-17T08:06:39.000Z</published>
-    <updated>2016-11-17T08:27:59.000Z</updated>
+    <updated>2016-11-17T08:31:07.000Z</updated>
     
-    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">经过两天的奋战，Ewan&apos;s Blog即将与大家见面。目前网站定位方向为技术性博客，可能稍后会有些栏目的调整，期待大家的关注。</div><div class="line"></div><div class="line">之前也有做过自己的博客网站，经历了服务器到期,域名续费,赶上有段时间工作调整,没时间整理,导致博客更新中断.而后一直有新建博客的想法,说到这个特别的感谢一下[胖佳](http://www.liuxiaojia.cc/) 在网站的搭建过程中的先锋精神和技术指导。还要感谢[jarvan君](www.pythondev.org)和[小白](http://old.tumiaoya.com/)的技术指导，说句实在话jarvan君是我工作以来对我帮助最大的一位，之前一起住学校宿舍、一起在一家公司上班，生活中是个老大哥、工作中亦师亦友的这种关系令我享受在其中。当然上面提到胖佳和小白那两只货是我在北京性格上很合得来的哥们，为此哥几个一周撸五次串也不为过。</div><div class="line"></div><div class="line">在北京学习的那几个月是我人生的一个转折点，更是我人生一个新的起点。</div><div class="line"></div><div class="line"></div><div class="line">既然有了一个好的起点，我们就跟要努力向前冲，Firing，Firing！！！</div></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<p>经过两天的奋战，<code>Ewan&#39;s Blog</code> 即将与大家见面。目前网站定位方向为技术性博客，可能稍后会有些栏目的调整，期待大家的关注。</p>
+<p>之前也有做过自己的博客网站，经历了服务器到期,域名续费,赶上有段时间工作调整,没时间整理,导致博客更新中断.而后一直有新建博客的想法,说到这个特别的感谢一下<a href="http://www.liuxiaojia.cc/" target="_blank" rel="external">胖佳</a> 在网站的搭建过程中的先锋精神和技术指导。还要感谢<a href="www.pythondev.org">jarvan君</a>和<a href="http://old.tumiaoya.com/" target="_blank" rel="external">小白</a>的技术指导，说句实在话jarvan君是我工作以来对我帮助最大的一位，之前一起住学校宿舍、一起在一家公司上班，生活中是个老大哥、工作中亦师亦友的这种关系令我享受在其中。当然上面提到胖佳和小白那两只货是我在北京性格上很合得来的哥们，为此哥几个一周撸五次串也不为过。</p>
+<p>在北京学习的那几个月是我人生的一个转折点，更是我人生一个新的起点。</p>
+<h3 id="既然有了一个好的起点，我们就跟要努力向前冲，Firing，Firing！！！"><a href="#既然有了一个好的起点，我们就跟要努力向前冲，Firing，Firing！！！" class="headerlink" title="既然有了一个好的起点，我们就跟要努力向前冲，Firing，Firing！！！"></a>既然有了一个好的起点，我们就跟要努力向前冲，Firing，Firing！！！</h3>]]></content>
     
     <summary type="html">
     
-      &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/di
+      &lt;p&gt;经过两天的奋战，&lt;code&gt;Ewan&amp;#39;s Blog&lt;/code&gt; 即将与大家见面。目前网站定位方向为技术性博客，可能稍后会有些栏目的调整，期待大家的关注。&lt;/p&gt;
+&lt;p&gt;之前也有做过自己的博客网站，经历了服务器到期,域名续费,赶上有段时间工作调整,没时间整理,导致博
     
     </summary>
     
@@ -36,61 +40,6 @@
       <category term="微语" scheme="https://yangyiyuan.github.io/tags/%E5%BE%AE%E8%AF%AD/"/>
     
       <category term="胡侃" scheme="https://yangyiyuan.github.io/tags/%E8%83%A1%E4%BE%83/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>My New Post</title>
-    <link href="https://yangyiyuan.github.io/2016/11/15/My-New-Post/"/>
-    <id>https://yangyiyuan.github.io/2016/11/15/My-New-Post/</id>
-    <published>2016-11-15T05:37:43.000Z</published>
-    <updated>2016-11-16T05:04:39.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="hello-world"><a href="#hello-world" class="headerlink" title="hello world!"></a>hello world!</h1><blockquote>
-<p>其实我也没啥可写的<br>就是看看 有人打赏我不(^_^)</p>
-</blockquote>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;hello-world&quot;&gt;&lt;a href=&quot;#hello-world&quot; class=&quot;headerlink&quot; title=&quot;hello world!&quot;&gt;&lt;/a&gt;hello world!&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;其实我也没啥可写的&lt;br&gt;就是看看 有
-    
-    </summary>
-    
-      <category term="杂谈" scheme="https://yangyiyuan.github.io/categories/%E6%9D%82%E8%B0%88/"/>
-    
-    
-      <category term="胡侃" scheme="https://yangyiyuan.github.io/tags/%E8%83%A1%E4%BE%83/"/>
-    
-      <category term="开篇" scheme="https://yangyiyuan.github.io/tags/%E5%BC%80%E7%AF%87/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="https://yangyiyuan.github.io/2016/11/15/hello-world/"/>
-    <id>https://yangyiyuan.github.io/2016/11/15/hello-world/</id>
-    <published>2016-11-15T02:48:51.000Z</published>
-    <updated>2016-11-15T02:48:51.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
-    
-    </summary>
-    
     
   </entry>
   
