@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yangyiyuan.github.io/"/>
-  <updated>2016-11-17T09:27:22.000Z</updated>
+  <updated>2016-11-17T09:29:52.000Z</updated>
   <id>https://yangyiyuan.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://yangyiyuan.github.io/2016/11/17/Ubuntu%E7%B3%BB%E7%BB%9F%E4%B8%8B%E6%90%AD%E5%BB%BAlnmp%E7%8E%AF%E5%A2%83/"/>
     <id>https://yangyiyuan.github.io/2016/11/17/Ubuntu系统下搭建lnmp环境/</id>
     <published>2016-11-17T09:01:25.000Z</published>
-    <updated>2016-11-17T09:27:22.000Z</updated>
+    <updated>2016-11-17T09:29:52.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="环境：Ubuntu12-04-64"><a href="#环境：Ubuntu12-04-64" class="headerlink" title="环境：Ubuntu12.04 64"></a>环境：Ubuntu12.04 64</h3><ul>
 <li><p>登录以后首先更新一下源列表</p>
@@ -36,10 +36,8 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ vi /etc/nginx/sites-enabled/default</div></pre></td></tr></table></figure>
 </li>
 <li><p>打开初始的配置文件default做一下更改（内容替换或按下面的配置自己更改）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">server&#123;</div><div class="line">	listen 80;</div><div class="line">	root /var/www;</div><div class="line">	index index.php index.html index.htm;</div><div class="line">	server_name localhost;</div><div class="line">	location / &#123;</div><div class="line">		try_files $uri $uri/ /index.html;</div><div class="line">	&#125;</div><div class="line">	location ~ \.php$ &#123;</div><div class="line">		fastcgi_pass 127.0.0.1:9000;</div><div class="line">		fastcgi_index index.php;</div><div class="line">		fastcgi_param SCRIPT_FILENAME /var/www$fastcgi_script_name;</div><div class="line">		include /etc/nginx/fastcgi_params;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">server&#123;</div><div class="line">	listen 80;</div><div class="line">	root /var/www;</div><div class="line">	index index.php index.html index.htm;</div><div class="line">	server_name localhost;</div><div class="line">	location / &#123;</div><div class="line">		try_files $uri $uri/ /index.html;</div><div class="line">	&#125;</div><div class="line">	location ~ \.php$ &#123;</div><div class="line">		fastcgi_pass 127.0.0.1:9000;</div><div class="line">		fastcgi_index index.php;</div><div class="line">		fastcgi_param SCRIPT_FILENAME /var/www$fastcgi_script_name;</div><div class="line">		include /etc/nginx/fastcgi_params;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<ul>
 <li><p>保存后在/var/目录下创建www目录</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ mkdir www</div></pre></td></tr></table></figure>
 </li>
