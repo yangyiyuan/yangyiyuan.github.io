@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yangyiyuan.github.io/"/>
-  <updated>2016-11-17T09:31:51.000Z</updated>
+  <updated>2016-11-17T09:33:00.000Z</updated>
   <id>https://yangyiyuan.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://yangyiyuan.github.io/2016/11/17/Ubuntu%E7%B3%BB%E7%BB%9F%E4%B8%8B%E6%90%AD%E5%BB%BAlnmp%E7%8E%AF%E5%A2%83/"/>
     <id>https://yangyiyuan.github.io/2016/11/17/Ubuntu系统下搭建lnmp环境/</id>
     <published>2016-11-17T09:01:25.000Z</published>
-    <updated>2016-11-17T09:31:51.000Z</updated>
+    <updated>2016-11-17T09:33:00.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="环境：Ubuntu12-04-64"><a href="#环境：Ubuntu12-04-64" class="headerlink" title="环境：Ubuntu12.04 64"></a>环境：Ubuntu12.04 64</h3><ul>
 <li><p>登录以后首先更新一下源列表</p>
@@ -70,7 +70,7 @@
 <li><p>至此完毕</p>
 </li>
 <li>建议重启一遍Ngnix、PHP、MySQL，开发环境就可以正式投入使用了。</li>
-<li>尊重原创请挂连接，在此感谢<a href="http://old.tumiaoya.com/" target="_blank" rel="external">小白</a>、<a href="www.pythondev.org">jarvan君</a>、以及广大奉献资料的网友们。</li>
+<li>尊重原创请挂连接，在此感谢<a href="http://old.tumiaoya.com/" target="_blank" rel="external">小白</a>、<a href="http://www.pythondev.org" target="_blank" rel="external">jarvan君</a>、以及广大奉献资料的网友们。</li>
 </ul>
 ]]></content>
     
