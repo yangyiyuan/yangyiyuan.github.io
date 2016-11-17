@@ -317,7 +317,7 @@
               
                 
                 <a class="post-title-link" href="/2016/11/17/MySQL安装dpkg错误解决方案/" itemprop="url">
-                  未命名
+                  MySQL安装dpkg错误解决方案
                 </a>
               
             
@@ -331,7 +331,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-11-17T17:46:12+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-11-17T17:39:04+08:00">
                 2016-11-17
               </time>
             
@@ -341,6 +341,24 @@
             
           </span>
 
+          
+            <span class="post-category" >
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/MySQL/" itemprop="url" rel="index">
+                    <span itemprop="name">MySQL</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -376,14 +394,7 @@
       
         
           
-            <hr>
-<p>title: MySQL安装dpkg错误解决方案<br>date: 2016-11-17 17:39:04<br>tags:</p>
-<pre><code>- Linux
-- MySQL
-</code></pre><p>categories: </p>
-<pre><code>- MySQL
-</code></pre><hr>
-<ul>
+            <ul>
 <li><p>Ewan在Ubuntu下安装MySQL的时候出现了一下错误问题：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">start: Job failed to start</div><div class="line">invoke-rc.d: initscript mysql, action &quot;start&quot; failed.</div><div class="line">dpkg: error processing mysql-server-5.5 (--configure):</div><div class="line">subprocess installed post-installation script returned error exit status 1</div><div class="line">dpkg: dependency problems prevent configuration of mysql-server:</div><div class="line">mysql-server depends on mysql-server-5.5; however:</div><div class="line">Package mysql-server-5.5 is not configured yet.</div><div class="line">dpkg: error processing mysql-server (--configure):</div><div class="line">dependency problems - leaving unconfigured</div><div class="line">No apport report written because the error message indicates its a followup error from a previous failure.</div><div class="line">Errors were encountered while processing:</div><div class="line">mysql-server-5.5</div><div class="line">mysql-server</div><div class="line">E: Sub-process /usr/bin/dpkg returned an error code (1)</div></pre></td></tr></table></figure>
 </li>
@@ -569,7 +580,7 @@
 <li><p>输入密码进入MySQL数据库代表安装成功。<br>本人安装的时候出现：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ E:/usr/bin/dpkg returned an error code ...</div></pre></td></tr></table></figure>
 </li>
-<li><p>错误字样，解决问题见本站MySQL安装dpkg错误解决方案。 </p>
+<li><p>错误字样，解决问题见本站<a href="http://www.iooeo.com/2016/11/17/MySQL%E5%AE%89%E8%A3%85dpkg%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" target="_blank" rel="external">MySQL安装dpkg错误解决方案</a>。 </p>
 </li>
 <li><p>配置MySQL远程连接：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ vi /etc/mysql/my.cnf --打开MySQL配置文件找到bind-address = 127.0.0.1，前边加上#，注释掉。</div><div class="line">$ service mysql restart --重启MySQL服务</div></pre></td></tr></table></figure>
@@ -948,7 +959,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
