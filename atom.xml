@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yangyiyuan.github.io/"/>
-  <updated>2016-11-17T09:47:55.000Z</updated>
+  <updated>2016-11-17T08:40:46.000Z</updated>
   <id>https://yangyiyuan.github.io/</id>
   
   <author>
@@ -16,11 +16,74 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Firing！！！</title>
+    <link href="https://yangyiyuan.github.io/2016/11/17/Firing%EF%BC%81%EF%BC%81%EF%BC%81/"/>
+    <id>https://yangyiyuan.github.io/2016/11/17/Firing！！！/</id>
+    <published>2016-11-17T08:06:39.000Z</published>
+    <updated>2016-11-17T08:40:46.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>经过两天的奋战，<code>Ewan&#39;s Blog</code> 终于与大家见面了。目前网站定位方向为技术性博客，可能稍后会有些栏目的调整，期待大家的关注。</p>
+<p>之前也有做过自己的博客网站,经历了服务器到期,域名续费,赶上有段时间工作调整没时间整理,导致博客更新中断.而后一直有新建博客的想法,说到这个特别的感谢一下<a href="http://www.liuxiaojia.cc/" target="_blank" rel="external">胖佳</a> 在网站的搭建过程中的先锋精神和技术指导.还要感谢<a href="http://www.pythondev.org" target="_blank" rel="external">jarvan君</a>和<a href="http://old.tumiaoya.com/" target="_blank" rel="external">小白</a>的技术指导,说句实在话jarvan君是我工作以来对我帮助最大的一位,之前一起住学校宿舍、一起在一家公司上班,生活中是个老大哥、工作中亦师亦友的这种关系令我享受在其中.当然上面提到胖佳和小白那两只货是我在北京性格上很合得来的哥们,为此哥几个一周撸五次串也不为过.</p>
+<p>在北京学习的那几个月是我人生的一个转折点,更是我人生一个新的起点.</p>
+<p><em>后续会陆续将之前整理的博客文章搬迁过来,也会发表一些新的文章出来供大家分享学习</em></p>
+<h3 id="既然有了一个好的起点，我们就跟要努力向前冲，Firing，Firing！！！"><a href="#既然有了一个好的起点，我们就跟要努力向前冲，Firing，Firing！！！" class="headerlink" title="既然有了一个好的起点，我们就跟要努力向前冲，Firing，Firing！！！"></a>既然有了一个好的起点，我们就跟要努力向前冲，Firing，Firing！！！</h3>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;经过两天的奋战，&lt;code&gt;Ewan&amp;#39;s Blog&lt;/code&gt; 终于与大家见面了。目前网站定位方向为技术性博客，可能稍后会有些栏目的调整，期待大家的关注。&lt;/p&gt;
+&lt;p&gt;之前也有做过自己的博客网站,经历了服务器到期,域名续费,赶上有段时间工作调整没时间整理,导致博
+    
+    </summary>
+    
+      <category term="杂谈" scheme="https://yangyiyuan.github.io/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    
+      <category term="微语" scheme="https://yangyiyuan.github.io/tags/%E5%BE%AE%E8%AF%AD/"/>
+    
+      <category term="胡侃" scheme="https://yangyiyuan.github.io/tags/%E8%83%A1%E4%BE%83/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MySQL安装dpkg错误解决方案</title>
+    <link href="https://yangyiyuan.github.io/2014/09/17/MySQL%E5%AE%89%E8%A3%85dpkg%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+    <id>https://yangyiyuan.github.io/2014/09/17/MySQL安装dpkg错误解决方案/</id>
+    <published>2014-09-17T09:39:04.000Z</published>
+    <updated>2016-11-17T09:54:14.000Z</updated>
+    
+    <content type="html"><![CDATA[<ul>
+<li><p>Ewan在Ubuntu下安装MySQL的时候出现了一下错误问题：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">start: Job failed to start</div><div class="line">invoke-rc.d: initscript mysql, action &quot;start&quot; failed.</div><div class="line">dpkg: error processing mysql-server-5.5 (--configure):</div><div class="line">subprocess installed post-installation script returned error exit status 1</div><div class="line">dpkg: dependency problems prevent configuration of mysql-server:</div><div class="line">mysql-server depends on mysql-server-5.5; however:</div><div class="line">Package mysql-server-5.5 is not configured yet.</div><div class="line">dpkg: error processing mysql-server (--configure):</div><div class="line">dependency problems - leaving unconfigured</div><div class="line">No apport report written because the error message indicates its a followup error from a previous failure.</div><div class="line">Errors were encountered while processing:</div><div class="line">mysql-server-5.5</div><div class="line">mysql-server</div><div class="line">E: Sub-process /usr/bin/dpkg returned an error code (1)</div></pre></td></tr></table></figure>
+</li>
+<li><p>经查证，现给出解决办法：<br>删除MySQL前，先删除/var/lib/mysql和/etc/mysql</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ sudo rm /var/lib/mysql/ -R</div><div class="line">$ sudo rm /etc/mysql/ -R</div><div class="line">$ sudo apt-get autoremove mysql* --purge</div><div class="line">$ sudo apt-get remove apparmor</div><div class="line">$ sudo apt-get install mysql-server mysql-common</div></pre></td></tr></table></figure>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Ewan在Ubuntu下安装MySQL的时候出现了一下错误问题：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div
+    
+    </summary>
+    
+      <category term="MySQL" scheme="https://yangyiyuan.github.io/categories/MySQL/"/>
+    
+    
+      <category term="Linux" scheme="https://yangyiyuan.github.io/tags/Linux/"/>
+    
+      <category term="MySQL" scheme="https://yangyiyuan.github.io/tags/MySQL/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Ubuntu系统下搭建lnmp环境</title>
-    <link href="https://yangyiyuan.github.io/2016/11/17/Ubuntu%E7%B3%BB%E7%BB%9F%E4%B8%8B%E6%90%AD%E5%BB%BAlnmp%E7%8E%AF%E5%A2%83/"/>
-    <id>https://yangyiyuan.github.io/2016/11/17/Ubuntu系统下搭建lnmp环境/</id>
-    <published>2016-11-17T09:01:25.000Z</published>
-    <updated>2016-11-17T09:47:55.000Z</updated>
+    <link href="https://yangyiyuan.github.io/2014/09/17/Ubuntu%E7%B3%BB%E7%BB%9F%E4%B8%8B%E6%90%AD%E5%BB%BAlnmp%E7%8E%AF%E5%A2%83/"/>
+    <id>https://yangyiyuan.github.io/2014/09/17/Ubuntu系统下搭建lnmp环境/</id>
+    <published>2014-09-17T09:01:25.000Z</published>
+    <updated>2016-11-17T09:56:13.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="环境：Ubuntu12-04-64"><a href="#环境：Ubuntu12-04-64" class="headerlink" title="环境：Ubuntu12.04 64"></a>环境：Ubuntu12.04 64</h3><ul>
 <li><p>登录以后首先更新一下源列表</p>
@@ -98,10 +161,10 @@
   
   <entry>
     <title>About Me</title>
-    <link href="https://yangyiyuan.github.io/2016/11/17/About-Me/"/>
-    <id>https://yangyiyuan.github.io/2016/11/17/About-Me/</id>
-    <published>2016-11-17T08:42:17.000Z</published>
-    <updated>2016-11-17T08:59:18.000Z</updated>
+    <link href="https://yangyiyuan.github.io/2014/09/14/About-Me/"/>
+    <id>https://yangyiyuan.github.io/2014/09/14/About-Me/</id>
+    <published>2014-09-14T08:42:17.000Z</published>
+    <updated>2016-11-17T09:57:09.000Z</updated>
     
     <content type="html"><![CDATA[<p>欢迎大家访问Ewan’s Blog：<code>www.iooeo.com</code><br>博主姓名：<code>杨依园</code> | <code>Ewan</code><br>网名：<code>バ 小丑男°乄° 　　　?</code><br>绰号：<code>cola</code>、<code>杨一</code>、<code>一哥</code>、<code>猫叔</code>、<code>小杨</code>、<code>猿某人</code>、<code>酷头（莉姐送的~）</code><br>扣扣：<code>654846126</code><br>邮箱：<code>yuankess@sina.cn</code> | <code>654846126@qq.com</code><br>社交主页：<code>www.iooeo.com</code> | <code>ewan.coding.me</code> | <code>yangyiyuan.github.io</code><br>爱好：<code>玩游戏</code>、<code>听歌</code>、<code>看电影</code>、<code>骑车</code>、<code>滑冰</code>、<code>瞎折腾</code></p>
 <h2 id="切换至炫酷版"><a href="#切换至炫酷版" class="headerlink" title="切换至炫酷版"></a><em><a href="http://www.iooeo.com/about/" target="_blank" rel="external">切换至炫酷版</a></em></h2><h3 id="此处要用程序"><a href="#此处要用程序" class="headerlink" title="此处要用程序"></a>此处要用程序</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">历程: </div><div class="line">&gt; 2014年09月11日购买域名 www.iooeo.com</div><div class="line">&gt; 购买空间 搭建环境</div><div class="line">&gt; 2014年09月15日开通第一个web网站 www.iooeo.com</div><div class="line">&gt; 2016年11月15日 www.iooeo.com 完成升级</div><div class="line">&gt; 未完待续......</div></pre></td></tr></table></figure>
@@ -119,69 +182,6 @@
       <category term="微语" scheme="https://yangyiyuan.github.io/tags/%E5%BE%AE%E8%AF%AD/"/>
     
       <category term="胡侃" scheme="https://yangyiyuan.github.io/tags/%E8%83%A1%E4%BE%83/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Firing！！！</title>
-    <link href="https://yangyiyuan.github.io/2016/11/17/Firing%EF%BC%81%EF%BC%81%EF%BC%81/"/>
-    <id>https://yangyiyuan.github.io/2016/11/17/Firing！！！/</id>
-    <published>2016-11-17T08:06:39.000Z</published>
-    <updated>2016-11-17T08:40:46.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>经过两天的奋战，<code>Ewan&#39;s Blog</code> 终于与大家见面了。目前网站定位方向为技术性博客，可能稍后会有些栏目的调整，期待大家的关注。</p>
-<p>之前也有做过自己的博客网站,经历了服务器到期,域名续费,赶上有段时间工作调整没时间整理,导致博客更新中断.而后一直有新建博客的想法,说到这个特别的感谢一下<a href="http://www.liuxiaojia.cc/" target="_blank" rel="external">胖佳</a> 在网站的搭建过程中的先锋精神和技术指导.还要感谢<a href="http://www.pythondev.org" target="_blank" rel="external">jarvan君</a>和<a href="http://old.tumiaoya.com/" target="_blank" rel="external">小白</a>的技术指导,说句实在话jarvan君是我工作以来对我帮助最大的一位,之前一起住学校宿舍、一起在一家公司上班,生活中是个老大哥、工作中亦师亦友的这种关系令我享受在其中.当然上面提到胖佳和小白那两只货是我在北京性格上很合得来的哥们,为此哥几个一周撸五次串也不为过.</p>
-<p>在北京学习的那几个月是我人生的一个转折点,更是我人生一个新的起点.</p>
-<p><em>后续会陆续将之前整理的博客文章搬迁过来,也会发表一些新的文章出来供大家分享学习</em></p>
-<h3 id="既然有了一个好的起点，我们就跟要努力向前冲，Firing，Firing！！！"><a href="#既然有了一个好的起点，我们就跟要努力向前冲，Firing，Firing！！！" class="headerlink" title="既然有了一个好的起点，我们就跟要努力向前冲，Firing，Firing！！！"></a>既然有了一个好的起点，我们就跟要努力向前冲，Firing，Firing！！！</h3>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;经过两天的奋战，&lt;code&gt;Ewan&amp;#39;s Blog&lt;/code&gt; 终于与大家见面了。目前网站定位方向为技术性博客，可能稍后会有些栏目的调整，期待大家的关注。&lt;/p&gt;
-&lt;p&gt;之前也有做过自己的博客网站,经历了服务器到期,域名续费,赶上有段时间工作调整没时间整理,导致博
-    
-    </summary>
-    
-      <category term="杂谈" scheme="https://yangyiyuan.github.io/categories/%E6%9D%82%E8%B0%88/"/>
-    
-    
-      <category term="微语" scheme="https://yangyiyuan.github.io/tags/%E5%BE%AE%E8%AF%AD/"/>
-    
-      <category term="胡侃" scheme="https://yangyiyuan.github.io/tags/%E8%83%A1%E4%BE%83/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MySQL安装dpkg错误解决方案</title>
-    <link href="https://yangyiyuan.github.io/2014/09/17/MySQL%E5%AE%89%E8%A3%85dpkg%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
-    <id>https://yangyiyuan.github.io/2014/09/17/MySQL安装dpkg错误解决方案/</id>
-    <published>2014-09-17T09:39:04.000Z</published>
-    <updated>2016-11-17T09:54:14.000Z</updated>
-    
-    <content type="html"><![CDATA[<ul>
-<li><p>Ewan在Ubuntu下安装MySQL的时候出现了一下错误问题：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">start: Job failed to start</div><div class="line">invoke-rc.d: initscript mysql, action &quot;start&quot; failed.</div><div class="line">dpkg: error processing mysql-server-5.5 (--configure):</div><div class="line">subprocess installed post-installation script returned error exit status 1</div><div class="line">dpkg: dependency problems prevent configuration of mysql-server:</div><div class="line">mysql-server depends on mysql-server-5.5; however:</div><div class="line">Package mysql-server-5.5 is not configured yet.</div><div class="line">dpkg: error processing mysql-server (--configure):</div><div class="line">dependency problems - leaving unconfigured</div><div class="line">No apport report written because the error message indicates its a followup error from a previous failure.</div><div class="line">Errors were encountered while processing:</div><div class="line">mysql-server-5.5</div><div class="line">mysql-server</div><div class="line">E: Sub-process /usr/bin/dpkg returned an error code (1)</div></pre></td></tr></table></figure>
-</li>
-<li><p>经查证，现给出解决办法：<br>删除MySQL前，先删除/var/lib/mysql和/etc/mysql</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ sudo rm /var/lib/mysql/ -R</div><div class="line">$ sudo rm /etc/mysql/ -R</div><div class="line">$ sudo apt-get autoremove mysql* --purge</div><div class="line">$ sudo apt-get remove apparmor</div><div class="line">$ sudo apt-get install mysql-server mysql-common</div></pre></td></tr></table></figure>
-</li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Ewan在Ubuntu下安装MySQL的时候出现了一下错误问题：&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div
-    
-    </summary>
-    
-      <category term="MySQL" scheme="https://yangyiyuan.github.io/categories/MySQL/"/>
-    
-    
-      <category term="Linux" scheme="https://yangyiyuan.github.io/tags/Linux/"/>
-    
-      <category term="MySQL" scheme="https://yangyiyuan.github.io/tags/MySQL/"/>
     
   </entry>
   
