@@ -434,7 +434,7 @@
 <li><p>错误字样，解决问题见本站MySQL安装dpkg错误解决方案。 </p>
 </li>
 <li><p>配置MySQL远程连接：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ vi /etc/mysql/my.cnf&amp;nbsp;&amp;nbsp;&amp;nbsp; --打开MySQL配置文件找到bind-address = 127.0.0.1，前边加上#，注释掉。</div><div class="line">$ service mysql restart --重启MySQL服务</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ vi /etc/mysql/my.cnf --打开MySQL配置文件找到bind-address = 127.0.0.1，前边加上#，注释掉。</div><div class="line">$ service mysql restart --重启MySQL服务</div></pre></td></tr></table></figure>
 </li>
 <li><p>进入MySQL，做权限修改</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ mysql -uroot -p mysql </div><div class="line">$ &gt; grant all on *.* root@&apos;%&apos; identified by &apos;你的密码&apos;;</div><div class="line">$ &gt; flush privilefes;</div><div class="line">$ &gt; exit</div></pre></td></tr></table></figure>

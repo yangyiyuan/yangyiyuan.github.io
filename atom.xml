@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yangyiyuan.github.io/"/>
-  <updated>2016-11-17T09:29:52.000Z</updated>
+  <updated>2016-11-17T09:31:51.000Z</updated>
   <id>https://yangyiyuan.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://yangyiyuan.github.io/2016/11/17/Ubuntu%E7%B3%BB%E7%BB%9F%E4%B8%8B%E6%90%AD%E5%BB%BAlnmp%E7%8E%AF%E5%A2%83/"/>
     <id>https://yangyiyuan.github.io/2016/11/17/Ubuntu系统下搭建lnmp环境/</id>
     <published>2016-11-17T09:01:25.000Z</published>
-    <updated>2016-11-17T09:29:52.000Z</updated>
+    <updated>2016-11-17T09:31:51.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="环境：Ubuntu12-04-64"><a href="#环境：Ubuntu12-04-64" class="headerlink" title="环境：Ubuntu12.04 64"></a>环境：Ubuntu12.04 64</h3><ul>
 <li><p>登录以后首先更新一下源列表</p>
@@ -62,7 +62,7 @@
 <li><p>错误字样，解决问题见本站MySQL安装dpkg错误解决方案。 </p>
 </li>
 <li><p>配置MySQL远程连接：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ vi /etc/mysql/my.cnf&amp;nbsp;&amp;nbsp;&amp;nbsp; --打开MySQL配置文件找到bind-address = 127.0.0.1，前边加上#，注释掉。</div><div class="line">$ service mysql restart --重启MySQL服务</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ vi /etc/mysql/my.cnf --打开MySQL配置文件找到bind-address = 127.0.0.1，前边加上#，注释掉。</div><div class="line">$ service mysql restart --重启MySQL服务</div></pre></td></tr></table></figure>
 </li>
 <li><p>进入MySQL，做权限修改</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ mysql -uroot -p mysql </div><div class="line">$ &gt; grant all on *.* root@&apos;%&apos; identified by &apos;你的密码&apos;;</div><div class="line">$ &gt; flush privilefes;</div><div class="line">$ &gt; exit</div></pre></td></tr></table></figure>
