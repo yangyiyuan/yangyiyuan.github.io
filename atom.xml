@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yangyiyuan.github.io/"/>
-  <updated>2016-11-17T08:40:46.000Z</updated>
+  <updated>2016-11-17T23:54:16.000Z</updated>
   <id>https://yangyiyuan.github.io/</id>
   
   <author>
@@ -14,6 +14,41 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MySQL 优化篇之SQL优化</title>
+    <link href="https://yangyiyuan.github.io/2016/11/18/MySQL-%E4%BC%98%E5%8C%96%E7%AF%87%E4%B9%8BSQL%E4%BC%98%E5%8C%96/"/>
+    <id>https://yangyiyuan.github.io/2016/11/18/MySQL-优化篇之SQL优化/</id>
+    <published>2016-11-17T23:40:22.000Z</published>
+    <updated>2016-11-17T23:54:16.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="SQL优化"><a href="#SQL优化" class="headerlink" title="SQL优化"></a>SQL优化</h2><ul>
+<li>优化SQL的一般步骤<blockquote>
+<p>1.通过show status和应用特点了解各种SQL的执行频率</p>
+<blockquote>
+<p>通过SHOW STATUS可以提供服务器状态信息，也可以使用<code>mysqladmin extended-status</code>命令获得。SHOW STATUS可以根据需要显示session级别的统计结果和global级别的统计结果。<br>以下几个参数对Myisam和Innodb存储引擎都计数：<br>1). Com_select 执行select操作的次数，一次查询只累加1；<br>2). Com_insert 执行insert操作的次数，对于批量插入的insert操作，只累加一次；<br>3). Com_update 执行update操作的次数；<br>4). Com_delete 执行delete操作的次数；<br>以下几个参数是针对Innodb存储引擎计数的，累加的算法也略有不同：<br>1). Innodb_rows_read select查询返回的行数；<br>2). Innodb_rows_inserted执行Insert操作插入的行数；<br>3). Innodb_rows_updated 执行update操作更新的行数；<br>4). Innodb_rows_deleted 执行delete操作删除的行数；<br>通过以上几个参数，可以很容易的了解当前数据库的应用是以插入更新为主还是以查询操作为主，以及各种类型的SQL大致的执行比例是多少。对于更新操作的计数，是对执行次数的计数，不论提交还是回滚都会累加。<br>对于事务型的应用，通过Com_commit和Com_rollback可以了解事务提交和回滚的情况，对于回滚操作非常频繁的数据库，可能意味着应用编写存在问题。<br>此外，以下几个参数便于我们了解数据库的基本情况：<br>1). Connections 试图连接Mysql服务器的次数<br>2). Uptime    服务器工作时间<br>3). Slow_queries 慢查询的次数<br>2.定位执行效率较低的SQL语句</p>
+</blockquote>
+</blockquote>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;SQL优化&quot;&gt;&lt;a href=&quot;#SQL优化&quot; class=&quot;headerlink&quot; title=&quot;SQL优化&quot;&gt;&lt;/a&gt;SQL优化&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;优化SQL的一般步骤&lt;blockquote&gt;
+&lt;p&gt;1.通过show status和应用特点了解各种SQ
+    
+    </summary>
+    
+      <category term="MySQL" scheme="https://yangyiyuan.github.io/categories/MySQL/"/>
+    
+    
+      <category term="Linux" scheme="https://yangyiyuan.github.io/tags/Linux/"/>
+    
+      <category term="MySQL" scheme="https://yangyiyuan.github.io/tags/MySQL/"/>
+    
+  </entry>
   
   <entry>
     <title>Firing！！！</title>
@@ -186,11 +221,11 @@
     
       <category term="MySQL" scheme="https://yangyiyuan.github.io/tags/MySQL/"/>
     
+      <category term="PHP" scheme="https://yangyiyuan.github.io/tags/PHP/"/>
+    
       <category term="LNMP" scheme="https://yangyiyuan.github.io/tags/LNMP/"/>
     
       <category term="Ngnix" scheme="https://yangyiyuan.github.io/tags/Ngnix/"/>
-    
-      <category term="PHP" scheme="https://yangyiyuan.github.io/tags/PHP/"/>
     
   </entry>
   
@@ -222,10 +257,10 @@
   
   <entry>
     <title>MySQL 视图</title>
-    <link href="https://yangyiyuan.github.io/2013/10/15/MySQL-%E8%A7%86%E5%9B%BE/"/>
-    <id>https://yangyiyuan.github.io/2013/10/15/MySQL-视图/</id>
-    <published>2013-10-15T10:14:04.000Z</published>
-    <updated>2016-11-17T10:22:56.000Z</updated>
+    <link href="https://yangyiyuan.github.io/2013/11/13/MySQL-%E8%A7%86%E5%9B%BE/"/>
+    <id>https://yangyiyuan.github.io/2013/11/13/MySQL-视图/</id>
+    <published>2013-11-13T10:14:04.000Z</published>
+    <updated>2016-11-17T23:41:40.000Z</updated>
     
     <content type="html"><![CDATA[<p>Ewan之前研究mysql实际操作，个人感悟拿来共享一下。<br>1.视图定义</p>
 <blockquote>
