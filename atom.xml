@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yangyiyuan.github.io/"/>
-  <updated>2016-11-17T08:59:18.000Z</updated>
+  <updated>2016-11-17T09:10:03.000Z</updated>
   <id>https://yangyiyuan.github.io/</id>
   
   <author>
@@ -14,6 +14,50 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Ubuntu系统下搭建lnmp环境</title>
+    <link href="https://yangyiyuan.github.io/2016/11/17/Ubuntu%E7%B3%BB%E7%BB%9F%E4%B8%8B%E6%90%AD%E5%BB%BAlnmp%E7%8E%AF%E5%A2%83/"/>
+    <id>https://yangyiyuan.github.io/2016/11/17/Ubuntu系统下搭建lnmp环境/</id>
+    <published>2016-11-17T09:01:25.000Z</published>
+    <updated>2016-11-17T09:10:03.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>###环境：Ubuntu12.04 64</p>
+<ul>
+<li><p>登录以后首先更新一下源列表</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ apt-get update</div></pre></td></tr></table></figure>
+</li>
+<li><p>然后安装nginx</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ sudo apt-get install nginx</div><div class="line">$ /etc/init.d/nginx start --启动ngnix</div><div class="line">$ /etc/init.d/nginx stop --停止ngnix</div><div class="line">$ /etc/init.d/nginx restart --重启ngnix</div><div class="line">$ service ngnix restart --重启ngnix</div></pre></td></tr></table></figure>
+</li>
+<li><p>安装PHP及相关扩展 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ sudo apt-get install php5-cli php5-common php5-fpm php5-cgi php5-mysql php5-gd php5-sqlite libssh2-php</div><div class="line">$ service php5-fpm restart --重启php</div></pre></td></tr></table></figure></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;###环境：Ubuntu12.04 64&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;登录以后首先更新一下源列表&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;lin
+    
+    </summary>
+    
+      <category term="Linux" scheme="https://yangyiyuan.github.io/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="https://yangyiyuan.github.io/tags/Linux/"/>
+    
+      <category term="LNMP" scheme="https://yangyiyuan.github.io/tags/LNMP/"/>
+    
+      <category term="Ngnix" scheme="https://yangyiyuan.github.io/tags/Ngnix/"/>
+    
+      <category term="PHP" scheme="https://yangyiyuan.github.io/tags/PHP/"/>
+    
+      <category term="MySQL" scheme="https://yangyiyuan.github.io/tags/MySQL/"/>
+    
+  </entry>
   
   <entry>
     <title>About Me</title>
