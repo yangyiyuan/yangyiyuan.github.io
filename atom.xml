@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yangyiyuan.github.io/"/>
-  <updated>2016-11-17T09:47:16.000Z</updated>
+  <updated>2016-11-17T09:47:55.000Z</updated>
   <id>https://yangyiyuan.github.io/</id>
   
   <author>
@@ -14,40 +14,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>MySQL安装dpkg错误解决方案</title>
-    <link href="https://yangyiyuan.github.io/2016/11/17/MySQL%E5%AE%89%E8%A3%85dpkg%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
-    <id>https://yangyiyuan.github.io/2016/11/17/MySQL安装dpkg错误解决方案/</id>
-    <published>2016-11-17T09:39:04.000Z</published>
-    <updated>2016-11-17T09:47:16.000Z</updated>
-    
-    <content type="html"><![CDATA[<ul>
-<li><p>Ewan在Ubuntu下安装MySQL的时候出现了一下错误问题：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">start: Job failed to start</div><div class="line">invoke-rc.d: initscript mysql, action &quot;start&quot; failed.</div><div class="line">dpkg: error processing mysql-server-5.5 (--configure):</div><div class="line">subprocess installed post-installation script returned error exit status 1</div><div class="line">dpkg: dependency problems prevent configuration of mysql-server:</div><div class="line">mysql-server depends on mysql-server-5.5; however:</div><div class="line">Package mysql-server-5.5 is not configured yet.</div><div class="line">dpkg: error processing mysql-server (--configure):</div><div class="line">dependency problems - leaving unconfigured</div><div class="line">No apport report written because the error message indicates its a followup error from a previous failure.</div><div class="line">Errors were encountered while processing:</div><div class="line">mysql-server-5.5</div><div class="line">mysql-server</div><div class="line">E: Sub-process /usr/bin/dpkg returned an error code (1)</div></pre></td></tr></table></figure>
-</li>
-<li><p>经查证，现给出解决办法：<br>删除MySQL前，先删除/var/lib/mysql和/etc/mysql</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ sudo rm /var/lib/mysql/ -R</div><div class="line">$ sudo rm /etc/mysql/ -R</div><div class="line">$ sudo apt-get autoremove mysql* --purge</div><div class="line">$ sudo apt-get remove apparmor</div><div class="line">$ sudo apt-get install mysql-server mysql-common</div></pre></td></tr></table></figure>
-</li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Ewan在Ubuntu下安装MySQL的时候出现了一下错误问题：&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div
-    
-    </summary>
-    
-      <category term="MySQL" scheme="https://yangyiyuan.github.io/categories/MySQL/"/>
-    
-    
-      <category term="Linux" scheme="https://yangyiyuan.github.io/tags/Linux/"/>
-    
-      <category term="MySQL" scheme="https://yangyiyuan.github.io/tags/MySQL/"/>
-    
-  </entry>
   
   <entry>
     <title>Ubuntu系统下搭建lnmp环境</title>
@@ -120,13 +86,13 @@
     
       <category term="Linux" scheme="https://yangyiyuan.github.io/tags/Linux/"/>
     
+      <category term="MySQL" scheme="https://yangyiyuan.github.io/tags/MySQL/"/>
+    
       <category term="LNMP" scheme="https://yangyiyuan.github.io/tags/LNMP/"/>
     
       <category term="Ngnix" scheme="https://yangyiyuan.github.io/tags/Ngnix/"/>
     
       <category term="PHP" scheme="https://yangyiyuan.github.io/tags/PHP/"/>
-    
-      <category term="MySQL" scheme="https://yangyiyuan.github.io/tags/MySQL/"/>
     
   </entry>
   
@@ -182,6 +148,40 @@
       <category term="微语" scheme="https://yangyiyuan.github.io/tags/%E5%BE%AE%E8%AF%AD/"/>
     
       <category term="胡侃" scheme="https://yangyiyuan.github.io/tags/%E8%83%A1%E4%BE%83/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MySQL安装dpkg错误解决方案</title>
+    <link href="https://yangyiyuan.github.io/2014/09/17/MySQL%E5%AE%89%E8%A3%85dpkg%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+    <id>https://yangyiyuan.github.io/2014/09/17/MySQL安装dpkg错误解决方案/</id>
+    <published>2014-09-17T09:39:04.000Z</published>
+    <updated>2016-11-17T09:54:14.000Z</updated>
+    
+    <content type="html"><![CDATA[<ul>
+<li><p>Ewan在Ubuntu下安装MySQL的时候出现了一下错误问题：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">start: Job failed to start</div><div class="line">invoke-rc.d: initscript mysql, action &quot;start&quot; failed.</div><div class="line">dpkg: error processing mysql-server-5.5 (--configure):</div><div class="line">subprocess installed post-installation script returned error exit status 1</div><div class="line">dpkg: dependency problems prevent configuration of mysql-server:</div><div class="line">mysql-server depends on mysql-server-5.5; however:</div><div class="line">Package mysql-server-5.5 is not configured yet.</div><div class="line">dpkg: error processing mysql-server (--configure):</div><div class="line">dependency problems - leaving unconfigured</div><div class="line">No apport report written because the error message indicates its a followup error from a previous failure.</div><div class="line">Errors were encountered while processing:</div><div class="line">mysql-server-5.5</div><div class="line">mysql-server</div><div class="line">E: Sub-process /usr/bin/dpkg returned an error code (1)</div></pre></td></tr></table></figure>
+</li>
+<li><p>经查证，现给出解决办法：<br>删除MySQL前，先删除/var/lib/mysql和/etc/mysql</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ sudo rm /var/lib/mysql/ -R</div><div class="line">$ sudo rm /etc/mysql/ -R</div><div class="line">$ sudo apt-get autoremove mysql* --purge</div><div class="line">$ sudo apt-get remove apparmor</div><div class="line">$ sudo apt-get install mysql-server mysql-common</div></pre></td></tr></table></figure>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Ewan在Ubuntu下安装MySQL的时候出现了一下错误问题：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div
+    
+    </summary>
+    
+      <category term="MySQL" scheme="https://yangyiyuan.github.io/categories/MySQL/"/>
+    
+    
+      <category term="Linux" scheme="https://yangyiyuan.github.io/tags/Linux/"/>
+    
+      <category term="MySQL" scheme="https://yangyiyuan.github.io/tags/MySQL/"/>
     
   </entry>
   
