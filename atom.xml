@@ -49,7 +49,7 @@
     <link href="https://yangyiyuan.github.io/2015/03/23/MySQL-%E5%AD%98%E5%82%A8%E4%BE%8B%E7%A8%8B/"/>
     <id>https://yangyiyuan.github.io/2015/03/23/MySQL-存储例程/</id>
     <published>2015-03-23T04:07:59.000Z</published>
-    <updated>2016-11-23T04:38:09.000Z</updated>
+    <updated>2016-11-23T04:40:03.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="好高兴啊，Ewan学习进行时。mysql存储例程学习总结拿来共享喽。"><a href="#好高兴啊，Ewan学习进行时。mysql存储例程学习总结拿来共享喽。" class="headerlink" title="好高兴啊，Ewan学习进行时。mysql存储例程学习总结拿来共享喽。"></a>好高兴啊，Ewan学习进行时。mysql存储例程学习总结拿来共享喽。</h2><ul>
 <li><p>1.存储例程定义</p>
@@ -77,15 +77,11 @@ end</code></p>
 </li>
 <li><p>5.声明和设置变量</p>
 <blockquote>
-<p>声明变量：<br>这里使用到了declare，如下：<br><code>declare 变量名 变量类型;</code><br>设置变量：<br><code>set 变量名=值;</code><br>这里做下延伸：<br>在mysql客户端使用用户变量，如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">select &apos;hello world!&apos; into @z;</div><div class="line">set @x=&apos;hello world!&apos;;</div><div class="line">set @c=1+1;</div></pre></td></tr></table></figure>
+<p>声明变量：<br>这里使用到了declare，如下：<br><code>declare 变量名 变量类型;</code><br>设置变量：<br><code>set 变量名=值;</code><br>这里做下延伸：<br>在mysql客户端使用用户变量，如下：<br><code>select &#39;hello world!&#39; into @z;
+set @x=&#39;hello world!&#39;;
+set @c=1+1;</code><br>执行：select …;<br>这里要注意：<br>1）变量名一般以@开头<br>2）滥用用户变量会导致程序难以理解和管理</p>
 </blockquote>
 </li>
-</ul>
-<blockquote>
-<p>执行：select …;<br>这里要注意：<br>1）变量名一般以@开头<br>2）滥用用户变量会导致程序难以理解和管理</p>
-</blockquote>
-<ul>
 <li><p>6.begin …end</p>
 <blockquote>
 <p>创建多语句进程时，将语句放在begin end 中间。</p>
@@ -261,11 +257,11 @@ end</code></p>
     
       <category term="MySQL" scheme="https://yangyiyuan.github.io/tags/MySQL/"/>
     
-      <category term="PHP" scheme="https://yangyiyuan.github.io/tags/PHP/"/>
-    
       <category term="LNMP" scheme="https://yangyiyuan.github.io/tags/LNMP/"/>
     
       <category term="Ngnix" scheme="https://yangyiyuan.github.io/tags/Ngnix/"/>
+    
+      <category term="PHP" scheme="https://yangyiyuan.github.io/tags/PHP/"/>
     
   </entry>
   
