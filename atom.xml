@@ -49,7 +49,7 @@
     <link href="https://yangyiyuan.github.io/2015/03/23/MySQL-%E5%AD%98%E5%82%A8%E4%BE%8B%E7%A8%8B/"/>
     <id>https://yangyiyuan.github.io/2015/03/23/MySQL-存储例程/</id>
     <published>2015-03-23T04:07:59.000Z</published>
-    <updated>2016-11-23T04:27:15.000Z</updated>
+    <updated>2016-11-23T04:34:51.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="好高兴啊，Ewan学习进行时。mysql存储例程学习总结拿来共享喽。"><a href="#好高兴啊，Ewan学习进行时。mysql存储例程学习总结拿来共享喽。" class="headerlink" title="好高兴啊，Ewan学习进行时。mysql存储例程学习总结拿来共享喽。"></a>好高兴啊，Ewan学习进行时。mysql存储例程学习总结拿来共享喽。</h2><ul>
 <li><p>1.存储例程定义</p>
@@ -67,15 +67,16 @@
 <p>1）一致性<br>2）高性能<br>3）安全性<br>4）架构</p>
 </blockquote>
 </li>
-<li><p>4.存储过程基本语法</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">create procedure (过程名)［过程参数...］</div><div class="line">begin</div><div class="line">(内容，sql语句)</div><div class="line">end</div></pre></td></tr></table></figure>
-</li>
-</ul>
+<li><p>4.存储过程基本语法<br><code>create procedure (过程名)［过程参数...］
+begin
+(内容，sql语句)
+end</code></p>
 <blockquote>
 <p>调用：<br><code>set @要设置的参数值</code><br><code>call  参数名(@要设置的参数值)</code><br>从另一个例程中调用例程：<br><code>create procedure 进程名</code><br><code>begin</code><br><code>call 另一个进程名();</code><br><code>end</code><br>查看存储进程:<br><code>show procedure status;</code><br>一可以查看某个存储进程的详细:<br><code>show procedure status like &#39;变量名&#39;\G;</code><br>查看进程的创建语法:<br><code>show create procedure 进程名;</code><br>修改存储进程：<br><code>alter procedure 进程名 .....</code><br>删除存储进程：<br><code>drop procedure 进程名;</code><br>是不是很简单，下面来详细分解一下语法的具体参数:<br>存储过程参数用在存储过程的定，共有三种类型in,out,inout如下：create procedure (过程名)［in/out/inout 参数名 数据类型］<br>in：为默认值，使用该参数的值必须在调用存储过程时指定，在存储过程中修改该参数的值不能被返回。<br>out：使用该参数的之的值在存储过程内部被改变，并返回。<br>inout:使用该参数的值，调用时指定，并且可被改变并返回。</p>
 </blockquote>
-<ul>
-<li>5.声明和设置变量<blockquote>
+</li>
+<li><p>5.声明和设置变量</p>
+<blockquote>
 <p>声明变量：<br>这里使用到了declare，如下：<br><code>declare 变量名 变量类型;</code><br>设置变量：<br><code>set 变量名=值;</code><br>这里做下延伸：<br>在mysql客户端使用用户变量，如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">select &apos;hello world!&apos; into @z;</div><div class="line">set @x=&apos;hello world!&apos;;</div><div class="line">set @c=1+1;</div></pre></td></tr></table></figure>
 </blockquote>
@@ -260,11 +261,11 @@
     
       <category term="MySQL" scheme="https://yangyiyuan.github.io/tags/MySQL/"/>
     
+      <category term="PHP" scheme="https://yangyiyuan.github.io/tags/PHP/"/>
+    
       <category term="LNMP" scheme="https://yangyiyuan.github.io/tags/LNMP/"/>
     
       <category term="Ngnix" scheme="https://yangyiyuan.github.io/tags/Ngnix/"/>
-    
-      <category term="PHP" scheme="https://yangyiyuan.github.io/tags/PHP/"/>
     
   </entry>
   
