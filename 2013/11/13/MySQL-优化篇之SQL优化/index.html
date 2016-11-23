@@ -98,7 +98,7 @@
 1.通过show status和应用特点了解各种SQL的执行频率
 
 通过SHOW STATUS可以提供服务器状态信息，也可以使用mysqladmin extended-status命令获得。SHOW STATUS可以根据需要显示session级别的统计结果和global级别的统计结果。以下几个参数对Myisam和Innodb存储引擎都计数：1). Com_selec">
-<meta property="og:updated_time" content="2016-11-23T01:54:05.000Z">
+<meta property="og:updated_time" content="2016-11-23T02:10:40.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MySQL 优化篇之SQL优化">
 <meta name="twitter:description" content="SQL优化优化SQL的一般步骤
@@ -410,16 +410,12 @@
 </li>
 <li><p>3.通过EXPLAIN分析低效SQL的执行计划</p>
 <blockquote>
-<p>通过以上步骤查询到效率低的SQL后，我们可以通过explain或者desc 获取MySQL如何执行SELECT语句的信息，包括select语句执行过程表如何连接和连接的次序。  explain可以知道什么时候必须为表加入索引以得到一个使用索引来寻找记录的更快的SELECT。<br><code>mysql&gt;expain select * from table;</code><br>select_type： select 类型<br>table：   输出结果集的表<br>type：     表示表的连接类型, 当表中仅有一行是type的值为system是最佳的连接类型； 当select操作中使用索引进行表连接时type的值为ref；  当select的表连接没有使用索引时，经常会看到type的值为ALL，表示对该表进行了全表扫描，这时需要考虑通过创建索引来提高表连接的效率。<br> possible_keys： 表示查询时,可以使用的索引列.<br>key：    表示使用的索引<br>key_len：  索引长度<br>rows：   扫描范围<br>Extra：     执行情况的说明和描述<br><code>+----+-------------+------------+--------+---------------+------+---------+------+------+---------------------+
-| id | select_type | table      | type   | possible_keys | key  | key_len | ref  | rows | Extra               |
-+----+-------------+------------+--------+---------------+------+---------+------+------+---------------------+
-|  1 | SIMPLE      | tab_serial | system | NULL          | NULL | NULL    | NULL |    0 | const row not found |
-+----+-------------+------------+--------+---------------+------+---------+------+------+---------------------+</code></p>
+<p>通过以上步骤查询到效率低的SQL后，我们可以通过explain或者desc 获取MySQL如何执行SELECT语句的信息，包括select语句执行过程表如何连接和连接的次序。  explain可以知道什么时候必须为表加入索引以得到一个使用索引来寻找记录的更快的SELECT。<br><code>mysql&gt;expain select * from table;</code><br>select_type： select 类型<br>table：   输出结果集的表<br>type：     表示表的连接类型, 当表中仅有一行是type的值为system是最佳的连接类型； 当select操作中使用索引进行表连接时type的值为ref；  当select的表连接没有使用索引时，经常会看到type的值为ALL，表示对该表进行了全表扫描，这时需要考虑通过创建索引来提高表连接的效率。<br> possible_keys： 表示查询时,可以使用的索引列.<br>key：    表示使用的索引<br>key_len：  索引长度<br>rows：   扫描范围<br>Extra：     执行情况的说明和描述</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">+----+-------------+------------+--------+---------------+------+---------+------+------+---------------------+</div><div class="line">| id | select_type | table      | type   | possible_keys | key  | key_len | ref  | rows | Extra               |</div><div class="line">+----+-------------+------------+--------+---------------+------+---------+------+------+---------------------+</div><div class="line">|  1 | SIMPLE      | tab_serial | system | NULL          | NULL | NULL    | NULL |    0 | const row not found |</div><div class="line">+----+-------------+------------+--------+---------------+------+---------+------+------+---------------------+</div></pre></td></tr></table></figure>
 </blockquote>
 </li>
-</ul>
-<ul>
-<li>4.确定问题，并采取相应的优化措施<blockquote>
+<li><p>4.确定问题，并采取相应的优化措施</p>
+<blockquote>
 <p>经过以上步骤，基本可以确认问题出现的原因，可以根据情况采取相应的措施，进行优化提高执行的效率。</p>
 </blockquote>
 </li>
