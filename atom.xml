@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yangyiyuan.github.io/"/>
-  <updated>2016-12-06T01:31:12.000Z</updated>
+  <updated>2016-12-06T01:33:04.000Z</updated>
   <id>https://yangyiyuan.github.io/</id>
   
   <author>
@@ -16,19 +16,13 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
+    <title>AES加密解密</title>
     <link href="https://yangyiyuan.github.io/2016/12/06/AES%E5%8A%A0%E5%AF%86%E8%A7%A3%E5%AF%86/"/>
     <id>https://yangyiyuan.github.io/2016/12/06/AES加密解密/</id>
-    <published>2016-12-06T01:31:12.000Z</published>
-    <updated>2016-12-06T01:31:12.000Z</updated>
+    <published>2016-12-06T01:23:27.000Z</published>
+    <updated>2016-12-06T01:33:04.000Z</updated>
     
-    <content type="html"><![CDATA[<hr>
-<p>title: AES加密解密<br>date: 2016-12-06 09:23:27<br>tags:</p>
-<pre><code>- PHP
-</code></pre><p>categories: </p>
-<pre><code>- PHP
-</code></pre><hr>
-<h1 id="AES-（高级加密标准"><a href="#AES-（高级加密标准" class="headerlink" title="AES （高级加密标准)"></a>AES （高级加密标准)</h1><p>  高级加密标准（英语：Advanced Encryption Standard，缩写：AES），在密码学中又称Rijndael加密法，是美国联邦政府采用的一种区块加密标准。这个标准用来替代原先的DES，已经被多方分析且广为全世界所使用。经过五年的甄选流程，高级加密标准由美国国家标准与技术研究院（NIST）于2001年11月26日发布于FIPS PUB 197，并在2002年5月26日成为有效的标准。2006年，高级加密标准已然成为对称密钥加密中最流行的算法之一。</p>
+    <content type="html"><![CDATA[<h1 id="AES-（高级加密标准"><a href="#AES-（高级加密标准" class="headerlink" title="AES （高级加密标准)"></a>AES （高级加密标准)</h1><p>  高级加密标准（英语：Advanced Encryption Standard，缩写：AES），在密码学中又称Rijndael加密法，是美国联邦政府采用的一种区块加密标准。这个标准用来替代原先的DES，已经被多方分析且广为全世界所使用。经过五年的甄选流程，高级加密标准由美国国家标准与技术研究院（NIST）于2001年11月26日发布于FIPS PUB 197，并在2002年5月26日成为有效的标准。2006年，高级加密标准已然成为对称密钥加密中最流行的算法之一。</p>
 <p>   说下PHP的用法~~</p>
 <h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line">class Security &#123;</div><div class="line">	public static function encrypt($input, $key) &#123;</div><div class="line">		$size = mcrypt_get_block_size(MCRYPT_RIJNDAEL_128, MCRYPT_MODE_ECB);</div><div class="line">		$input = Security::pkcs5_pad($input, $size);</div><div class="line">		$td = mcrypt_module_open(MCRYPT_RIJNDAEL_128, &apos;&apos;, MCRYPT_MODE_ECB, &apos;&apos;);</div><div class="line">		$iv = mcrypt_create_iv (mcrypt_enc_get_iv_size($td), MCRYPT_RAND); </div><div class="line">		mcrypt_generic_init($td, $key, $iv); </div><div class="line">		$data = mcrypt_generic($td, $input); </div><div class="line">		mcrypt_generic_deinit($td); </div><div class="line">		mcrypt_module_close($td); </div><div class="line">		$data = base64_encode($data); </div><div class="line">		return $data; </div><div class="line">	&#125; </div><div class="line"></div><div class="line">	private static function pkcs5_pad ($text, $blocksize) &#123; </div><div class="line">		$pad = $blocksize - (strlen($text) % $blocksize);</div><div class="line">		return $text . str_repeat(chr($pad), $pad);</div><div class="line">	&#125; </div><div class="line"></div><div class="line">	public static function decrypt($sStr, $sKey) &#123;</div><div class="line">		$decrypted= mcrypt_decrypt(</div><div class="line">			MCRYPT_RIJNDAEL_128,</div><div class="line">			$sKey, </div><div class="line">			base64_decode($sStr), </div><div class="line">			MCRYPT_MODE_ECB</div><div class="line">		);</div><div class="line">		$dec_s = strlen($decrypted); </div><div class="line">		$padding = ord($decrypted[$dec_s-1]); </div><div class="line">		$decrypted = substr($decrypted, 0, -$padding);</div><div class="line">		return $decrypted;</div><div class="line">	&#125;	</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">require_once(&apos;./security.php&apos;);</div><div class="line"></div><div class="line">$value = &quot;example&quot;;</div><div class="line">$key = &quot;1234567891234567&quot;; //16 Character Key</div><div class="line">echo Security::encrypt($value, $key);</div><div class="line">echo Security::decrypt(Security::encrypt($value, $key), $key);</div></pre></td></tr></table></figure>
@@ -36,15 +30,14 @@
     
     <summary type="html">
     
-      &lt;hr&gt;
-&lt;p&gt;title: AES加密解密&lt;br&gt;date: 2016-12-06 09:23:27&lt;br&gt;tags:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;- PHP
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;categories: &lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;- PHP
-&lt;/code&gt;&lt;
+      &lt;h1 id=&quot;AES-（高级加密标准&quot;&gt;&lt;a href=&quot;#AES-（高级加密标准&quot; class=&quot;headerlink&quot; title=&quot;AES （高级加密标准)&quot;&gt;&lt;/a&gt;AES （高级加密标准)&lt;/h1&gt;&lt;p&gt;  高级加密标准（英语：Advanced Encryption 
     
     </summary>
     
+      <category term="PHP" scheme="https://yangyiyuan.github.io/categories/PHP/"/>
+    
+    
+      <category term="PHP" scheme="https://yangyiyuan.github.io/tags/PHP/"/>
     
   </entry>
   
@@ -307,6 +300,8 @@ set @c=1+1;</code><br>执行：select …;<br>这里要注意：<br>1）变量�
       <category term="Linux" scheme="https://yangyiyuan.github.io/categories/Linux/"/>
     
     
+      <category term="PHP" scheme="https://yangyiyuan.github.io/tags/PHP/"/>
+    
       <category term="Linux" scheme="https://yangyiyuan.github.io/tags/Linux/"/>
     
       <category term="MySQL" scheme="https://yangyiyuan.github.io/tags/MySQL/"/>
@@ -314,8 +309,6 @@ set @c=1+1;</code><br>执行：select …;<br>这里要注意：<br>1）变量�
       <category term="LNMP" scheme="https://yangyiyuan.github.io/tags/LNMP/"/>
     
       <category term="Ngnix" scheme="https://yangyiyuan.github.io/tags/Ngnix/"/>
-    
-      <category term="PHP" scheme="https://yangyiyuan.github.io/tags/PHP/"/>
     
   </entry>
   
