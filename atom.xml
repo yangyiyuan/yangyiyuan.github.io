@@ -4,9 +4,9 @@
   <subtitle>Ewan&#39;s Blog | 杨依园技术博客 | 专注于PHP，涉及MySQL，Linux，Web，Nginx，Apache，Phalcon，Laravel，Redis，PostgreSql，Composer，Beanstalkd，Swoole</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://yangyiyuan.github.io/"/>
+  <link href="http://www.iooeo.com/"/>
   <updated>2016-12-12T07:05:29.000Z</updated>
-  <id>https://yangyiyuan.github.io/</id>
+  <id>http://www.iooeo.com/</id>
   
   <author>
     <name>Ewan</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>git删除已提交的文件或文件夹</title>
-    <link href="https://yangyiyuan.github.io/2016/12/12/git%E5%88%A0%E9%99%A4%E5%B7%B2%E6%8F%90%E4%BA%A4%E7%9A%84%E6%96%87%E4%BB%B6%E6%88%96%E6%96%87%E4%BB%B6%E5%A4%B9/"/>
-    <id>https://yangyiyuan.github.io/2016/12/12/git删除已提交的文件或文件夹/</id>
+    <link href="http://www.iooeo.com/2016/12/12/git%E5%88%A0%E9%99%A4%E5%B7%B2%E6%8F%90%E4%BA%A4%E7%9A%84%E6%96%87%E4%BB%B6%E6%88%96%E6%96%87%E4%BB%B6%E5%A4%B9/"/>
+    <id>http://www.iooeo.com/2016/12/12/git删除已提交的文件或文件夹/</id>
     <published>2016-12-12T06:50:51.000Z</published>
     <updated>2016-12-12T07:05:29.000Z</updated>
     
@@ -34,17 +34,17 @@
     
     </summary>
     
-      <category term="Git" scheme="https://yangyiyuan.github.io/categories/Git/"/>
+      <category term="Git" scheme="http://www.iooeo.com/categories/Git/"/>
     
     
-      <category term="Git" scheme="https://yangyiyuan.github.io/tags/Git/"/>
+      <category term="Git" scheme="http://www.iooeo.com/tags/Git/"/>
     
   </entry>
   
   <entry>
     <title>AES加密解密</title>
-    <link href="https://yangyiyuan.github.io/2016/12/06/AES%E5%8A%A0%E5%AF%86%E8%A7%A3%E5%AF%86/"/>
-    <id>https://yangyiyuan.github.io/2016/12/06/AES加密解密/</id>
+    <link href="http://www.iooeo.com/2016/12/06/AES%E5%8A%A0%E5%AF%86%E8%A7%A3%E5%AF%86/"/>
+    <id>http://www.iooeo.com/2016/12/06/AES加密解密/</id>
     <published>2016-12-06T01:23:27.000Z</published>
     <updated>2016-12-06T01:43:47.000Z</updated>
     
@@ -59,17 +59,17 @@
     
     </summary>
     
-      <category term="PHP" scheme="https://yangyiyuan.github.io/categories/PHP/"/>
+      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
     
     
-      <category term="PHP" scheme="https://yangyiyuan.github.io/tags/PHP/"/>
+      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
     
   </entry>
   
   <entry>
     <title>MySQL 深入浅出</title>
-    <link href="https://yangyiyuan.github.io/2016/11/23/MySQL-%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA/"/>
-    <id>https://yangyiyuan.github.io/2016/11/23/MySQL-深入浅出/</id>
+    <link href="http://www.iooeo.com/2016/11/23/MySQL-%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA/"/>
+    <id>http://www.iooeo.com/2016/11/23/MySQL-深入浅出/</id>
     <published>2016-11-23T04:41:54.000Z</published>
     <updated>2016-11-23T04:42:12.000Z</updated>
     
@@ -77,19 +77,19 @@
     
     </summary>
     
-      <category term="MySQL" scheme="https://yangyiyuan.github.io/categories/MySQL/"/>
+      <category term="MySQL" scheme="http://www.iooeo.com/categories/MySQL/"/>
     
     
-      <category term="Linux" scheme="https://yangyiyuan.github.io/tags/Linux/"/>
+      <category term="Linux" scheme="http://www.iooeo.com/tags/Linux/"/>
     
-      <category term="MySQL" scheme="https://yangyiyuan.github.io/tags/MySQL/"/>
+      <category term="MySQL" scheme="http://www.iooeo.com/tags/MySQL/"/>
     
   </entry>
   
   <entry>
     <title>Firing！！！</title>
-    <link href="https://yangyiyuan.github.io/2016/11/17/Firing%EF%BC%81%EF%BC%81%EF%BC%81/"/>
-    <id>https://yangyiyuan.github.io/2016/11/17/Firing！！！/</id>
+    <link href="http://www.iooeo.com/2016/11/17/Firing%EF%BC%81%EF%BC%81%EF%BC%81/"/>
+    <id>http://www.iooeo.com/2016/11/17/Firing！！！/</id>
     <published>2016-11-17T08:06:39.000Z</published>
     <updated>2016-11-17T08:40:46.000Z</updated>
     
@@ -106,19 +106,19 @@
     
     </summary>
     
-      <category term="杂谈" scheme="https://yangyiyuan.github.io/categories/%E6%9D%82%E8%B0%88/"/>
+      <category term="杂谈" scheme="http://www.iooeo.com/categories/%E6%9D%82%E8%B0%88/"/>
     
     
-      <category term="微语" scheme="https://yangyiyuan.github.io/tags/%E5%BE%AE%E8%AF%AD/"/>
+      <category term="微语" scheme="http://www.iooeo.com/tags/%E5%BE%AE%E8%AF%AD/"/>
     
-      <category term="胡侃" scheme="https://yangyiyuan.github.io/tags/%E8%83%A1%E4%BE%83/"/>
+      <category term="胡侃" scheme="http://www.iooeo.com/tags/%E8%83%A1%E4%BE%83/"/>
     
   </entry>
   
   <entry>
     <title>MySQL 存储例程</title>
-    <link href="https://yangyiyuan.github.io/2015/03/23/MySQL-%E5%AD%98%E5%82%A8%E4%BE%8B%E7%A8%8B/"/>
-    <id>https://yangyiyuan.github.io/2015/03/23/MySQL-存储例程/</id>
+    <link href="http://www.iooeo.com/2015/03/23/MySQL-%E5%AD%98%E5%82%A8%E4%BE%8B%E7%A8%8B/"/>
+    <id>http://www.iooeo.com/2015/03/23/MySQL-存储例程/</id>
     <published>2015-03-23T04:07:59.000Z</published>
     <updated>2016-11-23T04:50:54.000Z</updated>
     
@@ -178,19 +178,19 @@ set @c=1+1;</code><br>执行：select …;<br>这里要注意：<br>1）变量�
     
     </summary>
     
-      <category term="MySQL" scheme="https://yangyiyuan.github.io/categories/MySQL/"/>
+      <category term="MySQL" scheme="http://www.iooeo.com/categories/MySQL/"/>
     
     
-      <category term="Linux" scheme="https://yangyiyuan.github.io/tags/Linux/"/>
+      <category term="Linux" scheme="http://www.iooeo.com/tags/Linux/"/>
     
-      <category term="MySQL" scheme="https://yangyiyuan.github.io/tags/MySQL/"/>
+      <category term="MySQL" scheme="http://www.iooeo.com/tags/MySQL/"/>
     
   </entry>
   
   <entry>
     <title>laravel安装</title>
-    <link href="https://yangyiyuan.github.io/2014/10/13/laravel%E5%AE%89%E8%A3%85/"/>
-    <id>https://yangyiyuan.github.io/2014/10/13/laravel安装/</id>
+    <link href="http://www.iooeo.com/2014/10/13/laravel%E5%AE%89%E8%A3%85/"/>
+    <id>http://www.iooeo.com/2014/10/13/laravel安装/</id>
     <published>2014-10-13T09:58:50.000Z</published>
     <updated>2016-11-17T10:12:17.000Z</updated>
     
@@ -213,19 +213,19 @@ set @c=1+1;</code><br>执行：select …;<br>这里要注意：<br>1）变量�
     
     </summary>
     
-      <category term="PHP" scheme="https://yangyiyuan.github.io/categories/PHP/"/>
+      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
     
     
-      <category term="PHP" scheme="https://yangyiyuan.github.io/tags/PHP/"/>
+      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
     
-      <category term="Laravel" scheme="https://yangyiyuan.github.io/tags/Laravel/"/>
+      <category term="Laravel" scheme="http://www.iooeo.com/tags/Laravel/"/>
     
   </entry>
   
   <entry>
     <title>MySQL安装dpkg错误解决方案</title>
-    <link href="https://yangyiyuan.github.io/2014/09/17/MySQL%E5%AE%89%E8%A3%85dpkg%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
-    <id>https://yangyiyuan.github.io/2014/09/17/MySQL安装dpkg错误解决方案/</id>
+    <link href="http://www.iooeo.com/2014/09/17/MySQL%E5%AE%89%E8%A3%85dpkg%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+    <id>http://www.iooeo.com/2014/09/17/MySQL安装dpkg错误解决方案/</id>
     <published>2014-09-17T09:39:04.000Z</published>
     <updated>2016-11-17T09:54:14.000Z</updated>
     
@@ -247,19 +247,19 @@ set @c=1+1;</code><br>执行：select …;<br>这里要注意：<br>1）变量�
     
     </summary>
     
-      <category term="MySQL" scheme="https://yangyiyuan.github.io/categories/MySQL/"/>
+      <category term="MySQL" scheme="http://www.iooeo.com/categories/MySQL/"/>
     
     
-      <category term="Linux" scheme="https://yangyiyuan.github.io/tags/Linux/"/>
+      <category term="Linux" scheme="http://www.iooeo.com/tags/Linux/"/>
     
-      <category term="MySQL" scheme="https://yangyiyuan.github.io/tags/MySQL/"/>
+      <category term="MySQL" scheme="http://www.iooeo.com/tags/MySQL/"/>
     
   </entry>
   
   <entry>
     <title>Ubuntu系统下搭建lnmp环境</title>
-    <link href="https://yangyiyuan.github.io/2014/09/17/Ubuntu%E7%B3%BB%E7%BB%9F%E4%B8%8B%E6%90%AD%E5%BB%BAlnmp%E7%8E%AF%E5%A2%83/"/>
-    <id>https://yangyiyuan.github.io/2014/09/17/Ubuntu系统下搭建lnmp环境/</id>
+    <link href="http://www.iooeo.com/2014/09/17/Ubuntu%E7%B3%BB%E7%BB%9F%E4%B8%8B%E6%90%AD%E5%BB%BAlnmp%E7%8E%AF%E5%A2%83/"/>
+    <id>http://www.iooeo.com/2014/09/17/Ubuntu系统下搭建lnmp环境/</id>
     <published>2014-09-17T09:01:25.000Z</published>
     <updated>2016-11-17T09:56:13.000Z</updated>
     
@@ -300,7 +300,7 @@ set @c=1+1;</code><br>执行：select …;<br>这里要注意：<br>1）变量�
 <li><p>输入密码进入MySQL数据库代表安装成功。<br>本人安装的时候出现：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ E:/usr/bin/dpkg returned an error code ...</div></pre></td></tr></table></figure>
 </li>
-<li><p>错误字样，解决问题见本站<a href="http://www.iooeo.com/2016/11/17/MySQL%E5%AE%89%E8%A3%85dpkg%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" target="_blank" rel="external">MySQL安装dpkg错误解决方案</a>。 </p>
+<li><p>错误字样，解决问题见本站<a href="http://www.iooeo.com/2016/11/17/MySQL%E5%AE%89%E8%A3%85dpkg%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">MySQL安装dpkg错误解决方案</a>。 </p>
 </li>
 <li><p>配置MySQL远程连接：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ vi /etc/mysql/my.cnf --打开MySQL配置文件找到bind-address = 127.0.0.1，前边加上#，注释掉。</div><div class="line">$ service mysql restart --重启MySQL服务</div></pre></td></tr></table></figure>
@@ -322,30 +322,30 @@ set @c=1+1;</code><br>执行：select …;<br>这里要注意：<br>1）变量�
     
     </summary>
     
-      <category term="Linux" scheme="https://yangyiyuan.github.io/categories/Linux/"/>
+      <category term="Linux" scheme="http://www.iooeo.com/categories/Linux/"/>
     
     
-      <category term="PHP" scheme="https://yangyiyuan.github.io/tags/PHP/"/>
+      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
     
-      <category term="Linux" scheme="https://yangyiyuan.github.io/tags/Linux/"/>
+      <category term="Linux" scheme="http://www.iooeo.com/tags/Linux/"/>
     
-      <category term="MySQL" scheme="https://yangyiyuan.github.io/tags/MySQL/"/>
+      <category term="MySQL" scheme="http://www.iooeo.com/tags/MySQL/"/>
     
-      <category term="LNMP" scheme="https://yangyiyuan.github.io/tags/LNMP/"/>
+      <category term="LNMP" scheme="http://www.iooeo.com/tags/LNMP/"/>
     
-      <category term="Ngnix" scheme="https://yangyiyuan.github.io/tags/Ngnix/"/>
+      <category term="Ngnix" scheme="http://www.iooeo.com/tags/Ngnix/"/>
     
   </entry>
   
   <entry>
     <title>About Me</title>
-    <link href="https://yangyiyuan.github.io/2014/09/14/About-Me/"/>
-    <id>https://yangyiyuan.github.io/2014/09/14/About-Me/</id>
+    <link href="http://www.iooeo.com/2014/09/14/About-Me/"/>
+    <id>http://www.iooeo.com/2014/09/14/About-Me/</id>
     <published>2014-09-14T08:42:17.000Z</published>
     <updated>2016-11-17T09:57:09.000Z</updated>
     
     <content type="html"><![CDATA[<p>欢迎大家访问Ewan’s Blog：<code>www.iooeo.com</code><br>博主姓名：<code>杨依园</code> | <code>Ewan</code><br>网名：<code>バ 小丑男°乄° 　　　?</code><br>绰号：<code>cola</code>、<code>杨一</code>、<code>一哥</code>、<code>猫叔</code>、<code>小杨</code>、<code>猿某人</code>、<code>酷头（莉姐送的~）</code><br>扣扣：<code>654846126</code><br>邮箱：<code>yuankess@sina.cn</code> | <code>654846126@qq.com</code><br>社交主页：<code>www.iooeo.com</code> | <code>ewan.coding.me</code> | <code>yangyiyuan.github.io</code><br>爱好：<code>玩游戏</code>、<code>听歌</code>、<code>看电影</code>、<code>骑车</code>、<code>滑冰</code>、<code>瞎折腾</code></p>
-<h2 id="切换至炫酷版"><a href="#切换至炫酷版" class="headerlink" title="切换至炫酷版"></a><em><a href="http://www.iooeo.com/about/" target="_blank" rel="external">切换至炫酷版</a></em></h2><h3 id="此处要用程序"><a href="#此处要用程序" class="headerlink" title="此处要用程序"></a>此处要用程序</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">历程: </div><div class="line">&gt; 2014年09月11日购买域名 www.iooeo.com</div><div class="line">&gt; 购买空间 搭建环境</div><div class="line">&gt; 2014年09月15日开通第一个web网站 www.iooeo.com</div><div class="line">&gt; 2016年11月15日 www.iooeo.com 完成升级</div><div class="line">&gt; 未完待续......</div></pre></td></tr></table></figure>
+<h2 id="切换至炫酷版"><a href="#切换至炫酷版" class="headerlink" title="切换至炫酷版"></a><em><a href="http://www.iooeo.com/about/">切换至炫酷版</a></em></h2><h3 id="此处要用程序"><a href="#此处要用程序" class="headerlink" title="此处要用程序"></a>此处要用程序</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">历程: </div><div class="line">&gt; 2014年09月11日购买域名 www.iooeo.com</div><div class="line">&gt; 购买空间 搭建环境</div><div class="line">&gt; 2014年09月15日开通第一个web网站 www.iooeo.com</div><div class="line">&gt; 2016年11月15日 www.iooeo.com 完成升级</div><div class="line">&gt; 未完待续......</div></pre></td></tr></table></figure>
 ]]></content>
     
     <summary type="html">
@@ -354,19 +354,19 @@ set @c=1+1;</code><br>执行：select …;<br>这里要注意：<br>1）变量�
     
     </summary>
     
-      <category term="杂谈" scheme="https://yangyiyuan.github.io/categories/%E6%9D%82%E8%B0%88/"/>
+      <category term="杂谈" scheme="http://www.iooeo.com/categories/%E6%9D%82%E8%B0%88/"/>
     
     
-      <category term="微语" scheme="https://yangyiyuan.github.io/tags/%E5%BE%AE%E8%AF%AD/"/>
+      <category term="微语" scheme="http://www.iooeo.com/tags/%E5%BE%AE%E8%AF%AD/"/>
     
-      <category term="胡侃" scheme="https://yangyiyuan.github.io/tags/%E8%83%A1%E4%BE%83/"/>
+      <category term="胡侃" scheme="http://www.iooeo.com/tags/%E8%83%A1%E4%BE%83/"/>
     
   </entry>
   
   <entry>
     <title>MySQL 触发器</title>
-    <link href="https://yangyiyuan.github.io/2014/03/02/MySQL-%E8%A7%A6%E5%8F%91%E5%99%A8/"/>
-    <id>https://yangyiyuan.github.io/2014/03/02/MySQL-触发器/</id>
+    <link href="http://www.iooeo.com/2014/03/02/MySQL-%E8%A7%A6%E5%8F%91%E5%99%A8/"/>
+    <id>http://www.iooeo.com/2014/03/02/MySQL-触发器/</id>
     <published>2014-03-02T02:20:42.000Z</published>
     <updated>2016-11-23T03:59:02.000Z</updated>
     
@@ -427,19 +427,19 @@ end</code><br>statement_list 代表一个或多个语句的列表，列表内的
     
     </summary>
     
-      <category term="MySQL" scheme="https://yangyiyuan.github.io/categories/MySQL/"/>
+      <category term="MySQL" scheme="http://www.iooeo.com/categories/MySQL/"/>
     
     
-      <category term="Linux" scheme="https://yangyiyuan.github.io/tags/Linux/"/>
+      <category term="Linux" scheme="http://www.iooeo.com/tags/Linux/"/>
     
-      <category term="MySQL" scheme="https://yangyiyuan.github.io/tags/MySQL/"/>
+      <category term="MySQL" scheme="http://www.iooeo.com/tags/MySQL/"/>
     
   </entry>
   
   <entry>
     <title>MySQL 视图</title>
-    <link href="https://yangyiyuan.github.io/2013/11/13/MySQL-%E8%A7%86%E5%9B%BE/"/>
-    <id>https://yangyiyuan.github.io/2013/11/13/MySQL-视图/</id>
+    <link href="http://www.iooeo.com/2013/11/13/MySQL-%E8%A7%86%E5%9B%BE/"/>
+    <id>http://www.iooeo.com/2013/11/13/MySQL-视图/</id>
     <published>2013-11-13T10:14:04.000Z</published>
     <updated>2016-11-17T23:41:40.000Z</updated>
     
@@ -480,19 +480,19 @@ end</code><br>statement_list 代表一个或多个语句的列表，列表内的
     
     </summary>
     
-      <category term="MySQL" scheme="https://yangyiyuan.github.io/categories/MySQL/"/>
+      <category term="MySQL" scheme="http://www.iooeo.com/categories/MySQL/"/>
     
     
-      <category term="Linux" scheme="https://yangyiyuan.github.io/tags/Linux/"/>
+      <category term="Linux" scheme="http://www.iooeo.com/tags/Linux/"/>
     
-      <category term="MySQL" scheme="https://yangyiyuan.github.io/tags/MySQL/"/>
+      <category term="MySQL" scheme="http://www.iooeo.com/tags/MySQL/"/>
     
   </entry>
   
   <entry>
     <title>MySQL 优化篇之SQL优化</title>
-    <link href="https://yangyiyuan.github.io/2013/11/13/MySQL-%E4%BC%98%E5%8C%96%E7%AF%87%E4%B9%8BSQL%E4%BC%98%E5%8C%96/"/>
-    <id>https://yangyiyuan.github.io/2013/11/13/MySQL-优化篇之SQL优化/</id>
+    <link href="http://www.iooeo.com/2013/11/13/MySQL-%E4%BC%98%E5%8C%96%E7%AF%87%E4%B9%8BSQL%E4%BC%98%E5%8C%96/"/>
+    <id>http://www.iooeo.com/2013/11/13/MySQL-优化篇之SQL优化/</id>
     <published>2013-11-12T23:40:22.000Z</published>
     <updated>2016-11-23T02:10:40.000Z</updated>
     
@@ -609,12 +609,12 @@ SELECT * FROM t1 ORDER BY key_part1 DESC, key_part2 DESC;</code><br>但是以下
     
     </summary>
     
-      <category term="MySQL" scheme="https://yangyiyuan.github.io/categories/MySQL/"/>
+      <category term="MySQL" scheme="http://www.iooeo.com/categories/MySQL/"/>
     
     
-      <category term="Linux" scheme="https://yangyiyuan.github.io/tags/Linux/"/>
+      <category term="Linux" scheme="http://www.iooeo.com/tags/Linux/"/>
     
-      <category term="MySQL" scheme="https://yangyiyuan.github.io/tags/MySQL/"/>
+      <category term="MySQL" scheme="http://www.iooeo.com/tags/MySQL/"/>
     
   </entry>
   
