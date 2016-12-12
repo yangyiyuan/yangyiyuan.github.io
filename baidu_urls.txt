@@ -10,10 +10,3 @@ http://www.iooeo.com/2014/09/14/About-Me/
 http://www.iooeo.com/2014/03/02/MySQL-触发器/
 http://www.iooeo.com/2013/11/13/MySQL-视图/
 http://www.iooeo.com/2013/11/13/MySQL-优化篇之SQL优化/
-http://www.iooeo.com/
-http://www.iooeo.com/categories/
-http://www.iooeo.com/archives/
-http://www.iooeo.com/tags/
-http://www.iooeo.com/guestbook/
-http://www.iooeo.com/about/
-http://www.iooeo.com/404.html
