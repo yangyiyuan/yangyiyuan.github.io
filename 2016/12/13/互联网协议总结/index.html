@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="网络,计算机," />
+  <meta name="keywords" content="网络,计算机,通讯协议," />
 
 
 
@@ -96,7 +96,7 @@
 <meta property="og:image" content="http://image.beekka.com/blog/201205/bg2012052903.png">
 <meta property="og:image" content="http://image.beekka.com/blog/201205/bg2012052904.png">
 <meta property="og:image" content="http://image.beekka.com/blog/201205/bg2012052905.jpg">
-<meta property="og:image" content="http://image.beekka.com/blog/201205/bg2012052905.jpg">
+<meta property="og:image" content="http://image.beekka.com/blog/201205/bg2012052906.png">
 <meta property="og:image" content="http://image.beekka.com/blog/201205/bg2012052907.png">
 <meta property="og:image" content="http://image.beekka.com/blog/201205/bg2012052914.png">
 <meta property="og:image" content="http://image.beekka.com/blog/201205/bg2012052908.png">
@@ -105,7 +105,7 @@
 <meta property="og:image" content="http://image.beekka.com/blog/201205/bg2012052911.png">
 <meta property="og:image" content="http://image.beekka.com/blog/201205/bg2012052912.png">
 <meta property="og:image" content="http://image.beekka.com/blog/201205/bg2012052913.png">
-<meta property="og:updated_time" content="2016-12-13T07:49:04.000Z">
+<meta property="og:updated_time" content="2016-12-13T07:56:38.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="互联网协议总结">
 <meta name="twitter:description" content="互联网协议入门每天重复搬砖的动作,发现很多底层的基础只是都有点忘了…补一下喽,这里参照阮一峰的博客梳理一下互联网的核心是一系列的协议,总称为”互联网协议”(Internet Protocol Suite).它们对电脑如何连接和组网,做出了详尽的规定.理解了这些协议,就理解了互联网的原理.">
@@ -409,10 +409,10 @@
 </blockquote>
 <p>1.2 层与协议</p>
 <blockquote>
-<p>每一次都是为了完成一种功能.为了实现这些功能,就需要大家都遵守共同的规则.<br>大家都遵守的规则,就叫做”协议”(protocol).<br>互联网的每一层都定义了很多协议.这些协议的总称,就叫做”互联网协议”(Internet Protocol Suite).它是互联网的核心.</p>
+<p>每一层都是为了完成一种功能.为了实现这些功能,就需要大家都遵守共同的规则.<br>大家都遵守的规则,就叫做”协议”(protocol).<br>互联网的每一层都定义了很多协议.这些协议的总称,就叫做”互联网协议”(Internet Protocol Suite).它是互联网的核心.</p>
 </blockquote>
 <h3 id="实体层-Physical-Layer"><a href="#实体层-Physical-Layer" class="headerlink" title="实体层 Physical Layer"></a>实体层 Physical Layer</h3><blockquote>
-<p>从最底下的一层开始.<br>计算机要组网,当然是先把电脑连接起来,可以用光缆,电缆,双绞线,无线电波等方式.<br><img src="http://image.beekka.com/blog/201205/bg2012052903.png" alt="计算机组网"><br>这就叫做”实体层”,他就是把电脑连接起来的物理手段.它主要规定了网络的一些电器特性,作用是负责传送0和1的电信号.</p>
+<p>从最底下的一层开始.<br>计算机要组网,当然是先把电脑连接起来,可以用光缆,电缆,双绞线,无线电波等方式.<br><img src="http://image.beekka.com/blog/201205/bg2012052903.png" alt="计算机组网"><br>这就叫做”实体层”,他就是把电脑连接起来的物理手段.它主要规定了网络的一些电气特性,作用是负责传送0和1的电信号.</p>
 </blockquote>
 <h3 id="链接层-Link-Layer"><a href="#链接层-Link-Layer" class="headerlink" title="链接层 Link Layer"></a>链接层 Link Layer</h3><p>3.1 定义</p>
 <blockquote>
@@ -424,7 +424,7 @@
 </blockquote>
 <p>3.3 MAC地址</p>
 <blockquote>
-<p>上面提到，以太网数据包的”标头”,包含了发送者和接受者的信息,那么,发送者和接受者是如何标识呢?<br>以太网规定,连入网络的所有设备,都必须具有”网卡”接口.数据包必须是从一块网卡,传送到另一块网卡.网卡的地址,就是数据包的发送地址和接收地址,这叫做MAC地址.<br><img src="http://image.beekka.com/blog/201205/bg2012052905.jpg" alt="网卡"><br>每块网卡出厂的时候,都有一个全世界独一无二的MAC地址,长度是48个二进制位,通常用12个十六进制数表示.<br><img src="http://image.beekka.com/blog/201205/bg2012052905.jpg" alt="网卡"><br>前6个十六进制数是厂商编号,后6个是该厂商的网卡流水号.有了MAC地址,就可以定位网卡和数据包的路径了.</p>
+<p>上面提到，以太网数据包的”标头”,包含了发送者和接受者的信息,那么,发送者和接受者是如何标识呢?<br>以太网规定,连入网络的所有设备,都必须具有”网卡”接口.数据包必须是从一块网卡,传送到另一块网卡.网卡的地址,就是数据包的发送地址和接收地址,这叫做MAC地址.<br><img src="http://image.beekka.com/blog/201205/bg2012052905.jpg" alt="网卡"><br>每块网卡出厂的时候,都有一个全世界独一无二的MAC地址,长度是48个二进制位,通常用12个十六进制数表示.<br><img src="http://image.beekka.com/blog/201205/bg2012052906.png" alt="网卡"><br>前6个十六进制数是厂商编号,后6个是该厂商的网卡流水号.有了MAC地址,就可以定位网卡和数据包的路径了.</p>
 </blockquote>
 <p>3.4 广播</p>
 <blockquote>
@@ -508,6 +508,8 @@
             <a href="/tags/网络/" rel="tag"># 网络</a>
           
             <a href="/tags/计算机/" rel="tag"># 计算机</a>
+          
+            <a href="/tags/通讯协议/" rel="tag"># 通讯协议</a>
           
         </div>
       
@@ -613,7 +615,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
