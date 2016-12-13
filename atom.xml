@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.iooeo.com/"/>
-  <updated>2016-12-13T05:29:45.000Z</updated>
+  <updated>2016-12-13T05:32:21.000Z</updated>
   <id>http://www.iooeo.com/</id>
   
   <author>
@@ -20,12 +20,12 @@
     <link href="http://www.iooeo.com/2016/12/13/%E4%BA%92%E8%81%94%E7%BD%91%E5%8D%8F%E8%AE%AE%E6%80%BB%E7%BB%93/"/>
     <id>http://www.iooeo.com/2016/12/13/互联网协议总结/</id>
     <published>2016-12-13T03:41:29.000Z</published>
-    <updated>2016-12-13T05:29:45.000Z</updated>
+    <updated>2016-12-13T05:32:21.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="互联网协议入门"><a href="#互联网协议入门" class="headerlink" title="互联网协议入门"></a>互联网协议入门</h2><p>每天重复搬砖的动作,发现很多底层的基础只是都有点忘了…补一下喽,这里参照<a href="http://www.ruanyifeng.com" target="_blank" rel="external">阮一峰</a>的博客梳理一下<br>互联网的核心是一系列的协议,总称为”互联网协议”(Internet Protocol Suite).它们对电脑如何连接和组网,做出了详尽的规定.理解了这些协议,就理解了互联网的原理.</p>
 <h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>1.1</p>
 <blockquote>
-<p>互联网的实现，分成好几层。每一层都有自己的功能，就像建筑物一样，每一层都靠下一层支持。<br>用户接触到的，只是最上面的一层，根本没有感觉到下面的层。要理解互联网，必须从最下层开始，自下而上理解每一层的功能。<br>如何分层有不同的模型，有的模型分七层，有的分四层。个人觉得把互联网分成五层，比较容易解释。<br><img src="http://image.beekka.com/blog/201205/bg2012052902.png" alt="互联网实现"><br>如图所示,越往下面的层,越靠近硬件;越往上面的层,越靠近用户.</p>
+<p>互联网的实现，分成好几层。每一层都有自己的功能，就像建筑物一样，每一层都靠下一层支持。<br>用户接触到的，只是最上面的一层，根本没有感觉到下面的层。要理解互联网，必须从最下层开始，自下而上理解每一层的功能。<br>如何分层有不同的模型，有的模型分七层，有的分四层。个人觉得把互联网分成五层，比较容易解释。<br><img src="http://image.beekka.com/blog/201205/bg2012052902.png" alt="互联网实现-h250"><br>如图所示,越往下面的层,越靠近硬件;越往上面的层,越靠近用户.</p>
 </blockquote>
 <p>1.2</p>
 <blockquote>
