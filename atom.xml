@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.iooeo.com/"/>
-  <updated>2016-12-14T06:36:09.000Z</updated>
+  <updated>2017-03-31T03:24:36.000Z</updated>
   <id>http://www.iooeo.com/</id>
   
   <author>
@@ -14,6 +14,40 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://www.iooeo.com/2017/03/31/Yii2%20%E5%88%9B%E5%BB%BA%E5%BA%94%E7%94%A8/"/>
+    <id>http://www.iooeo.com/2017/03/31/Yii2 创建应用/</id>
+    <published>2017-03-31T03:24:36.000Z</published>
+    <updated>2017-03-31T03:24:36.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="创建应用"><a href="#创建应用" class="headerlink" title="创建应用"></a>创建应用</h1><h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><ul>
+<li>macOS 10.12.3</li>
+<li>php version: 5.6.28</li>
+<li>nginx version: nginx/1.8.0</li>
+<li>mysql version: 5.7.16</li>
+<li>composer version: 1.3.2</li>
+</ul>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>开发环境安装,这里就不做太多讲解,如有需要请移至本人博客<a href="http://iooeo.com" target="_blank" rel="external">Ewan’s Blog</a>.<br>composer 安装以及更换国内镜像请移至<a href="https://pkg.phpcomposer.com/" target="_blank" rel="external">Packagist / Composer</a></p>
+<p>切换到一个可通过 Web 访问的目录，执行如下命令即可安装 Yii ：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ composer global require &quot;fxp/composer-asset-plugin:^1.2.0&quot;</div><div class="line">$ composer create-project yiisoft/yii2-app-advanced thesaurus</div></pre></td></tr></table></figure></p>
+<p>本文全篇以高级的应用程序模板为基础,thesaurus 为实例项目名称.(安装的过程时间稍长,可以出去抽根烟)<br>安装好以后,初始化项目程序<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ cd thesaurus/</div><div class="line">$ php init</div></pre></td></tr></table></figure></p>
+<p>选择 0(Development)<br>输入 yes 即可<br>配置Nginx web访问服务,这里就不做多解释</p>
+<ul>
+<li><em>local.theb.com</em> (后端服务访问URL)</li>
+<li><em>local.thef.com</em>  (前端服务访问URL)</li>
+</ul>
+<p>配置好以后记得添加本地hosts和重启Nginx或者Apache<br>以上操作完成以后,通过浏览器访问<em>local.theb.com</em>和<em>local.thef.com</em> 显示一下即为安装成功<br><img src="https://git.kancloud.cn/repos/cola_uncle/yii2/raw/master/image/05ED4917-9765-49EB-8B61-8CA610549E3F.png?access-token=de29ccf9007bea655d8be6a078533ddd" alt=""><br><img src="https://git.kancloud.cn/repos/cola_uncle/yii2/raw/master/image/85BE0D17-0BFF-4267-9DE0-27256F5DF021.png?access-token=de29ccf9007bea655d8be6a078533ddd" alt=""></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;创建应用&quot;&gt;&lt;a href=&quot;#创建应用&quot; class=&quot;headerlink&quot; title=&quot;创建应用&quot;&gt;&lt;/a&gt;创建应用&lt;/h1&gt;&lt;h2 id=&quot;环境&quot;&gt;&lt;a href=&quot;#环境&quot; class=&quot;headerlink&quot; title=&quot;环境&quot;&gt;&lt;/a&gt;环境&lt;/h
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>互联网协议总结(二)</title>

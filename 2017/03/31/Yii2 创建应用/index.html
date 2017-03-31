@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Linux,MySQL," />
+  <meta name="keywords" content="Ewan, PHP" />
 
 
 
@@ -86,19 +86,40 @@
 
 
 
-<meta name="description" content="Ewan在Ubuntu下安装MySQL的时候出现了一下错误问题：
-1234567891011121314start: Job failed to startinvoke-rc.d: initscript mysql, action &amp;quot;start&amp;quot; failed.dpkg: error processing mysql-server-5.5 (--configure):subp">
+<meta name="description" content="创建应用环境
+macOS 10.12.3
+php version: 5.6.28
+nginx version: nginx/1.8.0
+mysql version: 5.7.16
+composer version: 1.3.2
+
+安装开发环境安装,这里就不做太多讲解,如有需要请移至本人博客Ewan’s Blog.composer 安装以及更换国内镜像请移至Packagist / Composer">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MySQL安装dpkg错误解决方案">
-<meta property="og:url" content="http://www.iooeo.com/2014/09/17/MySQL安装dpkg错误解决方案/index.html">
+<meta property="og:title" content="Ewan's Blog">
+<meta property="og:url" content="http://www.iooeo.com/2017/03/31/Yii2 创建应用/index.html">
 <meta property="og:site_name" content="Ewan's Blog">
-<meta property="og:description" content="Ewan在Ubuntu下安装MySQL的时候出现了一下错误问题：
-1234567891011121314start: Job failed to startinvoke-rc.d: initscript mysql, action &amp;quot;start&amp;quot; failed.dpkg: error processing mysql-server-5.5 (--configure):subp">
-<meta property="og:updated_time" content="2016-11-17T09:54:14.000Z">
+<meta property="og:description" content="创建应用环境
+macOS 10.12.3
+php version: 5.6.28
+nginx version: nginx/1.8.0
+mysql version: 5.7.16
+composer version: 1.3.2
+
+安装开发环境安装,这里就不做太多讲解,如有需要请移至本人博客Ewan’s Blog.composer 安装以及更换国内镜像请移至Packagist / Composer">
+<meta property="og:image" content="https://git.kancloud.cn/repos/cola_uncle/yii2/raw/master/image/05ED4917-9765-49EB-8B61-8CA610549E3F.png?access-token=de29ccf9007bea655d8be6a078533ddd">
+<meta property="og:image" content="https://git.kancloud.cn/repos/cola_uncle/yii2/raw/master/image/85BE0D17-0BFF-4267-9DE0-27256F5DF021.png?access-token=de29ccf9007bea655d8be6a078533ddd">
+<meta property="og:updated_time" content="2017-03-31T03:24:36.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MySQL安装dpkg错误解决方案">
-<meta name="twitter:description" content="Ewan在Ubuntu下安装MySQL的时候出现了一下错误问题：
-1234567891011121314start: Job failed to startinvoke-rc.d: initscript mysql, action &amp;quot;start&amp;quot; failed.dpkg: error processing mysql-server-5.5 (--configure):subp">
+<meta name="twitter:title" content="Ewan's Blog">
+<meta name="twitter:description" content="创建应用环境
+macOS 10.12.3
+php version: 5.6.28
+nginx version: nginx/1.8.0
+mysql version: 5.7.16
+composer version: 1.3.2
+
+安装开发环境安装,这里就不做太多讲解,如有需要请移至本人博客Ewan’s Blog.composer 安装以及更换国内镜像请移至Packagist / Composer">
+<meta name="twitter:image" content="https://git.kancloud.cn/repos/cola_uncle/yii2/raw/master/image/05ED4917-9765-49EB-8B61-8CA610549E3F.png?access-token=de29ccf9007bea655d8be6a078533ddd">
 
 
 
@@ -126,13 +147,13 @@
 
 
 
-  <link rel="canonical" href="http://www.iooeo.com/2014/09/17/MySQL安装dpkg错误解决方案/"/>
+  <link rel="canonical" href="http://www.iooeo.com/2017/03/31/Yii2 创建应用/"/>
 
 
 
 
 
-  <title> MySQL安装dpkg错误解决方案 | Ewan's Blog </title>
+  <title>  | Ewan's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -293,7 +314,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://www.iooeo.com/2014/09/17/MySQL安装dpkg错误解决方案/">
+  <link itemprop="mainEntityOfPage" href="http://www.iooeo.com/2017/03/31/Yii2 创建应用/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Ewan">
@@ -317,7 +338,7 @@
             
             
               
-                MySQL安装dpkg错误解决方案
+                
               
             
           </h1>
@@ -330,8 +351,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2014-09-17T17:39:04+08:00">
-                2014-09-17
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-31T11:24:36+08:00">
+                2017-03-31
               </time>
             
 
@@ -341,31 +362,13 @@
           </span>
 
           
-            <span class="post-category" >
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/MySQL/" itemprop="url" rel="index">
-                    <span itemprop="name">MySQL</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
 
           
             
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
-                <a href="/2014/09/17/MySQL安装dpkg错误解决方案/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2014/09/17/MySQL安装dpkg错误解决方案/" itemprop="commentCount"></span>
+                <a href="/2017/03/31/Yii2 创建应用/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/31/Yii2 创建应用/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -391,14 +394,22 @@
       
 
       
-        <ul>
-<li><p>Ewan在Ubuntu下安装MySQL的时候出现了一下错误问题：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">start: Job failed to start</div><div class="line">invoke-rc.d: initscript mysql, action &quot;start&quot; failed.</div><div class="line">dpkg: error processing mysql-server-5.5 (--configure):</div><div class="line">subprocess installed post-installation script returned error exit status 1</div><div class="line">dpkg: dependency problems prevent configuration of mysql-server:</div><div class="line">mysql-server depends on mysql-server-5.5; however:</div><div class="line">Package mysql-server-5.5 is not configured yet.</div><div class="line">dpkg: error processing mysql-server (--configure):</div><div class="line">dependency problems - leaving unconfigured</div><div class="line">No apport report written because the error message indicates its a followup error from a previous failure.</div><div class="line">Errors were encountered while processing:</div><div class="line">mysql-server-5.5</div><div class="line">mysql-server</div><div class="line">E: Sub-process /usr/bin/dpkg returned an error code (1)</div></pre></td></tr></table></figure>
-</li>
-<li><p>经查证，现给出解决办法：<br>删除MySQL前，先删除/var/lib/mysql和/etc/mysql</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ sudo rm /var/lib/mysql/ -R</div><div class="line">$ sudo rm /etc/mysql/ -R</div><div class="line">$ sudo apt-get autoremove mysql* --purge</div><div class="line">$ sudo apt-get remove apparmor</div><div class="line">$ sudo apt-get install mysql-server mysql-common</div></pre></td></tr></table></figure>
-</li>
+        <h1 id="创建应用"><a href="#创建应用" class="headerlink" title="创建应用"></a>创建应用</h1><h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><ul>
+<li>macOS 10.12.3</li>
+<li>php version: 5.6.28</li>
+<li>nginx version: nginx/1.8.0</li>
+<li>mysql version: 5.7.16</li>
+<li>composer version: 1.3.2</li>
 </ul>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>开发环境安装,这里就不做太多讲解,如有需要请移至本人博客<a href="http://iooeo.com" target="_blank" rel="external">Ewan’s Blog</a>.<br>composer 安装以及更换国内镜像请移至<a href="https://pkg.phpcomposer.com/" target="_blank" rel="external">Packagist / Composer</a></p>
+<p>切换到一个可通过 Web 访问的目录，执行如下命令即可安装 Yii ：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ composer global require &quot;fxp/composer-asset-plugin:^1.2.0&quot;</div><div class="line">$ composer create-project yiisoft/yii2-app-advanced thesaurus</div></pre></td></tr></table></figure></p>
+<p>本文全篇以高级的应用程序模板为基础,thesaurus 为实例项目名称.(安装的过程时间稍长,可以出去抽根烟)<br>安装好以后,初始化项目程序<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ cd thesaurus/</div><div class="line">$ php init</div></pre></td></tr></table></figure></p>
+<p>选择 0(Development)<br>输入 yes 即可<br>配置Nginx web访问服务,这里就不做多解释</p>
+<ul>
+<li><em>local.theb.com</em> (后端服务访问URL)</li>
+<li><em>local.thef.com</em>  (前端服务访问URL)</li>
+</ul>
+<p>配置好以后记得添加本地hosts和重启Nginx或者Apache<br>以上操作完成以后,通过浏览器访问<em>local.theb.com</em>和<em>local.thef.com</em> 显示一下即为安装成功<br><img src="https://git.kancloud.cn/repos/cola_uncle/yii2/raw/master/image/05ED4917-9765-49EB-8B61-8CA610549E3F.png?access-token=de29ccf9007bea655d8be6a078533ddd" alt=""><br><img src="https://git.kancloud.cn/repos/cola_uncle/yii2/raw/master/image/85BE0D17-0BFF-4267-9DE0-27256F5DF021.png?access-token=de29ccf9007bea655d8be6a078533ddd" alt=""></p>
 
       
     </div>
@@ -441,21 +452,13 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/Linux/" rel="tag"># Linux</a>
-          
-            <a href="/tags/MySQL/" rel="tag"># MySQL</a>
-          
-        </div>
-      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2014/09/17/Ubuntu系统下搭建lnmp环境/" rel="next" title="Ubuntu系统下搭建lnmp环境">
-                <i class="fa fa-chevron-left"></i> Ubuntu系统下搭建lnmp环境
+              <a href="/2016/12/14/互联网协议总结-二/" rel="next" title="互联网协议总结(二)">
+                <i class="fa fa-chevron-left"></i> 互联网协议总结(二)
               </a>
             
           </div>
@@ -463,10 +466,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2014/10/13/laravel安装/" rel="prev" title="laravel安装">
-                laravel安装 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -492,8 +491,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2014/09/17/MySQL安装dpkg错误解决方案/"
-           data-title="MySQL安装dpkg错误解决方案" data-url="http://www.iooeo.com/2014/09/17/MySQL安装dpkg错误解决方案/">
+      <div class="ds-thread" data-thread-key="2017/03/31/Yii2 创建应用/"
+           data-title="" data-url="http://www.iooeo.com/2017/03/31/Yii2 创建应用/">
       </div>
     
   </div>
@@ -517,8 +516,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.png"
@@ -660,6 +668,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#创建应用"><span class="nav-number">1.</span> <span class="nav-text">创建应用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#环境"><span class="nav-number">1.1.</span> <span class="nav-text">环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">1.2.</span> <span class="nav-text">安装</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
     </div>
