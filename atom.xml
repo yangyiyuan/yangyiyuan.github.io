@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.iooeo.com/"/>
-  <updated>2017-03-31T03:48:39.000Z</updated>
+  <updated>2017-03-31T03:52:27.000Z</updated>
   <id>http://www.iooeo.com/</id>
   
   <author>
@@ -14,6 +14,42 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Yii2 配置数据库连接</title>
+    <link href="http://www.iooeo.com/2017/03/31/Yii2%20%E9%85%8D%E7%BD%AE%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5/"/>
+    <id>http://www.iooeo.com/2017/03/31/Yii2 配置数据库连接/</id>
+    <published>2017-03-31T03:52:00.000Z</published>
+    <updated>2017-03-31T03:52:27.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>本人习惯将数据库连接信息,及一些安全性信息写到系统的环境变量里</p>
+<ul>
+<li>一是代码中没有明文的数据库账号密码等一些安全敏感性信息</li>
+<li>二是逼格比较高</li>
+<li>三是代码统一,配置好终身所有项目受用,没必要再去管开发环境生产环境配置啥的</li>
+</ul>
+<p>本人终端为macOS一般环境变量配置在<em>.bash_profile</em>,Linux一般在<em>/etc/profile</em>,配置格式如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ export DB_TYPE=mysql</div><div class="line">$ export DB_HOST=192.168.0.3</div><div class="line">$ export DB_USER=root</div><div class="line">$ ....</div></pre></td></tr></table></figure></p>
+<p>基于以上,项目中配置信息都在<em>mian.php</em>文件中配置,至于后端和前端的不同配置,就在<em>backend/config/main.php</em>和<em>frontend/config/main.php</em>中配置<br>配置好以后点击<em>local.thef.com</em>的Login,账号密码随便输入,点击Login,报错了?!那就对了,错误信息是说<em>thesaurus</em>数据库中没有<em>user</em>表,如果是其他错误那就不正常了,这一节就到此了,下一节简单的讲一下Yii2的数据库迁移.<br><img src="https://git.kancloud.cn/repos/cola_uncle/yii2/raw/master/image/screenshot_1489459270923.png?access-token=de29ccf9007bea655d8be6a078533ddd" alt=""></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本人习惯将数据库连接信息,及一些安全性信息写到系统的环境变量里&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一是代码中没有明文的数据库账号密码等一些安全敏感性信息&lt;/li&gt;
+&lt;li&gt;二是逼格比较高&lt;/li&gt;
+&lt;li&gt;三是代码统一,配置好终身所有项目受用,没必要再去管开发环境生产环境配置啥的&lt;
+    
+    </summary>
+    
+      <category term="Yii2" scheme="http://www.iooeo.com/categories/Yii2/"/>
+    
+    
+      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
+    
+      <category term="Yii2" scheme="http://www.iooeo.com/tags/Yii2/"/>
+    
+  </entry>
   
   <entry>
     <title>Yii2 创建应用</title>
