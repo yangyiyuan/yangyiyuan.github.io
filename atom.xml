@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.iooeo.com/"/>
-  <updated>2017-03-31T05:48:19.000Z</updated>
+  <updated>2017-03-31T05:55:00.000Z</updated>
   <id>http://www.iooeo.com/</id>
   
   <author>
@@ -14,6 +14,40 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Yii2 安装AdminLTE后台主题资源包</title>
+    <link href="http://www.iooeo.com/2017/03/31/Yii2%20%E5%AE%89%E8%A3%85AdminLTE%E5%90%8E%E5%8F%B0%E4%B8%BB%E9%A2%98%E8%B5%84%E6%BA%90%E5%8C%85/"/>
+    <id>http://www.iooeo.com/2017/03/31/Yii2 安装AdminLTE后台主题资源包/</id>
+    <published>2017-03-31T05:53:00.000Z</published>
+    <updated>2017-03-31T05:55:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>为了快捷开发后台和界面的统一,这里我们引入了AdminLTE主题资源包<br>AdminLTE的学习请移至<a href="https://github.com/dmstr/yii2-adminlte-asset" target="_blank" rel="external">dmstr/yii2-adminlte-asset</a></p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>使用composer安装<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ composer require dmstr/yii2-adminlte-asset &quot;2.*&quot;</div></pre></td></tr></table></figure></p>
+<h2 id="使用主题"><a href="#使用主题" class="headerlink" title="使用主题"></a>使用主题</h2><h3 id="方式一"><a href="#方式一" class="headerlink" title="方式一"></a>方式一</h3><p>复制整个<em>vendor/dmstr/yii2-adminlte-asset/example-views/yiisoft/yii2-app</em>目录下的<em>layouts</em>目录和<em>site</em>目录到<em>backend/views</em>,覆盖原始文件</p>
+<h3 id="方式二"><a href="#方式二" class="headerlink" title="方式二"></a>方式二</h3><p>在<em>backend/config/main.php</em>中添加一下配置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&apos;components&apos; =&gt; [</div><div class="line">    &apos;view&apos; =&gt; [</div><div class="line">         &apos;theme&apos; =&gt; [</div><div class="line">             &apos;pathMap&apos; =&gt; [</div><div class="line">                &apos;@app/views&apos; =&gt; &apos;@vendor/dmstr/yii2-adminlte-asset/example-views/yiisoft/yii2-app&apos;</div><div class="line">             ],</div><div class="line">         ],</div><div class="line">    ],</div><div class="line">],</div></pre></td></tr></table></figure></p>
+<h3 id="查看效果"><a href="#查看效果" class="headerlink" title="查看效果"></a>查看效果</h3><p>如果你<em>backend</em>下没有做任何操作的情况下,你会看到登陆页面已经变了.<br>如果想看一下<em>AdminLTE</em>主题的具体效果,将<em>backend/controllers/SiteController.php</em>做一下修改<br>暂时将行为方法注释<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">public function behaviors()</div><div class="line">    &#123;</div><div class="line">        return [</div><div class="line">            /**</div><div class="line">             * 注释此处,阻止行为方式,查看AdminLTE主题模板效果</div><div class="line">            &apos;access&apos; =&gt; [</div><div class="line">                &apos;class&apos; =&gt; AccessControl::className(),</div><div class="line">                &apos;rules&apos; =&gt; [</div><div class="line">                    [</div><div class="line">                        &apos;actions&apos; =&gt; [&apos;login&apos;, &apos;error&apos;],</div><div class="line">                        &apos;allow&apos; =&gt; true,</div><div class="line">                    ],</div><div class="line">                    [</div><div class="line">                        &apos;actions&apos; =&gt; [&apos;logout&apos;, &apos;index&apos;],</div><div class="line">                        &apos;allow&apos; =&gt; true,</div><div class="line">                        &apos;roles&apos; =&gt; [&apos;@&apos;],</div><div class="line">                    ],</div><div class="line">                ],</div><div class="line">            ],</div><div class="line">             */</div><div class="line">            &apos;verbs&apos; =&gt; [</div><div class="line">                &apos;class&apos; =&gt; VerbFilter::className(),</div><div class="line">                &apos;actions&apos; =&gt; [</div><div class="line">                    &apos;logout&apos; =&gt; [&apos;post&apos;],</div><div class="line">                ],</div><div class="line">            ],</div><div class="line">        ];</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
+<p>然后访问首页,就可以看到<em>AdminLTE</em>主题的具体效果</p>
+<h2 id="AdminLTE学习"><a href="#AdminLTE学习" class="headerlink" title="AdminLTE学习"></a>AdminLTE学习</h2><ul>
+<li>主题一些简单的页面实例,及学习文档也可以查看<em>vendor/almasaeed2010/adminlte/index.html</em></li>
+<li>主题实例<em>vendor/almasaeed2010/adminlte/pages</em></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;为了快捷开发后台和界面的统一,这里我们引入了AdminLTE主题资源包&lt;br&gt;AdminLTE的学习请移至&lt;a href=&quot;https://github.com/dmstr/yii2-adminlte-asset&quot; target=&quot;_blank&quot; rel=&quot;external
+    
+    </summary>
+    
+      <category term="Yii2" scheme="http://www.iooeo.com/categories/Yii2/"/>
+    
+    
+      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
+    
+      <category term="Yii2" scheme="http://www.iooeo.com/tags/Yii2/"/>
+    
+  </entry>
   
   <entry>
     <title>Yii2 自动存储更新显示数据库时间戳</title>
