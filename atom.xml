@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.iooeo.com/"/>
-  <updated>2017-03-31T03:52:27.000Z</updated>
+  <updated>2017-03-31T03:55:26.000Z</updated>
   <id>http://www.iooeo.com/</id>
   
   <author>
@@ -14,6 +14,51 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Yii2 数据库迁移</title>
+    <link href="http://www.iooeo.com/2017/03/31/Yii2%20%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%81%E7%A7%BB/"/>
+    <id>http://www.iooeo.com/2017/03/31/Yii2 数据库迁移/</id>
+    <published>2017-03-31T03:58:00.000Z</published>
+    <updated>2017-03-31T03:55:26.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h2><p>在开发和维护一个数据库驱动的应用程序时,数据库的结构会随代码的改变而改变. Yii 提供了一个 数据库迁移功,该功能可以记录数据库的变化, 以便使数据库和源代码一起受版本控制.<br>Yii 提供了一整套的迁移命令行工具，通过这些工具你可以:</p>
+<ul>
+<li>创建新的迁移</li>
+<li>提交迁移</li>
+<li>恢复迁移</li>
+<li>重新提交迁移</li>
+<li>现实迁移历史和状态<a id="more"></a>
+下面我简单用一下,至于更复杂的应用会在后期的更新中补充掉<h2 id="实操"><a href="#实操" class="headerlink" title="实操"></a>实操</h2>先看下帮助<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ cd thesaurus</div><div class="line">$ php yii migrate -h</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>最重要的是下面这段<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">- migrate/create        Creates a new migration.</div><div class="line">- migrate/down          Downgrades the application by reverting old migrations.</div><div class="line">- migrate/history       Displays the migration history.</div><div class="line">- migrate/mark          Modifies the migration history to the specified version.</div><div class="line">- migrate/new           Displays the un-applied new migrations.</div><div class="line">- migrate/redo          Redoes the last few migrations.</div><div class="line">- migrate/to            Upgrades or downgrades till the specified version.</div><div class="line">- migrate/up (default)  Upgrades the application by applying new migrations.</div></pre></td></tr></table></figure></p>
+<p>出于好奇心,我们先<em>create</em>一个表试试看看<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ php yii migrate/create create_terms_table</div></pre></td></tr></table></figure></p>
+<p>提示创建一个新的迁移文件,输入<em>yes</em>看到<em>New migration created successfully.</em>表示成功<br>生成的文件在<em>/thesaurus/console/migrations/mxxxxxx_xxxxxx_create_terms_table.php</em>,打开编辑terms所需字段<br><img src="https://git.kancloud.cn/repos/cola_uncle/yii2/raw/master/image/screenshot_1489469726399.png?access-token=de29ccf9007bea655d8be6a078533ddd" alt=""></p>
+<p>我这里添加了<em>name</em>和<em>create_at</em>,<em>update_at</em>字段,上边的属性各位估计也能看明白,下边执行迁移<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ php yii migrate</div></pre></td></tr></table></figure></p>
+<p>安装提示输入<em>yes</em>,看到<em>Migrated up successfully</em>说明成功,通过数据库工具<em>Navicat Premium</em>可以看到数据库中多了三个表<em>migration</em>,<em>terms</em>,<em>user</em>,其中<em>migration</em>是用来记录迁移历史记录的,<em>user</em>是项目初始化中自带的(也就是你刚刚登陆不成功那个<em>user</em>表),<em>terms</em>当然使我们自己创建的<br>剩下的命令就不做过多演示了,记住几个比较常用,完全无压力<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">- migrate/create        创建新的迁移.</div><div class="line">- migrate/down          恢复上一个迁移.</div><div class="line">- migrate/history       显示迁移历史和状态.</div><div class="line">- migrate               提交迁移</div></pre></td></tr></table></figure></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;描述&quot;&gt;&lt;a href=&quot;#描述&quot; class=&quot;headerlink&quot; title=&quot;描述&quot;&gt;&lt;/a&gt;描述&lt;/h2&gt;&lt;p&gt;在开发和维护一个数据库驱动的应用程序时,数据库的结构会随代码的改变而改变. Yii 提供了一个 数据库迁移功,该功能可以记录数据库的变化, 以便使数据库和源代码一起受版本控制.&lt;br&gt;Yii 提供了一整套的迁移命令行工具，通过这些工具你可以:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;创建新的迁移&lt;/li&gt;
+&lt;li&gt;提交迁移&lt;/li&gt;
+&lt;li&gt;恢复迁移&lt;/li&gt;
+&lt;li&gt;重新提交迁移&lt;/li&gt;
+&lt;li&gt;现实迁移历史和状态
+    
+    </summary>
+    
+      <category term="Yii2" scheme="http://www.iooeo.com/categories/Yii2/"/>
+    
+    
+      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
+    
+      <category term="Yii2" scheme="http://www.iooeo.com/tags/Yii2/"/>
+    
+  </entry>
   
   <entry>
     <title>Yii2 配置数据库连接</title>
