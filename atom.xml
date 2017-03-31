@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.iooeo.com/"/>
-  <updated>2017-03-31T03:24:36.000Z</updated>
+  <updated>2017-03-31T03:46:54.000Z</updated>
   <id>http://www.iooeo.com/</id>
   
   <author>
@@ -16,13 +16,13 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
+    <title>Yii2 创建应用</title>
     <link href="http://www.iooeo.com/2017/03/31/Yii2%20%E5%88%9B%E5%BB%BA%E5%BA%94%E7%94%A8/"/>
     <id>http://www.iooeo.com/2017/03/31/Yii2 创建应用/</id>
-    <published>2017-03-31T03:24:36.000Z</published>
-    <updated>2017-03-31T03:24:36.000Z</updated>
+    <published>2017-03-31T03:43:00.000Z</published>
+    <updated>2017-03-31T03:46:54.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="创建应用"><a href="#创建应用" class="headerlink" title="创建应用"></a>创建应用</h1><h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><ul>
+    <content type="html"><![CDATA[<h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><ul>
 <li>macOS 10.12.3</li>
 <li>php version: 5.6.28</li>
 <li>nginx version: nginx/1.8.0</li>
@@ -42,10 +42,19 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;创建应用&quot;&gt;&lt;a href=&quot;#创建应用&quot; class=&quot;headerlink&quot; title=&quot;创建应用&quot;&gt;&lt;/a&gt;创建应用&lt;/h1&gt;&lt;h2 id=&quot;环境&quot;&gt;&lt;a href=&quot;#环境&quot; class=&quot;headerlink&quot; title=&quot;环境&quot;&gt;&lt;/a&gt;环境&lt;/h
+      &lt;h2 id=&quot;环境&quot;&gt;&lt;a href=&quot;#环境&quot; class=&quot;headerlink&quot; title=&quot;环境&quot;&gt;&lt;/a&gt;环境&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;macOS 10.12.3&lt;/li&gt;
+&lt;li&gt;php version: 5.6.28&lt;/li&gt;
+&lt;li&gt;nginx versio
     
     </summary>
     
+      <category term="Yii2" scheme="http://www.iooeo.com/categories/Yii2/"/>
+    
+    
+      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
+    
+      <category term="Yii2" scheme="http://www.iooeo.com/tags/Yii2/"/>
     
   </entry>
   
