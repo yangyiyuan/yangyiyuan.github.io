@@ -87,22 +87,19 @@
 
 
 <meta name="description" content="有GitHub的直接登录,没有的GitHub注册
-创建仓库仓库(Repository)用来放置代码文件,登录之后点击右上角加号,点击New repository创建时,只需要填写Repository name即可,当然这个名字的格式必须为youName.github.io(youName为你的Github用户名)，例如我的为Mercis.github.io
-配置SSH Key为了防止每次部署需要输">
+创建仓库仓库(Repository)用来放置代码文件,登录之后点击右上角加号,点击New repository">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo+Github+coding搭建个人博客 - GitHub 篇">
 <meta property="og:url" content="http://www.iooeo.com/2017/07/03/Hexo+Github+coding搭建个人博客 - GitHub 篇/index.html">
 <meta property="og:site_name" content="Ewan's Blog">
 <meta property="og:description" content="有GitHub的直接登录,没有的GitHub注册
-创建仓库仓库(Repository)用来放置代码文件,登录之后点击右上角加号,点击New repository创建时,只需要填写Repository name即可,当然这个名字的格式必须为youName.github.io(youName为你的Github用户名)，例如我的为Mercis.github.io
-配置SSH Key为了防止每次部署需要输">
+创建仓库仓库(Repository)用来放置代码文件,登录之后点击右上角加号,点击New repository">
 <meta property="og:image" content="http://ogpq2zwg5.bkt.clouddn.com/WechatIMG6.jpeg">
-<meta property="og:updated_time" content="2017-07-03T09:54:21.000Z">
+<meta property="og:updated_time" content="2017-07-03T10:07:24.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo+Github+coding搭建个人博客 - GitHub 篇">
 <meta name="twitter:description" content="有GitHub的直接登录,没有的GitHub注册
-创建仓库仓库(Repository)用来放置代码文件,登录之后点击右上角加号,点击New repository创建时,只需要填写Repository name即可,当然这个名字的格式必须为youName.github.io(youName为你的Github用户名)，例如我的为Mercis.github.io
-配置SSH Key为了防止每次部署需要输">
+创建仓库仓库(Repository)用来放置代码文件,登录之后点击右上角加号,点击New repository">
 <meta name="twitter:image" content="http://ogpq2zwg5.bkt.clouddn.com/WechatIMG6.jpeg">
 
 
@@ -397,7 +394,7 @@
 
       
         <p>有GitHub的直接登录,没有的<a href="https://github.com/" target="_blank" rel="external">GitHub</a>注册</p>
-<h2 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h2><p>仓库(Repository)用来放置代码文件,登录之后点击右上角加号,点击New repository<br><img src="http://ogpq2zwg5.bkt.clouddn.com/WechatIMG6.jpeg" alt="New repository"><br>创建时,只需要填写Repository name即可,当然这个名字的格式必须为youName.github.io<em>(youName为你的Github用户名)</em>，例如我的为Mercis.github.io</p>
+<h2 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h2><p>仓库(Repository)用来放置代码文件,登录之后点击右上角加号,点击New repository<br><a id="more"></a><br><img src="http://ogpq2zwg5.bkt.clouddn.com/WechatIMG6.jpeg" alt="New repository"><br>创建时,只需要填写Repository name即可,当然这个名字的格式必须为youName.github.io<em>(youName为你的Github用户名)</em>，例如我的为Mercis.github.io</p>
 <h2 id="配置SSH-Key"><a href="#配置SSH-Key" class="headerlink" title="配置SSH Key"></a>配置SSH Key</h2><p>为了防止每次部署需要输入密码的麻烦,这里使用SSH Key登录<br>生成SSH Key,yourEmail@example.com 替换为你自己的邮箱,过程中需要输入密码等操作,可以全部回车使用默认的<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ssh-keygen -t rsa -b 4096 -C &quot;yourEmail@example.com&quot;</div></pre></td></tr></table></figure></p>
 <p>完成之后,用户目录下回多一个.ssh文件夹,里面包含id_rsa和id_rsa.pub两个文件<br>复制id_rsa.pub中的内容<br>添加SSH key到GitHub<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">进入GitHub账号设置页面</div><div class="line">左侧选择 **SSH and GPG keys**</div><div class="line">点击 **New SSH key** 或者 **Add SSH key**</div><div class="line">在&apos;Title&apos;字段中填写此SSH Key的名称，在&apos;Key&apos;字段中填写上面复制好的内容</div><div class="line">点击 **Add SSH key**</div><div class="line">输入账户密码确定操作</div></pre></td></tr></table></figure></p>
 <p>测试SSH Key 是否配置成功,返回 Hi youName!…..表示成功<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ssh -T git@github.com</div></pre></td></tr></table></figure></p>
