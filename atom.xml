@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.iooeo.com/"/>
-  <updated>2017-07-04T07:44:14.000Z</updated>
+  <updated>2017-07-04T08:45:07.000Z</updated>
   <id>http://www.iooeo.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://www.iooeo.com/2017/07/04/Hexo+Github+coding%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%20-%20%E7%99%BE%E5%BA%A6%E5%92%8CGoogle%E6%94%B6%E5%BD%95%E7%AF%87/"/>
     <id>http://www.iooeo.com/2017/07/04/Hexo+Github+coding搭建个人博客 - 百度和Google收录篇/</id>
     <published>2017-07-04T06:39:48.000Z</published>
-    <updated>2017-07-04T07:44:14.000Z</updated>
+    <updated>2017-07-04T08:45:07.000Z</updated>
     
     <content type="html"><![CDATA[<p>网站地图</p>
 <blockquote>
@@ -42,6 +42,23 @@
 <li><a href="http://zhanzhang.baidu.com/linksubmit/url" target="_blank" rel="external">百度链接提交</a></li>
 </ul>
 <p>在链接提交输入框中输入你的域名,点击提交即可</p>
+<h3 id="验证站点"><a href="#验证站点" class="headerlink" title="验证站点"></a>验证站点</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">点击站点管理,依次输入信息</div><div class="line">第二步*验证网站*,选择文件验证,下载验证文件</div><div class="line">将验证文件放在所应用的主题的source下`/themes/主题/source/`</div><div class="line">执行文件部署</div><div class="line">$ hexo generate</div><div class="line">$ hexo deploy</div><div class="line">部署完成之后点击立即验证或者直接访问,域名/百度验证文件名,下边是我的</div></pre></td></tr></table></figure>
+<p><a href="http://www.iooeo.com/baidu_verify_a501VUvpmw.html">http://www.iooeo.com/baidu_verify_a501VUvpmw.html</a></p>
+<h3 id="链接提交"><a href="#链接提交" class="headerlink" title="链接提交"></a>链接提交</h3><p>点击链接提交,选择网站<br>如何选择链接提交方式<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">1、主动推送：最为快速的提交方式，推荐您将站点当天新产出链接立即通过此方式推送给百度，以保证新链接可以及时被百度收录。</div><div class="line">2、自动推送：最为便捷的提交方式，请将自动推送的JS代码部署在站点的每一个页面源代码中，部署代码的页面在每次被浏览时，链接会被自动推送给百度。可以与主动推送配合使用。</div><div class="line">3、sitemap：您可以定期将网站链接放到sitemap中，然后将sitemap提交给百度。百度会周期性的抓取检查您提交的sitemap，对其中的链接进行处理，但收录速度慢于主动推送。</div><div class="line">4、手动提交：一次性提交链接给百度，可以使用此种方式。</div></pre></td></tr></table></figure></p>
+<p>sitemap提交</p>
+<blockquote>
+<p>这个时候需要用到上面生产的sitemap了,选择自动提交种的sitemap,将<a href="http://www.iooeo.com/baidusitemap.xml">http://www.iooeo.com/baidusitemap.xml</a>粘贴到输入框内,输入验证码,点击提交<br>下面的列表就会出现你添加的sitemap链接了,这个时候状态栏显示的应该是等待,一般过几十秒刷新一下页面就会正常,然后百度就会自动的周期抓取你的sitemap</p>
+</blockquote>
+<p>自动推送</p>
+<blockquote>
+<p>安装自动推送JS代码的网页，在页面被访问时，页面URL将立即被推送给百度。<br>可以将下面代码添加到post模板中,这样每篇文章生成的时候都会有自动推送代码<br>最直接的就是直接添加到主题目录下的layout/post.swig文件下</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">(function()&#123;</div><div class="line">    var bp = document.createElement(&apos;script&apos;);</div><div class="line">    var curProtocol = window.location.protocol.split(&apos;:&apos;)[0];</div><div class="line">    if (curProtocol === &apos;https&apos;) &#123;</div><div class="line">        bp.src = &apos;https://zz.bdstatic.com/linksubmit/push.js&apos;;        </div><div class="line">    &#125;</div><div class="line">    else &#123;</div><div class="line">        bp.src = &apos;http://push.zhanzhang.baidu.com/push.js&apos;;</div><div class="line">    &#125;</div><div class="line">    var s = document.getElementsByTagName(&quot;script&quot;)[0];</div><div class="line">    s.parentNode.insertBefore(bp, s);</div><div class="line">&#125;)();</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<p>主动推送</p>
+<blockquote>
+<p>主动推送最为快速的提交方式,是被百度收录最快的推送方式<br>百度提供了主动推送的示例:支持curl、php、python、java、php、ruby等等方式,你可以自己选择一种进行主动推送<br>具体使用帮助请看<a href="http://zhanzhang.baidu.com/linksubmit/index" target="_blank" rel="external">主动推送教程</a></p>
+</blockquote>
+<h2 id="Google验证网站"><a href="#Google验证网站" class="headerlink" title="Google验证网站"></a>Google验证网站</h2><p><a href="https://www.google.com/webmasters/tools/home?hl=zh-CN" target="_blank" rel="external">Google站点提交入口</a><br>添加站点…<br>验证站点…<br>下载文件…<br>步骤基本跟百度一样…</p>
 ]]></content>
     
     <summary type="html">
