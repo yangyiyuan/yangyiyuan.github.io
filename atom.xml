@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.iooeo.com/"/>
-  <updated>2017-07-03T10:07:24.000Z</updated>
+  <updated>2017-07-04T07:31:27.000Z</updated>
   <id>http://www.iooeo.com/</id>
   
   <author>
@@ -14,6 +14,138 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo+Github+coding搭建个人博客 - 百度和Google收录篇</title>
+    <link href="http://www.iooeo.com/2017/07/04/Hexo+Github+coding%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%20-%20%E7%99%BE%E5%BA%A6%E5%92%8CGoogle%E6%94%B6%E5%BD%95%E7%AF%87/"/>
+    <id>http://www.iooeo.com/2017/07/04/Hexo+Github+coding搭建个人博客 - 百度和Google收录篇/</id>
+    <published>2017-07-04T06:39:48.000Z</published>
+    <updated>2017-07-04T07:31:27.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>网站地图</p>
+<blockquote>
+<p>网站地图，又称站点地图，它就是一个页面，上面放置了网站上需要搜索引擎抓取的所有页面的链接（注：不是所有页面）。大多数人在网站上找不到自己所需要的信息时，可能会将网站地图作为一种补救措施。搜索引擎蜘蛛非常喜欢网站地图</p>
+</blockquote>
+<a id="more"></a>
+<h2 id="Hexo博客生产站点地图"><a href="#Hexo博客生产站点地图" class="headerlink" title="Hexo博客生产站点地图"></a>Hexo博客生产站点地图</h2><p>进入Hexo博客根目录，安装百度和Google的站点地图生成插件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-generator-baidu-sitemap --save</div><div class="line">$ npm install hexo-generator-sitemap --save</div></pre></td></tr></table></figure></p>
+<p>在博客根目录的_config.yml配置文件种添加一下代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"># 自动生成sitemap</div><div class="line">sitemap:</div><div class="line">  path: sitemap.xml</div><div class="line">baidusitemap:</div><div class="line">  path: baidusitemap.xml</div></pre></td></tr></table></figure></p>
+<p>编译部署博客代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div><div class="line">$ hexo deploy</div></pre></td></tr></table></figure></p>
+<p>边已完成,你会发现你的博客编译完成的代码目录public种生成了baidusitemap.xml和sitemap.xml<br>此时我们访问域名下面的这两个文件,看看有没有</p>
+<ul>
+<li><a href="http://www.iooeo.com/baidusitemap.xml">http://www.iooeo.com/baidusitemap.xml</a></li>
+<li><a href="http://www.iooeo.com/sitemap.xml">http://www.iooeo.com/sitemap.xml</a><br>这样百度和Google的爬虫就可以通过这个来爬取你的博客内容了</li>
+</ul>
+<h2 id="查看博客是否已经被收录"><a href="#查看博客是否已经被收录" class="headerlink" title="查看博客是否已经被收录"></a>查看博客是否已经被收录</h2><p>在百度和Google分别输入搜索:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">site:iooeo.com</div></pre></td></tr></table></figure></p>
+<p>这里需要将iooeo.com换成你们自己的域名</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;网站地图&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;网站地图，又称站点地图，它就是一个页面，上面放置了网站上需要搜索引擎抓取的所有页面的链接（注：不是所有页面）。大多数人在网站上找不到自己所需要的信息时，可能会将网站地图作为一种补救措施。搜索引擎蜘蛛非常喜欢网站地图&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="Hexo" scheme="http://www.iooeo.com/categories/Hexo/"/>
+    
+    
+      <category term="Hexo" scheme="http://www.iooeo.com/tags/Hexo/"/>
+    
+      <category term="Github" scheme="http://www.iooeo.com/tags/Github/"/>
+    
+      <category term="coding" scheme="http://www.iooeo.com/tags/coding/"/>
+    
+      <category term="Markdown" scheme="http://www.iooeo.com/tags/Markdown/"/>
+    
+      <category term="搜索引擎" scheme="http://www.iooeo.com/tags/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo+Github+coding搭建个人博客 - 配置域名分流解析篇</title>
+    <link href="http://www.iooeo.com/2017/07/04/Hexo+Github+coding%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%20-%20%E9%85%8D%E7%BD%AE%E5%9F%9F%E5%90%8D%E5%88%86%E6%B5%81%E8%A7%A3%E6%9E%90%E7%AF%87/"/>
+    <id>http://www.iooeo.com/2017/07/04/Hexo+Github+coding搭建个人博客 - 配置域名分流解析篇/</id>
+    <published>2017-07-04T02:25:06.000Z</published>
+    <updated>2017-07-04T06:36:27.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>前边我们已经分别介绍了,Hexo 本地安装,Hexo GitHub 代码部署,Hexo Coding 代码部署实现了通过外网访问自己的博客</p>
+<ul>
+<li><a href="http://www.iooeo.com/2017/07/03/Hexo+Github+coding%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%20-%20Hexo%20%E6%9C%AC%E5%9C%B0%E5%AE%89%E8%A3%85%E7%AF%87/">Hexo 本地安装篇</a></li>
+<li><a href="http://www.iooeo.com/2017/07/03/Hexo+Github+coding%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%20-%20GitHub%20%E7%AF%87/">Hexo GitHub 篇</a></li>
+<li><a href="http://www.iooeo.com/2017/07/04/Hexo-Github-coding%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2-Coding-%E7%AF%87/">Hexo Coding 篇</a></li>
+</ul>
+<p>如果你没有自己的域名的话,可能就到此为止了,如果你有属于自己的域名的话,惊喜还在后面,请继续….<br><a id="more"></a></p>
+<h2 id="项目内域名配置"><a href="#项目内域名配置" class="headerlink" title="项目内域名配置"></a>项目内域名配置</h2><p>打开你的Hexo项目,在<em>/source/</em>目录下创建以CNAME为文件名称的文件<br>内容:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">www.iooeo.com</div></pre></td></tr></table></figure></p>
+<p><em>www.iooeo.com</em>是我的域名,此处该成你自己的就可以了.<br>然后执行Hexo部署命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure></p>
+<p>分别登陆Coding和GitHub,进入项目,点击项目的Pages 服务,绑定你的域名<code>GitHub好像自动给添加了</code><br><code>Coding更新了新版本以后,绑定域名必须要会员等级黄金以上,开始商业化了.白银级别的要经过Coding页面5秒钟跳转,而且国内访问GitHub也不是太慢了,现在建议直接走GitHub了,可以忽略Coding部分</code></p>
+<h2 id="域名服务商配置域名解析"><a href="#域名服务商配置域名解析" class="headerlink" title="域名服务商配置域名解析"></a>域名服务商配置域名解析</h2><p>添加两条CNAME解析记录,主机记录分别是@和www,解析线路全部为默认,记录值全部为youName.github.io</p>
+<hr>
+<p><code>Coding没升级之前,Coding负责国内域名分流,GitHub负责国外域名分流,而且Coding访问稍微快一些.
+但是可以这种模式没能继续下去,因为Coding已经走向商业化了.当然你要是选择付费升级会员的话,可以继续使用以下这种模式.</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">添加两条CNAME解析记录,主机记录分别是@和www,解析线路全部为默认,记录值全部为youName.coding.me,确保Coding上项目内Pages 服务已绑定域名</div><div class="line">添加两条CNAME解析记录,主机记录分别是@和www,解析线路全部为海外,记录值全部为youName.github.io</div></pre></td></tr></table></figure></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;前边我们已经分别介绍了,Hexo 本地安装,Hexo GitHub 代码部署,Hexo Coding 代码部署实现了通过外网访问自己的博客&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.iooeo.com/2017/07/03/Hexo+Github+coding%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%20-%20Hexo%20%E6%9C%AC%E5%9C%B0%E5%AE%89%E8%A3%85%E7%AF%87/&quot;&gt;Hexo 本地安装篇&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.iooeo.com/2017/07/03/Hexo+Github+coding%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%20-%20GitHub%20%E7%AF%87/&quot;&gt;Hexo GitHub 篇&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.iooeo.com/2017/07/04/Hexo-Github-coding%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2-Coding-%E7%AF%87/&quot;&gt;Hexo Coding 篇&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果你没有自己的域名的话,可能就到此为止了,如果你有属于自己的域名的话,惊喜还在后面,请继续….&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Hexo" scheme="http://www.iooeo.com/categories/Hexo/"/>
+    
+    
+      <category term="Hexo" scheme="http://www.iooeo.com/tags/Hexo/"/>
+    
+      <category term="Github" scheme="http://www.iooeo.com/tags/Github/"/>
+    
+      <category term="coding" scheme="http://www.iooeo.com/tags/coding/"/>
+    
+      <category term="Markdown" scheme="http://www.iooeo.com/tags/Markdown/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo+Github+coding搭建个人博客 - Coding 篇</title>
+    <link href="http://www.iooeo.com/2017/07/04/Hexo+Github+coding%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%20-%20Coding%20%E7%AF%87/"/>
+    <id>http://www.iooeo.com/2017/07/04/Hexo+Github+coding搭建个人博客 - Coding 篇/</id>
+    <published>2017-07-04T01:22:24.000Z</published>
+    <updated>2017-07-04T02:31:16.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>有Coding的直接登录,没有的<a href="https://coding.net/" target="_blank" rel="external">Coding</a>注册</p>
+<h2 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h2><p>添加项目,填写项目名称/描述…当然这个名字的格式最好为youName<em>(youName为你的Coding用户名)</em>，例如我的为Mercis<br><a id="more"></a></p>
+<h2 id="配置SSH-Key"><a href="#配置SSH-Key" class="headerlink" title="配置SSH Key"></a>配置SSH Key</h2><p><a href="http://www.iooeo.com/2017/07/03/Hexo+Github+coding%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%20-%20GitHub%20%E7%AF%87/">GitHub篇</a>已经讲过了,步骤差不多,现在直接将<em>.ssh/id_rsa.pub</em>的内容copy到Coding-&gt;个人设置-&gt;SSH 公匙,添加即可<br>添加好SSH Key 以后测试,返回 Hi youName!…..表示成功<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ssh -T git@git.coding.net</div></pre></td></tr></table></figure></p>
+<h2 id="部署Hexo项目到Coding"><a href="#部署Hexo项目到Coding" class="headerlink" title="部署Hexo项目到Coding"></a>部署Hexo项目到Coding</h2><p>打开Hexo博客目录下的站点配置文件_config.yml，经过之前<a href="http://www.iooeo.com/2017/07/03/Hexo+Github+coding%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%20-%20GitHub%20%E7%AF%87/">GitHub篇</a>我们的配置已经是：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo: git@github.com:Mercis/Mercis.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure></p>
+<p>现在需要改成这样:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo: </div><div class="line">    github: git@github.com:Mercis/Mercis.github.io.git</div><div class="line">    coding: git@git.coding.net:mercis/mercis.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure></p>
+<p>这个地方值得注意的是<code>当部署仓库有多个时,需要将repo改成键值对的格式,前面的名称可以规范为代码托管平台的名称,自己能区分就行,还是提示一下,yml 格式文件冒号(:)后面必须有一个空格</code><br>执行Hexo部署命令,执行成功后,登录Coding项目已经有你Hexo项目文件了<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure></p>
+<p>开启Coding Pages功能<br>点击项目的Pages服务,部署来源选择master 分支,点击保存,访问<code>http://youName.coding.me/</code>就可以了,这样Coding部署已经正式完成了</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;有Coding的直接登录,没有的&lt;a href=&quot;https://coding.net/&quot;&gt;Coding&lt;/a&gt;注册&lt;/p&gt;
+&lt;h2 id=&quot;创建仓库&quot;&gt;&lt;a href=&quot;#创建仓库&quot; class=&quot;headerlink&quot; title=&quot;创建仓库&quot;&gt;&lt;/a&gt;创建仓库&lt;/h2&gt;&lt;p&gt;添加项目,填写项目名称/描述…当然这个名字的格式最好为youName&lt;em&gt;(youName为你的Coding用户名)&lt;/em&gt;，例如我的为Mercis&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Hexo" scheme="http://www.iooeo.com/categories/Hexo/"/>
+    
+    
+      <category term="Hexo" scheme="http://www.iooeo.com/tags/Hexo/"/>
+    
+      <category term="Github" scheme="http://www.iooeo.com/tags/Github/"/>
+    
+      <category term="coding" scheme="http://www.iooeo.com/tags/coding/"/>
+    
+      <category term="Markdown" scheme="http://www.iooeo.com/tags/Markdown/"/>
+    
+  </entry>
   
   <entry>
     <title>Hexo+Github+coding搭建个人博客 - GitHub 篇</title>
@@ -681,186 +813,6 @@ set @c=1+1;</code><br>执行：select …;<br>这里要注意：<br>1）变量�
       &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;Ewan在Ubuntu下安装MySQL的时候出现了一下错误问题：&lt;/p&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div
-    
-    </summary>
-    
-      <category term="MySQL" scheme="http://www.iooeo.com/categories/MySQL/"/>
-    
-    
-      <category term="Linux" scheme="http://www.iooeo.com/tags/Linux/"/>
-    
-      <category term="MySQL" scheme="http://www.iooeo.com/tags/MySQL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Ubuntu系统下搭建lnmp环境</title>
-    <link href="http://www.iooeo.com/2014/09/17/Ubuntu%E7%B3%BB%E7%BB%9F%E4%B8%8B%E6%90%AD%E5%BB%BAlnmp%E7%8E%AF%E5%A2%83/"/>
-    <id>http://www.iooeo.com/2014/09/17/Ubuntu系统下搭建lnmp环境/</id>
-    <published>2014-09-17T09:01:25.000Z</published>
-    <updated>2016-11-17T09:56:13.000Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="环境：Ubuntu12-04-64"><a href="#环境：Ubuntu12-04-64" class="headerlink" title="环境：Ubuntu12.04 64"></a>环境：Ubuntu12.04 64</h3><ul>
-<li><p>登录以后首先更新一下源列表</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ apt-get update</div></pre></td></tr></table></figure>
-</li>
-<li><p>然后安装nginx</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ sudo apt-get install nginx</div><div class="line">$ /etc/init.d/nginx start --启动ngnix</div><div class="line">$ /etc/init.d/nginx stop --停止ngnix</div><div class="line">$ /etc/init.d/nginx restart --重启ngnix</div><div class="line">$ service ngnix restart --重启ngnix</div></pre></td></tr></table></figure>
-</li>
-<li><p>安装PHP及相关扩展 </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ sudo apt-get install php5-cli php5-common php5-fpm php5-cgi php5-mysql php5-gd php5-sqlite libssh2-php</div><div class="line">$ service php5-fpm restart --重启php</div></pre></td></tr></table></figure>
-</li>
-<li><p>配置Ngnix站点检测PHP环境，Ngnix的站点配置文件在/etc/ngnix/conf.d/或/etc/ngnix/sites-enabled/(初始默认)目录下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ vi /etc/nginx/sites-enabled/default</div></pre></td></tr></table></figure>
-</li>
-<li><p>打开初始的配置文件default做一下更改（内容替换或按下面的配置自己更改）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">server&#123;</div><div class="line">	listen 80;</div><div class="line">	root /var/www;</div><div class="line">	index index.php index.html index.htm;</div><div class="line">	server_name localhost;</div><div class="line">	location / &#123;</div><div class="line">		try_files $uri $uri/ /index.html;</div><div class="line">	&#125;</div><div class="line">	location ~ \.php$ &#123;</div><div class="line">		fastcgi_pass 127.0.0.1:9000;</div><div class="line">		fastcgi_index index.php;</div><div class="line">		fastcgi_param SCRIPT_FILENAME /var/www$fastcgi_script_name;</div><div class="line">		include /etc/nginx/fastcgi_params;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>保存后在/var/目录下创建www目录</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ mkdir www</div></pre></td></tr></table></figure>
-</li>
-<li><p>创建文件index.php</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ vi index.php</div></pre></td></tr></table></figure>
-</li>
-<li><p>index.php内容检测PHP环境（内容如下）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line">phpinfo();</div></pre></td></tr></table></figure>
-</li>
-<li><p>保存退出，重启nginx和php（命令在上边）</p>
-</li>
-<li>在浏览器输入localhost，出现PHP环境及扩展配置说明以上安装成功。</li>
-<li><p>安装MySQL</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo apt-get install mysql-server-5.5 mysql-client-5.5</div></pre></td></tr></table></figure>
-</li>
-<li><p>中间要记住自己设定的MySQL密码，安装成功以后</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ mysql -uroot -p</div></pre></td></tr></table></figure>
-</li>
-<li><p>输入密码进入MySQL数据库代表安装成功。<br>本人安装的时候出现：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ E:/usr/bin/dpkg returned an error code ...</div></pre></td></tr></table></figure>
-</li>
-<li><p>错误字样，解决问题见本站<a href="http://www.iooeo.com/2016/11/17/MySQL%E5%AE%89%E8%A3%85dpkg%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">MySQL安装dpkg错误解决方案</a>。 </p>
-</li>
-<li><p>配置MySQL远程连接：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ vi /etc/mysql/my.cnf --打开MySQL配置文件找到bind-address = 127.0.0.1，前边加上#，注释掉。</div><div class="line">$ service mysql restart --重启MySQL服务</div></pre></td></tr></table></figure>
-</li>
-<li><p>进入MySQL，做权限修改</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ mysql -uroot -p mysql </div><div class="line">$ &gt; grant all on *.* root@&apos;%&apos; identified by &apos;你的密码&apos;;</div><div class="line">$ &gt; flush privilefes;</div><div class="line">$ &gt; exit</div></pre></td></tr></table></figure>
-</li>
-<li><p>至此完毕</p>
-</li>
-<li>建议重启一遍Ngnix、PHP、MySQL，开发环境就可以正式投入使用了。</li>
-<li>尊重原创请挂连接，在此感谢<a href="http://old.tumiaoya.com/" target="_blank" rel="external">小白</a>、<a href="http://www.pythondev.org" target="_blank" rel="external">jarvan君</a>、以及广大奉献资料的网友们。</li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;环境：Ubuntu12-04-64&quot;&gt;&lt;a href=&quot;#环境：Ubuntu12-04-64&quot; class=&quot;headerlink&quot; title=&quot;环境：Ubuntu12.04 64&quot;&gt;&lt;/a&gt;环境：Ubuntu12.04 64&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;登
-    
-    </summary>
-    
-      <category term="Linux" scheme="http://www.iooeo.com/categories/Linux/"/>
-    
-    
-      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
-    
-      <category term="Linux" scheme="http://www.iooeo.com/tags/Linux/"/>
-    
-      <category term="MySQL" scheme="http://www.iooeo.com/tags/MySQL/"/>
-    
-      <category term="LNMP" scheme="http://www.iooeo.com/tags/LNMP/"/>
-    
-      <category term="Ngnix" scheme="http://www.iooeo.com/tags/Ngnix/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>About Me</title>
-    <link href="http://www.iooeo.com/2014/09/14/About-Me/"/>
-    <id>http://www.iooeo.com/2014/09/14/About-Me/</id>
-    <published>2014-09-14T08:42:17.000Z</published>
-    <updated>2016-11-17T09:57:09.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>欢迎大家访问Ewan’s Blog：<code>www.iooeo.com</code><br>博主姓名：<code>杨依园</code> | <code>Ewan</code><br>网名：<code>バ 小丑男°乄° 　　　?</code><br>绰号：<code>cola</code>、<code>杨一</code>、<code>一哥</code>、<code>猫叔</code>、<code>小杨</code>、<code>猿某人</code>、<code>酷头（莉姐送的~）</code><br>扣扣：<code>654846126</code><br>邮箱：<code>yuankess@sina.cn</code> | <code>654846126@qq.com</code><br>社交主页：<code>www.iooeo.com</code> | <code>ewan.coding.me</code> | <code>yangyiyuan.github.io</code><br>爱好：<code>玩游戏</code>、<code>听歌</code>、<code>看电影</code>、<code>骑车</code>、<code>滑冰</code>、<code>瞎折腾</code></p>
-<h2 id="切换至炫酷版"><a href="#切换至炫酷版" class="headerlink" title="切换至炫酷版"></a><em><a href="http://www.iooeo.com/about/">切换至炫酷版</a></em></h2><h3 id="此处要用程序"><a href="#此处要用程序" class="headerlink" title="此处要用程序"></a>此处要用程序</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">历程: </div><div class="line">&gt; 2014年09月11日购买域名 www.iooeo.com</div><div class="line">&gt; 购买空间 搭建环境</div><div class="line">&gt; 2014年09月15日开通第一个web网站 www.iooeo.com</div><div class="line">&gt; 2016年11月15日 www.iooeo.com 完成升级</div><div class="line">&gt; 未完待续......</div></pre></td></tr></table></figure>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;欢迎大家访问Ewan’s Blog：&lt;code&gt;www.iooeo.com&lt;/code&gt;&lt;br&gt;博主姓名：&lt;code&gt;杨依园&lt;/code&gt; | &lt;code&gt;Ewan&lt;/code&gt;&lt;br&gt;网名：&lt;code&gt;バ 小丑男°乄° 　　　?&lt;/code&gt;&lt;br&gt;绰号：&lt;code&gt;co
-    
-    </summary>
-    
-      <category term="杂谈" scheme="http://www.iooeo.com/categories/%E6%9D%82%E8%B0%88/"/>
-    
-    
-      <category term="微语" scheme="http://www.iooeo.com/tags/%E5%BE%AE%E8%AF%AD/"/>
-    
-      <category term="胡侃" scheme="http://www.iooeo.com/tags/%E8%83%A1%E4%BE%83/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MySQL 触发器</title>
-    <link href="http://www.iooeo.com/2014/03/02/MySQL-%E8%A7%A6%E5%8F%91%E5%99%A8/"/>
-    <id>http://www.iooeo.com/2014/03/02/MySQL-触发器/</id>
-    <published>2014-03-02T02:20:42.000Z</published>
-    <updated>2016-11-23T03:59:02.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Ewan又来学习啦，mysql触发器个人学习感悟奉上。"><a href="#Ewan又来学习啦，mysql触发器个人学习感悟奉上。" class="headerlink" title="Ewan又来学习啦，mysql触发器个人学习感悟奉上。"></a>Ewan又来学习啦，mysql触发器个人学习感悟奉上。</h2><ul>
-<li><p>1.触发器定义</p>
-<blockquote>
-<p>sql server里面对某个表的一定的操作，触发某种条件而执行的一段程序。它是一个特殊的存储过程。</p>
-</blockquote>
-</li>
-<li><p>2.为什么使用触发器</p>
-<blockquote>
-<p>1）强制业务规则<br>2）审计跟踪 –用于跟踪网站区域流量<br>3）验证<br>4）完整性约束引用 –表的关系在项目整个生命周期中的稳定</p>
-</blockquote>
-</li>
-<li><p>3.触发器基本语法<br><code>create trigger triggre_name trigger_time trigger_event on table_name for each row trigger_stmt;</code></p>
-<blockquote>
-<p>trigger_name：触发器名称；<br>trigger_time：触发时机，取值为before 或after；<br>trigger_event：触发事件，取值为 insert、update或 delete；<br>table_name：建立触发器的表名;<br>trigger_stmt：触发器程序体，可以是一句sql语句，或者用 begin 和 end 包含的多条sql语句。</p>
-</blockquote>
-</li>
-<li><p>4.before与after详解</p>
-<blockquote>
-<p>before：(insert、update)可以对new进行修改，after不能对new进行修改。两者都不能修改old数据。<br>表插入字段值需要用new计算，只能用before，在别的表中记录插入成功记录或统计插入的条数用after。<br>after update 也就是执行完你的更新之后.再执行这个触发器的语句..<br>before update 就是执行完这个触发器的语句,再执行你的更新.<br>可以建立6种触发器，即：before insert、before update、before delete、after insert、after update、after delete<br><strong>**</strong>有一个限制是不能同时在一个表上建立2个相同类型的触发器，因此在一个表上最多建立6个触发器</p>
-</blockquote>
-</li>
-<li><p>5,trigger_event详解</p>
-<blockquote>
-<p>msql除了对insert,update,delete 基本操作进行定义外，还定义了load data和replace语句，这两种语句也能引起<br>上述6中类型的触发器的触发。<br>load data 语句用于将一个文件装入到一个数据表中，相当与一系列的 insert 操作。<br>replace语句一般来说和insert语句很像,只是在表中有primary key或unique 索引时，如果插入的数据和原来 primary<br>key或unique索引一致时，会先删除原来的数据，然后增加一条新数据，也就是说，一条 replace 语句有时候等价于一条 update。<br>insert 型触发器：插入某一行时激活触发器，可能通过 insert、load data、replace 语句触发；<br>update 型触发器：更改某一行时激活触发器，可能通过 update 语句触发；<br>delete 型触发器：删除某一行时激活触发器，可能通过 delete、replace 语句触发。</p>
-</blockquote>
-</li>
-<li><p>6.begin … end详解</p>
-<blockquote>
-<p>在mysql中，begin … end 语句的语法为：<br><code>begin
-[statement_list]
-end</code><br>statement_list 代表一个或多个语句的列表，列表内的每条语句都必须用分号（;）来结尾。<br>解释器遇到 statement_list 中的分号后就开始执行，然后会报出错误，因为没有找到和 begin匹配的end<br>delimiter命令，它是一条命令，不需要语句结束标识，语法为：<br><code>delimiter new_delemiter</code><br>new_delemiter 可以设为1个或多个长度的符号，默认的是分号（;），我们可以把它修改为其他符号，如管道符：delimiter |<br>在这之后的语句，以分号结束，解释器不会有什么反应，只有遇到了管道符，才认为是语句结束。注意，使用完之后，我们还<br>应该记得把它给修改回来。</p>
-</blockquote>
-</li>
-<li><p>7.new与old详解</p>
-<blockquote>
-<p>new关键字，和mysql中的 inserted和deleted类似，mysql中定义了new和old，用来表示<br>触发器的所在表中，触发了触发器的那一行数据。<br>具体地：<br>在insert型触发器中，new 用来表示将要（before）或已经（after）插入的新数据；<br>在 update型触发器中，old用来表示将要或已经被修改的原数据，new用来表示将要或已经修改为的新数据；<br>在 delete 型触发器中，old用来表示将要或已经被删除的原数据；<br>使用方法： new.columnName （columnName 为相应数据表某一列名）;<br>另外，old 是只读的，而 new 则可以在触发器中使用 set 赋值，这样不会再次触发触发器，造成循环调用。</p>
-</blockquote>
-</li>
-<li><p>8.删除触发器</p>
-<blockquote>
-<p>和删除数据库、删除表格一样，删除触发器的语法如下：<br><code>drop trigger trigger_name;</code><br>查看现有的触发器：<br><code>show triggers\G;</code></p>
-</blockquote>
-</li>
-<li><p>9.触发器的执行顺序</p>
-<blockquote>
-<p>我们建立的数据库一般都是 InnoDB 数据库，其上建立的表是事务性表，也就是事务安全的。这时，若SQL语句或触发器执行失败，mysql会回滚事务，如下：<br>1)如果before触发器执行失败，sql无法正确执行。<br>2)sql执行失败时，after型触发器不会触发。<br>3)after类型的触发器执行失败，sql会回滚。</p>
-</blockquote>
-</li>
-</ul>
-<h4 id="触发器可以大大减少只为确保数据库引用完整性和业务规则而编写的代码量。"><a href="#触发器可以大大减少只为确保数据库引用完整性和业务规则而编写的代码量。" class="headerlink" title="触发器可以大大减少只为确保数据库引用完整性和业务规则而编写的代码量。"></a>触发器可以大大减少只为确保数据库引用完整性和业务规则而编写的代码量。</h4><h4 id="mysql视图学习至此告一段落，以上内容如有语法结构错误，请指出或给予相应的解决方案。"><a href="#mysql视图学习至此告一段落，以上内容如有语法结构错误，请指出或给予相应的解决方案。" class="headerlink" title="mysql视图学习至此告一段落，以上内容如有语法结构错误，请指出或给予相应的解决方案。"></a>mysql视图学习至此告一段落，以上内容如有语法结构错误，请指出或给予相应的解决方案。</h4>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;Ewan又来学习啦，mysql触发器个人学习感悟奉上。&quot;&gt;&lt;a href=&quot;#Ewan又来学习啦，mysql触发器个人学习感悟奉上。&quot; class=&quot;headerlink&quot; title=&quot;Ewan又来学习啦，mysql触发器个人学习感悟奉上。&quot;&gt;&lt;/a&gt;Ewan又
     
     </summary>
     

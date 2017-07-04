@@ -1,3 +1,6 @@
+http://www.iooeo.com/2017/07/04/Hexo+Github+coding搭建个人博客 - 百度和Google收录篇/
+http://www.iooeo.com/2017/07/04/Hexo+Github+coding搭建个人博客 - 配置域名分流解析篇/
+http://www.iooeo.com/2017/07/04/Hexo+Github+coding搭建个人博客 - Coding 篇/
 http://www.iooeo.com/2017/07/03/Hexo+Github+coding搭建个人博客 - GitHub 篇/
 http://www.iooeo.com/2017/07/03/Hexo+Github+coding搭建个人博客 - Hexo 本地安装篇/
 http://www.iooeo.com/2017/03/31/Yii2 安装AdminLTE后台主题资源包/
