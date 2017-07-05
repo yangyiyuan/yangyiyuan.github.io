@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[Hexo+Github+coding搭建个人博客 - 百度和Google收录篇]]></title>
+    <url>%2F2017%2F07%2F04%2FHexo%2BGithub%2Bcoding%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%20-%20%E7%99%BE%E5%BA%A6%E5%92%8CGoogle%E6%94%B6%E5%BD%95%E7%AF%87%2F</url>
+    <content type="text"><![CDATA[网站地图 网站地图，又称站点地图，它就是一个页面，上面放置了网站上需要搜索引擎抓取的所有页面的链接（注：不是所有页面）。大多数人在网站上找不到自己所需要的信息时，可能会将网站地图作为一种补救措施。搜索引擎蜘蛛非常喜欢网站地图 Hexo博客生产站点地图进入Hexo博客根目录，安装百度和Google的站点地图生成插件12$ npm install hexo-generator-baidu-sitemap --save$ npm install hexo-generator-sitemap --save 在博客根目录的_config.yml配置文件种添加一下代码12345# 自动生成sitemapsitemap: path: sitemap.xmlbaidusitemap: path: baidusitemap.xml 编译部署博客代码12$ hexo generate$ hexo deploy 边已完成,你会发现你的博客编译完成的代码目录public种生成了baidusitemap.xml和sitemap.xml此时我们访问域名下面的这两个文件,看看有没有 http://www.iooeo.com/baidusitemap.xml http://www.iooeo.com/sitemap.xml 这样百度和Google的爬虫就可以通过这个来爬取你的博客内容了 查看博客是否已经被收录在百度和Google分别输入搜索:1site:iooeo.com 这里需要将iooeo.com换成你们自己的域名 百度验证网站 百度链接提交 在链接提交输入框中输入你的域名,点击提交即可 验证站点1234567点击站点管理,依次输入信息第二步*验证网站*,选择文件验证,下载验证文件将验证文件放在所应用的主题的source下`/themes/主题/source/`执行文件部署$ hexo generate$ hexo deploy部署完成之后点击立即验证或者直接访问,域名/百度验证文件名,下边是我的 http://www.iooeo.com/baidu_verify_a501VUvpmw.html 链接提交点击链接提交,选择网站如何选择链接提交方式12341、主动推送：最为快速的提交方式，推荐您将站点当天新产出链接立即通过此方式推送给百度，以保证新链接可以及时被百度收录。2、自动推送：最为便捷的提交方式，请将自动推送的JS代码部署在站点的每一个页面源代码中，部署代码的页面在每次被浏览时，链接会被自动推送给百度。可以与主动推送配合使用。3、sitemap：您可以定期将网站链接放到sitemap中，然后将sitemap提交给百度。百度会周期性的抓取检查您提交的sitemap，对其中的链接进行处理，但收录速度慢于主动推送。4、手动提交：一次性提交链接给百度，可以使用此种方式。 sitemap提交 这个时候需要用到上面生产的sitemap了,选择自动提交种的sitemap,将http://www.iooeo.com/baidusitemap.xml粘贴到输入框内,输入验证码,点击提交下面的列表就会出现你添加的sitemap链接了,这个时候状态栏显示的应该是等待,一般过几十秒刷新一下页面就会正常,然后百度就会自动的周期抓取你的sitemap 自动推送 安装自动推送JS代码的网页，在页面被访问时，页面URL将立即被推送给百度。可以将下面代码添加到post模板中,这样每篇文章生成的时候都会有自动推送代码最直接的就是直接添加到主题目录下的layout/post.swig文件下 1234567891011121314&lt;script&gt;(function()&#123; var bp = document.createElement(&apos;script&apos;); var curProtocol = window.location.protocol.split(&apos;:&apos;)[0]; if (curProtocol === &apos;https&apos;) &#123; bp.src = &apos;https://zz.bdstatic.com/linksubmit/push.js&apos;; &#125; else &#123; bp.src = &apos;http://push.zhanzhang.baidu.com/push.js&apos;; &#125; var s = document.getElementsByTagName(&quot;script&quot;)[0]; s.parentNode.insertBefore(bp, s);&#125;)();&lt;/script&gt; 主动推送 主动推送最为快速的提交方式,是被百度收录最快的推送方式百度提供了主动推送的示例:支持curl、php、python、java、php、ruby等等方式,你可以自己选择一种进行主动推送具体使用帮助请看主动推送教程 Google验证网站Google站点提交入口添加站点…验证站点…下载文件…步骤基本跟百度一样…]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>Github</tag>
+        <tag>coding</tag>
+        <tag>Markdown</tag>
+        <tag>搜索引擎</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hexo+Github+coding搭建个人博客 - 配置域名分流解析篇]]></title>
+    <url>%2F2017%2F07%2F04%2FHexo%2BGithub%2Bcoding%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%20-%20%E9%85%8D%E7%BD%AE%E5%9F%9F%E5%90%8D%E5%88%86%E6%B5%81%E8%A7%A3%E6%9E%90%E7%AF%87%2F</url>
+    <content type="text"><![CDATA[前边我们已经分别介绍了,Hexo 本地安装,Hexo GitHub 代码部署,Hexo Coding 代码部署实现了通过外网访问自己的博客 Hexo 本地安装篇 Hexo GitHub 篇 Hexo Coding 篇 如果你没有自己的域名的话,可能就到此为止了,如果你有属于自己的域名的话,惊喜还在后面,请继续…. 项目内域名配置打开你的Hexo项目,在/source/目录下创建以CNAME为文件名称的文件内容:1www.iooeo.com www.iooeo.com是我的域名,此处该成你自己的就可以了.然后执行Hexo部署命令1$ hexo deploy 分别登陆Coding和GitHub,进入项目,点击项目的Pages 服务,绑定你的域名GitHub好像自动给添加了Coding更新了新版本以后,绑定域名必须要会员等级黄金以上,开始商业化了.白银级别的要经过Coding页面5秒钟跳转,而且国内访问GitHub也不是太慢了,现在建议直接走GitHub了,可以忽略Coding部分 域名服务商配置域名解析添加两条CNAME解析记录,主机记录分别是@和www,解析线路全部为默认,记录值全部为youName.github.io Coding没升级之前,Coding负责国内域名分流,GitHub负责国外域名分流,而且Coding访问稍微快一些. 但是可以这种模式没能继续下去,因为Coding已经走向商业化了.当然你要是选择付费升级会员的话,可以继续使用以下这种模式.12添加两条CNAME解析记录,主机记录分别是@和www,解析线路全部为默认,记录值全部为youName.coding.me,确保Coding上项目内Pages 服务已绑定域名添加两条CNAME解析记录,主机记录分别是@和www,解析线路全部为海外,记录值全部为youName.github.io]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>Github</tag>
+        <tag>coding</tag>
+        <tag>Markdown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hexo+Github+coding搭建个人博客 - Coding 篇]]></title>
+    <url>%2F2017%2F07%2F04%2FHexo%2BGithub%2Bcoding%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%20-%20Coding%20%E7%AF%87%2F</url>
+    <content type="text"><![CDATA[有Coding的直接登录,没有的Coding注册 创建仓库添加项目,填写项目名称/描述…当然这个名字的格式最好为youName(youName为你的Coding用户名)，例如我的为Mercis 配置SSH KeyGitHub篇已经讲过了,步骤差不多,现在直接将.ssh/id_rsa.pub的内容copy到Coding-&gt;个人设置-&gt;SSH 公匙,添加即可添加好SSH Key 以后测试,返回 Hi youName!…..表示成功1$ ssh -T git@git.coding.net 部署Hexo项目到Coding打开Hexo博客目录下的站点配置文件_config.yml，经过之前GitHub篇我们的配置已经是：1234deploy: type: git repo: git@github.com:Mercis/Mercis.github.io.git branch: master 现在需要改成这样:123456deploy: type: git repo: github: git@github.com:Mercis/Mercis.github.io.git coding: git@git.coding.net:mercis/mercis.git branch: master 这个地方值得注意的是当部署仓库有多个时,需要将repo改成键值对的格式,前面的名称可以规范为代码托管平台的名称,自己能区分就行,还是提示一下,yml 格式文件冒号(:)后面必须有一个空格执行Hexo部署命令,执行成功后,登录Coding项目已经有你Hexo项目文件了1$ hexo deploy 开启Coding Pages功能点击项目的Pages服务,部署来源选择master 分支,点击保存,访问http://youName.coding.me/就可以了,这样Coding部署已经正式完成了]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>Github</tag>
+        <tag>coding</tag>
+        <tag>Markdown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hexo+Github+coding搭建个人博客 - GitHub 篇]]></title>
+    <url>%2F2017%2F07%2F03%2FHexo%2BGithub%2Bcoding%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%20-%20GitHub%20%E7%AF%87%2F</url>
+    <content type="text"><![CDATA[有GitHub的直接登录,没有的GitHub注册 创建仓库仓库(Repository)用来放置代码文件,登录之后点击右上角加号,点击New repository创建时,只需要填写Repository name即可,当然这个名字的格式必须为youName.github.io(youName为你的Github用户名)，例如我的为Mercis.github.io 配置SSH Key为了防止每次部署需要输入密码的麻烦,这里使用SSH Key登录生成SSH Key,yourEmail@example.com 替换为你自己的邮箱,过程中需要输入密码等操作,可以全部回车使用默认的1$ ssh-keygen -t rsa -b 4096 -C &quot;yourEmail@example.com&quot; 完成之后,用户目录下回多一个.ssh文件夹,里面包含id_rsa和id_rsa.pub两个文件复制id_rsa.pub中的内容添加SSH key到GitHub123456进入GitHub账号设置页面左侧选择 **SSH and GPG keys**点击 **New SSH key** 或者 **Add SSH key**在&apos;Title&apos;字段中填写此SSH Key的名称，在&apos;Key&apos;字段中填写上面复制好的内容点击 **Add SSH key**输入账户密码确定操作 测试SSH Key 是否配置成功,返回 Hi youName!…..表示成功1$ ssh -T git@github.com 详细步骤请查看GitHub官方添加SSH Key教程 部署Hexo项目到GitHub部署之前,安装hexo-deployer-git插件1$ npm install hexo-deployer-git --save 打开Hexo博客目录下的站点配置文件_config.yml，修改部署配置：1234deploy: type: git repo: git@github.com:youName/youName.github.io.git branch: master 执行Hexo部署命令,执行成功后,登录GitHub项目已经有你Hexo项目文件了1$ hexo deploy 开启GitHub Pages功能因为youName.github.io项目名称是用的youName,所以GitHub Pages是默认配置好的 添加新文章创建文章1$ hexo new &quot;myNewPost&quot; 编辑文章内容打开Hexo博客目录下的source/_post/myNewPost.mdHexo 中文章是使用的Markdown语法，不知道MarkDown的自行百度,附送非官方链接语法说明12345678910111213---title: myNewPost #最后生成的页面Titletags: - tag1 - tag2 # 文章标签categories: - category1 #文章分类date: 2016-08-31 23:41:19 # 文章发表日期---这里是文章正文。可以写文章首页简介&lt;!--more--&gt;这里的内容是查看详情才显示的 编辑完新文章之后生成静态文件1$ 生成静态文件 本地预览1$ hexo server 发布到GitHub1$ hexo deploy 然后就可以去你的youName.github.io查看一下啦….]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>Github</tag>
+        <tag>coding</tag>
+        <tag>Markdown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hexo+Github+coding搭建个人博客 - Hexo 本地安装篇]]></title>
+    <url>%2F2017%2F07%2F03%2FHexo%2BGithub%2Bcoding%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%20-%20Hexo%20%E6%9C%AC%E5%9C%B0%E5%AE%89%E8%A3%85%E7%AF%87%2F</url>
+    <content type="text"><![CDATA[之前自己摸摸索索把博客搭建好了,最近有人问我怎么搭建的,这里把搭建流程跟大家说下吧 开始前准备账号相关: GitHub Coding 域名 服务相关: Git Node.js Hexo 安装和配置Hexo官网1$ npm install hexo-cli -g 初始化Hexo博客目录,时间可能要久一点…1$ hexo init blog 安装依赖包12$ cd blog$ npm install 生成静态网站1$ hexo generate 本地测试,生成的链接localhost:4000,copy到浏览器直接访问就可以看到效果了.1$ hexo server 本地hexo安装已经完毕,可本地运行]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>Github</tag>
+        <tag>coding</tag>
+        <tag>Markdown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Yii2 安装AdminLTE后台主题资源包]]></title>
+    <url>%2F2017%2F03%2F31%2FYii2%20%E5%AE%89%E8%A3%85AdminLTE%E5%90%8E%E5%8F%B0%E4%B8%BB%E9%A2%98%E8%B5%84%E6%BA%90%E5%8C%85%2F</url>
+    <content type="text"><![CDATA[为了快捷开发后台和界面的统一,这里我们引入了AdminLTE主题资源包AdminLTE的学习请移至dmstr/yii2-adminlte-asset 安装使用composer安装1$ composer require dmstr/yii2-adminlte-asset &quot;2.*&quot; 使用主题方式一复制整个vendor/dmstr/yii2-adminlte-asset/example-views/yiisoft/yii2-app目录下的layouts目录和site目录到backend/views,覆盖原始文件 方式二在backend/config/main.php中添加一下配置123456789&apos;components&apos; =&gt; [ &apos;view&apos; =&gt; [ &apos;theme&apos; =&gt; [ &apos;pathMap&apos; =&gt; [ &apos;@app/views&apos; =&gt; &apos;@vendor/dmstr/yii2-adminlte-asset/example-views/yiisoft/yii2-app&apos; ], ], ],], 查看效果如果你backend下没有做任何操作的情况下,你会看到登陆页面已经变了.如果想看一下AdminLTE主题的具体效果,将backend/controllers/SiteController.php做一下修改暂时将行为方法注释12345678910111213141516171819202122232425262728public function behaviors() &#123; return [ /** * 注释此处,阻止行为方式,查看AdminLTE主题模板效果 &apos;access&apos; =&gt; [ &apos;class&apos; =&gt; AccessControl::className(), &apos;rules&apos; =&gt; [ [ &apos;actions&apos; =&gt; [&apos;login&apos;, &apos;error&apos;], &apos;allow&apos; =&gt; true, ], [ &apos;actions&apos; =&gt; [&apos;logout&apos;, &apos;index&apos;], &apos;allow&apos; =&gt; true, &apos;roles&apos; =&gt; [&apos;@&apos;], ], ], ], */ &apos;verbs&apos; =&gt; [ &apos;class&apos; =&gt; VerbFilter::className(), &apos;actions&apos; =&gt; [ &apos;logout&apos; =&gt; [&apos;post&apos;], ], ], ]; &#125; 然后访问首页,就可以看到AdminLTE主题的具体效果 AdminLTE学习 主题一些简单的页面实例,及学习文档也可以查看vendor/almasaeed2010/adminlte/index.html 主题实例vendor/almasaeed2010/adminlte/pages]]></content>
+      <categories>
+        <category>Yii2</category>
+      </categories>
+      <tags>
+        <tag>PHP</tag>
+        <tag>Yii2</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Yii2 自动存储更新显示数据库时间戳]]></title>
+    <url>%2F2017%2F03%2F31%2FYii2%20%E8%87%AA%E5%8A%A8%E5%AD%98%E5%82%A8%E6%9B%B4%E6%96%B0%E6%98%BE%E7%A4%BA%E6%95%B0%E6%8D%AE%E5%BA%93%E6%97%B6%E9%97%B4%E6%88%B3%2F</url>
+    <content type="text"><![CDATA[之前我们terms表中有两个时间字段create_at和update_at,现在我们来操作一下,使create_at和update_at在存储时自动更新它的时间戳属性 自动存储更新时间戳属性这里我们使用TimestampBehavior先不要管行为不行为,今天就是要时间戳属性自动存储更新 方式一现在我们开始操作/thesaurus/frontend/models/Terms.php,首先别忘了1use yii\behaviors\TimestampBehavior; 然后定义方法behaviors12345678910111213141516171819/** * @inheritdoc */ public function behaviors() &#123; return [ [ &apos;class&apos; =&gt; TimestampBehavior::className(), &apos;attributes&apos; =&gt; [ # 添加之前 ActiveRecord::EVENT_BEFORE_INSERT =&gt; [&apos;create_at&apos;, &apos;update_at&apos;], # 修改之前 ActiveRecord::EVENT_BEFORE_UPDATE =&gt; [&apos;update_at&apos;] ], # 字段值 &apos;value&apos; =&gt; time() ] ]; &#125; 方式二配合下面的 afterFind 格式化时间最佳123456789101112131415161718/** * @inheritdoc */ public function rules() &#123; return [ # 自动补全添加时间和修改时间,配合 afterFind 方法转换格式化时间 [&apos;create_at&apos;, &apos;filter&apos;, &apos;filter&apos; =&gt; function () &#123; return $this-&gt;create_at ? strtotime($this-&gt;create_at) : time(); &#125;], [&apos;update_at&apos;, &apos;filter&apos;, &apos;filter&apos; =&gt; function () &#123; return $this-&gt;update_at ? strtotime($this-&gt;update_at) : time(); &#125;], [[&apos;name&apos;], &apos;required&apos;], [[&apos;create_at&apos;, &apos;update_at&apos;], &apos;integer&apos;], [[&apos;name&apos;], &apos;string&apos;, &apos;max&apos; =&gt; 32], ]; &#125; 这个完成以后我们打开/thesaurus/frontend/views/terms/create.php看到以下代码123&lt;?= $this-&gt;render(&apos;_form&apos;, [ &apos;model&apos; =&gt; $model, ]) ?&gt; 然后我们找到/thesaurus/frontend/views/terms/_form.php,把Form表单的create_at和update_at的input框删除掉,只留下name然后我们打开local.thef.com/index.php?r=terms,点击Create Terms按钮,表单页面是不是只剩下name一览了,添加一个试试 显示格式化时间再让我们回到local.thef.com/index.php?r=terms,是不是已经有我们已经添加的数据了,但是时间是有了,感觉有点不对啊,我也觉得是,有办法继续打开/thesaurus/frontend/models/Terms.php添加如下方法123456789/** * @inheritdoc */ public function afterFind() &#123; parent::afterFind(); $this-&gt;create_at = date(&apos;Y-m-d H:i:s&apos;, $this-&gt;create_at); $this-&gt;update_at = date(&apos;Y-m-d H:i:s&apos;, $this-&gt;update_at); &#125; 再回头我们的local.thef.com/index.php?r=terms,这下是不是就看着顺眼了.虽然格式化时间的方法很多,但是我觉得这个够了….]]></content>
+      <categories>
+        <category>Yii2</category>
+      </categories>
+      <tags>
+        <tag>PHP</tag>
+        <tag>Yii2</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Yii2 Gii生成代码]]></title>
+    <url>%2F2017%2F03%2F31%2FYii2%20Gii%E7%94%9F%E6%88%90%E4%BB%A3%E7%A0%81%2F</url>
+    <content type="text"><![CDATA[Gii是Yii中的一个模块,有此神器,撸代码都省了好多,简单的先用一下继续拿我们上边的例子来说访问local.thef.com/index.php?r=gii可以看到操作界面 生成Model输入Table Name(有提示,是不是很方便),自动补全Model Class Namespace这里只在frontend下使用,就小改一下 最后点击Preview,然后Generate完成,看看thesaurus/frontend/models/目录下是不是多了Terms.php 同理点击CRUD Generator,点击Preview,然后Generate完成 123456*Model Class*frontend\models\Terms*Search Model Class*frontend\models\TermsSearch*Controller Class*frontend\controllers\TermsController 生成文件: /thesaurus/frontend/models/TermsSearch.php /thesaurus/frontend/controllers/TermsController.php /thesaurus/frontend/views/terms/_form.php /thesaurus/frontend/views/terms/_search.php /thesaurus/frontend/views/terms/create.php /thesaurus/frontend/views/terms/index.php /thesaurus/frontend/views/terms/update.php /thesaurus/frontend/views/terms/view.php 然后访问 local.thef.com/index.php?r=terms 就可以进行你的增删查改了,biubiu,是不是很爽]]></content>
+      <categories>
+        <category>Yii2</category>
+      </categories>
+      <tags>
+        <tag>PHP</tag>
+        <tag>Yii2</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Yii2 数据库迁移]]></title>
+    <url>%2F2017%2F03%2F31%2FYii2%20%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%81%E7%A7%BB%2F</url>
+    <content type="text"><![CDATA[描述在开发和维护一个数据库驱动的应用程序时,数据库的结构会随代码的改变而改变. Yii 提供了一个 数据库迁移功,该功能可以记录数据库的变化, 以便使数据库和源代码一起受版本控制.Yii 提供了一整套的迁移命令行工具，通过这些工具你可以: 创建新的迁移 提交迁移 恢复迁移 重新提交迁移 现实迁移历史和状态 下面我简单用一下,至于更复杂的应用会在后期的更新中补充掉 实操先看下帮助12$ cd thesaurus$ php yii migrate -h 最重要的是下面这段12345678- migrate/create Creates a new migration.- migrate/down Downgrades the application by reverting old migrations.- migrate/history Displays the migration history.- migrate/mark Modifies the migration history to the specified version.- migrate/new Displays the un-applied new migrations.- migrate/redo Redoes the last few migrations.- migrate/to Upgrades or downgrades till the specified version.- migrate/up (default) Upgrades the application by applying new migrations. 出于好奇心,我们先create一个表试试看看1$ php yii migrate/create create_terms_table 提示创建一个新的迁移文件,输入yes看到New migration created successfully.表示成功生成的文件在/thesaurus/console/migrations/mxxxxxx_xxxxxx_create_terms_table.php,打开编辑terms所需字段 我这里添加了name和create_at,update_at字段,上边的属性各位估计也能看明白,下边执行迁移1$ php yii migrate 安装提示输入yes,看到Migrated up successfully说明成功,通过数据库工具Navicat Premium可以看到数据库中多了三个表migration,terms,user,其中migration是用来记录迁移历史记录的,user是项目初始化中自带的(也就是你刚刚登陆不成功那个user表),terms当然使我们自己创建的剩下的命令就不做过多演示了,记住几个比较常用,完全无压力1234- migrate/create 创建新的迁移.- migrate/down 恢复上一个迁移.- migrate/history 显示迁移历史和状态.- migrate 提交迁移]]></content>
+      <categories>
+        <category>Yii2</category>
+      </categories>
+      <tags>
+        <tag>PHP</tag>
+        <tag>Yii2</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Yii2 配置数据库连接]]></title>
+    <url>%2F2017%2F03%2F31%2FYii2%20%E9%85%8D%E7%BD%AE%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%2F</url>
+    <content type="text"><![CDATA[本人习惯将数据库连接信息,及一些安全性信息写到系统的环境变量里 一是代码中没有明文的数据库账号密码等一些安全敏感性信息 二是逼格比较高 三是代码统一,配置好终身所有项目受用,没必要再去管开发环境生产环境配置啥的 本人终端为macOS一般环境变量配置在.bash_profile,Linux一般在/etc/profile,配置格式如下1234$ export DB_TYPE=mysql$ export DB_HOST=192.168.0.3$ export DB_USER=root$ .... 基于以上,项目中配置信息都在mian.php文件中配置,至于后端和前端的不同配置,就在backend/config/main.php和frontend/config/main.php中配置配置好以后点击local.thef.com的Login,账号密码随便输入,点击Login,报错了?!那就对了,错误信息是说thesaurus数据库中没有user表,如果是其他错误那就不正常了,这一节就到此了,下一节简单的讲一下Yii2的数据库迁移.]]></content>
+      <categories>
+        <category>Yii2</category>
+      </categories>
+      <tags>
+        <tag>PHP</tag>
+        <tag>Yii2</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Yii2 创建应用]]></title>
+    <url>%2F2017%2F03%2F31%2FYii2%20%E5%88%9B%E5%BB%BA%E5%BA%94%E7%94%A8%2F</url>
+    <content type="text"><![CDATA[环境 macOS 10.12.3 php version: 5.6.28 nginx version: nginx/1.8.0 mysql version: 5.7.16 composer version: 1.3.2 安装开发环境安装,这里就不做太多讲解,如有需要请移至本人博客Ewan’s Blog.composer 安装以及更换国内镜像请移至Packagist / Composer 切换到一个可通过 Web 访问的目录，执行如下命令即可安装 Yii ：12$ composer global require &quot;fxp/composer-asset-plugin:^1.2.0&quot;$ composer create-project yiisoft/yii2-app-advanced thesaurus 本文全篇以高级的应用程序模板为基础,thesaurus 为实例项目名称.(安装的过程时间稍长,可以出去抽根烟)安装好以后,初始化项目程序12$ cd thesaurus/$ php init 选择 0(Development)输入 yes 即可配置Nginx web访问服务,这里就不做多解释 local.theb.com (后端服务访问URL) local.thef.com (前端服务访问URL) 配置好以后记得添加本地hosts和重启Nginx或者Apache以上操作完成以后,通过浏览器访问local.theb.com和local.thef.com 显示一下即为安装成功]]></content>
+      <categories>
+        <category>Yii2</category>
+      </categories>
+      <tags>
+        <tag>PHP</tag>
+        <tag>Yii2</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[互联网协议总结(二)]]></title>
+    <url>%2F2016%2F12%2F14%2F%E4%BA%92%E8%81%94%E7%BD%91%E5%8D%8F%E8%AE%AE%E6%80%BB%E7%BB%93-%E4%BA%8C%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[互联网协议总结(一)]]></title>
+    <url>%2F2016%2F12%2F13%2F%E4%BA%92%E8%81%94%E7%BD%91%E5%8D%8F%E8%AE%AE%E6%80%BB%E7%BB%93-%E4%B8%80%2F</url>
+    <content type="text"><![CDATA[互联网协议入门每天重复搬砖的动作,发现很多底层的基础只是都有点忘了…补一下喽,这里参照阮一峰的博客梳理一下互联网的核心是一系列的协议,总称为”互联网协议”(Internet Protocol Suite).它们对电脑如何连接和组网,做出了详尽的规定.理解了这些协议,就理解了互联网的原理. 概述1.1 五层模型 互联网的实现，分成好几层。每一层都有自己的功能，就像建筑物一样，每一层都靠下一层支持。用户接触到的，只是最上面的一层，根本没有感觉到下面的层。要理解互联网，必须从最下层开始，自下而上理解每一层的功能。如何分层有不同的模型，有的模型分七层，有的分四层。个人觉得把互联网分成五层，比较容易解释。如图所示,越往下面的层,越靠近硬件;越往上面的层,越靠近用户. 1.2 层与协议 每一层都是为了完成一种功能.为了实现这些功能,就需要大家都遵守共同的规则.大家都遵守的规则,就叫做”协议”(protocol).互联网的每一层都定义了很多协议.这些协议的总称,就叫做”互联网协议”(Internet Protocol Suite).它是互联网的核心. 实体层 Physical Layer 从最底下的一层开始.计算机要组网,当然是先把电脑连接起来,可以用光缆,电缆,双绞线,无线电波等方式.这就叫做”实体层”,他就是把电脑连接起来的物理手段.它主要规定了网络的一些电气特性,作用是负责传送0和1的电信号. 链接层 Link Layer3.1 定义 单纯的0和1没有任何意义,必须规定解读方式:多少个电信号算一组?每个信号位有什么意义?这就是”链接层”的功能,它在”实体层”的上方,确定了0和1的分组方式. 3.2 以太网协议 早期的时候,每家公司都有自己的电信号分组方式.逐渐的一种叫做”以太网”(Ethernet)的协议,占据了主导地位.以太网规定,一组电信号构成一个数据包,叫做”帧”(Frame).每一帧分成两个部分:标头(head)和数据(data).“标头”包含数据包的一些说明项,比如发送者,接受者,数据类型等等;”数据”则是数据包的具体内容.“标头”的长度,固定为18字节.”数据”长度,最短为46字节,最长为1500字节.因此,整个”帧”最短为64字节,最长为1518字节,如果数据很长,就必须分割成多个”帧”进行发送. 3.3 MAC地址 上面提到，以太网数据包的”标头”,包含了发送者和接受者的信息,那么,发送者和接受者是如何标识呢?以太网规定,连入网络的所有设备,都必须具有”网卡”接口.数据包必须是从一块网卡,传送到另一块网卡.网卡的地址,就是数据包的发送地址和接收地址,这叫做MAC地址.每块网卡出厂的时候,都有一个全世界独一无二的MAC地址,长度是48个二进制位,通常用12个十六进制数表示.前6个十六进制数是厂商编号,后6个是该厂商的网卡流水号.有了MAC地址,就可以定位网卡和数据包的路径了. 3.4 广播 定义地址只是第一步,后面还有更多的步骤.首先,一块网卡怎么会知道另一块网卡的MAC地址?回答是有一种ARP协议,可以解决这个问题.这个留到后面介绍,这里只需要知道,以太网数据包必须知道接收方的MAC地址,然后才能发送.其次,就算有了MAC地址,系统怎样才能把数据包准确的发送到接收方?回答是以太网采用了一种很”原始”的方式,它不是把数据包准确送到接收方,而是向本网络内所有计算机发送,让每台计算机自己判断,是否为接受方.上图中,1号计算机向2号计算机发送一个数据包,同一个子网络的3号,4号,5号计算机都会收到这个包.它们读取到这个包的”标头”,找到接收方的MAC地址,然后与自身的MAC地址相比较,如果两者相同,就接收这个包,做进一步处理,否则就丢弃这个包.这种发送方式就叫做”广播”(broadcasting).有了这个数据包的定义,网卡的MAC地址,广播的发送方式,”连接层”就可以在多台计算机之间传送数据了. 网络层 Network Layer4.1 网络层的由来 以太网协议,依靠MAC地址发送数据.理论上,单单依靠MAC地址,上海的网卡就可以找到洛杉矶的网卡了,技术上是可以实现的.但是,这样做有一个重大的缺点,以太网采用广播的发送方式发送数据包,所有成员人手一”包”,不仅效率低,而且局限在发送者所在的子网络.这就是说,如果两台计算机不在同一个子网络,广播是传不过去的.这种设计是合理的,否则互联网上每一台计算机都会收到所有的”包”,那会引起灾难.互联网是无数子网络共同组成的一个巨型网络,很难想象上海和洛杉矶的电脑会在同一个子网络,这几乎是不可能的.因此,必须找到一种方法,能够区分哪些MAC地址属于同一个子网络,哪些不是.如果是同一子网络,就采用广播的方式发送,否则就采用”路由”的方式发送.(“路由”的意思,是指如何向不同的子网络发送数据包,这是一个很大的主题,本文不涉及.)遗憾的是,MAC地址本身无法做到这一点,它只与厂商有关,与所出网络无关.这就导致了”网络层”的诞生,它的作用是引进一套新的地址,使得我们能区分不同的计算机是否属于同一个自网络.这套地址就叫做”网络地址”,简称”网址”.于是,”网络层”出现以后,每台计算机有了两种地址,一种是MAC地址,另一种是网络地址.两种地址之间没有任何联系,MAC地址是绑定在网卡上的,网络地址则是管理员分配的,它们只是随机组合在一起.网络地址帮助我们确定计算机所在的子网络,MAC地址则将数据包发送到该子网络中的没押镖网卡.因此,从逻辑上可以推断,必定是先处理网络地址,然后再处理MAC地址. 4.2 IP协议 规定网络地址的协议,叫做IP协议.它所定义的地址,就被称为IP地址.目前,广泛采用的IP协议第四版,简称IPv4.这个版本规定,网络地址由32个二进制位组成.习惯上,我们分成4段的十进制数表示IP地址,从0.0.0.0一直到255.255.255.255.互联网上每一台计算机,都会分配到一个IP地址.这个地址分成两部分,前一部分代表网络,后一部分代表主机.比如,IP地址172.16.254.1,这是一个32位的地址,假定它的网络部分是前24位(172.16.254),那么主机部分就是后8位(最后一个1).处于同一子网络的计算机,它们的IP地址的网络部分必定是相同的,也就是说172.16.254.2应该与172.16.254.1处于同一个子网络.但是,问题在于单单从IP地址,我们无法判断网络部分.还是以172.16.254.1为例,它的网络部分,到底是前24位,还是前16位,甚至是前28位,从IP地址上是看不出来的.那么.怎样才能从IP地址,判断两台计算机是否属于同一个子网络呐?这就是要用到另一个参数”子网掩码”(subnet mask).所谓”子网掩码”,就是表示子网络特征的一个参数.它在形式上等同于IP地址,也就是一个32位的二进制数字,他的网络部分全部为1,主机部分全部为0.比如,IP地址172.16.254.1,如果已知网络部分是前24位,主机部分是后8位,那么子网掩码就是11111111.11111111.11111111.00000000,写成十进制就是255.255.255.0知道”子网掩码”,我们就能判断,任意两个IP地址是否处在同一个子网络.方法是将两个IP地址与子网掩码分别进行AND运算(两个数位都为1,运行结果为1,否则为0),然后比较结果是否相同,如果是的话,就表明它们在同一个子网络中,否则就不是.比如,一直IP地址172.16.254.1和172.16.254.233的子网掩码都是255.255.255.0,请问它们是否在同一个子网络?两者与子网掩码分别进行AND运算,结果都是172.16.254.0,因此它们在同一个子网络.总结一下,IP协议的作用主要有两个,一个是为每一台计算机分配IP地址,另一个是确定哪些IP地址在同一个子网络. 4.3 IP数据包 根据IP协议发送的数据,就叫做IP数据包.不难想象,其中必定包括IP信息.但是前面说过,以太网数据包值包含MAC地址,并没有IP地址的栏位.那么是否需要修改数据包定义,再添加一个栏位呐?回答是不需要,我们可以把IP数据包直接放进意外网数据包的”数据”部分,因此完全不用修改以太网的规格.这就是互联网分层结构的好处:上层的变动完全不涉及下层的结构.具体来说,IP数据包也分为”标头”和”数据”两部分.“标头”部分主要包括版本,长度,IP地址等信息,”数据”部分则是IP数据包的具体内容,它放进以太网数据包后,以太网数据包就变成了下面这样.IP数据包的”标头”部分的长度为20~60字节,真个数据包的总长度为65535字节.因此,理论上,一个IP数据包的”数据”部分,最长为65515字节.前面说过,以太网数据包的”数据”部分,最长只有1500字节,因此,IP数据包超过了1500字节,它就需要分割成几个以太网数据包,发开发送了. 4.4 ARP协议 关于”网络层”,还有最后一点需要说明.因为IP数据包是放在以太网数据包里发送的,所以我们必须同时知道两个地址,一个是对方的MAC地址,另一个是对方的IP地址.通常情况下,对方的IP地址是已知的(后文会解释),但是我们不知道它的MAC地址.所以,我们需要一种机制,能够从IP地址得到MAC地址.这里又可以分成两种情况.第一种情况,如果两台主机不在同一个子网络,那么事实上没有办法得到对方的MAC地址,只能把数据包传送到两个子网络连接处的”网关”(gateway),让网关去处理.第二种情况,如果两台主机在同一个子网络,那么我们可以用ARP协议,得到对方的MAC地址.ARP协议也是发出一个数据包(包含在以太网数据包中),其中包含它所要查询主机的IP地址,在对方的MAC地址这一栏,填的是FF:FF:FF:FF:FF:FF,表示这是一个”广播”地址.它所在子网络的每一台主机,都会收到这个数据包,从中取出IP地址,与自身的IP地址进行比较.如果两者相同,都做出回复,向对方报告自己的MAC地址,否则就丢弃这个包.总之,有了ARP协议之后,我们就可以得到同一个子网络内的主机MAC地址,可以把数据包发送到任意一台主机之上了. 传输层 Transport Layer5.1 传输层的由来 有了MAC地址和IP地址,我们已经可以在互联网上任意两台主机上建立通信.接下来的问题是,同一台主机上有许多程序都需要用到网络,比如,你一边浏览网页,一边与朋友在线聊天.当一个数据包从互联网上发来的时候,你怎么知道,它是表示网页的内容,还是表示在线聊天的内容?也就是说,我们还需要一个参数,表示这个数据包到底供哪个程序(进程)使用.这个参数就叫做”端口”(port)，它其实是每一个使用网卡的程序的编号.每个数据包都发到主机的特定端口,所以不同的程序就能取到自己所需要的数据.“端口”是0到65535之间的一个整数,正好16个二进制位.0到1023的端口被系统占用,用户只能选用大于1023的端口.不管是浏览网页还是在线聊天,应用程序会随机选用一个端口,然后与服务器的相应端口联系.“传输层”的功能,就是建立”端口到端口”的通信.相比之下,”网络层”的功能是建立”主机到主机”的通信.只要确定主机和端口,我们就能实现程序之间的交流.因此,Unix系统就把主机+端口,叫做”套接字”(socket).有了它,就可以进行网络应用程序开发了. 5.2 UDP协议 现在,我们必须在数据包中加入端口信息,这就需要新的协议.最简单的实现叫做UDP协议,它的格式几乎就是在数据前面,加上端口号.UDP数据包也,是由”标头”和”数据”两部分组成.“标头”部分主要定义了发出端口和接收端口,”数据”部分就是具体的内容.然后,把整个UDP数据包放入IP数据包的”数据”部分,而前面说过,IP数据包又是放在以太网数据包之中的,所以整个以太网数据包现在变成了下面这样:UDP数据包非常简单,”标头”部分一共只有8个字节,总长度不超过65535字节,正好放进一个IP数据包. 5.3 TCP协议 UDP协议的优点是比较简单,容易实现,但是缺点是可靠性较差,一旦数据包发出,无法知道对方是否收到.为了解决这个问题,提高网络可靠性,TCP协议就诞生了.这个协议非常复杂,但可以近似认为,它就是有确认机制的UDP协议,每发出一个数据包都要求确认.如果有一个数据包遗失,就收不到确认,发出方就知道有必要重发这个数据包了.因此,TCP协议能够确保数据不会遗失.它的缺点是过程复杂,实现困难,消耗较多的资源.TCP数据包和UDP数据包一样,都是内嵌在IP数据包的”数据”部分.TCP数据包没有长度限制,理论上可以无限长,但是为了保证网络的效率,通常TCP数据包的长度不会超过IP数据包的长度,以确保单个TCP数据包不必再分割. 应用层 Application Layer 应用程序收到”传输层”的数据,接下来就要进行解读.由于互联网是开放架构,数据来源五花八门,必须事先规定好格式,否则根本无法解读.“应用层”的作用,就是规定应用程序的数据格式.举例来说,TCP协议可以为各种各样的程序传递数据,比如Email,WWW,FTP等等.那么,必须有不同协议规定电子邮件,网页,FTP数据的格式.这些应用程序协议就构成了”应用层”.这是最高的一层,直接面对用户.它的数据就放在TCP数据包的”数据”部分.因此,现在的以太网的数据包就变成下面这样.至此,整个互联网的五层结构,自下而上全部讲完了.这是从系统的角度,解释互联网是如何构成的.]]></content>
+      <categories>
+        <category>计算机</category>
+      </categories>
+      <tags>
+        <tag>网络</tag>
+        <tag>计算机</tag>
+        <tag>通讯协议</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[git删除已提交的文件或文件夹]]></title>
+    <url>%2F2016%2F12%2F12%2Fgit%E5%88%A0%E9%99%A4%E5%B7%B2%E6%8F%90%E4%BA%A4%E7%9A%84%E6%96%87%E4%BB%B6%E6%88%96%E6%96%87%E4%BB%B6%E5%A4%B9%2F</url>
+    <content type="text"><![CDATA[今个写脚本测试的时候不小心将记录数据的文件提交上去了,研究了一下git忽略已提交的文件或者文件夹 12345$ git rm --cached logs/put_file.log$ vi .gitignore# .gitignore添加要忽略的文件$ logs/put_file.log$ git commit -m &quot;We really don&apos;t want Git to track this anymore!&quot; 这样就可以完成忽略已提交的文件或者文件夹了PS:文件夹的话使用logs/*]]></content>
+      <categories>
+        <category>Git</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[AES加密解密]]></title>
+    <url>%2F2016%2F12%2F06%2FAES%E5%8A%A0%E5%AF%86%E8%A7%A3%E5%AF%86%2F</url>
+    <content type="text"><![CDATA[AES （高级加密标准) 高级加密标准（英语：Advanced Encryption Standard，缩写：AES），在密码学中又称Rijndael加密法，是美国联邦政府采用的一种区块加密标准。这个标准用来替代原先的DES，已经被多方分析且广为全世界所使用。经过五年的甄选流程，高级加密标准由美国国家标准与技术研究院（NIST）于2001年11月26日发布于FIPS PUB 197，并在2002年5月26日成为有效的标准。2006年，高级加密标准已然成为对称密钥加密中最流行的算法之一。 说下PHP的用法~~ 代码123456789101112131415161718192021222324252627282930313233&lt;?phpclass Security &#123; public static function encrypt($input, $key) &#123; $size = mcrypt_get_block_size(MCRYPT_RIJNDAEL_128, MCRYPT_MODE_ECB); $input = Security::pkcs5_pad($input, $size); $td = mcrypt_module_open(MCRYPT_RIJNDAEL_128, &apos;&apos;, MCRYPT_MODE_ECB, &apos;&apos;); $iv = mcrypt_create_iv (mcrypt_enc_get_iv_size($td), MCRYPT_RAND); mcrypt_generic_init($td, $key, $iv); $data = mcrypt_generic($td, $input); mcrypt_generic_deinit($td); mcrypt_module_close($td); $data = base64_encode($data); return $data; &#125; private static function pkcs5_pad ($text, $blocksize) &#123; $pad = $blocksize - (strlen($text) % $blocksize); return $text . str_repeat(chr($pad), $pad); &#125; public static function decrypt($sStr, $sKey) &#123; $decrypted= mcrypt_decrypt( MCRYPT_RIJNDAEL_128, $sKey, base64_decode($sStr), MCRYPT_MODE_ECB ); $dec_s = strlen($decrypted); $padding = ord($decrypted[$dec_s-1]); $decrypted = substr($decrypted, 0, -$padding); return $decrypted; &#125; &#125; 实例123456require_once(&apos;./security.php&apos;);$value = &quot;example&quot;;$key = &quot;1234567891234567&quot;; //16 Character Keyecho Security::encrypt($value, $key);echo Security::decrypt(Security::encrypt($value, $key), $key);]]></content>
+      <categories>
+        <category>PHP</category>
+      </categories>
+      <tags>
+        <tag>PHP</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[MySQL 深入浅出]]></title>
+    <url>%2F2016%2F11%2F23%2FMySQL-%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%2F</url>
+    <content type="text"></content>
+      <categories>
+        <category>MySQL</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Firing！！！]]></title>
+    <url>%2F2016%2F11%2F17%2FFiring%EF%BC%81%EF%BC%81%EF%BC%81%2F</url>
+    <content type="text"><![CDATA[经过两天的奋战，Ewan&#39;s Blog 终于与大家见面了。目前网站定位方向为技术性博客，可能稍后会有些栏目的调整，期待大家的关注。 之前也有做过自己的博客网站,经历了服务器到期,域名续费,赶上有段时间工作调整没时间整理,导致博客更新中断.而后一直有新建博客的想法,说到这个特别的感谢一下胖佳 在网站的搭建过程中的先锋精神和技术指导.还要感谢jarvan君和小白的技术指导,说句实在话jarvan君是我工作以来对我帮助最大的一位,之前一起住学校宿舍、一起在一家公司上班,生活中是个老大哥、工作中亦师亦友的这种关系令我享受在其中.当然上面提到胖佳和小白那两只货是我在北京性格上很合得来的哥们,为此哥几个一周撸五次串也不为过. 在北京学习的那几个月是我人生的一个转折点,更是我人生一个新的起点. 后续会陆续将之前整理的博客文章搬迁过来,也会发表一些新的文章出来供大家分享学习 既然有了一个好的起点，我们就跟要努力向前冲，Firing，Firing！！！]]></content>
+      <categories>
+        <category>杂谈</category>
+      </categories>
+      <tags>
+        <tag>微语</tag>
+        <tag>胡侃</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[MySQL 存储例程]]></title>
+    <url>%2F2015%2F03%2F23%2FMySQL-%E5%AD%98%E5%82%A8%E4%BE%8B%E7%A8%8B%2F</url>
+    <content type="text"><![CDATA[好高兴啊，Ewan学习进行时。mysql存储例程学习总结拿来共享喽。 1.存储例程定义 存储在数据库服务器中的一组sql语句，通过在查询中调用一个指定的名称来执行这些sql语句命令。mysql存储例程实际上包含了存储过程和存储函数，他们被统称为存储例程。存储过程：存储过程支持select,insert,update和delete等sql命令的执行，还可以设置能在程序外引用的参数。存储函数：只支持select命令的执行，只接受输入参数，必须返回且只返回一个值，此外还可以旧爱那个存储函数直接嵌套到sql命令中。 2.为什么使用存储例程 我们都知道应用程序分为两种，一种是基于桌面一种是基于web，它们都使用一个MYSQL数据库并完成很多相同的任务。而这两种应用程序可能带来不易维护和易遭sql语句注入的弊端，针对这些难题，存储例程的数据库特性成为最常用的解决方案之一。 3.存储例程优点 1）一致性2）高性能3）安全性4）架构 4.存储过程基本语法create procedure (过程名)［过程参数...］ begin (内容，sql语句) end 调用：set @要设置的参数值call 参数名(@要设置的参数值)从另一个例程中调用例程：create procedure 进程名begincall 另一个进程名();end查看存储进程:show procedure status;一可以查看某个存储进程的详细:show procedure status like &#39;变量名&#39;\G;查看进程的创建语法:show create procedure 进程名;修改存储进程：alter procedure 进程名 .....删除存储进程：drop procedure 进程名;是不是很简单，下面来详细分解一下语法的具体参数:存储过程参数用在存储过程的定，共有三种类型in,out,inout如下：create procedure (过程名)［in/out/inout 参数名 数据类型］in：为默认值，使用该参数的值必须在调用存储过程时指定，在存储过程中修改该参数的值不能被返回。out：使用该参数的之的值在存储过程内部被改变，并返回。inout:使用该参数的值，调用时指定，并且可被改变并返回。 5.声明和设置变量 声明变量：这里使用到了declare，如下：declare 变量名 变量类型;设置变量：set 变量名=值;这里做下延伸：在mysql客户端使用用户变量，如下：select &#39;hello world!&#39; into @z; set @x=&#39;hello world!&#39;; set @c=1+1;执行：select …;这里要注意：1）变量名一般以@开头2）滥用用户变量会导致程序难以理解和管理 6.begin …end 创建多语句进程时，将语句放在begin end 中间。 7.条件(条件语句这里不做太多解释）if .....then ....elseif ...then ....end if;casewhen .... then :.....;when .... then :.....;end case;while.....end while;repeat ....end repeat;loop .....end loop; repeat是在执行操作后检查结果，而while是在执行前进行检查。oop循环不需要初始条件，这点和while 循环相似，同时和repeat循环一样不需要结束条件, leave语句的意义是离开循环。lables标号可以用在begin repeat while 或者loop 语句前，语句标号只能在合法的语句前面使用。可以跳出循环，使运行指令达到复合语句的最后一步。iterate迭代,为了一些需要重复执行一组语句的任务。通过引用复合语句的标号,来从新开始复合语句。leave 在得到变量的值或特定任务的结果之后，可能希望通过leave命令立即退出循环或begin…end。 8.存储函数 字符串类：charset(str) //返回字串字符集concat (string2 [,... ]) //连接字串instr (string ,substring ) //返回substring首次在string中出现的位置,不存在返回0lcase(string2 ) //转换成小写left (string2 ,length ) //从string2中的左边起取length个字符length (string ) //string长度load_file(file_name ) //从文件读取内容locate(substring , string [,start_position ] ) 同INSTR,但可指定开始位置lpad(string2 ,length ,pad ) //重复用pad加在string开头,直到字串长度为lengthltrim(string2 ) //去除前端空格repeat(string2 ,count ) //重复count次replace(str ,search_str ,replace_str ) //在str中用replace_str替换search_strrpad(string2 ,length ,pad) //在str后用pad补充,直到长度为lengthrtrim(string2 ) //去除后端空格strcmp (string1 ,string2 ) //逐字符比较两字串大小substring (str , position [,length ]) //从str的position开始,取length个字符 注：mysql中处理字符串时，默认第一个字符下标为1，即参数position必须大于等于1trim([[BOTH|LEADING|TRAILING] [padding] FROM]string2) //去除指定位置的指定字符ucase(string2 ) //转换成大写right(string2,length) //取string2最后length个字符space(count) //生成count个空格数学类ABS (number2 ) //绝对值BIN (decimal_number ) //十进制转二进制CEILING (number2 ) //向上取整CONV(number2,from_base,to_base) //进制转换FLOOR (number2 ) //向下取整FORMAT (number,decimal_places ) //保留小数位数HEX (DecimalNumber ) //转十六进制 注：HEX()中可传入字符串，则返回其ASC-11码，如HEX(&#39;DEF&#39;)返回4142143 也可以传入十进制整数，返回其十六进制编码，如HEX(25)返回19LEAST (number , number2 [,..]) //求最小值MOD (numerator ,denominator ) //求余POWER (number ,power ) //求指数RAND([seed]) //随机数ROUND (number [,decimals ]) //四舍五入,decimals为小数位数]日期时间类ADDTIME (date2 ,time_interval ) //将time_interval加到date2CONVERT_TZ (datetime2 ,fromTZ ,toTZ ) //转换时区CURRENT_DATE ( ) //当前日期CURRENT_TIME ( ) //当前时间CURRENT_TIMESTAMP ( ) //当前时间戳DATE (datetime ) //返回datetime的日期部分DATE_ADD (date2 , INTERVAL d_value d_type ) //在date2中加上日期或时间DATE_FORMAT (datetime ,FormatCodes ) //使用formatcodes格式显示datetimeDATE_SUB (date2 , INTERVAL d_value d_type ) //在date2上减去一个时间DATEDIFF (date1 ,date2 ) //两个日期差DAY (date ) //返回日期的天DAYNAME (date ) //英文星期DAYOFWEEK (date ) //星期(1-7) ,1为星期天DAYOFYEAR (date ) //一年中的第几天EXTRACT (interval_name FROM date ) //从date中提取日期的指定部分MAKEDATE (year ,day ) //给出年及年中的第几天,生成日期串MAKETIME (hour ,minute ,second ) //生成时间串MONTHNAME (date ) //英文月份名NOW ( ) //当前时间SEC_TO_TIME (seconds ) //秒数转成时间STR_TO_DATE (string ,format ) //字串转成时间,以format格式显示TIMEDIFF (datetime1 ,datetime2 ) //两个时间差TIME_TO_SEC (time ) //时间转秒数]WEEK (date_time [,start_of_week ]) //第几周YEAR (datetime ) //年份DAYOFMONTH(datetime) //月的第几天HOUR(datetime) //小时]]></content>
+      <categories>
+        <category>MySQL</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[laravel安装]]></title>
+    <url>%2F2014%2F10%2F13%2Flaravel%E5%AE%89%E8%A3%85%2F</url>
+    <content type="text"><![CDATA[近期貌似对 laravel 有使用的需求，就自己安装了一次，发现对于有些人来说确实有点文档不够全面的感觉，现将具体的安装方法总结如下。Composer安装： Laravel 框架使用 Composer 来管理代码依赖性。在Windows操作系统中，你可以使用 Composer 的Windows安装工具(https://getcomposer.org/Composer-Setup.exe)。对PHP版本有要求(最好5.4.0以上)laravel安装：Composer安装完成后，在dos模式中，你的网站目录执行下面命令即可：1$ composer create-project laravel/laravel your-project-name Composer会自动帮你下载Laravel及安装。部署虚拟主机(Apache相关知识)：如果之前对Apache的配置环境没有设置过：(1) Apache配置设置，打开(路径看个人项目环境而定)1C:\wamp\bin\apache\apache2.4.9\conf\httpd.conf 第512~513行，将默认的虚拟主机设置打开(默认是关闭的，前边#去掉即可)12# Virtual hostsInclude conf/extra/httpd-vhosts.conf (2) 配置站点，打开(路径看个人项目环境而定)1C:\wamp\bin\apache\apache2.4.9\conf\extra\httpd-vhosts.conf 在其下方添加站点信息：123456&lt;VirtualHost *:80&gt; DocumentRoot &quot;c:/wamp/www/project/public&quot; ServerName laravel.dev ErrorLog &quot;logs/laravel.log&quot; CustomLog &quot;logs/laravel.log&quot; common&lt;/VirtualHost&gt; (3) 将站点指向项目目录，打开(路径看个人项目环境而定)C:\Windows\System32\drivers\etc\hosts在其下方添加站点信息：1$ 127.0.0.1 laravel.dev]]></content>
+      <categories>
+        <category>PHP</category>
+      </categories>
+      <tags>
+        <tag>PHP</tag>
+        <tag>Laravel</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[MySQL安装dpkg错误解决方案]]></title>
+    <url>%2F2014%2F09%2F17%2FMySQL%E5%AE%89%E8%A3%85dpkg%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%2F</url>
+    <content type="text"><![CDATA[Ewan在Ubuntu下安装MySQL的时候出现了一下错误问题： 1234567891011121314start: Job failed to startinvoke-rc.d: initscript mysql, action &quot;start&quot; failed.dpkg: error processing mysql-server-5.5 (--configure):subprocess installed post-installation script returned error exit status 1dpkg: dependency problems prevent configuration of mysql-server:mysql-server depends on mysql-server-5.5; however:Package mysql-server-5.5 is not configured yet.dpkg: error processing mysql-server (--configure):dependency problems - leaving unconfiguredNo apport report written because the error message indicates its a followup error from a previous failure.Errors were encountered while processing:mysql-server-5.5mysql-serverE: Sub-process /usr/bin/dpkg returned an error code (1) 经查证，现给出解决办法：删除MySQL前，先删除/var/lib/mysql和/etc/mysql 12345$ sudo rm /var/lib/mysql/ -R$ sudo rm /etc/mysql/ -R$ sudo apt-get autoremove mysql* --purge$ sudo apt-get remove apparmor$ sudo apt-get install mysql-server mysql-common]]></content>
+      <categories>
+        <category>MySQL</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Ubuntu系统下搭建lnmp环境]]></title>
+    <url>%2F2014%2F09%2F17%2FUbuntu%E7%B3%BB%E7%BB%9F%E4%B8%8B%E6%90%AD%E5%BB%BAlnmp%E7%8E%AF%E5%A2%83%2F</url>
+    <content type="text"><![CDATA[环境：Ubuntu12.04 64 登录以后首先更新一下源列表 1$ apt-get update 然后安装nginx 12345$ sudo apt-get install nginx$ /etc/init.d/nginx start --启动ngnix$ /etc/init.d/nginx stop --停止ngnix$ /etc/init.d/nginx restart --重启ngnix$ service ngnix restart --重启ngnix 安装PHP及相关扩展 12$ sudo apt-get install php5-cli php5-common php5-fpm php5-cgi php5-mysql php5-gd php5-sqlite libssh2-php$ service php5-fpm restart --重启php 配置Ngnix站点检测PHP环境，Ngnix的站点配置文件在/etc/ngnix/conf.d/或/etc/ngnix/sites-enabled/(初始默认)目录下 1$ vi /etc/nginx/sites-enabled/default 打开初始的配置文件default做一下更改（内容替换或按下面的配置自己更改） 123456789101112131415server&#123; listen 80; root /var/www; index index.php index.html index.htm; server_name localhost; location / &#123; try_files $uri $uri/ /index.html; &#125; location ~ \.php$ &#123; fastcgi_pass 127.0.0.1:9000; fastcgi_index index.php; fastcgi_param SCRIPT_FILENAME /var/www$fastcgi_script_name; include /etc/nginx/fastcgi_params; &#125;&#125; 保存后在/var/目录下创建www目录 1$ mkdir www 创建文件index.php 1$ vi index.php index.php内容检测PHP环境（内容如下） 12&lt;?phpphpinfo(); 保存退出，重启nginx和php（命令在上边） 在浏览器输入localhost，出现PHP环境及扩展配置说明以上安装成功。 安装MySQL 1$ sudo apt-get install mysql-server-5.5 mysql-client-5.5 中间要记住自己设定的MySQL密码，安装成功以后 1$ mysql -uroot -p 输入密码进入MySQL数据库代表安装成功。本人安装的时候出现： 1$ E:/usr/bin/dpkg returned an error code ... 错误字样，解决问题见本站MySQL安装dpkg错误解决方案。 配置MySQL远程连接： 12$ vi /etc/mysql/my.cnf --打开MySQL配置文件找到bind-address = 127.0.0.1，前边加上#，注释掉。$ service mysql restart --重启MySQL服务 进入MySQL，做权限修改 1234$ mysql -uroot -p mysql $ &gt; grant all on *.* root@&apos;%&apos; identified by &apos;你的密码&apos;;$ &gt; flush privilefes;$ &gt; exit 至此完毕 建议重启一遍Ngnix、PHP、MySQL，开发环境就可以正式投入使用了。 尊重原创请挂连接，在此感谢小白、jarvan君、以及广大奉献资料的网友们。]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>PHP</tag>
+        <tag>Linux</tag>
+        <tag>MySQL</tag>
+        <tag>LNMP</tag>
+        <tag>Ngnix</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[About Me]]></title>
+    <url>%2F2014%2F09%2F14%2FAbout-Me%2F</url>
+    <content type="text"><![CDATA[欢迎大家访问Ewan’s Blog：www.iooeo.com博主姓名：杨依园 | Ewan网名：バ 小丑男°乄° ?绰号：cola、杨一、一哥、猫叔、小杨、猿某人、酷头（莉姐送的~）扣扣：654846126邮箱：yuankess@sina.cn | 654846126@qq.com社交主页：www.iooeo.com | ewan.coding.me | yangyiyuan.github.io爱好：玩游戏、听歌、看电影、骑车、滑冰、瞎折腾 切换至炫酷版此处要用程序123456历程: &gt; 2014年09月11日购买域名 www.iooeo.com&gt; 购买空间 搭建环境&gt; 2014年09月15日开通第一个web网站 www.iooeo.com&gt; 2016年11月15日 www.iooeo.com 完成升级&gt; 未完待续......]]></content>
+      <categories>
+        <category>杂谈</category>
+      </categories>
+      <tags>
+        <tag>微语</tag>
+        <tag>胡侃</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[MySQL 触发器]]></title>
+    <url>%2F2014%2F03%2F02%2FMySQL-%E8%A7%A6%E5%8F%91%E5%99%A8%2F</url>
+    <content type="text"><![CDATA[Ewan又来学习啦，mysql触发器个人学习感悟奉上。 1.触发器定义 sql server里面对某个表的一定的操作，触发某种条件而执行的一段程序。它是一个特殊的存储过程。 2.为什么使用触发器 1）强制业务规则2）审计跟踪 –用于跟踪网站区域流量3）验证4）完整性约束引用 –表的关系在项目整个生命周期中的稳定 3.触发器基本语法create trigger triggre_name trigger_time trigger_event on table_name for each row trigger_stmt; trigger_name：触发器名称；trigger_time：触发时机，取值为before 或after；trigger_event：触发事件，取值为 insert、update或 delete；table_name：建立触发器的表名;trigger_stmt：触发器程序体，可以是一句sql语句，或者用 begin 和 end 包含的多条sql语句。 4.before与after详解 before：(insert、update)可以对new进行修改，after不能对new进行修改。两者都不能修改old数据。表插入字段值需要用new计算，只能用before，在别的表中记录插入成功记录或统计插入的条数用after。after update 也就是执行完你的更新之后.再执行这个触发器的语句..before update 就是执行完这个触发器的语句,再执行你的更新.可以建立6种触发器，即：before insert、before update、before delete、after insert、after update、after delete**有一个限制是不能同时在一个表上建立2个相同类型的触发器，因此在一个表上最多建立6个触发器 5,trigger_event详解 msql除了对insert,update,delete 基本操作进行定义外，还定义了load data和replace语句，这两种语句也能引起上述6中类型的触发器的触发。load data 语句用于将一个文件装入到一个数据表中，相当与一系列的 insert 操作。replace语句一般来说和insert语句很像,只是在表中有primary key或unique 索引时，如果插入的数据和原来 primarykey或unique索引一致时，会先删除原来的数据，然后增加一条新数据，也就是说，一条 replace 语句有时候等价于一条 update。insert 型触发器：插入某一行时激活触发器，可能通过 insert、load data、replace 语句触发；update 型触发器：更改某一行时激活触发器，可能通过 update 语句触发；delete 型触发器：删除某一行时激活触发器，可能通过 delete、replace 语句触发。 6.begin … end详解 在mysql中，begin … end 语句的语法为：begin [statement_list] endstatement_list 代表一个或多个语句的列表，列表内的每条语句都必须用分号（;）来结尾。解释器遇到 statement_list 中的分号后就开始执行，然后会报出错误，因为没有找到和 begin匹配的enddelimiter命令，它是一条命令，不需要语句结束标识，语法为：delimiter new_delemiternew_delemiter 可以设为1个或多个长度的符号，默认的是分号（;），我们可以把它修改为其他符号，如管道符：delimiter |在这之后的语句，以分号结束，解释器不会有什么反应，只有遇到了管道符，才认为是语句结束。注意，使用完之后，我们还应该记得把它给修改回来。 7.new与old详解 new关键字，和mysql中的 inserted和deleted类似，mysql中定义了new和old，用来表示触发器的所在表中，触发了触发器的那一行数据。具体地：在insert型触发器中，new 用来表示将要（before）或已经（after）插入的新数据；在 update型触发器中，old用来表示将要或已经被修改的原数据，new用来表示将要或已经修改为的新数据；在 delete 型触发器中，old用来表示将要或已经被删除的原数据；使用方法： new.columnName （columnName 为相应数据表某一列名）;另外，old 是只读的，而 new 则可以在触发器中使用 set 赋值，这样不会再次触发触发器，造成循环调用。 8.删除触发器 和删除数据库、删除表格一样，删除触发器的语法如下：drop trigger trigger_name;查看现有的触发器：show triggers\G; 9.触发器的执行顺序 我们建立的数据库一般都是 InnoDB 数据库，其上建立的表是事务性表，也就是事务安全的。这时，若SQL语句或触发器执行失败，mysql会回滚事务，如下：1)如果before触发器执行失败，sql无法正确执行。2)sql执行失败时，after型触发器不会触发。3)after类型的触发器执行失败，sql会回滚。 触发器可以大大减少只为确保数据库引用完整性和业务规则而编写的代码量。mysql视图学习至此告一段落，以上内容如有语法结构错误，请指出或给予相应的解决方案。]]></content>
+      <categories>
+        <category>MySQL</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[MySQL 视图]]></title>
+    <url>%2F2013%2F11%2F13%2FMySQL-%E8%A7%86%E5%9B%BE%2F</url>
+    <content type="text"><![CDATA[Ewan之前研究mysql实际操作，个人感悟拿来共享一下。1.视图定义 视图是从一个或几个基本表导出的虚拟表，意思就是说视图只是依附在基本表上的虚拟表。 2.视图与基本表的联系与区别 视图是基本表的查询结果，基本表的数据变了，视图的结果自然就改变了。当然试图改变也会影响到基本表。视图的增删改会影响基本表，但视图不总是能增删盖的哦。在视图的数据与基本表的数据一一对应的时候可以修改，但对于视图的insert应注意，视图必须包含基本表的中没有的默认值的列。 3.视图的优点 简化sql查询语句可以更好的进行权限把控适合大数据分表时使用 虽然大数据分表有很多种方法，但视图无疑是个不错的选择哦 4.视图的基本语法create view （视图名） as （select 语句）； 是不是很简单啊？但实际应用起来就不是表面这样喽5.视图的操作 修改视图alert view （视图名） as（select 语句）；删除视图drop view (视图名)； 6.使用algorithm属性优化mysql视图 在这里algorithm有3个设置可优化视图，分别是merge,temptable,undefined格式为：algorithm = merge/temptable/undefinedmerge算法使mysql将执行视图时传入的任何字句合并到视图的查询定义中，换句话说，视图定义和select查询语句会合并成新的查询语句。当视图指定temptable算法时，创建视图的同时创建视图相对应的temporary表，然后查询视图的语句会从该临时表查取数据。merge和temptable区别就是：merge最终查的是基本表，而temptable查的是虚拟表。merge算法效率要比temptable要高。undefined：顾名思义，为定义，系统会自动选择。 7.查看视图信息 可以使用：show create view (视图名)可以使用：DESCRIBE（视图名）可以使用：information_schema数据库包括一个views表，包含一下内容：select from information_schema.views\G 注意是G要大写* mysql视图学习至此告一段落，以上内容如有语法结构错误，请指出或给予相应的解决方案。]]></content>
+      <categories>
+        <category>MySQL</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[MySQL 优化篇之SQL优化]]></title>
+    <url>%2F2013%2F11%2F13%2FMySQL-%E4%BC%98%E5%8C%96%E7%AF%87%E4%B9%8BSQL%E4%BC%98%E5%8C%96%2F</url>
+    <content type="text"><![CDATA[SQL优化优化SQL的一般步骤 1.通过show status和应用特点了解各种SQL的执行频率 通过SHOW STATUS可以提供服务器状态信息，也可以使用mysqladmin extended-status命令获得。SHOW STATUS可以根据需要显示session级别的统计结果和global级别的统计结果。以下几个参数对Myisam和Innodb存储引擎都计数：1). Com_select 执行select操作的次数，一次查询只累加1；2). Com_insert 执行insert操作的次数，对于批量插入的insert操作，只累加一次；3). Com_update 执行update操作的次数；4). Com_delete 执行delete操作的次数；以下几个参数是针对Innodb存储引擎计数的，累加的算法也略有不同：1). Innodb_rows_read select查询返回的行数；2). Innodb_rows_inserted执行Insert操作插入的行数；3). Innodb_rows_updated 执行update操作更新的行数；4). Innodb_rows_deleted 执行delete操作删除的行数；通过以上几个参数，可以很容易的了解当前数据库的应用是以插入更新为主还是以查询操作为主，以及各种类型的SQL大致的执行比例是多少。对于更新操作的计数，是对执行次数的计数，不论提交还是回滚都会累加。对于事务型的应用，通过Com_commit和Com_rollback可以了解事务提交和回滚的情况，对于回滚操作非常频繁的数据库，可能意味着应用编写存在问题。此外，以下几个参数便于我们了解数据库的基本情况：1). Connections 试图连接Mysql服务器的次数2). Uptime 服务器工作时间3). Slow_queries 慢查询的次数 2.定位执行效率较低的SQL语句 可以通过以下两种方式定位执行效率较低的SQL语句：1).可以通过慢查询日志定位那些执行效率较低的sql语句，用–log-slow-queries[=file_name]选项启动时，mysqld写一个包含所有执行时间超过long_query_time秒的SQL语句的日志文件。可以链接到管理维护中的相关章节。 3.通过EXPLAIN分析低效SQL的执行计划 通过以上步骤查询到效率低的SQL后，我们可以通过explain或者desc 获取MySQL如何执行SELECT语句的信息，包括select语句执行过程表如何连接和连接的次序。 explain可以知道什么时候必须为表加入索引以得到一个使用索引来寻找记录的更快的SELECT。mysql&gt;expain select * from table;select_type： select 类型table： 输出结果集的表type： 表示表的连接类型, 当表中仅有一行是type的值为system是最佳的连接类型； 当select操作中使用索引进行表连接时type的值为ref； 当select的表连接没有使用索引时，经常会看到type的值为ALL，表示对该表进行了全表扫描，这时需要考虑通过创建索引来提高表连接的效率。 possible_keys： 表示查询时,可以使用的索引列.key： 表示使用的索引key_len： 索引长度rows： 扫描范围Extra： 执行情况的说明和描述 12345+----+-------------+------------+--------+---------------+------+---------+------+------+---------------------+| id | select_type | table | type | possible_keys | key | key_len | ref | rows | Extra |+----+-------------+------------+--------+---------------+------+---------+------+------+---------------------+| 1 | SIMPLE | tab_serial | system | NULL | NULL | NULL | NULL | 0 | const row not found |+----+-------------+------------+--------+---------------+------+---------+------+------+---------------------+ 4.确定问题，并采取相应的优化措施 经过以上步骤，基本可以确认问题出现的原因，可以根据情况采取相应的措施，进行优化提高执行的效率。 索引问题 1.索引的存储分类 myisam表的数据文件和索引文件是自动分开的；innodb的数据和索引是存储在同一个表空间里面，但可以有多个文件组成。索引的存储类型目前只有两种（btree和hash），具体和表的模式相关：myisam btreeinnodb btreememory/heap hash，btreemysql目前不支持函数索引，只能对列的前一部分（length）进行索引，例：create index ind_test on table1(name(5))，对于char和varchar列，使用前缀索引将大大节省空间。 2.MySQL如何使用索引 索引用于快速找出在某个列中有一特定值的行。对相关列使用索引是提高SELECT操作性能的最佳途径。 查询要使用索引最主要的条件是查询条件中需要使用索引关键字，如果是多列索引，那么只有查询条件使用了多列关键字最左边的前缀时，才可以使用索引，否则将不能使用索引。下列情况下，Mysql不会使用已有的索引：1). 如果mysql估计使用索引比全表扫描更慢，则不使用索引。例如：如果key_part1均匀分布在1 和100之间，下列查询中使用索引就不是很好：SELECT * FROM table_name where key_part1 &gt; 1 and key_part1 &lt; 902). 如果使用heap表并且where条件中不用＝索引列，其他&gt; 、&lt;、 &gt;=、 &lt;=均不使用索引；3). 如果不是索引列的第一部分；4). 如果like是以％开始；5). 对where后边条件为字符串的一定要加引号，字符串如果为数字mysql会自动转为字符串，但是 不使用索引。 3.查看索引使用情况 如果索引正在工作，Handler_read_key的值将很高，这个值代表了一个行被索引值读的次数，很低的值表明增加索引得到的性能改善不高，因为索引并不经常使用。 Handler_read_rnd_next的值高则意味着查询运行低效，并且应该建立索引补救。这个值的含义是在数据文件中读下一行的请求数。如果你正进行大量的表扫描，该值较高。通常说明表索引不正确或写入的查询没有利用索引。语法： mysql&gt; show status like ‘Handler_read%’; 两个简单实用的优化方法 1.定期分析表 ANALYZE TABLE 语法：ANALYZE [LOCAL | NO_WRITE_TO_BINLOG] TABLE tbl_name [, tbl_name] ...本语句用于分析和存储表的关键字分布。在分析期间，使用一个读取锁定对表进行锁定。这对于MyISAM, BDB和InnoDB表有作用。对于MyISAM表，本语句与使用myisamchk -a相当。CHECK TABLE 语法：CHECK TABLE tbl_name [, tbl_name] ... [option] ... option = {QUICK | FAST | MEDIUM | EXTENDED | CHANGED}检查一个或多个表是否有错误。CHECK TABLE对MyISAM和InnoDB表有作用。对于MyISAM表，关键字统计数据被更新。 CHECK TABLE也可以检查视图是否有错误，比如在视图定义中被引用的表已不存在。CHECKSUM TABLE 语法：CHECKSUM TABLE tbl_name [, tbl_name] ... [ QUICK | EXTENDED ]报告一个表校验和。 2.使用optimize table OPTIMIZE TABLE 语法：OPTIMIZE [LOCAL | NO_WRITE_TO_BINLOG] TABLE tbl_name [, tbl_name] ...如果已经删除了表的一大部分，或者如果您已经对含有可变长度行的表（含有VARCHAR, BLOB或TEXT列的表）进行了很多更改，则应使用OPTIMIZE TABLE。被删除的记录被保持在链接清单中，后续的INSERT操作会重新使用旧的记录位置。您可以使用OPTIMIZE TABLE来重新利用未使用的空间，并整理数据文件的碎片。 OPTIMIZE TABLE只对MyISAM, BDB和InnoDB表起作用。 常用SQL的优化 1.大批量插入数据 1). 对于Myisam类型的表，可以通过以下方式快速的导入大量的数据。ALTER TABLE tblname DISABLE KEYS; loading the data ALTER TABLE tblname ENABLE KEYS;这两个命令用来打开或者关闭Myisam表非唯一索引的更新。在导入大量的数据到一个非空的Myisam表时，通过设置这两个命令，可以提高导入的效率。对于导入大量数据到一个空的Myisam表，默认就是先导入数据然后才创建索引的，所以不用进行设置。2). 而对于Innodb类型的表，这种方式并不能提高导入数据的效率。对于Innodb类型的表，我们有 以下几种方式可以提高导入的效率：a. 因为Innodb类型的表是按照主键的顺序保存的，所以将导入的数据按照主键的顺序排列，可以有效的提高导入数据的效率。如果Innodb表没有主键，那么系统会默认创建一个内部列作为主键，所以如果可以给表创建一个主键，将可以利用这个优势提高导入数据的效率。b. 在导入数据前执行SET UNIQUE_CHECKS=0，关闭唯一性校验，在导入结束后执行SET UNIQUE_CHECKS=1，恢复唯一性校验，可以提高导入的效率。c. 如果应用使用自动提交的方式，建议在导入前执行SET AUTOCOMMIT=0，关闭自动提交，导入结束后再执行SET AUTOCOMMIT=1，打开自动提交，也可以提高导入的效率。 2.优化insert语句 1). 如果你同时从同一客户插入很多行，使用多个值表的INSERT语句。这比使用分开INSERT语句快 (在一些情况中几倍)。Insert into test values(1,2),(1,3),(1,4)„2). 如果你从不同客户插入很多行，能通过使用INSERT DELAYED语句得到更高的速度。Delayed的含 义是让insert 语句马上执行，其实数据都被放在内存的队列中，并没有真正写入磁盘；这比每条语句分别插入要快的多；LOW_PRIORITY刚好相反，在所有其他用户对表的读写完后才进行插入；3). 将索引文件和数据文件分在不同的磁盘上存放（利用建表中的选项）；4). 如果进行批量插入，可以增加bulk_insert_buffer_size变量值的方法来提高速度，但是，这只 能对myisam表使用；5). 当从一个文本文件装载一个表时，使用LOAD DATA INFILE。这通常比使用很多INSERT语句快20 倍；6). 根据应用情况使用replace语句代替insert；7). 根据应用情况使用ignore关键字忽略重复记录。 3.优化group by语句 默认情况下，MySQL排序所有GROUP BY col1，col2，….。查询的方法如同在查询中指定ORDER BY col1，col2，…。如果显式包括一个包含相同的列的ORDER BY子句，MySQL可以毫不减速地对它进行优化，尽管仍然进行排序。 如果查询包括GROUP BY但你想要避免排序结果的消耗，你可以指定ORDER BY NULL禁止排序。例如：INSERT INTO foo SELECT a, COUNT(*) FROM bar GROUP BY a ORDER BY NULL; 4.优化order by语句 在某些情况中，MySQL可以使用一个索引来满足ORDER BY子句，而不需要额外的排序。where条件和order by使用相同的索引，并且order by的顺序和索引顺序相同，并且order by的字段都是升序或者都是降序。例如：下列sql可以使用索引。SELECT * FROM t1 ORDER BY key_part1,key_part2,... SELECT * FROM t1 WHERE key_part1=1 ORDER BY key_part1 DESC, key_part2 DESC; SELECT * FROM t1 ORDER BY key_part1 DESC, key_part2 DESC;但是以下情况不使用索引：SELECT * FROM t1 ORDER BY key_part1 DESC, key_part2 ASC；–order by的字段混合ASC和DESCSELECT * FROM t1 WHERE key2=constant ORDER BY key1；–用于查询行的关键字与ORDER BY中所使用的不相同SELECT * FROM t1 ORDER BY key1, key2；–对不同的关键字使用ORDER BY： 5.优化join语句 Mysql4.1开始支持SQL的子查询。这个技术可以使用SELECT语句来创建一个单列的查询结果，然后把这个结果作为过滤条件用在另一个查询中。使用子查询可以一次性的完成很多逻辑上需要多个步骤才能完成的SQL操作，同时也可以避免事务或者表锁死，并且写起来也很容易。但是，有些情况下，子查询可以被更有效率的连接(JOIN).. 替代。 假设我们要将所有没有订单记录的用户取出来，可以用下面这个查询完成:SELECT * FROM customerinfo WHERE CustomerID NOT in (SELECT CustomerID FROM salesinfo )如果使用连接(JOIN).. 来完成这个查询工作，速度将会快很多。尤其是当salesinfo表中对CustomerID建有索引的话，性能将会更好，查询如下:SELECT * FROM customerinfo LEFT JOIN salesinfoON customerinfo.CustomerID=salesinfo.CustomerID WHERE salesinfo.CustomerID IS NULL连接(JOIN).. 之所以更有效率一些，是因为 MySQL不需要在内存中创建临时表来完成这个逻辑上的需要两个步骤的查询工作。 6.mysql如何优化or条件 对于or子句，如果要利用索引，则or之间的每个条件列都必须用到索引；如果没有索引，则应该考虑增加索引。 7查询优先还是更新（insert、update、delete）优先 MySQL还允许改变语句调度的优先级，它可以使来自多个客户端的查询更好地协作，这样单个客户端就不会由于锁定而等待很长时间。改变优先级还可以确保特定类型的查询被处理得更快。 我们首先应该确定应用的类型，判断应用是以查询为主还是以更新为主的，是确保查询效率还是确保更新的效率，决定是查询优先还是更新优先。 下面我们提到的改变调度策略的方法主要是针对Myisam存储引擎的，对于Innodb存储引擎，语句的执行是由获得行锁的顺序决定的。 MySQL的默认的调度策略可用总结如下：1). 写入操作优先于读取操作。2). 对某张数据表的写入操作某一时刻只能发生一次，写入请求按照它们到达的次序来处理。3). 对某张数据表的多个读取操作可以同时地进行。 MySQL提供了几个语句调节符，允许你修改它的调度策略：a. LOW_PRIORITY关键字应用于DELETE、INSERT、LOAD DATA、REPLACE和UPDATE。b. HIGH_PRIORITY关键字应用于SELECT和INSERT语句。c. DELAYED关键字应用于INSERT和REPLACE语句。如果写入操作是一个LOW_PRIORITY（低优先级）请求，那么系统就不会认为它的优先级高于读取操作。在这种情况下，如果写入者在等待的时候，第二个读取者到达了，那么就允许第二个读取者插到写入者之前。只有在没有其它的读取者的时候，才允许写入者开始操作。这种调度修改可能存在LOW_PRIORITY写入操作永远被阻塞的情况。 SELECT查询的HIGH_PRIORITY（高优先级）关键字也类似。它允许SELECT插入正在等待的写入操作之前，即使在正常情况下写入操作的优先级更高。另外一种影响是，高优先级的SELECT在正常的SELECT语句之前执行，因为这些语句会被写入操作阻塞。 如果你希望所有支持LOW_PRIORITY选项的语句都默认地按照低优先级来处理，那么请使用–low-priority-updates选项来启动服务器。通过使用INSERT HIGH_PRIORITY来把INSERT语句提高到正常的写入优先级，可以消除该选项对单个INSERT语句的影响。 8.使用SQL提示SELECT SQL_BUFFER_RESULTS ... 将强制MySQL生成一个临时结果集。只要所有临时结果集生成后，所有表上的锁定均被释放。这能在遇到表锁定问题时或要花很长时间将结果传给客户端时有所帮助。 当处理一个会让客户端耗费点时间才能处理的大结果集时，可以考虑使用SQL_BUFFER_RESULT 提示字。这样可以告诉MySQL将结果集保存在一个临时表中，这样可以尽早的释放各种锁。USE INDEX在你查询语句中表名的后面，添加USE INDEX 来提供你希望MySQ去参考的索引列表，就可以让MySQL不再考虑其他可用的索引。Eg:SELECT * FROM mytable USE INDEX (mod_time, name) ...IGNORE INDEX如果你只是单纯的想让MySQL忽略一个或者多个索引，可以使用IGNORE INDEX作为Hint。Eg:SELECT * FROM mytale IGNORE INDEX (priority) ...FORCE INDEX为强制MySQL使用一个特定的索引，可在查询中使用FORCE INDEX作为Hint。Eg:SELECT * FROM mytable FORCE INDEX (mod_time) ... 其他优化措施 使用持久的连接数据库以避免连接开销。 经常检查所有查询确实使用了必要的索引。 避免在频繁更新的表上执行复杂的SELECT查询，以避免与锁定表有关的由于读、写冲突发生的问题。 对于没有删除的行操作的MyISAM表，插入操作和查询操作可以并行进行，因为没有删除操作的表查 询期间不会阻塞插入操作．对于确实需要执行删除操作的表，尽量在空闲时间进行批量删除操作，避免阻塞其他操作。 充分利用列有默认值的事实。只有当插入的值不同于默认值时，才明确地插入值。这减少MySQL需 要做的语法分析从而提高插入速度。 对经常访问的可以重构的数据使用内存表，可以显著提高访问的效率。 通过复制可以提高某些操作的性能。可以在复制服务器中分布客户的检索以均分负载。为了防止备份 期间对应用的影响，可以在复制服务器上执行备份操作。 表的字段尽量不使用自增长变量，在高并发情况下该字段的自增可能对效率有比较大的影响，推荐通 过应用来实现字段的自增长。]]></content>
+      <categories>
+        <category>MySQL</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>MySQL</tag>
+      </tags>
+  </entry>
+</search>
