@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[评论系统相继关闭]]></title>
+    <url>%2F2017%2F07%2F07%2F%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F%E7%9B%B8%E7%BB%A7%E5%85%B3%E9%97%AD%2F</url>
+    <content type="text"><![CDATA[前段时间,多说系统宣布关闭停止服务,偶感还挺可惜的.最近折腾这上了网易跟帖,来替换多说,今天登陆网易跟帖后台,又看到了一个不好的消息 12345678网易云跟贴停止服务公告亲爱的朋友们：因公司业务发展需要，我们不得不遗憾地通知大家，云跟贴产品将于2017年8月1日停止服务。在此之前可以通过后台的数据导出功能导出自己站点的跟贴数据。感谢大家一直以来对云跟贴的支持与厚爱，对于此次产品关停给您带来的不便我们深表歉意，希望在网易其他产品与业务上，我们能继续为您服务！网易云跟贴2017年7月6日]]></content>
+      <categories>
+        <category>杂谈</category>
+      </categories>
+      <tags>
+        <tag>微语</tag>
+        <tag>胡侃</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[lantern Mac版编译 免费]]></title>
     <url>%2F2017%2F07%2F07%2Flantern-Mac%E7%89%88%E7%BC%96%E8%AF%91-%E5%85%8D%E8%B4%B9%2F</url>
     <content type="text"><![CDATA[蓝灯,Mac版编译 HomebrewHomebrew,macOS 缺失的软件包管理器,没用过的可以过去了解一下Homebrewlantern之前先安装一下Homebrew,终端输入1$ /usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot; Homebrew安装完成以后,安装git,已安装的可以忽略1$ brew install git Node安装 Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境 Node.js 使用了一个事件驱动、非阻塞式 I/O 的模型,使其轻量又高效 Node.js 的包管理器 npm,是全球最大的开源库生态系统Node下载,选择Mac版下载,安装下一步下一步就行…. 其他预安装1234$ brew install go$ npm i gulp-cli -g$ npm install -g appdmg$ npm install -g svgexport lantern Mac编译找个文件夹把lantern下载下来可以直接用GitHub下载,cd到你放置lantern的文件夹,终端输入命令如下1$ git clone --depth=1 https://github.com/getlantern/lantern.git 下载以后123$ cd lantern$ export VERSION=9.9.9$ make darwin 编译的时候回出现以下错误根据错误信息指出的路径在lantern文件夹中找到对应的文件及行数1 只需要把MaxIdleTime改为IdleConnTimeout2 然后把下面紧接的调用EnforceMaxIdleTime()这个方法的语句注释掉 就改这两个文件中的4行就行,重新编译1$ make darwin 编译完成后,你会在你的lantern文件夹中找到名为lantern_darwin_amd64的文件,说明完全没问题了 运行然后在你的Mac上搜索一下lantern_darwin_amd64,双击打开就可以了]]></content>
