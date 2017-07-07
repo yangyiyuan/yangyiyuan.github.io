@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.iooeo.com/"/>
-  <updated>2017-07-04T08:45:07.000Z</updated>
+  <updated>2017-07-07T03:08:16.000Z</updated>
   <id>http://www.iooeo.com/</id>
   
   <author>
@@ -14,6 +14,48 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>lantern Mac版编译 免费</title>
+    <link href="http://www.iooeo.com/2017/07/07/lantern-Mac%E7%89%88%E7%BC%96%E8%AF%91-%E5%85%8D%E8%B4%B9/"/>
+    <id>http://www.iooeo.com/2017/07/07/lantern-Mac版编译-免费/</id>
+    <published>2017-07-07T03:06:12.000Z</published>
+    <updated>2017-07-07T03:08:16.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>蓝灯,Mac版编译</p>
+<h2 id="Homebrew"><a href="#Homebrew" class="headerlink" title="Homebrew"></a>Homebrew</h2><p><em>Homebrew</em>,macOS 缺失的软件包管理器,没用过的可以过去了解一下<a href="https://brew.sh/index_zh-cn.html" target="_blank" rel="external">Homebrew</a><br>lantern之前先安装一下<em>Homebrew</em>,终端输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ /usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</div></pre></td></tr></table></figure></p>
+<p><em>Homebrew</em>安装完成以后,安装git,已安装的可以忽略<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ brew install git</div></pre></td></tr></table></figure></p>
+<h2 id="Node安装"><a href="#Node安装" class="headerlink" title="Node安装"></a>Node安装</h2><ul>
+<li>Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境</li>
+<li>Node.js 使用了一个事件驱动、非阻塞式 I/O 的模型,使其轻量又高效</li>
+<li>Node.js 的包管理器 npm,是全球最大的开源库生态系统<br><a href="http://nodejs.cn/download/" target="_blank" rel="external">Node下载</a>,选择Mac版下载,安装下一步下一步就行….</li>
+</ul>
+<h2 id="其他预安装"><a href="#其他预安装" class="headerlink" title="其他预安装"></a>其他预安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ brew install go</div><div class="line">$ npm i gulp-cli -g</div><div class="line">$ npm install -g appdmg</div><div class="line">$ npm install -g svgexport</div></pre></td></tr></table></figure>
+<h2 id="lantern-Mac编译"><a href="#lantern-Mac编译" class="headerlink" title="lantern Mac编译"></a>lantern Mac编译</h2><p>找个文件夹把lantern下载下来<br>可以直接用GitHub下载,cd到你放置lantern的文件夹,终端输入命令如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git clone --depth=1 https://github.com/getlantern/lantern.git</div></pre></td></tr></table></figure></p>
+<p>下载以后<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ cd lantern</div><div class="line">$ export VERSION=9.9.9</div><div class="line">$ make darwin</div></pre></td></tr></table></figure></p>
+<p>编译的时候回出现以下错误<br><img src="http://ogpq2zwg5.bkt.clouddn.com/WechatIMG7.jpeg" alt="编译是错误图片"><br>根据错误信息指出的路径在lantern文件夹中找到对应的文件及行数<br>1 只需要把<em>MaxIdleTime</em>改为<em>IdleConnTimeout”<br>2 然后把下面紧接的调用</em>EnforceMaxIdleTime()*这个方法的语句注释掉</p>
+<p>就改这两个文件中的4行就行,重新编译<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ make darwin</div></pre></td></tr></table></figure></p>
+<p>编译完成后,你会在你的lantern文件夹中找到名为<em>lantern_darwin_amd64</em>的文件,说明完全没问题了</p>
+<h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><p>然后在你的Mac上搜索一下<em>lantern_darwin_amd64</em>,双击打开就可以了</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;蓝灯,Mac版编译&lt;/p&gt;
+&lt;h2 id=&quot;Homebrew&quot;&gt;&lt;a href=&quot;#Homebrew&quot; class=&quot;headerlink&quot; title=&quot;Homebrew&quot;&gt;&lt;/a&gt;Homebrew&lt;/h2&gt;&lt;p&gt;&lt;em&gt;Homebrew&lt;/em&gt;,macOS 缺失的软件
+    
+    </summary>
+    
+      <category term="Mac" scheme="http://www.iooeo.com/categories/Mac/"/>
+    
+    
+      <category term="lantern" scheme="http://www.iooeo.com/tags/lantern/"/>
+    
+      <category term="Mac" scheme="http://www.iooeo.com/tags/Mac/"/>
+    
+      <category term="VPN" scheme="http://www.iooeo.com/tags/VPN/"/>
+    
+  </entry>
   
   <entry>
     <title>Hexo+Github+coding搭建个人博客 - 百度和Google收录篇</title>
@@ -812,40 +854,6 @@ set @c=1+1;</code><br>执行：select …;<br>这里要注意：<br>1）变量�
       <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
     
       <category term="Laravel" scheme="http://www.iooeo.com/tags/Laravel/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MySQL安装dpkg错误解决方案</title>
-    <link href="http://www.iooeo.com/2014/09/17/MySQL%E5%AE%89%E8%A3%85dpkg%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
-    <id>http://www.iooeo.com/2014/09/17/MySQL安装dpkg错误解决方案/</id>
-    <published>2014-09-17T09:39:04.000Z</published>
-    <updated>2016-11-17T09:54:14.000Z</updated>
-    
-    <content type="html"><![CDATA[<ul>
-<li><p>Ewan在Ubuntu下安装MySQL的时候出现了一下错误问题：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">start: Job failed to start</div><div class="line">invoke-rc.d: initscript mysql, action &quot;start&quot; failed.</div><div class="line">dpkg: error processing mysql-server-5.5 (--configure):</div><div class="line">subprocess installed post-installation script returned error exit status 1</div><div class="line">dpkg: dependency problems prevent configuration of mysql-server:</div><div class="line">mysql-server depends on mysql-server-5.5; however:</div><div class="line">Package mysql-server-5.5 is not configured yet.</div><div class="line">dpkg: error processing mysql-server (--configure):</div><div class="line">dependency problems - leaving unconfigured</div><div class="line">No apport report written because the error message indicates its a followup error from a previous failure.</div><div class="line">Errors were encountered while processing:</div><div class="line">mysql-server-5.5</div><div class="line">mysql-server</div><div class="line">E: Sub-process /usr/bin/dpkg returned an error code (1)</div></pre></td></tr></table></figure>
-</li>
-<li><p>经查证，现给出解决办法：<br>删除MySQL前，先删除/var/lib/mysql和/etc/mysql</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ sudo rm /var/lib/mysql/ -R</div><div class="line">$ sudo rm /etc/mysql/ -R</div><div class="line">$ sudo apt-get autoremove mysql* --purge</div><div class="line">$ sudo apt-get remove apparmor</div><div class="line">$ sudo apt-get install mysql-server mysql-common</div></pre></td></tr></table></figure>
-</li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Ewan在Ubuntu下安装MySQL的时候出现了一下错误问题：&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div
-    
-    </summary>
-    
-      <category term="MySQL" scheme="http://www.iooeo.com/categories/MySQL/"/>
-    
-    
-      <category term="Linux" scheme="http://www.iooeo.com/tags/Linux/"/>
-    
-      <category term="MySQL" scheme="http://www.iooeo.com/tags/MySQL/"/>
     
   </entry>
   
