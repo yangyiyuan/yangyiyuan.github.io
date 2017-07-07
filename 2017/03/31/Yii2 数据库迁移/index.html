@@ -120,12 +120,12 @@
 <meta property="og:url" content="http://www.iooeo.com/2017/03/31/Yii2 数据库迁移/index.html">
 <meta property="og:site_name" content="Ewan&#39;s Blog">
 <meta property="og:description" content="描述在开发和维护一个数据库驱动的应用程序时,数据库的结构会随代码的改变而改变. Yii 提供了一个 数据库迁移功,该功能可以记录数据库的变化, 以便使数据库和源代码一起受版本控制.Yii 提供了一整套的迁移命令行工具，通过这些工具你可以:  创建新的迁移 提交迁移 恢复迁移 重新提交迁移 现实迁移历史和状态">
-<meta property="og:image" content="https://git.kancloud.cn/repos/cola_uncle/yii2/raw/master/image/screenshot_1489469726399.png?access-token=de29ccf9007bea655d8be6a078533ddd">
-<meta property="og:updated_time" content="2017-03-31T03:56:43.000Z">
+<meta property="og:image" content="http://ogpq2zwg5.bkt.clouddn.com/38d04f1df5e8735d86cedbd355ac706f_611x452.png">
+<meta property="og:updated_time" content="2017-07-07T07:18:04.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Yii2 数据库迁移">
 <meta name="twitter:description" content="描述在开发和维护一个数据库驱动的应用程序时,数据库的结构会随代码的改变而改变. Yii 提供了一个 数据库迁移功,该功能可以记录数据库的变化, 以便使数据库和源代码一起受版本控制.Yii 提供了一整套的迁移命令行工具，通过这些工具你可以:  创建新的迁移 提交迁移 恢复迁移 重新提交迁移 现实迁移历史和状态">
-<meta name="twitter:image" content="https://git.kancloud.cn/repos/cola_uncle/yii2/raw/master/image/screenshot_1489469726399.png?access-token=de29ccf9007bea655d8be6a078533ddd">
+<meta name="twitter:image" content="http://ogpq2zwg5.bkt.clouddn.com/38d04f1df5e8735d86cedbd355ac706f_611x452.png">
 
 
 
@@ -481,7 +481,7 @@
 <h2 id="实操"><a href="#实操" class="headerlink" title="实操"></a>实操</h2><p>先看下帮助<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ cd thesaurus</div><div class="line">$ php yii migrate -h</div></pre></td></tr></table></figure></p>
 <p>最重要的是下面这段<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">- migrate/create        Creates a new migration.</div><div class="line">- migrate/down          Downgrades the application by reverting old migrations.</div><div class="line">- migrate/history       Displays the migration history.</div><div class="line">- migrate/mark          Modifies the migration history to the specified version.</div><div class="line">- migrate/new           Displays the un-applied new migrations.</div><div class="line">- migrate/redo          Redoes the last few migrations.</div><div class="line">- migrate/to            Upgrades or downgrades till the specified version.</div><div class="line">- migrate/up (default)  Upgrades the application by applying new migrations.</div></pre></td></tr></table></figure></p>
 <p>出于好奇心,我们先<em>create</em>一个表试试看看<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ php yii migrate/create create_terms_table</div></pre></td></tr></table></figure></p>
-<p>提示创建一个新的迁移文件,输入<em>yes</em>看到<em>New migration created successfully.</em>表示成功<br>生成的文件在<em>/thesaurus/console/migrations/mxxxxxx_xxxxxx_create_terms_table.php</em>,打开编辑terms所需字段<br><img src="https://git.kancloud.cn/repos/cola_uncle/yii2/raw/master/image/screenshot_1489469726399.png?access-token=de29ccf9007bea655d8be6a078533ddd" alt=""></p>
+<p>提示创建一个新的迁移文件,输入<em>yes</em>看到<em>New migration created successfully.</em>表示成功<br>生成的文件在<em>/thesaurus/console/migrations/mxxxxxx_xxxxxx_create_terms_table.php</em>,打开编辑terms所需字段<br><img src="http://ogpq2zwg5.bkt.clouddn.com/38d04f1df5e8735d86cedbd355ac706f_611x452.png" alt=""></p>
 <p>我这里添加了<em>name</em>和<em>create_at</em>,<em>update_at</em>字段,上边的属性各位估计也能看明白,下边执行迁移<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ php yii migrate</div></pre></td></tr></table></figure></p>
 <p>安装提示输入<em>yes</em>,看到<em>Migrated up successfully</em>说明成功,通过数据库工具<em>Navicat Premium</em>可以看到数据库中多了三个表<em>migration</em>,<em>terms</em>,<em>user</em>,其中<em>migration</em>是用来记录迁移历史记录的,<em>user</em>是项目初始化中自带的(也就是你刚刚登陆不成功那个<em>user</em>表),<em>terms</em>当然使我们自己创建的<br>剩下的命令就不做过多演示了,记住几个比较常用,完全无压力<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">- migrate/create        创建新的迁移.</div><div class="line">- migrate/down          恢复上一个迁移.</div><div class="line">- migrate/history       显示迁移历史和状态.</div><div class="line">- migrate               提交迁移</div></pre></td></tr></table></figure></p>
 
