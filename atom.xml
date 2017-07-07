@@ -73,7 +73,7 @@
     <summary type="html">
     
       &lt;p&gt;蓝灯,Mac版编译&lt;/p&gt;
-&lt;h2 id=&quot;Homebrew&quot;&gt;&lt;a href=&quot;#Homebrew&quot; class=&quot;headerlink&quot; title=&quot;Homebrew&quot;&gt;&lt;/a&gt;Homebrew&lt;/h2&gt;&lt;p&gt;&lt;em&gt;Homebrew&lt;/em&gt;,macOS 缺失的软件包管理器,没用过的可以过去了解一下&lt;a href=&quot;https://brew.sh/index_zh-cn.html&quot;&gt;Homebrew&lt;/a&gt;&lt;br&gt;lantern之前先安装一下&lt;em&gt;Homebrew&lt;/em&gt;,终端输入&lt;br&gt;
+&lt;h2 id=&quot;Homebrew&quot;&gt;&lt;a href=&quot;#Homebrew&quot; class=&quot;headerlink&quot; title=&quot;Homebrew&quot;&gt;&lt;/a&gt;Homebrew&lt;/h2&gt;&lt;p&gt;&lt;em&gt;Homebrew&lt;/em&gt;,macOS 缺失的软件包管理器,没用过的可以过去了解一下&lt;a href=&quot;https://brew.sh/index_zh-cn.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Homebrew&lt;/a&gt;&lt;br&gt;lantern之前先安装一下&lt;em&gt;Homebrew&lt;/em&gt;,终端输入&lt;br&gt;
     
     </summary>
     
@@ -224,7 +224,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;有Coding的直接登录,没有的&lt;a href=&quot;https://coding.net/&quot;&gt;Coding&lt;/a&gt;注册&lt;/p&gt;
+      &lt;p&gt;有Coding的直接登录,没有的&lt;a href=&quot;https://coding.net/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Coding&lt;/a&gt;注册&lt;/p&gt;
 &lt;h2 id=&quot;创建仓库&quot;&gt;&lt;a href=&quot;#创建仓库&quot; class=&quot;headerlink&quot; title=&quot;创建仓库&quot;&gt;&lt;/a&gt;创建仓库&lt;/h2&gt;&lt;p&gt;添加项目,填写项目名称/描述…当然这个名字的格式最好为youName&lt;em&gt;(youName为你的Coding用户名)&lt;/em&gt;，例如我的为Mercis&lt;br&gt;
     
     </summary>
@@ -269,7 +269,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;有GitHub的直接登录,没有的&lt;a href=&quot;https://github.com/&quot;&gt;GitHub&lt;/a&gt;注册&lt;/p&gt;
+      &lt;p&gt;有GitHub的直接登录,没有的&lt;a href=&quot;https://github.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;GitHub&lt;/a&gt;注册&lt;/p&gt;
 &lt;h2 id=&quot;创建仓库&quot;&gt;&lt;a href=&quot;#创建仓库&quot; class=&quot;headerlink&quot; title=&quot;创建仓库&quot;&gt;&lt;/a&gt;创建仓库&lt;/h2&gt;&lt;p&gt;仓库(Repository)用来放置代码文件,登录之后点击右上角加号,点击New repository&lt;br&gt;
     
     </summary>
@@ -320,14 +320,14 @@
       &lt;p&gt;之前自己摸摸索索把博客搭建好了,最近有人问我怎么搭建的,这里把搭建流程跟大家说下吧&lt;/p&gt;
 &lt;h2 id=&quot;开始前准备&quot;&gt;&lt;a href=&quot;#开始前准备&quot; class=&quot;headerlink&quot; title=&quot;开始前准备&quot;&gt;&lt;/a&gt;开始前准备&lt;/h2&gt;&lt;p&gt;账号相关: &lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/&quot;&gt;GitHub&lt;/a&gt; &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://coding.net/&quot;&gt;Coding&lt;/a&gt; &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://wanwang.aliyun.com/&quot;&gt;域名&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;GitHub&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://coding.net/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Coding&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://wanwang.aliyun.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;域名&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;服务相关: &lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://git-scm.com/download&quot;&gt;Git&lt;/a&gt;     &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://nodejs.org/en/&quot;&gt;Node.js&lt;/a&gt;
+&lt;li&gt;&lt;a href=&quot;https://git-scm.com/download&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Git&lt;/a&gt;     &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://nodejs.org/en/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Node.js&lt;/a&gt;
     
     </summary>
     
@@ -365,7 +365,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;为了快捷开发后台和界面的统一,这里我们引入了AdminLTE主题资源包&lt;br&gt;AdminLTE的学习请移至&lt;a href=&quot;https://github.com/dmstr/yii2-adminlte-asset&quot;&gt;dmstr/yii2-adminlte-asset&lt;/a&gt;&lt;br&gt;
+      &lt;p&gt;为了快捷开发后台和界面的统一,这里我们引入了AdminLTE主题资源包&lt;br&gt;AdminLTE的学习请移至&lt;a href=&quot;https://github.com/dmstr/yii2-adminlte-asset&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;dmstr/yii2-adminlte-asset&lt;/a&gt;&lt;br&gt;
     
     </summary>
     
@@ -542,7 +542,7 @@
     <link href="http://www.iooeo.com/2017/03/31/Yii2%20%E5%88%9B%E5%BB%BA%E5%BA%94%E7%94%A8/"/>
     <id>http://www.iooeo.com/2017/03/31/Yii2 创建应用/</id>
     <published>2017-03-31T03:43:00.000Z</published>
-    <updated>2017-03-31T03:48:39.000Z</updated>
+    <updated>2017-07-07T07:14:47.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><ul>
 <li>macOS 10.12.3</li>
@@ -559,7 +559,7 @@
 <li><em>local.theb.com</em> (后端服务访问URL)</li>
 <li><em>local.thef.com</em>  (前端服务访问URL)</li>
 </ul>
-<p>配置好以后记得添加本地hosts和重启Nginx或者Apache<br>以上操作完成以后,通过浏览器访问<em>local.theb.com</em>和<em>local.thef.com</em> 显示一下即为安装成功<br><img src="https://git.kancloud.cn/repos/cola_uncle/yii2/raw/master/image/05ED4917-9765-49EB-8B61-8CA610549E3F.png?access-token=de29ccf9007bea655d8be6a078533ddd" alt=""><br><img src="https://git.kancloud.cn/repos/cola_uncle/yii2/raw/master/image/85BE0D17-0BFF-4267-9DE0-27256F5DF021.png?access-token=de29ccf9007bea655d8be6a078533ddd" alt=""></p>
+<p>配置好以后记得添加本地hosts和重启Nginx或者Apache<br>以上操作完成以后,通过浏览器访问<em>local.theb.com</em>和<em>local.thef.com</em> 显示一下即为安装成功<br><img src="http://ogpq2zwg5.bkt.clouddn.com/cee144a9319c9e6dcabf5b3d9884c938_1872x1016.png" alt=""><br><img src="http://ogpq2zwg5.bkt.clouddn.com/58c04d10026135a15f47ca7df30438ed_1873x1017.png" alt=""></p>
 ]]></content>
     
     <summary type="html">
@@ -666,7 +666,7 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;互联网协议入门&quot;&gt;&lt;a href=&quot;#互联网协议入门&quot; class=&quot;headerlink&quot; title=&quot;互联网协议入门&quot;&gt;&lt;/a&gt;互联网协议入门&lt;/h2&gt;&lt;p&gt;每天重复搬砖的动作,发现很多底层的基础只是都有点忘了…补一下喽,这里参照&lt;a href=&quot;http://www.ruanyifeng.com&quot;&gt;阮一峰&lt;/a&gt;的博客梳理一下&lt;br&gt;互联网的核心是一系列的协议,总称为”互联网协议”(Internet Protocol Suite).它们对电脑如何连接和组网,做出了详尽的规定.理解了这些协议,就理解了互联网的原理.&lt;br&gt;
+      &lt;h2 id=&quot;互联网协议入门&quot;&gt;&lt;a href=&quot;#互联网协议入门&quot; class=&quot;headerlink&quot; title=&quot;互联网协议入门&quot;&gt;&lt;/a&gt;互联网协议入门&lt;/h2&gt;&lt;p&gt;每天重复搬砖的动作,发现很多底层的基础只是都有点忘了…补一下喽,这里参照&lt;a href=&quot;http://www.ruanyifeng.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;阮一峰&lt;/a&gt;的博客梳理一下&lt;br&gt;互联网的核心是一系列的协议,总称为”互联网协议”(Internet Protocol Suite).它们对电脑如何连接和组网,做出了详尽的规定.理解了这些协议,就理解了互联网的原理.&lt;br&gt;
     
     </summary>
     
