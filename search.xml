@@ -5,8 +5,7 @@
     <url>%2F2017%2F07%2F20%2FYii2-%E8%A1%A8%E5%8D%95%E6%8F%90%E4%BA%A4%E9%94%99%E8%AF%AF%E8%B0%83%E8%AF%95%2F</url>
     <content type="text"><![CDATA[在使用yii 开发项目的时候经常碰到一些数据插入时提交失败的情况，为了更精准的找到错误，yii 给我提供一下方法，用以调试12echo current(array_values($model-&gt;getFirstErrors()));exit; model调用load()方法时出错时，用这个方法也可以]]></content>
       <categories>
-        <category>Yii2</category>
-        <category>PHP</category>
+        <category>PHP - Yii2</category>
       </categories>
       <tags>
         <tag>PHP</tag>
@@ -148,6 +147,7 @@
     <url>%2F2017%2F03%2F31%2FYii2%20%E5%AE%89%E8%A3%85AdminLTE%E5%90%8E%E5%8F%B0%E4%B8%BB%E9%A2%98%E8%B5%84%E6%BA%90%E5%8C%85%2F</url>
     <content type="text"><![CDATA[为了快捷开发后台和界面的统一,这里我们引入了AdminLTE主题资源包AdminLTE的学习请移至dmstr/yii2-adminlte-asset 安装使用composer安装1$ composer require dmstr/yii2-adminlte-asset &quot;2.*&quot; 使用主题方式一复制整个vendor/dmstr/yii2-adminlte-asset/example-views/yiisoft/yii2-app目录下的layouts目录和site目录到backend/views,覆盖原始文件 方式二在backend/config/main.php中添加一下配置123456789&apos;components&apos; =&gt; [ &apos;view&apos; =&gt; [ &apos;theme&apos; =&gt; [ &apos;pathMap&apos; =&gt; [ &apos;@app/views&apos; =&gt; &apos;@vendor/dmstr/yii2-adminlte-asset/example-views/yiisoft/yii2-app&apos; ], ], ],], 查看效果如果你backend下没有做任何操作的情况下,你会看到登陆页面已经变了.如果想看一下AdminLTE主题的具体效果,将backend/controllers/SiteController.php做一下修改暂时将行为方法注释12345678910111213141516171819202122232425262728public function behaviors() &#123; return [ /** * 注释此处,阻止行为方式,查看AdminLTE主题模板效果 &apos;access&apos; =&gt; [ &apos;class&apos; =&gt; AccessControl::className(), &apos;rules&apos; =&gt; [ [ &apos;actions&apos; =&gt; [&apos;login&apos;, &apos;error&apos;], &apos;allow&apos; =&gt; true, ], [ &apos;actions&apos; =&gt; [&apos;logout&apos;, &apos;index&apos;], &apos;allow&apos; =&gt; true, &apos;roles&apos; =&gt; [&apos;@&apos;], ], ], ], */ &apos;verbs&apos; =&gt; [ &apos;class&apos; =&gt; VerbFilter::className(), &apos;actions&apos; =&gt; [ &apos;logout&apos; =&gt; [&apos;post&apos;], ], ], ]; &#125; 然后访问首页,就可以看到AdminLTE主题的具体效果 AdminLTE学习 主题一些简单的页面实例,及学习文档也可以查看vendor/almasaeed2010/adminlte/index.html 主题实例vendor/almasaeed2010/adminlte/pages]]></content>
       <categories>
+        <category>PHP</category>
         <category>Yii2</category>
       </categories>
       <tags>
@@ -160,6 +160,7 @@
     <url>%2F2017%2F03%2F31%2FYii2%20%E8%87%AA%E5%8A%A8%E5%AD%98%E5%82%A8%E6%9B%B4%E6%96%B0%E6%98%BE%E7%A4%BA%E6%95%B0%E6%8D%AE%E5%BA%93%E6%97%B6%E9%97%B4%E6%88%B3%2F</url>
     <content type="text"><![CDATA[之前我们terms表中有两个时间字段create_at和update_at,现在我们来操作一下,使create_at和update_at在存储时自动更新它的时间戳属性 自动存储更新时间戳属性这里我们使用TimestampBehavior先不要管行为不行为,今天就是要时间戳属性自动存储更新 方式一现在我们开始操作/thesaurus/frontend/models/Terms.php,首先别忘了1use yii\behaviors\TimestampBehavior; 然后定义方法behaviors12345678910111213141516171819/** * @inheritdoc */ public function behaviors() &#123; return [ [ &apos;class&apos; =&gt; TimestampBehavior::className(), &apos;attributes&apos; =&gt; [ # 添加之前 ActiveRecord::EVENT_BEFORE_INSERT =&gt; [&apos;create_at&apos;, &apos;update_at&apos;], # 修改之前 ActiveRecord::EVENT_BEFORE_UPDATE =&gt; [&apos;update_at&apos;] ], # 字段值 &apos;value&apos; =&gt; time() ] ]; &#125; 方式二配合下面的 afterFind 格式化时间最佳123456789101112131415161718/** * @inheritdoc */ public function rules() &#123; return [ # 自动补全添加时间和修改时间,配合 afterFind 方法转换格式化时间 [&apos;create_at&apos;, &apos;filter&apos;, &apos;filter&apos; =&gt; function () &#123; return $this-&gt;create_at ? strtotime($this-&gt;create_at) : time(); &#125;], [&apos;update_at&apos;, &apos;filter&apos;, &apos;filter&apos; =&gt; function () &#123; return $this-&gt;update_at ? strtotime($this-&gt;update_at) : time(); &#125;], [[&apos;name&apos;], &apos;required&apos;], [[&apos;create_at&apos;, &apos;update_at&apos;], &apos;integer&apos;], [[&apos;name&apos;], &apos;string&apos;, &apos;max&apos; =&gt; 32], ]; &#125; 这个完成以后我们打开/thesaurus/frontend/views/terms/create.php看到以下代码123&lt;?= $this-&gt;render(&apos;_form&apos;, [ &apos;model&apos; =&gt; $model, ]) ?&gt; 然后我们找到/thesaurus/frontend/views/terms/_form.php,把Form表单的create_at和update_at的input框删除掉,只留下name然后我们打开local.thef.com/index.php?r=terms,点击Create Terms按钮,表单页面是不是只剩下name一览了,添加一个试试 显示格式化时间再让我们回到local.thef.com/index.php?r=terms,是不是已经有我们已经添加的数据了,但是时间是有了,感觉有点不对啊,我也觉得是,有办法继续打开/thesaurus/frontend/models/Terms.php添加如下方法123456789/** * @inheritdoc */ public function afterFind() &#123; parent::afterFind(); $this-&gt;create_at = date(&apos;Y-m-d H:i:s&apos;, $this-&gt;create_at); $this-&gt;update_at = date(&apos;Y-m-d H:i:s&apos;, $this-&gt;update_at); &#125; 再回头我们的local.thef.com/index.php?r=terms,这下是不是就看着顺眼了.虽然格式化时间的方法很多,但是我觉得这个够了….]]></content>
       <categories>
+        <category>PHP</category>
         <category>Yii2</category>
       </categories>
       <tags>
@@ -172,7 +173,7 @@
     <url>%2F2017%2F03%2F31%2FYii2%20Gii%E7%94%9F%E6%88%90%E4%BB%A3%E7%A0%81%2F</url>
     <content type="text"><![CDATA[Gii是Yii中的一个模块,有此神器,撸代码都省了好多,简单的先用一下继续拿我们上边的例子来说访问local.thef.com/index.php?r=gii可以看到操作界面 生成Model输入Table Name(有提示,是不是很方便),自动补全Model Class Namespace这里只在frontend下使用,就小改一下 最后点击Preview,然后Generate完成,看看thesaurus/frontend/models/目录下是不是多了Terms.php 同理点击CRUD Generator,点击Preview,然后Generate完成 123456*Model Class*frontend\models\Terms*Search Model Class*frontend\models\TermsSearch*Controller Class*frontend\controllers\TermsController 生成文件: /thesaurus/frontend/models/TermsSearch.php /thesaurus/frontend/controllers/TermsController.php /thesaurus/frontend/views/terms/_form.php /thesaurus/frontend/views/terms/_search.php /thesaurus/frontend/views/terms/create.php /thesaurus/frontend/views/terms/index.php /thesaurus/frontend/views/terms/update.php /thesaurus/frontend/views/terms/view.php 然后访问 local.thef.com/index.php?r=terms 就可以进行你的增删查改了,biubiu,是不是很爽]]></content>
       <categories>
-        <category>Yii2</category>
+        <category>PHP - Yii2</category>
       </categories>
       <tags>
         <tag>PHP</tag>
@@ -184,7 +185,7 @@
     <url>%2F2017%2F03%2F31%2FYii2%20%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%81%E7%A7%BB%2F</url>
     <content type="text"><![CDATA[描述在开发和维护一个数据库驱动的应用程序时,数据库的结构会随代码的改变而改变. Yii 提供了一个 数据库迁移功,该功能可以记录数据库的变化, 以便使数据库和源代码一起受版本控制.Yii 提供了一整套的迁移命令行工具，通过这些工具你可以: 创建新的迁移 提交迁移 恢复迁移 重新提交迁移 现实迁移历史和状态 下面我简单用一下,至于更复杂的应用会在后期的更新中补充掉 实操先看下帮助12$ cd thesaurus$ php yii migrate -h 最重要的是下面这段12345678- migrate/create Creates a new migration.- migrate/down Downgrades the application by reverting old migrations.- migrate/history Displays the migration history.- migrate/mark Modifies the migration history to the specified version.- migrate/new Displays the un-applied new migrations.- migrate/redo Redoes the last few migrations.- migrate/to Upgrades or downgrades till the specified version.- migrate/up (default) Upgrades the application by applying new migrations. 出于好奇心,我们先create一个表试试看看1$ php yii migrate/create create_terms_table 提示创建一个新的迁移文件,输入yes看到New migration created successfully.表示成功生成的文件在/thesaurus/console/migrations/mxxxxxx_xxxxxx_create_terms_table.php,打开编辑terms所需字段 我这里添加了name和create_at,update_at字段,上边的属性各位估计也能看明白,下边执行迁移1$ php yii migrate 安装提示输入yes,看到Migrated up successfully说明成功,通过数据库工具Navicat Premium可以看到数据库中多了三个表migration,terms,user,其中migration是用来记录迁移历史记录的,user是项目初始化中自带的(也就是你刚刚登陆不成功那个user表),terms当然使我们自己创建的剩下的命令就不做过多演示了,记住几个比较常用,完全无压力1234- migrate/create 创建新的迁移.- migrate/down 恢复上一个迁移.- migrate/history 显示迁移历史和状态.- migrate 提交迁移]]></content>
       <categories>
-        <category>Yii2</category>
+        <category>PHP - Yii2</category>
       </categories>
       <tags>
         <tag>PHP</tag>
@@ -196,7 +197,7 @@
     <url>%2F2017%2F03%2F31%2FYii2%20%E9%85%8D%E7%BD%AE%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%2F</url>
     <content type="text"><![CDATA[本人习惯将数据库连接信息,及一些安全性信息写到系统的环境变量里 一是代码中没有明文的数据库账号密码等一些安全敏感性信息 二是逼格比较高 三是代码统一,配置好终身所有项目受用,没必要再去管开发环境生产环境配置啥的 本人终端为macOS一般环境变量配置在.bash_profile,Linux一般在/etc/profile,配置格式如下1234$ export DB_TYPE=mysql$ export DB_HOST=192.168.0.3$ export DB_USER=root$ .... 基于以上,项目中配置信息都在mian.php文件中配置,至于后端和前端的不同配置,就在backend/config/main.php和frontend/config/main.php中配置配置好以后点击local.thef.com的Login,账号密码随便输入,点击Login,报错了?!那就对了,错误信息是说thesaurus数据库中没有user表,如果是其他错误那就不正常了,这一节就到此了,下一节简单的讲一下Yii2的数据库迁移.]]></content>
       <categories>
-        <category>Yii2</category>
+        <category>PHP - Yii2</category>
       </categories>
       <tags>
         <tag>PHP</tag>
@@ -208,7 +209,7 @@
     <url>%2F2017%2F03%2F31%2FYii2%20%E5%88%9B%E5%BB%BA%E5%BA%94%E7%94%A8%2F</url>
     <content type="text"><![CDATA[环境 macOS 10.12.3 php version: 5.6.28 nginx version: nginx/1.8.0 mysql version: 5.7.16 composer version: 1.3.2 安装开发环境安装,这里就不做太多讲解,如有需要请移至本人博客Ewan’s Blog.composer 安装以及更换国内镜像请移至Packagist / Composer 切换到一个可通过 Web 访问的目录，执行如下命令即可安装 Yii ：12$ composer global require &quot;fxp/composer-asset-plugin:^1.2.0&quot;$ composer create-project yiisoft/yii2-app-advanced thesaurus 本文全篇以高级的应用程序模板为基础,thesaurus 为实例项目名称.(安装的过程时间稍长,可以出去抽根烟)安装好以后,初始化项目程序12$ cd thesaurus/$ php init 选择 0(Development)输入 yes 即可配置Nginx web访问服务,这里就不做多解释 local.theb.com (后端服务访问URL) local.thef.com (前端服务访问URL) 配置好以后记得添加本地hosts和重启Nginx或者Apache以上操作完成以后,通过浏览器访问local.theb.com和local.thef.com 显示一下即为安装成功]]></content>
       <categories>
-        <category>Yii2</category>
+        <category>PHP - Yii2</category>
       </categories>
       <tags>
         <tag>PHP</tag>

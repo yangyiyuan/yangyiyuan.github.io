@@ -4,8 +4,146 @@
 
     
   <url>
+    <loc>http://www.iooeo.com/2017/03/31/Yii2%20%E5%88%9B%E5%BB%BA%E5%BA%94%E7%94%A8/</loc>
+    <lastmod>2017-07-20T06:30:43.000Z</lastmod>
+    <data>
+        <display>
+        <title>Yii2 创建应用</title>
+        <pubTime>2017-03-31T03:43:00.000Z</pubTime>
+        
+        <tag>PHP</tag>
+         
+        <tag>Yii2</tag>
+         
+         
+           
+             
+              <breadCrumb title="PHP - Yii2" url="http://www.iooeo.com/categories/PHP-Yii2/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.iooeo.com/2017/03/31/Yii2%20%E5%AE%89%E8%A3%85AdminLTE%E5%90%8E%E5%8F%B0%E4%B8%BB%E9%A2%98%E8%B5%84%E6%BA%90%E5%8C%85/</loc>
+    <lastmod>2017-07-20T06:30:39.000Z</lastmod>
+    <data>
+        <display>
+        <title>Yii2 安装AdminLTE后台主题资源包</title>
+        <pubTime>2017-03-31T05:53:00.000Z</pubTime>
+        
+        <tag>PHP</tag>
+         
+        <tag>Yii2</tag>
+         
+         
+           
+             
+              <breadCrumb title="PHP" url="http://www.iooeo.com/categories/PHP/"/>
+          
+             
+              <breadCrumb title="Yii2" url="http://www.iooeo.com/categories/PHP/Yii2/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.iooeo.com/2017/03/31/Yii2%20%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%81%E7%A7%BB/</loc>
+    <lastmod>2017-07-20T06:30:34.000Z</lastmod>
+    <data>
+        <display>
+        <title>Yii2 数据库迁移</title>
+        <pubTime>2017-03-31T03:58:00.000Z</pubTime>
+        
+        <tag>PHP</tag>
+         
+        <tag>Yii2</tag>
+         
+         
+           
+             
+              <breadCrumb title="PHP - Yii2" url="http://www.iooeo.com/categories/PHP-Yii2/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.iooeo.com/2017/03/31/Yii2%20%E8%87%AA%E5%8A%A8%E5%AD%98%E5%82%A8%E6%9B%B4%E6%96%B0%E6%98%BE%E7%A4%BA%E6%95%B0%E6%8D%AE%E5%BA%93%E6%97%B6%E9%97%B4%E6%88%B3/</loc>
+    <lastmod>2017-07-20T06:30:30.000Z</lastmod>
+    <data>
+        <display>
+        <title>Yii2 自动存储更新显示数据库时间戳</title>
+        <pubTime>2017-03-31T05:14:00.000Z</pubTime>
+        
+        <tag>PHP</tag>
+         
+        <tag>Yii2</tag>
+         
+         
+           
+             
+              <breadCrumb title="PHP" url="http://www.iooeo.com/categories/PHP/"/>
+          
+             
+              <breadCrumb title="Yii2" url="http://www.iooeo.com/categories/PHP/Yii2/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.iooeo.com/2017/03/31/Yii2%20%E9%85%8D%E7%BD%AE%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5/</loc>
+    <lastmod>2017-07-20T06:30:26.000Z</lastmod>
+    <data>
+        <display>
+        <title>Yii2 配置数据库连接</title>
+        <pubTime>2017-03-31T03:52:00.000Z</pubTime>
+        
+        <tag>PHP</tag>
+         
+        <tag>Yii2</tag>
+         
+         
+           
+             
+              <breadCrumb title="PHP - Yii2" url="http://www.iooeo.com/categories/PHP-Yii2/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.iooeo.com/2017/03/31/Yii2%20Gii%E7%94%9F%E6%88%90%E4%BB%A3%E7%A0%81/</loc>
+    <lastmod>2017-07-20T06:30:18.000Z</lastmod>
+    <data>
+        <display>
+        <title>Yii2 Gii生成代码</title>
+        <pubTime>2017-03-31T04:03:00.000Z</pubTime>
+        
+        <tag>PHP</tag>
+         
+        <tag>Yii2</tag>
+         
+         
+           
+             
+              <breadCrumb title="PHP - Yii2" url="http://www.iooeo.com/categories/PHP-Yii2/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.iooeo.com/2017/07/20/Yii2-%E8%A1%A8%E5%8D%95%E6%8F%90%E4%BA%A4%E9%94%99%E8%AF%AF%E8%B0%83%E8%AF%95/</loc>
-    <lastmod>2017-07-20T06:27:51.000Z</lastmod>
+    <lastmod>2017-07-20T06:30:03.000Z</lastmod>
     <data>
         <display>
         <title>Yii2 表单提交错误调试</title>
@@ -18,10 +156,7 @@
          
            
              
-              <breadCrumb title="Yii2" url="http://www.iooeo.com/categories/Yii2/"/>
-          
-             
-              <breadCrumb title="PHP" url="http://www.iooeo.com/categories/Yii2/PHP/"/>
+              <breadCrumb title="PHP - Yii2" url="http://www.iooeo.com/categories/PHP-Yii2/"/>
           
         </display>
     </data>
@@ -136,138 +271,6 @@
     </url>
 
     
-  <url>
-    <loc>http://www.iooeo.com/2017/03/31/Yii2%20%E8%87%AA%E5%8A%A8%E5%AD%98%E5%82%A8%E6%9B%B4%E6%96%B0%E6%98%BE%E7%A4%BA%E6%95%B0%E6%8D%AE%E5%BA%93%E6%97%B6%E9%97%B4%E6%88%B3/</loc>
-    <lastmod>2017-07-07T07:27:41.000Z</lastmod>
-    <data>
-        <display>
-        <title>Yii2 自动存储更新显示数据库时间戳</title>
-        <pubTime>2017-03-31T05:14:00.000Z</pubTime>
-        
-        <tag>PHP</tag>
-         
-        <tag>Yii2</tag>
-         
-         
-           
-             
-              <breadCrumb title="Yii2" url="http://www.iooeo.com/categories/Yii2/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.iooeo.com/2017/03/31/Yii2%20Gii%E7%94%9F%E6%88%90%E4%BB%A3%E7%A0%81/</loc>
-    <lastmod>2017-07-07T07:26:12.000Z</lastmod>
-    <data>
-        <display>
-        <title>Yii2 Gii生成代码</title>
-        <pubTime>2017-03-31T04:03:00.000Z</pubTime>
-        
-        <tag>PHP</tag>
-         
-        <tag>Yii2</tag>
-         
-         
-           
-             
-              <breadCrumb title="Yii2" url="http://www.iooeo.com/categories/Yii2/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.iooeo.com/2017/03/31/Yii2%20%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%81%E7%A7%BB/</loc>
-    <lastmod>2017-07-07T07:21:09.000Z</lastmod>
-    <data>
-        <display>
-        <title>Yii2 数据库迁移</title>
-        <pubTime>2017-03-31T03:58:00.000Z</pubTime>
-        
-        <tag>PHP</tag>
-         
-        <tag>Yii2</tag>
-         
-         
-           
-             
-              <breadCrumb title="Yii2" url="http://www.iooeo.com/categories/Yii2/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.iooeo.com/2017/03/31/Yii2%20%E9%85%8D%E7%BD%AE%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5/</loc>
-    <lastmod>2017-07-07T07:19:43.000Z</lastmod>
-    <data>
-        <display>
-        <title>Yii2 配置数据库连接</title>
-        <pubTime>2017-03-31T03:52:00.000Z</pubTime>
-        
-        <tag>PHP</tag>
-         
-        <tag>Yii2</tag>
-         
-         
-           
-             
-              <breadCrumb title="Yii2" url="http://www.iooeo.com/categories/Yii2/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.iooeo.com/2017/03/31/Yii2%20%E5%88%9B%E5%BB%BA%E5%BA%94%E7%94%A8/</loc>
-    <lastmod>2017-07-07T07:14:47.000Z</lastmod>
-    <data>
-        <display>
-        <title>Yii2 创建应用</title>
-        <pubTime>2017-03-31T03:43:00.000Z</pubTime>
-        
-        <tag>PHP</tag>
-         
-        <tag>Yii2</tag>
-         
-         
-           
-             
-              <breadCrumb title="Yii2" url="http://www.iooeo.com/categories/Yii2/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-    
-  <url>
-    <loc>http://www.iooeo.com/2017/03/31/Yii2%20%E5%AE%89%E8%A3%85AdminLTE%E5%90%8E%E5%8F%B0%E4%B8%BB%E9%A2%98%E8%B5%84%E6%BA%90%E5%8C%85/</loc>
-    <lastmod>2017-07-04T08:48:07.000Z</lastmod>
-    <data>
-        <display>
-        <title>Yii2 安装AdminLTE后台主题资源包</title>
-        <pubTime>2017-03-31T05:53:00.000Z</pubTime>
-        
-        <tag>PHP</tag>
-         
-        <tag>Yii2</tag>
-         
-         
-           
-             
-              <breadCrumb title="Yii2" url="http://www.iooeo.com/categories/Yii2/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
   <url>
     <loc>http://www.iooeo.com/2017/07/04/Hexo+Github+coding%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%20-%20%E7%99%BE%E5%BA%A6%E5%92%8CGoogle%E6%94%B6%E5%BD%95%E7%AF%87/</loc>

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.iooeo.com/"/>
-  <updated>2017-07-20T06:27:51.000Z</updated>
+  <updated>2017-07-20T06:30:03.000Z</updated>
   <id>http://www.iooeo.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://www.iooeo.com/2017/07/20/Yii2-%E8%A1%A8%E5%8D%95%E6%8F%90%E4%BA%A4%E9%94%99%E8%AF%AF%E8%B0%83%E8%AF%95/"/>
     <id>http://www.iooeo.com/2017/07/20/Yii2-表单提交错误调试/</id>
     <published>2017-07-20T05:59:02.000Z</published>
-    <updated>2017-07-20T06:27:51.000Z</updated>
+    <updated>2017-07-20T06:30:03.000Z</updated>
     
     <content type="html"><![CDATA[<p>在使用yii 开发项目的时候经常碰到一些数据插入时提交失败的情况，为了更精准的找到错误，yii 给我提供一下方法，用以调试<br><a id="more"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">echo current(array_values($model-&gt;getFirstErrors()));</div><div class="line">exit;</div></pre></td></tr></table></figure></p>
 <p><em>model</em>调用<em>load()</em>方法时出错时，用这个方法也可以</p>
@@ -32,9 +32,7 @@
     
     </summary>
     
-      <category term="Yii2" scheme="http://www.iooeo.com/categories/Yii2/"/>
-    
-      <category term="PHP" scheme="http://www.iooeo.com/categories/Yii2/PHP/"/>
+      <category term="PHP - Yii2" scheme="http://www.iooeo.com/categories/PHP-Yii2/"/>
     
     
       <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
@@ -475,7 +473,7 @@
     <link href="http://www.iooeo.com/2017/03/31/Yii2%20%E5%AE%89%E8%A3%85AdminLTE%E5%90%8E%E5%8F%B0%E4%B8%BB%E9%A2%98%E8%B5%84%E6%BA%90%E5%8C%85/"/>
     <id>http://www.iooeo.com/2017/03/31/Yii2 安装AdminLTE后台主题资源包/</id>
     <published>2017-03-31T05:53:00.000Z</published>
-    <updated>2017-07-04T08:48:07.000Z</updated>
+    <updated>2017-07-20T06:30:39.000Z</updated>
     
     <content type="html"><![CDATA[<p>为了快捷开发后台和界面的统一,这里我们引入了AdminLTE主题资源包<br>AdminLTE的学习请移至<a href="https://github.com/dmstr/yii2-adminlte-asset" target="_blank" rel="external">dmstr/yii2-adminlte-asset</a><br><a id="more"></a></p>
 <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>使用composer安装<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ composer require dmstr/yii2-adminlte-asset &quot;2.*&quot;</div></pre></td></tr></table></figure></p>
@@ -495,7 +493,9 @@
     
     </summary>
     
-      <category term="Yii2" scheme="http://www.iooeo.com/categories/Yii2/"/>
+      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
+    
+      <category term="Yii2" scheme="http://www.iooeo.com/categories/PHP/Yii2/"/>
     
     
       <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
@@ -509,7 +509,7 @@
     <link href="http://www.iooeo.com/2017/03/31/Yii2%20%E8%87%AA%E5%8A%A8%E5%AD%98%E5%82%A8%E6%9B%B4%E6%96%B0%E6%98%BE%E7%A4%BA%E6%95%B0%E6%8D%AE%E5%BA%93%E6%97%B6%E9%97%B4%E6%88%B3/"/>
     <id>http://www.iooeo.com/2017/03/31/Yii2 自动存储更新显示数据库时间戳/</id>
     <published>2017-03-31T05:14:00.000Z</published>
-    <updated>2017-07-07T07:27:41.000Z</updated>
+    <updated>2017-07-20T06:30:30.000Z</updated>
     
     <content type="html"><![CDATA[<p>之前我们terms表中有两个时间字段<em>create_at</em>和<em>update_at</em>,现在我们来操作一下,使<em>create_at</em>和<em>update_at</em>在存储时自动更新它的时间戳属性</p>
 <h2 id="自动存储更新时间戳属性"><a href="#自动存储更新时间戳属性" class="headerlink" title="自动存储更新时间戳属性"></a>自动存储更新时间戳属性</h2><p>这里我们使用TimestampBehavior先不要管行为不行为,今天就是要时间戳属性自动存储更新<br><a id="more"></a></p>
@@ -529,7 +529,9 @@
     
     </summary>
     
-      <category term="Yii2" scheme="http://www.iooeo.com/categories/Yii2/"/>
+      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
+    
+      <category term="Yii2" scheme="http://www.iooeo.com/categories/PHP/Yii2/"/>
     
     
       <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
@@ -543,7 +545,7 @@
     <link href="http://www.iooeo.com/2017/03/31/Yii2%20Gii%E7%94%9F%E6%88%90%E4%BB%A3%E7%A0%81/"/>
     <id>http://www.iooeo.com/2017/03/31/Yii2 Gii生成代码/</id>
     <published>2017-03-31T04:03:00.000Z</published>
-    <updated>2017-07-07T07:26:12.000Z</updated>
+    <updated>2017-07-20T06:30:18.000Z</updated>
     
     <content type="html"><![CDATA[<p><em>Gii</em>是<em>Yii</em>中的一个模块,有此神器,撸代码都省了好多,简单的先用一下<br>继续拿我们上边的例子来说<br>访问<em>local.thef.com/index.php?r=gii</em>可以看到操作界面<br><img src="http://ogpq2zwg5.bkt.clouddn.com/b5a75d537f2b14db80bc00eac403b146_1872x1017.png" alt=""><br><a id="more"></a></p>
 <h2 id="生成Model"><a href="#生成Model" class="headerlink" title="生成Model"></a>生成Model</h2><p>输入<em>Table Name</em>(有提示,是不是很方便),自动补全<em>Model Class</em><br><img src="http://ogpq2zwg5.bkt.clouddn.com/059d65112126a9ceb42fa35b334373ef_593x234.png" alt=""></p>
@@ -571,7 +573,7 @@
     
     </summary>
     
-      <category term="Yii2" scheme="http://www.iooeo.com/categories/Yii2/"/>
+      <category term="PHP - Yii2" scheme="http://www.iooeo.com/categories/PHP-Yii2/"/>
     
     
       <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
@@ -585,7 +587,7 @@
     <link href="http://www.iooeo.com/2017/03/31/Yii2%20%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%81%E7%A7%BB/"/>
     <id>http://www.iooeo.com/2017/03/31/Yii2 数据库迁移/</id>
     <published>2017-03-31T03:58:00.000Z</published>
-    <updated>2017-07-07T07:21:09.000Z</updated>
+    <updated>2017-07-20T06:30:34.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h2><p>在开发和维护一个数据库驱动的应用程序时,数据库的结构会随代码的改变而改变. Yii 提供了一个 数据库迁移功,该功能可以记录数据库的变化, 以便使数据库和源代码一起受版本控制.<br>Yii 提供了一整套的迁移命令行工具，通过这些工具你可以:</p>
 <ul>
@@ -616,7 +618,7 @@
     
     </summary>
     
-      <category term="Yii2" scheme="http://www.iooeo.com/categories/Yii2/"/>
+      <category term="PHP - Yii2" scheme="http://www.iooeo.com/categories/PHP-Yii2/"/>
     
     
       <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
@@ -630,7 +632,7 @@
     <link href="http://www.iooeo.com/2017/03/31/Yii2%20%E9%85%8D%E7%BD%AE%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5/"/>
     <id>http://www.iooeo.com/2017/03/31/Yii2 配置数据库连接/</id>
     <published>2017-03-31T03:52:00.000Z</published>
-    <updated>2017-07-07T07:19:43.000Z</updated>
+    <updated>2017-07-20T06:30:26.000Z</updated>
     
     <content type="html"><![CDATA[<p>本人习惯将数据库连接信息,及一些安全性信息写到系统的环境变量里</p>
 <ul>
@@ -654,7 +656,7 @@
     
     </summary>
     
-      <category term="Yii2" scheme="http://www.iooeo.com/categories/Yii2/"/>
+      <category term="PHP - Yii2" scheme="http://www.iooeo.com/categories/PHP-Yii2/"/>
     
     
       <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
@@ -668,7 +670,7 @@
     <link href="http://www.iooeo.com/2017/03/31/Yii2%20%E5%88%9B%E5%BB%BA%E5%BA%94%E7%94%A8/"/>
     <id>http://www.iooeo.com/2017/03/31/Yii2 创建应用/</id>
     <published>2017-03-31T03:43:00.000Z</published>
-    <updated>2017-07-07T07:14:47.000Z</updated>
+    <updated>2017-07-20T06:30:43.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><ul>
 <li>macOS 10.12.3</li>
@@ -699,7 +701,7 @@
     
     </summary>
     
-      <category term="Yii2" scheme="http://www.iooeo.com/categories/Yii2/"/>
+      <category term="PHP - Yii2" scheme="http://www.iooeo.com/categories/PHP-Yii2/"/>
     
     
       <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
