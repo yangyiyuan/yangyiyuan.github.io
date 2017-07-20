@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Hexo 底部修改]]></title>
+    <url>%2F2017%2F07%2F20%2FHexo-%E5%BA%95%E9%83%A8%E4%BF%AE%E6%94%B9%2F</url>
+    <content type="text"><![CDATA[如果你想将博客底部修改的话，找到/themes/next/layout/_partials/，你可以按照你想要的内容编写 HTML 代码，就想我这样：12345678910111213141516171819&#123;% if theme.copyright %&#125;&lt;div class=&quot;powered-by&quot;&gt; &lt;span class=&quot;links-of-author-item&quot;&gt; &lt;a href=&quot;https://github.com/yangyiyuan&quot; target=&quot;_blank&quot; title=&quot;GitHub&quot;&gt; &lt;i class=&quot;fa fa-fw fa-github&quot;&gt;&lt;/i&gt; GitHub &lt;/a&gt; &lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;theme-info&quot;&gt; &lt;span class=&quot;links-of-author-item&quot;&gt; &lt;a href=&quot;http://www.iooeo.com/about/&quot; target=&quot;_blank&quot; title=&quot;杨依园&quot;&gt; &lt;i class=&quot;fa fa-fw fa-hand-o-right&quot;&gt;&lt;/i&gt; 做一个有思想的开发者---杨依园 &lt;/a&gt; &lt;/span&gt;&lt;/div&gt;&#123;% endif %&#125;]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hexo 文章版权转载链接]]></title>
+    <url>%2F2017%2F07%2F20%2FHexo-%E6%96%87%E7%AB%A0%E7%89%88%E6%9D%83%E8%BD%AC%E8%BD%BD%E9%93%BE%E6%8E%A5%2F</url>
+    <content type="text"><![CDATA[如果文章末尾需要添加版权信息和转载链接的话，找到/hemes/next/layout/_macro/post.swig，找到其中的打赏部分代码，如下所示：12345&lt;div&gt; &#123;% if ! is_index %&#125; &#123;% include &apos;reward.swig&apos; %&#125; &#123;% endif %&#125;&lt;/div&gt; 修改成下面这个样子：12345678910&lt;div align=&quot;center&quot;&gt; &#123;% if not is_index %&#125; &lt;div class=&quot;copyright&quot;&gt; &lt;p&gt;&lt;span&gt; &lt;b&gt;本文地址：&lt;/b&gt;&lt;a href=&quot;&#123;&#123; url_for(page.path) &#125;&#125;&quot; title=&quot;&#123;&#123; page.title &#125;&#125;&quot;&gt;&#123;&#123; page.permalink &#125;&#125;&lt;/a&gt;&lt;br/&gt;&lt;b&gt;转载请注明出处，谢谢！&lt;/b&gt; &lt;/span&gt;&lt;/p&gt; &lt;/div&gt; &#123;% include &apos;reward.swig&apos; %&#125; &#123;% endif %&#125;&lt;/div&gt;]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hexo Next 头像圆形并旋转]]></title>
+    <url>%2F2017%2F07%2F20%2FHexo-Next-%E5%A4%B4%E5%83%8F%E5%9C%86%E5%BD%A2%E5%B9%B6%E6%97%8B%E8%BD%AC%2F</url>
+    <content type="text"><![CDATA[将头像显示成圆形，鼠标放上去有旋转效果，就像我的一样.找到/themes/next/source/css/_common/components/sidebar/sidebar-author.styl做以下修改：12345678910111213141516171819202122232425262728293031323334353637383940.site-author-image &#123; display: block; margin: 0 auto; padding: $site-author-image-padding; max-width: $site-author-image-width; height: $site-author-image-height; border: $site-author-image-border-width solid $site-author-image-border-color; # 头像圆形样式 /* start */ border-radius: 50% webkit-transition: 1.4s all; moz-transition: 1.4s all; ms-transition: 1.4s all; transition: 1.4s all; /* end */&#125;.site-author-name &#123; margin: $site-author-name-margin; text-align: $site-author-name-align; color: $site-author-name-color; font-weight: $site-author-name-weight;&#125;.site-description &#123; margin-top: $site-description-margin-top; text-align: $site-description-align; font-size: $site-description-font-size; color: $site-description-color;&#125;# 头像旋转事件/* start */.site-author-image:hover &#123; background-color: #55DAE1; webkit-transform: rotate(360deg) scale(1.1); moz-transform: rotate(360deg) scale(1.1); ms-transform: rotate(360deg) scale(1.1); transform: rotate(360deg) scale(1.1);&#125;/* end */]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Yii2 表单提交错误调试]]></title>
     <url>%2F2017%2F07%2F20%2FYii2-%E8%A1%A8%E5%8D%95%E6%8F%90%E4%BA%A4%E9%94%99%E8%AF%AF%E8%B0%83%E8%AF%95%2F</url>
     <content type="text"><![CDATA[在使用yii 开发项目的时候经常碰到一些数据插入时提交失败的情况，为了更精准的找到错误，yii 给我提供一下方法，用以调试12echo current(array_values($model-&gt;getFirstErrors()));exit; model调用load()方法时出错时，用这个方法也可以]]></content>
