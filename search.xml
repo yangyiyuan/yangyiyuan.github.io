@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Mac Python 版本切换]]></title>
+    <url>%2F2017%2F07%2F20%2FMac-Python-%E7%89%88%E6%9C%AC%E5%88%87%E6%8D%A2%2F</url>
+    <content type="text"><![CDATA[Mac 上自带的 Python 版本是2.7的，对于编程语言的发展来说，每一个大的版本更新都有很大的改变，所以我碰到了版本切换的问题。 下载安装新版本首先去官网下载一个最新的Python 版本，下载链接下载好以后下一步下一步安装就可以了。 切换 Python 版本安装好以后不代表就完成版本切换了。不信的话，你可以终端执行一下1$ python -V 显示的还是2.7（老版本）的版本，那下面就开始切换吧 首先要找到你新版本安装的路径/usr/local/bin/python3 修改软链接到你所安装的python版本中：默认python命令是在/usr/bin/目录下 12$ sudo mv /usr/bin/python /usr/bin/python2.7.0$ sudo ln -s /usr/local/bin/python3 /usr/bin/python #把系统默认python命令改成python3 完成以后在终端输入python -V即可查看python版本了，反正我是是最新的版本了。]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>Mac</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[python 开篇]]></title>
     <url>%2F2017%2F07%2F20%2Fpython-%E5%BC%80%E7%AF%87%2F</url>
     <content type="text"><![CDATA[Python 是一种面向对象的解释型计算机程序设计语言，由荷兰人Guido van Rossum于1989年发明，第一个公开发行版发行于1991年。Python是纯粹的自由软件， 源代码和解释器CPython遵循 GPL(GNU General Public License)协议 。Python语法简洁清晰，特色之一是强制用空白符(white space)作为语句缩进。Python具有丰富和强大的库。它常被昵称为胶水语言，能够把用其他语言制作的各种模块（尤其是C/C++）很轻松地联结在一起。常见的一种应用情形是，使用Python快速生成程序的原型（有时甚至是程序的最终界面），然后对其中有特别要求的部分，用更合适的语言改写，比如3D游戏中的图形渲染模块，性能要求特别高，就可以用C/C++重写，而后封装为Python可以调用的扩展类库。需要注意的是在您使用扩展类库时可能需要考虑平台问题，某些可能不提供跨平台的实现。由于没有实际项目运用，后边的文章权当是学习笔记了，可能只是一些基础的知识点，从各种博客文档中都能找得到，但写下自己的学习心得还是有必要的，希望在以后能有项目去运用到，这样我所学习的就不仅仅是一些基础的知识点了。]]></content>
@@ -42,8 +54,8 @@
         <category>Mac</category>
       </categories>
       <tags>
-        <tag>lantern</tag>
         <tag>Mac</tag>
+        <tag>lantern</tag>
         <tag>VPN</tag>
       </tags>
   </entry>
