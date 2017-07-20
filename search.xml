@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[python 开篇]]></title>
+    <url>%2F2017%2F07%2F20%2Fpython-%E5%BC%80%E7%AF%87%2F</url>
+    <content type="text"><![CDATA[Python 是一种面向对象的解释型计算机程序设计语言，由荷兰人Guido van Rossum于1989年发明，第一个公开发行版发行于1991年。]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hexo 新建菜单(menu) 存放归档]]></title>
+    <url>%2F2017%2F07%2F20%2FHexo-%E6%96%B0%E5%BB%BA%E8%8F%9C%E5%8D%95-menu-%E5%AD%98%E6%94%BE%E5%BD%92%E6%A1%A3%2F</url>
+    <content type="text"><![CDATA[最近在看Python，想在首页上建一个名为Python的菜单，然后相关Python的文章都放在该分类下。本来的想法是点开 Python 菜单会显示像首页的一样的文章列表，但试了几次没有成功，索性就就采取了一种分类归档的方法，效果还可以。 生成 post(文章)时默认生成 categories 配置项在项目目录下找到/scaffolds/post.md，添加文章的 categories 的配置，如下12345678---title: &#123;&#123; title &#125;&#125;date: &#123;&#123; date &#125;&#125;tags: # 此处为文章标签categories: # 此处为文章分类--- 写文章时，配置 categories下面我开始写一篇关于 Python 的文章1$ hexo n &quot;python 开篇&quot; 文章里面配置 categories123456789---title: python 开篇date: 2017-07-20 10:22:43tags: - pythoncategories: - python---Python 是一种面向对象的解释型计算机程序设计语言，由荷兰人Guido van Rossum于1989年发明，第一个公开发行版发行于1991年。 此处我已经配置好了标签（tags）和分类（categories），下面生成一下静态页面1$ hexo g 这时你会发现/public/categories/文件夹下，已经生成了python的文件夹 首页显示 python 菜单这里就是要在博客首页上显示 python 菜单的时候了，首先打开你主题的配置文件/themes/next/_config.yml(我这里是用的 next)。找到menu ，做一下添加12345678menu: home: / categories: /categories/ archives: /archives/ tags: /tags/ python: /categories/python/ # 此处为新添加的菜单 guestbook: /guestbook about: /about/ 配置python菜单所用的图标12345678910111213menu_icons: enable: true #KeyMapsToMenuItemKey: NameOfTheIconFromFontAwesome home: home about: user categories: th schedule: calendar tags: tags archives: archive sitemap: sitemap commonweal: heartbeat guestbook: pencil python: file-powerpoint-o # 此处为 python菜单的图片配置 菜单名称配置上面的步骤做完以后，如果你着急刷新页面看了效果，就会看到新菜单的名称是menu.python，显然不是我们想要的，那就继续往下看首先查看项目目录下的/_config.yml的language配置，我的是这样的1language: zh-Hans 然后去模板目录找到相应的语言配置文件/themes/languages/zh-Hans.yml，menu处添加一下配置123456789101112menu: home: 首页 archives: 归档 categories: 分类 tags: 标签 about: 关于 search: 搜索 schedule: 日程表 sitemap: 站点地图 commonweal: 公益404 guestbook: 留言 python: python # python菜单显示的名称 这样就算彻底完成了，赶紧去看看效果吧。以后写Python 相关的文章的话，只需要配置 categories 为 python 就可以自动归档到python 菜单下了。]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[评论系统相继关闭]]></title>
     <url>%2F2017%2F07%2F07%2F%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F%E7%9B%B8%E7%BB%A7%E5%85%B3%E9%97%AD%2F</url>
     <content type="text"><![CDATA[前段时间,多说系统宣布关闭停止服务,偶感还挺可惜的.最近折腾这上了网易跟帖,来替换多说,今天登陆网易跟帖后台,又看到了一个不好的消息 12345678网易云跟贴停止服务公告亲爱的朋友们：因公司业务发展需要，我们不得不遗憾地通知大家，云跟贴产品将于2017年8月1日停止服务。在此之前可以通过后台的数据导出功能导出自己站点的跟贴数据。感谢大家一直以来对云跟贴的支持与厚爱，对于此次产品关停给您带来的不便我们深表歉意，希望在网易其他产品与业务上，我们能继续为您服务！网易云跟贴2017年7月6日]]></content>
