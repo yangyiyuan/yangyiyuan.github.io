@@ -6,6 +6,7 @@
     <content type="text"><![CDATA[在使用yii 开发项目的时候经常碰到一些数据插入时提交失败的情况，为了更精准的找到错误，yii 给我提供一下方法，用以调试12echo current(array_values($model-&gt;getFirstErrors()));exit; model调用load()方法时出错时，用这个方法也可以]]></content>
       <categories>
         <category>Yii2</category>
+        <category>PHP</category>
       </categories>
       <tags>
         <tag>PHP</tag>
