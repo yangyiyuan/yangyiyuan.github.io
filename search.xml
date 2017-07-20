@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Yii2 表单提交错误调试]]></title>
+    <url>%2F2017%2F07%2F20%2FYii2-%E8%A1%A8%E5%8D%95%E6%8F%90%E4%BA%A4%E9%94%99%E8%AF%AF%E8%B0%83%E8%AF%95%2F</url>
+    <content type="text"><![CDATA[在使用yii 开发项目的时候经常碰到一些数据插入时提交失败的情况，为了更精准的找到错误，yii 给我提供一下方法，用以调试12echo current(array_values($model-&gt;getFirstErrors()));exit; model调用load()方法时出错时，用这个方法也可以]]></content>
+      <categories>
+        <category>Yii2</category>
+      </categories>
+      <tags>
+        <tag>PHP</tag>
+        <tag>Yii2</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Mac Python 版本切换]]></title>
     <url>%2F2017%2F07%2F20%2FMac-Python-%E7%89%88%E6%9C%AC%E5%88%87%E6%8D%A2%2F</url>
     <content type="text"><![CDATA[Mac 上自带的 Python 版本是2.7的，对于编程语言的发展来说，每一个大的版本更新都有很大的改变，所以我碰到了版本切换的问题。 下载安装新版本首先去官网下载一个最新的Python 版本，下载链接下载好以后下一步下一步安装就可以了。 切换 Python 版本安装好以后不代表就完成版本切换了。不信的话，你可以终端执行一下1$ python -V 显示的还是2.7（老版本）的版本，那下面就开始切换吧 首先要找到你新版本安装的路径/usr/local/bin/python3 修改软链接到你所安装的python版本中：默认python命令是在/usr/bin/目录下 12$ sudo mv /usr/bin/python /usr/bin/python2.7.0$ sudo ln -s /usr/local/bin/python3 /usr/bin/python #把系统默认python命令改成python3 完成以后在终端输入python -V即可查看python版本了，反正我是是最新的版本了。]]></content>
