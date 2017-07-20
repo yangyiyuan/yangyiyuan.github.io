@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.iooeo.com/"/>
-  <updated>2017-07-20T06:45:02.000Z</updated>
+  <updated>2017-07-20T06:47:30.000Z</updated>
   <id>http://www.iooeo.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://www.iooeo.com/2017/07/20/Yii2-%E8%A1%A8%E5%8D%95%E6%8F%90%E4%BA%A4%E9%94%99%E8%AF%AF%E8%B0%83%E8%AF%95/"/>
     <id>http://www.iooeo.com/2017/07/20/Yii2-表单提交错误调试/</id>
     <published>2017-07-20T05:59:02.000Z</published>
-    <updated>2017-07-20T06:45:02.000Z</updated>
+    <updated>2017-07-20T06:47:30.000Z</updated>
     
     <content type="html"><![CDATA[<p>在使用yii 开发项目的时候经常碰到一些数据插入时提交失败的情况，为了更精准的找到错误，yii 给我提供一下方法，用以调试<br><a id="more"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">echo current(array_values($model-&gt;getFirstErrors()));</div><div class="line">exit;</div></pre></td></tr></table></figure></p>
 <p><em>model</em>调用<em>load()</em>方法时出错时，用这个方法也可以</p>
