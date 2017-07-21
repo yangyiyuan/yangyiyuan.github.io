@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Apache 无法启动]]></title>
+    <url>%2F2017%2F07%2F20%2FApache-%E5%9B%A0%E7%9B%91%E5%90%AC%E7%AB%AF%E5%8F%A3%E8%A2%AB%E5%8D%A0%E7%94%A8%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8%2F</url>
+    <content type="text"><![CDATA[今天我一台 Windows 测试机 WAMP 的 Apache 无法启动，找了一下原因，原来 Apache 上某个监听的端口被占用，导致无法启动。下面把发现问题，和解决问题的思路写一下。 问题：WAMP 的 Apache 无法启动重启电脑后，打开 WAMP 一直显示橙色的图标，显示有一个程序无法启动。 问题原因：Apache 因监听端口被占用无法启动试了下 PHP 等正常运行无误，确认是 Apache 的问题，但是不知道为什么启动不了。 手动启动 Apache我打开终端，将 Apache 的运行文件\wamp64\bin\apache\apache2.4.23\bin\httpd.exe拖到终端中执行，显示一下错误：12345$ D:\wamp64\bin\apache\apache2.4.23\bin\httpd.exe(OS 10048)通常每个套接字地址(协议/网络地址/端口)只允许使用一次。 : AH00072: make_sock: could not bind to address 0.0.0.0:8080AH00451: no listening sockets available, shutting downAH00015: Unable to open logs 此处可以看出错误，是因为 Apache 监听的8080端口被别的程序占用，导致无法启动。 解决问题：使 Apache 正常运行问题找到了就好办了，一下给出两种解决的办法。 第一种，更换 Apache 监听的8080端口至别的端口此种方法相对简单一些，如果在没有强制端口需求的情况下，也是最为推荐的方法。打开你的Apache 虚拟主机配置文件\wamp64\bin\apache\apache2.4.23\conf\extra\httpd-vhosts.com,找到冲突的端口配置，如下：12345&lt;VirtualHost *:8080&gt; ... ... ...&lt;/VirtualHost&gt; 将8080（冲突的端口）修改为其他的端口号，重启 WAMP 或者 Apache就可以正常运行了。 第二种，kill 掉占用冲突端口的程序比如你就想使用这个端口，或者有强制需求要用这个端口，那就需要干掉占用这个端口的程序了。 找到占用冲突端口的进程号在终端执行命令，查看机器端口占用情况：1$ netstat -ano 会显示如下内容：123456789101112活动连接 协议 本地地址 外部地址 状态 PID TCP 0.0.0.0:135 0.0.0.0:0 LISTENING 976 TCP 0.0.0.0:445 0.0.0.0:0 LISTENING 4 TCP 0.0.0.0:2343 0.0.0.0:0 LISTENING 1972 TCP 0.0.0.0:3306 0.0.0.0:0 LISTENING 3732 TCP 0.0.0.0:3389 0.0.0.0:0 LISTENING 1532 TCP 0.0.0.0:3580 0.0.0.0:0 LISTENING 2100 TCP 0.0.0.0:3582 0.0.0.0:0 LISTENING 2620 TCP 0.0.0.0:8080 0.0.0.0:0 LISTENING 3348 TCP 0.0.0.0:9418 0.0.0.0:0 LISTENING 4848 通过上面的内容我们会看到监听8080端口的PID（进程号） 为3348。 干掉 PID 为3348的程序右击桌面底部的工具栏，选择启动任务管理器，然后点击服务，找到 PID 为3348的程序，右击选择停止服务，这样就可以了。右击工具栏--&gt;启动任务管理器--&gt;服务--&gt;右击 PID 为3348的服务--&gt;停止服务重启 WAMP 或者 Apache就可以正常运行了。 其实解决问题并不难，重要的是我们怎么样才能正确的找到问题的所在，这需要我们平时要树立一套比较合理的处理的问题的思路，要做一个有思想的开发者!]]></content>
+      <categories>
+        <category>计算机</category>
+      </categories>
+      <tags>
+        <tag>WAMP</tag>
+        <tag>计算机</tag>
+        <tag>Apache</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Hexo 底部修改]]></title>
     <url>%2F2017%2F07%2F20%2FHexo-%E5%BA%95%E9%83%A8%E4%BF%AE%E6%94%B9%2F</url>
     <content type="text"><![CDATA[如果你想将博客底部修改的话，找到/themes/next/layout/_partials/，你可以按照你想要的内容编写 HTML 代码，就想我这样：12345678910111213141516171819&#123;% if theme.copyright %&#125;&lt;div class=&quot;powered-by&quot;&gt; &lt;span class=&quot;links-of-author-item&quot;&gt; &lt;a href=&quot;https://github.com/yangyiyuan&quot; target=&quot;_blank&quot; title=&quot;GitHub&quot;&gt; &lt;i class=&quot;fa fa-fw fa-github&quot;&gt;&lt;/i&gt; GitHub &lt;/a&gt; &lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;theme-info&quot;&gt; &lt;span class=&quot;links-of-author-item&quot;&gt; &lt;a href=&quot;http://www.iooeo.com/about/&quot; target=&quot;_blank&quot; title=&quot;杨依园&quot;&gt; &lt;i class=&quot;fa fa-fw fa-hand-o-right&quot;&gt;&lt;/i&gt; 做一个有思想的开发者---杨依园 &lt;/a&gt; &lt;/span&gt;&lt;/div&gt;&#123;% endif %&#125;]]></content>
@@ -267,8 +280,8 @@
         <category>计算机</category>
       </categories>
       <tags>
-        <tag>网络</tag>
         <tag>计算机</tag>
+        <tag>网络</tag>
         <tag>通讯协议</tag>
       </tags>
   </entry>

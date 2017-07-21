@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.iooeo.com/"/>
-  <updated>2017-07-20T08:13:20.000Z</updated>
+  <updated>2017-07-21T03:11:29.000Z</updated>
   <id>http://www.iooeo.com/</id>
   
   <author>
@@ -14,6 +14,46 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Apache 无法启动</title>
+    <link href="http://www.iooeo.com/2017/07/20/Apache-%E5%9B%A0%E7%9B%91%E5%90%AC%E7%AB%AF%E5%8F%A3%E8%A2%AB%E5%8D%A0%E7%94%A8%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8/"/>
+    <id>http://www.iooeo.com/2017/07/20/Apache-因监听端口被占用无法启动/</id>
+    <published>2017-07-20T09:57:37.000Z</published>
+    <updated>2017-07-21T03:11:29.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>今天我一台 Windows 测试机 WAMP 的 Apache 无法启动，找了一下原因，原来 Apache 上某个监听的端口被占用，导致无法启动。<br>下面把发现问题，和解决问题的思路写一下。<br><a id="more"></a></p>
+<h2 id="问题：WAMP-的-Apache-无法启动"><a href="#问题：WAMP-的-Apache-无法启动" class="headerlink" title="问题：WAMP 的 Apache 无法启动"></a>问题：WAMP 的 Apache 无法启动</h2><p>重启电脑后，打开 WAMP 一直显示橙色的图标，显示有一个程序无法启动。</p>
+<h2 id="问题原因：Apache-因监听端口被占用无法启动"><a href="#问题原因：Apache-因监听端口被占用无法启动" class="headerlink" title="问题原因：Apache 因监听端口被占用无法启动"></a>问题原因：Apache 因监听端口被占用无法启动</h2><p>试了下 PHP 等正常运行无误，确认是 Apache 的问题，但是不知道为什么启动不了。</p>
+<h3 id="手动启动-Apache"><a href="#手动启动-Apache" class="headerlink" title="手动启动 Apache"></a>手动启动 Apache</h3><p>我打开终端，将 Apache 的运行文件<em>\wamp64\bin\apache\apache2.4.23\bin\httpd.exe</em>拖到终端中执行，显示一下错误：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ D:\wamp64\bin\apache\apache2.4.23\bin\httpd.exe</div><div class="line">(OS 10048)通常每个套接字地址(协议/网络地址/端口)只允许使用一次。  : AH00072: mak</div><div class="line">e_sock: could not bind to address 0.0.0.0:8080</div><div class="line">AH00451: no listening sockets available, shutting down</div><div class="line">AH00015: Unable to open logs</div></pre></td></tr></table></figure></p>
+<p>此处可以看出错误，是因为 Apache 监听的8080端口被别的程序占用，导致无法启动。</p>
+<h2 id="解决问题：使-Apache-正常运行"><a href="#解决问题：使-Apache-正常运行" class="headerlink" title="解决问题：使 Apache 正常运行"></a>解决问题：使 Apache 正常运行</h2><p>问题找到了就好办了，一下给出两种解决的办法。</p>
+<h3 id="第一种，更换-Apache-监听的8080端口至别的端口"><a href="#第一种，更换-Apache-监听的8080端口至别的端口" class="headerlink" title="第一种，更换 Apache 监听的8080端口至别的端口"></a>第一种，更换 Apache 监听的8080端口至别的端口</h3><p>此种方法相对简单一些，如果在没有强制端口需求的情况下，也是最为推荐的方法。<br>打开你的Apache 虚拟主机配置文件<em>\wamp64\bin\apache\apache2.4.23\conf\extra\httpd-vhosts.com</em>,找到冲突的端口配置，如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;VirtualHost *:8080&gt;</div><div class="line">	...</div><div class="line">	...</div><div class="line">	...</div><div class="line">&lt;/VirtualHost&gt;</div></pre></td></tr></table></figure></p>
+<p>将8080（冲突的端口）修改为其他的端口号，重启 WAMP 或者 Apache就可以正常运行了。</p>
+<h3 id="第二种，kill-掉占用冲突端口的程序"><a href="#第二种，kill-掉占用冲突端口的程序" class="headerlink" title="第二种，kill 掉占用冲突端口的程序"></a>第二种，kill 掉占用冲突端口的程序</h3><p>比如你就想使用这个端口，或者有强制需求要用这个端口，那就需要干掉占用这个端口的程序了。</p>
+<h4 id="找到占用冲突端口的进程号"><a href="#找到占用冲突端口的进程号" class="headerlink" title="找到占用冲突端口的进程号"></a>找到占用冲突端口的进程号</h4><p>在终端执行命令，查看机器端口占用情况：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ netstat -ano</div></pre></td></tr></table></figure></p>
+<p>会显示如下内容：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">活动连接</div><div class="line"></div><div class="line">  协议  本地地址          外部地址        状态           PID</div><div class="line">  TCP    0.0.0.0:135            0.0.0.0:0              LISTENING       976</div><div class="line">  TCP    0.0.0.0:445            0.0.0.0:0              LISTENING       4</div><div class="line">  TCP    0.0.0.0:2343           0.0.0.0:0              LISTENING       1972</div><div class="line">  TCP    0.0.0.0:3306           0.0.0.0:0              LISTENING       3732</div><div class="line">  TCP    0.0.0.0:3389           0.0.0.0:0              LISTENING       1532</div><div class="line">  TCP    0.0.0.0:3580           0.0.0.0:0              LISTENING       2100</div><div class="line">  TCP    0.0.0.0:3582           0.0.0.0:0              LISTENING       2620</div><div class="line">  TCP    0.0.0.0:8080           0.0.0.0:0              LISTENING       3348</div><div class="line">  TCP    0.0.0.0:9418           0.0.0.0:0              LISTENING       4848</div></pre></td></tr></table></figure></p>
+<p>通过上面的内容我们会看到监听8080端口的PID（进程号） 为3348。</p>
+<h4 id="干掉-PID-为3348的程序"><a href="#干掉-PID-为3348的程序" class="headerlink" title="干掉 PID 为3348的程序"></a>干掉 PID 为3348的程序</h4><p>右击桌面底部的工具栏，选择启动任务管理器，然后点击服务，找到 PID 为3348的程序，右击选择停止服务，这样就可以了。<br><code>右击工具栏--&gt;启动任务管理器--&gt;服务--&gt;右击 PID 为3348的服务--&gt;停止服务</code><br>重启 WAMP 或者 Apache就可以正常运行了。</p>
+<p>其实解决问题并不难，重要的是我们怎么样才能正确的找到问题的所在，这需要我们平时要树立一套比较合理的处理的问题的思路，<code>要做一个有思想的开发者!</code></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;今天我一台 Windows 测试机 WAMP 的 Apache 无法启动，找了一下原因，原来 Apache 上某个监听的端口被占用，导致无法启动。&lt;br&gt;下面把发现问题，和解决问题的思路写一下。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="计算机" scheme="http://www.iooeo.com/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+    
+    
+      <category term="WAMP" scheme="http://www.iooeo.com/tags/WAMP/"/>
+    
+      <category term="计算机" scheme="http://www.iooeo.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+    
+      <category term="Apache" scheme="http://www.iooeo.com/tags/Apache/"/>
+    
+  </entry>
   
   <entry>
     <title>Hexo 底部修改</title>
@@ -729,53 +769,6 @@
 &lt;li&gt;三是代码统一,配置好终身所有项目受用,没必要再去管开发环境生产环境配置啥的&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;本人终端为macOS一般环境变量配置在&lt;em&gt;.bash_profile&lt;/em&gt;,Linux一般在&lt;em&gt;/etc/profile&lt;/em&gt;,配置格式如下&lt;br&gt;
-    
-    </summary>
-    
-      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
-    
-      <category term="Yii2" scheme="http://www.iooeo.com/categories/PHP/Yii2/"/>
-    
-    
-      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
-    
-      <category term="Yii2" scheme="http://www.iooeo.com/tags/Yii2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Yii2 创建应用</title>
-    <link href="http://www.iooeo.com/2017/03/31/Yii2%20%E5%88%9B%E5%BB%BA%E5%BA%94%E7%94%A8/"/>
-    <id>http://www.iooeo.com/2017/03/31/Yii2 创建应用/</id>
-    <published>2017-03-31T03:43:00.000Z</published>
-    <updated>2017-07-20T06:41:27.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><ul>
-<li>macOS 10.12.3</li>
-<li>php version: 5.6.28</li>
-<li>nginx version: nginx/1.8.0</li>
-<li>mysql version: 5.7.16</li>
-<li>composer version: 1.3.2<a id="more"></a>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2>开发环境安装,这里就不做太多讲解,如有需要请移至本人博客<a href="http://iooeo.com" target="_blank" rel="external">Ewan’s Blog</a>.<br>composer 安装以及更换国内镜像请移至<a href="https://pkg.phpcomposer.com/" target="_blank" rel="external">Packagist / Composer</a></li>
-</ul>
-<p>切换到一个可通过 Web 访问的目录，执行如下命令即可安装 Yii ：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ composer global require &quot;fxp/composer-asset-plugin:^1.2.0&quot;</div><div class="line">$ composer create-project yiisoft/yii2-app-advanced thesaurus</div></pre></td></tr></table></figure></p>
-<p>本文全篇以高级的应用程序模板为基础,thesaurus 为实例项目名称.(安装的过程时间稍长,可以出去抽根烟)<br>安装好以后,初始化项目程序<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ cd thesaurus/</div><div class="line">$ php init</div></pre></td></tr></table></figure></p>
-<p>选择 0(Development)<br>输入 yes 即可<br>配置Nginx web访问服务,这里就不做多解释</p>
-<ul>
-<li><em>local.theb.com</em> (后端服务访问URL)</li>
-<li><em>local.thef.com</em>  (前端服务访问URL)</li>
-</ul>
-<p>配置好以后记得添加本地hosts和重启Nginx或者Apache<br>以上操作完成以后,通过浏览器访问<em>local.theb.com</em>和<em>local.thef.com</em> 显示一下即为安装成功<br><img src="http://ogpq2zwg5.bkt.clouddn.com/cee144a9319c9e6dcabf5b3d9884c938_1872x1016.png" alt=""><br><img src="http://ogpq2zwg5.bkt.clouddn.com/58c04d10026135a15f47ca7df30438ed_1873x1017.png" alt=""></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;环境&quot;&gt;&lt;a href=&quot;#环境&quot; class=&quot;headerlink&quot; title=&quot;环境&quot;&gt;&lt;/a&gt;环境&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;macOS 10.12.3&lt;/li&gt;
-&lt;li&gt;php version: 5.6.28&lt;/li&gt;
-&lt;li&gt;nginx version: nginx/1.8.0&lt;/li&gt;
-&lt;li&gt;mysql version: 5.7.16&lt;/li&gt;
-&lt;li&gt;composer version: 1.3.2
     
     </summary>
     
