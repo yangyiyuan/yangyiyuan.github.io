@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Yii2 时间插件]]></title>
+    <url>%2F2017%2F07%2F22%2FYii2-%E6%97%B6%E9%97%B4%E6%8F%92%E4%BB%B6%2F</url>
+    <content type="text"><![CDATA[项目开发中难免会用到时间插件，这里我找了一个使用比较广泛的时间插件。用法如下： 时间插件 yii2-widget-datetimepickeryii2-widget-datetimepicker小部件是一个用于引导DateTimePicker插件的Yii 2包装器，它具有各种增强功能。想了解的话，可以点连接进入 GitHub 查看详细信息。 安装切换到项目目录下1$ cd project 安装方法一执行 composer安装1$ composer require kartik-v/yii2-widget-datetimepicker &quot;*&quot; 安装方法二在项目目录下的composer.json文件中如下内容12345&quot;require&quot;: &#123; ..., &quot;kartik-v/yii2-widget-datetimepicker&quot;: &quot;*&quot;, ...&#125; 执行composer更新1$ composer update 使用 DateTimePicker 插件插件的使用可以分为两种，一种是独立的使用，一种是结合 Yii2的ActiveForm组件使用 独立使用直接调用，在视图文件中写入如下代码：12345678910111213use kartik\datetime\DateTimePicker;echo &apos;&lt;label&gt;Start Date/Time&lt;/label&gt;&apos;;echo DateTimePicker::widget([ &apos;name&apos; =&gt; &apos;datetime_10&apos;, &apos;options&apos; =&gt; [&apos;placeholder&apos; =&gt; &apos;Select operating time ...&apos;], &apos;convertFormat&apos; =&gt; true, &apos;pluginOptions&apos; =&gt; [ &apos;format&apos; =&gt; &apos;d-M-Y g:i A&apos;, &apos;startDate&apos; =&gt; &apos;01-Mar-2014 12:00 AM&apos;, &apos;todayHighlight&apos; =&gt; true ]]); 结合ActiveForm表单组件使用123456789101112131415161718&lt;?phpuse kartik\datetime\DateTimePicker;?&gt;&lt;?php $form = ActiveForm::begin(); ?&gt;&lt;?= $form-&gt;field($model, &apos;created_at&apos;)-&gt;widget(DateTimePicker::classname(), [ &apos;options&apos; =&gt; [&apos;placeholder&apos; =&gt; &apos;&apos;], &apos;pluginOptions&apos; =&gt; [ &apos;autoclose&apos; =&gt; true, &apos;format&apos; =&gt; &apos;yyyy-mm-dd hh:ii&apos;, &apos;startDate&apos; =&gt; &apos;01-Mar-2014 12:00 AM&apos;, &apos;todayHighlight&apos; =&gt; true ] ]);?&gt;&lt;?php ActiveForm::end(); ?&gt;]]></content>
+      <categories>
+        <category>PHP</category>
+        <category>Yii2</category>
+      </categories>
+      <tags>
+        <tag>PHP</tag>
+        <tag>Yii2</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Yii2 批量插入]]></title>
     <url>%2F2017%2F07%2F21%2FYii2-%E6%89%B9%E9%87%8F%E6%8F%92%E5%85%A5%2F</url>
     <content type="text"><![CDATA[在使用Yii2开发的过程中难免会遇到批量插入的问题，下边实例一下批量插入的操作。12345678910111213$goods_model = new Goods();# 获取表名$table_name = $goods_model-&gt;tableName();# 要插入数据的字段 $fields = [&apos;name&apos;,&apos;price&apos;]；$fields = $goods_model-&gt;getAttributes();isset($fields[&apos;id&apos;]) &amp;&amp; unset($fields[&apos;id&apos;]);# 要插入的数据，这里要自己拼装，要和字段对应上$data = [[&apos;电视机&apos;，2999]，[&apos;电脑&apos;，3888]];# 返回总插入条数$total_num = Yii::$app-&gt;db-&gt;createCommand()-&gt;batchInsert($table_name, $fields, $data)-&gt;execute(); 批量插入的时候最好和 model 事务搭配，这样可以保证数据的完整性，也方便检查错误。]]></content>
@@ -8,6 +21,10 @@
         <category>PHP</category>
         <category>Yii2</category>
       </categories>
+      <tags>
+        <tag>PHP</tag>
+        <tag>Yii2</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[Yii2 molde模型相关使用技巧]]></title>

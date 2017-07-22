@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.iooeo.com/"/>
-  <updated>2017-07-21T08:22:58.000Z</updated>
+  <updated>2017-07-22T03:19:56.000Z</updated>
   <id>http://www.iooeo.com/</id>
   
   <author>
@@ -16,11 +16,45 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Yii2 时间插件</title>
+    <link href="http://www.iooeo.com/2017/07/22/Yii2-%E6%97%B6%E9%97%B4%E6%8F%92%E4%BB%B6/"/>
+    <id>http://www.iooeo.com/2017/07/22/Yii2-时间插件/</id>
+    <published>2017-07-22T02:33:38.000Z</published>
+    <updated>2017-07-22T03:19:56.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>项目开发中难免会用到时间插件，这里我找了一个使用比较广泛的时间插件。用法如下：<br><a id="more"></a></p>
+<h2 id="时间插件-yii2-widget-datetimepicker"><a href="#时间插件-yii2-widget-datetimepicker" class="headerlink" title="时间插件 yii2-widget-datetimepicker"></a>时间插件 yii2-widget-datetimepicker</h2><p><a href="https://github.com/yangyiyuan/yii2-widget-datetimepicker" target="_blank" rel="external">yii2-widget-datetimepicker</a>小部件是一个用于引导DateTimePicker插件的Yii 2包装器，它具有各种增强功能。想了解的话，可以点连接进入 GitHub 查看详细信息。</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>切换到项目目录下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ cd project</div></pre></td></tr></table></figure></p>
+<h4 id="安装方法一"><a href="#安装方法一" class="headerlink" title="安装方法一"></a>安装方法一</h4><p>执行 <em>composer</em>安装<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ composer require kartik-v/yii2-widget-datetimepicker &quot;*&quot;</div></pre></td></tr></table></figure></p>
+<h4 id="安装方法二"><a href="#安装方法二" class="headerlink" title="安装方法二"></a>安装方法二</h4><p>在项目目录下的<em>composer.json</em>文件中如下内容<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&quot;require&quot;: &#123;</div><div class="line">    ...,</div><div class="line">    &quot;kartik-v/yii2-widget-datetimepicker&quot;: &quot;*&quot;,</div><div class="line">    ...</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>执行<em>composer</em>更新<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ composer update</div></pre></td></tr></table></figure></p>
+<h2 id="使用-DateTimePicker-插件"><a href="#使用-DateTimePicker-插件" class="headerlink" title="使用 DateTimePicker 插件"></a>使用 DateTimePicker 插件</h2><p>插件的使用可以分为两种，一种是独立的使用，一种是结合 Yii2的ActiveForm组件使用</p>
+<h4 id="独立使用"><a href="#独立使用" class="headerlink" title="独立使用"></a>独立使用</h4><p>直接调用，在视图文件中写入如下代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">use kartik\datetime\DateTimePicker;</div><div class="line"></div><div class="line">echo &apos;&lt;label&gt;Start Date/Time&lt;/label&gt;&apos;;</div><div class="line">echo DateTimePicker::widget([</div><div class="line">    &apos;name&apos; =&gt; &apos;datetime_10&apos;,</div><div class="line">    &apos;options&apos; =&gt; [&apos;placeholder&apos; =&gt; &apos;Select operating time ...&apos;],</div><div class="line">    &apos;convertFormat&apos; =&gt; true,</div><div class="line">    &apos;pluginOptions&apos; =&gt; [</div><div class="line">        &apos;format&apos; =&gt; &apos;d-M-Y g:i A&apos;,</div><div class="line">        &apos;startDate&apos; =&gt; &apos;01-Mar-2014 12:00 AM&apos;,</div><div class="line">        &apos;todayHighlight&apos; =&gt; true</div><div class="line">    ]</div><div class="line">]);</div></pre></td></tr></table></figure></p>
+<h4 id="结合ActiveForm表单组件使用"><a href="#结合ActiveForm表单组件使用" class="headerlink" title="结合ActiveForm表单组件使用"></a>结合ActiveForm表单组件使用</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line">use kartik\datetime\DateTimePicker;</div><div class="line">?&gt;</div><div class="line"></div><div class="line">&lt;?php $form = ActiveForm::begin(); ?&gt;</div><div class="line"></div><div class="line">&lt;?= $form-&gt;field($model, &apos;created_at&apos;)-&gt;widget(DateTimePicker::classname(), [</div><div class="line">        &apos;options&apos; =&gt; [&apos;placeholder&apos; =&gt; &apos;&apos;],</div><div class="line">        &apos;pluginOptions&apos; =&gt; [</div><div class="line">            &apos;autoclose&apos; =&gt; true,</div><div class="line">            &apos;format&apos; =&gt; &apos;yyyy-mm-dd hh:ii&apos;,</div><div class="line">            &apos;startDate&apos; =&gt; &apos;01-Mar-2014 12:00 AM&apos;,</div><div class="line">            &apos;todayHighlight&apos; =&gt; true</div><div class="line">        ]</div><div class="line">    ]);</div><div class="line">?&gt;</div><div class="line"></div><div class="line">&lt;?php ActiveForm::end(); ?&gt;</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;项目开发中难免会用到时间插件，这里我找了一个使用比较广泛的时间插件。用法如下：&lt;br&gt;
+    
+    </summary>
+    
+      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
+    
+      <category term="Yii2" scheme="http://www.iooeo.com/categories/PHP/Yii2/"/>
+    
+    
+      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
+    
+      <category term="Yii2" scheme="http://www.iooeo.com/tags/Yii2/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Yii2 批量插入</title>
     <link href="http://www.iooeo.com/2017/07/21/Yii2-%E6%89%B9%E9%87%8F%E6%8F%92%E5%85%A5/"/>
     <id>http://www.iooeo.com/2017/07/21/Yii2-批量插入/</id>
     <published>2017-07-21T07:56:10.000Z</published>
-    <updated>2017-07-21T08:22:58.000Z</updated>
+    <updated>2017-07-22T02:33:46.000Z</updated>
     
     <content type="html"><![CDATA[<p>在使用Yii2开发的过程中难免会遇到批量插入的问题，下边实例一下批量插入的操作。<br><a id="more"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">$goods_model = new Goods();</div><div class="line"># 获取表名</div><div class="line">$table_name = $goods_model-&gt;tableName();</div><div class="line"></div><div class="line"># 要插入数据的字段 $fields = [&apos;name&apos;,&apos;price&apos;]；</div><div class="line">$fields = $goods_model-&gt;getAttributes();</div><div class="line">isset($fields[&apos;id&apos;]) &amp;&amp; unset($fields[&apos;id&apos;]);</div><div class="line"></div><div class="line"># 要插入的数据，这里要自己拼装，要和字段对应上</div><div class="line">$data = [[&apos;电视机&apos;，2999]，[&apos;电脑&apos;，3888]];</div><div class="line"></div><div class="line"># 返回总插入条数</div><div class="line">$total_num = Yii::$app-&gt;db-&gt;createCommand()-&gt;batchInsert($table_name, $fields, $data)-&gt;execute();</div></pre></td></tr></table></figure></p>
 <p>批量插入的时候最好和 model 事务搭配，这样可以保证数据的完整性，也方便检查错误。</p>
@@ -36,6 +70,10 @@
     
       <category term="Yii2" scheme="http://www.iooeo.com/categories/PHP/Yii2/"/>
     
+    
+      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
+    
+      <category term="Yii2" scheme="http://www.iooeo.com/tags/Yii2/"/>
     
   </entry>
   
@@ -694,50 +732,6 @@
     
       &lt;p&gt;之前我们terms表中有两个时间字段&lt;em&gt;create_at&lt;/em&gt;和&lt;em&gt;update_at&lt;/em&gt;,现在我们来操作一下,使&lt;em&gt;create_at&lt;/em&gt;和&lt;em&gt;update_at&lt;/em&gt;在存储时自动更新它的时间戳属性&lt;/p&gt;
 &lt;h2 id=&quot;自动存储更新时间戳属性&quot;&gt;&lt;a href=&quot;#自动存储更新时间戳属性&quot; class=&quot;headerlink&quot; title=&quot;自动存储更新时间戳属性&quot;&gt;&lt;/a&gt;自动存储更新时间戳属性&lt;/h2&gt;&lt;p&gt;这里我们使用TimestampBehavior先不要管行为不行为,今天就是要时间戳属性自动存储更新&lt;br&gt;
-    
-    </summary>
-    
-      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
-    
-      <category term="Yii2" scheme="http://www.iooeo.com/categories/PHP/Yii2/"/>
-    
-    
-      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
-    
-      <category term="Yii2" scheme="http://www.iooeo.com/tags/Yii2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Yii2 Gii生成代码</title>
-    <link href="http://www.iooeo.com/2017/03/31/Yii2%20Gii%E7%94%9F%E6%88%90%E4%BB%A3%E7%A0%81/"/>
-    <id>http://www.iooeo.com/2017/03/31/Yii2 Gii生成代码/</id>
-    <published>2017-03-31T04:03:00.000Z</published>
-    <updated>2017-07-20T06:43:16.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><em>Gii</em>是<em>Yii</em>中的一个模块,有此神器,撸代码都省了好多,简单的先用一下<br>继续拿我们上边的例子来说<br>访问<em>local.thef.com/index.php?r=gii</em>可以看到操作界面<br><img src="http://ogpq2zwg5.bkt.clouddn.com/b5a75d537f2b14db80bc00eac403b146_1872x1017.png" alt=""><br><a id="more"></a></p>
-<h2 id="生成Model"><a href="#生成Model" class="headerlink" title="生成Model"></a>生成Model</h2><p>输入<em>Table Name</em>(有提示,是不是很方便),自动补全<em>Model Class</em><br><img src="http://ogpq2zwg5.bkt.clouddn.com/059d65112126a9ceb42fa35b334373ef_593x234.png" alt=""></p>
-<p><em>Namespace</em>这里只在frontend下使用,就小改一下<br><img src="http://ogpq2zwg5.bkt.clouddn.com/02055b3a946b461c98270a1a8829c631_555x89.png" alt=""></p>
-<p>最后点击<em>Preview</em>,然后<em>Generate</em>完成,看看<em>thesaurus/frontend/models/</em>目录下是不是多了<em>Terms.php</em><br><img src="http://ogpq2zwg5.bkt.clouddn.com/051d0ec36b52178ad0c25865a63d9655_849x266.png" alt=""></p>
-<p>同理点击<em>CRUD Generator</em>,点击<em>Preview</em>,然后<em>Generate</em>完成</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">*Model Class*</div><div class="line">frontend\models\Terms</div><div class="line">*Search Model Class*</div><div class="line">frontend\models\TermsSearch</div><div class="line">*Controller Class*</div><div class="line">frontend\controllers\TermsController</div></pre></td></tr></table></figure>
-<p>生成文件:</p>
-<ul>
-<li>/thesaurus/frontend/models/TermsSearch.php</li>
-<li>/thesaurus/frontend/controllers/TermsController.php</li>
-<li>/thesaurus/frontend/views/terms/_form.php</li>
-<li>/thesaurus/frontend/views/terms/_search.php</li>
-<li>/thesaurus/frontend/views/terms/create.php</li>
-<li>/thesaurus/frontend/views/terms/index.php</li>
-<li>/thesaurus/frontend/views/terms/update.php</li>
-<li>/thesaurus/frontend/views/terms/view.php</li>
-</ul>
-<p>然后访问 <em>local.thef.com/index.php?r=terms</em> 就可以进行你的增删查改了,biubiu,是不是很爽</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;em&gt;Gii&lt;/em&gt;是&lt;em&gt;Yii&lt;/em&gt;中的一个模块,有此神器,撸代码都省了好多,简单的先用一下&lt;br&gt;继续拿我们上边的例子来说&lt;br&gt;访问&lt;em&gt;local.thef.com/index.php?r=gii&lt;/em&gt;可以看到操作界面&lt;br&gt;&lt;img src=&quot;http://ogpq2zwg5.bkt.clouddn.com/b5a75d537f2b14db80bc00eac403b146_1872x1017.png&quot; alt=&quot;&quot;&gt;&lt;br&gt;
     
     </summary>
     
