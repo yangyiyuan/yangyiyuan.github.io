@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.iooeo.com/"/>
-  <updated>2017-07-22T04:22:24.000Z</updated>
+  <updated>2017-07-28T07:12:47.000Z</updated>
   <id>http://www.iooeo.com/</id>
   
   <author>
@@ -14,6 +14,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>新的评论系统</title>
+    <link href="http://www.iooeo.com/2017/07/28/%E6%96%B0%E7%9A%84%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/"/>
+    <id>http://www.iooeo.com/2017/07/28/新的评论系统/</id>
+    <published>2017-07-28T07:08:41.000Z</published>
+    <updated>2017-07-28T07:12:47.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><code>继多说关闭以后,网易又随之而去.这对于没有自己搭建评论系统的我来说,无疑是一个非常不愉快的消息.</code><br><code>but,今天新的评论系统终于安装成功,经过了十几天的域名备案,大家又可以畅所欲言了.</code></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;code&gt;继多说关闭以后,网易又随之而去.这对于没有自己搭建评论系统的我来说,无疑是一个非常不愉快的消息.&lt;/code&gt;&lt;br&gt;&lt;code&gt;but,今天新的评论系统终于安装成功,经过了十几天的域名备案,大家又可以畅所欲言了.&lt;/code&gt;&lt;/p&gt;
+
+    
+    </summary>
+    
+      <category term="杂谈" scheme="http://www.iooeo.com/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    
+      <category term="微语" scheme="http://www.iooeo.com/tags/%E5%BE%AE%E8%AF%AD/"/>
+    
+      <category term="胡侃" scheme="http://www.iooeo.com/tags/%E8%83%A1%E4%BE%83/"/>
+    
+  </entry>
   
   <entry>
     <title>Yii2 请求(Requests)</title>
@@ -692,63 +718,6 @@
     
       &lt;p&gt;有GitHub的直接登录,没有的&lt;a href=&quot;https://github.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;GitHub&lt;/a&gt;注册&lt;/p&gt;
 &lt;h2 id=&quot;创建仓库&quot;&gt;&lt;a href=&quot;#创建仓库&quot; class=&quot;headerlink&quot; title=&quot;创建仓库&quot;&gt;&lt;/a&gt;创建仓库&lt;/h2&gt;&lt;p&gt;仓库(Repository)用来放置代码文件,登录之后点击右上角加号,点击New repository&lt;br&gt;
-    
-    </summary>
-    
-      <category term="Hexo" scheme="http://www.iooeo.com/categories/Hexo/"/>
-    
-    
-      <category term="Hexo" scheme="http://www.iooeo.com/tags/Hexo/"/>
-    
-      <category term="Github" scheme="http://www.iooeo.com/tags/Github/"/>
-    
-      <category term="coding" scheme="http://www.iooeo.com/tags/coding/"/>
-    
-      <category term="Markdown" scheme="http://www.iooeo.com/tags/Markdown/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo+Github+coding搭建个人博客 - Hexo 本地安装篇</title>
-    <link href="http://www.iooeo.com/2017/07/03/Hexo+Github+coding%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%20-%20Hexo%20%E6%9C%AC%E5%9C%B0%E5%AE%89%E8%A3%85%E7%AF%87/"/>
-    <id>http://www.iooeo.com/2017/07/03/Hexo+Github+coding搭建个人博客 - Hexo 本地安装篇/</id>
-    <published>2017-07-03T06:52:08.000Z</published>
-    <updated>2017-07-03T07:33:40.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>之前自己摸摸索索把博客搭建好了,最近有人问我怎么搭建的,这里把搭建流程跟大家说下吧</p>
-<h2 id="开始前准备"><a href="#开始前准备" class="headerlink" title="开始前准备"></a>开始前准备</h2><p>账号相关: </p>
-<ul>
-<li><a href="https://github.com/" target="_blank" rel="external">GitHub</a> </li>
-<li><a href="https://coding.net/" target="_blank" rel="external">Coding</a> </li>
-<li><a href="https://wanwang.aliyun.com/" target="_blank" rel="external">域名</a></li>
-</ul>
-<p>服务相关: </p>
-<ul>
-<li><a href="https://git-scm.com/download" target="_blank" rel="external">Git</a>     </li>
-<li><a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js</a><a id="more"></a>
-</li>
-</ul>
-<h2 id="Hexo-安装和配置"><a href="#Hexo-安装和配置" class="headerlink" title="Hexo 安装和配置"></a>Hexo 安装和配置</h2><p><a href="https://hexo.io/" target="_blank" rel="external">Hexo官网</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-cli -g</div></pre></td></tr></table></figure></p>
-<p>初始化Hexo博客目录,时间可能要久一点…<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo init blog</div></pre></td></tr></table></figure></p>
-<p>安装依赖包<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ cd blog</div><div class="line">$ npm install</div></pre></td></tr></table></figure></p>
-<p>生成静态网站<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure></p>
-<p>本地测试,生成的链接<a href="http://localhost:4000" target="_blank" rel="external">localhost:4000</a>,copy到浏览器直接访问就可以看到效果了.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure></p>
-<p>本地hexo安装已经完毕,可本地运行</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;之前自己摸摸索索把博客搭建好了,最近有人问我怎么搭建的,这里把搭建流程跟大家说下吧&lt;/p&gt;
-&lt;h2 id=&quot;开始前准备&quot;&gt;&lt;a href=&quot;#开始前准备&quot; class=&quot;headerlink&quot; title=&quot;开始前准备&quot;&gt;&lt;/a&gt;开始前准备&lt;/h2&gt;&lt;p&gt;账号相关: &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;GitHub&lt;/a&gt; &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://coding.net/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Coding&lt;/a&gt; &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://wanwang.aliyun.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;域名&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;服务相关: &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://git-scm.com/download&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Git&lt;/a&gt;     &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://nodejs.org/en/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Node.js&lt;/a&gt;
     
     </summary>
     
