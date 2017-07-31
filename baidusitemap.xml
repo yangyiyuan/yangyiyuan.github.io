@@ -4,6 +4,81 @@
 
     
   <url>
+    <loc>http://www.iooeo.com/2017/07/31/swoole-%E8%BF%9B%E7%A8%8B%E4%B8%8E%E7%BA%BF%E7%A8%8B%E7%AF%87/</loc>
+    <lastmod>2017-07-31T09:25:23.000Z</lastmod>
+    <data>
+        <display>
+        <title>swoole 进程与线程篇</title>
+        <pubTime>2017-07-31T07:57:53.000Z</pubTime>
+        
+        <tag>PHP</tag>
+         
+        <tag>Swoole</tag>
+         
+         
+           
+             
+              <breadCrumb title="PHP" url="http://www.iooeo.com/categories/PHP/"/>
+          
+             
+              <breadCrumb title="Swoole" url="http://www.iooeo.com/categories/PHP/Swoole/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.iooeo.com/2017/07/31/swoole-%E7%BD%91%E7%BB%9C%E9%80%9A%E8%AE%AF%E5%8D%8F%E8%AE%AE%E7%AF%87/</loc>
+    <lastmod>2017-07-31T09:20:16.000Z</lastmod>
+    <data>
+        <display>
+        <title>swoole 网络通讯协议篇</title>
+        <pubTime>2017-07-31T09:11:46.000Z</pubTime>
+        
+        <tag>PHP</tag>
+         
+        <tag>Swoole</tag>
+         
+         
+           
+             
+              <breadCrumb title="PHP" url="http://www.iooeo.com/categories/PHP/"/>
+          
+             
+              <breadCrumb title="Swoole" url="http://www.iooeo.com/categories/PHP/Swoole/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.iooeo.com/2017/07/31/swoole-I-O-%E6%A8%A1%E5%9E%8B/</loc>
+    <lastmod>2017-07-31T09:04:44.000Z</lastmod>
+    <data>
+        <display>
+        <title> swoole I/O 模型</title>
+        <pubTime>2017-07-31T08:49:12.000Z</pubTime>
+        
+        <tag>PHP</tag>
+         
+        <tag>Swoole</tag>
+         
+         
+           
+             
+              <breadCrumb title="PHP" url="http://www.iooeo.com/categories/PHP/"/>
+          
+             
+              <breadCrumb title="Swoole" url="http://www.iooeo.com/categories/PHP/Swoole/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.iooeo.com/2017/07/28/%E6%96%B0%E7%9A%84%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/</loc>
     <lastmod>2017-07-28T07:12:47.000Z</lastmod>
     <data>
