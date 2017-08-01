@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.iooeo.com/"/>
-  <updated>2017-08-01T06:22:13.000Z</updated>
+  <updated>2017-08-01T07:39:25.000Z</updated>
   <id>http://www.iooeo.com/</id>
   
   <author>
@@ -14,6 +14,53 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>swoole Task Worker 篇</title>
+    <link href="http://www.iooeo.com/2017/08/01/swoole-Task-Worker-%E7%AF%87/"/>
+    <id>http://www.iooeo.com/2017/08/01/swoole-Task-Worker-篇/</id>
+    <published>2017-08-01T06:51:52.000Z</published>
+    <updated>2017-08-01T07:39:25.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><code>swoole_server-&gt;task</code>投递一个异步任务到 task_worker 池中。此函数是非阻塞的，执行完毕会立即返回。Worker 进程可以继续处理新的请求。使用Task功能，必须先设置 <em>task_worker_num</em>，并且必须设置 Server 的 <em>onTask</em> 和 <em>onFinish </em>事件回调函数。<br><a id="more"></a><br>注意事项：</p>
+<ul>
+<li>使用 task 必须为 Server 设置 <em>onTask</em> 和 <em>onFinish</em> 回调，否则 <code>swoole_server-&gt;start</code> 会失败</li>
+<li>task 操作的次数必须小于 <em>onTask</em> 处理速度，如果投递容量超过处理能力，task 会塞满缓存区，导致 worker 进程发生阻塞。worker 进程将无法接收新的请求</li>
+<li>使用 <em>addProcess</em> 添加的用户进程中无法使用 task 投递任务，请使用 <em>sendMessage</em> 接口与 Task 工作进程通信</li>
+</ul>
+<h2 id="Task-实例"><a href="#Task-实例" class="headerlink" title="Task 实例"></a>Task 实例</h2><h3 id="创建-Server"><a href="#创建-Server" class="headerlink" title="创建 Server"></a>创建 Server</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$serv = new swoole_server(&quot;127.0.0.1&quot;, 9501);</div></pre></td></tr></table></figure>
+<h3 id="设置task-worker-num"><a href="#设置task-worker-num" class="headerlink" title="设置task_worker_num"></a>设置<em>task_worker_num</em></h3><p>设置<em>task_worker_num</em>是我们使用 task 中不可缺少的一点哦<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$serv-&gt;set([</div><div class="line">	&apos;worker_num&apos; =&gt; 2,</div><div class="line">	&apos;task_worker_num&apos; =&gt; 1,</div><div class="line">]);</div></pre></td></tr></table></figure></p>
+<h3 id="客户端链接回调"><a href="#客户端链接回调" class="headerlink" title="客户端链接回调"></a>客户端链接回调</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$serv-&gt;on(&apos;Connect&apos;, function ($serv, $fd) &#123;</div><div class="line">    echo &quot;new client connected.\n&quot;;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h3 id="接受客户端数据，使用-task"><a href="#接受客户端数据，使用-task" class="headerlink" title="接受客户端数据，使用 task"></a>接受客户端数据，使用 task</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">$serv-&gt;on(&apos;Receive&apos;, function ($serv, $fd, $fromId, $data) &#123;</div><div class="line">    echo &quot;worker received data: &#123;$data&#125;\n&quot;;</div><div class="line">    // 投递一个任务到task进程中</div><div class="line">    $serv-&gt;task($data);</div><div class="line">    // 通知客户端server收到数据了</div><div class="line">    $serv-&gt;send($fd, &apos;This is a message from server.&apos;);</div><div class="line">    // 为了校验task是否是异步的，这里和task进程内都输出内容，看看谁先输出</div><div class="line">    echo &quot;worker continue run.\n&quot;;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h3 id="设置-Server-的-onTask-和-onFinish-事件回调函数"><a href="#设置-Server-的-onTask-和-onFinish-事件回调函数" class="headerlink" title="设置 Server 的 onTask 和 onFinish 事件回调函数"></a>设置 Server 的 <em>onTask</em> 和 <em>onFinish </em>事件回调函数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line"> * $serv swoole_server</div><div class="line"> * $taskId 投递的任务id,因为task进程是由worker进程发起，所以多worker多task下，该值可能会相同</div><div class="line"> * $fromId 来自那个worker进程的id</div><div class="line"> * $data 要投递的任务数据</div><div class="line"> */</div><div class="line">$serv-&gt;on(&apos;Task&apos;, function ($serv, $taskId, $fromId, $data) &#123;</div><div class="line">    echo &quot;task start. --- from worker id: &#123;$fromId&#125;.\n&quot;;</div><div class="line">    for ($i=0; $i &lt; 5; $i++) &#123; </div><div class="line">        sleep(1);</div><div class="line">        echo &quot;task runing. --- &#123;$i&#125;\n&quot;;</div><div class="line">    &#125;</div><div class="line">    return &quot;task end&quot;;</div><div class="line">&#125;);</div><div class="line"></div><div class="line">/**</div><div class="line"> * 只有在task进程中调用了finish方法或者return了结果，才会触发finish</div><div class="line"> */</div><div class="line">$serv-&gt;on(&apos;Finish&apos;, function ($serv, $taskId, $data) &#123;</div><div class="line">    echo &quot;finish received data &apos;&#123;$data&#125;&apos;\n&quot;;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h3 id="关闭"><a href="#关闭" class="headerlink" title="关闭"></a>关闭</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$serv-&gt;on(&apos;Close&apos;, function ($serv, $fd) &#123;</div><div class="line">    echo &quot;Client &#123;$fd&#125; close connection\n&quot;;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h3 id="执行程序"><a href="#执行程序" class="headerlink" title="执行程序"></a>执行程序</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$serv-&gt;start();</div></pre></td></tr></table></figure>
+<p>客户端还是用我们上一篇<a href="http://www.iooeo.com/2017/08/01/swoole-%E5%88%9D%E8%AF%86-%E7%AE%80%E5%8D%95%E7%9A%84-Server-Client/">简单的Server Client</a>中的client.php。<br>执行查看 client 结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ php client.php </div><div class="line">This is a message from server.</div></pre></td></tr></table></figure></p>
+<p>执行查看 server 结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">$ php index.php </div><div class="line">new client connected.</div><div class="line">Get Message From Client 1:hello server.</div><div class="line">worker continue run.</div><div class="line">task start. --- from worker id: 3.</div><div class="line">Client 1 close connection</div><div class="line">task runing. --- 0</div><div class="line">task runing. --- 1</div><div class="line">task runing. --- 2</div><div class="line">task runing. --- 3</div><div class="line">task runing. --- 4</div><div class="line">finish received data &apos;task end&apos;</div></pre></td></tr></table></figure></p>
+<p>从上边 server 执行的结果可以看出，task执行已经在 close 之后了，这样就知道什么是异步任务了吧。<br>总结一下应用场景：</p>
+<ul>
+<li>没有耗时任务的情况下，worker直接运行，无需开启task</li>
+<li>对于耗时的任务，可以在worker内调用task函数，把异步任务投递给task进程进行处理，task进程的数量取决于task_worker_num的配置</li>
+<li>task进程内可以选择调用finish方法或者return，来通知worker进程此任务已完成，worker进程会在onFinish回调中对task的执行结果进一步处理。如果worker进程不关心任务的结果，finish就不需要做处理了。</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;code&gt;swoole_server-&amp;gt;task&lt;/code&gt;投递一个异步任务到 task_worker 池中。此函数是非阻塞的，执行完毕会立即返回。Worker 进程可以继续处理新的请求。使用Task功能，必须先设置 &lt;em&gt;task_worker_num&lt;/em&gt;，并且必须设置 Server 的 &lt;em&gt;onTask&lt;/em&gt; 和 &lt;em&gt;onFinish &lt;/em&gt;事件回调函数。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
+    
+      <category term="Swoole" scheme="http://www.iooeo.com/categories/PHP/Swoole/"/>
+    
+    
+      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
+    
+      <category term="Swoole" scheme="http://www.iooeo.com/tags/Swoole/"/>
+    
+  </entry>
   
   <entry>
     <title>swoole 初识 简单的 Server Client</title>
@@ -715,39 +762,6 @@
     
     
       <category term="python" scheme="http://www.iooeo.com/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo 新建菜单(menu) 存放归档文章</title>
-    <link href="http://www.iooeo.com/2017/07/20/Hexo-%E6%96%B0%E5%BB%BA%E8%8F%9C%E5%8D%95-menu-%E5%AD%98%E6%94%BE%E5%BD%92%E6%A1%A3/"/>
-    <id>http://www.iooeo.com/2017/07/20/Hexo-新建菜单-menu-存放归档/</id>
-    <published>2017-07-20T01:53:08.000Z</published>
-    <updated>2017-07-20T03:07:39.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>最近在看Python，想在首页上建一个名为Python的菜单，然后相关Python的文章都放在该分类下。<br><a id="more"></a><br>本来的想法是点开 Python 菜单会显示像首页的一样的文章列表，但试了几次没有成功，索性就就采取了一种分类归档的方法，效果还可以。</p>
-<h2 id="生成-post-文章-时默认生成-categories-配置项"><a href="#生成-post-文章-时默认生成-categories-配置项" class="headerlink" title="生成 post(文章)时默认生成 categories 配置项"></a>生成 post(文章)时默认生成 categories 配置项</h2><p>在项目目录下找到<em>/scaffolds/post.md</em>，添加文章的 categories 的配置，如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">---</div><div class="line">title: &#123;&#123; title &#125;&#125;</div><div class="line">date: &#123;&#123; date &#125;&#125;</div><div class="line">tags:</div><div class="line">	# 此处为文章标签</div><div class="line">categories:</div><div class="line">	# 此处为文章分类</div><div class="line">---</div></pre></td></tr></table></figure></p>
-<h2 id="写文章时，配置-categories"><a href="#写文章时，配置-categories" class="headerlink" title="写文章时，配置 categories"></a>写文章时，配置 categories</h2><p>下面我开始写一篇关于 Python 的文章<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo n &quot;python 开篇&quot;</div></pre></td></tr></table></figure></p>
-<p>文章里面配置 categories<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">---</div><div class="line">title: python 开篇</div><div class="line">date: 2017-07-20 10:22:43</div><div class="line">tags:</div><div class="line">	- python</div><div class="line">categories:</div><div class="line">	- python</div><div class="line">---</div><div class="line">Python 是一种面向对象的解释型计算机程序设计语言，由荷兰人Guido van Rossum于1989年发明，第一个公开发行版发行于1991年。</div></pre></td></tr></table></figure></p>
-<p>此处我已经配置好了标签（tags）和分类（categories），下面生成一下静态页面<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo g</div></pre></td></tr></table></figure></p>
-<p>这时你会发现<em>/public/categories/</em>文件夹下，已经生成了<em>python</em>的文件夹</p>
-<h2 id="首页显示-python-菜单"><a href="#首页显示-python-菜单" class="headerlink" title="首页显示 python 菜单"></a>首页显示 python 菜单</h2><p>这里就是要在博客首页上显示 python 菜单的时候了，首先打开你主题的配置文件<em>/themes/next/_config.yml</em>(我这里是用的 next)。<br>找到<em>menu</em> ，做一下添加<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">menu:</div><div class="line">  home: /</div><div class="line">  categories: /categories/</div><div class="line">  archives: /archives/</div><div class="line">  tags: /tags/</div><div class="line">  python: /categories/python/ # 此处为新添加的菜单</div><div class="line">  guestbook: /guestbook</div><div class="line">  about: /about/</div></pre></td></tr></table></figure></p>
-<p>配置python菜单所用的图标<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">menu_icons:</div><div class="line">  enable: true</div><div class="line">  #KeyMapsToMenuItemKey: NameOfTheIconFromFontAwesome</div><div class="line">  home: home</div><div class="line">  about: user</div><div class="line">  categories: th</div><div class="line">  schedule: calendar</div><div class="line">  tags: tags</div><div class="line">  archives: archive</div><div class="line">  sitemap: sitemap</div><div class="line">  commonweal: heartbeat</div><div class="line">  guestbook: pencil</div><div class="line">  python: file-powerpoint-o # 此处为 python菜单的图片配置</div></pre></td></tr></table></figure></p>
-<h2 id="菜单名称配置"><a href="#菜单名称配置" class="headerlink" title="菜单名称配置"></a>菜单名称配置</h2><p>上面的步骤做完以后，如果你着急刷新页面看了效果，就会看到新菜单的名称是<em>menu.python</em>，显然不是我们想要的，那就继续往下看<br>首先查看项目目录下的<em>/_config.yml</em>的<em>language</em>配置，我的是这样的<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">language: zh-Hans</div></pre></td></tr></table></figure></p>
-<p>然后去模板目录找到相应的语言配置文件<em>/themes/languages/zh-Hans.yml</em>，<em>menu</em>处添加一下配置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">menu:</div><div class="line">  home: 首页</div><div class="line">  archives: 归档</div><div class="line">  categories: 分类</div><div class="line">  tags: 标签</div><div class="line">  about: 关于</div><div class="line">  search: 搜索</div><div class="line">  schedule: 日程表</div><div class="line">  sitemap: 站点地图</div><div class="line">  commonweal: 公益404</div><div class="line">  guestbook: 留言</div><div class="line">  python: python # python菜单显示的名称</div></pre></td></tr></table></figure></p>
-<p>这样就算彻底完成了，赶紧去看看效果吧。<br>以后写Python 相关的文章的话，只需要配置 categories 为 python 就可以自动归档到python 菜单下了。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;最近在看Python，想在首页上建一个名为Python的菜单，然后相关Python的文章都放在该分类下。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="Hexo" scheme="http://www.iooeo.com/categories/Hexo/"/>
-    
-    
-      <category term="Hexo" scheme="http://www.iooeo.com/tags/Hexo/"/>
     
   </entry>
   

@@ -95,7 +95,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Ewan, PHP" />
+  <meta name="keywords" content="PHP,Swoole," />
 
 
 
@@ -113,15 +113,17 @@
 
 
 
-<meta name="description" content="The more effort ,the more lucky">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Ewan&#39;s Blog">
-<meta property="og:url" content="http://www.iooeo.com/archives/2015/03/index.html">
+<meta name="description" content="swoole_server-&amp;gt;task投递一个异步任务到 task_worker 池中。此函数是非阻塞的，执行完毕会立即返回。Worker 进程可以继续处理新的请求。使用Task功能，必须先设置 task_worker_num，并且必须设置 Server 的 onTask 和 onFinish 事件回调函数。">
+<meta name="keywords" content="PHP,Swoole">
+<meta property="og:type" content="article">
+<meta property="og:title" content="swoole Task Worker 篇">
+<meta property="og:url" content="http://www.iooeo.com/2017/08/01/swoole-Task-Worker-篇/index.html">
 <meta property="og:site_name" content="Ewan&#39;s Blog">
-<meta property="og:description" content="The more effort ,the more lucky">
+<meta property="og:description" content="swoole_server-&amp;gt;task投递一个异步任务到 task_worker 池中。此函数是非阻塞的，执行完毕会立即返回。Worker 进程可以继续处理新的请求。使用Task功能，必须先设置 task_worker_num，并且必须设置 Server 的 onTask 和 onFinish 事件回调函数。">
+<meta property="og:updated_time" content="2017-08-01T07:39:25.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ewan&#39;s Blog">
-<meta name="twitter:description" content="The more effort ,the more lucky">
+<meta name="twitter:title" content="swoole Task Worker 篇">
+<meta name="twitter:description" content="swoole_server-&amp;gt;task投递一个异步任务到 task_worker 池中。此函数是非阻塞的，执行完毕会立即返回。Worker 进程可以继续处理新的请求。使用Task功能，必须先设置 task_worker_num，并且必须设置 Server 的 onTask 和 onFinish 事件回调函数。">
 
 
 
@@ -149,13 +151,13 @@
 
 
 
-  <link rel="canonical" href="http://www.iooeo.com/archives/2015/03/"/>
+  <link rel="canonical" href="http://www.iooeo.com/2017/08/01/swoole-Task-Worker-篇/"/>
 
 
 
 
 
-  <title>归档 | Ewan's Blog</title>
+  <title>swoole Task Worker 篇 | Ewan's Blog</title>
   
 
 
@@ -190,7 +192,7 @@
     
   
 
-  <div class="container sidebar-position-left  page-archive  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -358,65 +360,274 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-    <span class="archive-page-counter">
-      
-      
-       
-      
-      OK! 目前共计 48 篇日志。 继续努力。
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.iooeo.com/2017/08/01/swoole-Task-Worker-篇/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ewan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ewan's Blog">
     </span>
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">swoole Task Worker 篇</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-01T14:51:52+08:00">
+                2017-08-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/PHP/" itemprop="url" rel="index">
+                    <span itemprop="name">PHP</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/PHP/Swoole/" itemprop="url" rel="index">
+                    <span itemprop="name">Swoole</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/2017/08/01/swoole-Task-Worker-篇/#SOHUCS" itemprop="discussionUrl">
+                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2017/08/01/swoole-Task-Worker-篇/" itemprop="commentsCount"></span>
+                </a>
+              
+            
+          
+
+          
+          
+             <span id="/2017/08/01/swoole-Task-Worker-篇/" class="leancloud_visitors" data-flag-title="swoole Task Worker 篇">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
 
       
       
-      
 
+      
+        <p><code>swoole_server-&gt;task</code>投递一个异步任务到 task_worker 池中。此函数是非阻塞的，执行完毕会立即返回。Worker 进程可以继续处理新的请求。使用Task功能，必须先设置 <em>task_worker_num</em>，并且必须设置 Server 的 <em>onTask</em> 和 <em>onFinish </em>事件回调函数。<br><a id="more"></a><br>注意事项：</p>
+<ul>
+<li>使用 task 必须为 Server 设置 <em>onTask</em> 和 <em>onFinish</em> 回调，否则 <code>swoole_server-&gt;start</code> 会失败</li>
+<li>task 操作的次数必须小于 <em>onTask</em> 处理速度，如果投递容量超过处理能力，task 会塞满缓存区，导致 worker 进程发生阻塞。worker 进程将无法接收新的请求</li>
+<li>使用 <em>addProcess</em> 添加的用户进程中无法使用 task 投递任务，请使用 <em>sendMessage</em> 接口与 Task 工作进程通信</li>
+</ul>
+<h2 id="Task-实例"><a href="#Task-实例" class="headerlink" title="Task 实例"></a>Task 实例</h2><h3 id="创建-Server"><a href="#创建-Server" class="headerlink" title="创建 Server"></a>创建 Server</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$serv = new swoole_server(&quot;127.0.0.1&quot;, 9501);</div></pre></td></tr></table></figure>
+<h3 id="设置task-worker-num"><a href="#设置task-worker-num" class="headerlink" title="设置task_worker_num"></a>设置<em>task_worker_num</em></h3><p>设置<em>task_worker_num</em>是我们使用 task 中不可缺少的一点哦<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$serv-&gt;set([</div><div class="line">	&apos;worker_num&apos; =&gt; 2,</div><div class="line">	&apos;task_worker_num&apos; =&gt; 1,</div><div class="line">]);</div></pre></td></tr></table></figure></p>
+<h3 id="客户端链接回调"><a href="#客户端链接回调" class="headerlink" title="客户端链接回调"></a>客户端链接回调</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$serv-&gt;on(&apos;Connect&apos;, function ($serv, $fd) &#123;</div><div class="line">    echo &quot;new client connected.\n&quot;;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h3 id="接受客户端数据，使用-task"><a href="#接受客户端数据，使用-task" class="headerlink" title="接受客户端数据，使用 task"></a>接受客户端数据，使用 task</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">$serv-&gt;on(&apos;Receive&apos;, function ($serv, $fd, $fromId, $data) &#123;</div><div class="line">    echo &quot;worker received data: &#123;$data&#125;\n&quot;;</div><div class="line">    // 投递一个任务到task进程中</div><div class="line">    $serv-&gt;task($data);</div><div class="line">    // 通知客户端server收到数据了</div><div class="line">    $serv-&gt;send($fd, &apos;This is a message from server.&apos;);</div><div class="line">    // 为了校验task是否是异步的，这里和task进程内都输出内容，看看谁先输出</div><div class="line">    echo &quot;worker continue run.\n&quot;;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h3 id="设置-Server-的-onTask-和-onFinish-事件回调函数"><a href="#设置-Server-的-onTask-和-onFinish-事件回调函数" class="headerlink" title="设置 Server 的 onTask 和 onFinish 事件回调函数"></a>设置 Server 的 <em>onTask</em> 和 <em>onFinish </em>事件回调函数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line"> * $serv swoole_server</div><div class="line"> * $taskId 投递的任务id,因为task进程是由worker进程发起，所以多worker多task下，该值可能会相同</div><div class="line"> * $fromId 来自那个worker进程的id</div><div class="line"> * $data 要投递的任务数据</div><div class="line"> */</div><div class="line">$serv-&gt;on(&apos;Task&apos;, function ($serv, $taskId, $fromId, $data) &#123;</div><div class="line">    echo &quot;task start. --- from worker id: &#123;$fromId&#125;.\n&quot;;</div><div class="line">    for ($i=0; $i &lt; 5; $i++) &#123; </div><div class="line">        sleep(1);</div><div class="line">        echo &quot;task runing. --- &#123;$i&#125;\n&quot;;</div><div class="line">    &#125;</div><div class="line">    return &quot;task end&quot;;</div><div class="line">&#125;);</div><div class="line"></div><div class="line">/**</div><div class="line"> * 只有在task进程中调用了finish方法或者return了结果，才会触发finish</div><div class="line"> */</div><div class="line">$serv-&gt;on(&apos;Finish&apos;, function ($serv, $taskId, $data) &#123;</div><div class="line">    echo &quot;finish received data &apos;&#123;$data&#125;&apos;\n&quot;;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h3 id="关闭"><a href="#关闭" class="headerlink" title="关闭"></a>关闭</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$serv-&gt;on(&apos;Close&apos;, function ($serv, $fd) &#123;</div><div class="line">    echo &quot;Client &#123;$fd&#125; close connection\n&quot;;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h3 id="执行程序"><a href="#执行程序" class="headerlink" title="执行程序"></a>执行程序</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$serv-&gt;start();</div></pre></td></tr></table></figure>
+<p>客户端还是用我们上一篇<a href="http://www.iooeo.com/2017/08/01/swoole-%E5%88%9D%E8%AF%86-%E7%AE%80%E5%8D%95%E7%9A%84-Server-Client/">简单的Server Client</a>中的client.php。<br>执行查看 client 结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ php client.php </div><div class="line">This is a message from server.</div></pre></td></tr></table></figure></p>
+<p>执行查看 server 结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">$ php index.php </div><div class="line">new client connected.</div><div class="line">Get Message From Client 1:hello server.</div><div class="line">worker continue run.</div><div class="line">task start. --- from worker id: 3.</div><div class="line">Client 1 close connection</div><div class="line">task runing. --- 0</div><div class="line">task runing. --- 1</div><div class="line">task runing. --- 2</div><div class="line">task runing. --- 3</div><div class="line">task runing. --- 4</div><div class="line">finish received data &apos;task end&apos;</div></pre></td></tr></table></figure></p>
+<p>从上边 server 执行的结果可以看出，task执行已经在 close 之后了，这样就知道什么是异步任务了吧。<br>总结一下应用场景：</p>
+<ul>
+<li>没有耗时任务的情况下，worker直接运行，无需开启task</li>
+<li>对于耗时的任务，可以在worker内调用task函数，把异步任务投递给task进程进行处理，task进程的数量取决于task_worker_num的配置</li>
+<li>task进程内可以选择调用finish方法或者return，来通知worker进程此任务已完成，worker进程会在onFinish回调中对task的执行结果进一步处理。如果worker进程不关心任务的结果，finish就不需要做处理了。</li>
+</ul>
+
+      
+    </div>
+
+    <div>
       
         
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2015">2015</h2>
+
+      
+    </div>
+
+    <div align="center">
+      
+        <div class="copyright">
+        <p><span>
+        <b>本文地址：</b><a href="/2017/08/01/swoole-Task-Worker-篇/" title="swoole Task Worker 篇">http://www.iooeo.com/2017/08/01/swoole-Task-Worker-篇/</a><br/><b>转载请注明出处，谢谢！</b>
+        </span></p>
+        </div>
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="http://ogpq2zwg5.bkt.clouddn.com/WechatIMG15.jpeg" alt="Ewan WeChat Pay"/>
+          <p>微信打赏</p>
         </div>
       
       
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="http://ogpq2zwg5.bkt.clouddn.com/WechatIMG16.jpeg" alt="Ewan Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
 
       
+    </div>
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
+    <div>
+      
         
-            <a class="post-title-link" href="/2015/03/23/MySQL-存储例程/" itemprop="url">
-              
-                <span itemprop="name">MySQL 存储例程</span>
-              
-            </a>
-        
-      </h2>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2015-03-23T12:07:59+08:00"
-              content="2015-03-23" >
-          03-23
-        </time>
-      </div>
+      
+    </div>
 
-    </header>
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/PHP/" rel="tag"># PHP</a>
+          
+            <a href="/tags/Swoole/" rel="tag"># Swoole</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/08/01/swoole-初识-简单的-Server-Client/" rel="next" title="swoole 初识 简单的 Server Client">
+                <i class="fa fa-chevron-left"></i> swoole 初识 简单的 Server Client
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </article>
 
 
 
-    
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
 
-  </section>
-
-  
-
+      
+    </div>
+  </div>
 
 
           </div>
@@ -424,6 +635,12 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="SOHUCS"></div>
+    
+  </div>
+
 
         </div>
         
@@ -443,8 +660,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.png"
@@ -600,6 +826,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Task-实例"><span class="nav-number">1.</span> <span class="nav-text">Task 实例</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建-Server"><span class="nav-number">1.1.</span> <span class="nav-text">创建 Server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置task-worker-num"><span class="nav-number">1.2.</span> <span class="nav-text">设置task_worker_num</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#客户端链接回调"><span class="nav-number">1.3.</span> <span class="nav-text">客户端链接回调</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#接受客户端数据，使用-task"><span class="nav-number">1.4.</span> <span class="nav-text">接受客户端数据，使用 task</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置-Server-的-onTask-和-onFinish-事件回调函数"><span class="nav-number">1.5.</span> <span class="nav-text">设置 Server 的 onTask 和 onFinish 事件回调函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关闭"><span class="nav-number">1.6.</span> <span class="nav-text">关闭</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#执行程序"><span class="nav-number">1.7.</span> <span class="nav-text">执行程序</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -726,11 +968,9 @@
   
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
 
 
   
