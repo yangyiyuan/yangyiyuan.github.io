@@ -4,6 +4,31 @@
 
     
   <url>
+    <loc>http://www.iooeo.com/2017/08/01/swoole-Socket%E7%AF%87/</loc>
+    <lastmod>2017-08-01T03:17:54.000Z</lastmod>
+    <data>
+        <display>
+        <title>swoole Socket篇</title>
+        <pubTime>2017-08-01T02:50:21.000Z</pubTime>
+        
+        <tag>PHP</tag>
+         
+        <tag>Swoole</tag>
+         
+         
+           
+             
+              <breadCrumb title="PHP" url="http://www.iooeo.com/categories/PHP/"/>
+          
+             
+              <breadCrumb title="Swoole" url="http://www.iooeo.com/categories/PHP/Swoole/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.iooeo.com/2017/07/31/swoole-%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85%E7%AF%87/</loc>
     <lastmod>2017-07-31T10:07:38.000Z</lastmod>
     <data>

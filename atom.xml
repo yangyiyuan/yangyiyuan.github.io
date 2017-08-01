@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.iooeo.com/"/>
-  <updated>2017-07-31T10:07:38.000Z</updated>
+  <updated>2017-08-01T03:17:54.000Z</updated>
   <id>http://www.iooeo.com/</id>
   
   <author>
@@ -14,6 +14,42 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>swoole Socket篇</title>
+    <link href="http://www.iooeo.com/2017/08/01/swoole-Socket%E7%AF%87/"/>
+    <id>http://www.iooeo.com/2017/08/01/swoole-Socket篇/</id>
+    <published>2017-08-01T02:50:21.000Z</published>
+    <updated>2017-08-01T03:17:54.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>关于 PHP socket 的使用，我在之前的工作中使用过一些，自己也动手封装了关于 socket server 和 socket client 的类库，已共享到 GitHub 和码云上面：<br><a id="more"></a></p>
+<ul>
+<li><a href="https://github.com/yangyiyuan/simple-socket/tree/master" target="_blank" rel="external">Github PHP simple-socket</a></li>
+<li><a href="https://gitee.com/ewan.yang/simple-socket" target="_blank" rel="external">Oschina PHP simple-socket</a></li>
+</ul>
+<p>当然也有更好的例如 workerman 之类的 socket 开源项目。<br>但 socket 对于大部分 phper还是比较陌生的一个词语，百度上给出大部分网文关键字都是<em>套接字</em>，比较抽象难懂一些。<br>socket即套接字，是用来与另一个进程进行跨网络通信的文件，说是“文件”，也很好理解哈，因为在linux中一切都可以理解为“文件”。比如客户端可以借助socket与服务器之间建立连接。你也可以把socket理解为一组函数库，它确实也就是一堆函数。<br>我们知道，常见的网络应用都是基于Client-Server模型的。即一个服务器进程和多个客户端进程组合而成，如果你还理解为是一台电脑对另一台电脑，可以回去把进程/线程一文再看看了。在Client-Server模型中，服务器管理某种资源，并且通过对它管理的资源进行操作来为客户端提供服务。<br>那Client和Server又如何实现通信呢？这就要利用socket一系列的函数实现了。<br>基于套接字接口的网络应用的描述，用下面这张图来理解就好。<br><img src="http://ogpq2zwg5.bkt.clouddn.com/217f4d714f-socket-client-server.png" alt="套接字接口的网络应用的描述"></p>
+<p>大致可以描述为：</p>
+<blockquote>
+<p>服务器创建一个socket，绑定ip和端口，在该端口处进行监听，然后通过accept函数阻塞。<br>当有新的客户端连接进来时，server接收客户端数据并处理数据，然后返回给客户端，客户端关闭连接，server关闭该客户端，一次连接交互完成。</p>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;关于 PHP socket 的使用，我在之前的工作中使用过一些，自己也动手封装了关于 socket server 和 socket client 的类库，已共享到 GitHub 和码云上面：&lt;br&gt;
+    
+    </summary>
+    
+      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
+    
+      <category term="Swoole" scheme="http://www.iooeo.com/categories/PHP/Swoole/"/>
+    
+    
+      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
+    
+      <category term="Swoole" scheme="http://www.iooeo.com/tags/Swoole/"/>
+    
+  </entry>
   
   <entry>
     <title>swoole  编译安装篇</title>
@@ -672,52 +708,6 @@
       <category term="微语" scheme="http://www.iooeo.com/tags/%E5%BE%AE%E8%AF%AD/"/>
     
       <category term="胡侃" scheme="http://www.iooeo.com/tags/%E8%83%A1%E4%BE%83/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>lantern Mac版编译 免费</title>
-    <link href="http://www.iooeo.com/2017/07/07/lantern-Mac%E7%89%88%E7%BC%96%E8%AF%91-%E5%85%8D%E8%B4%B9/"/>
-    <id>http://www.iooeo.com/2017/07/07/lantern-Mac版编译-免费/</id>
-    <published>2017-07-07T03:06:12.000Z</published>
-    <updated>2017-07-07T09:52:32.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>蓝灯,Mac版编译</p>
-<h2 id="Homebrew"><a href="#Homebrew" class="headerlink" title="Homebrew"></a>Homebrew</h2><p><em>Homebrew</em>,macOS 缺失的软件包管理器,没用过的可以过去了解一下<a href="https://brew.sh/index_zh-cn.html" target="_blank" rel="external">Homebrew</a><br>lantern之前先安装一下<em>Homebrew</em>,终端输入<br><a id="more"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ /usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</div></pre></td></tr></table></figure></p>
-<p><em>Homebrew</em>安装完成以后,安装git,已安装的可以忽略<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ brew install git</div></pre></td></tr></table></figure></p>
-<h2 id="Node安装"><a href="#Node安装" class="headerlink" title="Node安装"></a>Node安装</h2><ul>
-<li>Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境</li>
-<li>Node.js 使用了一个事件驱动、非阻塞式 I/O 的模型,使其轻量又高效</li>
-<li>Node.js 的包管理器 npm,是全球最大的开源库生态系统<br><a href="http://nodejs.cn/download/" target="_blank" rel="external">Node下载</a>,选择Mac版下载,安装下一步下一步就行….</li>
-</ul>
-<h2 id="其他预安装"><a href="#其他预安装" class="headerlink" title="其他预安装"></a>其他预安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ brew install go</div><div class="line">$ npm i gulp-cli -g</div><div class="line">$ npm install -g appdmg</div><div class="line">$ npm install -g svgexport</div></pre></td></tr></table></figure>
-<h2 id="lantern-Mac编译"><a href="#lantern-Mac编译" class="headerlink" title="lantern Mac编译"></a>lantern Mac编译</h2><p>找个文件夹把lantern下载下来<br>可以直接用GitHub下载,cd到你放置lantern的文件夹,终端输入命令如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git clone --depth=1 https://github.com/getlantern/lantern.git</div></pre></td></tr></table></figure></p>
-<p>下载以后<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ cd lantern</div><div class="line">$ export VERSION=9.9.9</div><div class="line">$ make darwin</div></pre></td></tr></table></figure></p>
-<p>编译的时候回出现以下错误<br><img src="http://ogpq2zwg5.bkt.clouddn.com/WechatIMG7.jpeg" alt="编译是错误图片"><br>根据错误信息指出的路径在lantern文件夹中找到对应的文件及行数</p>
-<ul>
-<li>只需要把<em>MaxIdleTime</em>改为<em>IdleConnTimeout</em></li>
-<li>然后把下面紧接的调用<em>EnforceMaxIdleTime()</em>这个方法的语句注释掉</li>
-</ul>
-<p>就改这两个文件中的4行就行,重新编译<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ make darwin</div></pre></td></tr></table></figure></p>
-<p>编译完成后,你会在你的lantern文件夹中找到名为<em>lantern_darwin_amd64</em>的文件,说明完全没问题了</p>
-<h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><p>然后在你的Mac上搜索一下<em>lantern_darwin_amd64</em>,双击打开就可以了</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;蓝灯,Mac版编译&lt;/p&gt;
-&lt;h2 id=&quot;Homebrew&quot;&gt;&lt;a href=&quot;#Homebrew&quot; class=&quot;headerlink&quot; title=&quot;Homebrew&quot;&gt;&lt;/a&gt;Homebrew&lt;/h2&gt;&lt;p&gt;&lt;em&gt;Homebrew&lt;/em&gt;,macOS 缺失的软件包管理器,没用过的可以过去了解一下&lt;a href=&quot;https://brew.sh/index_zh-cn.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Homebrew&lt;/a&gt;&lt;br&gt;lantern之前先安装一下&lt;em&gt;Homebrew&lt;/em&gt;,终端输入&lt;br&gt;
-    
-    </summary>
-    
-      <category term="Mac" scheme="http://www.iooeo.com/categories/Mac/"/>
-    
-    
-      <category term="Mac" scheme="http://www.iooeo.com/tags/Mac/"/>
-    
-      <category term="lantern" scheme="http://www.iooeo.com/tags/lantern/"/>
-    
-      <category term="VPN" scheme="http://www.iooeo.com/tags/VPN/"/>
     
   </entry>
   

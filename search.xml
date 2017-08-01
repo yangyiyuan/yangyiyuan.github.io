@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[swoole Socket篇]]></title>
+    <url>%2F2017%2F08%2F01%2Fswoole-Socket%E7%AF%87%2F</url>
+    <content type="text"><![CDATA[关于 PHP socket 的使用，我在之前的工作中使用过一些，自己也动手封装了关于 socket server 和 socket client 的类库，已共享到 GitHub 和码云上面： Github PHP simple-socket Oschina PHP simple-socket 当然也有更好的例如 workerman 之类的 socket 开源项目。但 socket 对于大部分 phper还是比较陌生的一个词语，百度上给出大部分网文关键字都是套接字，比较抽象难懂一些。socket即套接字，是用来与另一个进程进行跨网络通信的文件，说是“文件”，也很好理解哈，因为在linux中一切都可以理解为“文件”。比如客户端可以借助socket与服务器之间建立连接。你也可以把socket理解为一组函数库，它确实也就是一堆函数。我们知道，常见的网络应用都是基于Client-Server模型的。即一个服务器进程和多个客户端进程组合而成，如果你还理解为是一台电脑对另一台电脑，可以回去把进程/线程一文再看看了。在Client-Server模型中，服务器管理某种资源，并且通过对它管理的资源进行操作来为客户端提供服务。那Client和Server又如何实现通信呢？这就要利用socket一系列的函数实现了。基于套接字接口的网络应用的描述，用下面这张图来理解就好。 大致可以描述为： 服务器创建一个socket，绑定ip和端口，在该端口处进行监听，然后通过accept函数阻塞。当有新的客户端连接进来时，server接收客户端数据并处理数据，然后返回给客户端，客户端关闭连接，server关闭该客户端，一次连接交互完成。]]></content>
+      <categories>
+        <category>PHP</category>
+        <category>Swoole</category>
+      </categories>
+      <tags>
+        <tag>PHP</tag>
+        <tag>Swoole</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[swoole 编译安装篇]]></title>
     <url>%2F2017%2F07%2F31%2Fswoole-%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85%E7%AF%87%2F</url>
     <content type="text"><![CDATA[前边几篇文章，分别记录了 进程与线程 I/O 模型 网络通讯协议 其实都是为了我们更好的学习 Swoole 打下基础，Swoole 几乎涉及到网络开发的方方面面，但是这些可能不是每个 phper所具备的。学了那么多网络基础知识，下面我们开始慢慢的接触 Swoole，后边有需要补充的网络知识，也会文章记录。 环境安装部分我只针对我自己的电脑做安装记录，其他系统的同学可以网上找相关教程。 macOS Sierra 10.12.6 PHP 5.6.28 gcc make autoconf Swoole 2.0.7 编译安装 下载 Swoole 最新版本到本地，官网下载链接 下载好以后解压 终端执行编译：12345$ cd swoole$ phpize$ ./configure$ make $ sudo make install 执行完以上命令，中途没有报错的话，就表示已经安装完成。下面我们来检查一下到底有没有安装成功：1234$ php -m | grep swooleswoole$ php --ri swoole | grep VersionVersion =&gt; 2.0.7 到这里，已经完全没有问题了。如果你安装中碰到什么问题，可以留言，也可以直接联系，让我们共同应对问题，一起成长！]]></content>
