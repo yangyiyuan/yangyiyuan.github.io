@@ -95,7 +95,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Ewan, PHP" />
+  <meta name="keywords" content="PHP,Swoole," />
 
 
 
@@ -113,15 +113,17 @@
 
 
 
-<meta name="description" content="The more effort ,the more lucky">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Ewan&#39;s Blog">
-<meta property="og:url" content="http://www.iooeo.com/tags/微语/index.html">
+<meta name="description" content="为了学 Swoole，我们在开始之前已经普及了很多的知识，这篇我们就要上手玩一把 Swoole，是不是感觉有点手痒了。。">
+<meta name="keywords" content="PHP,Swoole">
+<meta property="og:type" content="article">
+<meta property="og:title" content="swoole 初识 简单的 Server Client">
+<meta property="og:url" content="http://www.iooeo.com/2017/08/01/swoole-初识-简单的-Server-Client/index.html">
 <meta property="og:site_name" content="Ewan&#39;s Blog">
-<meta property="og:description" content="The more effort ,the more lucky">
+<meta property="og:description" content="为了学 Swoole，我们在开始之前已经普及了很多的知识，这篇我们就要上手玩一把 Swoole，是不是感觉有点手痒了。。">
+<meta property="og:updated_time" content="2017-08-01T06:22:13.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ewan&#39;s Blog">
-<meta name="twitter:description" content="The more effort ,the more lucky">
+<meta name="twitter:title" content="swoole 初识 简单的 Server Client">
+<meta name="twitter:description" content="为了学 Swoole，我们在开始之前已经普及了很多的知识，这篇我们就要上手玩一把 Swoole，是不是感觉有点手痒了。。">
 
 
 
@@ -149,13 +151,13 @@
 
 
 
-  <link rel="canonical" href="http://www.iooeo.com/tags/微语/"/>
+  <link rel="canonical" href="http://www.iooeo.com/2017/08/01/swoole-初识-简单的-Server-Client/"/>
 
 
 
 
 
-  <title>标签: 微语 | Ewan's Blog</title>
+  <title>swoole 初识 简单的 Server Client | Ewan's Blog</title>
   
 
 
@@ -190,7 +192,7 @@
     
   
 
-  <div class="container sidebar-position-left  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -358,128 +360,302 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h1>微语<small>标签</small>
-      </h1>
-    </div>
-
+  <div id="posts" class="posts-expand">
     
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/07/28/新的评论系统/" itemprop="url">
-              
-                <span itemprop="name">新的评论系统</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-07-28T15:08:41+08:00"
-              content="2017-07-28" >
-          07-28
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/07/07/评论系统相继关闭/" itemprop="url">
-              
-                <span itemprop="name">评论系统相继关闭</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-07-07T11:28:57+08:00"
-              content="2017-07-07" >
-          07-07
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2016/11/17/Firing！！！/" itemprop="url">
-              
-                <span itemprop="name">Firing！！！</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-11-17T16:06:39+08:00"
-              content="2016-11-17" >
-          11-17
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2014/09/14/About-Me/" itemprop="url">
-              
-                <span itemprop="name">About Me</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2014-09-14T16:42:17+08:00"
-              content="2014-09-14" >
-          09-14
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-  </div>
 
   
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.iooeo.com/2017/08/01/swoole-初识-简单的-Server-Client/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ewan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ewan's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">swoole 初识 简单的 Server Client</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-01T11:21:13+08:00">
+                2017-08-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/PHP/" itemprop="url" rel="index">
+                    <span itemprop="name">PHP</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/PHP/Swoole/" itemprop="url" rel="index">
+                    <span itemprop="name">Swoole</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/2017/08/01/swoole-初识-简单的-Server-Client/#SOHUCS" itemprop="discussionUrl">
+                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2017/08/01/swoole-初识-简单的-Server-Client/" itemprop="commentsCount"></span>
+                </a>
+              
+            
+          
+
+          
+          
+             <span id="/2017/08/01/swoole-初识-简单的-Server-Client/" class="leancloud_visitors" data-flag-title="swoole 初识 简单的 Server Client">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>为了学 Swoole，我们在开始之前已经普及了很多的知识，这篇我们就要上手玩一把 Swoole，是不是感觉有点手痒了。。<br><a id="more"></a><br>前边几篇分别记录了：</p>
+<ul>
+<li><a href="http://www.iooeo.com/2017/07/31/swoole-%E8%BF%9B%E7%A8%8B%E4%B8%8E%E7%BA%BF%E7%A8%8B%E7%AF%87/">进程与线程</a></li>
+<li><a href="http://www.iooeo.com/2017/07/31/swoole-I-O-%E6%A8%A1%E5%9E%8B/">I/O 模型</a></li>
+<li><a href="http://www.iooeo.com/2017/07/31/swoole-%E7%BD%91%E7%BB%9C%E9%80%9A%E8%AE%AF%E5%8D%8F%E8%AE%AE%E7%AF%87/">网络通讯协议</a></li>
+<li><a href="http://www.iooeo.com/2017/08/01/swoole-Socket%E7%AF%87/">socket</a></li>
+</ul>
+<p>都是一些简单的网路基础知识，不过这些最好要牢记。<br>然后就是 Swoole 扩展的安装：</p>
+<ul>
+<li><a href="http://www.iooeo.com/2017/07/31/swoole-%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85%E7%AF%87/">Swoole 扩展安装</a></li>
+</ul>
+<h2 id="Swoole-server"><a href="#Swoole-server" class="headerlink" title="Swoole server"></a>Swoole server</h2><h3 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h3><p>server 的创建其实非常简单，只需要我们在安装好扩展的基础上，实现以下代码就可以了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">// $serv = new swoole_server(string $host, int $port, int $mode = SWOOLE_PROCESS, int $sock_type = SWOOLE_SOCK_TCP);</div><div class="line">$serv = new swoole_server(&apos;127.0.0.1&apos;, 9501);</div></pre></td></tr></table></figure></p>
+<p>swoole_server 类的构造函数一共有四个参数，上面我们填写了两个 ，还有两个有默认值，不填也可。<br>swoole_server构造函数</p>
+<ul>
+<li>@param     $host         // 监听的 IP</li>
+<li>@param     $port        // 监听的端口</li>
+<li>@param int $mode        // 运行模式，swoole提供了3种运行模式，默认为SWOOLE_PROCESS多进程模式</li>
+<li>@param int $sock_type    // Socket的类型,支持TCP、UDP、TCP6、UDP6、UnixSocket Stream/Dgram 6种，默认为SWOOLE_SOCK_TCP TCP 类型</li>
+</ul>
+<h3 id="设置"><a href="#设置" class="headerlink" title="设置"></a>设置</h3><p><code>swoole_server-&gt;set()</code>函数用于设置swoole_server运行时的各项参数。服务器启动后通过$serv-&gt;setting来访问set函数设置的参数数组。<br>具体有哪些设置，我们后边慢慢学习，现在我们先实现一个简单的例子。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$serv-&gt;set([</div><div class="line">    &apos;worker_num&apos; =&gt; 2,</div><div class="line">]);</div></pre></td></tr></table></figure></p>
+<p>worker_num 设置启动的worker进程数量。swoole采用固定worker进程的模式。<br>PHP代码中是全异步非阻塞，worker_num配置为CPU核数的1-4倍即可。如果是同步阻塞，worker_num配置为100或者更高，具体要看每次请求处理的耗时和操作系统负载状况。</p>
+<h3 id="事件回调函数"><a href="#事件回调函数" class="headerlink" title="事件回调函数"></a>事件回调函数</h3><p><code>swoole_server-&gt;on()</code>注册Server的事件回调函数。</p>
+<ul>
+<li>第1个参数是回调的名称, 大小写不敏感，具体内容参考回调函数列表，事件名称字符串不要加on</li>
+<li>第2个函数是回调的PHP函数，可以是函数名的字符串，类静态方法，对象方法数组，匿名函数</li>
+</ul>
+<p>有新的客户端连接时，worker进程内会触发该回调<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$serv-&gt;on(&apos;Connect&apos;, function ($serv, $fd) &#123;</div><div class="line">    echo &quot;new client connected.\n&quot;;</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<p>server接收到客户端的数据后，worker进程内触发该回调<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$serv-&gt;on(&apos;Receive&apos;, function ($serv, $fd, $fromId, $data) &#123;</div><div class="line">    echo &quot;Get Message From Client &#123;$fd&#125;:&#123;$data&#125;\n&quot;;</div><div class="line">    $serv-&gt;send($fd, $data);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<p>客户端断开连接或者server主动关闭连接时 worker进程内调用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$serv-&gt;on(&apos;Close&apos;, function ($serv, $fd) &#123;</div><div class="line">    echo &quot;Client &#123;$fd&#125; close connection\n&quot;;</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<h3 id="启动server"><a href="#启动server" class="headerlink" title="启动server"></a>启动server</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$serv-&gt;start();</div></pre></td></tr></table></figure>
+<h2 id="Swoole-Client"><a href="#Swoole-Client" class="headerlink" title="Swoole Client"></a>Swoole Client</h2><h3 id="创建-1"><a href="#创建-1" class="headerlink" title="创建"></a>创建</h3><p>client 的创建一样非常简单<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$client = new swoole_client(SWOOLE_SOCK_TCP);</div></pre></td></tr></table></figure></p>
+<p>swoole_client 类的构造函数一共有三个参数。<br>swoole_client构造函数</p>
+<ul>
+<li>@param int $sock_type 指定socket的类型，支持TCP/UDP、TCP6/UDP6 4种</li>
+<li>@param int $sync_type SWOOLE_SOCK_SYNC/SWOOLE_SOCK_ASYNC  同步/异步</li>
+<li>@param string $connectionKey 链接的编号，用于长连接复用</li>
+</ul>
+<h3 id="建立连接"><a href="#建立连接" class="headerlink" title="建立连接"></a>建立连接</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$client-&gt;connect(&apos;127.0.0.1&apos;, 9501) || exit(&quot;connect failed. Error: &#123;$client-&gt;errCode&#125;\n&quot;);</div></pre></td></tr></table></figure>
+<h3 id="发送数据"><a href="#发送数据" class="headerlink" title="发送数据"></a>发送数据</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$client-&gt;send(&quot;hello server.&quot;);</div></pre></td></tr></table></figure>
+<h3 id="从服务端接收数据"><a href="#从服务端接收数据" class="headerlink" title="从服务端接收数据"></a>从服务端接收数据</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$response = $client-&gt;recv();</div></pre></td></tr></table></figure>
+<h3 id="输出接受到的数据"><a href="#输出接受到的数据" class="headerlink" title="输出接受到的数据"></a>输出接受到的数据</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">echo $response . PHP_EOL;</div></pre></td></tr></table></figure>
+<h3 id="关闭连接"><a href="#关闭连接" class="headerlink" title="关闭连接"></a>关闭连接</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$client-&gt;close();</div></pre></td></tr></table></figure>
+<h2 id="Server-和-Client-通讯"><a href="#Server-和-Client-通讯" class="headerlink" title="Server 和 Client 通讯"></a>Server 和 Client 通讯</h2><p>终端执行命令，将 server 挂起<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ php server.php</div></pre></td></tr></table></figure></p>
+<p>打开新的终端执行 client 程序，在此之前你可以使用一下命令查看 server 监听的9501端口的监听情况<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ netstat -an | grep 9501</div><div class="line">tcp4       0      0  127.0.0.1.9501         *.*                    LISTEN</div></pre></td></tr></table></figure></p>
+<p>从上边可以看到一些状态<em>tcp4</em>、<em>LISTEN</em>等关键信息<br>执行 client 代码程序：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ php client.php </div><div class="line">hello server.</div></pre></td></tr></table></figure></p>
+<p>运行 server的终端会显示如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ php server.php </div><div class="line">new client connected.</div><div class="line">Get Message From Client 1:hello server.</div><div class="line">Client 1 close connection</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>到这个地方我们已经简单的实现了 Swoole Server 和 Client 的链接通讯。</p>
+</blockquote>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div align="center">
+      
+        <div class="copyright">
+        <p><span>
+        <b>本文地址：</b><a href="/2017/08/01/swoole-初识-简单的-Server-Client/" title="swoole 初识 简单的 Server Client">http://www.iooeo.com/2017/08/01/swoole-初识-简单的-Server-Client/</a><br/><b>转载请注明出处，谢谢！</b>
+        </span></p>
+        </div>
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="http://ogpq2zwg5.bkt.clouddn.com/WechatIMG15.jpeg" alt="Ewan WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="http://ogpq2zwg5.bkt.clouddn.com/WechatIMG16.jpeg" alt="Ewan Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/PHP/" rel="tag"># PHP</a>
+          
+            <a href="/tags/Swoole/" rel="tag"># Swoole</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/08/01/swoole-Socket篇/" rel="next" title="swoole Socket篇">
+                <i class="fa fa-chevron-left"></i> swoole Socket篇
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
 
 
           </div>
@@ -487,6 +663,12 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="SOHUCS"></div>
+    
+  </div>
+
 
         </div>
         
@@ -506,8 +688,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.png"
@@ -663,6 +854,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Swoole-server"><span class="nav-number">1.</span> <span class="nav-text">Swoole server</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建"><span class="nav-number">1.1.</span> <span class="nav-text">创建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置"><span class="nav-number">1.2.</span> <span class="nav-text">设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#事件回调函数"><span class="nav-number">1.3.</span> <span class="nav-text">事件回调函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#启动server"><span class="nav-number">1.4.</span> <span class="nav-text">启动server</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Swoole-Client"><span class="nav-number">2.</span> <span class="nav-text">Swoole Client</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建-1"><span class="nav-number">2.1.</span> <span class="nav-text">创建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#建立连接"><span class="nav-number">2.2.</span> <span class="nav-text">建立连接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#发送数据"><span class="nav-number">2.3.</span> <span class="nav-text">发送数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#从服务端接收数据"><span class="nav-number">2.4.</span> <span class="nav-text">从服务端接收数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#输出接受到的数据"><span class="nav-number">2.5.</span> <span class="nav-text">输出接受到的数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关闭连接"><span class="nav-number">2.6.</span> <span class="nav-text">关闭连接</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Server-和-Client-通讯"><span class="nav-number">3.</span> <span class="nav-text">Server 和 Client 通讯</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -789,10 +996,10 @@
   
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
 
-  
+
 
   
 
