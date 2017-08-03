@@ -113,17 +113,19 @@
 
 
 
-<meta name="description" content="平时我们打开一个浏览器，然后输入网址后回车，即展现了一个网页的内容。这是一个非常简单的操作。我们来简单的概括下背后的逻辑。">
+<meta name="description" content="今天在跟硬件开发的小伙伴测试的时候发现了一个非常有趣的问题，即Client 每次请求，Server 端我返回相同信息，但是有时候会出现两次或多次返回的数据堆叠到一起的现象。开始我还以为我代码写的有问题，仔细看了一下代码没问题啊，终究还是要相信科学。">
 <meta name="keywords" content="PHP,Swoole">
 <meta property="og:type" content="article">
-<meta property="og:title" content="swoole 网络通讯协议篇">
-<meta property="og:url" content="http://www.iooeo.com/2017/07/31/swoole-网络通讯协议篇/index.html">
+<meta property="og:title" content="swoole 粘包 EOF 包头+包尾">
+<meta property="og:url" content="http://www.iooeo.com/2017/08/03/swoole-粘包-EOF/index.html">
 <meta property="og:site_name" content="Ewan&#39;s Blog">
-<meta property="og:description" content="平时我们打开一个浏览器，然后输入网址后回车，即展现了一个网页的内容。这是一个非常简单的操作。我们来简单的概括下背后的逻辑。">
-<meta property="og:updated_time" content="2017-07-31T09:20:16.000Z">
+<meta property="og:description" content="今天在跟硬件开发的小伙伴测试的时候发现了一个非常有趣的问题，即Client 每次请求，Server 端我返回相同信息，但是有时候会出现两次或多次返回的数据堆叠到一起的现象。开始我还以为我代码写的有问题，仔细看了一下代码没问题啊，终究还是要相信科学。">
+<meta property="og:image" content="http://ogpq2zwg5.bkt.clouddn.com/TCP%20%E7%B2%98%E5%8C%85.png">
+<meta property="og:updated_time" content="2017-08-03T09:29:46.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="swoole 网络通讯协议篇">
-<meta name="twitter:description" content="平时我们打开一个浏览器，然后输入网址后回车，即展现了一个网页的内容。这是一个非常简单的操作。我们来简单的概括下背后的逻辑。">
+<meta name="twitter:title" content="swoole 粘包 EOF 包头+包尾">
+<meta name="twitter:description" content="今天在跟硬件开发的小伙伴测试的时候发现了一个非常有趣的问题，即Client 每次请求，Server 端我返回相同信息，但是有时候会出现两次或多次返回的数据堆叠到一起的现象。开始我还以为我代码写的有问题，仔细看了一下代码没问题啊，终究还是要相信科学。">
+<meta name="twitter:image" content="http://ogpq2zwg5.bkt.clouddn.com/TCP%20%E7%B2%98%E5%8C%85.png">
 
 
 
@@ -151,13 +153,13 @@
 
 
 
-  <link rel="canonical" href="http://www.iooeo.com/2017/07/31/swoole-网络通讯协议篇/"/>
+  <link rel="canonical" href="http://www.iooeo.com/2017/08/03/swoole-粘包-EOF/"/>
 
 
 
 
 
-  <title>swoole 网络通讯协议篇 | Ewan's Blog</title>
+  <title>swoole 粘包 EOF 包头+包尾 | Ewan's Blog</title>
   
 
 
@@ -370,7 +372,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://www.iooeo.com/2017/07/31/swoole-网络通讯协议篇/">
+    <link itemprop="mainEntityOfPage" href="http://www.iooeo.com/2017/08/03/swoole-粘包-EOF/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Ewan">
@@ -387,7 +389,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">swoole 网络通讯协议篇</h1>
+          <h1 class="post-title" itemprop="name headline">swoole 粘包 EOF 包头+包尾</h1>
         
 
         <div class="post-meta">
@@ -399,8 +401,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-31T17:11:46+08:00">
-                2017-07-31
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-03T15:20:25+08:00">
+                2017-08-03
               </time>
             
 
@@ -452,8 +454,8 @@
                 <i class="fa fa-comment-o"></i>
               </span>
               
-                <a href="/2017/07/31/swoole-网络通讯协议篇/#SOHUCS" itemprop="discussionUrl">
-                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2017/07/31/swoole-网络通讯协议篇/" itemprop="commentsCount"></span>
+                <a href="/2017/08/03/swoole-粘包-EOF/#SOHUCS" itemprop="discussionUrl">
+                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2017/08/03/swoole-粘包-EOF/" itemprop="commentsCount"></span>
                 </a>
               
             
@@ -461,7 +463,7 @@
 
           
           
-             <span id="/2017/07/31/swoole-网络通讯协议篇/" class="leancloud_visitors" data-flag-title="swoole 网络通讯协议篇">
+             <span id="/2017/08/03/swoole-粘包-EOF/" class="leancloud_visitors" data-flag-title="swoole 粘包 EOF 包头+包尾">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -489,20 +491,61 @@
       
 
       
-        <p>平时我们打开一个浏览器，然后输入网址后回车，即展现了一个网页的内容。这是一个非常简单的操作。我们来简单的概括下背后的逻辑。<br><a id="more"></a></p>
-<ol>
-<li>浏览器通过TCP/IP协议建立到服务器的TCP连接</li>
-<li>客户端向服务器发送HTTP协议请求包，请求服务器里的资源文档</li>
-<li>服务器向客户端发送HTTP协议应答包，如果请求的资源包含有动态语言的内容，那么服务器会调用动态语言的解释引擎负责处理“动态内容”，并将处理得到的数据返回给客户端</li>
-<li>客户端与服务器断开，由客户端解释HTML文档，在客户端屏幕上渲染图形结果</li>
-</ol>
-<p>表面上看这就是两台电脑之间进行的一种通信。<br>更确切的说，是两台计算机上两个进程之间的通信。你打开浏览器相当于启动了一个浏览器进程，而服务端事先也启动了某个进程，在某个端口监听，时刻等待客户端的连接。</p>
-<p><em>那么问题来了，为什么客户端可以请求到服务器呢？服务器上跑那么多服务，又是怎么知道客户端想要什么呢？</em><br>其实答案很简单，因为有网络。计算机为了联网，就必须遵循通信协议。早期的互联网有很多协议，但是最重要的就非TCP协议和IP协议莫属了。所以，我们把互联网的协议简称为TCP/IP协议。</p>
-<p>想必大家都有过这样的经历，客户端通过telnet连接服务器的时候，往往都需要一个ip地址和一个端口。如果客户端跟服务器之间有数据的交互，其过程大致是这样的：</p>
-<h3 id="IP-协议"><a href="#IP-协议" class="headerlink" title="IP 协议"></a>IP 协议</h3><p>IP协议负责把你本机的数据发送到服务端，数据被分割成一块一块的。然后通过IP包发送出去。IP包的特点是按块发送，但不保证能到达，也不保证数据块依次到达。<br>如果是这样进行数据传输，服务器根本不能保证接收到的数据的完整性和顺序性，这样是不是就会有很大的问题呢？</p>
-<h3 id="TCP-协议"><a href="#TCP-协议" class="headerlink" title="TCP 协议"></a>TCP 协议</h3><p>于是乎，TCP协议应运而生，它是建立在IP协议之上，专门负责建立可靠连接，并保证数据包顺序到达。TCP协议会通过握手建立连接，然后，对每个IP包编号，确保对方顺序收到，如果出现丢包，则重新发送。<br>这个时候再说TCP协议是一种面向连接、可靠的、基于IP之上的传出层协议就不难理解了吧。</p>
-<p>TCP协议还有一个更重要的特点，它是基于<em>数据流</em>的。<br>什么意思呢？这就好比客户端和服务端要进行数据交互，中间有一个管子连接着，这个时候交互数据就好比管子中的水，当数据在传输（水在流动）的过程中，服务端是无法知道哪段数据是我们想要的完整数据。怎么解决这一问题呢？这个时候就需要双方约定一个协议来解决了。再往后说就说到应用层协议了，比如http协议，我们姑且不谈。</p>
-<h3 id="UDP-协议"><a href="#UDP-协议" class="headerlink" title="UDP 协议"></a>UDP 协议</h3><p>TCP懂了，UDP自然就不难理解了。<br>相对于TCP,使用UDP协议进行通信的最大区别就是，UDP不需要建立连接，给他一个ip和端口，就可以直接发送数据包了。但是，能不能成功到达就不知道了。虽然UDP传输不可靠，但是速度快。对于一些对数据要求不高的场景，使用UDP通信无疑是不错的选择。</p>
+        <p>今天在跟硬件开发的小伙伴测试的时候发现了一个非常有趣的问题，即Client 每次请求，Server 端我返回相同信息，但是有时候会出现两次或多次返回的数据堆叠到一起的现象。开始我还以为我代码写的有问题，仔细看了一下代码没问题啊，终究还是要相信科学。<br><a id="more"></a><br><img src="http://ogpq2zwg5.bkt.clouddn.com/TCP%20%E7%B2%98%E5%8C%85.png" alt="tcp 粘包"><br>经我多方查证，原来我们的问题是 TCP 粘包问题，下面科普一下。</p>
+<h2 id="TCP-粘包"><a href="#TCP-粘包" class="headerlink" title="TCP 粘包"></a>TCP 粘包</h2><h3 id="长连接和短连接"><a href="#长连接和短连接" class="headerlink" title="长连接和短连接"></a>长连接和短连接</h3><p>在讨论 TCP 粘包的问题前，我们先理解一下长连接和短连接。<br><code>长连接</code></p>
+<blockquote>
+<p>Client 与 Server 先建立通讯连接，连接建立后不断开， 然后再进行数据发送和接收。</p>
+</blockquote>
+<p><code>短连接</code></p>
+<blockquote>
+<p>Client 与 Server 每进行一次数据收发交易时才进行通讯连接，交易完毕后立即断开连接。此种方式常用于一点对多点通讯，比如多个Client连接一个Server。</p>
+</blockquote>
+<h3 id="什么是-TCP-粘包"><a href="#什么是-TCP-粘包" class="headerlink" title="什么是 TCP 粘包"></a>什么是 TCP 粘包</h3><p>TCP 粘包是指<em>发送方发送的若干包数据</em> 到 <em>接收方接收时粘成一包</em>，从接收缓冲区看，<em>后一包数据的头紧接着前一包数据的尾</em>。</p>
+<h3 id="TCP-出现粘包的原因"><a href="#TCP-出现粘包的原因" class="headerlink" title="TCP 出现粘包的原因"></a>TCP 出现粘包的原因</h3><ul>
+<li>发送方：发送方需要等缓冲区满才发送出去，造成粘包</li>
+<li>接收方：接收方不及时接收缓冲区的包，造成多个包接收</li>
+</ul>
+<h3 id="什么时候需要处理粘包"><a href="#什么时候需要处理粘包" class="headerlink" title="什么时候需要处理粘包"></a>什么时候需要处理粘包</h3><p><code>不处理：</code></p>
+<blockquote>
+<ul>
+<li>短连接，每次发送数据，就与对方建立连接，然后双方发送完一段数据后，就关闭连接，这样就不会出现粘包问题。</li>
+<li>如果发送数据无结构，如文件传输被分成多个分组发送，也不用考虑粘包。</li>
+</ul>
+</blockquote>
+<p><code>需处理：</code></p>
+<blockquote>
+<p>双方建立连接，需要在连接后一段时间内发送不同结构数据，如连接后，有好几种结构：<code>good morning</code>、<code>good evening</code>，如果发送方连续发了两个包出去，接收方可能就回收到<code>`good morninggood evening</code>很明显不是我们想要，需要处理。</p>
+</blockquote>
+<h2 id="Swoole-处理粘包"><a href="#Swoole-处理粘包" class="headerlink" title="Swoole 处理粘包"></a>Swoole 处理粘包</h2><p>既然了解了为什么会出现粘包现象和什么时候需要处理粘包，那下边就是想办法解决了。很显然我的需求得处理，很幸运 Swoole 已经提供了怎么解决粘包问题的方案。</p>
+<h3 id="EOF-结束协议"><a href="#EOF-结束协议" class="headerlink" title="EOF 结束协议"></a>EOF 结束协议</h3><p>之前我在翻阅 Swoole 文档过程中，在看到 Server 配置选项的时候，看到过<code>open_eof_check</code>、<code>open_eof_split</code>、<code>package_eof</code>…配置的时候，搂了两眼，感觉很深奥的样子，就一眼带过了。现在才知道它们是用来干嘛的。<br>EOF，即指每一个数据包的结尾加一个EOF标记，表示数据包的结束，但是如果你的数据本身含有EOF标记，那就会造成收到的数据包不完整，所以开启EOF支持后，应避免数据中含有EOF标记。<br>Server 的 <code>open_eof_check</code>设置为<code>true</code>时，打开EOF检测，此选项将检测客户端连接发来的数据，当数据包结尾是指定的EOF字符串时才会投递给Worker进程。否则会一直拼接数据包，直到超过缓存区或者超时才会中止。当出错时swoole底层会认为是恶意连接，丢弃数据并强制关闭连接。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$serv-&gt;set([</div><div class="line">	&apos;open_eof_check&apos; =&gt; true, //打开EOF检测</div><div class="line">	&apos;package_eof&apos; =&gt; &quot;\r\n&quot;, //设置EOF</div><div class="line">]);</div></pre></td></tr></table></figure></p>
+<p>常见的Memcache/SMTP/POP等协议都是以<code>\r\n</code>结束的，就可以使用以上配置。开启后可以保证Worker进程一次性总是收到一个或者多个完整的数据包。<br>虽然Swoole 已经帮我在服务端做了 EOF 结束协议，但是你不能保证客户端会一次性发过来几条数据，这样会出现一次性接受多个数据包的问题，因为EOF检测不会从数据中间查找eof字符串，所以Worker进程可能会同时收到多个数据包，需要在应用层代码中自行explode(“\r\n”, $data) 来拆分数据包。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">public function onReceive($serv, $fd, $fromId, $data)</div><div class="line">&#123;</div><div class="line">    $datas = explode(&quot;\r\n&quot;, $data);</div><div class="line">    foreach ($datas as $data)</div><div class="line">    &#123;</div><div class="line">        if(!$data)&#123;</div><div class="line">            continue;</div><div class="line">        &#125;</div><div class="line">        echo &quot;Server received data: &#123;$data&#125;&quot; . PHP_EOL;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>虽然我们可以自己拆分数据，但是Swoole1.7.15版本增加了<code>open_eof_split</code>，支持从数据中查找EOF，并切分数据，那我们何乐而不为呐?<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$serv-&gt;set([</div><div class="line">	&apos;open_eof_check&apos; =&gt; true, //打开EOF检测</div><div class="line">    &apos;package_eof&apos; =&gt; &quot;\r\n&quot;, //设置EOF</div><div class="line">	&apos;open_eof_split&apos; =&gt; true,</div><div class="line">]);</div></pre></td></tr></table></figure></p>
+<p>配置成上面这样，我们就不用自己在应用层代码中自行 <code>explode()</code>了。</p>
+<h3 id="发送长度-固定包头和包尾"><a href="#发送长度-固定包头和包尾" class="headerlink" title="发送长度 固定包头和包尾"></a>发送长度 固定包头和包尾</h3><p>发送长度：发送每条数据的时候，将数据的长度一并发送，比如可以选择每条数据的前4位是数据的长度，应用层处理时可以根据长度来判断每条数据的开始和结束。<br>在这种协议下，我们的数据包的组成就是包头+包体。其中包头就是包体长度的二进制形式。比如我们本来想向服务端发送一段数据 “Just a test.” 共12个字符，现在我们要发送的数据就应该是这样的<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pack(&apos;N&apos;, strlen(&quot;Just a test.&quot;)) . &quot;Just a test.&quot;</div></pre></td></tr></table></figure></p>
+<p><code>pack()</code>函数是将数据打包成二进制字符串，也就是我们的包头部分。<br>这样的话 Server 收到一个数据包（可能是多个完整的数据包）之后，会先解出包头指定的数据长度，然后按照这个长度取出后面的数据，如果一次性收到多个数据包，依次循环，如此就能保证Worker进程可以一次性收到一个完整的数据包。<br>Swoole 为我们提供一下几个配置选项：</p>
+<ul>
+<li><code>open_length_check</code>：打开包长检测特性</li>
+<li><code>package_length_type</code>：长度字段的类型，固定包头中用一个4字节或2字节表示包体长度，文章最后给出详细长度值的类型</li>
+<li><code>package_length_offset</code>：从第几个字节开始是长度，比如包头长度为120字节，第10个字节为长度值，这里填入9（从0开始计数）</li>
+<li><code>package_body_offset</code>：从第几个字节开始计算长度，比如包头为长度为120字节，第10个字节为长度值，包体长度为1000。如果长度包含包头，这里填入0，如果不包含包头，这里填入120</li>
+<li><code>package_max_length</code>：最大允许的包长度。因为在一个请求包完整接收前，需要将所有数据保存在内存中，所以需要做保护。避免内存占用过大。</li>
+</ul>
+<p>具体配置就写这样：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$serv-&gt;set([</div><div class="line">    &apos;open_length_check&apos;     =&gt; true,      // 开启协议解析</div><div class="line">    &apos;package_length_type&apos;   =&gt; &apos;N&apos;,     // 长度字段的类型</div><div class="line">    &apos;package_length_offset&apos; =&gt; 0,       //第几个字节是包长度的值</div><div class="line">    &apos;package_body_offset&apos;   =&gt; 4,       //第几个字节开始计算长度</div><div class="line">    &apos;package_max_length&apos;    =&gt; 81920,  //协议最大长度</div><div class="line">]);</div></pre></td></tr></table></figure></p>
+<p>数据处理部分为这样：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">public function onReceive($serv, $fd, $fromId, $data)</div><div class="line">&#123;</div><div class="line">    $info = unpack(&apos;N&apos;, $data);</div><div class="line">    $len = $info[1];</div><div class="line">    $body = substr($data, - $len);</div><div class="line">    echo &quot;server received data: &#123;$body&#125;\n&quot;;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>完成这些，这种方案就算完成了。</p>
+<h4 id="package-length-type-长度值的类型"><a href="#package-length-type-长度值的类型" class="headerlink" title="package_length_type 长度值的类型"></a>package_length_type 长度值的类型</h4><p>长度值的类型，接受一个字符参数，与php的pack函数一致。目前swoole支持10种类型：</p>
+<ul>
+<li>c：有符号、1字节</li>
+<li>C：无符号、1字节</li>
+<li>s ：有符号、主机字节序、2字节</li>
+<li>S：无符号、主机字节序、2字节</li>
+<li>n：无符号、网络字节序、2字节 (常用)</li>
+<li>N：无符号、网络字节序、4字节 (常用)</li>
+<li>l：有符号、主机字节序、4字节（小写L）</li>
+<li>L：无符号、主机字节序、4字节（大写L）</li>
+<li>v：无符号、小端字节序、2字节</li>
+<li>V：无符号、小端字节序、4字节</li>
+</ul>
 
       
     </div>
@@ -518,7 +561,7 @@
       
         <div class="copyright">
         <p><span>
-        <b>本文地址：</b><a href="/2017/07/31/swoole-网络通讯协议篇/" title="swoole 网络通讯协议篇">http://www.iooeo.com/2017/07/31/swoole-网络通讯协议篇/</a><br/><b>转载请注明出处，谢谢！</b>
+        <b>本文地址：</b><a href="/2017/08/03/swoole-粘包-EOF/" title="swoole 粘包 EOF 包头+包尾">http://www.iooeo.com/2017/08/03/swoole-粘包-EOF/</a><br/><b>转载请注明出处，谢谢！</b>
         </span></p>
         </div>
         
@@ -573,8 +616,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/07/31/swoole-I-O-模型/" rel="next" title=" swoole I/O 模型">
-                <i class="fa fa-chevron-left"></i>  swoole I/O 模型
+              <a href="/2017/08/03/lantern-运行时关闭终端/" rel="next" title="lantern 运行时关闭终端">
+                <i class="fa fa-chevron-left"></i> lantern 运行时关闭终端
               </a>
             
           </div>
@@ -582,10 +625,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/07/31/swoole-编译安装篇/" rel="prev" title="swoole  编译安装篇">
-                swoole  编译安装篇 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -832,7 +871,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#IP-协议"><span class="nav-number">1.</span> <span class="nav-text">IP 协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP-协议"><span class="nav-number">2.</span> <span class="nav-text">TCP 协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UDP-协议"><span class="nav-number">3.</span> <span class="nav-text">UDP 协议</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#TCP-粘包"><span class="nav-number">1.</span> <span class="nav-text">TCP 粘包</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#长连接和短连接"><span class="nav-number">1.1.</span> <span class="nav-text">长连接和短连接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是-TCP-粘包"><span class="nav-number">1.2.</span> <span class="nav-text">什么是 TCP 粘包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP-出现粘包的原因"><span class="nav-number">1.3.</span> <span class="nav-text">TCP 出现粘包的原因</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么时候需要处理粘包"><span class="nav-number">1.4.</span> <span class="nav-text">什么时候需要处理粘包</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Swoole-处理粘包"><span class="nav-number">2.</span> <span class="nav-text">Swoole 处理粘包</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#EOF-结束协议"><span class="nav-number">2.1.</span> <span class="nav-text">EOF 结束协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#发送长度-固定包头和包尾"><span class="nav-number">2.2.</span> <span class="nav-text">发送长度 固定包头和包尾</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#package-length-type-长度值的类型"><span class="nav-number">2.2.1.</span> <span class="nav-text">package_length_type 长度值的类型</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
