@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[lantern 运行时关闭终端]]></title>
+    <url>%2F2017%2F08%2F03%2Flantern-%E8%BF%90%E8%A1%8C%E6%97%B6%E5%85%B3%E9%97%AD%E7%BB%88%E7%AB%AF%2F</url>
+    <content type="text"><![CDATA[之前写过一篇 Mac 上破解 lantern 的文章lantern Mac版编译 无限流量。小伙伴胖佳说可以运行了，但是有个终端会一直开着，关闭掉以后 lantern 就终止执行了，也就不能翻墙了，今天想到了一个办法。接着上篇文章继续，Mac上搜索一下lantern_darwin_amd64,双击打开以后，会出现一个终端，上边不停的有各种信息出现，此时我们是可以正常使用的。但是一直开着个终端，有点不爽，首先我们把 lantern 执行终端滚到最上边会看到一下命令：其实我们就是想要lantern_darwin_amd64文件路径，然后你的.bash_profile或者.profile中添加以下命令：1alias lantern=&apos;/Users/yangyiyuan/projects/landeng/lantern/lantern_darwin_amd64 &amp; exit&apos; 将上边的文件路径换成你自己的就可以了，然后终端执行：1$ source .bash_profile 这样就可以了，以后我们要启动蓝灯，直接打开终端执行：1$ lantern 然后关闭窗口就可以了。]]></content>
+      <categories>
+        <category>Mac</category>
+      </categories>
+      <tags>
+        <tag>Mac</tag>
+        <tag>lantern</tag>
+        <tag>VPN</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[swoole 进程守护 日志保存]]></title>
+    <url>%2F2017%2F08%2F03%2Fswoole-%E8%BF%9B%E7%A8%8B%E5%AE%88%E6%8A%A4-%E6%97%A5%E5%BF%97%E4%BF%9D%E5%AD%98%2F</url>
+    <content type="text"><![CDATA[前边我已经学会了 Swoole 的 Server 和 Client，也用他们做了不同压力测试、并发测试等等。但是终究离应用到实际项目还差一步，因为没有开启进程守护，只要我的终端关掉了，程序也就中断执行了。其实在写这篇之前，不依赖 Swoole 为我们提供的方法，如果 Linux 算熟悉的话，自己也能想到办法：12]]></content>
+      <categories>
+        <category>PHP</category>
+        <category>Swoole</category>
+      </categories>
+      <tags>
+        <tag>PHP</tag>
+        <tag>Swoole</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[swoole Worker进程]]></title>
     <url>%2F2017%2F08%2F01%2Fswoole-Worker%E8%BF%9B%E7%A8%8B%2F</url>
     <content type="text"><![CDATA[在文章之前先看两张图片，试着去理解一下Swoole Server运行流程和进程/线程结构. 运行流程图 进程/线程结构图为了能更好的理解Swoole Server 的运行流程，下面我们创一个简单的实例server-process.php配合上面的图片进行讲解。1234567891011121314151617$serv = new swoole_server(&apos;127.0.0.1&apos;, 9501);$serv-&gt;set([ &apos;worker_num&apos; =&gt; 2, &apos;task_worker_num&apos; =&gt; 1,]);$serv-&gt;on(&apos;Connect&apos;, function ($serv, $fd) &#123;&#125;);$serv-&gt;on(&apos;Receive&apos;, function ($serv, $fd, $fromId, $data) &#123;&#125;);$serv-&gt;on(&apos;Close&apos;, function ($serv, $fd) &#123;&#125;);$serv-&gt;on(&apos;Task&apos;, function ($serv, $taskId, $fromId, $data) &#123;&#125;);$serv-&gt;on(&apos;Finish&apos;, function ($serv, $taskId, $data) &#123;&#125;);$serv-&gt;start(); 然后执行 ps 命令查看：1234567$ ps aux | grep server-processroot 21843 xxx... php server-process.phproot 21844 xxx... php server-process.phproot 21846 xxx... php server-process.phproot 21847 xxx... php server-process.phproot 21848 xxx... php server-process.phproot 21854 xxx... grep --color=auto server-process 排除掉 grep 那条，一共有5条。相比Master-Worker模式，swoole 的进程模型可以用Master-Manager-Worker来形容。即在Master-Worker的基础上又增加了一层Manager进程。 1个 Master 进程 1个 Manager 进程 2个 Worker 进程 1个 Task 进程 Swoole 是一个多进程模式的框架（可以类比Nginx的进程模型），当启动一个Swoole应用时，一共会创建2 + n + m个进程，其中n为 Worker 进程数，m为TaskWorker进程数，2为一个 Master 进程和一个 Manager 进程，它们之间的关系如下图所示。其中，Master进程为主进程，该进程会创建Manager进程、Reactor线程等工作进/线程。 Reactor线程实际运行epoll实例，用于accept客户端连接以及接收客户端数据； Manager进程为管理进程，该进程的作用是创建、管理所有的Worker进程和TaskWorker进程。]]></content>

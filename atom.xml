@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.iooeo.com/"/>
-  <updated>2017-08-01T08:16:34.000Z</updated>
+  <updated>2017-08-03T03:52:15.000Z</updated>
   <id>http://www.iooeo.com/</id>
   
   <author>
@@ -14,6 +14,63 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>lantern 运行时关闭终端</title>
+    <link href="http://www.iooeo.com/2017/08/03/lantern-%E8%BF%90%E8%A1%8C%E6%97%B6%E5%85%B3%E9%97%AD%E7%BB%88%E7%AB%AF/"/>
+    <id>http://www.iooeo.com/2017/08/03/lantern-运行时关闭终端/</id>
+    <published>2017-08-03T03:34:39.000Z</published>
+    <updated>2017-08-03T03:52:15.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>之前写过一篇 Mac 上破解 lantern 的文章<a href="http://www.iooeo.com/2017/07/07/lantern-Mac%E7%89%88%E7%BC%96%E8%AF%91-%E5%85%8D%E8%B4%B9/">lantern Mac版编译 无限流量</a>。小伙伴胖佳说可以运行了，但是有个终端会一直开着，关闭掉以后 lantern 就终止执行了，也就不能翻墙了，今天想到了一个办法。<br><a id="more"></a><br>接着上篇文章继续，Mac上搜索一下lantern_darwin_amd64,双击打开以后，会出现一个终端，上边不停的有各种信息出现，此时我们是可以正常使用的。<br>但是一直开着个终端，有点不爽，首先我们把 lantern 执行终端滚到最上边会看到一下命令：<br><img src="http://ogpq2zwg5.bkt.clouddn.com/lantern%20%E6%89%A7%E8%A1%8C%E7%BB%88%E7%AB%AF.png" alt="lantern 执行终端"><br>其实我们就是想要<code>lantern_darwin_amd64</code>文件路径，然后你的<code>.bash_profile</code>或者<code>.profile</code>中添加以下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">alias lantern=&apos;/Users/yangyiyuan/projects/landeng/lantern/lantern_darwin_amd64 &amp; exit&apos;</div></pre></td></tr></table></figure></p>
+<p>将上边的文件路径换成你自己的就可以了，然后终端执行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ source .bash_profile</div></pre></td></tr></table></figure></p>
+<p>这样就可以了，以后我们要启动蓝灯，直接打开终端执行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ lantern</div></pre></td></tr></table></figure></p>
+<p>然后关闭窗口就可以了。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;之前写过一篇 Mac 上破解 lantern 的文章&lt;a href=&quot;http://www.iooeo.com/2017/07/07/lantern-Mac%E7%89%88%E7%BC%96%E8%AF%91-%E5%85%8D%E8%B4%B9/&quot;&gt;lantern Mac版编译 无限流量&lt;/a&gt;。小伙伴胖佳说可以运行了，但是有个终端会一直开着，关闭掉以后 lantern 就终止执行了，也就不能翻墙了，今天想到了一个办法。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Mac" scheme="http://www.iooeo.com/categories/Mac/"/>
+    
+    
+      <category term="Mac" scheme="http://www.iooeo.com/tags/Mac/"/>
+    
+      <category term="lantern" scheme="http://www.iooeo.com/tags/lantern/"/>
+    
+      <category term="VPN" scheme="http://www.iooeo.com/tags/VPN/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>swoole 进程守护 日志保存</title>
+    <link href="http://www.iooeo.com/2017/08/03/swoole-%E8%BF%9B%E7%A8%8B%E5%AE%88%E6%8A%A4-%E6%97%A5%E5%BF%97%E4%BF%9D%E5%AD%98/"/>
+    <id>http://www.iooeo.com/2017/08/03/swoole-进程守护-日志保存/</id>
+    <published>2017-08-03T02:56:59.000Z</published>
+    <updated>2017-08-03T03:52:33.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>前边我已经学会了 Swoole 的 Server 和 Client，也用他们做了不同压力测试、并发测试等等。但是终究离应用到实际项目还差一步，因为没有开启进程守护，只要我的终端关掉了，程序也就中断执行了。<br><a id="more"></a><br>其实在写这篇之前，不依赖 Swoole 为我们提供的方法，如果 Linux 算熟悉的话，自己也能想到办法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;前边我已经学会了 Swoole 的 Server 和 Client，也用他们做了不同压力测试、并发测试等等。但是终究离应用到实际项目还差一步，因为没有开启进程守护，只要我的终端关掉了，程序也就中断执行了。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
+    
+      <category term="Swoole" scheme="http://www.iooeo.com/categories/PHP/Swoole/"/>
+    
+    
+      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
+    
+      <category term="Swoole" scheme="http://www.iooeo.com/tags/Swoole/"/>
+    
+  </entry>
   
   <entry>
     <title>swoole Worker进程</title>
@@ -719,68 +776,6 @@
     
     
       <category term="Hexo" scheme="http://www.iooeo.com/tags/Hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Yii2 表单提交错误调试</title>
-    <link href="http://www.iooeo.com/2017/07/20/Yii2-%E8%A1%A8%E5%8D%95%E6%8F%90%E4%BA%A4%E9%94%99%E8%AF%AF%E8%B0%83%E8%AF%95/"/>
-    <id>http://www.iooeo.com/2017/07/20/Yii2-表单提交错误调试/</id>
-    <published>2017-07-20T05:59:02.000Z</published>
-    <updated>2017-07-20T06:47:30.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>在使用yii 开发项目的时候经常碰到一些数据插入时提交失败的情况，为了更精准的找到错误，yii 给我提供一下方法，用以调试<br><a id="more"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">echo current(array_values($model-&gt;getFirstErrors()));</div><div class="line">exit;</div></pre></td></tr></table></figure></p>
-<p><em>model</em>调用<em>load()</em>方法时出错时，用这个方法也可以</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;在使用yii 开发项目的时候经常碰到一些数据插入时提交失败的情况，为了更精准的找到错误，yii 给我提供一下方法，用以调试&lt;br&gt;
-    
-    </summary>
-    
-      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
-    
-      <category term="Yii2" scheme="http://www.iooeo.com/categories/PHP/Yii2/"/>
-    
-    
-      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
-    
-      <category term="Yii2" scheme="http://www.iooeo.com/tags/Yii2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Mac Python 版本切换</title>
-    <link href="http://www.iooeo.com/2017/07/20/Mac-Python-%E7%89%88%E6%9C%AC%E5%88%87%E6%8D%A2/"/>
-    <id>http://www.iooeo.com/2017/07/20/Mac-Python-版本切换/</id>
-    <published>2017-07-20T03:24:50.000Z</published>
-    <updated>2017-07-20T03:42:34.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Mac 上自带的 Python 版本是2.7的，对于编程语言的发展来说，每一个大的版本更新都有很大的改变，所以我碰到了版本切换的问题。<br><a id="more"></a></p>
-<h2 id="下载安装新版本"><a href="#下载安装新版本" class="headerlink" title="下载安装新版本"></a>下载安装新版本</h2><p>首先去官网下载一个最新的Python 版本，<a href="https://www.python.org/downloads/mac-osx/" target="_blank" rel="external">下载链接</a><br>下载好以后下一步下一步安装就可以了。</p>
-<h2 id="切换-Python-版本"><a href="#切换-Python-版本" class="headerlink" title="切换 Python 版本"></a>切换 Python 版本</h2><p>安装好以后不代表就完成版本切换了。不信的话，你可以终端执行一下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ python -V</div></pre></td></tr></table></figure></p>
-<p>显示的还是2.7（老版本）的版本，那下面就开始切换吧</p>
-<ul>
-<li>首先要找到你新版本安装的路径<em>/usr/local/bin/python3</em></li>
-<li>修改软链接到你所安装的python版本中：默认python命令是在/usr/bin/目录下 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ sudo mv /usr/bin/python /usr/bin/python2.7.0</div><div class="line">$ sudo ln -s /usr/local/bin/python3 /usr/bin/python  #把系统默认python命令改成python3</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>完成以后在终端输入<code>python -V</code>即可查看python版本了，反正我是是最新的版本了。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Mac 上自带的 Python 版本是2.7的，对于编程语言的发展来说，每一个大的版本更新都有很大的改变，所以我碰到了版本切换的问题。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="python" scheme="http://www.iooeo.com/categories/python/"/>
-    
-    
-      <category term="python" scheme="http://www.iooeo.com/tags/python/"/>
-    
-      <category term="Mac" scheme="http://www.iooeo.com/tags/Mac/"/>
     
   </entry>
   
