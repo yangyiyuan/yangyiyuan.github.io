@@ -50,9 +50,9 @@
     <link href="http://www.iooeo.com/2017/08/03/swoole-%E8%BF%9B%E7%A8%8B%E5%AE%88%E6%8A%A4-%E6%97%A5%E5%BF%97%E4%BF%9D%E5%AD%98/"/>
     <id>http://www.iooeo.com/2017/08/03/swoole-进程守护-日志保存/</id>
     <published>2017-08-03T02:56:59.000Z</published>
-    <updated>2017-08-03T06:23:38.000Z</updated>
+    <updated>2017-08-03T06:50:28.000Z</updated>
     
-    <content type="html"><![CDATA[<p>前边我已经学会了 Swoole 的 Server 和 Client，也用他们做了不同压力测试、并发测试等等。但是终究离应用到实际项目还差一步，因为没有开启进程守护，只要我的终端关掉了，程序也就中断执行了。<br><a id="more"></a><br>其实在写这篇之前，不依赖 Swoole 为我们提供的方法，如果 Linux 算熟悉的话，自己也能想到办法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ php server.php &amp; &gt; server_log.log</div></pre></td></tr></table></figure></p>
+    <content type="html"><![CDATA[<p>前边我已经学会了 Swoole 的 Server 和 Client，也用他们做了不同压力测试、并发测试等等。但是终究离应用到实际项目还差一步，因为没有开启进程守护，只要我的终端关掉了，程序也就中断执行了。<br><a id="more"></a><br>其实在写这篇之前，不依赖 Swoole 为我们提供的方法，如果 Linux 算熟悉的话，自己也能想到办法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ php server.php &gt; server_log.log &amp;</div></pre></td></tr></table></figure></p>
 <h2 id="进程守护-日志保存"><a href="#进程守护-日志保存" class="headerlink" title="进程守护 日志保存"></a>进程守护 日志保存</h2><p>但是既然 Swoole 给提供了，那我们就开看一下怎么用的吧。<br>将<code>daemonize</code>设置为<code>true</code>时，程序将转入后台作为守护进程运行。长时间运行的服务器端程序必须启用此项。如果不启用守护进程，当ssh终端退出后，程序将被终止运行。</p>
 <ul>
 <li>启用守护进程后，标准输入和输出会被重定向到 log_file</li>
