@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.iooeo.com/"/>
-  <updated>2017-08-03T09:29:46.000Z</updated>
+  <updated>2017-08-04T07:08:00.000Z</updated>
   <id>http://www.iooeo.com/</id>
   
   <author>
@@ -14,6 +14,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>swoole TCP服务器心跳维持方案</title>
+    <link href="http://www.iooeo.com/2017/08/04/swoole-TCP%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%BF%83%E8%B7%B3%E7%BB%B4%E6%8C%81%E6%96%B9%E6%A1%88/"/>
+    <id>http://www.iooeo.com/2017/08/04/swoole-TCP服务器心跳维持方案/</id>
+    <published>2017-08-04T06:40:30.000Z</published>
+    <updated>2017-08-04T07:08:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>正常情况下客户端中断TCP连接时，会发送一个FIN包，进行4次断开握手来通知服务器。但一些异常情况下，如客户端突然断电断网或者网络异常，服务器可能无法得知客户端已断开连接。<br>尤其是移动网络，TCP连接非常不稳定，所以需要一套机制来保证服务器和客户端之间连接的有效性。<br><a id="more"></a><br>Swoole扩展本身内置了这种机制，开发者只需要配置一个参数即可启用。Swoole在每次收到客户端数据会记录一个时间戳，当客户端在一定时间内未向服务器端发送数据，那服务器会自动切断连接。<br>使用方法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$serv-&gt;set(array(</div><div class="line">    &apos;heartbeat_check_interval&apos; =&gt; 60,</div><div class="line">    &apos;heartbeat_idle_time&apos; =&gt; 300,</div><div class="line">));</div></pre></td></tr></table></figure></p>
+<p>上面的设置就是每60秒侦测一次心跳，一个TCP连接如果在300秒内未向服务器端发送数据，将会被切断。当然我这个长连接，这样做是为了回收进程。</p>
+<p>高级用法：<br>使用<code>swoole_server::heartbeat()</code>函数手工检测心跳是否到期。此函数会返回闲置时间超过<code>heartbeat_idle_time</code>的所有TCP连接。程序中可以将这些连接做一些操作，如发送数据或关闭连接。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;正常情况下客户端中断TCP连接时，会发送一个FIN包，进行4次断开握手来通知服务器。但一些异常情况下，如客户端突然断电断网或者网络异常，服务器可能无法得知客户端已断开连接。&lt;br&gt;尤其是移动网络，TCP连接非常不稳定，所以需要一套机制来保证服务器和客户端之间连接的有效性。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
+    
+      <category term="Swoole" scheme="http://www.iooeo.com/categories/PHP/Swoole/"/>
+    
+    
+      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
+    
+      <category term="Swoole" scheme="http://www.iooeo.com/tags/Swoole/"/>
+    
+  </entry>
   
   <entry>
     <title>swoole 粘包 EOF 包头+包尾</title>
@@ -828,30 +857,6 @@
     <summary type="html">
     
       &lt;p&gt;如果你想将博客底部修改的话，找到&lt;em&gt;/themes/next/layout/_partials/footer.swig&lt;/em&gt;，&lt;br&gt;
-    
-    </summary>
-    
-      <category term="Hexo" scheme="http://www.iooeo.com/categories/Hexo/"/>
-    
-    
-      <category term="Hexo" scheme="http://www.iooeo.com/tags/Hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo  文章版权转载链接</title>
-    <link href="http://www.iooeo.com/2017/07/20/Hexo-%E6%96%87%E7%AB%A0%E7%89%88%E6%9D%83%E8%BD%AC%E8%BD%BD%E9%93%BE%E6%8E%A5/"/>
-    <id>http://www.iooeo.com/2017/07/20/Hexo-文章版权转载链接/</id>
-    <published>2017-07-20T07:50:12.000Z</published>
-    <updated>2017-07-20T07:53:36.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>如果文章末尾需要添加版权信息和转载链接的话，找到<em>/hemes/next/layout/_macro/post.swig</em>，<br><a id="more"></a><br>找到其中的打赏部分代码，如下所示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;div&gt;</div><div class="line">  &#123;% if ! is_index %&#125;</div><div class="line">    &#123;% include &apos;reward.swig&apos; %&#125;</div><div class="line">  &#123;% endif %&#125;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p>
-<p>修改成下面这个样子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;div align=&quot;center&quot;&gt;</div><div class="line">  &#123;% if not is_index %&#125;</div><div class="line">    &lt;div class=&quot;copyright&quot;&gt;</div><div class="line">    &lt;p&gt;&lt;span&gt;</div><div class="line">    &lt;b&gt;本文地址：&lt;/b&gt;&lt;a href=&quot;&#123;&#123; url_for(page.path) &#125;&#125;&quot; title=&quot;&#123;&#123; page.title &#125;&#125;&quot;&gt;&#123;&#123; page.permalink &#125;&#125;&lt;/a&gt;&lt;br/&gt;&lt;b&gt;转载请注明出处，谢谢！&lt;/b&gt;</div><div class="line">    &lt;/span&gt;&lt;/p&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">    &#123;% include &apos;reward.swig&apos; %&#125;</div><div class="line">  &#123;% endif %&#125;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;如果文章末尾需要添加版权信息和转载链接的话，找到&lt;em&gt;/hemes/next/layout/_macro/post.swig&lt;/em&gt;，&lt;br&gt;
     
     </summary>
     
