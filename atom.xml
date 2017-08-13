@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.iooeo.com/"/>
-  <updated>2017-08-04T07:08:00.000Z</updated>
+  <updated>2017-08-13T01:27:26.000Z</updated>
   <id>http://www.iooeo.com/</id>
   
   <author>
@@ -14,6 +14,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CRC16 For PHP</title>
+    <link href="http://www.iooeo.com/2017/08/13/CRC16-For-PHP/"/>
+    <id>http://www.iooeo.com/2017/08/13/CRC16-For-PHP/</id>
+    <published>2017-08-13T01:06:54.000Z</published>
+    <updated>2017-08-13T01:27:26.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>随着物联网技术的发展和普及，作为最好的语言 PHP 也难免会遇上与硬件设备数据对接的情况。在数据通信领域中有一种查错校验码，CRC。<br>在 PHP 官网上搜索了一下，只提供 CRC32 的相关的函数，关于 CRC16 我自己封装了一个方法用于校验计算。然后我将代码整理了一番，已发布到 GitHub，有需要的同学可以去看下，或许我们可以共同维护他。项目地址<a href="https://github.com/yangyiyuan/CRC16ForPHP" target="_blank" rel="external">CRC16ForPHP</a><br>具体实现代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">function crc16Modbus($str)</div><div class="line">&#123;</div><div class="line">    $data = pack(&apos;H*&apos;, $str);</div><div class="line">    $crc = 0xFFFF;</div><div class="line">    for ($i = 0; $i &lt; strlen($data); $i++) &#123;</div><div class="line">        $crc ^= ord($data[$i]);</div><div class="line">        for ($j = 8; $j != 0; $j--) &#123;</div><div class="line">            if (($crc &amp; 0x0001) != 0) &#123;</div><div class="line">                $crc &gt;&gt;= 1;</div><div class="line">                $crc ^= 0xA001;</div><div class="line">            &#125; else $crc &gt;&gt;= 1;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    return sprintf(&apos;%04X&apos;, $crc);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>用法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">echo crc16(&apos;010301180001&apos;).PHP_EOL;</div></pre></td></tr></table></figure></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;随着物联网技术的发展和普及，作为最好的语言 PHP 也难免会遇上与硬件设备数据对接的情况。在数据通信领域中有一种查错校验码，CRC。&lt;br&gt;在 PHP 官网上搜索了一下，只提供 CRC32 的相关的函数，关于 CRC16 我自己封装了一个方法用于校验计算。然后我将代码整理了
+    
+    </summary>
+    
+      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
+    
+    
+      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
+    
+      <category term="CRC16" scheme="http://www.iooeo.com/tags/CRC16/"/>
+    
+  </entry>
   
   <entry>
     <title>swoole TCP服务器心跳维持方案</title>
@@ -841,29 +867,6 @@
       <category term="计算机" scheme="http://www.iooeo.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
     
       <category term="Apache" scheme="http://www.iooeo.com/tags/Apache/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo 底部修改</title>
-    <link href="http://www.iooeo.com/2017/07/20/Hexo-%E5%BA%95%E9%83%A8%E4%BF%AE%E6%94%B9/"/>
-    <id>http://www.iooeo.com/2017/07/20/Hexo-底部修改/</id>
-    <published>2017-07-20T08:09:42.000Z</published>
-    <updated>2017-07-28T06:55:04.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>如果你想将博客底部修改的话，找到<em>/themes/next/layout/_partials/footer.swig</em>，<br><a id="more"></a><br>你可以按照你想要的内容编写 HTML 代码，就想我这样：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">&#123;% if theme.copyright %&#125;</div><div class="line">&lt;div class=&quot;powered-by&quot;&gt;</div><div class="line">  &lt;span class=&quot;links-of-author-item&quot;&gt;</div><div class="line">    &lt;a href=&quot;https://github.com/yangyiyuan&quot; target=&quot;_blank&quot; title=&quot;GitHub&quot;&gt;</div><div class="line">    &lt;i class=&quot;fa fa-fw fa-github&quot;&gt;&lt;/i&gt;</div><div class="line">    GitHub</div><div class="line">    &lt;/a&gt;</div><div class="line">  &lt;/span&gt;</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line">&lt;div class=&quot;theme-info&quot;&gt;</div><div class="line">  &lt;span class=&quot;links-of-author-item&quot;&gt;</div><div class="line">    &lt;a href=&quot;http://www.iooeo.com/about/&quot; target=&quot;_blank&quot; title=&quot;杨依园&quot;&gt;</div><div class="line">    &lt;i class=&quot;fa fa-fw fa-hand-o-right&quot;&gt;&lt;/i&gt;</div><div class="line">    做一个有思想的开发者---杨依园</div><div class="line">    &lt;/a&gt;</div><div class="line">  &lt;/span&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&#123;% endif %&#125;</div></pre></td></tr></table></figure></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;如果你想将博客底部修改的话，找到&lt;em&gt;/themes/next/layout/_partials/footer.swig&lt;/em&gt;，&lt;br&gt;
-    
-    </summary>
-    
-      <category term="Hexo" scheme="http://www.iooeo.com/categories/Hexo/"/>
-    
-    
-      <category term="Hexo" scheme="http://www.iooeo.com/tags/Hexo/"/>
     
   </entry>
   

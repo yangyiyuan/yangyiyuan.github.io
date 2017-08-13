@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[CRC16 For PHP]]></title>
+    <url>%2F2017%2F08%2F13%2FCRC16-For-PHP%2F</url>
+    <content type="text"><![CDATA[随着物联网技术的发展和普及，作为最好的语言 PHP 也难免会遇上与硬件设备数据对接的情况。在数据通信领域中有一种查错校验码，CRC。在 PHP 官网上搜索了一下，只提供 CRC32 的相关的函数，关于 CRC16 我自己封装了一个方法用于校验计算。然后我将代码整理了一番，已发布到 GitHub，有需要的同学可以去看下，或许我们可以共同维护他。项目地址CRC16ForPHP具体实现代码：123456789101112131415function crc16Modbus($str)&#123; $data = pack(&apos;H*&apos;, $str); $crc = 0xFFFF; for ($i = 0; $i &lt; strlen($data); $i++) &#123; $crc ^= ord($data[$i]); for ($j = 8; $j != 0; $j--) &#123; if (($crc &amp; 0x0001) != 0) &#123; $crc &gt;&gt;= 1; $crc ^= 0xA001; &#125; else $crc &gt;&gt;= 1; &#125; &#125; return sprintf(&apos;%04X&apos;, $crc);&#125; 用法：1echo crc16(&apos;010301180001&apos;).PHP_EOL;]]></content>
+      <categories>
+        <category>PHP</category>
+      </categories>
+      <tags>
+        <tag>PHP</tag>
+        <tag>CRC16</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[swoole TCP服务器心跳维持方案]]></title>
     <url>%2F2017%2F08%2F04%2Fswoole-TCP%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%BF%83%E8%B7%B3%E7%BB%B4%E6%8C%81%E6%96%B9%E6%A1%88%2F</url>
     <content type="text"><![CDATA[正常情况下客户端中断TCP连接时，会发送一个FIN包，进行4次断开握手来通知服务器。但一些异常情况下，如客户端突然断电断网或者网络异常，服务器可能无法得知客户端已断开连接。尤其是移动网络，TCP连接非常不稳定，所以需要一套机制来保证服务器和客户端之间连接的有效性。Swoole扩展本身内置了这种机制，开发者只需要配置一个参数即可启用。Swoole在每次收到客户端数据会记录一个时间戳，当客户端在一定时间内未向服务器端发送数据，那服务器会自动切断连接。使用方法：1234$serv-&gt;set(array( &apos;heartbeat_check_interval&apos; =&gt; 60, &apos;heartbeat_idle_time&apos; =&gt; 300,)); 上面的设置就是每60秒侦测一次心跳，一个TCP连接如果在300秒内未向服务器端发送数据，将会被切断。当然我这个长连接，这样做是为了回收进程。 高级用法：使用swoole_server::heartbeat()函数手工检测心跳是否到期。此函数会返回闲置时间超过heartbeat_idle_time的所有TCP连接。程序中可以将这些连接做一些操作，如发送数据或关闭连接。]]></content>
