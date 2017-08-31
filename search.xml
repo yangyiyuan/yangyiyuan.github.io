@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Laravel 5.5 LTS 正式发布，Whoops Package 回归]]></title>
+    <url>%2F2017%2F08%2F31%2FLaravel-5-5-LTS-%E6%AD%A3%E5%BC%8F%E5%8F%91%E5%B8%83%EF%BC%8CWhoops-Package-%E5%9B%9E%E5%BD%92%2F</url>
+    <content type="text"><![CDATA[Laravel 5.5 已发布，这是最新的长期支持版本（LTS），包含多项改进。发行说明：https://laravel-news.com/laravel-5-5 部分亮点Whoops Package 回归filp / whoops package 曾经出现在 V4 系列，用于在调试时提供优雅的堆栈跟踪，是一个错误处理框架。Laravel 5.5 版本 Whoops Package 正式回归。 Exception Rendering5.5 无需额外的逻辑，可直接抛出异常，并进行响应：12345678910111213141516171819202122232425262728&lt;?php// throw new TerribleSongException($song) in a controller...namespace App\Exceptions;use App\Song;class TerribleSongException extends \Exception&#123; /** * @var \App\Song */ protected $song; public function __construct(Song $song) &#123; $this-&gt;song = $song; &#125; /** * @param \Illuminate\Http\Request $request */ public function render($request) &#123; return response(&quot;The song &apos;&#123;$this-&gt;song-&gt;title&#125;&apos; by &apos;&#123;$this-&gt;song-&gt;artist&#125;&apos; is terrible.&quot;); &#125;&#125; 自定义验证规则对象Laravel 5.5 带来新的自定义验证规则对象，以此作为 Validator::extend 的替代方法。新规则的逻辑更一目了然：123456789101112131415161718&lt;?phpnamespace App\Rules;use Illuminate\Contracts\Validation\Rule;class CowbellValidationRule implements Rule&#123; public function passes($attribute, $value) &#123; return $value &gt; 10; &#125; public function message() &#123; return &apos;:attribute needs more cowbell!&apos;; &#125;&#125; 使用新规则后：12345678910&lt;?phprequest()-&gt;validate([ &apos;cowbells&apos; =&gt; [new CowbellValidationRule], &apos;more_cowbells&apos; =&gt; [function ($attribute, $value, $fail) &#123; if ($value &lt;= 10) &#123; $fail(&apos;:attribute needs more cowbell!&apos;); &#125; &#125;]]); Blade::if () 指令新的指令包括 @auth and @guest1234567@auth Welcome &#123;&#123; user()-&gt;name &#125;&#125;!@endauth@guest Welcome Guest!@endguest 新的迁移命令：Fresh新的 migrate:fresh 命令会直接删除所有的表，然后运行迁移。通常在开发过程中，你也只需删除表，获取新数据库，和运行迁移。 更多细节请直接查看发行说明Laravel 5.5 更多链接： 升级文档：https://laravel.com/docs/5.5 版本说明 https://laravel.com/docs/5.5/releases 升级指南：https://laravel.com/docs/5.5/upgrade]]></content>
+      <categories>
+        <category>PHP</category>
+        <category>Laravel</category>
+      </categories>
+      <tags>
+        <tag>PHP</tag>
+        <tag>Laravel</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[CRC16 For PHP]]></title>
     <url>%2F2017%2F08%2F13%2FCRC16-For-PHP%2F</url>
     <content type="text"><![CDATA[随着物联网技术的发展和普及，作为最好的语言 PHP 也难免会遇上与硬件设备数据对接的情况。在数据通信领域中有一种查错校验码，CRC。在 PHP 官网上搜索了一下，只提供 CRC32 的相关的函数，关于 CRC16 我自己封装了一个方法用于校验计算。然后我将代码整理了一番，已发布到 GitHub，有需要的同学可以去看下，或许我们可以共同维护他。项目地址CRC16ForPHP具体实现代码：123456789101112131415function crc16Modbus($str)&#123; $data = pack(&apos;H*&apos;, $str); $crc = 0xFFFF; for ($i = 0; $i &lt; strlen($data); $i++) &#123; $crc ^= ord($data[$i]); for ($j = 8; $j != 0; $j--) &#123; if (($crc &amp; 0x0001) != 0) &#123; $crc &gt;&gt;= 1; $crc ^= 0xA001; &#125; else $crc &gt;&gt;= 1; &#125; &#125; return sprintf(&apos;%04X&apos;, $crc);&#125; 用法：1echo crc16(&apos;010301180001&apos;).PHP_EOL;]]></content>
@@ -594,6 +607,7 @@
     <content type="text"><![CDATA[近期貌似对 laravel 有使用的需求，就自己安装了一次，发现对于有些人来说确实有点文档不够全面的感觉，现将具体的安装方法总结如下。Composer安装： Laravel 框架使用 Composer 来管理代码依赖性。在Windows操作系统中，你可以使用 Composer 的Windows安装工具(https://getcomposer.org/Composer-Setup.exe)。对PHP版本有要求(最好5.4.0以上)laravel安装：Composer安装完成后，在dos模式中，你的网站目录执行下面命令即可：1$ composer create-project laravel/laravel your-project-name Composer会自动帮你下载Laravel及安装。部署虚拟主机(Apache相关知识)：如果之前对Apache的配置环境没有设置过：(1) Apache配置设置，打开(路径看个人项目环境而定)1C:\wamp\bin\apache\apache2.4.9\conf\httpd.conf 第512~513行，将默认的虚拟主机设置打开(默认是关闭的，前边#去掉即可)12# Virtual hostsInclude conf/extra/httpd-vhosts.conf (2) 配置站点，打开(路径看个人项目环境而定)1C:\wamp\bin\apache\apache2.4.9\conf\extra\httpd-vhosts.conf 在其下方添加站点信息：123456&lt;VirtualHost *:80&gt; DocumentRoot &quot;c:/wamp/www/project/public&quot; ServerName laravel.dev ErrorLog &quot;logs/laravel.log&quot; CustomLog &quot;logs/laravel.log&quot; common&lt;/VirtualHost&gt; (3) 将站点指向项目目录，打开(路径看个人项目环境而定)C:\Windows\System32\drivers\etc\hosts在其下方添加站点信息：1$ 127.0.0.1 laravel.dev]]></content>
       <categories>
         <category>PHP</category>
+        <category>Laravel</category>
       </categories>
       <tags>
         <tag>PHP</tag>
@@ -610,21 +624,6 @@
       <tags>
         <tag>Linux</tag>
         <tag>MySQL</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Ubuntu系统下搭建lnmp环境]]></title>
-    <url>%2F2014%2F09%2F17%2FUbuntu%E7%B3%BB%E7%BB%9F%E4%B8%8B%E6%90%AD%E5%BB%BAlnmp%E7%8E%AF%E5%A2%83%2F</url>
-    <content type="text"><![CDATA[环境：Ubuntu12.04 64 登录以后首先更新一下源列表 1$ apt-get update 然后安装nginx 12345$ sudo apt-get install nginx$ /etc/init.d/nginx start --启动ngnix$ /etc/init.d/nginx stop --停止ngnix$ /etc/init.d/nginx restart --重启ngnix$ service ngnix restart --重启ngnix 安装PHP及相关扩展 12$ sudo apt-get install php5-cli php5-common php5-fpm php5-cgi php5-mysql php5-gd php5-sqlite libssh2-php$ service php5-fpm restart --重启php 配置Ngnix站点检测PHP环境，Ngnix的站点配置文件在/etc/ngnix/conf.d/或/etc/ngnix/sites-enabled/(初始默认)目录下 1$ vi /etc/nginx/sites-enabled/default 打开初始的配置文件default做一下更改（内容替换或按下面的配置自己更改） 123456789101112131415server&#123; listen 80; root /var/www; index index.php index.html index.htm; server_name localhost; location / &#123; try_files $uri $uri/ /index.html; &#125; location ~ \.php$ &#123; fastcgi_pass 127.0.0.1:9000; fastcgi_index index.php; fastcgi_param SCRIPT_FILENAME /var/www$fastcgi_script_name; include /etc/nginx/fastcgi_params; &#125;&#125; 保存后在/var/目录下创建www目录 1$ mkdir www 创建文件index.php 1$ vi index.php index.php内容检测PHP环境（内容如下） 12&lt;?phpphpinfo(); 保存退出，重启nginx和php（命令在上边） 在浏览器输入localhost，出现PHP环境及扩展配置说明以上安装成功。 安装MySQL 1$ sudo apt-get install mysql-server-5.5 mysql-client-5.5 中间要记住自己设定的MySQL密码，安装成功以后 1$ mysql -uroot -p 输入密码进入MySQL数据库代表安装成功。本人安装的时候出现： 1$ E:/usr/bin/dpkg returned an error code ... 错误字样，解决问题见本站MySQL安装dpkg错误解决方案。 配置MySQL远程连接： 12$ vi /etc/mysql/my.cnf --打开MySQL配置文件找到bind-address = 127.0.0.1，前边加上#，注释掉。$ service mysql restart --重启MySQL服务 进入MySQL，做权限修改 1234$ mysql -uroot -p mysql $ &gt; grant all on *.* root@&apos;%&apos; identified by &apos;你的密码&apos;;$ &gt; flush privilefes;$ &gt; exit 至此完毕 建议重启一遍Ngnix、PHP、MySQL，开发环境就可以正式投入使用了。 尊重原创请挂连接，在此感谢小白、jarvan君、以及广大奉献资料的网友们。]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>PHP</tag>
-        <tag>Linux</tag>
-        <tag>MySQL</tag>
-        <tag>LNMP</tag>
-        <tag>Ngnix</tag>
       </tags>
   </entry>
   <entry>
