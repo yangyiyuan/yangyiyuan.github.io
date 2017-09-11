@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[ThinkPHP V5.0.11 暨 5.1.0 RC1 版本发布: 包含安全更新]]></title>
+    <url>%2F2017%2F09%2F11%2FThinkPHP-V5-0-11-%E6%9A%A8-5-1-0-RC1-%E7%89%88%E6%9C%AC%E5%8F%91%E5%B8%83-%E5%8C%85%E5%90%AB%E5%AE%89%E5%85%A8%E6%9B%B4%E6%96%B0%2F</url>
+    <content type="text"><![CDATA[V5.1.0RC1版本是继5.0版本之后又一个重大版本，ThinkPHP5.1在5.0的基础上对底层架构做了进一步的改进，引入新特性，并提升版本要求。ThinkPHP5.1运行环境要求PHP5.6+，虽然不支持5.0的无缝升级，但升级过程并不复杂（请参考升级指导） 主要新特性 引入容器和Facade支持 依赖注入完善和支持更多场景 重构的（对象化）路由 配置和路由目录独立 取消系统常量 助手函数增强 类库别名机制 模型和数据库增强 验证类增强 模板引擎改进 支持PSR-3日志规范 下载核心版本 目前5.1版本尚处于RC阶段，仅供学习参考，请勿用于商业项目！5.1完全开发手册：https://www.kancloud.cn/manual/thinkphp5_1/353946V5.0.11版本主要为BUG修正和改进，并且包含一个安全更新，可以从5.0.10无缝升级，推荐更新，主要改进如下： 主要更新 完善缓存驱动； 改进数据库查询； 改进URL生成类； 缓存有效期支持指定过期时间； 更新日志[数据库和模型] 改进数据库驱动类 改进group方法的字段关键字冲突 修正聚合查询返回null的问题 改进Db类的强制重连 改进关联的属性绑定 修正事务的断线重连 修正对象的条件查询 Db类增加clear方法 改进数组查询条件中的null查询 改进Query类的chunk方法支持排序设置 改进HasOne和HasMany关联的has方法 改进软删除的关联删除 改进一个字段多次查询条件 [其它] 缓存有效期支持指定过期时间（DateTime）； 改进Url生成对端口号的支持 改进RouteNotFound异常提示 改进路由分组的全局完整路由匹配 修正部分验证规则的错误提示问题 支持数据集和模型的xml响应输出 改进模板的三元运算标签 改进控制器不存在的错误提示 input助手函数支持route变量获取 支持在配置文件中读取额外配置参数 完善分页类 修复Trait命名空间重复问题 修正Request类的env方法 优先使用Cookie中的多语言设置 获取缓存标签的时候过滤无效的缓存标识 修正路由批量注册的一个BUG exception_handle配置参数支持使用闭包定义render处理 请求缓存支持缓存标签设置 缓存类remember方法增加并发锁定机制 改进上传类对swf的支持 改进Session类的prefix方法 5.0.10可以无缝升级到5.0.11，升级完成后务必清空你的缓存目录。 下载OSChina：应用仓库：http://git.oschina.net/liu21st/thinkphp5核心仓库：http://git.oschina.net/liu21st/framework官网下载：核心版 完整版 文档官方完全开发手册内容已经同步更新 完全开发手册 官方快速入门系列]]></content>
+      <categories>
+        <category>PHP</category>
+        <category>ThinkPHP</category>
+      </categories>
+      <tags>
+        <tag>PHP</tag>
+        <tag>ThinkPHP</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[git 修改远程URL]]></title>
     <url>%2F2017%2F09%2F04%2Fgit-%E4%BF%AE%E6%94%B9%E8%BF%9C%E7%A8%8BURL%2F</url>
     <content type="text"><![CDATA[使用的临时域名，没有实名制，暂时不能用了，项目急着上线，那只有修改远程 URL，使用 IP 访问了。查看当前 remote url:1$ git remote -v 修改 remote url:1$ git remote set-url origin http://cola@101.81.167.17:10020/r/project.git 完成，可以拉代码了。]]></content>
