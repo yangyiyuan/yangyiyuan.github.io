@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[git 修改远程URL]]></title>
+    <url>%2F2017%2F09%2F04%2Fgit-%E4%BF%AE%E6%94%B9%E8%BF%9C%E7%A8%8BURL%2F</url>
+    <content type="text"><![CDATA[使用的临时域名，没有实名制，暂时不能用了，项目急着上线，那只有修改远程 URL，使用 IP 访问了。查看当前 remote url:1$ git remote -v 修改 remote url:1$ git remote set-url origin http://cola@101.81.167.17:10020/r/project.git 完成，可以拉代码了。]]></content>
+      <categories>
+        <category>Git</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Laravel 5.5 LTS 正式发布，Whoops Package 回归]]></title>
     <url>%2F2017%2F08%2F31%2FLaravel-5-5-LTS-%E6%AD%A3%E5%BC%8F%E5%8F%91%E5%B8%83%EF%BC%8CWhoops-Package-%E5%9B%9E%E5%BD%92%2F</url>
     <content type="text"><![CDATA[Laravel 5.5 已发布，这是最新的长期支持版本（LTS），包含多项改进。发行说明：https://laravel-news.com/laravel-5-5 部分亮点Whoops Package 回归filp / whoops package 曾经出现在 V4 系列，用于在调试时提供优雅的堆栈跟踪，是一个错误处理框架。Laravel 5.5 版本 Whoops Package 正式回归。 Exception Rendering5.5 无需额外的逻辑，可直接抛出异常，并进行响应：12345678910111213141516171819202122232425262728&lt;?php// throw new TerribleSongException($song) in a controller...namespace App\Exceptions;use App\Song;class TerribleSongException extends \Exception&#123; /** * @var \App\Song */ protected $song; public function __construct(Song $song) &#123; $this-&gt;song = $song; &#125; /** * @param \Illuminate\Http\Request $request */ public function render($request) &#123; return response(&quot;The song &apos;&#123;$this-&gt;song-&gt;title&#125;&apos; by &apos;&#123;$this-&gt;song-&gt;artist&#125;&apos; is terrible.&quot;); &#125;&#125; 自定义验证规则对象Laravel 5.5 带来新的自定义验证规则对象，以此作为 Validator::extend 的替代方法。新规则的逻辑更一目了然：123456789101112131415161718&lt;?phpnamespace App\Rules;use Illuminate\Contracts\Validation\Rule;class CowbellValidationRule implements Rule&#123; public function passes($attribute, $value) &#123; return $value &gt; 10; &#125; public function message() &#123; return &apos;:attribute needs more cowbell!&apos;; &#125;&#125; 使用新规则后：12345678910&lt;?phprequest()-&gt;validate([ &apos;cowbells&apos; =&gt; [new CowbellValidationRule], &apos;more_cowbells&apos; =&gt; [function ($attribute, $value, $fail) &#123; if ($value &lt;= 10) &#123; $fail(&apos;:attribute needs more cowbell!&apos;); &#125; &#125;]]); Blade::if () 指令新的指令包括 @auth and @guest1234567@auth Welcome &#123;&#123; user()-&gt;name &#125;&#125;!@endauth@guest Welcome Guest!@endguest 新的迁移命令：Fresh新的 migrate:fresh 命令会直接删除所有的表，然后运行迁移。通常在开发过程中，你也只需删除表，获取新数据库，和运行迁移。 更多细节请直接查看发行说明Laravel 5.5 更多链接： 升级文档：https://laravel.com/docs/5.5 版本说明 https://laravel.com/docs/5.5/releases 升级指南：https://laravel.com/docs/5.5/upgrade]]></content>
