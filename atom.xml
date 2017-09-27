@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.iooeo.com/"/>
-  <updated>2017-09-15T01:45:43.000Z</updated>
+  <updated>2017-09-27T05:41:56.000Z</updated>
   <id>http://www.iooeo.com/</id>
   
   <author>
@@ -14,6 +14,101 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PHP 7.0.24 和 7.1.10 正式发布，多项内容修复</title>
+    <link href="http://www.iooeo.com/2017/09/27/PHP-7-0-24-%E5%92%8C-7-1-10-%E6%AD%A3%E5%BC%8F%E5%8F%91%E5%B8%83%EF%BC%8C%E5%A4%9A%E9%A1%B9%E5%86%85%E5%AE%B9%E4%BF%AE%E5%A4%8D/"/>
+    <id>http://www.iooeo.com/2017/09/27/PHP-7-0-24-和-7-1-10-正式发布，多项内容修复/</id>
+    <published>2017-09-27T05:33:45.000Z</published>
+    <updated>2017-09-27T05:41:56.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>PHP 7.0.24 和 7.1.10 正式发布了。PHP（PHP：Hypertext Preprocessor）是一种在电脑上执行的脚本语言，主要是用途在于处理动态网页，也包含了命令列执行接口（command line interface），或者产生图形使用者接口（GUI）程式。改进日志如下：<br><a id="more"></a></p>
+<h2 id="PHP-7-1-10"><a href="#PHP-7-1-10" class="headerlink" title="PHP 7.1.10"></a>PHP 7.1.10</h2><h3 id="Core"><a href="#Core" class="headerlink" title="Core:"></a>Core:</h3><ul>
+<li>Fixed bug #75042 (run-tests.php issues with EXTENSION block). (John Boehr)</li>
+</ul>
+<h3 id="BCMath"><a href="#BCMath" class="headerlink" title="BCMath:"></a>BCMath:</h3><ul>
+<li>Fixed bug #44995 (bcpowmod() fails if scale != 0). (cmb)</li>
+<li>Fixed bug #46781 (BC math handles minus zero incorrectly). (cmb)</li>
+<li>Fixed bug #54598 (bcpowmod() may return 1 if modulus is 1). (okano1220, cmb)</li>
+<li>Fixed bug #75178 (bcpowmod() misbehaves for non-integer base or modulus). (cmb)</li>
+</ul>
+<h3 id="CLI-server"><a href="#CLI-server" class="headerlink" title="CLI server:"></a>CLI server:</h3><ul>
+<li>Fixed bug #70470 (Built-in server truncates headers spanning over TCP packets). (bouk)</li>
+</ul>
+<h3 id="CURL"><a href="#CURL" class="headerlink" title="CURL:"></a>CURL:</h3><ul>
+<li>Fixed bug #75093 (OpenSSL support not detected). (Remi)</li>
+</ul>
+<h3 id="GD"><a href="#GD" class="headerlink" title="GD:"></a>GD:</h3><ul>
+<li>Fixed bug #75124 (gdImageGrayScale() may produce colors). (cmb)</li>
+<li>Fixed bug #75139 (libgd/gd_interpolation.c:1786: suspicious if ?). (cmb)</li>
+</ul>
+<h3 id="Gettext"><a href="#Gettext" class="headerlink" title="Gettext:"></a>Gettext:</h3><ul>
+<li>Fixed bug #73730 (textdomain(null) throws in strict mode). (cmb)</li>
+</ul>
+<h3 id="Intl"><a href="#Intl" class="headerlink" title="Intl:"></a>Intl:</h3><ul>
+<li>Fixed bug #75090 (IntlGregorianCalendar doesn’t have constants from parentclass). (tpunt)</li>
+<li>Fixed bug #75193 (segfault in collator_convert_object_to_string). (Remi)</li>
+</ul>
+<h3 id="PDO-OCI"><a href="#PDO-OCI" class="headerlink" title="PDO_OCI:"></a>PDO_OCI:</h3><ul>
+<li>Fixed bug #74631 (PDO_PCO with PHP-FPM: OCI environment initialized before PHP-FPM sets it up). (Ingmar Runge)</li>
+</ul>
+<h3 id="SPL"><a href="#SPL" class="headerlink" title="SPL:"></a>SPL:</h3><ul>
+<li>Fixed bug #75155 (AppendIterator::append() is broken when appending another AppendIterator). (Nikita)</li>
+<li>Fixed bug #75173 (incorrect behavior of AppendIterator::append in foreach loop). (jhdxr)</li>
+</ul>
+<h3 id="Standard"><a href="#Standard" class="headerlink" title="Standard:"></a>Standard:</h3><ul>
+<li>Fixed bug #75152 (signed integer overflow in parse_iv). (Laruence)</li>
+<li>Fixed bug #75097 (gethostname fails if your host name is 64 chars long). (Andrea)</li>
+</ul>
+<h2 id="PHP-7-0-24"><a href="#PHP-7-0-24" class="headerlink" title="PHP 7.0.24"></a>PHP 7.0.24</h2><h3 id="Core-1"><a href="#Core-1" class="headerlink" title="Core:"></a>Core:</h3><ul>
+<li>Fixed bug #75042 (run-tests.php issues with EXTENSION block). (John Boehr)</li>
+</ul>
+<h3 id="BCMath-1"><a href="#BCMath-1" class="headerlink" title="BCMath:"></a>BCMath:</h3><ul>
+<li>Fixed bug #44995 (bcpowmod() fails if scale != 0). (cmb)</li>
+<li>Fixed bug #46781 (BC math handles minus zero incorrectly). (cmb)</li>
+<li>Fixed bug #54598 (bcpowmod() may return 1 if modulus is 1). (okano1220, cmb)</li>
+<li>Fixed bug #75178 (bcpowmod() misbehaves for non-integer base or modulus). (cmb)</li>
+</ul>
+<h3 id="CLI-server-1"><a href="#CLI-server-1" class="headerlink" title="CLI server:"></a>CLI server:</h3><ul>
+<li>Fixed bug #70470 (Built-in server truncates headers spanning over TCP packets). (bouk)</li>
+</ul>
+<h3 id="CURL-1"><a href="#CURL-1" class="headerlink" title="CURL:"></a>CURL:</h3><ul>
+<li>Fixed bug #75093 (OpenSSL support not detected). (Remi)</li>
+</ul>
+<h3 id="GD-1"><a href="#GD-1" class="headerlink" title="GD:"></a>GD:</h3><ul>
+<li>Fixed bug #75124 (gdImageGrayScale() may produce colors). (cmb)</li>
+<li>Fixed bug #75139 (libgd/gd_interpolation.c:1786: suspicious if ?). (cmb)</li>
+</ul>
+<h3 id="Gettext-1"><a href="#Gettext-1" class="headerlink" title="Gettext:"></a>Gettext:</h3><ul>
+<li>Fixed bug #73730 (textdomain(null) throws in strict mode). (cmb)</li>
+</ul>
+<h3 id="Intl-1"><a href="#Intl-1" class="headerlink" title="Intl:"></a>Intl:</h3><ul>
+<li>Fixed bug #75090 (IntlGregorianCalendar doesn’t have constants from parent class). (tpunt)</li>
+<li>Fixed bug #75193 (segfault in collator_convert_object_to_string). (Remi)</li>
+</ul>
+<h3 id="PDO-OCI-1"><a href="#PDO-OCI-1" class="headerlink" title="PDO_OCI:"></a>PDO_OCI:</h3><ul>
+<li>Fixed bug #74631 (PDO_PCO with PHP-FPM: OCI environment initialized before PHP-FPM sets it up). (Ingmar Runge)</li>
+</ul>
+<h3 id="SPL-1"><a href="#SPL-1" class="headerlink" title="SPL:"></a>SPL:</h3><ul>
+<li>Fixed bug #75173 (incorrect behavior of AppendIterator::append in foreach loop). (jhdxr)</li>
+</ul>
+<h3 id="Standard-1"><a href="#Standard-1" class="headerlink" title="Standard:"></a>Standard:</h3><ul>
+<li>Fixed bug #75097 (gethostname fails if your host name is 64 chars long). (Andrea)</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;PHP 7.0.24 和 7.1.10 正式发布了。PHP（PHP：Hypertext Preprocessor）是一种在电脑上执行的脚本语言，主要是用途在于处理动态网页，也包含了命令列执行接口（command line interface），或者产生图形使用者接口（GUI）程式。改进日志如下：&lt;br&gt;
+    
+    </summary>
+    
+      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
+    
+    
+      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
+    
+  </entry>
   
   <entry>
     <title>Sublime Text 3.0 Build 3143 发布，全新 UI 主题</title>
@@ -882,63 +977,6 @@
       <category term="微语" scheme="http://www.iooeo.com/tags/%E5%BE%AE%E8%AF%AD/"/>
     
       <category term="胡侃" scheme="http://www.iooeo.com/tags/%E8%83%A1%E4%BE%83/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Yii2 请求(Requests)</title>
-    <link href="http://www.iooeo.com/2017/07/22/Yii2-%E8%AF%B7%E6%B1%82-Requests/"/>
-    <id>http://www.iooeo.com/2017/07/22/Yii2-请求-Requests/</id>
-    <published>2017-07-22T03:42:41.000Z</published>
-    <updated>2017-07-22T04:22:24.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>这篇不讲插件，讲一下 Yii2的请求（Requests），强行安利一波。<br><a id="more"></a></p>
-<h2 id="请求参数"><a href="#请求参数" class="headerlink" title="请求参数"></a>请求参数</h2><p>要获取请求参数，你可以调用 <code>request</code> 组件的 <code>get()</code> 方法和 <code>post()</code> 方法。 他们分别返回 <code>$_GET 和</code> <code>$_POST</code> 的值。例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">$request = Yii::$app-&gt;request;</div><div class="line"></div><div class="line">$get = $request-&gt;get(); </div><div class="line">// 等价于: $get = $_GET;</div><div class="line"></div><div class="line">$id = $request-&gt;get(&apos;id&apos;);   </div><div class="line">// 等价于: $id = isset($_GET[&apos;id&apos;]) ? $_GET[&apos;id&apos;] : null;</div><div class="line"></div><div class="line">$id = $request-&gt;get(&apos;id&apos;, 1);   </div><div class="line">// 等价于: $id = isset($_GET[&apos;id&apos;]) ? $_GET[&apos;id&apos;] : 1;</div><div class="line"></div><div class="line">$post = $request-&gt;post(); </div><div class="line">// 等价于: $post = $_POST;</div><div class="line"></div><div class="line">$name = $request-&gt;post(&apos;name&apos;);   </div><div class="line">// 等价于: $name = isset($_POST[&apos;name&apos;]) ? $_POST[&apos;name&apos;] : null;</div><div class="line"></div><div class="line">$name = $request-&gt;post(&apos;name&apos;, &apos;&apos;);   </div><div class="line">// 等价于: $name = isset($_POST[&apos;name&apos;]) ? $_POST[&apos;name&apos;] : &apos;&apos;;</div></pre></td></tr></table></figure></p>
-<p>如果嫌每次都要这么写一大堆很麻烦的话，下面就教你一个简单的。<br>首先你所有的<code>Controller</code>都要继承一个<code>BaseController</code>，然后在你的<code>BaseController</code>里添加一下方法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">public function post($param = null, $default_value = null)</div><div class="line">&#123;</div><div class="line">    return !$param ? Yii::$app-&gt;request-&gt;post() : Yii::$app-&gt;request-&gt;post($param, $default_value);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>那么其他<code>Controller</code>用的时候就可以直接这样写：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">public function actionIndex()</div><div class="line">&#123;</div><div class="line">	// 无默认值</div><div class="line">	$name = $this-&gt;post(&apos;name&apos;);</div><div class="line">	// 有默认值</div><div class="line">	$name = $this-&gt;post(&apos;name&apos;,&apos;ewan&apos;);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>我上边只实例了 POST 请求，GET 请求同理，需要的话可以直接加上就可以了。</p>
-<h2 id="请求方法"><a href="#请求方法" class="headerlink" title="请求方法"></a>请求方法</h2><p>你可以通过 Yii::$app-&gt;request-&gt;method 表达式来获取当前请求使用的HTTP方法。 这里还提供了一整套布尔属性用于检测当前请求是某种类型。 例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$request = Yii::$app-&gt;request;</div><div class="line"></div><div class="line">if ($request-&gt;isAjax) &#123; /* 该请求是一个 AJAX 请求 */ &#125;</div><div class="line">if ($request-&gt;isGet)  &#123; /* 请求方法是 GET */ &#125;</div><div class="line">if ($request-&gt;isPost) &#123; /* 请求方法是 POST */ &#125;</div><div class="line">if ($request-&gt;isPut)  &#123; /* 请求方法是 PUT */ &#125;</div></pre></td></tr></table></figure></p>
-<h2 id="请求URLs"><a href="#请求URLs" class="headerlink" title="请求URLs"></a>请求URLs</h2><p>假设被请求的URL是 <code>http://example.com/admin/index.php/product?id=100</code>，你可以像下面描述的那样获取URL的各个部分：</p>
-<ul>
-<li><code>yii\web\Request::url</code>：返回 <code>/admin/index.php/product?id=100</code>, 此URL不包括<code>host info</code>部分。</li>
-<li><code>yii\web\Request::absoluteUrl</code>：返回 <code>http://example.com/admin/index.php/product?id=100</code>, 包含<code>host infode</code>的整个URL。</li>
-<li><code>yii\web\Request::hostInfo</code>：返回 <code>http://example.com</code>, 只有<code>host info</code>部分。</li>
-<li><code>yii\web\Request::pathInfo</code>：返回 <code>/product</code>， 这个是入口脚本之后，问号之前（查询字符串）的部分。</li>
-<li><code>yii\web\Request::queryString</code>：返回 <code>id=100</code>,问号之后的部分。</li>
-<li><code>yii\web\Request::baseUrl</code>：返回 <code>/admin</code>, <code>host info</code>之后， 入口脚本之前的部分。</li>
-<li><code>yii\web\Request::scriptUrl</code>：返回 <code>/admin/index.php</code>, 没有<code>path info</code>和查询字符串部分。</li>
-<li><code>yii\web\Request::serverName</code>：返回 <code>example.com</code>, URL中的<code>host name</code>。</li>
-<li><code>yii\web\Request::serverPort</code>：返回 <code>80</code>, 这是<code>web</code>服务中使用的端口。</li>
-</ul>
-<h2 id="HTTP头"><a href="#HTTP头" class="headerlink" title="HTTP头"></a>HTTP头</h2><p>你可以通过 <code>yii\web\Request::headers</code> 属性返回的 <code>header collection</code> 获取<code>HTTP</code>头信息。 例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">// $headers 是一个 yii\web\HeaderCollection 对象</div><div class="line">$headers = Yii::$app-&gt;request-&gt;headers;</div><div class="line"></div><div class="line">// 返回 Accept header 值</div><div class="line">$accept = $headers-&gt;get(&apos;Accept&apos;);</div><div class="line"></div><div class="line">if ($headers-&gt;has(&apos;User-Agent&apos;)) &#123; /* 这是一个 User-Agent 头 */ &#125;</div></pre></td></tr></table></figure></p>
-<p>请求组件也提供了支持快速访问常用头的方法，包括：</p>
-<ul>
-<li><code>yii\web\Request::userAgent</code>：返回 <code>User-Agent</code> 头。</li>
-<li><code>yii\web\Request::contentType</code>：返回 <code>Content-Type</code> 头的值， <code>Content-Type</code> 是请求体中MIME类型数据。</li>
-<li><code>yii\web\Request::acceptableContentTypes</code>：返回用户可接受的内容MIME类型。 返回的类型是按照他们的质量得分来排序的。得分最高的类型将被最先返回。</li>
-<li><code>yii\web\Request::acceptableLanguages</code>：返回用户可接受的语言。 返回的语言是按照他们的偏好层次来排序的。第一个参数代表最优先的语言。</li>
-</ul>
-<p>假如你的应用支持多语言，并且你想在终端用户最喜欢的语言中显示页面， 那么你可以使用语言协商方法 <code>yii\web\Request::getPreferredLanguage()</code>。 这个方法通过 <code>yii\web\Request::acceptableLanguages</code> 在你的应用中所支持的语言列表里进行比较筛选，返回最适合的语言。</p>
-<blockquote>
-<p>提示: 你也可以使用 ContentNegotiator 过滤器进行动态确定哪些内容类型和语言应该在响应中使用。 这个过滤器实现了上面介绍的内容协商的属性和方法。</p>
-</blockquote>
-<h2 id="客户端信息"><a href="#客户端信息" class="headerlink" title="客户端信息"></a>客户端信息</h2><p>你可以通过 <code>yii\web\Request::userHost</code> 和 <code>yii\web\Request::userIP</code> 分别获取<code>host name</code>和客户机的IP地址， 例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$userHost = Yii::$app-&gt;request-&gt;userHost;</div><div class="line">$userIP = Yii::$app-&gt;request-&gt;userIP;</div></pre></td></tr></table></figure></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;这篇不讲插件，讲一下 Yii2的请求（Requests），强行安利一波。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
-    
-      <category term="Yii2" scheme="http://www.iooeo.com/categories/PHP/Yii2/"/>
-    
-    
-      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
-    
-      <category term="Yii2" scheme="http://www.iooeo.com/tags/Yii2/"/>
     
   </entry>
   
