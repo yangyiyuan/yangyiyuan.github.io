@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.iooeo.com/"/>
-  <updated>2017-09-27T05:41:56.000Z</updated>
+  <updated>2017-09-28T08:34:14.000Z</updated>
   <id>http://www.iooeo.com/</id>
   
   <author>
@@ -14,6 +14,54 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PHP 7.2.0 RC3 发布，bug 修复版本</title>
+    <link href="http://www.iooeo.com/2017/09/28/PHP-7-2-0-RC3-%E5%8F%91%E5%B8%83%EF%BC%8Cbug-%E4%BF%AE%E5%A4%8D%E7%89%88%E6%9C%AC/"/>
+    <id>http://www.iooeo.com/2017/09/28/PHP-7-2-0-RC3-发布，bug-修复版本/</id>
+    <published>2017-09-28T08:30:41.000Z</published>
+    <updated>2017-09-28T08:34:14.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>PHP 7.2.0 RC3 发布了。PHP（PHP：Hypertext Preprocessor）是一种在电脑上执行的脚本语言，主要是用途在于处理动态网页，也包含了命令列执行接口（command line interface），或者产生图形使用者接口（GUI）程式。改进日志如下：<br><a id="more"></a></p>
+<h3 id="Core"><a href="#Core" class="headerlink" title="Core"></a>Core</h3><ul>
+<li>Fixed bug #75241 (Null pointer dereference in zend_mm_alloc_small()). (Laruence)</li>
+<li>Fixed bug #74878 (Data race in ZTS builds). (Nikita, Dmitry)</li>
+<li>Fixed bug #75236 (infinite loop when printing an error-message). (Andrea)</li>
+<li>Fixed bug #75252 (Incorrect token formatting on two parse errors in one request). (Nikita)</li>
+</ul>
+<h3 id="FPM"><a href="#FPM" class="headerlink" title="FPM:"></a>FPM:</h3><ul>
+<li>Fixed bug #75212 (php_value acts like php_admin_value). (Remi)</li>
+</ul>
+<h3 id="MySQLi"><a href="#MySQLi" class="headerlink" title="MySQLi:"></a>MySQLi:</h3><ul>
+<li>Fixed bug #75018 (Data corruption when reading fields of bit type). (Anatol)</li>
+</ul>
+<h3 id="Opcache"><a href="#Opcache" class="headerlink" title="Opcache:"></a>Opcache:</h3><ul>
+<li>Fixed bug #75230 (Invalid opcode 49/1/8 using opcache). (Laruence)</li>
+</ul>
+<h3 id="PCRE"><a href="#PCRE" class="headerlink" title="PCRE:"></a>PCRE:</h3><ul>
+<li>Fixed bug ##75223 (PCRE JIT broken in 7.2). (Dmitry)</li>
+</ul>
+<h3 id="PDO-mysql"><a href="#PDO-mysql" class="headerlink" title="PDO_mysql:"></a>PDO_mysql:</h3><ul>
+<li>Fixed bug #75177 (Type ‘bit’ is fetched as unexpected string). (Anatol)</li>
+</ul>
+<h3 id="SPL"><a href="#SPL" class="headerlink" title="SPL:"></a>SPL:</h3><ul>
+<li>Fixed bug #73629 (SplDoublyLinkedList::setIteratorMode masks intern flags). (J. Jeising, cmb)</li>
+</ul>
+<h3 id="下载地址："><a href="#下载地址：" class="headerlink" title="下载地址："></a>下载地址：</h3><p><a href="https://downloads.php.net/~remi/" target="_blank" rel="external">https://downloads.php.net/~remi/</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;PHP 7.2.0 RC3 发布了。PHP（PHP：Hypertext Preprocessor）是一种在电脑上执行的脚本语言，主要是用途在于处理动态网页，也包含了命令列执行接口（command line interface），或者产生图形使用者接口（GUI）程式。改进日志如下：&lt;br&gt;
+    
+    </summary>
+    
+      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
+    
+    
+      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
+    
+  </entry>
   
   <entry>
     <title>PHP 7.0.24 和 7.1.10 正式发布，多项内容修复</title>
@@ -951,32 +999,6 @@
       <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
     
       <category term="Swoole" scheme="http://www.iooeo.com/tags/Swoole/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>新的评论系统</title>
-    <link href="http://www.iooeo.com/2017/07/28/%E6%96%B0%E7%9A%84%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/"/>
-    <id>http://www.iooeo.com/2017/07/28/新的评论系统/</id>
-    <published>2017-07-28T07:08:41.000Z</published>
-    <updated>2017-07-28T07:12:47.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><code>继多说关闭以后,网易又随之而去.这对于没有自己搭建评论系统的我来说,无疑是一个非常不愉快的消息.</code><br><code>but,今天新的评论系统终于安装成功,经过了十几天的域名备案,大家又可以畅所欲言了.</code></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;code&gt;继多说关闭以后,网易又随之而去.这对于没有自己搭建评论系统的我来说,无疑是一个非常不愉快的消息.&lt;/code&gt;&lt;br&gt;&lt;code&gt;but,今天新的评论系统终于安装成功,经过了十几天的域名备案,大家又可以畅所欲言了.&lt;/code&gt;&lt;/p&gt;
-
-    
-    </summary>
-    
-      <category term="杂谈" scheme="http://www.iooeo.com/categories/%E6%9D%82%E8%B0%88/"/>
-    
-    
-      <category term="微语" scheme="http://www.iooeo.com/tags/%E5%BE%AE%E8%AF%AD/"/>
-    
-      <category term="胡侃" scheme="http://www.iooeo.com/tags/%E8%83%A1%E4%BE%83/"/>
     
   </entry>
   
