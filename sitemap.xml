@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.iooeo.com/2017/11/03/Yii2-molde%E6%A8%A1%E5%9E%8B%E7%9B%B8%E5%85%B3%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</loc>
+    
+    <lastmod>2017-11-03T01:33:34.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.iooeo.com/2017/11/03/Yii2-2-0-13-%E5%8F%91%E5%B8%83%EF%BC%8C%E9%AB%98%E6%80%A7%E8%83%BD-PHP-%E6%A1%86%E6%9E%B6/</loc>
     
     <lastmod>2017-11-03T01:25:50.000Z</lastmod>
@@ -201,13 +208,6 @@
     <loc>http://www.iooeo.com/2017/07/21/Yii2-%E6%89%B9%E9%87%8F%E6%8F%92%E5%85%A5/</loc>
     
     <lastmod>2017-07-22T02:33:46.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.iooeo.com/2017/07/21/Yii2-molde%E6%A8%A1%E5%9E%8B%E7%9B%B8%E5%85%B3%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</loc>
-    
-    <lastmod>2017-07-21T08:21:23.000Z</lastmod>
     
   </url>
   

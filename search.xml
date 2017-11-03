@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Yii2 molde模型相关使用技巧]]></title>
+    <url>%2F2017%2F11%2F03%2FYii2-molde%E6%A8%A1%E5%9E%8B%E7%9B%B8%E5%85%B3%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7%2F</url>
+    <content type="text"><![CDATA[今天整理一些 Yii2 Model模型在开发中常用到的一些方法我技巧。模型是 MVC 模式中的一部分， 是代表业务数据、规则和逻辑的对象。 获取查询 SQL12345$query = User::find()-&gt;where([&apos;like&apos;, &apos;name&apos;, &apos;ewan%&apos;, false]);$commandQuery = clone $query;// SELECT * FROM `user` WHERE `name` LIKE &apos;ewan%&apos;echo $commandQuery-&gt;createCommand()-&gt;getRawSql(); 简单查询技巧1234567891011121314151617where(): 添加查询条件。select(): 添加查询字段。with(): 该查询应执行的关系列表。indexBy(): 根据索引的列的名称查询结果。asArray(): 以数组的形式返回每条记录。orderBy(): 按指定字段排序。User::find()-&gt;one(); // 返回一条数据，返回对象；User::find()-&gt;column(); // 返回查询结果中的第一列的值,返回数组；User::find()-&gt;scalar(); // 返回查询结果的第一行中的第一列的值；User::find()-&gt;all(); // 返回所有记录数据；User::find()-&gt;count(); // 返回记录的数量；User::find()-&gt;sum(&apos;num&apos;); // 返回指定字段（&apos;num&apos;）的总和；User::find()-&gt;average(&apos;num&apos;); // 返回指定字段（&apos;num&apos;）的平均值；User::find()-&gt;min(&apos;num&apos;); // 返回指定字段（&apos;num&apos;）的最小值；User::find()-&gt;max(&apos;num&apos;); // 返回指定字段（&apos;num&apos;）的最大值；User::find()-&gt;exists(); // 返回一个值，该值指示查询结果是否有数据； 关联查询12User::hasOne()：返回对应关系的单条记录User::hasMany()：返回对应关系的多条记录 模型中事务处理12345Yii::$app-&gt;db-&gt;transaction(function() &#123; $order = new Order($customer); $order-&gt;save(); $order-&gt;addItems($items);&#125;); 批量插入批量插入的问题，已经写了一篇《Yii2 批量插入》,点击链接查看即可。 表单验证两个字段选取一个12345678910public function rules()&#123; return [ [[&apos;card_id&apos;, &apos;card_code&apos;], function ($attribute, $param) &#123; //至少要一个 if (empty($this-&gt;card_code) &amp;&amp; empty($this-&gt;card_id)) &#123; $this-&gt;addError($attribute, &apos;card_id/card_code至少要填一个&apos;); &#125; &#125;, &apos;skipOnEmpty&apos; =&gt; false], ];&#125; Like 模糊查询1$query = User::find()-&gt;where([&apos;LIKE&apos;, &apos;name&apos;, &apos;ad%&apos;, false]); // SELECT * FROM `user` WHERE `name` LIKE &apos;ad%&apos;]]></content>
+      <categories>
+        <category>PHP</category>
+        <category>Yii2</category>
+      </categories>
+      <tags>
+        <tag>PHP</tag>
+        <tag>Yii2</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Yii2 2.0.13 发布，高性能 PHP 框架]]></title>
     <url>%2F2017%2F11%2F03%2FYii2-2-0-13-%E5%8F%91%E5%B8%83%EF%BC%8C%E9%AB%98%E6%80%A7%E8%83%BD-PHP-%E6%A1%86%E6%9E%B6%2F</url>
     <content type="text"><![CDATA[Yii2 2.0.13 发布了。Yii 2 完全根据 Yii 1.1 版本重写，后者是最流行的 PHP 框架之一。Yii 2 继承了 Yii 的简洁、快速、和高扩展性。Yii 2 需要 PHP 5.4，并且拥有现代 Web 应用开发中最好的实例和协议。 主要更新内容： yii\web\DbSession 现依靠错误处理程序来显示错误。 允许移动任何大小的名称，但长度限制在 180 个字符 日志消息时间精确到毫秒 更新详情：详情链接 下载地址： yii-advanced-app-2.0.13.tgz yii-basic-app-2.0.13.tgz Source code (zip) Source code (tar.gz)]]></content>
@@ -329,19 +342,6 @@
     <title><![CDATA[Yii2 批量插入]]></title>
     <url>%2F2017%2F07%2F21%2FYii2-%E6%89%B9%E9%87%8F%E6%8F%92%E5%85%A5%2F</url>
     <content type="text"><![CDATA[在使用Yii2开发的过程中难免会遇到批量插入的问题，下边实例一下批量插入的操作。12345678910111213$goods_model = new Goods();# 获取表名$table_name = $goods_model-&gt;tableName();# 要插入数据的字段 $fields = [&apos;name&apos;,&apos;price&apos;]；$fields = $goods_model-&gt;getAttributes();isset($fields[&apos;id&apos;]) &amp;&amp; unset($fields[&apos;id&apos;]);# 要插入的数据，这里要自己拼装，要和字段对应上$data = [[&apos;电视机&apos;，2999]，[&apos;电脑&apos;，3888]];# 返回总插入条数$total_num = Yii::$app-&gt;db-&gt;createCommand()-&gt;batchInsert($table_name, $fields, $data)-&gt;execute(); 批量插入的时候最好和 model 事务搭配，这样可以保证数据的完整性，也方便检查错误。]]></content>
-      <categories>
-        <category>PHP</category>
-        <category>Yii2</category>
-      </categories>
-      <tags>
-        <tag>PHP</tag>
-        <tag>Yii2</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Yii2 molde模型相关使用技巧]]></title>
-    <url>%2F2017%2F07%2F21%2FYii2-molde%E6%A8%A1%E5%9E%8B%E7%9B%B8%E5%85%B3%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7%2F</url>
-    <content type="text"><![CDATA[今天整理一些 Yii2 Model模型在开发中常用到的一些方法我技巧。模型是 MVC 模式中的一部分， 是代表业务数据、规则和逻辑的对象。 获取查询 SQL12345$query = User::find()-&gt;where([&apos;like&apos;, &apos;name&apos;, &apos;ewan%&apos;, false]);$commandQuery = clone $query;// SELECT * FROM `user` WHERE `name` LIKE &apos;ewan%&apos;echo $commandQuery-&gt;createCommand()-&gt;getRawSql(); 简单查询技巧1234567891011121314151617where(): 添加查询条件。select(): 添加查询字段。with(): 该查询应执行的关系列表。indexBy(): 根据索引的列的名称查询结果。asArray(): 以数组的形式返回每条记录。orderBy(): 按指定字段排序。User::find()-&gt;one(); // 返回一条数据，返回对象；User::find()-&gt;column(); // 返回查询结果中的第一列的值,返回数组；User::find()-&gt;scalar(); // 返回查询结果的第一行中的第一列的值；User::find()-&gt;all(); // 返回所有记录数据；User::find()-&gt;count(); // 返回记录的数量；User::find()-&gt;sum(&apos;num&apos;); // 返回指定字段（&apos;num&apos;）的总和；User::find()-&gt;average(&apos;num&apos;); // 返回指定字段（&apos;num&apos;）的平均值；User::find()-&gt;min(&apos;num&apos;); // 返回指定字段（&apos;num&apos;）的最小值；User::find()-&gt;max(&apos;num&apos;); // 返回指定字段（&apos;num&apos;）的最大值；User::find()-&gt;exists(); // 返回一个值，该值指示查询结果是否有数据； 关联查询12User::hasOne()：返回对应关系的单条记录User::hasMany()：返回对应关系的多条记录 模型中事务处理12345Yii::$app-&gt;db-&gt;transaction(function() &#123; $order = new Order($customer); $order-&gt;save(); $order-&gt;addItems($items);&#125;); 批量插入批量插入的问题，已经写了一篇《Yii2 批量插入》,点击链接查看即可。]]></content>
       <categories>
         <category>PHP</category>
         <category>Yii2</category>
