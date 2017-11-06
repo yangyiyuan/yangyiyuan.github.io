@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.iooeo.com/"/>
-  <updated>2017-11-03T01:33:34.000Z</updated>
+  <updated>2017-11-06T02:52:05.000Z</updated>
   <id>http://www.iooeo.com/</id>
   
   <author>
@@ -14,6 +14,129 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ThinkPHP V5.0.12 暨 5.1.0 RC3 版本发布</title>
+    <link href="http://www.iooeo.com/2017/11/06/ThinkPHP-V5-0-12-%E6%9A%A8-5-1-0-RC3-%E7%89%88%E6%9C%AC%E5%8F%91%E5%B8%83/"/>
+    <id>http://www.iooeo.com/2017/11/06/ThinkPHP-V5-0-12-暨-5-1-0-RC3-版本发布/</id>
+    <published>2017-11-06T02:41:04.000Z</published>
+    <updated>2017-11-06T02:52:05.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><em>V5.1.0版本是继5.0版本之后又一个重大版本，ThinkPHP5.1在5.0的基础上对底层架构做了进一步的改进，引入新特性，并提升版本要求。</em><br><a id="more"></a><br>ThinkPHP5.1运行环境要求PHP5.6+，虽然不支持5.0的无缝升级，但升级过程并不复杂（<a href="https://www.kancloud.cn/manual/thinkphp5_1/354155" target="_blank" rel="external">请参考升级指导</a>）</p>
+<h2 id="主要新特性"><a href="#主要新特性" class="headerlink" title="主要新特性"></a>主要新特性</h2><ul>
+<li>引入容器和Facade支持</li>
+<li>依赖注入完善和支持更多场景</li>
+<li>重构的（对象化）路由</li>
+<li>配置和路由目录独立</li>
+<li>取消系统常量</li>
+<li>助手函数增强</li>
+<li>类库别名机制</li>
+<li>模型和数据库增强</li>
+<li>验证类增强</li>
+<li>模板引擎改进</li>
+<li>支持PSR-3日志规范</li>
+</ul>
+<h2 id="RC3对于之前版本主要更新如下："><a href="#RC3对于之前版本主要更新如下：" class="headerlink" title="RC3对于之前版本主要更新如下："></a>RC3对于之前版本主要更新如下：</h2><ul>
+<li>改进redis驱动的get方法</li>
+<li>修正Query类的alias方法</li>
+<li>File类错误信息支持多语言</li>
+<li>修正路由的额外参数解析</li>
+<li>改进whereTime方法</li>
+<li>改进Model类getAttr方法</li>
+<li>改进App类的controller和validate方法支持多层</li>
+<li>改进HasManyThrough类</li>
+<li>修正软删除的restore方法</li>
+<li>改进MorpthTo关联</li>
+<li>改进数据库驱动类的parseKey方法</li>
+<li>增加whereField动态查询方法</li>
+<li>模型增加废弃字段功能</li>
+<li>改进路由的after行为检查和before行为机制</li>
+<li>改进路由分组的检查</li>
+<li>修正mysql的json字段查询</li>
+<li>取消Connection类的quote方法</li>
+<li>改进命令行的支持</li>
+<li>验证信息支持多语言</li>
+<li>修正路由模型绑定</li>
+<li>改进参数绑定类型对枚举类型的支持</li>
+<li>修正模板的{$Think.version}输出</li>
+<li>改进模板date函数解析</li>
+<li>改进insertAll方法支持分批执行</li>
+<li>Request类host方法支持反向代理</li>
+<li>改进JumpResponse支持区分成功和错误模板</li>
+<li>改进开启类库后缀后的关联外键自动识别问题</li>
+<li>修正一对一关联的JOIN方式预载入查询问题</li>
+<li>Query类增加hidden方法</li>
+</ul>
+<p><code>目前5.1版本尚处于RC阶段，仅供学习，请勿用于商业项目！</code><br><code>5.1完全开发手册：</code><a href="https://www.kancloud.cn/manual/thinkphp5_1/content" target="_blank" rel="external">https://www.kancloud.cn/manual/thinkphp5_1/content</a></p>
+<p>5.0.12是一个修正版本，包含了上个版本发布以来的一些修正和完善，主要包括：</p>
+<h2 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h2><ul>
+<li>上传类和验证类的多语言支持；</li>
+<li>模型增加排除和废弃字段支持；</li>
+<li>改进insertAll方法的分批处理；</li>
+<li>改进对枚举类型的参数绑定支持；</li>
+<li>修正社区反馈的问题；</li>
+</ul>
+<h2 id="数据库和模型"><a href="#数据库和模型" class="headerlink" title="数据库和模型"></a>数据库和模型</h2><ul>
+<li>改进Connection类的getRealSql方法</li>
+<li>改进append方法支持一对一关联的bind设置</li>
+<li>改进whereTime查询</li>
+<li>改进model类的<code>destroy</code>方法</li>
+<li>修正softdelete</li>
+<li>修正<code>chunk</code>方法对时间字段的支持</li>
+<li>Collection类增加<code>push</code>方法</li>
+<li>改进alias方法 </li>
+<li>修正模型类的<code>append</code>处理</li>
+<li>改进<code>appendRelationAttr</code>方法</li>
+<li>改进HasManyThrough关联</li>
+<li>改进MorphTo关联</li>
+<li>模型增加废除字段<code>disuse</code>定义</li>
+<li>增加排除字段方法<code>except</code></li>
+<li>修正<code>has</code>方法 </li>
+<li>改进参数绑定类型对枚举类型的支持</li>
+<li>改进<code>insertAll</code>方法的分批处理</li>
+</ul>
+<h2 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h2><ul>
+<li>改进Loader类<code>controller</code>和<code>validate</code>方法 支持多层</li>
+<li>验证提示信息支持多语言</li>
+<li>File类错误信息支持多语言 </li>
+<li>模板渲染异常处理</li>
+<li>修正rest控制器</li>
+<li>改进trace驱动</li>
+<li>改进Cache类的<code>remember</code>方法 </li>
+<li>改进<code>url_common_param</code>的情况下urlencode的问题</li>
+<li>改进Url类</li>
+<li>改进<code>exception_handle</code>配置参数对闭包的支持 </li>
+<li>执行路由缓存命令前检测RUNTIME_PATH是否存在 </li>
+<li>调整部分<code>CacheDriver::dec</code>在为空的时候递减的行为</li>
+<li>优化移动端的显示</li>
+<li>改进对JSON-Handle插件的支持</li>
+<li>改进redis的<code>get</code>方法</li>
+<li>改进Request类的<code>host</code>方法</li>
+</ul>
+<p><code>5.0.11可以无缝升级到5.0.12。</code></p>
+<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><ul>
+<li><a href="http://www.thinkphp.cn/down/1079.html" target="_blank" rel="external">核心版</a></li>
+<li><a href="http://www.thinkphp.cn/down/1080.html" target="_blank" rel="external">完整版</a></li>
+</ul>
+<h2 id="文档"><a href="#文档" class="headerlink" title="文档"></a>文档</h2><p>官方完全开发手册内容已经同步更新 <a href="http://www.kancloud.cn/manual/thinkphp5" target="_blank" rel="external">完全开发手册</a> <a href="http://www.kancloud.cn/special/thinkphp5_quickstart" target="_blank" rel="external">官方快速入门系列</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;em&gt;V5.1.0版本是继5.0版本之后又一个重大版本，ThinkPHP5.1在5.0的基础上对底层架构做了进一步的改进，引入新特性，并提升版本要求。&lt;/em&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
+    
+      <category term="ThinkPHP" scheme="http://www.iooeo.com/categories/PHP/ThinkPHP/"/>
+    
+    
+      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
+    
+      <category term="ThinkPHP" scheme="http://www.iooeo.com/tags/ThinkPHP/"/>
+    
+  </entry>
   
   <entry>
     <title>Yii2  molde模型相关使用技巧</title>
@@ -915,61 +1038,6 @@
     <summary type="html">
     
       &lt;p&gt;关于 PHP socket 的使用，我在之前的工作中使用过一些，自己也动手封装了关于 socket server 和 socket client 的类库，已共享到 GitHub 和码云上面：&lt;br&gt;
-    
-    </summary>
-    
-      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
-    
-      <category term="Swoole" scheme="http://www.iooeo.com/categories/PHP/Swoole/"/>
-    
-    
-      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
-    
-      <category term="Swoole" scheme="http://www.iooeo.com/tags/Swoole/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>swoole  编译安装篇</title>
-    <link href="http://www.iooeo.com/2017/07/31/swoole-%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85%E7%AF%87/"/>
-    <id>http://www.iooeo.com/2017/07/31/swoole-编译安装篇/</id>
-    <published>2017-07-31T09:45:37.000Z</published>
-    <updated>2017-07-31T10:07:38.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>前边几篇文章，分别记录了</p>
-<ul>
-<li><a href="http://www.iooeo.com/2017/07/31/swoole-%E8%BF%9B%E7%A8%8B%E4%B8%8E%E7%BA%BF%E7%A8%8B%E7%AF%87/">进程与线程</a></li>
-<li><a href="http://www.iooeo.com/2017/07/31/swoole-I-O-%E6%A8%A1%E5%9E%8B/">I/O 模型</a></li>
-<li><a href="http://www.iooeo.com/2017/07/31/swoole-%E7%BD%91%E7%BB%9C%E9%80%9A%E8%AE%AF%E5%8D%8F%E8%AE%AE%E7%AF%87/">网络通讯协议</a></li>
-</ul>
-<p>其实都是为了我们更好的学习 Swoole 打下基础，Swoole 几乎涉及到网络开发的方方面面，但是这些可能不是每个 phper所具备的。<br><a id="more"></a><br>学了那么多网络基础知识，下面我们开始慢慢的接触 Swoole，后边有需要补充的网络知识，也会文章记录。</p>
-<h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><p>安装部分我只针对我自己的电脑做安装记录，其他系统的同学可以网上找相关教程。</p>
-<ul>
-<li>macOS Sierra 10.12.6</li>
-<li>PHP 5.6.28</li>
-<li>gcc</li>
-<li>make</li>
-<li>autoconf</li>
-<li>Swoole 2.0.7</li>
-</ul>
-<h2 id="编译安装"><a href="#编译安装" class="headerlink" title="编译安装"></a>编译安装</h2><ul>
-<li>下载 Swoole 最新版本到本地，<a href="https://git.oschina.net/swoole/swoole/tree/v2.0.7" target="_blank" rel="external">官网下载链接</a></li>
-<li>下载好以后解压</li>
-</ul>
-<p>终端执行编译：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ cd swoole</div><div class="line">$ phpize</div><div class="line">$ ./configure</div><div class="line">$ make </div><div class="line">$ sudo make install</div></pre></td></tr></table></figure></p>
-<p>执行完以上命令，中途没有报错的话，就表示已经安装完成。<br>下面我们来检查一下到底有没有安装成功：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ php -m | grep swoole</div><div class="line">swoole</div><div class="line">$ php --ri swoole | grep Version</div><div class="line">Version =&gt; 2.0.7</div></pre></td></tr></table></figure></p>
-<p>到这里，已经完全没有问题了。如果你安装中碰到什么问题，可以留言，也可以直接联系，让我们共同应对问题，一起成长！</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;前边几篇文章，分别记录了&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.iooeo.com/2017/07/31/swoole-%E8%BF%9B%E7%A8%8B%E4%B8%8E%E7%BA%BF%E7%A8%8B%E7%AF%87/&quot;&gt;进程与线程&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.iooeo.com/2017/07/31/swoole-I-O-%E6%A8%A1%E5%9E%8B/&quot;&gt;I/O 模型&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.iooeo.com/2017/07/31/swoole-%E7%BD%91%E7%BB%9C%E9%80%9A%E8%AE%AF%E5%8D%8F%E8%AE%AE%E7%AF%87/&quot;&gt;网络通讯协议&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;其实都是为了我们更好的学习 Swoole 打下基础，Swoole 几乎涉及到网络开发的方方面面，但是这些可能不是每个 phper所具备的。&lt;br&gt;
     
     </summary>
     
