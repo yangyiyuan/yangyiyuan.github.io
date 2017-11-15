@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[PHPUnit 5.7.25 发布，PHP 单元测试框架]]></title>
+    <url>%2F2017%2F11%2F15%2FPHPUnit-5-7-25-%E5%8F%91%E5%B8%83%EF%BC%8CPHP-%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E6%A1%86%E6%9E%B6%2F</url>
+    <content type="text"><![CDATA[PHPUnit 5.7.25 已发布，这是一个小的修复版本，修复了 #2859 的问题。PHPUnit 是一个面向程序员的 PHP 测试框架。是 xUnit 单元测试框架体系结构的一员。PHPUnit 需要使用 dom 和 json 扩展，它们通常是默认启用的。PHPUnit 还需要 pcre、reflection、spl 扩展。这些标准扩展默认启用，并且除非修改 PHP 的构建系统和 C 源代码，否则无法禁用它们。代码覆盖率分析报告功能需要 Xdebug（2.5.0以上）与 tokenizer 扩展。生成 XML 格式的报告需要有 xmlwriter 扩展。 下载地址： Source code (zip) Source code (tar.gz)]]></content>
+      <categories>
+        <category>PHP</category>
+      </categories>
+      <tags>
+        <tag>PHP</tag>
+        <tag>PHPUnit</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[WordPress 4.9 RC3 发布，正式版往后推迟]]></title>
+    <url>%2F2017%2F11%2F15%2FWordPress-4-9-RC3-%E5%8F%91%E5%B8%83%EF%BC%8C%E6%AD%A3%E5%BC%8F%E7%89%88%E5%BE%80%E5%90%8E%E6%8E%A8%E8%BF%9F%2F</url>
+    <content type="text"><![CDATA[WordPress 4.9 正式版原计划于2017 年 11 月 14 日晚上 11点（世界协调时）发布，也就是北京时间 11 月 15 日早上 7 点发布，但由于发现小工具内短代码等问题，开发团队决定将 4.9 正式版发布日期推迟一天，即计划于北京时间2017年11月16日发布。也因此，开发团队发布了 WordPress 4.9 RC3 版本。这是一个计划外的版本，由于发现了 RC1 和 RC2 版本中存在的一些问题，临时决定发布此版本。关于 RC3 版本的改进，主要体现于： 在切换编辑器的可视化和文本选项卡时，同步光标位置。 重写主题自定义面板中附加 CSS 编辑器的错误提示功能。 在主题自定义面板中，给自定义链接添加导航菜单条目。 主题自定义面板的定期发布的自定义草稿功能。 自定义面板中所做修改的自动保存版本功能。 关于页面的样式。 完整内容可查看发布主页。]]></content>
+      <categories>
+        <category>PHP</category>
+      </categories>
+      <tags>
+        <tag>PHP</tag>
+        <tag>WordPress</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Highcharts 6.0.3 发布，纯 Javascript 图表库]]></title>
     <url>%2F2017%2F11%2F15%2FHighcharts-6-0-3-%E5%8F%91%E5%B8%83%EF%BC%8C%E7%BA%AF-Javascript-%E5%9B%BE%E8%A1%A8%E5%BA%93%2F</url>
     <content type="text"><![CDATA[Highcharts 6.0.3 已发布，带来了全新的 dataLabels.filter 选项，用于不使用格式化程序的情况下筛选数据标签。该版本还修复了大量 bug : 修复在区域范围内添加点时动画出错的问题。 改进在 ES6 中加载 Highcharts 的相关文档。 修复热点图在 boost 模式下未正确裁剪的问题。 修复在某些浏览器中没有焦点指示器的问题。 修复 wordcloud 中的 font-size 未设置像素，导致 Firefox 渲染出来的所有词句大小相同的问题。 修复 minPointLength 在某些情况下不正确的问题。 改进 xAxis 的文档。 修复当试图导出数据时没有标题的图表出现错误的问题。 …… 完整更新内容请查阅发行说明。 Highcharts 6 包含 15 种新的图表系列类型，包括 Sankey diagram（桑基图）、Stream graph、Sunburst（旭日图）、Variwide Charts、Parallel coordinates、Variable radius pie、Vector plot、Wind-barbs、X-range 等。 下载地址：https://www.highcharts.com/download]]></content>

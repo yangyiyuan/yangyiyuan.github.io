@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.iooeo.com/"/>
-  <updated>2017-11-15T01:28:14.457Z</updated>
+  <updated>2017-11-15T01:36:45.667Z</updated>
   <id>http://www.iooeo.com/</id>
   
   <author>
@@ -14,6 +14,70 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PHPUnit 5.7.25 发布，PHP 单元测试框架</title>
+    <link href="http://www.iooeo.com/2017/11/15/PHPUnit-5-7-25-%E5%8F%91%E5%B8%83%EF%BC%8CPHP-%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E6%A1%86%E6%9E%B6/"/>
+    <id>http://www.iooeo.com/2017/11/15/PHPUnit-5-7-25-发布，PHP-单元测试框架/</id>
+    <published>2017-11-15T01:32:25.000Z</published>
+    <updated>2017-11-15T01:36:45.667Z</updated>
+    
+    <content type="html"><![CDATA[<p>PHPUnit 5.7.25 已发布，这是一个小的修复版本，修复了 <a href="https://github.com/sebastianbergmann/phpunit/issues/2859" target="_blank" rel="external">#2859</a> 的问题。<br>PHPUnit 是一个面向程序员的 PHP 测试框架。是 xUnit 单元测试框架体系结构的一员。<br><a id="more"></a><br>PHPUnit 需要使用 <a href="http://php.net/manual/en/dom.setup.php" target="_blank" rel="external">dom</a> 和 <a href="http://php.net/manual/en/json.installation.php" target="_blank" rel="external">json</a> 扩展，它们通常是默认启用的。<br>PHPUnit 还需要 <a href="http://php.net/manual/en/pcre.installation.php" target="_blank" rel="external">pcre</a>、<a href="http://php.net/manual/en/reflection.installation.php" target="_blank" rel="external">reflection</a>、<a href="http://php.net/manual/en/spl.installation.php" target="_blank" rel="external">spl</a> 扩展。这些标准扩展默认启用，并且除非修改 PHP 的构建系统和 C 源代码，否则无法禁用它们。<br>代码覆盖率分析报告功能需要 <a href="http://xdebug.org/" target="_blank" rel="external">Xdebug</a>（2.5.0以上）与 <a href="http://php.net/manual/en/tokenizer.installation.php" target="_blank" rel="external">tokenizer</a> 扩展。生成 XML 格式的报告需要有 <a href="http://php.net/manual/en/xmlwriter.installation.php" target="_blank" rel="external">xmlwriter</a> 扩展。</p>
+<p>下载地址：</p>
+<ul>
+<li><a href="https://github.com/sebastianbergmann/phpunit/archive/5.7.25.zip" target="_blank" rel="external">Source code (zip)</a></li>
+<li><a href="https://github.com/sebastianbergmann/phpunit/archive/5.7.25.tar.gz" target="_blank" rel="external">Source code (tar.gz)</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;PHPUnit 5.7.25 已发布，这是一个小的修复版本，修复了 &lt;a href=&quot;https://github.com/sebastianbergmann/phpunit/issues/2859&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;#2859&lt;/a&gt; 的问题。&lt;br&gt;PHPUnit 是一个面向程序员的 PHP 测试框架。是 xUnit 单元测试框架体系结构的一员。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
+    
+    
+      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
+    
+      <category term="PHPUnit" scheme="http://www.iooeo.com/tags/PHPUnit/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>WordPress 4.9 RC3 发布，正式版往后推迟</title>
+    <link href="http://www.iooeo.com/2017/11/15/WordPress-4-9-RC3-%E5%8F%91%E5%B8%83%EF%BC%8C%E6%AD%A3%E5%BC%8F%E7%89%88%E5%BE%80%E5%90%8E%E6%8E%A8%E8%BF%9F/"/>
+    <id>http://www.iooeo.com/2017/11/15/WordPress-4-9-RC3-发布，正式版往后推迟/</id>
+    <published>2017-11-15T01:29:51.000Z</published>
+    <updated>2017-11-15T01:32:06.783Z</updated>
+    
+    <content type="html"><![CDATA[<p>WordPress 4.9 正式版原计划于2017 年 11 月 14 日晚上 11点（世界协调时）发布，也就是北京时间 11 月 15 日早上 7 点发布，但由于发现小工具内短代码等问题，开发团队决定将 4.9 正式版发布日期推迟一天，即计划于北京时间2017年11月16日发布。<br><a id="more"></a><br>也因此，开发团队发布了 WordPress 4.9 RC3 版本。这是一个计划外的版本，由于发现了 RC1 和 RC2 版本中存在的一些问题，临时决定发布此版本。关于 RC3 版本的改进，主要体现于：</p>
+<ul>
+<li>在切换编辑器的可视化和文本选项卡时，同步光标位置。</li>
+<li>重写主题自定义面板中附加 CSS 编辑器的错误提示功能。</li>
+<li>在主题自定义面板中，给自定义链接添加导航菜单条目。</li>
+<li>主题自定义面板的定期发布的自定义草稿功能。</li>
+<li>自定义面板中所做修改的自动保存版本功能。</li>
+<li>关于页面的样式。</li>
+</ul>
+<p>完整内容可查看<a href="https://wordpress.org/news/2017/11/wordpress-4-9-release-candidate-3/" target="_blank" rel="external">发布主页</a>。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;WordPress 4.9 正式版原计划于2017 年 11 月 14 日晚上 11点（世界协调时）发布，也就是北京时间 11 月 15 日早上 7 点发布，但由于发现小工具内短代码等问题，开发团队决定将 4.9 正式版发布日期推迟一天，即计划于北京时间2017年11月16日发布。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
+    
+    
+      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
+    
+      <category term="WordPress" scheme="http://www.iooeo.com/tags/WordPress/"/>
+    
+  </entry>
   
   <entry>
     <title>Highcharts 6.0.3 发布，纯 Javascript 图表库</title>
@@ -919,128 +983,6 @@
     <summary type="html">
     
       &lt;p&gt;在文章之前先看两张图片，试着去理解一下Swoole Server运行流程和进程/线程结构.&lt;br&gt;
-    
-    </summary>
-    
-      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
-    
-      <category term="Swoole" scheme="http://www.iooeo.com/categories/PHP/Swoole/"/>
-    
-    
-      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
-    
-      <category term="Swoole" scheme="http://www.iooeo.com/tags/Swoole/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>swoole Task Worker 篇</title>
-    <link href="http://www.iooeo.com/2017/08/01/swoole-Task-Worker-%E7%AF%87/"/>
-    <id>http://www.iooeo.com/2017/08/01/swoole-Task-Worker-篇/</id>
-    <published>2017-08-01T06:51:52.000Z</published>
-    <updated>2017-08-01T07:39:25.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><code>swoole_server-&gt;task</code>投递一个异步任务到 task_worker 池中。此函数是非阻塞的，执行完毕会立即返回。Worker 进程可以继续处理新的请求。使用Task功能，必须先设置 <em>task_worker_num</em>，并且必须设置 Server 的 <em>onTask</em> 和 <em>onFinish </em>事件回调函数。<br><a id="more"></a><br>注意事项：</p>
-<ul>
-<li>使用 task 必须为 Server 设置 <em>onTask</em> 和 <em>onFinish</em> 回调，否则 <code>swoole_server-&gt;start</code> 会失败</li>
-<li>task 操作的次数必须小于 <em>onTask</em> 处理速度，如果投递容量超过处理能力，task 会塞满缓存区，导致 worker 进程发生阻塞。worker 进程将无法接收新的请求</li>
-<li>使用 <em>addProcess</em> 添加的用户进程中无法使用 task 投递任务，请使用 <em>sendMessage</em> 接口与 Task 工作进程通信</li>
-</ul>
-<h2 id="Task-实例"><a href="#Task-实例" class="headerlink" title="Task 实例"></a>Task 实例</h2><h3 id="创建-Server"><a href="#创建-Server" class="headerlink" title="创建 Server"></a>创建 Server</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$serv = new swoole_server(&quot;127.0.0.1&quot;, 9501);</div></pre></td></tr></table></figure>
-<h3 id="设置task-worker-num"><a href="#设置task-worker-num" class="headerlink" title="设置task_worker_num"></a>设置<em>task_worker_num</em></h3><p>设置<em>task_worker_num</em>是我们使用 task 中不可缺少的一点哦<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$serv-&gt;set([</div><div class="line">	&apos;worker_num&apos; =&gt; 2,</div><div class="line">	&apos;task_worker_num&apos; =&gt; 1,</div><div class="line">]);</div></pre></td></tr></table></figure></p>
-<h3 id="客户端链接回调"><a href="#客户端链接回调" class="headerlink" title="客户端链接回调"></a>客户端链接回调</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$serv-&gt;on(&apos;Connect&apos;, function ($serv, $fd) &#123;</div><div class="line">    echo &quot;new client connected.\n&quot;;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<h3 id="接受客户端数据，使用-task"><a href="#接受客户端数据，使用-task" class="headerlink" title="接受客户端数据，使用 task"></a>接受客户端数据，使用 task</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">$serv-&gt;on(&apos;Receive&apos;, function ($serv, $fd, $fromId, $data) &#123;</div><div class="line">    echo &quot;worker received data: &#123;$data&#125;\n&quot;;</div><div class="line">    // 投递一个任务到task进程中</div><div class="line">    $serv-&gt;task($data);</div><div class="line">    // 通知客户端server收到数据了</div><div class="line">    $serv-&gt;send($fd, &apos;This is a message from server.&apos;);</div><div class="line">    // 为了校验task是否是异步的，这里和task进程内都输出内容，看看谁先输出</div><div class="line">    echo &quot;worker continue run.\n&quot;;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<h3 id="设置-Server-的-onTask-和-onFinish-事件回调函数"><a href="#设置-Server-的-onTask-和-onFinish-事件回调函数" class="headerlink" title="设置 Server 的 onTask 和 onFinish 事件回调函数"></a>设置 Server 的 <em>onTask</em> 和 <em>onFinish </em>事件回调函数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line"> * $serv swoole_server</div><div class="line"> * $taskId 投递的任务id,因为task进程是由worker进程发起，所以多worker多task下，该值可能会相同</div><div class="line"> * $fromId 来自那个worker进程的id</div><div class="line"> * $data 要投递的任务数据</div><div class="line"> */</div><div class="line">$serv-&gt;on(&apos;Task&apos;, function ($serv, $taskId, $fromId, $data) &#123;</div><div class="line">    echo &quot;task start. --- from worker id: &#123;$fromId&#125;.\n&quot;;</div><div class="line">    for ($i=0; $i &lt; 5; $i++) &#123; </div><div class="line">        sleep(1);</div><div class="line">        echo &quot;task runing. --- &#123;$i&#125;\n&quot;;</div><div class="line">    &#125;</div><div class="line">    return &quot;task end&quot;;</div><div class="line">&#125;);</div><div class="line"></div><div class="line">/**</div><div class="line"> * 只有在task进程中调用了finish方法或者return了结果，才会触发finish</div><div class="line"> */</div><div class="line">$serv-&gt;on(&apos;Finish&apos;, function ($serv, $taskId, $data) &#123;</div><div class="line">    echo &quot;finish received data &apos;&#123;$data&#125;&apos;\n&quot;;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<h3 id="关闭"><a href="#关闭" class="headerlink" title="关闭"></a>关闭</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$serv-&gt;on(&apos;Close&apos;, function ($serv, $fd) &#123;</div><div class="line">    echo &quot;Client &#123;$fd&#125; close connection\n&quot;;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<h3 id="执行程序"><a href="#执行程序" class="headerlink" title="执行程序"></a>执行程序</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$serv-&gt;start();</div></pre></td></tr></table></figure>
-<p>客户端还是用我们上一篇<a href="http://www.iooeo.com/2017/08/01/swoole-%E5%88%9D%E8%AF%86-%E7%AE%80%E5%8D%95%E7%9A%84-Server-Client/">简单的Server Client</a>中的client.php。<br>执行查看 client 结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ php client.php </div><div class="line">This is a message from server.</div></pre></td></tr></table></figure></p>
-<p>执行查看 server 结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">$ php index.php </div><div class="line">new client connected.</div><div class="line">Get Message From Client 1:hello server.</div><div class="line">worker continue run.</div><div class="line">task start. --- from worker id: 3.</div><div class="line">Client 1 close connection</div><div class="line">task runing. --- 0</div><div class="line">task runing. --- 1</div><div class="line">task runing. --- 2</div><div class="line">task runing. --- 3</div><div class="line">task runing. --- 4</div><div class="line">finish received data &apos;task end&apos;</div></pre></td></tr></table></figure></p>
-<p>从上边 server 执行的结果可以看出，task执行已经在 close 之后了，这样就知道什么是异步任务了吧。<br>总结一下应用场景：</p>
-<ul>
-<li>没有耗时任务的情况下，worker直接运行，无需开启task</li>
-<li>对于耗时的任务，可以在worker内调用task函数，把异步任务投递给task进程进行处理，task进程的数量取决于task_worker_num的配置</li>
-<li>task进程内可以选择调用finish方法或者return，来通知worker进程此任务已完成，worker进程会在onFinish回调中对task的执行结果进一步处理。如果worker进程不关心任务的结果，finish就不需要做处理了。</li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;code&gt;swoole_server-&amp;gt;task&lt;/code&gt;投递一个异步任务到 task_worker 池中。此函数是非阻塞的，执行完毕会立即返回。Worker 进程可以继续处理新的请求。使用Task功能，必须先设置 &lt;em&gt;task_worker_num&lt;/em&gt;，并且必须设置 Server 的 &lt;em&gt;onTask&lt;/em&gt; 和 &lt;em&gt;onFinish &lt;/em&gt;事件回调函数。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
-    
-      <category term="Swoole" scheme="http://www.iooeo.com/categories/PHP/Swoole/"/>
-    
-    
-      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
-    
-      <category term="Swoole" scheme="http://www.iooeo.com/tags/Swoole/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>swoole 初识 简单的 Server Client</title>
-    <link href="http://www.iooeo.com/2017/08/01/swoole-%E5%88%9D%E8%AF%86-%E7%AE%80%E5%8D%95%E7%9A%84-Server-Client/"/>
-    <id>http://www.iooeo.com/2017/08/01/swoole-初识-简单的-Server-Client/</id>
-    <published>2017-08-01T03:21:13.000Z</published>
-    <updated>2017-08-01T06:22:13.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>为了学 Swoole，我们在开始之前已经普及了很多的知识，这篇我们就要上手玩一把 Swoole，是不是感觉有点手痒了。。<br><a id="more"></a><br>前边几篇分别记录了：</p>
-<ul>
-<li><a href="http://www.iooeo.com/2017/07/31/swoole-%E8%BF%9B%E7%A8%8B%E4%B8%8E%E7%BA%BF%E7%A8%8B%E7%AF%87/">进程与线程</a></li>
-<li><a href="http://www.iooeo.com/2017/07/31/swoole-I-O-%E6%A8%A1%E5%9E%8B/">I/O 模型</a></li>
-<li><a href="http://www.iooeo.com/2017/07/31/swoole-%E7%BD%91%E7%BB%9C%E9%80%9A%E8%AE%AF%E5%8D%8F%E8%AE%AE%E7%AF%87/">网络通讯协议</a></li>
-<li><a href="http://www.iooeo.com/2017/08/01/swoole-Socket%E7%AF%87/">socket</a></li>
-</ul>
-<p>都是一些简单的网路基础知识，不过这些最好要牢记。<br>然后就是 Swoole 扩展的安装：</p>
-<ul>
-<li><a href="http://www.iooeo.com/2017/07/31/swoole-%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85%E7%AF%87/">Swoole 扩展安装</a></li>
-</ul>
-<h2 id="Swoole-server"><a href="#Swoole-server" class="headerlink" title="Swoole server"></a>Swoole server</h2><h3 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h3><p>server 的创建其实非常简单，只需要我们在安装好扩展的基础上，实现以下代码就可以了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">// $serv = new swoole_server(string $host, int $port, int $mode = SWOOLE_PROCESS, int $sock_type = SWOOLE_SOCK_TCP);</div><div class="line">$serv = new swoole_server(&apos;127.0.0.1&apos;, 9501);</div></pre></td></tr></table></figure></p>
-<p>swoole_server 类的构造函数一共有四个参数，上面我们填写了两个 ，还有两个有默认值，不填也可。<br>swoole_server构造函数</p>
-<ul>
-<li>@param     $host         // 监听的 IP</li>
-<li>@param     $port        // 监听的端口</li>
-<li>@param int $mode        // 运行模式，swoole提供了3种运行模式，默认为SWOOLE_PROCESS多进程模式</li>
-<li>@param int $sock_type    // Socket的类型,支持TCP、UDP、TCP6、UDP6、UnixSocket Stream/Dgram 6种，默认为SWOOLE_SOCK_TCP TCP 类型</li>
-</ul>
-<h3 id="设置"><a href="#设置" class="headerlink" title="设置"></a>设置</h3><p><code>swoole_server-&gt;set()</code>函数用于设置swoole_server运行时的各项参数。服务器启动后通过$serv-&gt;setting来访问set函数设置的参数数组。<br>具体有哪些设置，我们后边慢慢学习，现在我们先实现一个简单的例子。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$serv-&gt;set([</div><div class="line">    &apos;worker_num&apos; =&gt; 2,</div><div class="line">]);</div></pre></td></tr></table></figure></p>
-<p>worker_num 设置启动的worker进程数量。swoole采用固定worker进程的模式。<br>PHP代码中是全异步非阻塞，worker_num配置为CPU核数的1-4倍即可。如果是同步阻塞，worker_num配置为100或者更高，具体要看每次请求处理的耗时和操作系统负载状况。</p>
-<h3 id="事件回调函数"><a href="#事件回调函数" class="headerlink" title="事件回调函数"></a>事件回调函数</h3><p><code>swoole_server-&gt;on()</code>注册Server的事件回调函数。</p>
-<ul>
-<li>第1个参数是回调的名称, 大小写不敏感，具体内容参考回调函数列表，事件名称字符串不要加on</li>
-<li>第2个函数是回调的PHP函数，可以是函数名的字符串，类静态方法，对象方法数组，匿名函数</li>
-</ul>
-<p>有新的客户端连接时，worker进程内会触发该回调<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$serv-&gt;on(&apos;Connect&apos;, function ($serv, $fd) &#123;</div><div class="line">    echo &quot;new client connected.\n&quot;;</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
-<p>server接收到客户端的数据后，worker进程内触发该回调<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$serv-&gt;on(&apos;Receive&apos;, function ($serv, $fd, $fromId, $data) &#123;</div><div class="line">    echo &quot;Get Message From Client &#123;$fd&#125;:&#123;$data&#125;\n&quot;;</div><div class="line">    $serv-&gt;send($fd, $data);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
-<p>客户端断开连接或者server主动关闭连接时 worker进程内调用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$serv-&gt;on(&apos;Close&apos;, function ($serv, $fd) &#123;</div><div class="line">    echo &quot;Client &#123;$fd&#125; close connection\n&quot;;</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
-<h3 id="启动server"><a href="#启动server" class="headerlink" title="启动server"></a>启动server</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$serv-&gt;start();</div></pre></td></tr></table></figure>
-<h2 id="Swoole-Client"><a href="#Swoole-Client" class="headerlink" title="Swoole Client"></a>Swoole Client</h2><h3 id="创建-1"><a href="#创建-1" class="headerlink" title="创建"></a>创建</h3><p>client 的创建一样非常简单<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$client = new swoole_client(SWOOLE_SOCK_TCP);</div></pre></td></tr></table></figure></p>
-<p>swoole_client 类的构造函数一共有三个参数。<br>swoole_client构造函数</p>
-<ul>
-<li>@param int $sock_type 指定socket的类型，支持TCP/UDP、TCP6/UDP6 4种</li>
-<li>@param int $sync_type SWOOLE_SOCK_SYNC/SWOOLE_SOCK_ASYNC  同步/异步</li>
-<li>@param string $connectionKey 链接的编号，用于长连接复用</li>
-</ul>
-<h3 id="建立连接"><a href="#建立连接" class="headerlink" title="建立连接"></a>建立连接</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$client-&gt;connect(&apos;127.0.0.1&apos;, 9501) || exit(&quot;connect failed. Error: &#123;$client-&gt;errCode&#125;\n&quot;);</div></pre></td></tr></table></figure>
-<h3 id="发送数据"><a href="#发送数据" class="headerlink" title="发送数据"></a>发送数据</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$client-&gt;send(&quot;hello server.&quot;);</div></pre></td></tr></table></figure>
-<h3 id="从服务端接收数据"><a href="#从服务端接收数据" class="headerlink" title="从服务端接收数据"></a>从服务端接收数据</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$response = $client-&gt;recv();</div></pre></td></tr></table></figure>
-<h3 id="输出接受到的数据"><a href="#输出接受到的数据" class="headerlink" title="输出接受到的数据"></a>输出接受到的数据</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">echo $response . PHP_EOL;</div></pre></td></tr></table></figure>
-<h3 id="关闭连接"><a href="#关闭连接" class="headerlink" title="关闭连接"></a>关闭连接</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$client-&gt;close();</div></pre></td></tr></table></figure>
-<h2 id="Server-和-Client-通讯"><a href="#Server-和-Client-通讯" class="headerlink" title="Server 和 Client 通讯"></a>Server 和 Client 通讯</h2><p>终端执行命令，将 server 挂起<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ php server.php</div></pre></td></tr></table></figure></p>
-<p>打开新的终端执行 client 程序，在此之前你可以使用一下命令查看 server 监听的9501端口的监听情况<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ netstat -an | grep 9501</div><div class="line">tcp4       0      0  127.0.0.1.9501         *.*                    LISTEN</div></pre></td></tr></table></figure></p>
-<p>从上边可以看到一些状态<em>tcp4</em>、<em>LISTEN</em>等关键信息<br>执行 client 代码程序：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ php client.php </div><div class="line">hello server.</div></pre></td></tr></table></figure></p>
-<p>运行 server的终端会显示如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ php server.php </div><div class="line">new client connected.</div><div class="line">Get Message From Client 1:hello server.</div><div class="line">Client 1 close connection</div></pre></td></tr></table></figure></p>
-<blockquote>
-<p>到这个地方我们已经简单的实现了 Swoole Server 和 Client 的链接通讯。</p>
-</blockquote>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;为了学 Swoole，我们在开始之前已经普及了很多的知识，这篇我们就要上手玩一把 Swoole，是不是感觉有点手痒了。。&lt;br&gt;
     
     </summary>
     
