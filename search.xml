@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Highcharts 6.0.3 发布，纯 Javascript 图表库]]></title>
+    <url>%2F2017%2F11%2F15%2FHighcharts-6-0-3-%E5%8F%91%E5%B8%83%EF%BC%8C%E7%BA%AF-Javascript-%E5%9B%BE%E8%A1%A8%E5%BA%93%2F</url>
+    <content type="text"><![CDATA[Highcharts 6.0.3 已发布，带来了全新的 dataLabels.filter 选项，用于不使用格式化程序的情况下筛选数据标签。该版本还修复了大量 bug : 修复在区域范围内添加点时动画出错的问题。 改进在 ES6 中加载 Highcharts 的相关文档。 修复热点图在 boost 模式下未正确裁剪的问题。 修复在某些浏览器中没有焦点指示器的问题。 修复 wordcloud 中的 font-size 未设置像素，导致 Firefox 渲染出来的所有词句大小相同的问题。 修复 minPointLength 在某些情况下不正确的问题。 改进 xAxis 的文档。 修复当试图导出数据时没有标题的图表出现错误的问题。 …… 完整更新内容请查阅发行说明。 Highcharts 6 包含 15 种新的图表系列类型，包括 Sankey diagram（桑基图）、Stream graph、Sunburst（旭日图）、Variwide Charts、Parallel coordinates、Variable radius pie、Vector plot、Wind-barbs、X-range 等。 下载地址：https://www.highcharts.com/download]]></content>
+      <categories>
+        <category>Javascript</category>
+      </categories>
+      <tags>
+        <tag>Javascript</tag>
+        <tag>Highcharts</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[ThinkPHP V5.0.12 暨 5.1.0 RC3 版本发布]]></title>
     <url>%2F2017%2F11%2F06%2FThinkPHP-V5-0-12-%E6%9A%A8-5-1-0-RC3-%E7%89%88%E6%9C%AC%E5%8F%91%E5%B8%83%2F</url>
     <content type="text"><![CDATA[V5.1.0版本是继5.0版本之后又一个重大版本，ThinkPHP5.1在5.0的基础上对底层架构做了进一步的改进，引入新特性，并提升版本要求。ThinkPHP5.1运行环境要求PHP5.6+，虽然不支持5.0的无缝升级，但升级过程并不复杂（请参考升级指导） 主要新特性 引入容器和Facade支持 依赖注入完善和支持更多场景 重构的（对象化）路由 配置和路由目录独立 取消系统常量 助手函数增强 类库别名机制 模型和数据库增强 验证类增强 模板引擎改进 支持PSR-3日志规范 RC3对于之前版本主要更新如下： 改进redis驱动的get方法 修正Query类的alias方法 File类错误信息支持多语言 修正路由的额外参数解析 改进whereTime方法 改进Model类getAttr方法 改进App类的controller和validate方法支持多层 改进HasManyThrough类 修正软删除的restore方法 改进MorpthTo关联 改进数据库驱动类的parseKey方法 增加whereField动态查询方法 模型增加废弃字段功能 改进路由的after行为检查和before行为机制 改进路由分组的检查 修正mysql的json字段查询 取消Connection类的quote方法 改进命令行的支持 验证信息支持多语言 修正路由模型绑定 改进参数绑定类型对枚举类型的支持 修正模板的{$Think.version}输出 改进模板date函数解析 改进insertAll方法支持分批执行 Request类host方法支持反向代理 改进JumpResponse支持区分成功和错误模板 改进开启类库后缀后的关联外键自动识别问题 修正一对一关联的JOIN方式预载入查询问题 Query类增加hidden方法 目前5.1版本尚处于RC阶段，仅供学习，请勿用于商业项目！5.1完全开发手册：https://www.kancloud.cn/manual/thinkphp5_1/content 5.0.12是一个修正版本，包含了上个版本发布以来的一些修正和完善，主要包括： 更新日志 上传类和验证类的多语言支持； 模型增加排除和废弃字段支持； 改进insertAll方法的分批处理； 改进对枚举类型的参数绑定支持； 修正社区反馈的问题； 数据库和模型 改进Connection类的getRealSql方法 改进append方法支持一对一关联的bind设置 改进whereTime查询 改进model类的destroy方法 修正softdelete 修正chunk方法对时间字段的支持 Collection类增加push方法 改进alias方法 修正模型类的append处理 改进appendRelationAttr方法 改进HasManyThrough关联 改进MorphTo关联 模型增加废除字段disuse定义 增加排除字段方法except 修正has方法 改进参数绑定类型对枚举类型的支持 改进insertAll方法的分批处理 其它 改进Loader类controller和validate方法 支持多层 验证提示信息支持多语言 File类错误信息支持多语言 模板渲染异常处理 修正rest控制器 改进trace驱动 改进Cache类的remember方法 改进url_common_param的情况下urlencode的问题 改进Url类 改进exception_handle配置参数对闭包的支持 执行路由缓存命令前检测RUNTIME_PATH是否存在 调整部分CacheDriver::dec在为空的时候递减的行为 优化移动端的显示 改进对JSON-Handle插件的支持 改进redis的get方法 改进Request类的host方法 5.0.11可以无缝升级到5.0.12。 下载 核心版 完整版 文档官方完全开发手册内容已经同步更新 完全开发手册 官方快速入门系列]]></content>

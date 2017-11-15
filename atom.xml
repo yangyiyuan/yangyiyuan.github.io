@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.iooeo.com/"/>
-  <updated>2017-11-06T02:52:05.000Z</updated>
+  <updated>2017-11-15T01:28:14.457Z</updated>
   <id>http://www.iooeo.com/</id>
   
   <author>
@@ -14,6 +14,45 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Highcharts 6.0.3 发布，纯 Javascript 图表库</title>
+    <link href="http://www.iooeo.com/2017/11/15/Highcharts-6-0-3-%E5%8F%91%E5%B8%83%EF%BC%8C%E7%BA%AF-Javascript-%E5%9B%BE%E8%A1%A8%E5%BA%93/"/>
+    <id>http://www.iooeo.com/2017/11/15/Highcharts-6-0-3-发布，纯-Javascript-图表库/</id>
+    <published>2017-11-15T01:23:34.000Z</published>
+    <updated>2017-11-15T01:28:14.457Z</updated>
+    
+    <content type="html"><![CDATA[<p>Highcharts 6.0.3 已发布，带来了全新的 dataLabels.filter 选项，用于不使用格式化程序的情况下筛选数据标签。该版本还修复了大量 bug :<br><a id="more"></a></p>
+<ul>
+<li>修复在区域范围内添加点时动画出错的问题。</li>
+<li>改进在 ES6 中加载 Highcharts 的相关文档。</li>
+<li>修复热点图在 boost 模式下未正确裁剪的问题。</li>
+<li>修复在某些浏览器中没有焦点指示器的问题。</li>
+<li>修复 wordcloud 中的 font-size 未设置像素，导致 Firefox 渲染出来的所有词句大小相同的问题。</li>
+<li>修复 minPointLength 在某些情况下不正确的问题。</li>
+<li>改进 xAxis 的文档。</li>
+<li>修复当试图导出数据时没有标题的图表出现错误的问题。</li>
+<li>……</li>
+</ul>
+<p>完整更新内容请查阅<a href="https://github.com/highcharts/highcharts/blob/master/changelog-highcharts.htm" target="_blank" rel="external">发行说明</a>。</p>
+<p>Highcharts 6 包含 15 种新的图表系列类型，包括 <a href="https://www.highcharts.com/demo/sankey-diagram" target="_blank" rel="external">Sankey diagram</a>（桑基图）、<a href="https://www.highcharts.com/demo/streamgraph" target="_blank" rel="external">Stream graph</a>、<a href="https://www.highcharts.com/demo/sunburst" target="_blank" rel="external">Sunburst</a>（旭日图）、<a href="https://www.highcharts.com/demo/variwide" target="_blank" rel="external">Variwide Charts</a>、<a href="https://www.highcharts.com/demo/parallel-coordinates" target="_blank" rel="external">Parallel coordinates</a>、<a href="https://www.highcharts.com/demo/variable-radius-pie" target="_blank" rel="external">Variable radius pie</a>、<a href="https://www.highcharts.com/demo/vector-plot" target="_blank" rel="external">Vector plot</a>、<a href="https://www.highcharts.com/demo/windbarb-series" target="_blank" rel="external">Wind-barbs</a>、<a href="https://www.highcharts.com/demo/x-range" target="_blank" rel="external">X-range</a> 等。</p>
+<p>下载地址：<br><a href="https://www.highcharts.com/download" target="_blank" rel="external">https://www.highcharts.com/download</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Highcharts 6.0.3 已发布，带来了全新的 dataLabels.filter 选项，用于不使用格式化程序的情况下筛选数据标签。该版本还修复了大量 bug :&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Javascript" scheme="http://www.iooeo.com/categories/Javascript/"/>
+    
+    
+      <category term="Javascript" scheme="http://www.iooeo.com/tags/Javascript/"/>
+    
+      <category term="Highcharts" scheme="http://www.iooeo.com/tags/Highcharts/"/>
+    
+  </entry>
   
   <entry>
     <title>ThinkPHP V5.0.12 暨 5.1.0 RC3 版本发布</title>
@@ -1002,42 +1041,6 @@
     <summary type="html">
     
       &lt;p&gt;为了学 Swoole，我们在开始之前已经普及了很多的知识，这篇我们就要上手玩一把 Swoole，是不是感觉有点手痒了。。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
-    
-      <category term="Swoole" scheme="http://www.iooeo.com/categories/PHP/Swoole/"/>
-    
-    
-      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
-    
-      <category term="Swoole" scheme="http://www.iooeo.com/tags/Swoole/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>swoole Socket篇</title>
-    <link href="http://www.iooeo.com/2017/08/01/swoole-Socket%E7%AF%87/"/>
-    <id>http://www.iooeo.com/2017/08/01/swoole-Socket篇/</id>
-    <published>2017-08-01T02:50:21.000Z</published>
-    <updated>2017-08-01T03:17:54.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>关于 PHP socket 的使用，我在之前的工作中使用过一些，自己也动手封装了关于 socket server 和 socket client 的类库，已共享到 GitHub 和码云上面：<br><a id="more"></a></p>
-<ul>
-<li><a href="https://github.com/yangyiyuan/simple-socket/tree/master" target="_blank" rel="external">Github PHP simple-socket</a></li>
-<li><a href="https://gitee.com/ewan.yang/simple-socket" target="_blank" rel="external">Oschina PHP simple-socket</a></li>
-</ul>
-<p>当然也有更好的例如 workerman 之类的 socket 开源项目。<br>但 socket 对于大部分 phper还是比较陌生的一个词语，百度上给出大部分网文关键字都是<em>套接字</em>，比较抽象难懂一些。<br>socket即套接字，是用来与另一个进程进行跨网络通信的文件，说是“文件”，也很好理解哈，因为在linux中一切都可以理解为“文件”。比如客户端可以借助socket与服务器之间建立连接。你也可以把socket理解为一组函数库，它确实也就是一堆函数。<br>我们知道，常见的网络应用都是基于Client-Server模型的。即一个服务器进程和多个客户端进程组合而成，如果你还理解为是一台电脑对另一台电脑，可以回去把进程/线程一文再看看了。在Client-Server模型中，服务器管理某种资源，并且通过对它管理的资源进行操作来为客户端提供服务。<br>那Client和Server又如何实现通信呢？这就要利用socket一系列的函数实现了。<br>基于套接字接口的网络应用的描述，用下面这张图来理解就好。<br><img src="http://ogpq2zwg5.bkt.clouddn.com/217f4d714f-socket-client-server.png" alt="套接字接口的网络应用的描述"></p>
-<p>大致可以描述为：</p>
-<blockquote>
-<p>服务器创建一个socket，绑定ip和端口，在该端口处进行监听，然后通过accept函数阻塞。<br>当有新的客户端连接进来时，server接收客户端数据并处理数据，然后返回给客户端，客户端关闭连接，server关闭该客户端，一次连接交互完成。</p>
-</blockquote>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;关于 PHP socket 的使用，我在之前的工作中使用过一些，自己也动手封装了关于 socket server 和 socket client 的类库，已共享到 GitHub 和码云上面：&lt;br&gt;
     
     </summary>
     
