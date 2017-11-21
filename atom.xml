@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.iooeo.com/"/>
-  <updated>2017-11-21T01:53:57.015Z</updated>
+  <updated>2017-11-21T06:24:32.445Z</updated>
   <id>http://www.iooeo.com/</id>
   
   <author>
@@ -14,6 +14,42 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PV UV IP 的区别</title>
+    <link href="http://www.iooeo.com/2017/11/21/PV-UV-IP-%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
+    <id>http://www.iooeo.com/2017/11/21/PV-UV-IP-的区别/</id>
+    <published>2017-11-21T05:47:00.000Z</published>
+    <updated>2017-11-21T06:24:32.445Z</updated>
+    
+    <content type="html"><![CDATA[<p>作为大部分开发程序员，日常交流或者面试的时候，很多小伙伴会问你现在负责的项目 PV 是多少啊？UV 是多少啊？IP 是多少的？有些人或许知道这三者的区别，根本接触不到，有些新手可能根本就不了解这个感念，下边分别阐述一下三个关键词的释义和区别。<br><a id="more"></a></p>
+<h2 id="PV-（page-view，页面浏览量）"><a href="#PV-（page-view，页面浏览量）" class="headerlink" title="PV （page view，页面浏览量）"></a>PV （page view，页面浏览量）</h2><p><a href="https://baike.baidu.com/item/pv/402?fr=aladdin" target="_blank" rel="external">PV（page view）</a>即页面浏览量；用户每1次对网站中的每个网页访问均被记录1次。用户对同一页面的多次访问，访问量累计。</p>
+<h2 id="UV-（Unique-Visitor，独立访客）"><a href="#UV-（Unique-Visitor，独立访客）" class="headerlink" title="UV （Unique Visitor，独立访客）"></a>UV （Unique Visitor，独立访客）</h2><p><a href="https://baike.baidu.com/item/UV/59745?fr=aladdin" target="_blank" rel="external">UV (unique visitor)</a>，指某站点被多少台电脑访问过，以用户电脑的Cookie作为统计依据。</p>
+<h2 id="IP-Internet-Protocol，独立IP数"><a href="#IP-Internet-Protocol，独立IP数" class="headerlink" title="IP (Internet Protocol，独立IP数)"></a>IP (Internet Protocol，独立IP数)</h2><p><a href="https://baike.baidu.com/item/IP/224599?fr=aladdin" target="_blank" rel="external">IP (Internet Protocol)</a>访问过某站点的IP总数，以用户的IP地址作为统计依据。</p>
+<h2 id="PV-UV-IP-区别"><a href="#PV-UV-IP-区别" class="headerlink" title="PV UV IP 区别"></a>PV UV IP 区别</h2><ul>
+<li>PV即页面访问量，每打开一次页面PV计数+1，刷新页面也是。</li>
+<li>UV即独立访客量，一台电脑终端为一个访客。</li>
+<li>IP即独立 IP 访问量，计算是以一个独立的IP在一个计算时段内访问网站计算为1次IP访问数。在同一个计算时段内不管这个IP访问多少次均计算为1次。计算段自己定义，不过多追究。</li>
+</ul>
+<h2 id="场景理解"><a href="#场景理解" class="headerlink" title="场景理解"></a>场景理解</h2><h3 id="场景一-ADSL-宽带-上网的用户"><a href="#场景一-ADSL-宽带-上网的用户" class="headerlink" title="场景一 ADSL(宽带)上网的用户"></a>场景一 ADSL(宽带)上网的用户</h3><p><code>一个用户有可能在一天之内重复访问某站点，如果他在同一台电脑上，并且IP没有变化的情况下，那么这个用户为该站点贡献了一个独立IP量，一个独立访客量，而PV则是随着他的浏览在不断增加；如果他在中途在不改变电脑的情况下，掉线了一次，重新连上后IP发生了变化，之后他又访问了该站点，那么这个用户为该站点贡献了两个IP数，一个独立访客数。</code></p>
+<h3 id="场景二-网吧、单位、学校上网的用户"><a href="#场景二-网吧、单位、学校上网的用户" class="headerlink" title="场景二 网吧、单位、学校上网的用户"></a>场景二 网吧、单位、学校上网的用户</h3><p><code>这些场所一般都是采用局域网共享上网的方式，只有一个IP地址接入互联网，此种情况就有可能出现独立访客数大于独立IP数，比如某单位内有多人访问A站点，但是整个单位的公网IP出口就只有一个，那么无论该单位里在当日有多少人次访问A站点，这些用户为A站点贡献的独立IP数为1，除非该单位的IP地址发生了变化，相反，这些用户为A站点带来的独立访客数就是该单位内当日访问A站点的实际人数了。
+由此可见，独立访客比独立IP更具说服力，只不过我们平时比较关心独立IP罢了。一个网站的独立IP数与独立访客数是相近的，有可能独立IP数&gt;独立访客数，也有可能独立IP数&lt;独立访客数，当然也有可能是相等的，这取决于网站的用户访问情况。而PV则是永远都是大于等于独立IP和独立访客的，因为PV是重复统计的。</code></p>
+<h3 id="场景三-UV-和-IP的区别和联系"><a href="#场景三-UV-和-IP的区别和联系" class="headerlink" title="场景三 UV 和 IP的区别和联系"></a>场景三 UV 和 IP的区别和联系</h3><p><code>UV 高于IP数的时候正常是以下这种状况：例如一个局域网对外是相同的一个IP，但是有10个人同时访问，那么这个时候，UV 为10，独立P仅为1；
+IP高于独立访客的时候正常是以下这种状况：一个用户，上网的时候频繁掉线，拔号10次均打开了受统计网站，此时，独立访客仅计为1，而IP数则被计为10。</code></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;作为大部分开发程序员，日常交流或者面试的时候，很多小伙伴会问你现在负责的项目 PV 是多少啊？UV 是多少啊？IP 是多少的？有些人或许知道这三者的区别，根本接触不到，有些新手可能根本就不了解这个感念，下边分别阐述一下三个关键词的释义和区别。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="-计算机" scheme="http://www.iooeo.com/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+    
+    
+      <category term="计算机" scheme="http://www.iooeo.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+    
+  </entry>
   
   <entry>
     <title>HHVM 3.23 发布，高速的 PHP 执行引擎</title>
@@ -952,36 +988,6 @@
       <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
     
       <category term="Swoole" scheme="http://www.iooeo.com/tags/Swoole/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>lantern 运行时关闭终端</title>
-    <link href="http://www.iooeo.com/2017/08/03/lantern-%E8%BF%90%E8%A1%8C%E6%97%B6%E5%85%B3%E9%97%AD%E7%BB%88%E7%AB%AF/"/>
-    <id>http://www.iooeo.com/2017/08/03/lantern-运行时关闭终端/</id>
-    <published>2017-08-03T03:34:39.000Z</published>
-    <updated>2017-08-03T03:52:15.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>之前写过一篇 Mac 上破解 lantern 的文章<a href="http://www.iooeo.com/2017/07/07/lantern-Mac%E7%89%88%E7%BC%96%E8%AF%91-%E5%85%8D%E8%B4%B9/">lantern Mac版编译 无限流量</a>。小伙伴胖佳说可以运行了，但是有个终端会一直开着，关闭掉以后 lantern 就终止执行了，也就不能翻墙了，今天想到了一个办法。<br><a id="more"></a><br>接着上篇文章继续，Mac上搜索一下lantern_darwin_amd64,双击打开以后，会出现一个终端，上边不停的有各种信息出现，此时我们是可以正常使用的。<br>但是一直开着个终端，有点不爽，首先我们把 lantern 执行终端滚到最上边会看到一下命令：<br><img src="http://ogpq2zwg5.bkt.clouddn.com/lantern%20%E6%89%A7%E8%A1%8C%E7%BB%88%E7%AB%AF.png" alt="lantern 执行终端"><br>其实我们就是想要<code>lantern_darwin_amd64</code>文件路径，然后你的<code>.bash_profile</code>或者<code>.profile</code>中添加以下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">alias lantern=&apos;/Users/yangyiyuan/projects/landeng/lantern/lantern_darwin_amd64 &amp; exit&apos;</div></pre></td></tr></table></figure></p>
-<p>将上边的文件路径换成你自己的就可以了，然后终端执行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ source .bash_profile</div></pre></td></tr></table></figure></p>
-<p>这样就可以了，以后我们要启动蓝灯，直接打开终端执行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ lantern</div></pre></td></tr></table></figure></p>
-<p>然后关闭窗口就可以了。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;之前写过一篇 Mac 上破解 lantern 的文章&lt;a href=&quot;http://www.iooeo.com/2017/07/07/lantern-Mac%E7%89%88%E7%BC%96%E8%AF%91-%E5%85%8D%E8%B4%B9/&quot;&gt;lantern Mac版编译 无限流量&lt;/a&gt;。小伙伴胖佳说可以运行了，但是有个终端会一直开着，关闭掉以后 lantern 就终止执行了，也就不能翻墙了，今天想到了一个办法。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="Mac" scheme="http://www.iooeo.com/categories/Mac/"/>
-    
-    
-      <category term="Mac" scheme="http://www.iooeo.com/tags/Mac/"/>
-    
-      <category term="lantern" scheme="http://www.iooeo.com/tags/lantern/"/>
-    
-      <category term="VPN" scheme="http://www.iooeo.com/tags/VPN/"/>
     
   </entry>
   
