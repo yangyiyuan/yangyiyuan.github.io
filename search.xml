@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[HHVM 3.23 发布，高速的 PHP 执行引擎]]></title>
+    <url>%2F2017%2F11%2F21%2FHHVM-3-23-%E5%8F%91%E5%B8%83%EF%BC%8C%E9%AB%98%E9%80%9F%E7%9A%84-PHP-%E6%89%A7%E8%A1%8C%E5%BC%95%E6%93%8E%2F</url>
+    <content type="text"><![CDATA[HHVM 3.23 已发布，此版本包含新功能、错误修复、性能改进和支持未来改进的工作。 有以下值得关注的更新： optional shape fields 现在与 nullable shape fields 不同，有关帮助迁移的详细信息和工具，请参阅 3.22 发布公告。 支持 VSCode 语言服务器协议，这将很快被 Nuclide 的 Hack 整合使用 函数可能不再命名为 using()，因为这将与即将到来的 using 特性相冲突 支持使类型检查器完全忽略某些文件；这是通过 ignored_paths .hhconfig 实现的，其中包含一个正则表达式数组 - 例如，ignored_paths = [ “vendor/.*tests?/“ 现在支持元组常量 方法调用现在支持括号表达式 修复了一些需要中断(Ctrl-C) hh_client的情况 支持针对 OpenSSL 1.1 进行构建，例如 Debian Stretch，Ubuntu Zesty 和 Ubuntu Artful Hack 的实验性 bytecode emitter 替代方案 即将到来的变更：Call-Time Pass-By-ReferenceHHVM 3.24 将要求引用参数在调用点处标记 - 例如：123function foo(array&lt;string&gt; $bar): void &#123; sort(&amp;$bar);&#125; 3.23 中的 Hack 允许使用这种语法，但不需要这种要求。可以通过在 .hhconfig 中将 safe_pass_by_ref 添加到 enable_experimental_tc_features 来选择加入这种要求。 Lambda 类型推断在 HHVM 3.24 中，将使用预期的 lambda 类型来改进它们；例如，下面的代码没有错误：123456789101112131415161718192021&lt;?hh // strictclass MyClass &#123;&#125;class MyClosureRunner&lt;-T&gt; &#123; public function __construct(private (function(T): string) $closure) &#123;&#125;&#125;function expectsMyClosureRunnerMyClass( MyClosureRunner&lt;MyClass&gt; $x,): MyClosureRunner&lt;MyClass&gt; &#123; return $x;&#125;function getThing1(): MyClosureRunner&lt;MyClass&gt; &#123; $var = expectsMyClosureRunnerMyClass( new MyClosureRunner( function(/* MyClass */ $arg) &#123; $arg-&gt;missing_method(); return &quot;ok&quot;; &#125;, ), ); return $var;&#125; 在 3.24 中，或者在 .hhconfig 中使用 enable_experimental_tc_features=contextual_inference，typechecker 会引发以下错误：123test.php:19:15,28: Could not find method missing_method in an object of type MyClass (Typing[4053]) test.php:10:19,25: This is why I think it is an object of type MyClass test.php:3:7,13: Declaration of MyClass is here 更新内容较多，详情请查看发布主页。目前，3.23 的最新修正版 3.23.2 也已发布。]]></content>
+      <categories>
+        <category>PHP</category>
+      </categories>
+      <tags>
+        <tag>PHP</tag>
+        <tag>HHVM</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[CakePHP 3.5.6 发布，PHP 开发框架]]></title>
     <url>%2F2017%2F11%2F20%2FCakePHP-3-5-6-%E5%8F%91%E5%B8%83%EF%BC%8CPHP-%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6%2F</url>
     <content type="text"><![CDATA[CakePHP 3.5.6 已发布。CakePHP 是一个运用了诸如 ActiveRecord、Association Data Mapping、Front Controller 和 MVC 等著名设计模式的快速开发框架。该项目主要目标是提供一个可以让各种层次的 PHP 开发人员快速地开发出健壮的 Web 应用，而又不失灵活性。此版本更新内容： Iterating subclasses of ArrayIterator that include CollectionTrait retains the original class fixing use of methods defined on the subclass. Response::__debugInfo() includes the response body now. Http\Client creates response objects in a separate method making response creation easier to extend. SQL expressions no longer include double parenthesis when nesting expressions. View subdirectories are no longer doubled when RequestHandlerComponent and view classes using subDir property are used together. Middleware can now be registered in RouteBuilder using a string classname. Protocol relative string URLs are now properly HTML encoded by UrlHelper. 更多内容请查看发布说明。 下载地址： cakephp-3-5-6.zip Source code (zip) Source code (tar.gz)]]></content>
