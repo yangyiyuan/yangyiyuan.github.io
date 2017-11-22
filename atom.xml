@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.iooeo.com/"/>
-  <updated>2017-11-22T02:13:08.188Z</updated>
+  <updated>2017-11-22T02:34:28.215Z</updated>
   <id>http://www.iooeo.com/</id>
   
   <author>
@@ -14,6 +14,39 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Nginx 主线版 1.13.7 发布，修复了部分 Bug</title>
+    <link href="http://www.iooeo.com/2017/11/22/Nginx-%E4%B8%BB%E7%BA%BF%E7%89%88-1-13-7-%E5%8F%91%E5%B8%83%EF%BC%8C%E4%BF%AE%E5%A4%8D%E4%BA%86%E9%83%A8%E5%88%86-Bug/"/>
+    <id>http://www.iooeo.com/2017/11/22/Nginx-主线版-1-13-7-发布，修复了部分-Bug/</id>
+    <published>2017-11-22T02:16:09.000Z</published>
+    <updated>2017-11-22T02:34:28.215Z</updated>
+    
+    <content type="html"><![CDATA[<p>Nginx 1.13.7 已发布，该版本是 mainline 版，即通常说的开发版。本次更新主要是修复了 bug，详细如下：<br><a id="more"></a></p>
+<ul>
+<li>Bugfix: in the $upstream_status variable.</li>
+<li>Bugfix: a segmentation fault might occur in a worker process if a backend returned a “101 Switching Protocols” response to a subrequest.</li>
+<li>Bugfix: a segmentation fault occurred in a master process if a shared memory zone size was changed during a reconfiguration and the reconfiguration failed.</li>
+<li>Bugfix: in the ngx_http_fastcgi_module.</li>
+<li>Bugfix: nginx returned the 500 error if parameters without variables were specified in the “xslt_stylesheet” directive.</li>
+<li>Workaround: “gzip filter failed to use preallocated memory” alerts appeared in logs when using a zlib library variant from Intel.</li>
+<li>Bugfix: the “worker_shutdown_timeout” directive did not work when using mail proxy and when proxying WebSocket connections.</li>
+</ul>
+<p>下载地址：<a href="http://nginx.org/en/download.html" target="_blank" rel="external">http://nginx.org/en/download.html</a><br><a href="http://nginx.org/en/CHANGES" target="_blank" rel="external">点此查看完整更新日志</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Nginx 1.13.7 已发布，该版本是 mainline 版，即通常说的开发版。本次更新主要是修复了 bug，详细如下：&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Nginx" scheme="http://www.iooeo.com/categories/Nginx/"/>
+    
+    
+      <category term="Nginx" scheme="http://www.iooeo.com/tags/Nginx/"/>
+    
+  </entry>
   
   <entry>
     <title>CakePHP 2.10.5 发布，PHP 开发框架</title>
@@ -986,32 +1019,6 @@ IP高于独立访客的时候正常是以下这种状况：一个用户，上网
       <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
     
       <category term="Laravel" scheme="http://www.iooeo.com/tags/Laravel/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CRC16 For PHP</title>
-    <link href="http://www.iooeo.com/2017/08/13/CRC16-For-PHP/"/>
-    <id>http://www.iooeo.com/2017/08/13/CRC16-For-PHP/</id>
-    <published>2017-08-13T01:06:54.000Z</published>
-    <updated>2017-08-13T02:17:26.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>随着物联网技术的发展和普及，作为最好的语言 PHP 也难免会遇上与硬件设备数据对接的情况。在数据通信领域中有一种查错校验码，CRC。<br>在 PHP 官网上搜索了一下，只提供 CRC32 的相关的函数，关于 CRC16 我自己封装了一个方法用于校验计算。然后我将代码整理了一番，已发布到 GitHub，有需要的同学可以去看下，或许我们可以共同维护他。项目地址<a href="https://github.com/yangyiyuan/CRC16ForPHP" target="_blank" rel="external">CRC16ForPHP</a><br><a id="more"></a><br>具体实现代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">function crc16Modbus($str)</div><div class="line">&#123;</div><div class="line">    $data = pack(&apos;H*&apos;, $str);</div><div class="line">    $crc = 0xFFFF;</div><div class="line">    for ($i = 0; $i &lt; strlen($data); $i++) &#123;</div><div class="line">        $crc ^= ord($data[$i]);</div><div class="line">        for ($j = 8; $j != 0; $j--) &#123;</div><div class="line">            if (($crc &amp; 0x0001) != 0) &#123;</div><div class="line">                $crc &gt;&gt;= 1;</div><div class="line">                $crc ^= 0xA001;</div><div class="line">            &#125; else $crc &gt;&gt;= 1;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    return sprintf(&apos;%04X&apos;, $crc);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>用法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">echo crc16(&apos;010301180001&apos;).PHP_EOL;</div></pre></td></tr></table></figure></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;随着物联网技术的发展和普及，作为最好的语言 PHP 也难免会遇上与硬件设备数据对接的情况。在数据通信领域中有一种查错校验码，CRC。&lt;br&gt;在 PHP 官网上搜索了一下，只提供 CRC32 的相关的函数，关于 CRC16 我自己封装了一个方法用于校验计算。然后我将代码整理了一番，已发布到 GitHub，有需要的同学可以去看下，或许我们可以共同维护他。项目地址&lt;a href=&quot;https://github.com/yangyiyuan/CRC16ForPHP&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;CRC16ForPHP&lt;/a&gt;&lt;br&gt;
-    
-    </summary>
-    
-      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
-    
-    
-      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
-    
-      <category term="CRC16" scheme="http://www.iooeo.com/tags/CRC16/"/>
     
   </entry>
   
