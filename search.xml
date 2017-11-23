@@ -470,7 +470,7 @@
   <entry>
     <title><![CDATA[Yii2 批量插入]]></title>
     <url>%2F2017%2F07%2F21%2FYii2-%E6%89%B9%E9%87%8F%E6%8F%92%E5%85%A5%2F</url>
-    <content type="text"><![CDATA[在使用Yii2开发的过程中难免会遇到批量插入的问题，下边实例一下批量插入的操作。12345678910111213$goods_model = new Goods();# 获取表名$table_name = $goods_model-&gt;tableName();# 要插入数据的字段 $fields = [&apos;name&apos;,&apos;price&apos;]；$fields = $goods_model-&gt;getAttributes();isset($fields[&apos;id&apos;]) &amp;&amp; unset($fields[&apos;id&apos;]);# 要插入的数据，这里要自己拼装，要和字段对应上$data = [[&apos;电视机&apos;，2999]，[&apos;电脑&apos;，3888]];# 返回总插入条数$total_num = Yii::$app-&gt;db-&gt;createCommand()-&gt;batchInsert($table_name, $fields, $data)-&gt;execute(); 批量插入的时候最好和 model 事务搭配，这样可以保证数据的完整性，也方便检查错误。]]></content>
+    <content type="text"><![CDATA[在使用Yii2开发的过程中难免会遇到批量插入的问题，下边实例一下批量插入的操作。12345678910111213$goods_model = new Goods();# 获取表名$table_name = $goods_model-&gt;tableName();# 要插入数据的字段 $fields = [&apos;name&apos;,&apos;price&apos;]；$fields = $goods_model-&gt;attributes();array_shift($fields);# 要插入的数据，这里要自己拼装，要和字段对应上$data = [[&apos;电视机&apos;，2999]，[&apos;电脑&apos;，3888]];# 返回总插入条数$total_num = Yii::$app-&gt;db-&gt;createCommand()-&gt;batchInsert($table_name, $fields, $data)-&gt;execute(); 批量插入的时候最好和 model 事务搭配，这样可以保证数据的完整性，也方便检查错误。]]></content>
       <categories>
         <category>PHP</category>
         <category>Yii2</category>
