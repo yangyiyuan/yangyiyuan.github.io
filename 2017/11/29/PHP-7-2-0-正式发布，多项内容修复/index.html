@@ -1,0 +1,1683 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="PHP," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Ewan's Blog" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="PHP 7.2.0 正式发布了。PHP（PHP：Hypertext Preprocessor）是一种在电脑上执行的脚本语言，主要是用途在于处理动态网页，也包含了命令列执行接口（command line interface），或者产生图形使用者接口（GUI）程式。">
+<meta name="keywords" content="PHP">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PHP 7.2.0 正式发布，多项内容修复">
+<meta property="og:url" content="http://www.iooeo.com/2017/11/29/PHP-7-2-0-正式发布，多项内容修复/index.html">
+<meta property="og:site_name" content="Ewan&#39;s Blog">
+<meta property="og:description" content="PHP 7.2.0 正式发布了。PHP（PHP：Hypertext Preprocessor）是一种在电脑上执行的脚本语言，主要是用途在于处理动态网页，也包含了命令列执行接口（command line interface），或者产生图形使用者接口（GUI）程式。">
+<meta property="og:updated_time" content="2017-11-29T01:31:30.107Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PHP 7.2.0 正式发布，多项内容修复">
+<meta name="twitter:description" content="PHP 7.2.0 正式发布了。PHP（PHP：Hypertext Preprocessor）是一种在电脑上执行的脚本语言，主要是用途在于处理动态网页，也包含了命令列执行接口（command line interface），或者产生图形使用者接口（GUI）程式。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"always","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://www.iooeo.com/2017/11/29/PHP-7-2-0-正式发布，多项内容修复/"/>
+
+
+
+
+
+  <title>PHP 7.2.0 正式发布，多项内容修复 | Ewan's Blog</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?cea7ef9cbfe59c235bbe4bb0db874f5b";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Ewan's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Ewan's Blog | 杨依园技术博客 | 专注于PHP，涉及MySQL，Linux，Web，Nginx，Apache，Phalcon，Laravel，Redis，PostgreSql，Composer，Beanstalkd，Swoole</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-php">
+          <a href="/categories/PHP/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-paper-plane"></i> <br />
+            
+            php
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-yii">
+          <a href="/categories/PHP/Yii2/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-star"></i> <br />
+            
+            Yii2
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-swoole">
+          <a href="/categories/PHP/Swoole/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-rocket"></i> <br />
+            
+            swoole
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-mysql">
+          <a href="/categories/MySQL/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-database"></i> <br />
+            
+            mysql
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-hexo">
+          <a href="/categories/Hexo/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-paw"></i> <br />
+            
+            hexo
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.iooeo.com/2017/11/29/PHP-7-2-0-正式发布，多项内容修复/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ewan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ewan's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">PHP 7.2.0 正式发布，多项内容修复</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-29T09:25:01+08:00">
+                2017-11-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/PHP/" itemprop="url" rel="index">
+                    <span itemprop="name">PHP</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/2017/11/29/PHP-7-2-0-正式发布，多项内容修复/#SOHUCS" itemprop="discussionUrl">
+                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2017/11/29/PHP-7-2-0-正式发布，多项内容修复/" itemprop="commentsCount"></span>
+                </a>
+              
+            
+          
+
+          
+          
+             <span id="/2017/11/29/PHP-7-2-0-正式发布，多项内容修复/" class="leancloud_visitors" data-flag-title="PHP 7.2.0 正式发布，多项内容修复">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>PHP 7.2.0 正式发布了。PHP（PHP：Hypertext Preprocessor）是一种在电脑上执行的脚本语言，主要是用途在于处理动态网页，也包含了命令列执行接口（command line interface），或者产生图形使用者接口（GUI）程式。<br><a id="more"></a><br>该版本主要还是修复 bug，改进日志如下：</p>
+<p>30 Nov 2017, PHP 7.2.0</p>
+<h2 id="BCMath"><a href="#BCMath" class="headerlink" title="BCMath:"></a>BCMath:</h2><ul>
+<li>Fixed bug #46564 (bcmod truncates fractionals). (liborm85)</li>
+</ul>
+<h2 id="CLI"><a href="#CLI" class="headerlink" title="CLI:"></a>CLI:</h2><ul>
+<li>Fixed bug #74849 (Process is started as interactive shell in PhpStorm).<br>  (Anatol)</li>
+<li>Fixed bug #74979 (Interactive shell opening instead of script execution<br>  with ##f flag). (Anatol)</li>
+</ul>
+<h2 id="CLI-server"><a href="#CLI-server" class="headerlink" title="CLI server:"></a>CLI server:</h2><ul>
+<li>Fixed bug #60471 (Random “Invalid request (unexpected EOF)” using a router<br>  script). (SammyK)</li>
+</ul>
+<h2 id="Core"><a href="#Core" class="headerlink" title="Core:"></a>Core:</h2><ul>
+<li>Added ZEND_COUNT, ZEND_GET_CLASS, ZEND_GET_CALLED_CLASS, ZEND_GET_TYPE,<br>  ZEND_FUNC_NUM_ARGS, ZEND_FUNC_GET_ARGS instructions, to implement<br>  corresponding builtin functions. (Dmitry)</li>
+<li>“Countable” interface is moved from SPL to Core. (Dmitry)</li>
+<li>Added ZEND_IN_ARRAY instruction, implementing optimized in_array() builtin<br>  function, through hash lookup in flipped array. (Dmitry)</li>
+<li>Removed IS_TYPE_IMMUTABLE (it’s the same as COPYABLE &amp; !REFCOUNTED). (Dmitry)</li>
+<li>Removed the sql.safe_mode directive. (Kalle)</li>
+<li>Removed support for Netware. (Kalle)</li>
+<li>Renamed ReflectionClass::isIterateable() to ReflectionClass::isIterable()<br>  (alias original name for BC). (Sara)</li>
+<li>Fixed bug #54535 (WSA cleanup executes before MSHUTDOWN). (Kalle)</li>
+<li>Implemented FR #69791 (Disallow mail header injections by extra headers)<br>  (Yasuo)</li>
+<li>Implemented FR #49806 (proc_nice() for Windows). (Kalle)</li>
+<li>Fix pthreads detection when cross##compiling (ffontaine)</li>
+<li>Fixed memory leaks caused by exceptions thrown from destructors. (Bob,<br>  Dmitry).</li>
+<li>Fixed bug #73215 (uniqid() should use better random source). (Yasuo)</li>
+<li>Implemented FR #72768 (Add ENABLE_VIRTUAL_TERMINAL_PROCESSING flag for<br>  php.exe). (Michele Locati)</li>
+<li>Implemented “Convert numeric keys in object/array casts” RFC, fixes<br>  bugs #53838, #61655, #66173, #70925, #72254, etc. (Andrea)</li>
+<li>Implemented “Deprecate and Remove Bareword (Unquoted) Strings” RFC.<br>  (Rowan Collins)</li>
+<li>Raised minimum supported Windows versions to Windows 7/Server 2008 R2.<br>  (Anatol)</li>
+<li>Implemented minor optimization in array_keys/array_values(). (Sara)</li>
+<li>Added PHP_OS_FAMILY constant to determine on which OS we are. (Jan Altensen)</li>
+<li>Fixed bug #73987 (Method compatibility check looks to original<br>  definition and not parent). (pmmaga)</li>
+<li>Fixed bug #73991 (JSON_OBJECT_AS_ARRAY not respected). (Sara)</li>
+<li>Fixed bug #74053 (Corrupted class entries on shutdown when a destructor<br>  spawns another object). (jim at commercebyte dot com)</li>
+<li>Fixed bug #73971 (Filename got limited to MAX_PATH on Win32 when scan<br>  directory). (Anatol)</li>
+<li>Fixed bug #72359, bug #72451, bug #73706, bug #71115 and others related<br>  to interned strings handling in TS builds. (Anatol, Dmitry)</li>
+<li>Implemented “Trailing Commas In List Syntax” RFC for group use lists only.<br>  (Sammy Kaye Powers)</li>
+<li>Fixed bug #74269 (It’s possible to override trait property with different<br>  loosely##equal value). (pmmaga)</li>
+<li>Fixed bug #61970 (Restraining __construct() access level in subclass gives<br>  a fatal error). (pmmaga)</li>
+<li>Fixed bug #63384 (Cannot override an abstract method with an abstract<br>  method). (pmmaga, wes)</li>
+<li>Fixed bug #74607 (Traits enforce different inheritance rules). (pmmaga)</li>
+<li>Fixed misparsing of abstract unix domain socket names. (Sara)</li>
+<li>Change PHP_OS_FAMILY value from “OSX” to “Darwin”. (Sebastian, Kalle)</li>
+<li>Allow loading PHP/Zend extensions by name in ini files (extension=<name>).<br>  (francois at tekwire dot net)</name></li>
+<li>Added object type annotation. (brzuchal)</li>
+<li>Fixed bug #74815 (crash with a combination of INI entries at startup).<br>  (Anatol)</li>
+<li>Fixed bug #74836 (isset on zero##prefixed numeric indexes in array broken).<br>  (Dmitry)</li>
+<li>Added new VM instuctions ISSET_ISEMPTY_CV and UNSET_CV. Previously they<br>  were implemented as ISSET_ISEMPTY_VAR and UNSET_VAR variants with<br>  ZEND_QUICK_SET flag. (Nikita, Dmitry)</li>
+<li>Fixed bug #49649 (unserialize() doesn’t handle changes in property<br>  visibility). (pmmaga)</li>
+<li>Fixed #74866 (extension_dir = “./ext” now use current directory for base).<br>  (Francois Laupretre)</li>
+<li>Implemented FR #74963 (Improved error message on fetching property of<br>  non##object). (Laruence)</li>
+<li>Fixed Bug #75142 (buildcheck.sh check for autoconf version needs to be updated<br>  for v2.64). (zizzy at zizzy dot net, Remi)</li>
+<li>Fixed bug #74878 (Data race in ZTS builds). (Nikita, Dmitry)</li>
+<li>Fixed bug #75515 (“stream_copy_to_stream” doesn’t stream anymore). (Sara)</li>
+</ul>
+<h2 id="cURL"><a href="#cURL" class="headerlink" title="cURL:"></a>cURL:</h2><ul>
+<li>Fixed bug #75093 (OpenSSL support not detected). (Remi)</li>
+<li>Better fix for #74125 (use pkg##config instead of curl##config). (Remi)</li>
+</ul>
+<h2 id="Date"><a href="#Date" class="headerlink" title="Date:"></a>Date:</h2><ul>
+<li>Fixed bug #55407 (Impossible to prototype DateTime::createFromFormat).<br>  (kelunik)</li>
+<li>Implemented FR #71520 (Adding the DateTime constants to the<br>  DateTimeInterface interface). (Majkl578)</li>
+<li>Fixed bug #75149 (redefinition of typedefs ttinfo and t1info). (Remi)</li>
+<li>Fixed bug #75222 (DateInterval microseconds property always 0). (jhdxr)</li>
+</ul>
+<h2 id="Dba"><a href="#Dba" class="headerlink" title="Dba:"></a>Dba:</h2><ul>
+<li>Fixed bug #72885 (flatfile: dba_fetch() fails to read replaced entry).<br>  (Anatol)</li>
+</ul>
+<h2 id="DOM"><a href="#DOM" class="headerlink" title="DOM:"></a>DOM:</h2><ul>
+<li>Implement #74837 (Implement Countable for DomNodeList and DOMNamedNodeMap).<br>  (Andreas Treichel)</li>
+</ul>
+<h2 id="EXIF"><a href="#EXIF" class="headerlink" title="EXIF:"></a>EXIF:</h2><ul>
+<li>Added support for vendor specific tags for the following formats: Samsung, DJI, Panasonic, Sony, Pentax, Minolta, Sigma/Foveon, AGFA,Kyocera, Ricoh &amp; Epson. (Kalle)</li>
+<li>Fixed bug #72682 (exif_read_data() fails to read all data for some<br>  images). (Kalle)</li>
+<li>Fixed bug #71534 (Type confusion in exif_read_data() leading to heap<br>  overflow in debug mode). (hlt99 at blinkenshell dot org, Kalle)</li>
+<li>Fixed bug #68547 (Exif Header component value check error).<br>  (sjh21a at gmail dot com, Kalle)</li>
+<li>Fixed bug #66443 (Corrupt EXIF header: maximum directory nesting level<br>  reached for some cameras). (Kalle)</li>
+<li>Fixed Redhat bug #1362571 (PHP not returning full results for<br>  exif_read_data function). (Kalle)</li>
+<li>Implemented #65187 (exif_read_data/thumbnail: add support for stream<br>  resource). (Kalle)</li>
+<li>Deprecated the read_exif_data() alias. (Kalle)</li>
+<li>Fixed bug #74428 (exif_read_data(): “Illegal IFD size” warning occurs with<br>  correct exif format). (bradpiccho at gmail dot com, Kalle)</li>
+<li>Fixed bug #72819 (EXIF thumbnails not read anymore). (Kalle)</li>
+<li>Fixed bug #62523 (php crashes with segfault when exif_read_data called).<br>  (Kalle)</li>
+<li>Fixed bug #50660 (exif_read_data(): Illegal IFD offset (works fine with<br>  other exif readers). (skinny dot bravo at gmail dot com, Kalle)</li>
+</ul>
+<h2 id="Fileinfo"><a href="#Fileinfo" class="headerlink" title="Fileinfo:"></a>Fileinfo:</h2><ul>
+<li>Upgrade bundled libmagic to 5.31. (Anatol)</li>
+</ul>
+<h2 id="FPM"><a href="#FPM" class="headerlink" title="FPM:"></a>FPM:</h2><ul>
+<li>Configuration to limit fpm slow log trace callers. (Sannis)</li>
+<li>Fixed bug #75212 (php_value acts like php_admin_value). (Remi)</li>
+</ul>
+<h2 id="FTP"><a href="#FTP" class="headerlink" title="FTP:"></a>FTP:</h2><ul>
+<li>Implement MLSD for structured listing of directories. (blar)</li>
+<li>Added ftp_append() function. (blar)</li>
+</ul>
+<h2 id="GD"><a href="#GD" class="headerlink" title="GD:"></a>GD:</h2><ul>
+<li>Implemented imageresolution as getter and setter (Christoph)</li>
+<li>Fixed bug #74744 (gd.h: stdarg.h include missing for va_list use in<br>  gdErrorMethod). (rainer dot jung at kippdata dot de, cmb)</li>
+<li>Fixed bug #75111 (Memory disclosure or DoS via crafted .bmp image). (cmb)</li>
+</ul>
+<h2 id="GMP"><a href="#GMP" class="headerlink" title="GMP:"></a>GMP:</h2><ul>
+<li>Fixed bug #70896 (gmp_fact() silently ignores non##integer input). (Sara)</li>
+</ul>
+<h2 id="Hash"><a href="#Hash" class="headerlink" title="Hash:"></a>Hash:</h2><ul>
+<li>Changed HashContext from resource to object. (Rouven Weßling, Sara)</li>
+<li>Disallowed usage of non##cryptographic hash functions with HMAC and PBKDF2.<br>  (Andrey Andreev, Nikita)</li>
+<li>Fixed Bug #75284 (sha3 is not supported on bigendian machine). (Remi)</li>
+</ul>
+<h2 id="IMAP"><a href="#IMAP" class="headerlink" title="IMAP:"></a>IMAP:</h2><ul>
+<li>Fixed bug #72324 (imap_mailboxmsginfo() return wrong size).<br>  (ronaldpoon at udomain dot com dot hk, Kalle)</li>
+</ul>
+<h2 id="Intl"><a href="#Intl" class="headerlink" title="Intl:"></a>Intl:</h2><ul>
+<li>Fixed bug #63790 (test using Spoofchecker which may be unavailable). (Sara)</li>
+<li>Fixed bug #75378 ([REGRESSION] IntlDateFormatter::parse() does not change<br>  $position argument). (Laruence)</li>
+</ul>
+<h2 id="JSON"><a href="#JSON" class="headerlink" title="JSON:"></a>JSON:</h2><ul>
+<li>Add JSON_INVALID_UTF8_IGNORE and JSON_INVALID_UTF8_SUBSTITUTE options for<br>  json_encode and json_decode to ignore or replace invalid UTF##8 byte<br>  sequences ## it addresses request #65082. (Jakub Zelenka)</li>
+<li>Fixed bug #75185 (Buffer overflow in json_decode() with<br>  JSON_INVALID_UTF8_IGNORE or JSON_INVALID). (Jakub Zelenka)</li>
+<li>Fixed bug #68567 (JSON_PARTIAL_OUTPUT_ON_ERROR can result in JSON with null<br>  key). (Jakub Zelenka)</li>
+</ul>
+<h2 id="LDAP"><a href="#LDAP" class="headerlink" title="LDAP:"></a>LDAP:</h2><ul>
+<li>Implemented FR #69445 (Support for LDAP EXOP operations)</li>
+<li>Fixed support for LDAP_OPT_SERVER_CONTROLS and LDAP_OPT_CLIENT_CONTROLS in ldap_get_option</li>
+<li>Fixed passing an empty array to ldap_set_option for client or server controls.</li>
+</ul>
+<h2 id="Mbstring"><a href="#Mbstring" class="headerlink" title="Mbstring:"></a>Mbstring:</h2><ul>
+<li>Implemented request #66024 (mb_chr() and mb_ord()). (Masakielastic, Yasuo)</li>
+<li>Implemented request #65081 (mb_scrub()). (Masakielastic, Yasuo)</li>
+<li>Implemented request #69086 (enhancement for mb_convert_encoding() that<br>  handles multibyte replacement char nicely). (Masakielastic, Yasuo)</li>
+<li>Added array input support to mb_convert_encoding(). (Yasuo)</li>
+<li>Added array input support to mb_check_encoding(). (Yasuo)</li>
+<li>Fixed bug #69079 (enhancement for mb_substitute_character). (masakielastic)</li>
+<li>Update to oniguruma version 6.3.0. (Remi)</li>
+<li>Fixed bug #69267 (mb_strtolower fails on titlecase characters). (Nikita)</li>
+</ul>
+<h2 id="Mcrypt"><a href="#Mcrypt" class="headerlink" title="Mcrypt:"></a>Mcrypt:</h2><ul>
+<li>The deprecated mcrypt extension has been moved to PECL. (leigh)</li>
+</ul>
+<h2 id="Opcache"><a href="#Opcache" class="headerlink" title="Opcache:"></a>Opcache:</h2><ul>
+<li>Added global optimisation passes based on data flow analysis using Single<br>  Static Assignment (SSA) form: Sparse Conditional Constant Propagation (SCCP),<br>  Dead Code Elimination (DCE), and removal of unused local variables<br>  (Nikita, Dmitry)</li>
+<li>Fixed incorect constant conditional jump elimination. (Dmitry)</li>
+<li>Fixed bug #75230 (Invalid opcode 49/1/8 using opcache). (Laruence)</li>
+<li>Fixed bug (assertion fails with extended info generated). (Laruence)</li>
+<li>Fixed bug (Phi sources removel). (Laruence)</li>
+<li>Fixed bug #75370 (Webserver hangs on valid PHP text). (Laruence)</li>
+<li>Fixed bug #75357 (segfault loading WordPress wp##admin). (Laruence)</li>
+</ul>
+<h2 id="OpenSSL"><a href="#OpenSSL" class="headerlink" title="OpenSSL:"></a>OpenSSL:</h2><ul>
+<li>Use TLS_ANY for default ssl:// and tls:// negotiation. (kelunik)</li>
+<li>Fix leak in openssl_spki_new(). (jelle at vdwaa dot nl)</li>
+<li>Added openssl_pkcs7_read() and pk7 parameter to openssl_pkcs7_verify().<br>  (jelle at vdwaa dot nl)</li>
+<li>Add ssl security_level stream option to support OpenSSL security levels.<br>  (Jakub Zelenka).</li>
+<li>Allow setting SNI cert and private key in separate files. (Jakub Zelenka)</li>
+<li>Fixed bug #74903 (openssl_pkcs7_encrypt() uses different EOL than before).<br>  (Anatol)</li>
+<li>Automatically load OpenSSL configuration file. (Jakub Zelenka)</li>
+</ul>
+<h2 id="PCRE"><a href="#PCRE" class="headerlink" title="PCRE:"></a>PCRE:</h2><ul>
+<li>Added support for PCRE JIT fast path API. (dmitry)</li>
+<li>Fixed bug #61780 (Inconsistent PCRE captures in match results). (cmb)</li>
+<li>Fixed bug #74873 (Minor BC break: PCRE_JIT changes output of preg_match()).<br>  (Dmitry)</li>
+<li>Fixed bug #75089 (preg_grep() is not reporting PREG_BAD_UTF8_ERROR after<br>  first input string). (Dmitry)</li>
+<li>Fixed bug #75223 (PCRE JIT broken in 7.2). (Dmitry)</li>
+<li>Fixed bug #75285 (Broken build when system libpcre don’t have jit support).<br>  (Remi)</li>
+</ul>
+<h2 id="phar"><a href="#phar" class="headerlink" title="phar:"></a>phar:</h2><ul>
+<li>Fixed bug #74196 (phar does not correctly handle names containing dots).<br>  (mhagstrand)</li>
+</ul>
+<h2 id="PDO"><a href="#PDO" class="headerlink" title="PDO:"></a>PDO:</h2><ul>
+<li>Add “Sent SQL” to debug dump for emulated prepares. (Adam Baratz)</li>
+<li>Add parameter types for national character set strings. (Adam Baratz)</li>
+</ul>
+<h2 id="PDO-DBlib"><a href="#PDO-DBlib" class="headerlink" title="PDO_DBlib:"></a>PDO_DBlib:</h2><ul>
+<li>Fixed bug #73234 (Emulated statements let value dictate parameter type).<br>  (Adam Baratz)</li>
+<li>Fixed bug #73396 (bigint columns are returned as strings). (Adam Baratz)</li>
+<li>Expose DB##Library version as \PDO::DBLIB_ATTR_VERSION attribute on \PDO<br>  instance. (Adam Baratz)</li>
+<li>Add test coverage for bug #72969. (Jeff Farr)</li>
+</ul>
+<h2 id="PDO-OCI"><a href="#PDO-OCI" class="headerlink" title="PDO_OCI:"></a>PDO_OCI:</h2><ul>
+<li>Fixed Bug #74537 (Align ####with##pdo##oci configure option with ####with##oci8 syntax).<br>  (Tianfang Yang)</li>
+</ul>
+<h2 id="PDO-Sqlite"><a href="#PDO-Sqlite" class="headerlink" title="PDO_Sqlite"></a>PDO_Sqlite</h2><ul>
+<li>Switch to sqlite3_prepare_v2() and sqlite3_close_v2() functions (rasmus)</li>
+</ul>
+<h2 id="PHPDBG"><a href="#PHPDBG" class="headerlink" title="PHPDBG"></a>PHPDBG</h2><ul>
+<li>Added extended_value to opcode dump output. (Sara)</li>
+</ul>
+<h2 id="Session"><a href="#Session" class="headerlink" title="Session:"></a>Session:</h2><ul>
+<li>Fixed bug #73461 (Prohibit session save handler recursion). (Yasuo)</li>
+<li>PR #2233 Removed register_globals related code and “!” can be used as $_SESSION key name. (Yasuo)</li>
+<li>Improved bug #73100 fix. ‘user’ save handler can only be set by session_set_save_handler()</li>
+<li>Fixed bug #74514 (5 session functions incorrectly warn when calling in<br>  read##only/getter mode). (Yasuo)</li>
+<li>Fixed bug #74936 (session_cache_expire/cache_limiter/save_path() trigger a<br>  warning in read mode). (morozov)</li>
+<li>Fixed bug #74941 (session fails to start after having headers sent).<br>  (morozov)</li>
+</ul>
+<h2 id="Sodium"><a href="#Sodium" class="headerlink" title="Sodium:"></a>Sodium:</h2><ul>
+<li>New cryptographic extension</li>
+<li>Added missing bindings for libsodium &gt; 1.0.13. (Frank)</li>
+</ul>
+<h2 id="SPL"><a href="#SPL" class="headerlink" title="SPL:"></a>SPL:</h2><ul>
+<li>Fixed bug #71412 (Incorrect arginfo for ArrayIterator::__construct).<br>  (tysonandre775 at hotmail dot com)</li>
+<li>Added spl_object_id(). (Tyson Andre)</li>
+</ul>
+<h2 id="SQLite3"><a href="#SQLite3" class="headerlink" title="SQLite3:"></a>SQLite3:</h2><ul>
+<li>Implement writing to blobs. (bohwaz at github dot com)</li>
+<li>Update to Sqlite 3.20.1. (cmb)</li>
+</ul>
+<h2 id="Standard"><a href="#Standard" class="headerlink" title="Standard:"></a>Standard:</h2><ul>
+<li>Fixed bug #69442 (closing of fd incorrect when PTS enabled). (jaytaph)</li>
+<li>Fixed bug #74300 (unserialize accepts two plus/minus signs for float number exponent part).<br>  (xKerman)</li>
+<li>Compatibility with libargon2 versions 20161029 and 20160821.<br>  (charlesportwoodii at erianna dot com)</li>
+<li>Fixed Bug #74737 (mysqli_get_client_info reflection info).<br>  (mhagstrand at gmail dot com)</li>
+<li>Add support for extension name as argument to dl().<br>  (francois at tekwire dot net)</li>
+<li>Fixed bug #74851 (uniqid() without more_entropy performs badly).<br>  (Emmanuel Dreyfus)</li>
+<li>Fixed bug #74103 (heap##use##after##free when unserializing invalid array<br>  size). (Nikita)</li>
+<li>Fixed bug #75054 (A Denial of Service Vulnerability was found when<br>  performing deserialization). (Nikita)</li>
+<li>Fixed bug #75170 (mt_rand() bias on 64##bit machines). (Nikita)</li>
+<li>Fixed bug #75221 (Argon2i always throws NUL at the end). (cmb)</li>
+</ul>
+<h2 id="Streams"><a href="#Streams" class="headerlink" title="Streams:"></a>Streams:</h2><ul>
+<li>Default ssl/single_dh_use and ssl/honor_cipher_order to true. (kelunik)</li>
+</ul>
+<h2 id="XML"><a href="#XML" class="headerlink" title="XML:"></a>XML:</h2><ul>
+<li>Moved utf8_encode() and utf8_decode() to the Standard extension. (Andrea)</li>
+</ul>
+<h2 id="XMLRPC"><a href="#XMLRPC" class="headerlink" title="XMLRPC:"></a>XMLRPC:</h2><ul>
+<li>Use Zend MM for allocation in bundled libxmlrpc (Joe)</li>
+</ul>
+<h2 id="ZIP"><a href="#ZIP" class="headerlink" title="ZIP:"></a>ZIP:</h2><ul>
+<li>Add support for encrypted archives. (Remi)</li>
+<li>Use of bundled libzip is deprecated, ####with##libzip option is recommended. (Remi)</li>
+<li>Fixed Bug #73803 (Reflection of ZipArchive does not show public properties). (Remi)</li>
+<li>ZipArchive implements countable, added ZipArchive::count() method. (Remi)</li>
+<li>Fix segfault in php_stream_context_get_option call. (Remi)</li>
+<li>Fixed bug #75143 (new method setEncryptionName() seems not to exist<br>  in ZipArchive). (Anatol)</li>
+</ul>
+<h2 id="zlib"><a href="#zlib" class="headerlink" title="zlib:"></a>zlib:</h2><ul>
+<li>Expose inflate_get_status() and inflate_get_read_len() functions.<br>  (Matthew Trescott)</li>
+</ul>
+<h2 id="下载地址："><a href="#下载地址：" class="headerlink" title="下载地址："></a>下载地址：</h2><ul>
+<li><a href="http://php.net/distributions/php-7.2.0.tar.gz" target="_blank" rel="external">http://php.net/distributions/php-7.2.0.tar.gz</a></li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div align="center">
+      
+        <div class="copyright">
+        <p><span>
+        <b>本文地址：</b><a href="/2017/11/29/PHP-7-2-0-正式发布，多项内容修复/" title="PHP 7.2.0 正式发布，多项内容修复">http://www.iooeo.com/2017/11/29/PHP-7-2-0-正式发布，多项内容修复/</a><br/><b>转载请注明出处，谢谢！</b>
+        </span></p>
+        </div>
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="http://ogpq2zwg5.bkt.clouddn.com/WechatIMG15.jpeg" alt="Ewan WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="http://ogpq2zwg5.bkt.clouddn.com/WechatIMG16.jpeg" alt="Ewan Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/PHP/" rel="tag"># PHP</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/11/29/Laravel-v5-5-22-发布，PHP-开发框架/" rel="next" title="Laravel v5.5.22 发布，PHP 开发框架">
+                <i class="fa fa-chevron-left"></i> Laravel v5.5.22 发布，PHP 开发框架
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="SOHUCS"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="Ewan" />
+          <p class="site-author-name" itemprop="name">Ewan</p>
+           
+              <p class="site-description motion-element" itemprop="description">The more effort ,the more lucky</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/">
+                <span class="site-state-item-count">75</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">33</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/u/2120563685" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/yangyiyuan" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="mailto:654846126@qq.com" target="_blank" title="Email">
+                  
+                    <i class="fa fa-fw fa-envelope"></i>
+                  
+                  Email
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.firedata.cn/" target="_blank" title="Company">
+                  
+                    <i class="fa fa-fw fa-users"></i>
+                  
+                  Company
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.firedata.cn/" title="在职-意静科技" target="_blank">在职-意静科技</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.xd.com/" title="曾供职-心动网络" target="_blank">曾供职-心动网络</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.mobase.cn/" title="曾供职-翼成科技" target="_blank">曾供职-翼成科技</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.blueberrytech.cn/base/" title="曾供职-蓝莓盈动" target="_blank">曾供职-蓝莓盈动</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://old.tumiaoya.com/" title="白宝冰-博客" target="_blank">白宝冰-博客</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.liuxiaojia.cc/" title="刘佳-博客" target="_blank">刘佳-博客</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.pythondev.org" title="曹帅军-博客" target="_blank">曹帅军-博客</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.dannisi.xin" title="李丹-博客" target="_blank">李丹-博客</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#BCMath"><span class="nav-number">1.</span> <span class="nav-text">BCMath:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CLI"><span class="nav-number">2.</span> <span class="nav-text">CLI:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CLI-server"><span class="nav-number">3.</span> <span class="nav-text">CLI server:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Core"><span class="nav-number">4.</span> <span class="nav-text">Core:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cURL"><span class="nav-number">5.</span> <span class="nav-text">cURL:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Date"><span class="nav-number">6.</span> <span class="nav-text">Date:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Dba"><span class="nav-number">7.</span> <span class="nav-text">Dba:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DOM"><span class="nav-number">8.</span> <span class="nav-text">DOM:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#EXIF"><span class="nav-number">9.</span> <span class="nav-text">EXIF:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Fileinfo"><span class="nav-number">10.</span> <span class="nav-text">Fileinfo:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#FPM"><span class="nav-number">11.</span> <span class="nav-text">FPM:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#FTP"><span class="nav-number">12.</span> <span class="nav-text">FTP:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GD"><span class="nav-number">13.</span> <span class="nav-text">GD:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GMP"><span class="nav-number">14.</span> <span class="nav-text">GMP:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hash"><span class="nav-number">15.</span> <span class="nav-text">Hash:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IMAP"><span class="nav-number">16.</span> <span class="nav-text">IMAP:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Intl"><span class="nav-number">17.</span> <span class="nav-text">Intl:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JSON"><span class="nav-number">18.</span> <span class="nav-text">JSON:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#LDAP"><span class="nav-number">19.</span> <span class="nav-text">LDAP:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Mbstring"><span class="nav-number">20.</span> <span class="nav-text">Mbstring:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Mcrypt"><span class="nav-number">21.</span> <span class="nav-text">Mcrypt:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Opcache"><span class="nav-number">22.</span> <span class="nav-text">Opcache:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#OpenSSL"><span class="nav-number">23.</span> <span class="nav-text">OpenSSL:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PCRE"><span class="nav-number">24.</span> <span class="nav-text">PCRE:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#phar"><span class="nav-number">25.</span> <span class="nav-text">phar:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PDO"><span class="nav-number">26.</span> <span class="nav-text">PDO:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PDO-DBlib"><span class="nav-number">27.</span> <span class="nav-text">PDO_DBlib:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PDO-OCI"><span class="nav-number">28.</span> <span class="nav-text">PDO_OCI:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PDO-Sqlite"><span class="nav-number">29.</span> <span class="nav-text">PDO_Sqlite</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PHPDBG"><span class="nav-number">30.</span> <span class="nav-text">PHPDBG</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Session"><span class="nav-number">31.</span> <span class="nav-text">Session:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sodium"><span class="nav-number">32.</span> <span class="nav-text">Sodium:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SPL"><span class="nav-number">33.</span> <span class="nav-text">SPL:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SQLite3"><span class="nav-number">34.</span> <span class="nav-text">SQLite3:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Standard"><span class="nav-number">35.</span> <span class="nav-text">Standard:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Streams"><span class="nav-number">36.</span> <span class="nav-text">Streams:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#XML"><span class="nav-number">37.</span> <span class="nav-text">XML:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#XMLRPC"><span class="nav-number">38.</span> <span class="nav-text">XMLRPC:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ZIP"><span class="nav-number">39.</span> <span class="nav-text">ZIP:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#zlib"><span class="nav-number">40.</span> <span class="nav-text">zlib:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#下载地址："><span class="nav-number">41.</span> <span class="nav-text">下载地址：</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2013 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Ewan</span>
+</div>
+
+
+<div class="powered-by">
+  <span class="links-of-author-item">
+    <a href="http://www.miitbeian.gov.cn/" target="_blank" title="GitHub">
+    沪ICP备17032516号-1
+    </a>
+  </span>
+</div>
+
+<div class="powered-by">
+  <span class="links-of-author-item">
+    <a href="https://github.com/yangyiyuan" target="_blank" title="GitHub">
+    <i class="fa fa-github-alt"></i>
+    GitHub
+    </a>
+  </span>
+</div>
+
+<div class="theme-info">
+  <span class="links-of-author-item">
+    <a href="http://www.iooeo.com/about/" target="_blank" title="杨依园">
+    <i class="fa fa-fw fa-hand-o-right"></i>
+    做一个有思想的开发者---杨依园
+    </a>
+  </span>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+    <script type="text/javascript">
+    (function(){
+      var appid = 'cyt8r7gzu';
+      var conf = 'a4830425918b568a51dfe3d835fd90db';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      if (width < 960) {
+      window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){
+        window.changyan.api.config({appid:appid,conf:conf})});
+      }
+    })();
+    </script>
+    <script type="text/javascript" src="https://assets.changyan.sohu.com/upload/plugins/plugins.count.js"></script>
+  
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("ilQJ7Pnw4P9y1I1cQlaOoggK-gzGzoHsz", "uwSCLmjySIQiXUJHwkhc5XdT");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
