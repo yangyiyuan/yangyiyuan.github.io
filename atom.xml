@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.iooeo.com/"/>
-  <updated>2017-11-29T01:31:30.107Z</updated>
+  <updated>2017-12-07T01:47:45.969Z</updated>
   <id>http://www.iooeo.com/</id>
   
   <author>
@@ -14,6 +14,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PHPUnit 6.5.3 发布，PHP 单元测试框</title>
+    <link href="http://www.iooeo.com/2017/12/07/PHPUnit-6-5-3-%E5%8F%91%E5%B8%83%EF%BC%8CPHP-%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E6%A1%86/"/>
+    <id>http://www.iooeo.com/2017/12/07/PHPUnit-6-5-3-发布，PHP-单元测试框/</id>
+    <published>2017-12-07T01:43:54.000Z</published>
+    <updated>2017-12-07T01:47:45.969Z</updated>
+    
+    <content type="html"><![CDATA[<p>PHPUnit 6.5.3 已发布，这是一个修复版本，修复了修正了配置 forceCoversAnnotation =“true” 时 PHPT 测试的问题。<br><a id="more"></a><br>PHPUnit 是一个面向程序员的 PHP 测试框架。是 xUnit 单元测试框架体系结构的一员。<br>PHPUnit 6.2 系列需要 PHP 7 及以上，强烈推荐使用最新版本的 PHP。<br>PHPUnit 需要使用 <a href="http://php.net/manual/en/dom.setup.php" target="_blank" rel="external">dom</a> 和 <a href="http://php.net/manual/en/json.installation.php" target="_blank" rel="external">json</a> 扩展，它们通常是默认启用的。<br>PHPUnit 还需要 <a href="http://php.net/manual/en/pcre.installation.php" target="_blank" rel="external">pcre</a>、<a href="http://php.net/manual/en/reflection.installation.php" target="_blank" rel="external">reflection</a>、<a href="http://php.net/manual/en/spl.installation.php" target="_blank" rel="external">spl</a> 扩展。这些标准扩展默认启用，并且除非修改 PHP 的构建系统和 C 源代码，否则无法禁用它们。<br>代码覆盖率分析报告功能需要 <a href="http://xdebug.org/" target="_blank" rel="external">Xdebug</a>（2.5.0以上）与 <a href="http://php.net/manual/en/tokenizer.installation.php" target="_blank" rel="external">tokenizer</a> 扩展。生成 XML 格式的报告需要有 <a href="http://php.net/manual/en/xmlwriter.installation.php" target="_blank" rel="external">xmlwriter</a> 扩展。</p>
+<p>下载地址：</p>
+<ul>
+<li><a href="https://github.com/sebastianbergmann/phpunit/archive/6.5.3.zip" target="_blank" rel="external">Source code (zip)</a></li>
+<li><a href="https://github.com/sebastianbergmann/phpunit/archive/6.5.3.tar.gz" target="_blank" rel="external">Source code (tar.gz)</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;PHPUnit 6.5.3 已发布，这是一个修复版本，修复了修正了配置 forceCoversAnnotation =“true” 时 PHPT 测试的问题。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
+    
+    
+      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
+    
+      <category term="PHPUnit" scheme="http://www.iooeo.com/tags/PHPUnit/"/>
+    
+  </entry>
   
   <entry>
     <title>PHP 7.2.0 正式发布，多项内容修复</title>
@@ -1153,56 +1183,6 @@ IP高于独立访客的时候正常是以下这种状况：一个用户，上网
     
     
       <category term="Sublime" scheme="http://www.iooeo.com/tags/Sublime/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>PHP 7.2.0 RC2 发布，bug 修复版本</title>
-    <link href="http://www.iooeo.com/2017/09/13/PHP-7-2-0-RC2-%E5%8F%91%E5%B8%83%EF%BC%8Cbug-%E4%BF%AE%E5%A4%8D%E7%89%88%E6%9C%AC/"/>
-    <id>http://www.iooeo.com/2017/09/13/PHP-7-2-0-RC2-发布，bug-修复版本/</id>
-    <published>2017-09-13T01:22:03.000Z</published>
-    <updated>2017-09-13T01:23:09.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>PHP 7.2.0 RC2 发布了。PHP（PHP：Hypertext Preprocessor）是一种在电脑上执行的脚本语言，主要是用途在于处理动态网页，也包含了命令列执行接口（command line interface），或者产生图形使用者接口（GUI）程式。改进日志如下：<br><a id="more"></a><br> 14 Sep 2017, PHP 7.2.0RC2</p>
-<ul>
-<li><p>Core:<br>. Fixed Bug #75142 (buildcheck.sh check for autoconf version needs to be updated for v2.64). (zizzy at zizzy dot net, Remi)</p>
-</li>
-<li><p>BCMath:<br>. Fixed bug #44995 (bcpowmod() fails if scale != 0). (cmb)<br>. Fixed bug #46781 (BC math handles minus zero incorrectly). (cmb)<br>. Fixed bug #54598 (bcpowmod() may return 1 if modulus is 1). (okano1220, cmb)<br>. Fixed bug #75178 (bcpowmod() misbehaves for non-integer base or modulus). (cmb)</p>
-</li>
-<li><p>CLI server:<br>. Fixed bug #70470 (Built-in server truncates headers spanning over TCP packets). (bouk)</p>
-</li>
-<li><p>Date:<br>. Fixed bug #75149 (redefinition of typedefs ttinfo and t1info). (Remi)</p>
-</li>
-<li><p>GD:<br>. Fixed bug #75139 (libgd/gd_interpolation.c:1786: suspicious if ?). (cmb)</p>
-</li>
-<li><p>Intl:<br>.  Fixed bug #75193 (segfault in collator_convert_object_to_string). (Remi)</p>
-</li>
-<li><p>Gettext:<br>. Fixed bug #73730 (textdomain(null) throws in strict mode). (cmb)</p>
-</li>
-<li><p>Opcache<br>. Fixed incorect constant conditional jump elimination. (Dmitry)</p>
-</li>
-<li><p>OpenSSL<br>. Automatically load OpenSSL configuration file. (Jakub Zelenka)</p>
-</li>
-<li><p>SPL:<br>. Fixed bug #75155 (AppendIterator::append() is broken when appending another AppendIterator). (Nikita)<br>. Fixed bug #75173 (incorrect behavior of AppendIterator::append in foreach loop). (jhdxr)</p>
-</li>
-<li><p>Standard:<br>. Fixed bug #75152 (signed integer overflow in parse_iv). (Laruence)<br>. Fixed bug #75170 (mt_rand() bias on 64-bit machines). (Nikita)</p>
-</li>
-<li><p>ZIP:<br>. Fixed bug #75143 (new method setEncryptionName() seems not to exist in ZipArchive). (Anatol)</p>
-</li>
-</ul>
-<p>下载地址：<br><a href="https://downloads.php.net/~pollita/" target="_blank" rel="external">https://downloads.php.net/~pollita/</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;PHP 7.2.0 RC2 发布了。PHP（PHP：Hypertext Preprocessor）是一种在电脑上执行的脚本语言，主要是用途在于处理动态网页，也包含了命令列执行接口（command line interface），或者产生图形使用者接口（GUI）程式。改进日志如下：&lt;br&gt;
-    
-    </summary>
-    
-      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
-    
-    
-      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
     
   </entry>
   
