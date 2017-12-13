@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.iooeo.com/"/>
-  <updated>2017-12-07T01:47:45.969Z</updated>
+  <updated>2017-12-13T08:30:06.915Z</updated>
   <id>http://www.iooeo.com/</id>
   
   <author>
@@ -14,6 +14,37 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Mac 上关于npm一些令我窒息的操作</title>
+    <link href="http://www.iooeo.com/2017/12/13/Mac-%E4%B8%8A%E5%85%B3%E4%BA%8Enpm%E4%B8%80%E4%BA%9B%E4%BB%A4%E6%88%91%E7%AA%92%E6%81%AF%E7%9A%84%E6%93%8D%E4%BD%9C/"/>
+    <id>http://www.iooeo.com/2017/12/13/Mac-上关于npm一些令我窒息的操作/</id>
+    <published>2017-12-13T08:20:00.000Z</published>
+    <updated>2017-12-13T08:30:06.915Z</updated>
+    
+    <content type="html"><![CDATA[<p>今天想学个前端框架来着，需要npm安装一些环境，搞来搞去各种module.js报错，一咬牙，劳资从头再来。<br><a id="more"></a></p>
+<h2 id="安装nvm"><a href="#安装nvm" class="headerlink" title="安装nvm"></a>安装nvm</h2><p>目前我更多的使用nvm来进行node版本管理，它会安装相应版本的npm。<br>执行如下命令安装nvm：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ brew install nvm</div></pre></td></tr></table></figure></p>
+<p>安装成功，按照提示做一些附属操作，不细说。</p>
+<h2 id="安装node及npm"><a href="#安装node及npm" class="headerlink" title="安装node及npm"></a>安装node及npm</h2><p>首先删除node文件，完全卸载node和npm，让那些扯淡的报错统统go out！<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo rm -rf /usr/local/&#123;lib/node&#123;,/.npm,_modules&#125;,bin,share/man&#125;/&#123;npm*,node*,man1/node*&#125;</div></pre></td></tr></table></figure></p>
+<p>然后进行安装：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ brew link node</div><div class="line">$ brew uninstall node</div><div class="line">$ brew install node</div></pre></td></tr></table></figure></p>
+<p>安装成功后测试：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install -g grunt-cli</div></pre></td></tr></table></figure></p>
+<p>如果安装成功，那么恭喜你node，npm，grunt均安装成功。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;今天想学个前端框架来着，需要npm安装一些环境，搞来搞去各种module.js报错，一咬牙，劳资从头再来。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Mac" scheme="http://www.iooeo.com/categories/Mac/"/>
+    
+    
+      <category term="Mac" scheme="http://www.iooeo.com/tags/Mac/"/>
+    
+      <category term="npm" scheme="http://www.iooeo.com/tags/npm/"/>
+    
+  </entry>
   
   <entry>
     <title>PHPUnit 6.5.3 发布，PHP 单元测试框</title>
@@ -1147,42 +1178,6 @@ IP高于独立访客的时候正常是以下这种状况：一个用户，上网
     
     
       <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Sublime Text 3.0 Build 3143 发布，全新 UI 主题</title>
-    <link href="http://www.iooeo.com/2017/09/15/Sublime-Text-3-0-Build-3143-%E5%8F%91%E5%B8%83%EF%BC%8C%E5%85%A8%E6%96%B0-UI-%E4%B8%BB%E9%A2%98/"/>
-    <id>http://www.iooeo.com/2017/09/15/Sublime-Text-3-0-Build-3143-发布，全新-UI-主题/</id>
-    <published>2017-09-15T01:40:44.000Z</published>
-    <updated>2017-09-15T01:45:43.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>还记得我刚学 PHP 编程的时候，老师强烈推荐了Sublime，当时因为正处于测试阶段，然后就种破解，现在3.0终于发布了，欠的船票该补上了。<br><a id="more"></a><br>Sublime Text 3.0 Build 3143 发布了。Sublime Text 3 比 Sublime Text 2 快得多。 虽然它比 2 的安装包更大，但它的启动速度更快，打开文件的速度更快，滚动效率更高。 </p>
-<p>与最后一个 beta 版相比，3.0 带来了新的 UI 主题，新配色方案和新图标。其他改进如：</p>
-<ul>
-<li>改进大型语法的高亮</li>
-<li>支持 Windows 触摸输入</li>
-<li>支持 MacOS 上的 Touch Bar</li>
-<li>添加适用于 Linux 的 apt / yum / pacman 存储库</li>
-<li>提升 Goto Definition 的性能</li>
-</ul>
-<p><img src="http://ogpq2zwg5.bkt.clouddn.com/%20Sublime.png" alt="Sublime"><br>了解更多 3.0 版的更新内容，请参阅<a href="https://www.sublimetext.com/blog/articles/sublime-text-3-point-0" target="_blank" rel="external">发布新闻</a>和<a href="https://www.sublimetext.com/3" target="_blank" rel="external">完整版发布说明</a>。</p>
-<p>下载地址：</p>
-<ul>
-<li><a href="https://www.sublimetext.com/3" target="_blank" rel="external">https://www.sublimetext.com/3</a>  </li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;还记得我刚学 PHP 编程的时候，老师强烈推荐了Sublime，当时因为正处于测试阶段，然后就种破解，现在3.0终于发布了，欠的船票该补上了。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="Sublime" scheme="http://www.iooeo.com/categories/Sublime/"/>
-    
-    
-      <category term="Sublime" scheme="http://www.iooeo.com/tags/Sublime/"/>
     
   </entry>
   

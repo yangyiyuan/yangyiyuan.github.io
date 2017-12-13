@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Mac 上关于npm一些令我窒息的操作]]></title>
+    <url>%2F2017%2F12%2F13%2FMac-%E4%B8%8A%E5%85%B3%E4%BA%8Enpm%E4%B8%80%E4%BA%9B%E4%BB%A4%E6%88%91%E7%AA%92%E6%81%AF%E7%9A%84%E6%93%8D%E4%BD%9C%2F</url>
+    <content type="text"><![CDATA[今天想学个前端框架来着，需要npm安装一些环境，搞来搞去各种module.js报错，一咬牙，劳资从头再来。 安装nvm目前我更多的使用nvm来进行node版本管理，它会安装相应版本的npm。执行如下命令安装nvm：1$ brew install nvm 安装成功，按照提示做一些附属操作，不细说。 安装node及npm首先删除node文件，完全卸载node和npm，让那些扯淡的报错统统go out！1$ sudo rm -rf /usr/local/&#123;lib/node&#123;,/.npm,_modules&#125;,bin,share/man&#125;/&#123;npm*,node*,man1/node*&#125; 然后进行安装：123$ brew link node$ brew uninstall node$ brew install node 安装成功后测试：1$ npm install -g grunt-cli 如果安装成功，那么恭喜你node，npm，grunt均安装成功。]]></content>
+      <categories>
+        <category>Mac</category>
+      </categories>
+      <tags>
+        <tag>Mac</tag>
+        <tag>npm</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[PHPUnit 6.5.3 发布，PHP 单元测试框]]></title>
     <url>%2F2017%2F12%2F07%2FPHPUnit-6-5-3-%E5%8F%91%E5%B8%83%EF%BC%8CPHP-%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E6%A1%86%2F</url>
     <content type="text"><![CDATA[PHPUnit 6.5.3 已发布，这是一个修复版本，修复了修正了配置 forceCoversAnnotation =“true” 时 PHPT 测试的问题。PHPUnit 是一个面向程序员的 PHP 测试框架。是 xUnit 单元测试框架体系结构的一员。PHPUnit 6.2 系列需要 PHP 7 及以上，强烈推荐使用最新版本的 PHP。PHPUnit 需要使用 dom 和 json 扩展，它们通常是默认启用的。PHPUnit 还需要 pcre、reflection、spl 扩展。这些标准扩展默认启用，并且除非修改 PHP 的构建系统和 C 源代码，否则无法禁用它们。代码覆盖率分析报告功能需要 Xdebug（2.5.0以上）与 tokenizer 扩展。生成 XML 格式的报告需要有 xmlwriter 扩展。 下载地址： Source code (zip) Source code (tar.gz)]]></content>
