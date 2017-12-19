@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Phalcon7 发布 Dao7-1.3.2，改进事件机制]]></title>
+    <url>%2F2017%2F12%2F19%2FPhalcon7-%E5%8F%91%E5%B8%83-Dao7-1-3-2%EF%BC%8C%E6%94%B9%E8%BF%9B%E4%BA%8B%E4%BB%B6%E6%9C%BA%E5%88%B6%2F</url>
+    <content type="text"><![CDATA[模型的属性方法增加前缀“__”。改进事件机制，能够针对部分操作对应事件进行拦截，并停止继续运行：1234567891011121314151617181920212223242526272829303132333435$eventsManager = new Phalcon\Events\Manager();$eventsManager-&gt;attach(&apos;model:beforeQuery&apos;, function($event, $model, $data, $prevdata) &#123; if (!$prevdata) &#123; return [&apos;data&apos; =&gt; 1]; &#125; return $prevdata;&#125;);$eventsManager-&gt;attach(&apos;model:beforeQuery&apos;, function($event, $model, $data, $prevdata) &#123; if (!$prevdata) &#123; return []; &#125; $prevdata[&apos;data2&apos;] = 2; return $prevdata;&#125;);$di = new Phalcon\Di\FactoryDefault;$di-&gt;set(&apos;modelsManager&apos;, function() use ($eventsManager) &#123; $modelsManager = new Phalcon\Mvc\Model\Manager(); $modelsManager-&gt;setEventsManager($eventsManager); return $modelsManager;&#125;, true);class Robots extends Phalcon\Mvc\Model &#123; public function beforeQuery($event, $data, $prevdata) &#123; if (!$prevdata) &#123; return []; &#125; $prevdata[&apos;data3&apos;] = 3; return $prevdata; &#125;&#125;var_dump(Robots::find()); 返回：12345678array(2) &#123; [&quot;data&quot;]=&gt; int(1) [&quot;data2&quot;]=&gt; int(2) [&quot;data3&quot;]=&gt; int(3)&#125;]]></content>
+      <categories>
+        <category>PHP</category>
+      </categories>
+      <tags>
+        <tag>PHP</tag>
+        <tag>Phalcon</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Mac 上关于npm一些令我窒息的操作]]></title>
     <url>%2F2017%2F12%2F13%2FMac-%E4%B8%8A%E5%85%B3%E4%BA%8Enpm%E4%B8%80%E4%BA%9B%E4%BB%A4%E6%88%91%E7%AA%92%E6%81%AF%E7%9A%84%E6%93%8D%E4%BD%9C%2F</url>
     <content type="text"><![CDATA[今天想学个前端框架来着，需要npm安装一些环境，搞来搞去各种module.js报错，一咬牙，劳资从头再来。 安装nvm目前我更多的使用nvm来进行node版本管理，它会安装相应版本的npm。执行如下命令安装nvm：1$ brew install nvm 安装成功，按照提示做一些附属操作，不细说。 安装node及npm首先删除node文件，完全卸载node和npm，让那些扯淡的报错统统go out！1$ sudo rm -rf /usr/local/&#123;lib/node&#123;,/.npm,_modules&#125;,bin,share/man&#125;/&#123;npm*,node*,man1/node*&#125; 然后进行安装：123$ brew link node$ brew uninstall node$ brew install node 安装成功后测试：1$ npm install -g grunt-cli 如果安装成功，那么恭喜你node，npm，grunt均安装成功。]]></content>

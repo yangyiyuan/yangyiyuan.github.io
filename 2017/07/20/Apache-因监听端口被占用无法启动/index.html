@@ -120,6 +120,7 @@
 <meta property="og:url" content="http://www.iooeo.com/2017/07/20/Apache-因监听端口被占用无法启动/index.html">
 <meta property="og:site_name" content="Ewan&#39;s Blog">
 <meta property="og:description" content="今天我一台 Windows 测试机 WAMP 的 Apache 无法启动，找了一下原因，原来 Apache 上某个监听的端口被占用，导致无法启动。下面把发现问题，和解决问题的思路写一下。">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2017-07-21T03:11:29.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Apache 无法启动">
@@ -673,7 +674,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/">
-                <span class="site-state-item-count">77</span>
+                <span class="site-state-item-count">78</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -695,7 +696,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">34</span>
+                <span class="site-state-item-count">35</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -827,7 +828,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#问题：WAMP-的-Apache-无法启动"><span class="nav-number">1.</span> <span class="nav-text">问题：WAMP 的 Apache 无法启动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题原因：Apache-因监听端口被占用无法启动"><span class="nav-number">2.</span> <span class="nav-text">问题原因：Apache 因监听端口被占用无法启动</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#手动启动-Apache"><span class="nav-number">2.1.</span> <span class="nav-text">手动启动 Apache</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决问题：使-Apache-正常运行"><span class="nav-number">3.</span> <span class="nav-text">解决问题：使 Apache 正常运行</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#第一种，更换-Apache-监听的8080端口至别的端口"><span class="nav-number">3.1.</span> <span class="nav-text">第一种，更换 Apache 监听的8080端口至别的端口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第二种，kill-掉占用冲突端口的程序"><span class="nav-number">3.2.</span> <span class="nav-text">第二种，kill 掉占用冲突端口的程序</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#找到占用冲突端口的进程号"><span class="nav-number">3.2.1.</span> <span class="nav-text">找到占用冲突端口的进程号</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#干掉-PID-为3348的程序"><span class="nav-number">3.2.2.</span> <span class="nav-text">干掉 PID 为3348的程序</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#问题：WAMP-的-Apache-无法启动"><span class="nav-number">1.</span> <span class="nav-text"><a href="#&#x95EE;&#x9898;&#xFF1A;WAMP-&#x7684;-Apache-&#x65E0;&#x6CD5;&#x542F;&#x52A8;" class="headerlink" title="&#x95EE;&#x9898;&#xFF1A;WAMP &#x7684; Apache &#x65E0;&#x6CD5;&#x542F;&#x52A8;"></a>&#x95EE;&#x9898;&#xFF1A;WAMP &#x7684; Apache &#x65E0;&#x6CD5;&#x542F;&#x52A8;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题原因：Apache-因监听端口被占用无法启动"><span class="nav-number">2.</span> <span class="nav-text"><a href="#&#x95EE;&#x9898;&#x539F;&#x56E0;&#xFF1A;Apache-&#x56E0;&#x76D1;&#x542C;&#x7AEF;&#x53E3;&#x88AB;&#x5360;&#x7528;&#x65E0;&#x6CD5;&#x542F;&#x52A8;" class="headerlink" title="&#x95EE;&#x9898;&#x539F;&#x56E0;&#xFF1A;Apache &#x56E0;&#x76D1;&#x542C;&#x7AEF;&#x53E3;&#x88AB;&#x5360;&#x7528;&#x65E0;&#x6CD5;&#x542F;&#x52A8;"></a>&#x95EE;&#x9898;&#x539F;&#x56E0;&#xFF1A;Apache &#x56E0;&#x76D1;&#x542C;&#x7AEF;&#x53E3;&#x88AB;&#x5360;&#x7528;&#x65E0;&#x6CD5;&#x542F;&#x52A8;</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#手动启动-Apache"><span class="nav-number">2.1.</span> <span class="nav-text"><a href="#&#x624B;&#x52A8;&#x542F;&#x52A8;-Apache" class="headerlink" title="&#x624B;&#x52A8;&#x542F;&#x52A8; Apache"></a>&#x624B;&#x52A8;&#x542F;&#x52A8; Apache</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决问题：使-Apache-正常运行"><span class="nav-number">3.</span> <span class="nav-text"><a href="#&#x89E3;&#x51B3;&#x95EE;&#x9898;&#xFF1A;&#x4F7F;-Apache-&#x6B63;&#x5E38;&#x8FD0;&#x884C;" class="headerlink" title="&#x89E3;&#x51B3;&#x95EE;&#x9898;&#xFF1A;&#x4F7F; Apache &#x6B63;&#x5E38;&#x8FD0;&#x884C;"></a>&#x89E3;&#x51B3;&#x95EE;&#x9898;&#xFF1A;&#x4F7F; Apache &#x6B63;&#x5E38;&#x8FD0;&#x884C;</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#第一种，更换-Apache-监听的8080端口至别的端口"><span class="nav-number">3.1.</span> <span class="nav-text"><a href="#&#x7B2C;&#x4E00;&#x79CD;&#xFF0C;&#x66F4;&#x6362;-Apache-&#x76D1;&#x542C;&#x7684;8080&#x7AEF;&#x53E3;&#x81F3;&#x522B;&#x7684;&#x7AEF;&#x53E3;" class="headerlink" title="&#x7B2C;&#x4E00;&#x79CD;&#xFF0C;&#x66F4;&#x6362; Apache &#x76D1;&#x542C;&#x7684;8080&#x7AEF;&#x53E3;&#x81F3;&#x522B;&#x7684;&#x7AEF;&#x53E3;"></a>&#x7B2C;&#x4E00;&#x79CD;&#xFF0C;&#x66F4;&#x6362; Apache &#x76D1;&#x542C;&#x7684;8080&#x7AEF;&#x53E3;&#x81F3;&#x522B;&#x7684;&#x7AEF;&#x53E3;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第二种，kill-掉占用冲突端口的程序"><span class="nav-number">3.2.</span> <span class="nav-text"><a href="#&#x7B2C;&#x4E8C;&#x79CD;&#xFF0C;kill-&#x6389;&#x5360;&#x7528;&#x51B2;&#x7A81;&#x7AEF;&#x53E3;&#x7684;&#x7A0B;&#x5E8F;" class="headerlink" title="&#x7B2C;&#x4E8C;&#x79CD;&#xFF0C;kill &#x6389;&#x5360;&#x7528;&#x51B2;&#x7A81;&#x7AEF;&#x53E3;&#x7684;&#x7A0B;&#x5E8F;"></a>&#x7B2C;&#x4E8C;&#x79CD;&#xFF0C;kill &#x6389;&#x5360;&#x7528;&#x51B2;&#x7A81;&#x7AEF;&#x53E3;&#x7684;&#x7A0B;&#x5E8F;</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#找到占用冲突端口的进程号"><span class="nav-number">3.2.1.</span> <span class="nav-text"><a href="#&#x627E;&#x5230;&#x5360;&#x7528;&#x51B2;&#x7A81;&#x7AEF;&#x53E3;&#x7684;&#x8FDB;&#x7A0B;&#x53F7;" class="headerlink" title="&#x627E;&#x5230;&#x5360;&#x7528;&#x51B2;&#x7A81;&#x7AEF;&#x53E3;&#x7684;&#x8FDB;&#x7A0B;&#x53F7;"></a>&#x627E;&#x5230;&#x5360;&#x7528;&#x51B2;&#x7A81;&#x7AEF;&#x53E3;&#x7684;&#x8FDB;&#x7A0B;&#x53F7;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#干掉-PID-为3348的程序"><span class="nav-number">3.2.2.</span> <span class="nav-text"><a href="#&#x5E72;&#x6389;-PID-&#x4E3A;3348&#x7684;&#x7A0B;&#x5E8F;" class="headerlink" title="&#x5E72;&#x6389; PID &#x4E3A;3348&#x7684;&#x7A0B;&#x5E8F;"></a>&#x5E72;&#x6389; PID &#x4E3A;3348&#x7684;&#x7A0B;&#x5E8F;</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>

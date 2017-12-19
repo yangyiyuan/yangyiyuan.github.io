@@ -120,6 +120,7 @@
 <meta property="og:url" content="http://www.iooeo.com/2014/03/02/MySQL-触发器/index.html">
 <meta property="og:site_name" content="Ewan&#39;s Blog">
 <meta property="og:description" content="Ewan又来学习啦，mysql触发器个人学习感悟奉上。 1.触发器定义  sql server里面对某个表的一定的操作，触发某种条件而执行的一段程序。它是一个特殊的存储过程。   2.为什么使用触发器  1）强制业务规则2）审计跟踪 –用于跟踪网站区域流量3）验证4）完整性约束引用 –表的关系在项目整个生命周期中的稳定   3.触发器基本语法create trigger triggre_name">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2016-11-23T03:59:02.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MySQL 触发器">
@@ -706,7 +707,7 @@ end</code><br>statement_list 代表一个或多个语句的列表，列表内的
           
             <div class="site-state-item site-state-posts">
               <a href="/">
-                <span class="site-state-item-count">77</span>
+                <span class="site-state-item-count">78</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -728,7 +729,7 @@ end</code><br>statement_list 代表一个或多个语句的列表，列表内的
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">34</span>
+                <span class="site-state-item-count">35</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -860,7 +861,7 @@ end</code><br>statement_list 代表一个或多个语句的列表，列表内的
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Ewan又来学习啦，mysql触发器个人学习感悟奉上。"><span class="nav-number">1.</span> <span class="nav-text">Ewan又来学习啦，mysql触发器个人学习感悟奉上。</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#触发器可以大大减少只为确保数据库引用完整性和业务规则而编写的代码量。"><span class="nav-number">1.0.1.</span> <span class="nav-text">触发器可以大大减少只为确保数据库引用完整性和业务规则而编写的代码量。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#mysql视图学习至此告一段落，以上内容如有语法结构错误，请指出或给予相应的解决方案。"><span class="nav-number">1.0.2.</span> <span class="nav-text">mysql视图学习至此告一段落，以上内容如有语法结构错误，请指出或给予相应的解决方案。</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Ewan又来学习啦，mysql触发器个人学习感悟奉上。"><span class="nav-number">1.</span> <span class="nav-text"><a href="#Ewan&#x53C8;&#x6765;&#x5B66;&#x4E60;&#x5566;&#xFF0C;mysql&#x89E6;&#x53D1;&#x5668;&#x4E2A;&#x4EBA;&#x5B66;&#x4E60;&#x611F;&#x609F;&#x5949;&#x4E0A;&#x3002;" class="headerlink" title="Ewan&#x53C8;&#x6765;&#x5B66;&#x4E60;&#x5566;&#xFF0C;mysql&#x89E6;&#x53D1;&#x5668;&#x4E2A;&#x4EBA;&#x5B66;&#x4E60;&#x611F;&#x609F;&#x5949;&#x4E0A;&#x3002;"></a>Ewan&#x53C8;&#x6765;&#x5B66;&#x4E60;&#x5566;&#xFF0C;mysql&#x89E6;&#x53D1;&#x5668;&#x4E2A;&#x4EBA;&#x5B66;&#x4E60;&#x611F;&#x609F;&#x5949;&#x4E0A;&#x3002;</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#触发器可以大大减少只为确保数据库引用完整性和业务规则而编写的代码量。"><span class="nav-number">1.0.1.</span> <span class="nav-text"><a href="#&#x89E6;&#x53D1;&#x5668;&#x53EF;&#x4EE5;&#x5927;&#x5927;&#x51CF;&#x5C11;&#x53EA;&#x4E3A;&#x786E;&#x4FDD;&#x6570;&#x636E;&#x5E93;&#x5F15;&#x7528;&#x5B8C;&#x6574;&#x6027;&#x548C;&#x4E1A;&#x52A1;&#x89C4;&#x5219;&#x800C;&#x7F16;&#x5199;&#x7684;&#x4EE3;&#x7801;&#x91CF;&#x3002;" class="headerlink" title="&#x89E6;&#x53D1;&#x5668;&#x53EF;&#x4EE5;&#x5927;&#x5927;&#x51CF;&#x5C11;&#x53EA;&#x4E3A;&#x786E;&#x4FDD;&#x6570;&#x636E;&#x5E93;&#x5F15;&#x7528;&#x5B8C;&#x6574;&#x6027;&#x548C;&#x4E1A;&#x52A1;&#x89C4;&#x5219;&#x800C;&#x7F16;&#x5199;&#x7684;&#x4EE3;&#x7801;&#x91CF;&#x3002;"></a>&#x89E6;&#x53D1;&#x5668;&#x53EF;&#x4EE5;&#x5927;&#x5927;&#x51CF;&#x5C11;&#x53EA;&#x4E3A;&#x786E;&#x4FDD;&#x6570;&#x636E;&#x5E93;&#x5F15;&#x7528;&#x5B8C;&#x6574;&#x6027;&#x548C;&#x4E1A;&#x52A1;&#x89C4;&#x5219;&#x800C;&#x7F16;&#x5199;&#x7684;&#x4EE3;&#x7801;&#x91CF;&#x3002;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#mysql视图学习至此告一段落，以上内容如有语法结构错误，请指出或给予相应的解决方案。"><span class="nav-number">1.0.2.</span> <span class="nav-text"><a href="#mysql&#x89C6;&#x56FE;&#x5B66;&#x4E60;&#x81F3;&#x6B64;&#x544A;&#x4E00;&#x6BB5;&#x843D;&#xFF0C;&#x4EE5;&#x4E0A;&#x5185;&#x5BB9;&#x5982;&#x6709;&#x8BED;&#x6CD5;&#x7ED3;&#x6784;&#x9519;&#x8BEF;&#xFF0C;&#x8BF7;&#x6307;&#x51FA;&#x6216;&#x7ED9;&#x4E88;&#x76F8;&#x5E94;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x3002;" class="headerlink" title="mysql&#x89C6;&#x56FE;&#x5B66;&#x4E60;&#x81F3;&#x6B64;&#x544A;&#x4E00;&#x6BB5;&#x843D;&#xFF0C;&#x4EE5;&#x4E0A;&#x5185;&#x5BB9;&#x5982;&#x6709;&#x8BED;&#x6CD5;&#x7ED3;&#x6784;&#x9519;&#x8BEF;&#xFF0C;&#x8BF7;&#x6307;&#x51FA;&#x6216;&#x7ED9;&#x4E88;&#x76F8;&#x5E94;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x3002;"></a>mysql&#x89C6;&#x56FE;&#x5B66;&#x4E60;&#x81F3;&#x6B64;&#x544A;&#x4E00;&#x6BB5;&#x843D;&#xFF0C;&#x4EE5;&#x4E0A;&#x5185;&#x5BB9;&#x5982;&#x6709;&#x8BED;&#x6CD5;&#x7ED3;&#x6784;&#x9519;&#x8BEF;&#xFF0C;&#x8BF7;&#x6307;&#x51FA;&#x6216;&#x7ED9;&#x4E88;&#x76F8;&#x5E94;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x3002;</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>

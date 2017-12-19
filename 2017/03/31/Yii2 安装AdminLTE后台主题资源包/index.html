@@ -120,6 +120,7 @@
 <meta property="og:url" content="http://www.iooeo.com/2017/03/31/Yii2 安装AdminLTE后台主题资源包/index.html">
 <meta property="og:site_name" content="Ewan&#39;s Blog">
 <meta property="og:description" content="为了快捷开发后台和界面的统一,这里我们引入了AdminLTE主题资源包AdminLTE的学习请移至dmstr/yii2-adminlte-asset">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2017-07-20T06:41:23.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Yii2 安装AdminLTE后台主题资源包">
@@ -489,7 +490,7 @@
       
 
       
-        <p>为了快捷开发后台和界面的统一,这里我们引入了AdminLTE主题资源包<br>AdminLTE的学习请移至<a href="https://github.com/dmstr/yii2-adminlte-asset" target="_blank" rel="external">dmstr/yii2-adminlte-asset</a><br><a id="more"></a></p>
+        <p>为了快捷开发后台和界面的统一,这里我们引入了AdminLTE主题资源包<br>AdminLTE的学习请移至<a href="https://github.com/dmstr/yii2-adminlte-asset" target="_blank" rel="noopener">dmstr/yii2-adminlte-asset</a><br><a id="more"></a></p>
 <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>使用composer安装<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ composer require dmstr/yii2-adminlte-asset &quot;2.*&quot;</div></pre></td></tr></table></figure></p>
 <h2 id="使用主题"><a href="#使用主题" class="headerlink" title="使用主题"></a>使用主题</h2><h3 id="方式一"><a href="#方式一" class="headerlink" title="方式一"></a>方式一</h3><p>复制整个<em>vendor/dmstr/yii2-adminlte-asset/example-views/yiisoft/yii2-app</em>目录下的<em>layouts</em>目录和<em>site</em>目录到<em>backend/views</em>,覆盖原始文件</p>
 <h3 id="方式二"><a href="#方式二" class="headerlink" title="方式二"></a>方式二</h3><p>在<em>backend/config/main.php</em>中添加一下配置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&apos;components&apos; =&gt; [</div><div class="line">    &apos;view&apos; =&gt; [</div><div class="line">         &apos;theme&apos; =&gt; [</div><div class="line">             &apos;pathMap&apos; =&gt; [</div><div class="line">                &apos;@app/views&apos; =&gt; &apos;@vendor/dmstr/yii2-adminlte-asset/example-views/yiisoft/yii2-app&apos;</div><div class="line">             ],</div><div class="line">         ],</div><div class="line">    ],</div><div class="line">],</div></pre></td></tr></table></figure></p>
@@ -678,7 +679,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/">
-                <span class="site-state-item-count">77</span>
+                <span class="site-state-item-count">78</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -700,7 +701,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">34</span>
+                <span class="site-state-item-count">35</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -832,7 +833,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用主题"><span class="nav-number">2.</span> <span class="nav-text">使用主题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#方式一"><span class="nav-number">2.1.</span> <span class="nav-text">方式一</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方式二"><span class="nav-number">2.2.</span> <span class="nav-text">方式二</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查看效果"><span class="nav-number">2.3.</span> <span class="nav-text">查看效果</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AdminLTE学习"><span class="nav-number">3.</span> <span class="nav-text">AdminLTE学习</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">1.</span> <span class="nav-text"><a href="#&#x5B89;&#x88C5;" class="headerlink" title="&#x5B89;&#x88C5;"></a>&#x5B89;&#x88C5;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用主题"><span class="nav-number">2.</span> <span class="nav-text"><a href="#&#x4F7F;&#x7528;&#x4E3B;&#x9898;" class="headerlink" title="&#x4F7F;&#x7528;&#x4E3B;&#x9898;"></a>&#x4F7F;&#x7528;&#x4E3B;&#x9898;</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#方式一"><span class="nav-number">2.1.</span> <span class="nav-text"><a href="#&#x65B9;&#x5F0F;&#x4E00;" class="headerlink" title="&#x65B9;&#x5F0F;&#x4E00;"></a>&#x65B9;&#x5F0F;&#x4E00;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方式二"><span class="nav-number">2.2.</span> <span class="nav-text"><a href="#&#x65B9;&#x5F0F;&#x4E8C;" class="headerlink" title="&#x65B9;&#x5F0F;&#x4E8C;"></a>&#x65B9;&#x5F0F;&#x4E8C;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查看效果"><span class="nav-number">2.3.</span> <span class="nav-text"><a href="#&#x67E5;&#x770B;&#x6548;&#x679C;" class="headerlink" title="&#x67E5;&#x770B;&#x6548;&#x679C;"></a>&#x67E5;&#x770B;&#x6548;&#x679C;</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AdminLTE学习"><span class="nav-number">3.</span> <span class="nav-text"><a href="#AdminLTE&#x5B66;&#x4E60;" class="headerlink" title="AdminLTE&#x5B66;&#x4E60;"></a>AdminLTE&#x5B66;&#x4E60;</span></a></li></ol></div>
             
 
           </div>

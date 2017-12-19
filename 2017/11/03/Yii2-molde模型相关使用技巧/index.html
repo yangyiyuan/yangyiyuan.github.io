@@ -120,6 +120,7 @@
 <meta property="og:url" content="http://www.iooeo.com/2017/11/03/Yii2-molde模型相关使用技巧/index.html">
 <meta property="og:site_name" content="Ewan&#39;s Blog">
 <meta property="og:description" content="今天整理一些 Yii2 Model模型在开发中常用到的一些方法我技巧。模型是 MVC 模式中的一部分， 是代表业务数据、规则和逻辑的对象。">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2017-11-03T01:33:34.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Yii2  molde模型相关使用技巧">
@@ -675,7 +676,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/">
-                <span class="site-state-item-count">77</span>
+                <span class="site-state-item-count">78</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -697,7 +698,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">34</span>
+                <span class="site-state-item-count">35</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -829,7 +830,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#获取查询-SQL"><span class="nav-number">1.</span> <span class="nav-text">获取查询 SQL</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#简单查询技巧"><span class="nav-number">2.</span> <span class="nav-text">简单查询技巧</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模型中事务处理"><span class="nav-number">3.</span> <span class="nav-text">模型中事务处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#批量插入"><span class="nav-number">4.</span> <span class="nav-text">批量插入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#表单验证两个字段选取一个"><span class="nav-number">5.</span> <span class="nav-text">表单验证两个字段选取一个</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Like-模糊查询"><span class="nav-number">6.</span> <span class="nav-text">Like 模糊查询</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#获取查询-SQL"><span class="nav-number">1.</span> <span class="nav-text"><a href="#&#x83B7;&#x53D6;&#x67E5;&#x8BE2;-SQL" class="headerlink" title="&#x83B7;&#x53D6;&#x67E5;&#x8BE2; SQL"></a>&#x83B7;&#x53D6;&#x67E5;&#x8BE2; SQL</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#简单查询技巧"><span class="nav-number">2.</span> <span class="nav-text"><a href="#&#x7B80;&#x5355;&#x67E5;&#x8BE2;&#x6280;&#x5DE7;" class="headerlink" title="&#x7B80;&#x5355;&#x67E5;&#x8BE2;&#x6280;&#x5DE7;"></a>&#x7B80;&#x5355;&#x67E5;&#x8BE2;&#x6280;&#x5DE7;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模型中事务处理"><span class="nav-number">3.</span> <span class="nav-text"><a href="#&#x6A21;&#x578B;&#x4E2D;&#x4E8B;&#x52A1;&#x5904;&#x7406;" class="headerlink" title="&#x6A21;&#x578B;&#x4E2D;&#x4E8B;&#x52A1;&#x5904;&#x7406;"></a>&#x6A21;&#x578B;&#x4E2D;&#x4E8B;&#x52A1;&#x5904;&#x7406;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#批量插入"><span class="nav-number">4.</span> <span class="nav-text"><a href="#&#x6279;&#x91CF;&#x63D2;&#x5165;" class="headerlink" title="&#x6279;&#x91CF;&#x63D2;&#x5165;"></a>&#x6279;&#x91CF;&#x63D2;&#x5165;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#表单验证两个字段选取一个"><span class="nav-number">5.</span> <span class="nav-text"><a href="#&#x8868;&#x5355;&#x9A8C;&#x8BC1;&#x4E24;&#x4E2A;&#x5B57;&#x6BB5;&#x9009;&#x53D6;&#x4E00;&#x4E2A;" class="headerlink" title="&#x8868;&#x5355;&#x9A8C;&#x8BC1;&#x4E24;&#x4E2A;&#x5B57;&#x6BB5;&#x9009;&#x53D6;&#x4E00;&#x4E2A;"></a>&#x8868;&#x5355;&#x9A8C;&#x8BC1;&#x4E24;&#x4E2A;&#x5B57;&#x6BB5;&#x9009;&#x53D6;&#x4E00;&#x4E2A;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Like-模糊查询"><span class="nav-number">6.</span> <span class="nav-text"><a href="#Like-&#x6A21;&#x7CCA;&#x67E5;&#x8BE2;" class="headerlink" title="Like &#x6A21;&#x7CCA;&#x67E5;&#x8BE2;"></a>Like &#x6A21;&#x7CCA;&#x67E5;&#x8BE2;</span></a></li></ol></div>
             
 
           </div>

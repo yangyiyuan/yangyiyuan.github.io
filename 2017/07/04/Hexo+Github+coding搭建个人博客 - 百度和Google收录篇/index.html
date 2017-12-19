@@ -120,6 +120,7 @@
 <meta property="og:url" content="http://www.iooeo.com/2017/07/04/Hexo+Github+coding搭建个人博客 - 百度和Google收录篇/index.html">
 <meta property="og:site_name" content="Ewan&#39;s Blog">
 <meta property="og:description" content="网站地图  网站地图，又称站点地图，它就是一个页面，上面放置了网站上需要搜索引擎抓取的所有页面的链接（注：不是所有页面）。大多数人在网站上找不到自己所需要的信息时，可能会将网站地图作为一种补救措施。搜索引擎蜘蛛非常喜欢网站地图">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2017-07-04T08:45:07.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo+Github+coding搭建个人博客 - 百度和Google收录篇">
@@ -495,7 +496,7 @@
 <h2 id="查看博客是否已经被收录"><a href="#查看博客是否已经被收录" class="headerlink" title="查看博客是否已经被收录"></a>查看博客是否已经被收录</h2><p>在百度和Google分别输入搜索:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">site:iooeo.com</div></pre></td></tr></table></figure></p>
 <p>这里需要将iooeo.com换成你们自己的域名</p>
 <h2 id="百度验证网站"><a href="#百度验证网站" class="headerlink" title="百度验证网站"></a>百度验证网站</h2><ul>
-<li><a href="http://zhanzhang.baidu.com/linksubmit/url" target="_blank" rel="external">百度链接提交</a></li>
+<li><a href="http://zhanzhang.baidu.com/linksubmit/url" target="_blank" rel="noopener">百度链接提交</a></li>
 </ul>
 <p>在链接提交输入框中输入你的域名,点击提交即可</p>
 <h3 id="验证站点"><a href="#验证站点" class="headerlink" title="验证站点"></a>验证站点</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">点击站点管理,依次输入信息</div><div class="line">第二步*验证网站*,选择文件验证,下载验证文件</div><div class="line">将验证文件放在所应用的主题的source下`/themes/主题/source/`</div><div class="line">执行文件部署</div><div class="line">$ hexo generate</div><div class="line">$ hexo deploy</div><div class="line">部署完成之后点击立即验证或者直接访问,域名/百度验证文件名,下边是我的</div></pre></td></tr></table></figure>
@@ -512,9 +513,9 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">(function()&#123;</div><div class="line">    var bp = document.createElement(&apos;script&apos;);</div><div class="line">    var curProtocol = window.location.protocol.split(&apos;:&apos;)[0];</div><div class="line">    if (curProtocol === &apos;https&apos;) &#123;</div><div class="line">        bp.src = &apos;https://zz.bdstatic.com/linksubmit/push.js&apos;;        </div><div class="line">    &#125;</div><div class="line">    else &#123;</div><div class="line">        bp.src = &apos;http://push.zhanzhang.baidu.com/push.js&apos;;</div><div class="line">    &#125;</div><div class="line">    var s = document.getElementsByTagName(&quot;script&quot;)[0];</div><div class="line">    s.parentNode.insertBefore(bp, s);</div><div class="line">&#125;)();</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
 <p>主动推送</p>
 <blockquote>
-<p>主动推送最为快速的提交方式,是被百度收录最快的推送方式<br>百度提供了主动推送的示例:支持curl、php、python、java、php、ruby等等方式,你可以自己选择一种进行主动推送<br>具体使用帮助请看<a href="http://zhanzhang.baidu.com/linksubmit/index" target="_blank" rel="external">主动推送教程</a></p>
+<p>主动推送最为快速的提交方式,是被百度收录最快的推送方式<br>百度提供了主动推送的示例:支持curl、php、python、java、php、ruby等等方式,你可以自己选择一种进行主动推送<br>具体使用帮助请看<a href="http://zhanzhang.baidu.com/linksubmit/index" target="_blank" rel="noopener">主动推送教程</a></p>
 </blockquote>
-<h2 id="Google验证网站"><a href="#Google验证网站" class="headerlink" title="Google验证网站"></a>Google验证网站</h2><p><a href="https://www.google.com/webmasters/tools/home?hl=zh-CN" target="_blank" rel="external">Google站点提交入口</a><br>添加站点…<br>验证站点…<br>下载文件…<br>步骤基本跟百度一样…</p>
+<h2 id="Google验证网站"><a href="#Google验证网站" class="headerlink" title="Google验证网站"></a>Google验证网站</h2><p><a href="https://www.google.com/webmasters/tools/home?hl=zh-CN" target="_blank" rel="noopener">Google站点提交入口</a><br>添加站点…<br>验证站点…<br>下载文件…<br>步骤基本跟百度一样…</p>
 
       
     </div>
@@ -700,7 +701,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/">
-                <span class="site-state-item-count">77</span>
+                <span class="site-state-item-count">78</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -722,7 +723,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">34</span>
+                <span class="site-state-item-count">35</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -854,7 +855,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo博客生产站点地图"><span class="nav-number">1.</span> <span class="nav-text">Hexo博客生产站点地图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查看博客是否已经被收录"><span class="nav-number">2.</span> <span class="nav-text">查看博客是否已经被收录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#百度验证网站"><span class="nav-number">3.</span> <span class="nav-text">百度验证网站</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#验证站点"><span class="nav-number">3.1.</span> <span class="nav-text">验证站点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#链接提交"><span class="nav-number">3.2.</span> <span class="nav-text">链接提交</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Google验证网站"><span class="nav-number">4.</span> <span class="nav-text">Google验证网站</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo博客生产站点地图"><span class="nav-number">1.</span> <span class="nav-text"><a href="#Hexo&#x535A;&#x5BA2;&#x751F;&#x4EA7;&#x7AD9;&#x70B9;&#x5730;&#x56FE;" class="headerlink" title="Hexo&#x535A;&#x5BA2;&#x751F;&#x4EA7;&#x7AD9;&#x70B9;&#x5730;&#x56FE;"></a>Hexo&#x535A;&#x5BA2;&#x751F;&#x4EA7;&#x7AD9;&#x70B9;&#x5730;&#x56FE;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查看博客是否已经被收录"><span class="nav-number">2.</span> <span class="nav-text"><a href="#&#x67E5;&#x770B;&#x535A;&#x5BA2;&#x662F;&#x5426;&#x5DF2;&#x7ECF;&#x88AB;&#x6536;&#x5F55;" class="headerlink" title="&#x67E5;&#x770B;&#x535A;&#x5BA2;&#x662F;&#x5426;&#x5DF2;&#x7ECF;&#x88AB;&#x6536;&#x5F55;"></a>&#x67E5;&#x770B;&#x535A;&#x5BA2;&#x662F;&#x5426;&#x5DF2;&#x7ECF;&#x88AB;&#x6536;&#x5F55;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#百度验证网站"><span class="nav-number">3.</span> <span class="nav-text"><a href="#&#x767E;&#x5EA6;&#x9A8C;&#x8BC1;&#x7F51;&#x7AD9;" class="headerlink" title="&#x767E;&#x5EA6;&#x9A8C;&#x8BC1;&#x7F51;&#x7AD9;"></a>&#x767E;&#x5EA6;&#x9A8C;&#x8BC1;&#x7F51;&#x7AD9;</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#验证站点"><span class="nav-number">3.1.</span> <span class="nav-text"><a href="#&#x9A8C;&#x8BC1;&#x7AD9;&#x70B9;" class="headerlink" title="&#x9A8C;&#x8BC1;&#x7AD9;&#x70B9;"></a>&#x9A8C;&#x8BC1;&#x7AD9;&#x70B9;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#链接提交"><span class="nav-number">3.2.</span> <span class="nav-text"><a href="#&#x94FE;&#x63A5;&#x63D0;&#x4EA4;" class="headerlink" title="&#x94FE;&#x63A5;&#x63D0;&#x4EA4;"></a>&#x94FE;&#x63A5;&#x63D0;&#x4EA4;</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Google验证网站"><span class="nav-number">4.</span> <span class="nav-text"><a href="#Google&#x9A8C;&#x8BC1;&#x7F51;&#x7AD9;" class="headerlink" title="Google&#x9A8C;&#x8BC1;&#x7F51;&#x7AD9;"></a>Google&#x9A8C;&#x8BC1;&#x7F51;&#x7AD9;</span></a></li></ol></div>
             
 
           </div>

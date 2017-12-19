@@ -120,6 +120,7 @@
 <meta property="og:url" content="http://www.iooeo.com/2017/08/01/swoole-Socket篇/index.html">
 <meta property="og:site_name" content="Ewan&#39;s Blog">
 <meta property="og:description" content="关于 PHP socket 的使用，我在之前的工作中使用过一些，自己也动手封装了关于 socket server 和 socket client 的类库，已共享到 GitHub 和码云上面：">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://ogpq2zwg5.bkt.clouddn.com/217f4d714f-socket-client-server.png">
 <meta property="og:updated_time" content="2017-08-01T03:17:54.000Z">
 <meta name="twitter:card" content="summary">
@@ -493,8 +494,8 @@
       
         <p>关于 PHP socket 的使用，我在之前的工作中使用过一些，自己也动手封装了关于 socket server 和 socket client 的类库，已共享到 GitHub 和码云上面：<br><a id="more"></a></p>
 <ul>
-<li><a href="https://github.com/yangyiyuan/simple-socket/tree/master" target="_blank" rel="external">Github PHP simple-socket</a></li>
-<li><a href="https://gitee.com/ewan.yang/simple-socket" target="_blank" rel="external">Oschina PHP simple-socket</a></li>
+<li><a href="https://github.com/yangyiyuan/simple-socket/tree/master" target="_blank" rel="noopener">Github PHP simple-socket</a></li>
+<li><a href="https://gitee.com/ewan.yang/simple-socket" target="_blank" rel="noopener">Oschina PHP simple-socket</a></li>
 </ul>
 <p>当然也有更好的例如 workerman 之类的 socket 开源项目。<br>但 socket 对于大部分 phper还是比较陌生的一个词语，百度上给出大部分网文关键字都是<em>套接字</em>，比较抽象难懂一些。<br>socket即套接字，是用来与另一个进程进行跨网络通信的文件，说是“文件”，也很好理解哈，因为在linux中一切都可以理解为“文件”。比如客户端可以借助socket与服务器之间建立连接。你也可以把socket理解为一组函数库，它确实也就是一堆函数。<br>我们知道，常见的网络应用都是基于Client-Server模型的。即一个服务器进程和多个客户端进程组合而成，如果你还理解为是一台电脑对另一台电脑，可以回去把进程/线程一文再看看了。在Client-Server模型中，服务器管理某种资源，并且通过对它管理的资源进行操作来为客户端提供服务。<br>那Client和Server又如何实现通信呢？这就要利用socket一系列的函数实现了。<br>基于套接字接口的网络应用的描述，用下面这张图来理解就好。<br><img src="http://ogpq2zwg5.bkt.clouddn.com/217f4d714f-socket-client-server.png" alt="套接字接口的网络应用的描述"></p>
 <p>大致可以描述为：</p>
@@ -671,7 +672,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/">
-                <span class="site-state-item-count">77</span>
+                <span class="site-state-item-count">78</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -693,7 +694,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">34</span>
+                <span class="site-state-item-count">35</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

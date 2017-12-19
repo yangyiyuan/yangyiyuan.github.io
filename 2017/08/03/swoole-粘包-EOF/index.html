@@ -120,6 +120,7 @@
 <meta property="og:url" content="http://www.iooeo.com/2017/08/03/swoole-粘包-EOF/index.html">
 <meta property="og:site_name" content="Ewan&#39;s Blog">
 <meta property="og:description" content="今天在跟硬件开发的小伙伴测试的时候发现了一个非常有趣的问题，即Client 每次请求，Server 端我返回相同信息，但是有时候会出现两次或多次返回的数据堆叠到一起的现象。开始我还以为我代码写的有问题，仔细看了一下代码没问题啊，终究还是要相信科学。">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://ogpq2zwg5.bkt.clouddn.com/TCP%20%E7%B2%98%E5%8C%85.png">
 <meta property="og:updated_time" content="2017-08-03T09:29:46.000Z">
 <meta name="twitter:card" content="summary">
@@ -725,7 +726,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/">
-                <span class="site-state-item-count">77</span>
+                <span class="site-state-item-count">78</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -747,7 +748,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">34</span>
+                <span class="site-state-item-count">35</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -879,7 +880,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#TCP-粘包"><span class="nav-number">1.</span> <span class="nav-text">TCP 粘包</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#长连接和短连接"><span class="nav-number">1.1.</span> <span class="nav-text">长连接和短连接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是-TCP-粘包"><span class="nav-number">1.2.</span> <span class="nav-text">什么是 TCP 粘包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP-出现粘包的原因"><span class="nav-number">1.3.</span> <span class="nav-text">TCP 出现粘包的原因</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么时候需要处理粘包"><span class="nav-number">1.4.</span> <span class="nav-text">什么时候需要处理粘包</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Swoole-处理粘包"><span class="nav-number">2.</span> <span class="nav-text">Swoole 处理粘包</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#EOF-结束协议"><span class="nav-number">2.1.</span> <span class="nav-text">EOF 结束协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#发送长度-固定包头和包尾"><span class="nav-number">2.2.</span> <span class="nav-text">发送长度 固定包头和包尾</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#package-length-type-长度值的类型"><span class="nav-number">2.2.1.</span> <span class="nav-text">package_length_type 长度值的类型</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#TCP-粘包"><span class="nav-number">1.</span> <span class="nav-text"><a href="#TCP-&#x7C98;&#x5305;" class="headerlink" title="TCP &#x7C98;&#x5305;"></a>TCP &#x7C98;&#x5305;</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#长连接和短连接"><span class="nav-number">1.1.</span> <span class="nav-text"><a href="#&#x957F;&#x8FDE;&#x63A5;&#x548C;&#x77ED;&#x8FDE;&#x63A5;" class="headerlink" title="&#x957F;&#x8FDE;&#x63A5;&#x548C;&#x77ED;&#x8FDE;&#x63A5;"></a>&#x957F;&#x8FDE;&#x63A5;&#x548C;&#x77ED;&#x8FDE;&#x63A5;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是-TCP-粘包"><span class="nav-number">1.2.</span> <span class="nav-text"><a href="#&#x4EC0;&#x4E48;&#x662F;-TCP-&#x7C98;&#x5305;" class="headerlink" title="&#x4EC0;&#x4E48;&#x662F; TCP &#x7C98;&#x5305;"></a>&#x4EC0;&#x4E48;&#x662F; TCP &#x7C98;&#x5305;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP-出现粘包的原因"><span class="nav-number">1.3.</span> <span class="nav-text"><a href="#TCP-&#x51FA;&#x73B0;&#x7C98;&#x5305;&#x7684;&#x539F;&#x56E0;" class="headerlink" title="TCP &#x51FA;&#x73B0;&#x7C98;&#x5305;&#x7684;&#x539F;&#x56E0;"></a>TCP &#x51FA;&#x73B0;&#x7C98;&#x5305;&#x7684;&#x539F;&#x56E0;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么时候需要处理粘包"><span class="nav-number">1.4.</span> <span class="nav-text"><a href="#&#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x9700;&#x8981;&#x5904;&#x7406;&#x7C98;&#x5305;" class="headerlink" title="&#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x9700;&#x8981;&#x5904;&#x7406;&#x7C98;&#x5305;"></a>&#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x9700;&#x8981;&#x5904;&#x7406;&#x7C98;&#x5305;</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Swoole-处理粘包"><span class="nav-number">2.</span> <span class="nav-text"><a href="#Swoole-&#x5904;&#x7406;&#x7C98;&#x5305;" class="headerlink" title="Swoole &#x5904;&#x7406;&#x7C98;&#x5305;"></a>Swoole &#x5904;&#x7406;&#x7C98;&#x5305;</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#EOF-结束协议"><span class="nav-number">2.1.</span> <span class="nav-text"><a href="#EOF-&#x7ED3;&#x675F;&#x534F;&#x8BAE;" class="headerlink" title="EOF &#x7ED3;&#x675F;&#x534F;&#x8BAE;"></a>EOF &#x7ED3;&#x675F;&#x534F;&#x8BAE;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#发送长度-固定包头和包尾"><span class="nav-number">2.2.</span> <span class="nav-text"><a href="#&#x53D1;&#x9001;&#x957F;&#x5EA6;-&#x56FA;&#x5B9A;&#x5305;&#x5934;&#x548C;&#x5305;&#x5C3E;" class="headerlink" title="&#x53D1;&#x9001;&#x957F;&#x5EA6; &#x56FA;&#x5B9A;&#x5305;&#x5934;&#x548C;&#x5305;&#x5C3E;"></a>&#x53D1;&#x9001;&#x957F;&#x5EA6; &#x56FA;&#x5B9A;&#x5305;&#x5934;&#x548C;&#x5305;&#x5C3E;</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#package-length-type-长度值的类型"><span class="nav-number">2.2.1.</span> <span class="nav-text"><a href="#package-length-type-&#x957F;&#x5EA6;&#x503C;&#x7684;&#x7C7B;&#x578B;" class="headerlink" title="package_length_type &#x957F;&#x5EA6;&#x503C;&#x7684;&#x7C7B;&#x578B;"></a>package_length_type &#x957F;&#x5EA6;&#x503C;&#x7684;&#x7C7B;&#x578B;</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>

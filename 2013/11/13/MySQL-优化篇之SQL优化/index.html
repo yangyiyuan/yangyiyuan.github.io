@@ -120,6 +120,7 @@
 <meta property="og:url" content="http://www.iooeo.com/2013/11/13/MySQL-优化篇之SQL优化/index.html">
 <meta property="og:site_name" content="Ewan&#39;s Blog">
 <meta property="og:description" content="SQL优化优化SQL的一般步骤 1.通过show status和应用特点了解各种SQL的执行频率  通过SHOW STATUS可以提供服务器状态信息，也可以使用mysqladmin extended-status命令获得。SHOW STATUS可以根据需要显示session级别的统计结果和global级别的统计结果。以下几个参数对Myisam和Innodb存储引擎都计数：1). Com_selec">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2016-11-23T02:10:40.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MySQL 优化篇之SQL优化">
@@ -758,7 +759,7 @@ SELECT * FROM t1 ORDER BY key_part1 DESC, key_part2 DESC;</code><br>但是以下
           
             <div class="site-state-item site-state-posts">
               <a href="/">
-                <span class="site-state-item-count">77</span>
+                <span class="site-state-item-count">78</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -780,7 +781,7 @@ SELECT * FROM t1 ORDER BY key_part1 DESC, key_part2 DESC;</code><br>但是以下
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">34</span>
+                <span class="site-state-item-count">35</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -912,7 +913,7 @@ SELECT * FROM t1 ORDER BY key_part1 DESC, key_part2 DESC;</code><br>但是以下
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#SQL优化"><span class="nav-number">1.</span> <span class="nav-text">SQL优化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#优化SQL的一般步骤"><span class="nav-number">1.1.</span> <span class="nav-text">优化SQL的一般步骤</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#索引问题"><span class="nav-number">1.2.</span> <span class="nav-text">索引问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#两个简单实用的优化方法"><span class="nav-number">1.3.</span> <span class="nav-text">两个简单实用的优化方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常用SQL的优化"><span class="nav-number">1.4.</span> <span class="nav-text">常用SQL的优化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他优化措施"><span class="nav-number">1.5.</span> <span class="nav-text">其他优化措施</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#SQL优化"><span class="nav-number">1.</span> <span class="nav-text"><a href="#SQL&#x4F18;&#x5316;" class="headerlink" title="SQL&#x4F18;&#x5316;"></a>SQL&#x4F18;&#x5316;</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#优化SQL的一般步骤"><span class="nav-number">1.1.</span> <span class="nav-text"><a href="#&#x4F18;&#x5316;SQL&#x7684;&#x4E00;&#x822C;&#x6B65;&#x9AA4;" class="headerlink" title="&#x4F18;&#x5316;SQL&#x7684;&#x4E00;&#x822C;&#x6B65;&#x9AA4;"></a>&#x4F18;&#x5316;SQL&#x7684;&#x4E00;&#x822C;&#x6B65;&#x9AA4;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#索引问题"><span class="nav-number">1.2.</span> <span class="nav-text"><a href="#&#x7D22;&#x5F15;&#x95EE;&#x9898;" class="headerlink" title="&#x7D22;&#x5F15;&#x95EE;&#x9898;"></a>&#x7D22;&#x5F15;&#x95EE;&#x9898;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#两个简单实用的优化方法"><span class="nav-number">1.3.</span> <span class="nav-text"><a href="#&#x4E24;&#x4E2A;&#x7B80;&#x5355;&#x5B9E;&#x7528;&#x7684;&#x4F18;&#x5316;&#x65B9;&#x6CD5;" class="headerlink" title="&#x4E24;&#x4E2A;&#x7B80;&#x5355;&#x5B9E;&#x7528;&#x7684;&#x4F18;&#x5316;&#x65B9;&#x6CD5;"></a>&#x4E24;&#x4E2A;&#x7B80;&#x5355;&#x5B9E;&#x7528;&#x7684;&#x4F18;&#x5316;&#x65B9;&#x6CD5;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常用SQL的优化"><span class="nav-number">1.4.</span> <span class="nav-text"><a href="#&#x5E38;&#x7528;SQL&#x7684;&#x4F18;&#x5316;" class="headerlink" title="&#x5E38;&#x7528;SQL&#x7684;&#x4F18;&#x5316;"></a>&#x5E38;&#x7528;SQL&#x7684;&#x4F18;&#x5316;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他优化措施"><span class="nav-number">1.5.</span> <span class="nav-text"><a href="#&#x5176;&#x4ED6;&#x4F18;&#x5316;&#x63AA;&#x65BD;" class="headerlink" title="&#x5176;&#x4ED6;&#x4F18;&#x5316;&#x63AA;&#x65BD;"></a>&#x5176;&#x4ED6;&#x4F18;&#x5316;&#x63AA;&#x65BD;</span></a></li></ol></li></ol></div>
             
 
           </div>
