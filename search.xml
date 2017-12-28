@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[CakePHP 3.5.9 发布，PHP 开发框架]]></title>
+    <url>%2F2017%2F12%2F28%2FCakePHP-3-5-9-%E5%8F%91%E5%B8%83%EF%BC%8CPHP-%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6%2F</url>
+    <content type="text"><![CDATA[CakePHP 3.5.9 已发布。CakePHP 是一个运用了诸如 ActiveRecord、Association Data Mapping、Front Controller 和 MVC 等著名设计模式的快速开发框架。该项目主要目标是提供一个可以让各种层次的 PHP 开发人员快速地开发出健壮的 Web 应用，而又不失灵活性。 主要更新内容： Updated API documentation. SQLServer driver allows port to be defined now. Improved __debugInfo() output of EventManager. Improved performance of route connection. Improved typehinting adherance in Session implementations. 详情请查看 ChangeLog。 下载地址： cakephp-3-5-9.zip Source code (zip) Source code (tar.gz)]]></content>
+      <categories>
+        <category>PHP</category>
+      </categories>
+      <tags>
+        <tag>PHP</tag>
+        <tag>CakePHP</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Phalcon7 发布 Dao7-1.3.2，改进事件机制]]></title>
     <url>%2F2017%2F12%2F19%2FPhalcon7-%E5%8F%91%E5%B8%83-Dao7-1-3-2%EF%BC%8C%E6%94%B9%E8%BF%9B%E4%BA%8B%E4%BB%B6%E6%9C%BA%E5%88%B6%2F</url>
     <content type="text"><![CDATA[模型的属性方法增加前缀“__”。改进事件机制，能够针对部分操作对应事件进行拦截，并停止继续运行：1234567891011121314151617181920212223242526272829303132333435$eventsManager = new Phalcon\Events\Manager();$eventsManager-&gt;attach(&apos;model:beforeQuery&apos;, function($event, $model, $data, $prevdata) &#123; if (!$prevdata) &#123; return [&apos;data&apos; =&gt; 1]; &#125; return $prevdata;&#125;);$eventsManager-&gt;attach(&apos;model:beforeQuery&apos;, function($event, $model, $data, $prevdata) &#123; if (!$prevdata) &#123; return []; &#125; $prevdata[&apos;data2&apos;] = 2; return $prevdata;&#125;);$di = new Phalcon\Di\FactoryDefault;$di-&gt;set(&apos;modelsManager&apos;, function() use ($eventsManager) &#123; $modelsManager = new Phalcon\Mvc\Model\Manager(); $modelsManager-&gt;setEventsManager($eventsManager); return $modelsManager;&#125;, true);class Robots extends Phalcon\Mvc\Model &#123; public function beforeQuery($event, $data, $prevdata) &#123; if (!$prevdata) &#123; return []; &#125; $prevdata[&apos;data3&apos;] = 3; return $prevdata; &#125;&#125;var_dump(Robots::find()); 返回：12345678array(2) &#123; [&quot;data&quot;]=&gt; int(1) [&quot;data2&quot;]=&gt; int(2) [&quot;data3&quot;]=&gt; int(3)&#125;]]></content>

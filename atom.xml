@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.iooeo.com/"/>
-  <updated>2017-12-19T01:26:10.698Z</updated>
+  <updated>2017-12-28T02:15:01.155Z</updated>
   <id>http://www.iooeo.com/</id>
   
   <author>
@@ -14,6 +14,44 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CakePHP 3.5.9 发布，PHP 开发框架</title>
+    <link href="http://www.iooeo.com/2017/12/28/CakePHP-3-5-9-%E5%8F%91%E5%B8%83%EF%BC%8CPHP-%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6/"/>
+    <id>http://www.iooeo.com/2017/12/28/CakePHP-3-5-9-发布，PHP-开发框架/</id>
+    <published>2017-12-28T02:12:34.000Z</published>
+    <updated>2017-12-28T02:15:01.155Z</updated>
+    
+    <content type="html"><![CDATA[<p>CakePHP 3.5.9 已发布。CakePHP 是一个运用了诸如 ActiveRecord、Association Data Mapping、Front Controller 和 MVC 等著名设计模式的快速开发框架。该项目主要目标是提供一个可以让各种层次的 PHP 开发人员快速地开发出健壮的 Web 应用，而又不失灵活性。<br><a id="more"></a></p>
+<h2 id="主要更新内容："><a href="#主要更新内容：" class="headerlink" title="主要更新内容："></a>主要更新内容：</h2><ul>
+<li>Updated API documentation.</li>
+<li>SQLServer driver allows port to be defined now.</li>
+<li>Improved __debugInfo() output of EventManager.</li>
+<li>Improved performance of route connection.</li>
+<li>Improved typehinting adherance in Session implementations.</li>
+</ul>
+<p>详情请查看 <a href="https://github.com/cakephp/cakephp/compare/3.5.8...3.5.9" target="_blank" rel="noopener">ChangeLog</a>。</p>
+<h2 id="下载地址："><a href="#下载地址：" class="headerlink" title="下载地址："></a>下载地址：</h2><ul>
+<li><a href="https://github.com/cakephp/cakephp/releases/download/3.5.9/cakephp-3-5-9.zip" target="_blank" rel="noopener">cakephp-3-5-9.zip</a></li>
+<li><a href="https://github.com/cakephp/cakephp/archive/3.5.9.zip" target="_blank" rel="noopener">Source code (zip)</a></li>
+<li><a href="https://github.com/cakephp/cakephp/archive/3.5.9.tar.gz" target="_blank" rel="noopener">Source code (tar.gz)</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;CakePHP 3.5.9 已发布。CakePHP 是一个运用了诸如 ActiveRecord、Association Data Mapping、Front Controller 和 MVC 等著名设计模式的快速开发框架。该项目主要目标是提供一个可以让各种层次的 PHP 开发人员快速地开发出健壮的 Web 应用，而又不失灵活性。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
+    
+    
+      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
+    
+      <category term="CakePHP" scheme="http://www.iooeo.com/tags/CakePHP/"/>
+    
+  </entry>
   
   <entry>
     <title>Phalcon7 发布 Dao7-1.3.2，改进事件机制</title>
@@ -1061,54 +1099,6 @@ IP高于独立访客的时候正常是以下这种状况：一个用户，上网
       <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
     
       <category term="CakePHP" scheme="http://www.iooeo.com/tags/CakePHP/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>PHP 7.2.0 RC3 发布，bug 修复版本</title>
-    <link href="http://www.iooeo.com/2017/09/28/PHP-7-2-0-RC3-%E5%8F%91%E5%B8%83%EF%BC%8Cbug-%E4%BF%AE%E5%A4%8D%E7%89%88%E6%9C%AC/"/>
-    <id>http://www.iooeo.com/2017/09/28/PHP-7-2-0-RC3-发布，bug-修复版本/</id>
-    <published>2017-09-28T08:30:41.000Z</published>
-    <updated>2017-09-28T08:34:14.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>PHP 7.2.0 RC3 发布了。PHP（PHP：Hypertext Preprocessor）是一种在电脑上执行的脚本语言，主要是用途在于处理动态网页，也包含了命令列执行接口（command line interface），或者产生图形使用者接口（GUI）程式。改进日志如下：<br><a id="more"></a></p>
-<h3 id="Core"><a href="#Core" class="headerlink" title="Core"></a>Core</h3><ul>
-<li>Fixed bug #75241 (Null pointer dereference in zend_mm_alloc_small()). (Laruence)</li>
-<li>Fixed bug #74878 (Data race in ZTS builds). (Nikita, Dmitry)</li>
-<li>Fixed bug #75236 (infinite loop when printing an error-message). (Andrea)</li>
-<li>Fixed bug #75252 (Incorrect token formatting on two parse errors in one request). (Nikita)</li>
-</ul>
-<h3 id="FPM"><a href="#FPM" class="headerlink" title="FPM:"></a>FPM:</h3><ul>
-<li>Fixed bug #75212 (php_value acts like php_admin_value). (Remi)</li>
-</ul>
-<h3 id="MySQLi"><a href="#MySQLi" class="headerlink" title="MySQLi:"></a>MySQLi:</h3><ul>
-<li>Fixed bug #75018 (Data corruption when reading fields of bit type). (Anatol)</li>
-</ul>
-<h3 id="Opcache"><a href="#Opcache" class="headerlink" title="Opcache:"></a>Opcache:</h3><ul>
-<li>Fixed bug #75230 (Invalid opcode 49/1/8 using opcache). (Laruence)</li>
-</ul>
-<h3 id="PCRE"><a href="#PCRE" class="headerlink" title="PCRE:"></a>PCRE:</h3><ul>
-<li>Fixed bug ##75223 (PCRE JIT broken in 7.2). (Dmitry)</li>
-</ul>
-<h3 id="PDO-mysql"><a href="#PDO-mysql" class="headerlink" title="PDO_mysql:"></a>PDO_mysql:</h3><ul>
-<li>Fixed bug #75177 (Type ‘bit’ is fetched as unexpected string). (Anatol)</li>
-</ul>
-<h3 id="SPL"><a href="#SPL" class="headerlink" title="SPL:"></a>SPL:</h3><ul>
-<li>Fixed bug #73629 (SplDoublyLinkedList::setIteratorMode masks intern flags). (J. Jeising, cmb)</li>
-</ul>
-<h3 id="下载地址："><a href="#下载地址：" class="headerlink" title="下载地址："></a>下载地址：</h3><p><a href="https://downloads.php.net/~remi/" target="_blank" rel="noopener">https://downloads.php.net/~remi/</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;PHP 7.2.0 RC3 发布了。PHP（PHP：Hypertext Preprocessor）是一种在电脑上执行的脚本语言，主要是用途在于处理动态网页，也包含了命令列执行接口（command line interface），或者产生图形使用者接口（GUI）程式。改进日志如下：&lt;br&gt;
-    
-    </summary>
-    
-      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
-    
-    
-      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
     
   </entry>
   
