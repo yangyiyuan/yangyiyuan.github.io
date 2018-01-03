@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://www.iooeo.com/2018/01/03/HHVM-3-23-3-%E5%8F%91%E5%B8%83%EF%BC%8C%E9%AB%98%E9%80%9F%E7%9A%84-PHP-%E6%89%A7%E8%A1%8C%E5%BC%95%E6%93%8E/</loc>
+    <lastmod>2018-01-03T01:29:10.325Z</lastmod>
+    <data>
+        <display>
+        <title>HHVM 3.23.3 发布，高速的 PHP 执行引擎</title>
+        <pubTime>2018-01-03T01:26:14.000Z</pubTime>
+        
+        <tag>PHP</tag>
+         
+        <tag>HHVM</tag>
+         
+         
+           
+             
+              <breadCrumb title="PHP" url="http://www.iooeo.com/categories/PHP/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.iooeo.com/2018/01/03/ThinkPHP-V5-1-0-%E5%8F%91%E5%B8%83/</loc>
     <lastmod>2018-01-03T01:24:46.086Z</lastmod>
     <data>
@@ -1403,9 +1425,9 @@
         <title>Mac Python 版本切换</title>
         <pubTime>2017-07-20T03:24:50.000Z</pubTime>
         
-        <tag>python</tag>
-         
         <tag>Mac</tag>
+         
+        <tag>python</tag>
          
          
            
