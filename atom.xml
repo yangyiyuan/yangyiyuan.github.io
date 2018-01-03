@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.iooeo.com/"/>
-  <updated>2018-01-03T01:29:10.325Z</updated>
+  <updated>2018-01-03T06:21:16.267Z</updated>
   <id>http://www.iooeo.com/</id>
   
   <author>
@@ -14,6 +14,61 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ThinkPHP V5.0.14 版本发布</title>
+    <link href="http://www.iooeo.com/2018/01/03/ThinkPHP-V5-0-14-%E7%89%88%E6%9C%AC%E5%8F%91%E5%B8%83/"/>
+    <id>http://www.iooeo.com/2018/01/03/ThinkPHP-V5-0-14-版本发布/</id>
+    <published>2018-01-03T06:17:40.000Z</published>
+    <updated>2018-01-03T06:21:16.267Z</updated>
+    
+    <content type="html"><![CDATA[<p>V5.0.14版本主对复合主键进行了更多支持，改进了PHP7的兼容性，并且对数据库的一些问题做了改进。是一个推荐更新版本，后面的5.0版本将进入BUG修正及安全维护状态，功能将不会更新调整。<br><a id="more"></a></p>
+<h2 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h2><p>主要更新如下：</p>
+<ul>
+<li>改进Validate类的unique验证</li>
+<li>Validate类增加checkRule方法用于静态验证多个规则</li>
+<li>改进多对多关联的save方法</li>
+<li>改进多对多的pivot对象</li>
+<li>修正setDec方法的延迟写入</li>
+<li>max和min方法增加第二个参数用于设置是否强制转换数字</li>
+<li>改进View类</li>
+<li>改进join关联自身的问题</li>
+<li>改进union查询</li>
+<li>改进Url类</li>
+<li>改进同名路由不同请求的注册</li>
+<li>改进Builder类parseData对空数组的判断</li>
+<li>改进模板替换</li>
+<li>调整BelongsTo的hasWhere方法</li>
+<li>改进模板的编译缓存命名规则 增加布局模板的标识</li>
+<li>改进insertall方法</li>
+<li>改进chunk方法支持复合主键</li>
+<li>改进Error类的一个兼容问题</li>
+<li>改进model类的save方法的复合主键包含自增的情况</li>
+<li>save方法改进复合主键的支持</li>
+<li>改进mysql的insertAll方法</li>
+<li>改进redis长连接多编号库的情况</li>
+</ul>
+<p>5.0.13可以无缝升级到5.0.14。</p>
+<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p>可以通过码云更新或者通过composer更新到最新版本。</p>
+<h2 id="文档"><a href="#文档" class="headerlink" title="文档"></a>文档</h2><p>官方完全开发手册内容已经同步更新 <a href="http://www.kancloud.cn/manual/thinkphp5" target="_blank" rel="noopener">完全开发手册</a> <a href="http://www.kancloud.cn/special/thinkphp5_quickstart" target="_blank" rel="noopener">官方快速入门系列</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;V5.0.14版本主对复合主键进行了更多支持，改进了PHP7的兼容性，并且对数据库的一些问题做了改进。是一个推荐更新版本，后面的5.0版本将进入BUG修正及安全维护状态，功能将不会更新调整。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
+    
+      <category term="ThinkPHP" scheme="http://www.iooeo.com/categories/PHP/ThinkPHP/"/>
+    
+    
+      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
+    
+      <category term="ThinkPHP" scheme="http://www.iooeo.com/tags/ThinkPHP/"/>
+    
+  </entry>
   
   <entry>
     <title>HHVM 3.23.3 发布，高速的 PHP 执行引擎</title>
@@ -1087,39 +1142,6 @@ IP高于独立访客的时候正常是以下这种状况：一个用户，上网
       <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
     
       <category term="ThinkPHP" scheme="http://www.iooeo.com/tags/ThinkPHP/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Yii2  molde模型相关使用技巧</title>
-    <link href="http://www.iooeo.com/2017/11/03/Yii2-molde%E6%A8%A1%E5%9E%8B%E7%9B%B8%E5%85%B3%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/"/>
-    <id>http://www.iooeo.com/2017/11/03/Yii2-molde模型相关使用技巧/</id>
-    <published>2017-11-03T01:35:51.000Z</published>
-    <updated>2017-11-03T01:33:34.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>今天整理一些 Yii2 Model模型在开发中常用到的一些方法我技巧。<br><code>模型是 MVC 模式中的一部分， 是代表业务数据、规则和逻辑的对象。</code><br><a id="more"></a></p>
-<h2 id="获取查询-SQL"><a href="#获取查询-SQL" class="headerlink" title="获取查询 SQL"></a>获取查询 SQL</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$query = User::find()-&gt;where([&apos;like&apos;, &apos;name&apos;, &apos;ewan%&apos;, false]);</div><div class="line"></div><div class="line">$commandQuery = clone $query;</div><div class="line">// SELECT * FROM `user` WHERE `name` LIKE &apos;ewan%&apos;</div><div class="line">echo $commandQuery-&gt;createCommand()-&gt;getRawSql();</div></pre></td></tr></table></figure>
-<h2 id="简单查询技巧"><a href="#简单查询技巧" class="headerlink" title="简单查询技巧"></a>简单查询技巧</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">where(): 添加查询条件。</div><div class="line">select(): 添加查询字段。</div><div class="line">with(): 该查询应执行的关系列表。</div><div class="line">indexBy(): 根据索引的列的名称查询结果。</div><div class="line">asArray(): 以数组的形式返回每条记录。</div><div class="line">orderBy(): 按指定字段排序。</div><div class="line"></div><div class="line">User::find()-&gt;one();	// 返回一条数据，返回对象；</div><div class="line">User::find()-&gt;column();	// 返回查询结果中的第一列的值,返回数组；</div><div class="line">User::find()-&gt;scalar();	// 返回查询结果的第一行中的第一列的值；</div><div class="line">User::find()-&gt;all();	// 返回所有记录数据；</div><div class="line">User::find()-&gt;count();	// 返回记录的数量；</div><div class="line">User::find()-&gt;sum(&apos;num&apos;);	// 返回指定字段（&apos;num&apos;）的总和；</div><div class="line">User::find()-&gt;average(&apos;num&apos;);	// 返回指定字段（&apos;num&apos;）的平均值；</div><div class="line">User::find()-&gt;min(&apos;num&apos;);	// 返回指定字段（&apos;num&apos;）的最小值；</div><div class="line">User::find()-&gt;max(&apos;num&apos;);	// 返回指定字段（&apos;num&apos;）的最大值；</div><div class="line">User::find()-&gt;exists();	// 返回一个值，该值指示查询结果是否有数据；</div></pre></td></tr></table></figure>
-<p>关联查询<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">User::hasOne()：返回对应关系的单条记录</div><div class="line">User::hasMany()：返回对应关系的多条记录</div></pre></td></tr></table></figure></p>
-<h2 id="模型中事务处理"><a href="#模型中事务处理" class="headerlink" title="模型中事务处理"></a>模型中事务处理</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">Yii::$app-&gt;db-&gt;transaction(function() &#123;</div><div class="line">    $order = new Order($customer);</div><div class="line">    $order-&gt;save();</div><div class="line">    $order-&gt;addItems($items);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<h2 id="批量插入"><a href="#批量插入" class="headerlink" title="批量插入"></a>批量插入</h2><p>批量插入的问题，已经写了一篇<a href="http://www.iooeo.com/2017/07/21/Yii2-%E6%89%B9%E9%87%8F%E6%8F%92%E5%85%A5/">《Yii2 批量插入》</a>,点击链接查看即可。</p>
-<h2 id="表单验证两个字段选取一个"><a href="#表单验证两个字段选取一个" class="headerlink" title="表单验证两个字段选取一个"></a>表单验证两个字段选取一个</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">public function rules()</div><div class="line">&#123;</div><div class="line">    return [</div><div class="line">        [[&apos;card_id&apos;, &apos;card_code&apos;], function ($attribute, $param) &#123; //至少要一个</div><div class="line">            if (empty($this-&gt;card_code) &amp;&amp; empty($this-&gt;card_id)) &#123;</div><div class="line">                $this-&gt;addError($attribute, &apos;card_id/card_code至少要填一个&apos;);</div><div class="line">            &#125;</div><div class="line">        &#125;, &apos;skipOnEmpty&apos; =&gt; false],</div><div class="line">    ];</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="Like-模糊查询"><a href="#Like-模糊查询" class="headerlink" title="Like 模糊查询"></a>Like 模糊查询</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$query = User::find()-&gt;where([&apos;LIKE&apos;, &apos;name&apos;, &apos;ad%&apos;, false]); // SELECT * FROM `user` WHERE `name` LIKE &apos;ad%&apos;</div></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;今天整理一些 Yii2 Model模型在开发中常用到的一些方法我技巧。&lt;br&gt;&lt;code&gt;模型是 MVC 模式中的一部分， 是代表业务数据、规则和逻辑的对象。&lt;/code&gt;&lt;br&gt;
-    
-    </summary>
-    
-      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
-    
-      <category term="Yii2" scheme="http://www.iooeo.com/categories/PHP/Yii2/"/>
-    
-    
-      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
-    
-      <category term="Yii2" scheme="http://www.iooeo.com/tags/Yii2/"/>
     
   </entry>
   
