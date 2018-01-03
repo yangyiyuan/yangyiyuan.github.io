@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.iooeo.com/"/>
-  <updated>2017-12-28T02:15:01.155Z</updated>
+  <updated>2018-01-03T01:24:46.086Z</updated>
   <id>http://www.iooeo.com/</id>
   
   <author>
@@ -14,6 +14,71 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ThinkPHP V5.1.0 发布</title>
+    <link href="http://www.iooeo.com/2018/01/03/ThinkPHP-V5-1-0-%E5%8F%91%E5%B8%83/"/>
+    <id>http://www.iooeo.com/2018/01/03/ThinkPHP-V5-1-0-发布/</id>
+    <published>2018-01-03T01:18:13.000Z</published>
+    <updated>2018-01-03T01:24:46.086Z</updated>
+    
+    <content type="html"><![CDATA[<p>ThinkPHP 自诞生以来一路走来已经 12 载，初心不改，并将继续努力，感谢大家的一路支持和贡献！<br><a id="more"></a></p>
+<h2 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h2><p>5.1 版本主要特性包括：</p>
+<ul>
+<li>引入容器和 Facade 支持</li>
+<li>依赖注入完善和支持更多场景</li>
+<li>重构的（对象化）路由</li>
+<li>路由跨域请求支持</li>
+<li>支持注解路由</li>
+<li>配置和路由目录独立</li>
+<li>取消系统常量</li>
+<li>助手函数增强</li>
+<li>类库别名机制</li>
+<li>模型和数据库增强</li>
+<li>验证类增强</li>
+<li>模板引擎改进</li>
+<li>支持 PSR-3 日志规范</li>
+</ul>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>5.1 版本开始官方不提供下载包，请使用 composer 安装：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ composer create-project topthink/think tp</div></pre></td></tr></table></figure></p>
+<h2 id="手册"><a href="#手册" class="headerlink" title="手册"></a>手册</h2><p>官方<a href="https://www.kancloud.cn/manual/thinkphp5_1/content" target="_blank" rel="noopener">完全开发手册</a> 已经更新至最新</p>
+<p>5.1的扩展也同步更新支持了（都支持composer安装），包括：</p>
+<ul>
+<li>topthink/think-testing</li>
+<li>topthink/think-mongo</li>
+<li>topthink/think-migration</li>
+<li>topthink/think-queue</li>
+<li>topthink/think-captcha</li>
+<li>topthink/think-image</li>
+<li>topthink/think-walkman</li>
+<li>topthink/think-swoole</li>
+</ul>
+<p>以及大量的第三方类库包（不再一一列举）<br>另外，官方已经把5.1版本的很多组件独立成composer包了（不再依赖ThinkPHP核心框架运行），包括但不限于：</p>
+<ul>
+<li>topthink/think-container</li>
+<li>topthink/think-orm</li>
+<li>topthink/think-validate</li>
+<li>topthink/think-template</li>
+<li>topthink/think-log</li>
+<li>topthink/think-cache</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;ThinkPHP 自诞生以来一路走来已经 12 载，初心不改，并将继续努力，感谢大家的一路支持和贡献！&lt;br&gt;
+    
+    </summary>
+    
+      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
+    
+      <category term="ThinkPHP" scheme="http://www.iooeo.com/categories/PHP/ThinkPHP/"/>
+    
+    
+      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
+    
+      <category term="ThinkPHP" scheme="http://www.iooeo.com/tags/ThinkPHP/"/>
+    
+  </entry>
   
   <entry>
     <title>CakePHP 3.5.9 发布，PHP 开发框架</title>
@@ -1058,47 +1123,6 @@ IP高于独立访客的时候正常是以下这种状况：一个用户，上网
       <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
     
       <category term="Yii2" scheme="http://www.iooeo.com/tags/Yii2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CakePHP 3.5.5 发布，PHP 开发框架</title>
-    <link href="http://www.iooeo.com/2017/11/03/CakePHP-3-5-5-%E5%8F%91%E5%B8%83%EF%BC%8CPHP-%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6/"/>
-    <id>http://www.iooeo.com/2017/11/03/CakePHP-3-5-5-发布，PHP-开发框架/</id>
-    <published>2017-11-03T01:15:48.000Z</published>
-    <updated>2017-11-03T01:20:07.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>CakePHP 3.5.5 发布了。CakePHP 是一个运用了诸如 ActiveRecord、Association Data Mapping、Front Controller 和 MVC 等著名设计模式的快速开发框架。该项目主要目标是提供一个可以让各种层次的 PHP 开发人员快速地开发出健壮的 Web 应用，而又不失灵活性。<br><a id="more"></a></p>
-<h2 id="更新内容："><a href="#更新内容：" class="headerlink" title="更新内容："></a>更新内容：</h2><ul>
-<li>SQLServer no longer reports double column lengths for NVARCHAR and NCHAR columns.</li>
-<li>IntegrationTestSuite::enableCsrfToken() no longer emits errors when the  POST body is a string.</li>
-<li>Response::getType() has been added as a replacement for  Response::type().</li>
-<li>Network\Socket now supports explicit use of TLS1.1 and 1.2. Support for  SSL2 is deprecated and will be removed in 4.0.0.</li>
-<li>IntegrationTestCase::assertResponseCode() now allows custom messages to be  set.</li>
-<li>Cake\Http\Client\FormData::addFile() now adds parts as documented.</li>
-<li>Router::$initialized is deprecated. As we migrate to routes being loaded  via middleware this property will no longer be in use.</li>
-<li>TableSchema now provides more succinct debug information.</li>
-</ul>
-<p>更多内容请查看 <a href="https://github.com/cakephp/cakephp/compare/3.5.4...3.5.5" target="_blank" rel="noopener">changelog</a></p>
-<h2 id="下载地址："><a href="#下载地址：" class="headerlink" title="下载地址："></a>下载地址：</h2><ul>
-<li><a href="https://github.com/cakephp/cakephp/releases/download/3.5.5/cakephp-3-5-5.zip" target="_blank" rel="noopener">cakephp-3-5-5.zip</a></li>
-<li><a href="https://github.com/cakephp/cakephp/archive/3.5.5.zip" target="_blank" rel="noopener">Source code (zip)</a></li>
-<li><a href="https://github.com/cakephp/cakephp/archive/3.5.5.tar.gz" target="_blank" rel="noopener">Source code (tar.gz)</a></li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;CakePHP 3.5.5 发布了。CakePHP 是一个运用了诸如 ActiveRecord、Association Data Mapping、Front Controller 和 MVC 等著名设计模式的快速开发框架。该项目主要目标是提供一个可以让各种层次的 PHP 开发人员快速地开发出健壮的 Web 应用，而又不失灵活性。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
-    
-    
-      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
-    
-      <category term="CakePHP" scheme="http://www.iooeo.com/tags/CakePHP/"/>
     
   </entry>
   
