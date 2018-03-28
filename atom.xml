@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.iooeo.com/"/>
-  <updated>2018-01-03T06:21:16.267Z</updated>
+  <updated>2018-03-28T06:45:56.722Z</updated>
   <id>http://www.iooeo.com/</id>
   
   <author>
@@ -14,6 +14,109 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PHP 7.0.29, 7.2.4 和 7.1.16 正式发布，多项内容修复</title>
+    <link href="http://www.iooeo.com/2018/03/28/PHP-7-0-29-7-2-4-%E5%92%8C-7-1-16-%E6%AD%A3%E5%BC%8F%E5%8F%91%E5%B8%83%EF%BC%8C%E5%A4%9A%E9%A1%B9%E5%86%85%E5%AE%B9%E4%BF%AE%E5%A4%8D/"/>
+    <id>http://www.iooeo.com/2018/03/28/PHP-7-0-29-7-2-4-和-7-1-16-正式发布，多项内容修复/</id>
+    <published>2018-03-28T06:30:54.000Z</published>
+    <updated>2018-03-28T06:45:56.722Z</updated>
+    
+    <content type="html"><![CDATA[<p>PHP 7.0.29, 7.1.16, 7.2.4已正式发布。PHP（PHP：Hypertext Preprocessor）是一种在电脑上执行的脚本语言，主要是用途在于处理动态网页，也包含了命令列执行接口（command line interface），或者产生图形使用者接口（GUI）程式。<br><a id="more"></a><br>版本主要还是修复 bug，改进日志如下：</p>
+<h2 id="PHP-7-1-16"><a href="#PHP-7-1-16" class="headerlink" title="PHP 7.1.16"></a>PHP 7.1.16</h2><h3 id="Core"><a href="#Core" class="headerlink" title="Core:"></a>Core:</h3><ul>
+<li>Fixed bug #76025 (Segfault while throwing exception in error_handler).(Dmitry, Laruence)</li>
+<li>Fixed bug #76044 (‘date: illegal option – -‘ in ./configure on FreeBSD).(Anatol)</li>
+</ul>
+<h3 id="GD"><a href="#GD" class="headerlink" title="GD:"></a>GD:</h3><ul>
+<li>Fixed bug #73957 (signed integer conversion in imagescale()). (cmb)</li>
+</ul>
+<h3 id="ODBC"><a href="#ODBC" class="headerlink" title="ODBC:"></a>ODBC:</h3><ul>
+<li>Fixed bug #76088 (ODBC functions are not available by default on Windows).(cmb)</li>
+</ul>
+<h3 id="Opcache"><a href="#Opcache" class="headerlink" title="Opcache:"></a>Opcache:</h3><ul>
+<li>Fixed bug #76074 (opcache corrupts variable in for-loop). (Bob)</li>
+</ul>
+<h3 id="Phar"><a href="#Phar" class="headerlink" title="Phar:"></a>Phar:</h3><ul>
+<li>Fixed bug #76085 (Segmentation fault in buildFromIterator when directory name contains a \n). (Laruence)</li>
+</ul>
+<h3 id="Standard"><a href="#Standard" class="headerlink" title="Standard:"></a>Standard:</h3><ul>
+<li>Fixed bug #74139 (mail.add_x_header default inconsistent with docs). (cmb)</li>
+<li>Fixed bug #76068 (parse_ini_string fails to parse “[foo]\nbar=1|&gt;baz” with segfault). (Anatol)</li>
+</ul>
+<h2 id="PHP-7-0-29"><a href="#PHP-7-0-29" class="headerlink" title="PHP 7.0.29"></a>PHP 7.0.29</h2><h3 id="FPM"><a href="#FPM" class="headerlink" title="FPM:"></a>FPM:</h3><ul>
+<li>Fixed bug #75605 (Dumpable FPM child processes allow bypassing opcache access controls). (Jakub Zelenka)</li>
+</ul>
+<h2 id="PHP-7-2-4"><a href="#PHP-7-2-4" class="headerlink" title="PHP 7.2.4"></a>PHP 7.2.4</h2><h3 id="Core-1"><a href="#Core-1" class="headerlink" title="Core:"></a>Core:</h3><ul>
+<li>Fixed bug #76025 (Segfault while throwing exception in error_handler). (Dmitry, Laruence)</li>
+<li>Fixed bug #76044 (‘date: illegal option – -‘ in ./configure on FreeBSD). (Anatol)</li>
+</ul>
+<h3 id="FPM-1"><a href="#FPM-1" class="headerlink" title="FPM:"></a>FPM:</h3><ul>
+<li>Fixed bug #75605 (Dumpable FPM child processes allow bypassing opcache access controls). (Jakub Zelenka)</li>
+</ul>
+<h3 id="FTP"><a href="#FTP" class="headerlink" title="FTP:"></a>FTP:</h3><ul>
+<li>Fixed ftp_pasv arginfo. (carusogabriel)</li>
+</ul>
+<h3 id="GD-1"><a href="#GD-1" class="headerlink" title="GD:"></a>GD:</h3><ul>
+<li>Fixed bug #73957 (signed integer conversion in imagescale()). (cmb)</li>
+<li>Fixed bug #76041 (null pointer access crashed php). (cmb)</li>
+<li>Fixed imagesetinterpolation arginfo. (Gabriel Caruso)</li>
+</ul>
+<h3 id="iconv"><a href="#iconv" class="headerlink" title="iconv:"></a>iconv:</h3><ul>
+<li>Fixed bug #75867 (Freeing uninitialized pointer). (Philip Prindeville)</li>
+</ul>
+<h3 id="Mbstring"><a href="#Mbstring" class="headerlink" title="Mbstring:"></a>Mbstring:</h3><ul>
+<li>Fixed bug #62545 (wrong unicode mapping in some charsets). (cmb)</li>
+</ul>
+<h3 id="Opcache-1"><a href="#Opcache-1" class="headerlink" title="Opcache:"></a>Opcache:</h3><ul>
+<li>Fixed bug #75969 (Assertion failure in live range DCE due to block pass misoptimization). (Nikita)</li>
+</ul>
+<h3 id="OpenSSL"><a href="#OpenSSL" class="headerlink" title="OpenSSL:"></a>OpenSSL:</h3><ul>
+<li>Fixed openssl_* arginfos. (carusogabriel)</li>
+</ul>
+<h3 id="PCNTL"><a href="#PCNTL" class="headerlink" title="PCNTL:"></a>PCNTL:</h3><ul>
+<li>Fixed bug #75873 (pcntl_wexitstatus returns incorrect on Big_Endian platform (s390x)). (Sam Ding)</li>
+</ul>
+<h3 id="Phar-1"><a href="#Phar-1" class="headerlink" title="Phar:"></a>Phar:</h3><ul>
+<li>Fixed bug #76085 (Segmentation fault in buildFromIterator when directory name contains a \n). (Laruence)</li>
+</ul>
+<h3 id="Standard-1"><a href="#Standard-1" class="headerlink" title="Standard:"></a>Standard:</h3><ul>
+<li>Fixed bug #75961 (Strange references behavior). (Laruence)</li>
+<li>Fixed some arginfos. (carusogabriel)</li>
+<li>Fixed bug #76068 (parse_ini_string fails to parse “[foo]\nbar=1|&gt;baz” with segfault). (Anatol)</li>
+</ul>
+<h2 id="下载连接："><a href="#下载连接：" class="headerlink" title="下载连接："></a>下载连接：</h2><ul>
+<li><a href="http://php.net/distributions/php-7.0.29.tar.gz" target="_blank" rel="noopener">http://php.net/distributions/php-7.0.29.tar.gz</a></li>
+<li><a href="http://php.net/distributions/php-7.1.16.tar.gz" target="_blank" rel="noopener">http://php.net/distributions/php-7.1.16.tar.gz</a></li>
+<li><a href="http://php.net/distributions/php-7.2.4.tar.gz" target="_blank" rel="noopener">http://php.net/distributions/php-7.2.4.tar.gz</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;PHP 7.0.29, 7.1.16, 7.2.4已正式发布。PHP（PHP：Hypertext Preprocessor）是一种在电脑上执行的脚本语言，主要是用途在于处理动态网页，也包含了命令列执行接口（command line interface），或者产生图形使用者接口（GUI）程式。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
+    
+    
+      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo 3.5.0 发布，快速简洁且高效的博客框架</title>
+    <link href="http://www.iooeo.com/2018/01/30/Hexo-3-5-0-%E5%8F%91%E5%B8%83%EF%BC%8C%E5%BF%AB%E9%80%9F%E7%AE%80%E6%B4%81%E4%B8%94%E9%AB%98%E6%95%88%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%A1%86%E6%9E%B6/"/>
+    <id>http://www.iooeo.com/2018/01/30/Hexo-3-5-0-发布，快速简洁且高效的博客框架/</id>
+    <published>2018-01-30T09:33:21.000Z</published>
+    <updated>2018-01-30T09:33:21.084Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>ThinkPHP V5.0.14 版本发布</title>
@@ -980,168 +1083,6 @@ IP高于独立访客的时候正常是以下这种状况：一个用户，上网
       <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
     
       <category term="WordPress" scheme="http://www.iooeo.com/tags/WordPress/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Highcharts 6.0.3 发布，纯 Javascript 图表库</title>
-    <link href="http://www.iooeo.com/2017/11/15/Highcharts-6-0-3-%E5%8F%91%E5%B8%83%EF%BC%8C%E7%BA%AF-Javascript-%E5%9B%BE%E8%A1%A8%E5%BA%93/"/>
-    <id>http://www.iooeo.com/2017/11/15/Highcharts-6-0-3-发布，纯-Javascript-图表库/</id>
-    <published>2017-11-15T01:23:34.000Z</published>
-    <updated>2017-11-15T01:28:14.457Z</updated>
-    
-    <content type="html"><![CDATA[<p>Highcharts 6.0.3 已发布，带来了全新的 dataLabels.filter 选项，用于不使用格式化程序的情况下筛选数据标签。该版本还修复了大量 bug :<br><a id="more"></a></p>
-<ul>
-<li>修复在区域范围内添加点时动画出错的问题。</li>
-<li>改进在 ES6 中加载 Highcharts 的相关文档。</li>
-<li>修复热点图在 boost 模式下未正确裁剪的问题。</li>
-<li>修复在某些浏览器中没有焦点指示器的问题。</li>
-<li>修复 wordcloud 中的 font-size 未设置像素，导致 Firefox 渲染出来的所有词句大小相同的问题。</li>
-<li>修复 minPointLength 在某些情况下不正确的问题。</li>
-<li>改进 xAxis 的文档。</li>
-<li>修复当试图导出数据时没有标题的图表出现错误的问题。</li>
-<li>……</li>
-</ul>
-<p>完整更新内容请查阅<a href="https://github.com/highcharts/highcharts/blob/master/changelog-highcharts.htm" target="_blank" rel="noopener">发行说明</a>。</p>
-<p>Highcharts 6 包含 15 种新的图表系列类型，包括 <a href="https://www.highcharts.com/demo/sankey-diagram" target="_blank" rel="noopener">Sankey diagram</a>（桑基图）、<a href="https://www.highcharts.com/demo/streamgraph" target="_blank" rel="noopener">Stream graph</a>、<a href="https://www.highcharts.com/demo/sunburst" target="_blank" rel="noopener">Sunburst</a>（旭日图）、<a href="https://www.highcharts.com/demo/variwide" target="_blank" rel="noopener">Variwide Charts</a>、<a href="https://www.highcharts.com/demo/parallel-coordinates" target="_blank" rel="noopener">Parallel coordinates</a>、<a href="https://www.highcharts.com/demo/variable-radius-pie" target="_blank" rel="noopener">Variable radius pie</a>、<a href="https://www.highcharts.com/demo/vector-plot" target="_blank" rel="noopener">Vector plot</a>、<a href="https://www.highcharts.com/demo/windbarb-series" target="_blank" rel="noopener">Wind-barbs</a>、<a href="https://www.highcharts.com/demo/x-range" target="_blank" rel="noopener">X-range</a> 等。</p>
-<p>下载地址：<br><a href="https://www.highcharts.com/download" target="_blank" rel="noopener">https://www.highcharts.com/download</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Highcharts 6.0.3 已发布，带来了全新的 dataLabels.filter 选项，用于不使用格式化程序的情况下筛选数据标签。该版本还修复了大量 bug :&lt;br&gt;
-    
-    </summary>
-    
-      <category term="Javascript" scheme="http://www.iooeo.com/categories/Javascript/"/>
-    
-    
-      <category term="Javascript" scheme="http://www.iooeo.com/tags/Javascript/"/>
-    
-      <category term="Highcharts" scheme="http://www.iooeo.com/tags/Highcharts/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ThinkPHP V5.0.12 暨 5.1.0 RC3 版本发布</title>
-    <link href="http://www.iooeo.com/2017/11/06/ThinkPHP-V5-0-12-%E6%9A%A8-5-1-0-RC3-%E7%89%88%E6%9C%AC%E5%8F%91%E5%B8%83/"/>
-    <id>http://www.iooeo.com/2017/11/06/ThinkPHP-V5-0-12-暨-5-1-0-RC3-版本发布/</id>
-    <published>2017-11-06T02:41:04.000Z</published>
-    <updated>2017-11-06T02:52:05.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><em>V5.1.0版本是继5.0版本之后又一个重大版本，ThinkPHP5.1在5.0的基础上对底层架构做了进一步的改进，引入新特性，并提升版本要求。</em><br><a id="more"></a><br>ThinkPHP5.1运行环境要求PHP5.6+，虽然不支持5.0的无缝升级，但升级过程并不复杂（<a href="https://www.kancloud.cn/manual/thinkphp5_1/354155" target="_blank" rel="noopener">请参考升级指导</a>）</p>
-<h2 id="主要新特性"><a href="#主要新特性" class="headerlink" title="主要新特性"></a>主要新特性</h2><ul>
-<li>引入容器和Facade支持</li>
-<li>依赖注入完善和支持更多场景</li>
-<li>重构的（对象化）路由</li>
-<li>配置和路由目录独立</li>
-<li>取消系统常量</li>
-<li>助手函数增强</li>
-<li>类库别名机制</li>
-<li>模型和数据库增强</li>
-<li>验证类增强</li>
-<li>模板引擎改进</li>
-<li>支持PSR-3日志规范</li>
-</ul>
-<h2 id="RC3对于之前版本主要更新如下："><a href="#RC3对于之前版本主要更新如下：" class="headerlink" title="RC3对于之前版本主要更新如下："></a>RC3对于之前版本主要更新如下：</h2><ul>
-<li>改进redis驱动的get方法</li>
-<li>修正Query类的alias方法</li>
-<li>File类错误信息支持多语言</li>
-<li>修正路由的额外参数解析</li>
-<li>改进whereTime方法</li>
-<li>改进Model类getAttr方法</li>
-<li>改进App类的controller和validate方法支持多层</li>
-<li>改进HasManyThrough类</li>
-<li>修正软删除的restore方法</li>
-<li>改进MorpthTo关联</li>
-<li>改进数据库驱动类的parseKey方法</li>
-<li>增加whereField动态查询方法</li>
-<li>模型增加废弃字段功能</li>
-<li>改进路由的after行为检查和before行为机制</li>
-<li>改进路由分组的检查</li>
-<li>修正mysql的json字段查询</li>
-<li>取消Connection类的quote方法</li>
-<li>改进命令行的支持</li>
-<li>验证信息支持多语言</li>
-<li>修正路由模型绑定</li>
-<li>改进参数绑定类型对枚举类型的支持</li>
-<li>修正模板的{$Think.version}输出</li>
-<li>改进模板date函数解析</li>
-<li>改进insertAll方法支持分批执行</li>
-<li>Request类host方法支持反向代理</li>
-<li>改进JumpResponse支持区分成功和错误模板</li>
-<li>改进开启类库后缀后的关联外键自动识别问题</li>
-<li>修正一对一关联的JOIN方式预载入查询问题</li>
-<li>Query类增加hidden方法</li>
-</ul>
-<p><code>目前5.1版本尚处于RC阶段，仅供学习，请勿用于商业项目！</code><br><code>5.1完全开发手册：</code><a href="https://www.kancloud.cn/manual/thinkphp5_1/content" target="_blank" rel="noopener">https://www.kancloud.cn/manual/thinkphp5_1/content</a></p>
-<p>5.0.12是一个修正版本，包含了上个版本发布以来的一些修正和完善，主要包括：</p>
-<h2 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h2><ul>
-<li>上传类和验证类的多语言支持；</li>
-<li>模型增加排除和废弃字段支持；</li>
-<li>改进insertAll方法的分批处理；</li>
-<li>改进对枚举类型的参数绑定支持；</li>
-<li>修正社区反馈的问题；</li>
-</ul>
-<h2 id="数据库和模型"><a href="#数据库和模型" class="headerlink" title="数据库和模型"></a>数据库和模型</h2><ul>
-<li>改进Connection类的getRealSql方法</li>
-<li>改进append方法支持一对一关联的bind设置</li>
-<li>改进whereTime查询</li>
-<li>改进model类的<code>destroy</code>方法</li>
-<li>修正softdelete</li>
-<li>修正<code>chunk</code>方法对时间字段的支持</li>
-<li>Collection类增加<code>push</code>方法</li>
-<li>改进alias方法 </li>
-<li>修正模型类的<code>append</code>处理</li>
-<li>改进<code>appendRelationAttr</code>方法</li>
-<li>改进HasManyThrough关联</li>
-<li>改进MorphTo关联</li>
-<li>模型增加废除字段<code>disuse</code>定义</li>
-<li>增加排除字段方法<code>except</code></li>
-<li>修正<code>has</code>方法 </li>
-<li>改进参数绑定类型对枚举类型的支持</li>
-<li>改进<code>insertAll</code>方法的分批处理</li>
-</ul>
-<h2 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h2><ul>
-<li>改进Loader类<code>controller</code>和<code>validate</code>方法 支持多层</li>
-<li>验证提示信息支持多语言</li>
-<li>File类错误信息支持多语言 </li>
-<li>模板渲染异常处理</li>
-<li>修正rest控制器</li>
-<li>改进trace驱动</li>
-<li>改进Cache类的<code>remember</code>方法 </li>
-<li>改进<code>url_common_param</code>的情况下urlencode的问题</li>
-<li>改进Url类</li>
-<li>改进<code>exception_handle</code>配置参数对闭包的支持 </li>
-<li>执行路由缓存命令前检测RUNTIME_PATH是否存在 </li>
-<li>调整部分<code>CacheDriver::dec</code>在为空的时候递减的行为</li>
-<li>优化移动端的显示</li>
-<li>改进对JSON-Handle插件的支持</li>
-<li>改进redis的<code>get</code>方法</li>
-<li>改进Request类的<code>host</code>方法</li>
-</ul>
-<p><code>5.0.11可以无缝升级到5.0.12。</code></p>
-<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><ul>
-<li><a href="http://www.thinkphp.cn/down/1079.html" target="_blank" rel="noopener">核心版</a></li>
-<li><a href="http://www.thinkphp.cn/down/1080.html" target="_blank" rel="noopener">完整版</a></li>
-</ul>
-<h2 id="文档"><a href="#文档" class="headerlink" title="文档"></a>文档</h2><p>官方完全开发手册内容已经同步更新 <a href="http://www.kancloud.cn/manual/thinkphp5" target="_blank" rel="noopener">完全开发手册</a> <a href="http://www.kancloud.cn/special/thinkphp5_quickstart" target="_blank" rel="noopener">官方快速入门系列</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;em&gt;V5.1.0版本是继5.0版本之后又一个重大版本，ThinkPHP5.1在5.0的基础上对底层架构做了进一步的改进，引入新特性，并提升版本要求。&lt;/em&gt;&lt;br&gt;
-    
-    </summary>
-    
-      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
-    
-      <category term="ThinkPHP" scheme="http://www.iooeo.com/categories/PHP/ThinkPHP/"/>
-    
-    
-      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
-    
-      <category term="ThinkPHP" scheme="http://www.iooeo.com/tags/ThinkPHP/"/>
     
   </entry>
   

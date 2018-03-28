@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[PHP 7.0.29, 7.2.4 和 7.1.16 正式发布，多项内容修复]]></title>
+    <url>%2F2018%2F03%2F28%2FPHP-7-0-29-7-2-4-%E5%92%8C-7-1-16-%E6%AD%A3%E5%BC%8F%E5%8F%91%E5%B8%83%EF%BC%8C%E5%A4%9A%E9%A1%B9%E5%86%85%E5%AE%B9%E4%BF%AE%E5%A4%8D%2F</url>
+    <content type="text"><![CDATA[PHP 7.0.29, 7.1.16, 7.2.4已正式发布。PHP（PHP：Hypertext Preprocessor）是一种在电脑上执行的脚本语言，主要是用途在于处理动态网页，也包含了命令列执行接口（command line interface），或者产生图形使用者接口（GUI）程式。版本主要还是修复 bug，改进日志如下： PHP 7.1.16Core: Fixed bug #76025 (Segfault while throwing exception in error_handler).(Dmitry, Laruence) Fixed bug #76044 (‘date: illegal option – -‘ in ./configure on FreeBSD).(Anatol) GD: Fixed bug #73957 (signed integer conversion in imagescale()). (cmb) ODBC: Fixed bug #76088 (ODBC functions are not available by default on Windows).(cmb) Opcache: Fixed bug #76074 (opcache corrupts variable in for-loop). (Bob) Phar: Fixed bug #76085 (Segmentation fault in buildFromIterator when directory name contains a \n). (Laruence) Standard: Fixed bug #74139 (mail.add_x_header default inconsistent with docs). (cmb) Fixed bug #76068 (parse_ini_string fails to parse “[foo]\nbar=1|&gt;baz” with segfault). (Anatol) PHP 7.0.29FPM: Fixed bug #75605 (Dumpable FPM child processes allow bypassing opcache access controls). (Jakub Zelenka) PHP 7.2.4Core: Fixed bug #76025 (Segfault while throwing exception in error_handler). (Dmitry, Laruence) Fixed bug #76044 (‘date: illegal option – -‘ in ./configure on FreeBSD). (Anatol) FPM: Fixed bug #75605 (Dumpable FPM child processes allow bypassing opcache access controls). (Jakub Zelenka) FTP: Fixed ftp_pasv arginfo. (carusogabriel) GD: Fixed bug #73957 (signed integer conversion in imagescale()). (cmb) Fixed bug #76041 (null pointer access crashed php). (cmb) Fixed imagesetinterpolation arginfo. (Gabriel Caruso) iconv: Fixed bug #75867 (Freeing uninitialized pointer). (Philip Prindeville) Mbstring: Fixed bug #62545 (wrong unicode mapping in some charsets). (cmb) Opcache: Fixed bug #75969 (Assertion failure in live range DCE due to block pass misoptimization). (Nikita) OpenSSL: Fixed openssl_* arginfos. (carusogabriel) PCNTL: Fixed bug #75873 (pcntl_wexitstatus returns incorrect on Big_Endian platform (s390x)). (Sam Ding) Phar: Fixed bug #76085 (Segmentation fault in buildFromIterator when directory name contains a \n). (Laruence) Standard: Fixed bug #75961 (Strange references behavior). (Laruence) Fixed some arginfos. (carusogabriel) Fixed bug #76068 (parse_ini_string fails to parse “[foo]\nbar=1|&gt;baz” with segfault). (Anatol) 下载连接： http://php.net/distributions/php-7.0.29.tar.gz http://php.net/distributions/php-7.1.16.tar.gz http://php.net/distributions/php-7.2.4.tar.gz]]></content>
+      <categories>
+        <category>PHP</category>
+      </categories>
+      <tags>
+        <tag>PHP</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hexo 3.5.0 发布，快速简洁且高效的博客框架]]></title>
+    <url>%2F2018%2F01%2F30%2FHexo-3-5-0-%E5%8F%91%E5%B8%83%EF%BC%8C%E5%BF%AB%E9%80%9F%E7%AE%80%E6%B4%81%E4%B8%94%E9%AB%98%E6%95%88%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%A1%86%E6%9E%B6%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
     <title><![CDATA[ThinkPHP V5.0.14 版本发布]]></title>
     <url>%2F2018%2F01%2F03%2FThinkPHP-V5-0-14-%E7%89%88%E6%9C%AC%E5%8F%91%E5%B8%83%2F</url>
     <content type="text"><![CDATA[V5.0.14版本主对复合主键进行了更多支持，改进了PHP7的兼容性，并且对数据库的一些问题做了改进。是一个推荐更新版本，后面的5.0版本将进入BUG修正及安全维护状态，功能将不会更新调整。 更新主要更新如下： 改进Validate类的unique验证 Validate类增加checkRule方法用于静态验证多个规则 改进多对多关联的save方法 改进多对多的pivot对象 修正setDec方法的延迟写入 max和min方法增加第二个参数用于设置是否强制转换数字 改进View类 改进join关联自身的问题 改进union查询 改进Url类 改进同名路由不同请求的注册 改进Builder类parseData对空数组的判断 改进模板替换 调整BelongsTo的hasWhere方法 改进模板的编译缓存命名规则 增加布局模板的标识 改进insertall方法 改进chunk方法支持复合主键 改进Error类的一个兼容问题 改进model类的save方法的复合主键包含自增的情况 save方法改进复合主键的支持 改进mysql的insertAll方法 改进redis长连接多编号库的情况 5.0.13可以无缝升级到5.0.14。 下载可以通过码云更新或者通过composer更新到最新版本。 文档官方完全开发手册内容已经同步更新 完全开发手册 官方快速入门系列]]></content>
