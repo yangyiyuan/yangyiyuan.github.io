@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.iooeo.com/"/>
-  <updated>2018-03-28T06:45:56.722Z</updated>
+  <updated>2018-03-28T06:52:25.501Z</updated>
   <id>http://www.iooeo.com/</id>
   
   <author>
@@ -14,6 +14,109 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ThinkPHP 5.1.6 版本发布 —— 引入中间件和路由提速</title>
+    <link href="http://www.iooeo.com/2018/03/28/ThinkPHP-5-1-6-%E7%89%88%E6%9C%AC%E5%8F%91%E5%B8%83-%E2%80%94%E2%80%94-%E5%BC%95%E5%85%A5%E4%B8%AD%E9%97%B4%E4%BB%B6%E5%92%8C%E8%B7%AF%E7%94%B1%E6%8F%90%E9%80%9F/"/>
+    <id>http://www.iooeo.com/2018/03/28/ThinkPHP-5-1-6-版本发布-——-引入中间件和路由提速/</id>
+    <published>2018-03-28T06:49:20.000Z</published>
+    <updated>2018-03-28T06:52:25.501Z</updated>
+    
+    <content type="html"><![CDATA[<p>ThinkPHP V5——12载初心不改，你值得信赖的PHP框架<br>本次更新版本包括 V5.1.6 和 V5.0.16 两个版本，是春节后的第一次更新。<br>欢迎大家给我们更多的反馈和建议，让我们做的更好！<br><a id="more"></a></p>
+<h2 id="V5-1-6-版本"><a href="#V5-1-6-版本" class="headerlink" title="V5.1.6 版本"></a>V5.1.6 版本</h2><p>该版本主要改进了路由规则的匹配算法，大幅提升了路由性能。并正式引入了中间件的支持，可以在路由中定义或者全局定义。而且包含了一个安全更新，是一个建议更新版本。</p>
+<ul>
+<li>改进URL生成对路由<code>ext</code>方法的支持</li>
+<li>改进查询缓存对不同数据库相同表名的支持</li>
+<li>改进composer自动加载的性能</li>
+<li>改进空路由变量对默认参数的影响</li>
+<li>mysql的<code>json</code>字段查询支持多级</li>
+<li>Query类增加<code>option</code>方法</li>
+<li>优化路由匹配</li>
+<li>修复验证规则数字键名丢失问题</li>
+<li>改进路由Url生成</li>
+<li>改进一对一关联预载入查询</li>
+<li>Request类增加<code>rootDomain</code>方法</li>
+<li>支持API资源控制器生成 <code>make:controller --api</code></li>
+<li>优化Template类的标签解析</li>
+<li>容器类增加删除和清除对象实例的方法</li>
+<li>修正MorphMany关联的<code>eagerlyMorphToMany</code>方法一处错误</li>
+<li>Container类的异常捕获改进</li>
+<li>Domain对象支持<code>bind</code>方法</li>
+<li>修正分页参数</li>
+<li>默认模板的输出规则不受URL影响</li>
+<li>注解路由支持多级控制器</li>
+<li>Query类增加<code>getNumRows</code>方法获取前次操作影响的记录数</li>
+<li>改进查询条件的性能</li>
+<li>改进模型类<code>readTransform</code>方法对序列化类型的处理</li>
+<li>Log类增加<code>close</code>方法可以临时关闭当前请求的日志写入</li>
+<li>文件日志方式增加自动清理功能（设置<code>max_files</code>参数）</li>
+<li>修正Query类的<code>getPk</code>方法</li>
+<li>修正模板缓存的布局开关问题</li>
+<li>修正Query类<code>select</code>方法的缓存</li>
+<li>改进input助手函数</li>
+<li>改进断线重连的信息判断</li>
+<li>改进正则验证方法</li>
+<li>调整语言包的加载顺序 放到<code>app_init</code>之前</li>
+<li>controller类<code>fetch</code>方法改为<code>final</code></li>
+<li>路由地址中的变量支持使用<code>&lt;var&gt;</code>方式</li>
+<li>改进xmlResponse 支持传入编码过的xml内容</li>
+<li>修正Query类<code>view</code>方法的数组表名支持</li>
+<li>改进路由的模型闭包绑定</li>
+<li>改进分组变量规则的继承</li>
+<li>改进<code>cli-server</code>模式下的<code>composer</code>自动加载</li>
+<li>路由变量规则异常捕获</li>
+<li>引入中间件支持</li>
+<li>路由定义增加<code>middleware</code>方法</li>
+<li>增加生成中间件指令<code>make:middleware</code> </li>
+<li>增加全局中间件定义支持</li>
+<li>改进<code>optimize:config</code>指令对全局中间件的支持</li>
+<li>改进config类<code>has</code>方法</li>
+<li>改进时间查询的参数绑定</li>
+<li>改进<code>inc/dec/exp</code>查询的安全性</li>
+</ul>
+<p>可以直接通过composer更新到最新版本，升级指导<a href="https://www.kancloud.cn/manual/thinkphp5_1/354155" target="_blank" rel="noopener">参考这里</a>。<br>官方的<a href="https://www.kancloud.cn/manual/thinkphp5_1/content" target="_blank" rel="noopener">完全开发手册</a>已经更新到最新版本。</p>
+<h2 id="V5-0-16版本"><a href="#V5-0-16版本" class="headerlink" title="V5.0.16版本"></a>V5.0.16版本</h2><p>同时发布的版本还有5.0.16，该版本主要做了一些修正和改进，由于包含了一个安全更新，是一个推荐更新的版本。</p>
+<ul>
+<li>改进Url生成</li>
+<li>改进composer自动加载性能</li>
+<li>改进一对一查询</li>
+<li>改进查询缓存</li>
+<li>改进field方法</li>
+<li>优化Template类</li>
+<li>修正分页参数</li>
+<li>改进默认模板的自动识别</li>
+<li>改进Query类查询</li>
+<li>Collection类改进</li>
+<li>改进模型类<code>readTransform</code>方法对序列化类型的处理</li>
+<li>改进trace显示</li>
+<li>文件日志支持自动清理</li>
+<li>改进断线重连的判断</li>
+<li>改进验证方法</li>
+<li>修正Query类view方法的数组表名定义</li>
+<li>改进参数绑定</li>
+<li>改进文件缓存的并发删除</li>
+<li>改进<code>inc/dec/exp</code>更新的安全性</li>
+<li>增加控制台配置</li>
+</ul>
+<p>可以通过composer更新至最新版本，升级指导<a href="https://www.kancloud.cn/manual/thinkphp5/163239" target="_blank" rel="noopener">参考这里</a>，官方的<a href="https://www.kancloud.cn/manual/thinkphp5/content" target="_blank" rel="noopener">完全开发手册</a>已经更新。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;ThinkPHP V5——12载初心不改，你值得信赖的PHP框架&lt;br&gt;本次更新版本包括 V5.1.6 和 V5.0.16 两个版本，是春节后的第一次更新。&lt;br&gt;欢迎大家给我们更多的反馈和建议，让我们做的更好！&lt;br&gt;
+    
+    </summary>
+    
+      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
+    
+      <category term="ThinkPHP" scheme="http://www.iooeo.com/categories/PHP/ThinkPHP/"/>
+    
+    
+      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
+    
+      <category term="ThinkPHP" scheme="http://www.iooeo.com/tags/ThinkPHP/"/>
+    
+  </entry>
   
   <entry>
     <title>PHP 7.0.29, 7.2.4 和 7.1.16 正式发布，多项内容修复</title>
@@ -1049,40 +1152,6 @@ IP高于独立访客的时候正常是以下这种状况：一个用户，上网
       <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
     
       <category term="PHPUnit" scheme="http://www.iooeo.com/tags/PHPUnit/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>WordPress 4.9 RC3 发布，正式版往后推迟</title>
-    <link href="http://www.iooeo.com/2017/11/15/WordPress-4-9-RC3-%E5%8F%91%E5%B8%83%EF%BC%8C%E6%AD%A3%E5%BC%8F%E7%89%88%E5%BE%80%E5%90%8E%E6%8E%A8%E8%BF%9F/"/>
-    <id>http://www.iooeo.com/2017/11/15/WordPress-4-9-RC3-发布，正式版往后推迟/</id>
-    <published>2017-11-15T01:29:51.000Z</published>
-    <updated>2017-11-15T01:32:06.783Z</updated>
-    
-    <content type="html"><![CDATA[<p>WordPress 4.9 正式版原计划于2017 年 11 月 14 日晚上 11点（世界协调时）发布，也就是北京时间 11 月 15 日早上 7 点发布，但由于发现小工具内短代码等问题，开发团队决定将 4.9 正式版发布日期推迟一天，即计划于北京时间2017年11月16日发布。<br><a id="more"></a><br>也因此，开发团队发布了 WordPress 4.9 RC3 版本。这是一个计划外的版本，由于发现了 RC1 和 RC2 版本中存在的一些问题，临时决定发布此版本。关于 RC3 版本的改进，主要体现于：</p>
-<ul>
-<li>在切换编辑器的可视化和文本选项卡时，同步光标位置。</li>
-<li>重写主题自定义面板中附加 CSS 编辑器的错误提示功能。</li>
-<li>在主题自定义面板中，给自定义链接添加导航菜单条目。</li>
-<li>主题自定义面板的定期发布的自定义草稿功能。</li>
-<li>自定义面板中所做修改的自动保存版本功能。</li>
-<li>关于页面的样式。</li>
-</ul>
-<p>完整内容可查看<a href="https://wordpress.org/news/2017/11/wordpress-4-9-release-candidate-3/" target="_blank" rel="noopener">发布主页</a>。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;WordPress 4.9 正式版原计划于2017 年 11 月 14 日晚上 11点（世界协调时）发布，也就是北京时间 11 月 15 日早上 7 点发布，但由于发现小工具内短代码等问题，开发团队决定将 4.9 正式版发布日期推迟一天，即计划于北京时间2017年11月16日发布。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
-    
-    
-      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
-    
-      <category term="WordPress" scheme="http://www.iooeo.com/tags/WordPress/"/>
     
   </entry>
   
