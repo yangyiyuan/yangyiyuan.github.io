@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.iooeo.com/"/>
-  <updated>2018-03-28T06:52:25.501Z</updated>
+  <updated>2018-03-29T05:54:37.972Z</updated>
   <id>http://www.iooeo.com/</id>
   
   <author>
@@ -14,6 +14,74 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Laravel v5.6.14 发布，PHP 开发框架</title>
+    <link href="http://www.iooeo.com/2018/03/29/Laravel-v5-6-14-%E5%8F%91%E5%B8%83%EF%BC%8CPHP-%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6/"/>
+    <id>http://www.iooeo.com/2018/03/29/Laravel-v5-6-14-发布，PHP-开发框架/</id>
+    <published>2018-03-29T05:52:01.000Z</published>
+    <updated>2018-03-29T05:54:37.972Z</updated>
+    
+    <content type="html"><![CDATA[<p>Laravel v5.6.14 已发布，更新内容如下：<br>新增</p>
+<ul>
+<li>Added SlackMessage::info() method (<a href="https://github.com/laravel/framework/pull/23711" target="_blank" rel="noopener">#23711</a>)</li>
+<li>Added SessionGuard::logoutOtherDevices() method (<a href="https://github.com/laravel/framework/commit/9c51e49a56ff15fc47ac1a6bf232c32c25d14fd0" target="_blank" rel="noopener">9c51e49</a>)</li>
+</ul>
+<p>更改<br>Replaced Blade’s or operator with null-coalescing operator (<a href="https://github.com/laravel/framework/commit/13f732ed617e41608e4ae021efc9d13e43375a26" target="_blank" rel="noopener">13f732e</a>)</p>
+<p>修复</p>
+<ul>
+<li>Get Blade compiler from engine resolver (<a href="https://github.com/laravel/framework/pull/23710" target="_blank" rel="noopener">#23710</a>)</li>
+<li>Default to an empty string when validating the URL signatures (<a href="https://github.com/laravel/framework/pull/23721" target="_blank" rel="noopener">#23721</a>)</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Laravel v5.6.14 已发布，更新内容如下：&lt;br&gt;新增&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Added SlackMessage::info() method (&lt;a href=&quot;https://github.com/laravel/framework/pull/2371
+    
+    </summary>
+    
+      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
+    
+      <category term="Laravel" scheme="http://www.iooeo.com/categories/PHP/Laravel/"/>
+    
+    
+      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
+    
+      <category term="Laravel" scheme="http://www.iooeo.com/tags/Laravel/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PHPUnit 7.0.3 发布，PHP 单元测试框架</title>
+    <link href="http://www.iooeo.com/2018/03/29/PHPUnit-7-0-3-%E5%8F%91%E5%B8%83%EF%BC%8CPHP-%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E6%A1%86%E6%9E%B6/"/>
+    <id>http://www.iooeo.com/2018/03/29/PHPUnit-7-0-3-发布，PHP-单元测试框架/</id>
+    <published>2018-03-29T05:48:33.000Z</published>
+    <updated>2018-03-29T05:52:10.400Z</updated>
+    
+    <content type="html"><![CDATA[<p>PHPUnit 7.0.3 已发布，这是一个修复版本，解决了 TestDox name prettifier 无法正确处理 Tests \ * 命名空间中的测试用例类的问题。<br><a id="more"></a><br>PHPUnit 是一个面向程序员的 PHP 测试框架。是 xUnit 单元测试框架体系结构的一员。</p>
+<p>PHPUnit 需要使用 <a href="http://php.net/manual/en/dom.setup.php" target="_blank" rel="noopener">dom</a> 和 <a href="http://php.net/manual/en/json.installation.php" target="_blank" rel="noopener">json</a> 扩展，它们通常是默认启用的。</p>
+<p>PHPUnit 还需要 <a href="http://php.net/manual/en/pcre.installation.php" target="_blank" rel="noopener">pcre</a>、<a href="http://php.net/manual/en/reflection.installation.php" target="_blank" rel="noopener">reflection</a>、<a href="http://php.net/manual/en/spl.installation.php" target="_blank" rel="noopener">spl</a> 扩展。这些标准扩展默认启用，并且除非修改 PHP 的构建系统和 C 源代码，否则无法禁用它们。</p>
+<p>代码覆盖率分析报告功能需要 <a href="http://xdebug.org/" target="_blank" rel="noopener">Xdebug</a>（2.5.0以上）与 <a href="http://php.net/manual/en/tokenizer.installation.php" target="_blank" rel="noopener">tokenizer</a> 扩展。生成 XML 格式的报告需要有 <a href="http://php.net/manual/en/xmlwriter.installation.php" target="_blank" rel="noopener">xmlwriter</a> 扩展。</p>
+<p><a href="https://github.com/sebastianbergmann/phpunit/releases/tag/7.0.3" target="_blank" rel="noopener">源码下载地址</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;PHPUnit 7.0.3 已发布，这是一个修复版本，解决了 TestDox name prettifier 无法正确处理 Tests \ * 命名空间中的测试用例类的问题。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
+    
+    
+      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
+    
+      <category term="PHPUnit" scheme="http://www.iooeo.com/tags/PHPUnit/"/>
+    
+  </entry>
   
   <entry>
     <title>ThinkPHP 5.1.6 版本发布 —— 引入中间件和路由提速</title>
@@ -1081,77 +1149,6 @@ IP高于独立访客的时候正常是以下这种状况：一个用户，上网
       <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
     
       <category term="HHVM" scheme="http://www.iooeo.com/tags/HHVM/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CakePHP 3.5.6 发布，PHP 开发框架</title>
-    <link href="http://www.iooeo.com/2017/11/20/CakePHP-3-5-6-%E5%8F%91%E5%B8%83%EF%BC%8CPHP-%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6/"/>
-    <id>http://www.iooeo.com/2017/11/20/CakePHP-3-5-6-发布，PHP-开发框架/</id>
-    <published>2017-11-20T01:46:13.000Z</published>
-    <updated>2017-11-20T01:48:47.078Z</updated>
-    
-    <content type="html"><![CDATA[<p>CakePHP 3.5.6 已发布。CakePHP 是一个运用了诸如 ActiveRecord、Association Data Mapping、Front Controller 和 MVC 等著名设计模式的快速开发框架。该项目主要目标是提供一个可以让各种层次的 PHP 开发人员快速地开发出健壮的 Web 应用，而又不失灵活性。<br><a id="more"></a><br>此版本更新内容：</p>
-<ul>
-<li>Iterating subclasses of ArrayIterator that include CollectionTrait retains the original class fixing use of methods defined on the subclass.</li>
-<li>Response::__debugInfo() includes the response body now.</li>
-<li>Http\Client creates response objects in a separate method making response creation easier to extend.</li>
-<li>SQL expressions no longer include double parenthesis when nesting expressions.</li>
-<li>View subdirectories are no longer doubled when RequestHandlerComponent and view classes using subDir property are used together.</li>
-<li>Middleware can now be registered in RouteBuilder using a string classname.</li>
-<li>Protocol relative string URLs are now properly HTML encoded by UrlHelper.</li>
-</ul>
-<p>更多内容请查看<a href="https://github.com/cakephp/cakephp/releases/tag/3.5.6" target="_blank" rel="noopener">发布说明</a>。</p>
-<p>下载地址：</p>
-<ul>
-<li>cakephp-3-5-6.zip</li>
-<li>Source code (zip)</li>
-<li>Source code (tar.gz)</li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;CakePHP 3.5.6 已发布。CakePHP 是一个运用了诸如 ActiveRecord、Association Data Mapping、Front Controller 和 MVC 等著名设计模式的快速开发框架。该项目主要目标是提供一个可以让各种层次的 PHP 开发人员快速地开发出健壮的 Web 应用，而又不失灵活性。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
-    
-    
-      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
-    
-      <category term="CakePHP" scheme="http://www.iooeo.com/tags/CakePHP/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>PHPUnit 5.7.25 发布，PHP 单元测试框架</title>
-    <link href="http://www.iooeo.com/2017/11/15/PHPUnit-5-7-25-%E5%8F%91%E5%B8%83%EF%BC%8CPHP-%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E6%A1%86%E6%9E%B6/"/>
-    <id>http://www.iooeo.com/2017/11/15/PHPUnit-5-7-25-发布，PHP-单元测试框架/</id>
-    <published>2017-11-15T01:32:25.000Z</published>
-    <updated>2017-11-15T01:36:45.667Z</updated>
-    
-    <content type="html"><![CDATA[<p>PHPUnit 5.7.25 已发布，这是一个小的修复版本，修复了 <a href="https://github.com/sebastianbergmann/phpunit/issues/2859" target="_blank" rel="noopener">#2859</a> 的问题。<br>PHPUnit 是一个面向程序员的 PHP 测试框架。是 xUnit 单元测试框架体系结构的一员。<br><a id="more"></a><br>PHPUnit 需要使用 <a href="http://php.net/manual/en/dom.setup.php" target="_blank" rel="noopener">dom</a> 和 <a href="http://php.net/manual/en/json.installation.php" target="_blank" rel="noopener">json</a> 扩展，它们通常是默认启用的。<br>PHPUnit 还需要 <a href="http://php.net/manual/en/pcre.installation.php" target="_blank" rel="noopener">pcre</a>、<a href="http://php.net/manual/en/reflection.installation.php" target="_blank" rel="noopener">reflection</a>、<a href="http://php.net/manual/en/spl.installation.php" target="_blank" rel="noopener">spl</a> 扩展。这些标准扩展默认启用，并且除非修改 PHP 的构建系统和 C 源代码，否则无法禁用它们。<br>代码覆盖率分析报告功能需要 <a href="http://xdebug.org/" target="_blank" rel="noopener">Xdebug</a>（2.5.0以上）与 <a href="http://php.net/manual/en/tokenizer.installation.php" target="_blank" rel="noopener">tokenizer</a> 扩展。生成 XML 格式的报告需要有 <a href="http://php.net/manual/en/xmlwriter.installation.php" target="_blank" rel="noopener">xmlwriter</a> 扩展。</p>
-<p>下载地址：</p>
-<ul>
-<li><a href="https://github.com/sebastianbergmann/phpunit/archive/5.7.25.zip" target="_blank" rel="noopener">Source code (zip)</a></li>
-<li><a href="https://github.com/sebastianbergmann/phpunit/archive/5.7.25.tar.gz" target="_blank" rel="noopener">Source code (tar.gz)</a></li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;PHPUnit 5.7.25 已发布，这是一个小的修复版本，修复了 &lt;a href=&quot;https://github.com/sebastianbergmann/phpunit/issues/2859&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;#2859&lt;/a&gt; 的问题。&lt;br&gt;PHPUnit 是一个面向程序员的 PHP 测试框架。是 xUnit 单元测试框架体系结构的一员。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
-    
-    
-      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
-    
-      <category term="PHPUnit" scheme="http://www.iooeo.com/tags/PHPUnit/"/>
     
   </entry>
   

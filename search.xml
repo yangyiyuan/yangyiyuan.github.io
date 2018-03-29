@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Laravel v5.6.14 发布，PHP 开发框架]]></title>
+    <url>%2F2018%2F03%2F29%2FLaravel-v5-6-14-%E5%8F%91%E5%B8%83%EF%BC%8CPHP-%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6%2F</url>
+    <content type="text"><![CDATA[Laravel v5.6.14 已发布，更新内容如下：新增 Added SlackMessage::info() method (#23711) Added SessionGuard::logoutOtherDevices() method (9c51e49) 更改Replaced Blade’s or operator with null-coalescing operator (13f732e) 修复 Get Blade compiler from engine resolver (#23710) Default to an empty string when validating the URL signatures (#23721)]]></content>
+      <categories>
+        <category>PHP</category>
+        <category>Laravel</category>
+      </categories>
+      <tags>
+        <tag>PHP</tag>
+        <tag>Laravel</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[PHPUnit 7.0.3 发布，PHP 单元测试框架]]></title>
+    <url>%2F2018%2F03%2F29%2FPHPUnit-7-0-3-%E5%8F%91%E5%B8%83%EF%BC%8CPHP-%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E6%A1%86%E6%9E%B6%2F</url>
+    <content type="text"><![CDATA[PHPUnit 7.0.3 已发布，这是一个修复版本，解决了 TestDox name prettifier 无法正确处理 Tests \ * 命名空间中的测试用例类的问题。PHPUnit 是一个面向程序员的 PHP 测试框架。是 xUnit 单元测试框架体系结构的一员。 PHPUnit 需要使用 dom 和 json 扩展，它们通常是默认启用的。 PHPUnit 还需要 pcre、reflection、spl 扩展。这些标准扩展默认启用，并且除非修改 PHP 的构建系统和 C 源代码，否则无法禁用它们。 代码覆盖率分析报告功能需要 Xdebug（2.5.0以上）与 tokenizer 扩展。生成 XML 格式的报告需要有 xmlwriter 扩展。 源码下载地址]]></content>
+      <categories>
+        <category>PHP</category>
+      </categories>
+      <tags>
+        <tag>PHP</tag>
+        <tag>PHPUnit</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[ThinkPHP 5.1.6 版本发布 —— 引入中间件和路由提速]]></title>
     <url>%2F2018%2F03%2F28%2FThinkPHP-5-1-6-%E7%89%88%E6%9C%AC%E5%8F%91%E5%B8%83-%E2%80%94%E2%80%94-%E5%BC%95%E5%85%A5%E4%B8%AD%E9%97%B4%E4%BB%B6%E5%92%8C%E8%B7%AF%E7%94%B1%E6%8F%90%E9%80%9F%2F</url>
     <content type="text"><![CDATA[ThinkPHP V5——12载初心不改，你值得信赖的PHP框架本次更新版本包括 V5.1.6 和 V5.0.16 两个版本，是春节后的第一次更新。欢迎大家给我们更多的反馈和建议，让我们做的更好！ V5.1.6 版本该版本主要改进了路由规则的匹配算法，大幅提升了路由性能。并正式引入了中间件的支持，可以在路由中定义或者全局定义。而且包含了一个安全更新，是一个建议更新版本。 改进URL生成对路由ext方法的支持 改进查询缓存对不同数据库相同表名的支持 改进composer自动加载的性能 改进空路由变量对默认参数的影响 mysql的json字段查询支持多级 Query类增加option方法 优化路由匹配 修复验证规则数字键名丢失问题 改进路由Url生成 改进一对一关联预载入查询 Request类增加rootDomain方法 支持API资源控制器生成 make:controller --api 优化Template类的标签解析 容器类增加删除和清除对象实例的方法 修正MorphMany关联的eagerlyMorphToMany方法一处错误 Container类的异常捕获改进 Domain对象支持bind方法 修正分页参数 默认模板的输出规则不受URL影响 注解路由支持多级控制器 Query类增加getNumRows方法获取前次操作影响的记录数 改进查询条件的性能 改进模型类readTransform方法对序列化类型的处理 Log类增加close方法可以临时关闭当前请求的日志写入 文件日志方式增加自动清理功能（设置max_files参数） 修正Query类的getPk方法 修正模板缓存的布局开关问题 修正Query类select方法的缓存 改进input助手函数 改进断线重连的信息判断 改进正则验证方法 调整语言包的加载顺序 放到app_init之前 controller类fetch方法改为final 路由地址中的变量支持使用&lt;var&gt;方式 改进xmlResponse 支持传入编码过的xml内容 修正Query类view方法的数组表名支持 改进路由的模型闭包绑定 改进分组变量规则的继承 改进cli-server模式下的composer自动加载 路由变量规则异常捕获 引入中间件支持 路由定义增加middleware方法 增加生成中间件指令make:middleware 增加全局中间件定义支持 改进optimize:config指令对全局中间件的支持 改进config类has方法 改进时间查询的参数绑定 改进inc/dec/exp查询的安全性 可以直接通过composer更新到最新版本，升级指导参考这里。官方的完全开发手册已经更新到最新版本。 V5.0.16版本同时发布的版本还有5.0.16，该版本主要做了一些修正和改进，由于包含了一个安全更新，是一个推荐更新的版本。 改进Url生成 改进composer自动加载性能 改进一对一查询 改进查询缓存 改进field方法 优化Template类 修正分页参数 改进默认模板的自动识别 改进Query类查询 Collection类改进 改进模型类readTransform方法对序列化类型的处理 改进trace显示 文件日志支持自动清理 改进断线重连的判断 改进验证方法 修正Query类view方法的数组表名定义 改进参数绑定 改进文件缓存的并发删除 改进inc/dec/exp更新的安全性 增加控制台配置 可以通过composer更新至最新版本，升级指导参考这里，官方的完全开发手册已经更新。]]></content>
