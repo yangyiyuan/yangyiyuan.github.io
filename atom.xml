@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.iooeo.com/"/>
-  <updated>2018-03-29T05:54:37.972Z</updated>
+  <updated>2018-03-29T05:57:02.625Z</updated>
   <id>http://www.iooeo.com/</id>
   
   <author>
@@ -20,14 +20,17 @@
     <link href="http://www.iooeo.com/2018/03/29/Laravel-v5-6-14-%E5%8F%91%E5%B8%83%EF%BC%8CPHP-%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6/"/>
     <id>http://www.iooeo.com/2018/03/29/Laravel-v5-6-14-发布，PHP-开发框架/</id>
     <published>2018-03-29T05:52:01.000Z</published>
-    <updated>2018-03-29T05:54:37.972Z</updated>
+    <updated>2018-03-29T05:57:02.625Z</updated>
     
     <content type="html"><![CDATA[<p>Laravel v5.6.14 已发布，更新内容如下：<br>新增</p>
 <ul>
 <li>Added SlackMessage::info() method (<a href="https://github.com/laravel/framework/pull/23711" target="_blank" rel="noopener">#23711</a>)</li>
 <li>Added SessionGuard::logoutOtherDevices() method (<a href="https://github.com/laravel/framework/commit/9c51e49a56ff15fc47ac1a6bf232c32c25d14fd0" target="_blank" rel="noopener">9c51e49</a>)</li>
 </ul>
-<p>更改<br>Replaced Blade’s or operator with null-coalescing operator (<a href="https://github.com/laravel/framework/commit/13f732ed617e41608e4ae021efc9d13e43375a26" target="_blank" rel="noopener">13f732e</a>)</p>
+<p>更改</p>
+<ul>
+<li>Replaced Blade’s or operator with null-coalescing operator (<a href="https://github.com/laravel/framework/commit/13f732ed617e41608e4ae021efc9d13e43375a26" target="_blank" rel="noopener">13f732e</a>)</li>
+</ul>
 <p>修复</p>
 <ul>
 <li>Get Blade compiler from engine resolver (<a href="https://github.com/laravel/framework/pull/23710" target="_blank" rel="noopener">#23710</a>)</li>
