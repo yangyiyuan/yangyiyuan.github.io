@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[redis 数据类型]]></title>
+    <url>%2F2018%2F04%2F03%2Fredis-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
     <title><![CDATA[Laravel v5.6.14 发布，PHP 开发框架]]></title>
     <url>%2F2018%2F03%2F29%2FLaravel-v5-6-14-%E5%8F%91%E5%B8%83%EF%BC%8CPHP-%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6%2F</url>
     <content type="text"><![CDATA[Laravel v5.6.14 已发布，更新内容如下：新增 Added SlackMessage::info() method (#23711) Added SessionGuard::logoutOtherDevices() method (9c51e49) 更改 Replaced Blade’s or operator with null-coalescing operator (13f732e) 修复 Get Blade compiler from engine resolver (#23710) Default to an empty string when validating the URL signatures (#23721)]]></content>
