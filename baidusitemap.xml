@@ -5,14 +5,19 @@
     
   <url>
     <loc>http://www.iooeo.com/2018/04/03/redis-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</loc>
-    <lastmod>2018-04-03T07:32:06.946Z</lastmod>
+    <lastmod>2018-04-03T07:35:54.585Z</lastmod>
     <data>
         <display>
         <title>redis 数据类型</title>
         <pubTime>2018-04-03T07:32:06.000Z</pubTime>
         
+        <tag>Redis</tag>
+         
          
            
+             
+              <breadCrumb title="Redis" url="http://www.iooeo.com/categories/Redis/"/>
+          
         </display>
     </data>
     </url>

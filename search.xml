@@ -3,7 +3,13 @@
   <entry>
     <title><![CDATA[redis 数据类型]]></title>
     <url>%2F2018%2F04%2F03%2Fredis-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[数据类型string 字符串 是Redis最基本的数据类型，可以理解成memcached一模一样的类型，一个key对应一个value 二进制安全的，意思是Redis的string可以包含任何数据。比如jpg图片或者序列化的对象 一个键最大的存储512MB 123&quot;name&quot;:&quot;yanying&quot;,&quot;age&quot;:&quot;25&quot;,&quot;city&quot;:&quot;nanjing&quot; hash 散列 是一个键值对集合 是一个string类型的field和value的映射表，hash特别适合用于存储对象 12345&quot;user&quot;:[ &quot;name1&quot;:&quot;yanying1&quot;, &quot;name2&quot;:&quot;yanying2&quot;, &quot;name3&quot;:&quot;yanying3&quot;] list 列表item 可重复 12345&quot;user&quot;:[ &quot;yanying&quot;, &quot;zhangsan&quot;, &quot;yanying&quot;] set 集合item 不可重复 Redis的set是string类型的无序集合 12345&quot;user&quot;:[ &quot;yanying1&quot;, &quot;yanying2&quot;, &quot;yanying3&quot;] zset 有序集合zset和set一样也是string类型的集合，且item不可重复 zset和set不同的地方在于zset关联一个double类型的分数，Redis通过分数对集合中的item排序 zset的item是唯一的，但是分数是可以重复的 12345&quot;user&quot;:[ &quot;yanying1&quot;, &quot;yanying2&quot;, &quot;yanying3&quot;]]]></content>
+      <categories>
+        <category>Redis</category>
+      </categories>
+      <tags>
+        <tag>Redis</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[Laravel v5.6.14 发布，PHP 开发框架]]></title>
