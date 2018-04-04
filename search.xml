@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Nginx 主线版 1.13.11 发布，Bug 修复版本]]></title>
+    <url>%2F2018%2F04%2F04%2FNginx-%E4%B8%BB%E7%BA%BF%E7%89%88-1-13-11-%E5%8F%91%E5%B8%83%EF%BC%8CBug-%E4%BF%AE%E5%A4%8D%E7%89%88%E6%9C%AC%2F</url>
+    <content type="text"><![CDATA[NginxNginx 主线版 1.13.11 已发布，该版本增加了一项新特性，以及修复了两个 bug。 新特性：”listen”指令的”proxy_protocol”参数现已支持 PROXY 协议版本 2 Bugfix: nginx 在 Linux 上不能静态使用 OpenSSL 1.1.1 进行构建 Bugfix: in the “http_404”, “http_500”, etc. parameters of the “proxy_next_upstream” directive. 而上个版本 Nginx 主线版 1.13.10 主要是新增 ngx_http_grpc_module。 下载地址：http://nginx.org/en/download.html更新说明：http://nginx.org/en/CHANGES]]></content>
+      <categories>
+        <category>Nginx</category>
+      </categories>
+      <tags>
+        <tag>Nginx</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[CakePHP 3.6.0-RC2 发布，PHP 开发框架]]></title>
     <url>%2F2018%2F04%2F04%2FCakePHP-3-6-0-RC2-%E5%8F%91%E5%B8%83%EF%BC%8CPHP-%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6%2F</url>
     <content type="text"><![CDATA[PHP 快速开发框架 CakePHP 3.6.0-RC2 发布，这是3.6.0版本的候选版本，如果在接下来的几周内没有发现重大问题，那么它将成为稳定版本。 下载地址 cakephp-3-6-0-RC2.zip Source code (zip) Source code (tar.gz) 更新： 增加 Cake \ Database \ Type \ DateTimeType ::setTimezone（），可以在插入数据库之前启用值的自动时区转换。 增强对 Cake\Filesystem\File 中 UTF8 文件名的支持。 添加 BodyParserMiddleware，用中间件替换 RequestHandlerComponent 的内容类型分析功能。 新增 Collection::append(), prepend(), appendItem(), prependItem()。 每次更改排序字段时，PaginatorHelper 都会将页面参数重置为1。 Event 不再为子类中定义的属性引发错误。 详情见发布公告。]]></content>
