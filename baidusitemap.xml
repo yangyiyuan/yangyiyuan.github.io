@@ -4,6 +4,31 @@
 
     
   <url>
+    <loc>http://www.iooeo.com/2018/04/11/Laravel-5-6-16%E5%8F%91%E5%B8%83-PHP-Web-%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6/</loc>
+    <lastmod>2018-04-11T02:57:19.556Z</lastmod>
+    <data>
+        <display>
+        <title>Laravel 5.6.16发布,PHP Web 开发框架</title>
+        <pubTime>2018-04-11T02:52:59.000Z</pubTime>
+        
+        <tag>PHP</tag>
+         
+        <tag>Laravel</tag>
+         
+         
+           
+             
+              <breadCrumb title="PHP" url="http://www.iooeo.com/categories/PHP/"/>
+          
+             
+              <breadCrumb title="Laravel" url="http://www.iooeo.com/categories/PHP/Laravel/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.iooeo.com/2018/04/11/Nginx-%E4%B8%BB%E7%BA%BF%E7%89%88-1-13-12-%E5%8F%91%E5%B8%83%EF%BC%8CBug-%E4%BF%AE%E5%A4%8D%E7%89%88%E6%9C%AC/</loc>
     <lastmod>2018-04-11T00:57:39.623Z</lastmod>
     <data>
@@ -1732,9 +1757,9 @@
         <title>Mac Python 版本切换</title>
         <pubTime>2017-07-20T03:24:50.000Z</pubTime>
         
-        <tag>python</tag>
-         
         <tag>Mac</tag>
+         
+        <tag>python</tag>
          
          
            

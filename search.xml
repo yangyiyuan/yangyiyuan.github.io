@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Laravel 5.6.16发布,PHP Web 开发框架]]></title>
+    <url>%2F2018%2F04%2F11%2FLaravel-5-6-16%E5%8F%91%E5%B8%83-PHP-Web-%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6%2F</url>
+    <content type="text"><![CDATA[Laravel 是一套简洁、优雅的 PHP Web 开发框架(PHP Web Framework)。它可以让你从面条一样杂乱的代码中解脱出来；它可以帮你构建一个完美的网络APP，而且每行代码都可以简洁、富于表达力。Laravel 5.6.16 发布，新增了几项功能，修复了一个 bug。 Added 支持使用类名执行 artisan 命令 (#23764) 可宏定义 View (#23787) 新增数据库 Connection :: unsetEventDispatcher（）方法 (#23832) 支持与 SES 一起使用的 IAM 会话 Token (#23766) Changed 为 required_unless 规则添加了可视化值(#23833) Fixed 修复了使用 PhpRedis 时的 RedisQueue :: blockingPop（）检查 (#23757) 下载地址 Source code (zip) Source code (tar.gz) 详情见发布公告。]]></content>
+      <categories>
+        <category>PHP</category>
+        <category>Laravel</category>
+      </categories>
+      <tags>
+        <tag>PHP</tag>
+        <tag>Laravel</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Nginx 主线版 1.13.12 发布，Bug 修复版本]]></title>
     <url>%2F2018%2F04%2F11%2FNginx-%E4%B8%BB%E7%BA%BF%E7%89%88-1-13-12-%E5%8F%91%E5%B8%83%EF%BC%8CBug-%E4%BF%AE%E5%A4%8D%E7%89%88%E6%9C%AC%2F</url>
     <content type="text"><![CDATA[Nginx（发音同 engine x）是一款轻量级的 Web 服务器/反向代理服务器及电子邮件（IMAP/POP3）代理服务器，并在一个 BSD-like 协议下发行，可以在 UNIX、GNU/Linux、BSD、Mac OS X、Solaris，以及 Microsoft Windows 等操作系统中运行。Nginx 主线版 1.13.12 发布了。该版本修复了一个 Bug，内容如下： 漏洞修复：在返回大量响应时，可能会意外关闭与gRPC后端的连接。 往期更新内容请查看更新说明。下载地址： http://nginx.org/en/download.html]]></content>
@@ -806,8 +819,8 @@
         <category>python</category>
       </categories>
       <tags>
-        <tag>python</tag>
         <tag>Mac</tag>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>

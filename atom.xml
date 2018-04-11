@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.iooeo.com/"/>
-  <updated>2018-04-11T00:57:39.623Z</updated>
+  <updated>2018-04-11T02:57:19.556Z</updated>
   <id>http://www.iooeo.com/</id>
   
   <author>
@@ -14,6 +14,50 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Laravel 5.6.16发布,PHP Web 开发框架</title>
+    <link href="http://www.iooeo.com/2018/04/11/Laravel-5-6-16%E5%8F%91%E5%B8%83-PHP-Web-%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6/"/>
+    <id>http://www.iooeo.com/2018/04/11/Laravel-5-6-16发布-PHP-Web-开发框架/</id>
+    <published>2018-04-11T02:52:59.000Z</published>
+    <updated>2018-04-11T02:57:19.556Z</updated>
+    
+    <content type="html"><![CDATA[<p>Laravel 是一套简洁、优雅的 PHP Web 开发框架(PHP Web Framework)。它可以让你从面条一样杂乱的代码中解脱出来；它可以帮你构建一个完美的网络APP，而且每行代码都可以简洁、富于表达力。<br><a id="more"></a><br><strong>Laravel 5.6.16 发布，新增了几项功能，修复了一个 bug。</strong></p>
+<h3 id="Added"><a href="#Added" class="headerlink" title="Added"></a>Added</h3><ul>
+<li>支持使用类名执行 artisan 命令 (<a href="https://github.com/laravel/framework/pull/23764" target="_blank" rel="noopener">#23764</a>)</li>
+<li>可宏定义 View (<a href="https://github.com/laravel/framework/pull/23787" target="_blank" rel="noopener">#23787</a>)</li>
+<li>新增数据库 Connection :: unsetEventDispatcher（）方法 (<a href="https://github.com/laravel/framework/pull/23832" target="_blank" rel="noopener">#23832</a>)</li>
+<li>支持与 SES 一起使用的 IAM 会话 Token (<a href="https://github.com/laravel/framework/pull/23766" target="_blank" rel="noopener">#23766</a>)</li>
+</ul>
+<h3 id="Changed"><a href="#Changed" class="headerlink" title="Changed"></a>Changed</h3><ul>
+<li>为 required_unless 规则添加了可视化值(<a href="https://github.com/laravel/framework/pull/23833" target="_blank" rel="noopener">#23833</a>)</li>
+</ul>
+<h3 id="Fixed"><a href="#Fixed" class="headerlink" title="Fixed"></a>Fixed</h3><ul>
+<li>修复了使用 PhpRedis 时的 RedisQueue :: blockingPop（）检查 (<a href="https://github.com/laravel/framework/pull/23757" target="_blank" rel="noopener">#23757</a>)</li>
+</ul>
+<h3 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h3><ul>
+<li><a href="https://github.com/laravel/framework/archive/v5.6.16.zip" target="_blank" rel="noopener">Source code (zip)</a></li>
+<li><a href="https://github.com/laravel/framework/archive/v5.6.16.tar.gz" target="_blank" rel="noopener">Source code (tar.gz)</a></li>
+</ul>
+<p>详情见<a href="https://github.com/laravel/framework/releases/tag/v5.6.16" target="_blank" rel="noopener">发布公告</a>。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Laravel 是一套简洁、优雅的 PHP Web 开发框架(PHP Web Framework)。它可以让你从面条一样杂乱的代码中解脱出来；它可以帮你构建一个完美的网络APP，而且每行代码都可以简洁、富于表达力。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
+    
+      <category term="Laravel" scheme="http://www.iooeo.com/categories/PHP/Laravel/"/>
+    
+    
+      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
+    
+      <category term="Laravel" scheme="http://www.iooeo.com/tags/Laravel/"/>
+    
+  </entry>
   
   <entry>
     <title>Nginx 主线版 1.13.12 发布，Bug 修复版本</title>
@@ -1914,36 +1958,6 @@ zset的item是唯一的，但是分数是可以重复的</code></p>
       <category term="Mac" scheme="http://www.iooeo.com/tags/Mac/"/>
     
       <category term="npm" scheme="http://www.iooeo.com/tags/npm/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>PHPUnit 6.5.3 发布，PHP 单元测试框</title>
-    <link href="http://www.iooeo.com/2017/12/07/PHPUnit-6-5-3-%E5%8F%91%E5%B8%83%EF%BC%8CPHP-%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E6%A1%86/"/>
-    <id>http://www.iooeo.com/2017/12/07/PHPUnit-6-5-3-发布，PHP-单元测试框/</id>
-    <published>2017-12-07T01:43:54.000Z</published>
-    <updated>2017-12-07T01:47:45.969Z</updated>
-    
-    <content type="html"><![CDATA[<p>PHPUnit 6.5.3 已发布，这是一个修复版本，修复了修正了配置 forceCoversAnnotation =“true” 时 PHPT 测试的问题。<br><a id="more"></a><br>PHPUnit 是一个面向程序员的 PHP 测试框架。是 xUnit 单元测试框架体系结构的一员。<br>PHPUnit 6.2 系列需要 PHP 7 及以上，强烈推荐使用最新版本的 PHP。<br>PHPUnit 需要使用 <a href="http://php.net/manual/en/dom.setup.php" target="_blank" rel="noopener">dom</a> 和 <a href="http://php.net/manual/en/json.installation.php" target="_blank" rel="noopener">json</a> 扩展，它们通常是默认启用的。<br>PHPUnit 还需要 <a href="http://php.net/manual/en/pcre.installation.php" target="_blank" rel="noopener">pcre</a>、<a href="http://php.net/manual/en/reflection.installation.php" target="_blank" rel="noopener">reflection</a>、<a href="http://php.net/manual/en/spl.installation.php" target="_blank" rel="noopener">spl</a> 扩展。这些标准扩展默认启用，并且除非修改 PHP 的构建系统和 C 源代码，否则无法禁用它们。<br>代码覆盖率分析报告功能需要 <a href="http://xdebug.org/" target="_blank" rel="noopener">Xdebug</a>（2.5.0以上）与 <a href="http://php.net/manual/en/tokenizer.installation.php" target="_blank" rel="noopener">tokenizer</a> 扩展。生成 XML 格式的报告需要有 <a href="http://php.net/manual/en/xmlwriter.installation.php" target="_blank" rel="noopener">xmlwriter</a> 扩展。</p>
-<p>下载地址：</p>
-<ul>
-<li><a href="https://github.com/sebastianbergmann/phpunit/archive/6.5.3.zip" target="_blank" rel="noopener">Source code (zip)</a></li>
-<li><a href="https://github.com/sebastianbergmann/phpunit/archive/6.5.3.tar.gz" target="_blank" rel="noopener">Source code (tar.gz)</a></li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;PHPUnit 6.5.3 已发布，这是一个修复版本，修复了修正了配置 forceCoversAnnotation =“true” 时 PHPT 测试的问题。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
-    
-    
-      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
-    
-      <category term="PHPUnit" scheme="http://www.iooeo.com/tags/PHPUnit/"/>
     
   </entry>
   
