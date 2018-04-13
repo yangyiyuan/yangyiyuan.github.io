@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[ThinkPHP 5.0.17 与 5.1.9 版本发布，包含安全更新]]></title>
+    <url>%2F2018%2F04%2F13%2FThinkPHP-5-0-17-%E4%B8%8E-5-1-9-%E7%89%88%E6%9C%AC%E5%8F%91%E5%B8%83%EF%BC%8C%E5%8C%85%E5%90%AB%E5%AE%89%E5%85%A8%E6%9B%B4%E6%96%B0%2F</url>
+    <content type="text"><![CDATA[ThinkPHP 此次同步发布了两个版本的更新，均包含一处安全更新，推荐更新。 V5.0.17版本V5.0版本已经进入安全更新阶段，不再更新功能，仅作安全修复及BUG修正此次发布的5.0.17版本主要是一些修正和改进，并且包含了一个安全更新。 更新日志 改进Response类create方法 改进inc/dec查询 默认模板渲染规则支持直接使用操作方法名 改进视图驱动 改进Request类ip方法 支持代理设置 修正request类的create方法 闭包查询使用cache(true)抛出异常 改进composer自动加载文件 增加expression类及相关方法 V5.1.9版本该版本主要是一些改进和修正，并包含一个安全更新，是一个推荐更新版本。 更新日志 默认模板渲染规则支持配置保持操作方法名 改进Request类的ip方法 支持模型软删除字段的默认值定义 改进路由变量规则对中文的支持 使用闭包查询的时候使用cache(true) 抛出异常提示 改进Loader类loadComposerAutoloadFiles方法 改进查询方法安全性 修正路由地址中控制器名驼峰问题 调整上一个版本的module_init和app_begin的钩子顺序问题 改进CLI模式下运行的问题 修正社区反馈的其它问题]]></content>
+      <categories>
+        <category>PHP</category>
+        <category>ThinkPHP</category>
+      </categories>
+      <tags>
+        <tag>PHP</tag>
+        <tag>ThinkPHP</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Laravel 5.6.16发布,PHP Web 开发框架]]></title>
     <url>%2F2018%2F04%2F11%2FLaravel-5-6-16%E5%8F%91%E5%B8%83-PHP-Web-%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6%2F</url>
     <content type="text"><![CDATA[Laravel 是一套简洁、优雅的 PHP Web 开发框架(PHP Web Framework)。它可以让你从面条一样杂乱的代码中解脱出来；它可以帮你构建一个完美的网络APP，而且每行代码都可以简洁、富于表达力。Laravel 5.6.16 发布，新增了几项功能，修复了一个 bug。 Added 支持使用类名执行 artisan 命令 (#23764) 可宏定义 View (#23787) 新增数据库 Connection :: unsetEventDispatcher（）方法 (#23832) 支持与 SES 一起使用的 IAM 会话 Token (#23766) Changed 为 required_unless 规则添加了可视化值(#23833) Fixed 修复了使用 PhpRedis 时的 RedisQueue :: blockingPop（）检查 (#23757) 下载地址 Source code (zip) Source code (tar.gz) 详情见发布公告。]]></content>
@@ -819,8 +832,8 @@
         <category>python</category>
       </categories>
       <tags>
-        <tag>Mac</tag>
         <tag>python</tag>
+        <tag>Mac</tag>
       </tags>
   </entry>
   <entry>

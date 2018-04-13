@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.iooeo.com/"/>
-  <updated>2018-04-11T02:57:19.556Z</updated>
+  <updated>2018-04-13T06:48:03.724Z</updated>
   <id>http://www.iooeo.com/</id>
   
   <author>
@@ -14,6 +14,59 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ThinkPHP 5.0.17 与 5.1.9 版本发布，包含安全更新</title>
+    <link href="http://www.iooeo.com/2018/04/13/ThinkPHP-5-0-17-%E4%B8%8E-5-1-9-%E7%89%88%E6%9C%AC%E5%8F%91%E5%B8%83%EF%BC%8C%E5%8C%85%E5%90%AB%E5%AE%89%E5%85%A8%E6%9B%B4%E6%96%B0/"/>
+    <id>http://www.iooeo.com/2018/04/13/ThinkPHP-5-0-17-与-5-1-9-版本发布，包含安全更新/</id>
+    <published>2018-04-13T06:44:42.000Z</published>
+    <updated>2018-04-13T06:48:03.724Z</updated>
+    
+    <content type="html"><![CDATA[<p>ThinkPHP 此次同步发布了两个版本的更新，均包含一处安全更新，推荐更新。<br><a id="more"></a></p>
+<h1 id="V5-0-17版本"><a href="#V5-0-17版本" class="headerlink" title="V5.0.17版本"></a>V5.0.17版本</h1><p><strong>V5.0版本已经进入安全更新阶段，不再更新功能，仅作安全修复及BUG修正</strong><br><strong>此次发布的5.0.17版本主要是一些修正和改进，并且包含了一个安全更新。</strong></p>
+<h2 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h2><ul>
+<li>改进Response类<code>create</code>方法</li>
+<li>改进<code>inc/dec</code>查询</li>
+<li>默认模板渲染规则支持直接使用操作方法名</li>
+<li>改进视图驱动</li>
+<li>改进Request类ip方法 支持代理设置</li>
+<li>修正request类的<code>create</code>方法</li>
+<li>闭包查询使用<code>cache(true)</code>抛出异常</li>
+<li>改进composer自动加载文件</li>
+<li>增加<code>expression</code>类及相关方法</li>
+</ul>
+<h1 id="V5-1-9版本"><a href="#V5-1-9版本" class="headerlink" title="V5.1.9版本"></a>V5.1.9版本</h1><p><strong>该版本主要是一些改进和修正，并包含一个安全更新，是一个推荐更新版本。</strong></p>
+<h2 id="更新日志-1"><a href="#更新日志-1" class="headerlink" title="更新日志"></a>更新日志</h2><ul>
+<li>默认模板渲染规则支持配置保持操作方法名</li>
+<li>改进<code>Request</code>类的<code>ip</code>方法</li>
+<li>支持模型软删除字段的默认值定义</li>
+<li>改进路由变量规则对中文的支持</li>
+<li>使用闭包查询的时候使用<code>cache(true)</code> 抛出异常提示</li>
+<li>改进<code>Loader</code>类<code>loadComposerAutoloadFiles</code>方法</li>
+<li>改进查询方法安全性</li>
+<li>修正路由地址中控制器名驼峰问题</li>
+<li>调整上一个版本的<code>module_init</code>和<code>app_begin</code>的钩子顺序问题</li>
+<li>改进CLI模式下运行的问题</li>
+<li>修正社区反馈的其它问题</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;ThinkPHP 此次同步发布了两个版本的更新，均包含一处安全更新，推荐更新。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
+    
+      <category term="ThinkPHP" scheme="http://www.iooeo.com/categories/PHP/ThinkPHP/"/>
+    
+    
+      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
+    
+      <category term="ThinkPHP" scheme="http://www.iooeo.com/tags/ThinkPHP/"/>
+    
+  </entry>
   
   <entry>
     <title>Laravel 5.6.16发布,PHP Web 开发框架</title>
@@ -1927,37 +1980,6 @@ zset的item是唯一的，但是分数是可以重复的</code></p>
       <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
     
       <category term="Phalcon" scheme="http://www.iooeo.com/tags/Phalcon/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Mac 上关于npm一些令我窒息的操作</title>
-    <link href="http://www.iooeo.com/2017/12/13/Mac-%E4%B8%8A%E5%85%B3%E4%BA%8Enpm%E4%B8%80%E4%BA%9B%E4%BB%A4%E6%88%91%E7%AA%92%E6%81%AF%E7%9A%84%E6%93%8D%E4%BD%9C/"/>
-    <id>http://www.iooeo.com/2017/12/13/Mac-上关于npm一些令我窒息的操作/</id>
-    <published>2017-12-13T08:20:00.000Z</published>
-    <updated>2017-12-13T08:30:06.915Z</updated>
-    
-    <content type="html"><![CDATA[<p>今天想学个前端框架来着，需要npm安装一些环境，搞来搞去各种module.js报错，一咬牙，劳资从头再来。<br><a id="more"></a></p>
-<h2 id="安装nvm"><a href="#安装nvm" class="headerlink" title="安装nvm"></a>安装nvm</h2><p>目前我更多的使用nvm来进行node版本管理，它会安装相应版本的npm。<br>执行如下命令安装nvm：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ brew install nvm</div></pre></td></tr></table></figure></p>
-<p>安装成功，按照提示做一些附属操作，不细说。</p>
-<h2 id="安装node及npm"><a href="#安装node及npm" class="headerlink" title="安装node及npm"></a>安装node及npm</h2><p>首先删除node文件，完全卸载node和npm，让那些扯淡的报错统统go out！<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo rm -rf /usr/local/&#123;lib/node&#123;,/.npm,_modules&#125;,bin,share/man&#125;/&#123;npm*,node*,man1/node*&#125;</div></pre></td></tr></table></figure></p>
-<p>然后进行安装：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ brew link node</div><div class="line">$ brew uninstall node</div><div class="line">$ brew install node</div></pre></td></tr></table></figure></p>
-<p>安装成功后测试：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install -g grunt-cli</div></pre></td></tr></table></figure></p>
-<p>如果安装成功，那么恭喜你node，npm，grunt均安装成功。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;今天想学个前端框架来着，需要npm安装一些环境，搞来搞去各种module.js报错，一咬牙，劳资从头再来。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="Mac" scheme="http://www.iooeo.com/categories/Mac/"/>
-    
-    
-      <category term="Mac" scheme="http://www.iooeo.com/tags/Mac/"/>
-    
-      <category term="npm" scheme="http://www.iooeo.com/tags/npm/"/>
     
   </entry>
   
