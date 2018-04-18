@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Nginx 主线版 1.14.0 发布，Bug 修复版本]]></title>
+    <url>%2F2018%2F04%2F18%2FNginx-%E4%B8%BB%E7%BA%BF%E7%89%88-1-14-0-%E5%8F%91%E5%B8%83%EF%BC%8CBug-%E4%BF%AE%E5%A4%8D%E7%89%88%E6%9C%AC%2F</url>
+    <content type="text"><![CDATA[Nginx 主线版 1.14.0 发布了，Nginx（发音同 engine x）是一款轻量级的 Web 服务器/反向代理服务器及电子邮件（IMAP/POP3）代理服务器，并在一个 BSD-like 协议下发行，可以在 UNIX、GNU/Linux、BSD、Mac OS X、Solaris，以及 Microsoft Windows 等操作系统中运行。此版本包含来自1.13.x mainline分支的新功能和bug修复： 镜像模块 HTTP / 2推送 gRPC代理模块 下载地址： code: http://hg.nginx.org/nginx site: http://hg.nginx.org/nginx.org]]></content>
+      <categories>
+        <category>Nginx</category>
+      </categories>
+      <tags>
+        <tag>Nginx</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Symfony 4.1 发布，改进了 Monolog 集成]]></title>
+    <url>%2F2018%2F04%2F18%2FSymfony-4-1-%E5%8F%91%E5%B8%83%EF%BC%8C%E6%94%B9%E8%BF%9B%E4%BA%86-Monolog-%E9%9B%86%E6%88%90%2F</url>
+    <content type="text"><![CDATA[Symfony 4.1 发布了。Symfony 是一款基于 MVC 架构的 PHP 框架。Symfony 致力于减少重复代码的编写，以加速 Web 应用的开发和维护。Symfony 与许多关系型数据库集成的也非常好，成本也较小。此外，Symfony 致力于在企业背景下创建健壮的应用，同时也给予了开发者强大的配置功能：从文件结构到外部目录，几乎所有的东西都可以自定义。Symfony 也捆绑了一些诸如测试、调试、文档生成等额外的工具来满足企业的开发过程。 更新内容：Symfony 4.1改进了Monolog集成以允许排除与特定HTTP代码相关的日志消息。例如，使用 fingers_crossed处理程序时，请使用以下配置忽略有关日志403和404错误的日志：1234567# config/packages/monolog.yamlmonolog: handlers: main: # ... type: &apos;fingers_crossed&apos; excluded_http_codes: [403, 404] 对于更复杂的需求，也可以仅为特定URL排除日志，并将其定义为正则表达式模式：123456# config/packages/monolog.yamlmonolog: handlers: main: # ... excluded_http_codes: [&#123; 400: [&apos;^/foo&apos;, &apos;^/bar&apos;] &#125;, 403, 404] XML配置，示例如下：123456789101112&lt;!-- config/packages/monolog.xml --&gt;&lt;monolog:config&gt; &lt;monolog:handler type=&quot;fingers_crossed&quot; name=&quot;main&quot; handler=&quot;...&quot;&gt; &lt;!-- ... --&gt; &lt;monolog:excluded-http-code code=&quot;400&quot;&gt; &lt;monolog:url&gt;^/foo&lt;/monolog:url&gt; &lt;monolog:url&gt;^/bar&lt;/monolog:url&gt; &lt;/monolog:excluded-http-code&gt; &lt;monolog:excluded-http-code code=&quot;403&quot; /&gt; &lt;monolog:excluded-http-code code=&quot;404&quot; /&gt; &lt;/monolog:handler&gt;&lt;/monolog:config&gt; 完整内容可查看发布主页。]]></content>
+      <categories>
+        <category>PHP</category>
+      </categories>
+      <tags>
+        <tag>PHP</tag>
+        <tag>Symfony</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[CakePHP 3.5.15 发布，PHP 快速开发框架]]></title>
     <url>%2F2018%2F04%2F16%2FCakePHP-3-5-15-%E5%8F%91%E5%B8%83%EF%BC%8CPHP-%E5%BF%AB%E9%80%9F%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6%2F</url>
     <content type="text"><![CDATA[CakePHP 核心团队宣布 CakePHP 3.5.15 发布。这是修复了几个社区报告问题的 3.5 分支的维护版本。 错误修复和新功能 改进的 API 文档。 RequestHandlerComponent 处理请求数据时不再扩展递归内联XML实体。 PO文件上下文消息现在可以是多行字符串。 File::name() 处理unicode文件名。 改进路线类丢失时错误。 Postgres模式反射现在通过强制转换处理空默认值。 交换会话引擎现在改变PHP中的处理程序 完整内容可查看发布主页。 下载地址： cakephp-3-5-15.zip Source code (zip) Source code (tar.gz)]]></content>
