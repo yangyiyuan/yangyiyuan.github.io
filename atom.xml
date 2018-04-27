@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.iooeo.com/"/>
-  <updated>2018-04-27T07:00:04.521Z</updated>
+  <updated>2018-04-27T07:00:22.787Z</updated>
   <id>http://www.iooeo.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://www.iooeo.com/2018/04/27/ThinkPHP-5-0-19-5-1-12-%E7%89%88%E6%9C%AC%E5%8F%91%E5%B8%83-%E2%80%94-%E7%A5%9D%E5%A4%A7%E5%AE%B6%E5%8A%B3%E5%8A%A8%E8%8A%82%E5%BF%AB%E4%B9%90%EF%BC%81/"/>
     <id>http://www.iooeo.com/2018/04/27/ThinkPHP-5-0-19-5-1-12-版本发布-—-祝大家劳动节快乐！/</id>
     <published>2018-04-27T06:56:38.000Z</published>
-    <updated>2018-04-27T07:00:04.521Z</updated>
+    <updated>2018-04-27T07:00:22.787Z</updated>
     
     <content type="html"><![CDATA[<p>官方发布了V5.0.19和V5.1.12两个版本（均为无缝升级），提前祝大家五一节日快乐！<br><a id="more"></a></p>
 <h2 id="V5-0-19"><a href="#V5-0-19" class="headerlink" title="V5.0.19"></a>V5.0.19</h2><p>该版本属于改进版本，主要改进了主从查询的及时性，和composer自动加载及内置模板引擎的一处可能的安全隐患，支持上一个版本无缝升级。</p>
