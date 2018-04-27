@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[ThinkPHP 5.0.19&5.1.12 版本发布 — 祝大家劳动节快乐！]]></title>
+    <url>%2F2018%2F04%2F27%2FThinkPHP-5-0-19-5-1-12-%E7%89%88%E6%9C%AC%E5%8F%91%E5%B8%83-%E2%80%94-%E7%A5%9D%E5%A4%A7%E5%AE%B6%E5%8A%B3%E5%8A%A8%E8%8A%82%E5%BF%AB%E4%B9%90%EF%BC%81%2F</url>
+    <content type="text"><![CDATA[官方发布了V5.0.19和V5.1.12两个版本（均为无缝升级），提前祝大家五一节日快乐！ V5.0.19该版本属于改进版本，主要改进了主从查询的及时性，和composer自动加载及内置模板引擎的一处可能的安全隐患，支持上一个版本无缝升级。 更新日志 改进composer自动加载 改进模板引擎一处安全隐患 改进comment方法解析 改进分布式写入数据后及时读取的问题 改进url操作方法的自动转换 改进分页类魔术方法的返回值 SQL日志增加主从标记 官方完全开发手册内容已经同步更新。 V5.1.12该版本主要改进了主从查询的及时性，并支持动态设置请求数据，支持上一个版本无缝升级。 更新日志 Request类支持动态设置请求数据 改进comment方法解析 修正App类__unset方法 改进url生成的域名绑定 改进主从查询的及时性 修正value的数据缓存功能 改进分页类的集合对象方法调用 改进Db类的代码提示 SQL日志增加主从标记 官方完全开发手册内容已经同步更新。]]></content>
+      <categories>
+        <category>PHP</category>
+        <category>ThinkPHP</category>
+      </categories>
+      <tags>
+        <tag>PHP</tag>
+        <tag>ThinkPHP</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Nginx 主线版 1.14.0 发布，Bug 修复版本]]></title>
     <url>%2F2018%2F04%2F18%2FNginx-%E4%B8%BB%E7%BA%BF%E7%89%88-1-14-0-%E5%8F%91%E5%B8%83%EF%BC%8CBug-%E4%BF%AE%E5%A4%8D%E7%89%88%E6%9C%AC%2F</url>
     <content type="text"><![CDATA[Nginx 主线版 1.14.0 发布了，Nginx（发音同 engine x）是一款轻量级的 Web 服务器/反向代理服务器及电子邮件（IMAP/POP3）代理服务器，并在一个 BSD-like 协议下发行，可以在 UNIX、GNU/Linux、BSD、Mac OS X、Solaris，以及 Microsoft Windows 等操作系统中运行。此版本包含来自1.13.x mainline分支的新功能和bug修复： 镜像模块 HTTP / 2推送 gRPC代理模块 下载地址： code: http://hg.nginx.org/nginx site: http://hg.nginx.org/nginx.org]]></content>
