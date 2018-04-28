@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Symfony v2.7.46 发布，bug 修复版本]]></title>
+    <url>%2F2018%2F04%2F28%2FSymfony-v2-7-46-%E5%8F%91%E5%B8%83%EF%BC%8Cbug-%E4%BF%AE%E5%A4%8D%E7%89%88%E6%9C%AC%2F</url>
+    <content type="text"><![CDATA[Symfony 是一款基于 MVC 架构的 PHP 框架。Symfony 致力于减少重复代码的编写，以加速 Web 应用的开发和维护。Symfony 与许多关系型数据库集成的非常好，成本也较小。Symfony v2.7.46 发布，更新信息如下： bug [#26831[(https://github.com/symfony/symfony/pull/26831)] [Bridge/Doctrine] count(): 参数必须是一个数组或实现 Countable 的对象 (@gpenverne) bug #27044 [Security] 跳过用户检查是否没有实现 UserInterface (@chalasr) bug #26910 在 hasColorSupport 中使用新的 PHP7.2 函数(@johnstevenson) bug #26999 [VarDumper] 修复 SplObjectStorage 的转储 (@corphi) bug #26886 不要认为 *nix OS 上存在文件二进制文件 (@teohhanhui) bug #26643 修复 ESI / SSI 处理时可以将“private”以“public”响应(@mpdude) bug #26932 [Form] 修正了修整选择值 (@HeahDude) bug #26875 [Console] 自动完成时不经过精确匹配 (@nicolas-grekas) bug #26823 [Validator] 如果测试值不存在，则修复 LazyLoadingMetadataFactory 与 PSR6Cache 的非类名 (@pascal Montoya, @pmontoya) bug #26834 [Yaml] 在未完成的内联映射上抛出解析错误 (@nicolas-grekas) 详情见发布公告。 下载地址: Source code (zip) Source code (tar.gz)]]></content>
+      <categories>
+        <category>PHP</category>
+      </categories>
+      <tags>
+        <tag>PHP</tag>
+        <tag>Symfony</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[ThinkPHP 5.0.19&5.1.12 版本发布 — 祝大家劳动节快乐！]]></title>
     <url>%2F2018%2F04%2F27%2FThinkPHP-5-0-19-5-1-12-%E7%89%88%E6%9C%AC%E5%8F%91%E5%B8%83-%E2%80%94-%E7%A5%9D%E5%A4%A7%E5%AE%B6%E5%8A%B3%E5%8A%A8%E8%8A%82%E5%BF%AB%E4%B9%90%EF%BC%81%2F</url>
     <content type="text"><![CDATA[官方发布了V5.0.19和V5.1.12两个版本（均为无缝升级），提前祝大家五一节日快乐！ V5.0.19该版本属于改进版本，主要改进了主从查询的及时性，和composer自动加载及内置模板引擎的一处可能的安全隐患，支持上一个版本无缝升级。 更新日志 改进composer自动加载 改进模板引擎一处安全隐患 改进comment方法解析 改进分布式写入数据后及时读取的问题 改进url操作方法的自动转换 改进分页类魔术方法的返回值 SQL日志增加主从标记 官方完全开发手册内容已经同步更新。 V5.1.12该版本主要改进了主从查询的及时性，并支持动态设置请求数据，支持上一个版本无缝升级。 更新日志 Request类支持动态设置请求数据 改进comment方法解析 修正App类__unset方法 改进url生成的域名绑定 改进主从查询的及时性 修正value的数据缓存功能 改进分页类的集合对象方法调用 改进Db类的代码提示 SQL日志增加主从标记 官方完全开发手册内容已经同步更新。]]></content>

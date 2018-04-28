@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.iooeo.com/"/>
-  <updated>2018-04-27T07:00:22.787Z</updated>
+  <updated>2018-04-28T02:12:37.720Z</updated>
   <id>http://www.iooeo.com/</id>
   
   <author>
@@ -14,6 +14,49 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Symfony v2.7.46 发布，bug 修复版本</title>
+    <link href="http://www.iooeo.com/2018/04/28/Symfony-v2-7-46-%E5%8F%91%E5%B8%83%EF%BC%8Cbug-%E4%BF%AE%E5%A4%8D%E7%89%88%E6%9C%AC/"/>
+    <id>http://www.iooeo.com/2018/04/28/Symfony-v2-7-46-发布，bug-修复版本/</id>
+    <published>2018-04-28T02:05:47.000Z</published>
+    <updated>2018-04-28T02:12:37.720Z</updated>
+    
+    <content type="html"><![CDATA[<p>Symfony 是一款基于 MVC 架构的 PHP 框架。Symfony 致力于减少重复代码的编写，以加速 Web 应用的开发和维护。Symfony 与许多关系型数据库集成的非常好，成本也较小。<br><a id="more"></a><br>Symfony  v2.7.46 发布，更新信息如下：</p>
+<ul>
+<li>bug [#26831[(<a href="https://github.com/symfony/symfony/pull/26831" target="_blank" rel="noopener">https://github.com/symfony/symfony/pull/26831</a>)] [Bridge/Doctrine] count(): 参数必须是一个数组或实现 Countable 的对象 (<a href="https://github.com/gpenverne" target="_blank" rel="noopener">@gpenverne</a>)</li>
+<li>bug <a href="https://github.com/symfony/symfony/pull/27044" target="_blank" rel="noopener">#27044</a> [Security] 跳过用户检查是否没有实现 UserInterface (<a href="https://github.com/chalasr" target="_blank" rel="noopener">@chalasr</a>)</li>
+<li>bug <a href="https://github.com/symfony/symfony/pull/26910" target="_blank" rel="noopener">#26910</a> 在 hasColorSupport 中使用新的 PHP7.2 函数(<a href="https://github.com/johnstevenson" target="_blank" rel="noopener">@johnstevenson</a>)</li>
+<li>bug <a href="https://github.com/symfony/symfony/pull/26999" target="_blank" rel="noopener">#26999</a> [VarDumper] 修复 SplObjectStorage 的转储 (<a href="https://github.com/corphi" target="_blank" rel="noopener">@corphi</a>)</li>
+<li>bug <a href="https://github.com/symfony/symfony/pull/26886" target="_blank" rel="noopener">#26886</a> 不要认为 *nix OS 上存在文件二进制文件 (<a href="https://github.com/teohhanhui" target="_blank" rel="noopener">@teohhanhui</a>)</li>
+<li>bug <a href="#26643">#26643</a> 修复 ESI / SSI 处理时可以将“private”以“public”响应(<a href="https://github.com/mpdude" target="_blank" rel="noopener">@mpdude</a>)</li>
+<li>bug <a href="https://github.com/symfony/symfony/pull/26932" target="_blank" rel="noopener">#26932</a> [Form] 修正了修整选择值 (<a href="https://github.com/HeahDude" target="_blank" rel="noopener">@HeahDude</a>)</li>
+<li>bug <a href="https://github.com/symfony/symfony/pull/26875" target="_blank" rel="noopener">#26875</a> [Console] 自动完成时不经过精确匹配 (<a href="https://github.com/nicolas-grekas" target="_blank" rel="noopener">@nicolas-grekas</a>)</li>
+<li>bug <a href="https://github.com/symfony/symfony/pull/26823" target="_blank" rel="noopener">#26823</a> [Validator] 如果测试值不存在，则修复 LazyLoadingMetadataFactory 与 PSR6Cache 的非类名 (<a href="https://github.com/pascal" target="_blank" rel="noopener">@pascal Montoya</a>, <a href="https://github.com/pmontoya" target="_blank" rel="noopener">@pmontoya</a>)</li>
+<li>bug <a href="https://github.com/symfony/symfony/pull/26834" target="_blank" rel="noopener">#26834</a> [Yaml] 在未完成的内联映射上抛出解析错误 (<a href="https://github.com/nicolas-grekas" target="_blank" rel="noopener">@nicolas-grekas</a>)</li>
+</ul>
+<p>详情见<a href="https://github.com/symfony/symfony/releases/tag/v2.7.46" target="_blank" rel="noopener">发布公告</a>。</p>
+<p>下载地址:</p>
+<ul>
+<li><a href="https://github.com/symfony/symfony/archive/v2.7.46.zip" target="_blank" rel="noopener">Source code (zip)</a></li>
+<li><a href="https://github.com/symfony/symfony/archive/v2.7.46.tar.gz" target="_blank" rel="noopener">Source code (tar.gz)</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Symfony 是一款基于 MVC 架构的 PHP 框架。Symfony 致力于减少重复代码的编写，以加速 Web 应用的开发和维护。Symfony 与许多关系型数据库集成的非常好，成本也较小。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
+    
+    
+      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
+    
+      <category term="Symfony" scheme="http://www.iooeo.com/tags/Symfony/"/>
+    
+  </entry>
   
   <entry>
     <title>ThinkPHP 5.0.19&amp;5.1.12 版本发布 — 祝大家劳动节快乐！</title>
@@ -1914,61 +1957,6 @@ zset的item是唯一的，但是分数是可以重复的</code></p>
     
     </summary>
     
-    
-  </entry>
-  
-  <entry>
-    <title>ThinkPHP V5.0.14 版本发布</title>
-    <link href="http://www.iooeo.com/2018/01/03/ThinkPHP-V5-0-14-%E7%89%88%E6%9C%AC%E5%8F%91%E5%B8%83/"/>
-    <id>http://www.iooeo.com/2018/01/03/ThinkPHP-V5-0-14-版本发布/</id>
-    <published>2018-01-03T06:17:40.000Z</published>
-    <updated>2018-01-03T06:21:16.267Z</updated>
-    
-    <content type="html"><![CDATA[<p>V5.0.14版本主对复合主键进行了更多支持，改进了PHP7的兼容性，并且对数据库的一些问题做了改进。是一个推荐更新版本，后面的5.0版本将进入BUG修正及安全维护状态，功能将不会更新调整。<br><a id="more"></a></p>
-<h2 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h2><p>主要更新如下：</p>
-<ul>
-<li>改进Validate类的unique验证</li>
-<li>Validate类增加checkRule方法用于静态验证多个规则</li>
-<li>改进多对多关联的save方法</li>
-<li>改进多对多的pivot对象</li>
-<li>修正setDec方法的延迟写入</li>
-<li>max和min方法增加第二个参数用于设置是否强制转换数字</li>
-<li>改进View类</li>
-<li>改进join关联自身的问题</li>
-<li>改进union查询</li>
-<li>改进Url类</li>
-<li>改进同名路由不同请求的注册</li>
-<li>改进Builder类parseData对空数组的判断</li>
-<li>改进模板替换</li>
-<li>调整BelongsTo的hasWhere方法</li>
-<li>改进模板的编译缓存命名规则 增加布局模板的标识</li>
-<li>改进insertall方法</li>
-<li>改进chunk方法支持复合主键</li>
-<li>改进Error类的一个兼容问题</li>
-<li>改进model类的save方法的复合主键包含自增的情况</li>
-<li>save方法改进复合主键的支持</li>
-<li>改进mysql的insertAll方法</li>
-<li>改进redis长连接多编号库的情况</li>
-</ul>
-<p>5.0.13可以无缝升级到5.0.14。</p>
-<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p>可以通过码云更新或者通过composer更新到最新版本。</p>
-<h2 id="文档"><a href="#文档" class="headerlink" title="文档"></a>文档</h2><p>官方完全开发手册内容已经同步更新 <a href="http://www.kancloud.cn/manual/thinkphp5" target="_blank" rel="noopener">完全开发手册</a> <a href="http://www.kancloud.cn/special/thinkphp5_quickstart" target="_blank" rel="noopener">官方快速入门系列</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;V5.0.14版本主对复合主键进行了更多支持，改进了PHP7的兼容性，并且对数据库的一些问题做了改进。是一个推荐更新版本，后面的5.0版本将进入BUG修正及安全维护状态，功能将不会更新调整。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
-    
-      <category term="ThinkPHP" scheme="http://www.iooeo.com/categories/PHP/ThinkPHP/"/>
-    
-    
-      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
-    
-      <category term="ThinkPHP" scheme="http://www.iooeo.com/tags/ThinkPHP/"/>
     
   </entry>
   
