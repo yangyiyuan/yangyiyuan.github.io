@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.iooeo.com/"/>
-  <updated>2018-05-04T02:25:21.454Z</updated>
+  <updated>2018-05-04T02:54:09.789Z</updated>
   <id>http://www.iooeo.com/</id>
   
   <author>
@@ -16,13 +16,50 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Yii2 左侧菜单子级无法高亮的问题</title>
+    <link href="http://www.iooeo.com/2018/05/04/Yii2-%E5%B7%A6%E4%BE%A7%E8%8F%9C%E5%8D%95%E5%AD%90%E7%BA%A7%E6%97%A0%E6%B3%95%E9%AB%98%E4%BA%AE%E7%9A%84%E9%97%AE%E9%A2%98/"/>
+    <id>http://www.iooeo.com/2018/05/04/Yii2-左侧菜单子级无法高亮的问题/</id>
+    <published>2018-05-04T02:27:51.000Z</published>
+    <updated>2018-05-04T02:54:09.789Z</updated>
+    
+    <content type="html"><![CDATA[<p>前边安装采用了adminLte后台模板和menu配置之后出现了一个问题，就是点击相关controller的create、update、view这些action的时候不能定位到index的模块，左侧的二级菜单导航不能正常的展开定位高亮，下面说一下原因及解决办法。<br><a id="more"></a></p>
+<h2 id="首先来找一下处理左侧菜单的代码"><a href="#首先来找一下处理左侧菜单的代码" class="headerlink" title="首先来找一下处理左侧菜单的代码"></a>首先来找一下处理左侧菜单的代码</h2><blockquote>
+<p>目录：<code>{project}/backend/views/layouts/left.php</code></p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line">    $callback = function($menu)&#123;</div><div class="line">        $data = json_decode($menu[&apos;data&apos;], true);</div><div class="line">        $items = $menu[&apos;children&apos;];</div><div class="line">        $return = [</div><div class="line">            &apos;label&apos; =&gt; $menu[&apos;name&apos;],</div><div class="line">            &apos;url&apos; =&gt; [$menu[&apos;route&apos;]],</div><div class="line">        ];</div><div class="line">        //处理我们的配置</div><div class="line">        if ($data) &#123;</div><div class="line">            //visible</div><div class="line">            isset($data[&apos;visible&apos;]) &amp;&amp; $return[&apos;visible&apos;] = $data[&apos;visible&apos;];</div><div class="line">            //icon</div><div class="line">            isset($data[&apos;icon&apos;]) &amp;&amp; $data[&apos;icon&apos;] &amp;&amp; $return[&apos;icon&apos;] = $data[&apos;icon&apos;];</div><div class="line">            //other attribute e.g. class...</div><div class="line">            $return[&apos;options&apos;] = $data;</div><div class="line">        &#125;</div><div class="line">        //没配置图标的显示默认图标</div><div class="line">        (!isset($return[&apos;icon&apos;]) || !$return[&apos;icon&apos;]) &amp;&amp; $return[&apos;icon&apos;] = &apos;fa fa-circle-o&apos;;</div><div class="line">        $items &amp;&amp; $return[&apos;items&apos;] = $items;</div><div class="line">        return $return;</div><div class="line">    &#125;;</div><div class="line">?&gt;</div><div class="line"></div><div class="line">&lt;?= dmstr\widgets\Menu::widget([</div><div class="line">    &apos;options&apos; =&gt; [&apos;class&apos; =&gt; &apos;sidebar-menu&apos;],</div><div class="line">    &apos;items&apos; =&gt; MenuHelper::getAssignedMenu(Yii::$app-&gt;user-&gt;id,null,$callback),</div><div class="line">]); ?&gt;</div></pre></td></tr></table></figure>
+<p>看到这里，我们不妨打开文件<code>dmstr\widgets\Menu</code>看看这里是怎么实现左侧菜单选中这一困扰众多同学的问题。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">protected function isItemActive($item)</div><div class="line">    &#123;</div><div class="line">        if (isset($item[&apos;url&apos;]) &amp;&amp; is_array($item[&apos;url&apos;]) &amp;&amp; isset($item[&apos;url&apos;][0])) &#123;</div><div class="line">            $route = $item[&apos;url&apos;][0];</div><div class="line">            if ($route[0] !== &apos;/&apos; &amp;&amp; Yii::$app-&gt;controller) &#123;</div><div class="line">                $route = Yii::$app-&gt;controller-&gt;module-&gt;getUniqueId() . &apos;/&apos; . $route;</div><div class="line">            &#125;</div><div class="line">            $arrayRoute = explode(&apos;/&apos;, ltrim($route, &apos;/&apos;));</div><div class="line">            $arrayThisRoute = explode(&apos;/&apos;, $this-&gt;route);</div><div class="line">			if ($arrayRoute[0] !== $arrayThisRoute[0]) &#123;</div><div class="line">				return false;</div><div class="line">			&#125;</div><div class="line">			if (isset($arrayRoute[1]) &amp;&amp; $arrayRoute[1] !== $arrayThisRoute[1]) &#123;</div><div class="line">				return false;</div><div class="line">			&#125;</div><div class="line">			if (isset($arrayRoute[2]) &amp;&amp; $arrayRoute[2] !== $arrayThisRoute[2]) &#123;</div><div class="line">				return false;</div><div class="line">			&#125;</div><div class="line">            unset($item[&apos;url&apos;][&apos;#&apos;]);</div><div class="line">            if (count($item[&apos;url&apos;]) &gt; 1) &#123;</div><div class="line">                foreach (array_splice($item[&apos;url&apos;], 1) as $name =&gt; $value) &#123;</div><div class="line">                    if ($value !== null &amp;&amp; (!isset($this-&gt;params[$name]) || $this-&gt;params[$name] != $value)) &#123;</div><div class="line">                        return false;</div><div class="line">                    &#125;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">            return true;</div><div class="line">        &#125;</div><div class="line">        return false;</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
+<h2 id="修改代码解决菜单不高亮的问题"><a href="#修改代码解决菜单不高亮的问题" class="headerlink" title="修改代码解决菜单不高亮的问题"></a>修改代码解决菜单不高亮的问题</h2><blockquote>
+<p>目录：看上面的代码，也就是说左侧菜单高亮的情况是当前路由完全等于菜单路由时菜单才进行激活。我们这里只需要稍稍调整下代码，判断控制到controller而非action即可，但是源码文件我们又不能修改，这里我们拷贝<code>{project}/vendor/dmstr/yii2-adminlte-asset/widgets/Menu.php</code>文件到<code>{project}/backend/components/Menu.php</code>，然后按照下面的方法修改<code>isItemActive</code>方法即可</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line">protected function isItemActive($item)</div><div class="line">&#123;</div><div class="line">    if (isset($item[&quot;url&quot;]) &amp;&amp; is_array($item[&quot;url&quot;]) &amp;&amp; isset($item[&quot;url&quot;][0])) &#123;</div><div class="line">        //......</div><div class="line">        //改写了路由的规则，是否高亮判断到controller而非action</div><div class="line">        $routeCount = count($arrayRoute);</div><div class="line">        if ($routeCount == 2) &#123;</div><div class="line">            if ($arrayRoute[0] !== $arrayThisRoute[0]) &#123;</div><div class="line">                return false;</div><div class="line">            &#125;</div><div class="line">        &#125; elseif ($routeCount == 3) &#123;</div><div class="line">            if ($arrayRoute[0] !== $arrayThisRoute[0]) &#123;</div><div class="line">                return false;</div><div class="line">            &#125;</div><div class="line">            if (isset($arrayRoute[1]) &amp;&amp; $arrayRoute[1] !== $arrayThisRoute[1]) &#123;</div><div class="line">                return false;</div><div class="line">            &#125;</div><div class="line">        &#125; else &#123;</div><div class="line">            return false;</div><div class="line">        &#125;</div><div class="line">        // if ($arrayRoute[0] !== $arrayThisRoute[0]) &#123;</div><div class="line">        //     return false;</div><div class="line">        // &#125;</div><div class="line">        // if (isset($arrayRoute[1]) &amp;&amp; $arrayRoute[1] !== $arrayThisRoute[1]) &#123;</div><div class="line">        //     return false;</div><div class="line">        // &#125;</div><div class="line">        // if (isset($arrayRoute[2]) &amp;&amp; $arrayRoute[2] !== $arrayThisRoute[2]) &#123;</div><div class="line">        //     return false;</div><div class="line">        // &#125;</div><div class="line"></div><div class="line">        //......</div><div class="line"></div><div class="line">        return true;</div><div class="line">    &#125;</div><div class="line">    return false;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>如此一来，菜单高亮的问题解决了。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;前边安装采用了adminLte后台模板和menu配置之后出现了一个问题，就是点击相关controller的create、update、view这些action的时候不能定位到index的模块，左侧的二级菜单导航不能正常的展开定位高亮，下面说一下原因及解决办法。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
+    
+      <category term="Yii2" scheme="http://www.iooeo.com/categories/PHP/Yii2/"/>
+    
+    
+      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
+    
+      <category term="Yii2" scheme="http://www.iooeo.com/tags/Yii2/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Yii2 modules模块路由美化</title>
     <link href="http://www.iooeo.com/2018/05/04/Yii2-modules%E6%A8%A1%E5%9D%97%E8%B7%AF%E7%94%B1%E7%BE%8E%E5%8C%96/"/>
     <id>http://www.iooeo.com/2018/05/04/Yii2-modules模块路由美化/</id>
     <published>2018-05-04T02:12:57.000Z</published>
-    <updated>2018-05-04T02:25:21.454Z</updated>
+    <updated>2018-05-04T02:26:56.941Z</updated>
     
-    <content type="html"><![CDATA[<p>最近在写项目的时候为了降低项目的耦合度，很多模块都独立出来一个模块（modules）。<br>随之带来了几个问题</p>
+    <content type="html"><![CDATA[<p>最近在写项目的时候为了降低项目的耦合度，很多模块都独立出来一个模块（modules）。<br><a id="more"></a><br>随之带来了几个问题</p>
 <h2 id="问题一"><a href="#问题一" class="headerlink" title="问题一"></a>问题一</h2><blockquote>
 <p>modules配置增加</p>
 </blockquote>
@@ -35,8 +72,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;最近在写项目的时候为了降低项目的耦合度，很多模块都独立出来一个模块（modules）。&lt;br&gt;随之带来了几个问题&lt;/p&gt;
-&lt;h2 id=&quot;问题一&quot;&gt;&lt;a href=&quot;#问题一&quot; class=&quot;headerlink&quot; title=&quot;问题一&quot;&gt;&lt;/a&gt;问题一&lt;/h2&gt;&lt;bloc
+      &lt;p&gt;最近在写项目的时候为了降低项目的耦合度，很多模块都独立出来一个模块（modules）。&lt;br&gt;
     
     </summary>
     
@@ -1890,95 +1926,6 @@ zset的item是唯一的，但是分数是可以重复的</code></p>
       <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
     
       <category term="ThinkPHP" scheme="http://www.iooeo.com/tags/ThinkPHP/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>PHP 7.0.29, 7.2.4 和 7.1.16 正式发布，多项内容修复</title>
-    <link href="http://www.iooeo.com/2018/03/28/PHP-7-0-29-7-2-4-%E5%92%8C-7-1-16-%E6%AD%A3%E5%BC%8F%E5%8F%91%E5%B8%83%EF%BC%8C%E5%A4%9A%E9%A1%B9%E5%86%85%E5%AE%B9%E4%BF%AE%E5%A4%8D/"/>
-    <id>http://www.iooeo.com/2018/03/28/PHP-7-0-29-7-2-4-和-7-1-16-正式发布，多项内容修复/</id>
-    <published>2018-03-28T06:30:54.000Z</published>
-    <updated>2018-03-28T06:45:56.722Z</updated>
-    
-    <content type="html"><![CDATA[<p>PHP 7.0.29, 7.1.16, 7.2.4已正式发布。PHP（PHP：Hypertext Preprocessor）是一种在电脑上执行的脚本语言，主要是用途在于处理动态网页，也包含了命令列执行接口（command line interface），或者产生图形使用者接口（GUI）程式。<br><a id="more"></a><br>版本主要还是修复 bug，改进日志如下：</p>
-<h2 id="PHP-7-1-16"><a href="#PHP-7-1-16" class="headerlink" title="PHP 7.1.16"></a>PHP 7.1.16</h2><h3 id="Core"><a href="#Core" class="headerlink" title="Core:"></a>Core:</h3><ul>
-<li>Fixed bug #76025 (Segfault while throwing exception in error_handler).(Dmitry, Laruence)</li>
-<li>Fixed bug #76044 (‘date: illegal option – -‘ in ./configure on FreeBSD).(Anatol)</li>
-</ul>
-<h3 id="GD"><a href="#GD" class="headerlink" title="GD:"></a>GD:</h3><ul>
-<li>Fixed bug #73957 (signed integer conversion in imagescale()). (cmb)</li>
-</ul>
-<h3 id="ODBC"><a href="#ODBC" class="headerlink" title="ODBC:"></a>ODBC:</h3><ul>
-<li>Fixed bug #76088 (ODBC functions are not available by default on Windows).(cmb)</li>
-</ul>
-<h3 id="Opcache"><a href="#Opcache" class="headerlink" title="Opcache:"></a>Opcache:</h3><ul>
-<li>Fixed bug #76074 (opcache corrupts variable in for-loop). (Bob)</li>
-</ul>
-<h3 id="Phar"><a href="#Phar" class="headerlink" title="Phar:"></a>Phar:</h3><ul>
-<li>Fixed bug #76085 (Segmentation fault in buildFromIterator when directory name contains a \n). (Laruence)</li>
-</ul>
-<h3 id="Standard"><a href="#Standard" class="headerlink" title="Standard:"></a>Standard:</h3><ul>
-<li>Fixed bug #74139 (mail.add_x_header default inconsistent with docs). (cmb)</li>
-<li>Fixed bug #76068 (parse_ini_string fails to parse “[foo]\nbar=1|&gt;baz” with segfault). (Anatol)</li>
-</ul>
-<h2 id="PHP-7-0-29"><a href="#PHP-7-0-29" class="headerlink" title="PHP 7.0.29"></a>PHP 7.0.29</h2><h3 id="FPM"><a href="#FPM" class="headerlink" title="FPM:"></a>FPM:</h3><ul>
-<li>Fixed bug #75605 (Dumpable FPM child processes allow bypassing opcache access controls). (Jakub Zelenka)</li>
-</ul>
-<h2 id="PHP-7-2-4"><a href="#PHP-7-2-4" class="headerlink" title="PHP 7.2.4"></a>PHP 7.2.4</h2><h3 id="Core-1"><a href="#Core-1" class="headerlink" title="Core:"></a>Core:</h3><ul>
-<li>Fixed bug #76025 (Segfault while throwing exception in error_handler). (Dmitry, Laruence)</li>
-<li>Fixed bug #76044 (‘date: illegal option – -‘ in ./configure on FreeBSD). (Anatol)</li>
-</ul>
-<h3 id="FPM-1"><a href="#FPM-1" class="headerlink" title="FPM:"></a>FPM:</h3><ul>
-<li>Fixed bug #75605 (Dumpable FPM child processes allow bypassing opcache access controls). (Jakub Zelenka)</li>
-</ul>
-<h3 id="FTP"><a href="#FTP" class="headerlink" title="FTP:"></a>FTP:</h3><ul>
-<li>Fixed ftp_pasv arginfo. (carusogabriel)</li>
-</ul>
-<h3 id="GD-1"><a href="#GD-1" class="headerlink" title="GD:"></a>GD:</h3><ul>
-<li>Fixed bug #73957 (signed integer conversion in imagescale()). (cmb)</li>
-<li>Fixed bug #76041 (null pointer access crashed php). (cmb)</li>
-<li>Fixed imagesetinterpolation arginfo. (Gabriel Caruso)</li>
-</ul>
-<h3 id="iconv"><a href="#iconv" class="headerlink" title="iconv:"></a>iconv:</h3><ul>
-<li>Fixed bug #75867 (Freeing uninitialized pointer). (Philip Prindeville)</li>
-</ul>
-<h3 id="Mbstring"><a href="#Mbstring" class="headerlink" title="Mbstring:"></a>Mbstring:</h3><ul>
-<li>Fixed bug #62545 (wrong unicode mapping in some charsets). (cmb)</li>
-</ul>
-<h3 id="Opcache-1"><a href="#Opcache-1" class="headerlink" title="Opcache:"></a>Opcache:</h3><ul>
-<li>Fixed bug #75969 (Assertion failure in live range DCE due to block pass misoptimization). (Nikita)</li>
-</ul>
-<h3 id="OpenSSL"><a href="#OpenSSL" class="headerlink" title="OpenSSL:"></a>OpenSSL:</h3><ul>
-<li>Fixed openssl_* arginfos. (carusogabriel)</li>
-</ul>
-<h3 id="PCNTL"><a href="#PCNTL" class="headerlink" title="PCNTL:"></a>PCNTL:</h3><ul>
-<li>Fixed bug #75873 (pcntl_wexitstatus returns incorrect on Big_Endian platform (s390x)). (Sam Ding)</li>
-</ul>
-<h3 id="Phar-1"><a href="#Phar-1" class="headerlink" title="Phar:"></a>Phar:</h3><ul>
-<li>Fixed bug #76085 (Segmentation fault in buildFromIterator when directory name contains a \n). (Laruence)</li>
-</ul>
-<h3 id="Standard-1"><a href="#Standard-1" class="headerlink" title="Standard:"></a>Standard:</h3><ul>
-<li>Fixed bug #75961 (Strange references behavior). (Laruence)</li>
-<li>Fixed some arginfos. (carusogabriel)</li>
-<li>Fixed bug #76068 (parse_ini_string fails to parse “[foo]\nbar=1|&gt;baz” with segfault). (Anatol)</li>
-</ul>
-<h2 id="下载连接："><a href="#下载连接：" class="headerlink" title="下载连接："></a>下载连接：</h2><ul>
-<li><a href="http://php.net/distributions/php-7.0.29.tar.gz" target="_blank" rel="noopener">http://php.net/distributions/php-7.0.29.tar.gz</a></li>
-<li><a href="http://php.net/distributions/php-7.1.16.tar.gz" target="_blank" rel="noopener">http://php.net/distributions/php-7.1.16.tar.gz</a></li>
-<li><a href="http://php.net/distributions/php-7.2.4.tar.gz" target="_blank" rel="noopener">http://php.net/distributions/php-7.2.4.tar.gz</a></li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;PHP 7.0.29, 7.1.16, 7.2.4已正式发布。PHP（PHP：Hypertext Preprocessor）是一种在电脑上执行的脚本语言，主要是用途在于处理动态网页，也包含了命令列执行接口（command line interface），或者产生图形使用者接口（GUI）程式。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
-    
-    
-      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
     
   </entry>
   
