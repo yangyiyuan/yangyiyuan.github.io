@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.iooeo.com/"/>
-  <updated>2018-04-28T02:12:37.720Z</updated>
+  <updated>2018-05-04T02:25:21.454Z</updated>
   <id>http://www.iooeo.com/</id>
   
   <author>
@@ -14,6 +14,42 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Yii2 modules模块路由美化</title>
+    <link href="http://www.iooeo.com/2018/05/04/Yii2-modules%E6%A8%A1%E5%9D%97%E8%B7%AF%E7%94%B1%E7%BE%8E%E5%8C%96/"/>
+    <id>http://www.iooeo.com/2018/05/04/Yii2-modules模块路由美化/</id>
+    <published>2018-05-04T02:12:57.000Z</published>
+    <updated>2018-05-04T02:25:21.454Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近在写项目的时候为了降低项目的耦合度，很多模块都独立出来一个模块（modules）。<br>随之带来了几个问题</p>
+<h2 id="问题一"><a href="#问题一" class="headerlink" title="问题一"></a>问题一</h2><blockquote>
+<p>modules配置增加</p>
+</blockquote>
+<p>采用了单独文件(modules.php)维护:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">$modules = [</div><div class="line">    &apos;base&apos; =&gt; [</div><div class="line">        &apos;class&apos; =&gt; &apos;api\modules\base\Module&apos;,</div><div class="line">    ],</div><div class="line">    &apos;user&apos; =&gt; [</div><div class="line">        &apos;class&apos; =&gt; &apos;api\modules\user\Module&apos;,</div><div class="line">    ],</div><div class="line">    &apos;admin&apos; =&gt; [</div><div class="line">        &apos;class&apos; =&gt; &apos;mdm\admin\Module&apos;,</div><div class="line">    ],</div><div class="line">    &apos;system&apos; =&gt; [</div><div class="line">        &apos;class&apos; =&gt; &apos;api\modules\system\Module&apos;,</div><div class="line">    ]</div><div class="line">];</div><div class="line">return $modules;</div></pre></td></tr></table></figure></p>
+<h2 id="问题二"><a href="#问题二" class="headerlink" title="问题二"></a>问题二</h2><blockquote>
+<p>modules增加了以后对应的命名空间也多了起来，路由看起来就不太美丽了。</p>
+</blockquote>
+<p>解决方案采用了配置路由是controller加key的方案。配置好了以后就由原来的<br><code>/system/systems/startup-config</code>改为了<code>/system/startup-config</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">$rules = [</div><div class="line">    [</div><div class="line">        &apos;class&apos; =&gt; &apos;yii\rest\UrlRule&apos;,</div><div class="line">        &apos;controller&apos; =&gt; [&apos;system&apos; =&gt; &apos;system/system&apos;],</div><div class="line">        &apos;extraPatterns&apos; =&gt; [</div><div class="line">            &apos;GET startup-config&apos; =&gt; &apos;startup-config&apos;,</div><div class="line">        ]</div><div class="line">    ],</div><div class="line">];</div><div class="line">return $rules;</div></pre></td></tr></table></figure></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;最近在写项目的时候为了降低项目的耦合度，很多模块都独立出来一个模块（modules）。&lt;br&gt;随之带来了几个问题&lt;/p&gt;
+&lt;h2 id=&quot;问题一&quot;&gt;&lt;a href=&quot;#问题一&quot; class=&quot;headerlink&quot; title=&quot;问题一&quot;&gt;&lt;/a&gt;问题一&lt;/h2&gt;&lt;bloc
+    
+    </summary>
+    
+      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
+    
+      <category term="Yii2" scheme="http://www.iooeo.com/categories/PHP/Yii2/"/>
+    
+    
+      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
+    
+      <category term="Yii2" scheme="http://www.iooeo.com/tags/Yii2/"/>
+    
+  </entry>
   
   <entry>
     <title>Symfony v2.7.46 发布，bug 修复版本</title>
@@ -1943,20 +1979,6 @@ zset的item是唯一的，但是分数是可以重复的</code></p>
     
     
       <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo 3.5.0 发布，快速简洁且高效的博客框架</title>
-    <link href="http://www.iooeo.com/2018/01/30/Hexo-3-5-0-%E5%8F%91%E5%B8%83%EF%BC%8C%E5%BF%AB%E9%80%9F%E7%AE%80%E6%B4%81%E4%B8%94%E9%AB%98%E6%95%88%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%A1%86%E6%9E%B6/"/>
-    <id>http://www.iooeo.com/2018/01/30/Hexo-3-5-0-发布，快速简洁且高效的博客框架/</id>
-    <published>2018-01-30T09:33:21.000Z</published>
-    <updated>2018-01-30T09:33:21.084Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
     
   </entry>
   

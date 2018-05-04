@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Yii2 modules模块路由美化]]></title>
+    <url>%2F2018%2F05%2F04%2FYii2-modules%E6%A8%A1%E5%9D%97%E8%B7%AF%E7%94%B1%E7%BE%8E%E5%8C%96%2F</url>
+    <content type="text"><![CDATA[最近在写项目的时候为了降低项目的耦合度，很多模块都独立出来一个模块（modules）。随之带来了几个问题 问题一 modules配置增加 采用了单独文件(modules.php)维护:123456789101112131415$modules = [ &apos;base&apos; =&gt; [ &apos;class&apos; =&gt; &apos;api\modules\base\Module&apos;, ], &apos;user&apos; =&gt; [ &apos;class&apos; =&gt; &apos;api\modules\user\Module&apos;, ], &apos;admin&apos; =&gt; [ &apos;class&apos; =&gt; &apos;mdm\admin\Module&apos;, ], &apos;system&apos; =&gt; [ &apos;class&apos; =&gt; &apos;api\modules\system\Module&apos;, ]];return $modules; 问题二 modules增加了以后对应的命名空间也多了起来，路由看起来就不太美丽了。 解决方案采用了配置路由是controller加key的方案。配置好了以后就由原来的/system/systems/startup-config改为了/system/startup-config12345678910$rules = [ [ &apos;class&apos; =&gt; &apos;yii\rest\UrlRule&apos;, &apos;controller&apos; =&gt; [&apos;system&apos; =&gt; &apos;system/system&apos;], &apos;extraPatterns&apos; =&gt; [ &apos;GET startup-config&apos; =&gt; &apos;startup-config&apos;, ] ],];return $rules;]]></content>
+      <categories>
+        <category>PHP</category>
+        <category>Yii2</category>
+      </categories>
+      <tags>
+        <tag>PHP</tag>
+        <tag>Yii2</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Symfony v2.7.46 发布，bug 修复版本]]></title>
     <url>%2F2018%2F04%2F28%2FSymfony-v2-7-46-%E5%8F%91%E5%B8%83%EF%BC%8Cbug-%E4%BF%AE%E5%A4%8D%E7%89%88%E6%9C%AC%2F</url>
     <content type="text"><![CDATA[Symfony 是一款基于 MVC 架构的 PHP 框架。Symfony 致力于减少重复代码的编写，以加速 Web 应用的开发和维护。Symfony 与许多关系型数据库集成的非常好，成本也较小。Symfony v2.7.46 发布，更新信息如下： bug [#26831[(https://github.com/symfony/symfony/pull/26831)] [Bridge/Doctrine] count(): 参数必须是一个数组或实现 Countable 的对象 (@gpenverne) bug #27044 [Security] 跳过用户检查是否没有实现 UserInterface (@chalasr) bug #26910 在 hasColorSupport 中使用新的 PHP7.2 函数(@johnstevenson) bug #26999 [VarDumper] 修复 SplObjectStorage 的转储 (@corphi) bug #26886 不要认为 *nix OS 上存在文件二进制文件 (@teohhanhui) bug #26643 修复 ESI / SSI 处理时可以将“private”以“public”响应(@mpdude) bug #26932 [Form] 修正了修整选择值 (@HeahDude) bug #26875 [Console] 自动完成时不经过精确匹配 (@nicolas-grekas) bug #26823 [Validator] 如果测试值不存在，则修复 LazyLoadingMetadataFactory 与 PSR6Cache 的非类名 (@pascal Montoya, @pmontoya) bug #26834 [Yaml] 在未完成的内联映射上抛出解析错误 (@nicolas-grekas) 详情见发布公告。 下载地址: Source code (zip) Source code (tar.gz)]]></content>
