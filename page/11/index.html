@@ -371,6 +371,181 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.iooeo.com/2014/10/13/laravel安装/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ewan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ewan's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2014/10/13/laravel安装/" itemprop="url">laravel安装</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2014-10-13T17:58:50+08:00">
+                2014-10-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/PHP/" itemprop="url" rel="index">
+                    <span itemprop="name">PHP</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/PHP/Laravel/" itemprop="url" rel="index">
+                    <span itemprop="name">Laravel</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/2014/10/13/laravel安装/#SOHUCS" itemprop="discussionUrl">
+                  <span id="url::http://www.iooeo.com/2014/10/13/laravel安装/" class="cy_cmt_count" data-xid="2014/10/13/laravel安装/" itemprop="commentsCount" ></span>
+                </a>
+              
+            
+          
+
+          
+          
+             <span id="/2014/10/13/laravel安装/" class="leancloud_visitors" data-flag-title="laravel安装">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>近期貌似对 <code>laravel</code> 有使用的需求，就自己安装了一次，发现对于有些人来说确实有点文档不够全面的感觉，现将具体的安装方法总结如下。<br>Composer安装：</p>
+<blockquote>
+<p>Laravel 框架使用 Composer 来管理代码依赖性。<br>在Windows操作系统中，你可以使用 Composer 的Windows安装工具(<a href="https://getcomposer.org/Composer-Setup.exe)。" target="_blank" rel="noopener">https://getcomposer.org/Composer-Setup.exe)。</a><br>对PHP版本有要求(最好5.4.0以上)<br>laravel安装：<br>Composer安装完成后，在dos模式中，你的网站目录执行下面命令即可：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ composer create-project laravel/laravel your-project-name</div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>Composer会自动帮你下载Laravel及安装。<br>部署虚拟主机(Apache相关知识)：<br>如果之前对Apache的配置环境没有设置过：<br>(1) Apache配置设置，打开(路径看个人项目环境而定)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">C:\wamp\bin\apache\apache2.4.9\conf\httpd.conf</div></pre></td></tr></table></figure></p>
+<p>第512~513行，将默认的虚拟主机设置打开(默认是关闭的，前边#去掉即可)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># Virtual hosts</div><div class="line">Include conf/extra/httpd-vhosts.conf</div></pre></td></tr></table></figure></p>
+<p>(2) 配置站点，打开(路径看个人项目环境而定)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">C:\wamp\bin\apache\apache2.4.9\conf\extra\httpd-vhosts.conf</div></pre></td></tr></table></figure></p>
+<p>在其下方添加站点信息：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;VirtualHost *:80&gt;</div><div class="line">        DocumentRoot &quot;c:/wamp/www/project/public&quot;</div><div class="line">        ServerName laravel.dev</div><div class="line">        ErrorLog &quot;logs/laravel.log&quot;</div><div class="line">        CustomLog &quot;logs/laravel.log&quot; common</div><div class="line">&lt;/VirtualHost&gt;</div></pre></td></tr></table></figure></p>
+<p>(3) 将站点指向项目目录，打开(路径看个人项目环境而定)C:\Windows\System32\drivers\etc\hosts<br>在其下方添加站点信息：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ 127.0.0.1         laravel.dev</div></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div align="center">
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://www.iooeo.com/2014/09/17/MySQL安装dpkg错误解决方案/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1375,7 +1550,7 @@ SELECT * FROM t1 ORDER BY key_part1 DESC, key_part2 DESC;</code><br>但是以下
           
             <div class="site-state-item site-state-posts">
               <a href="/">
-                <span class="site-state-item-count">105</span>
+                <span class="site-state-item-count">106</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>

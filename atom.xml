@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.iooeo.com/"/>
-  <updated>2018-05-08T01:35:55.877Z</updated>
+  <updated>2018-05-08T05:33:14.141Z</updated>
   <id>http://www.iooeo.com/</id>
   
   <author>
@@ -14,6 +14,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Yii2 执行php yii exec()错误</title>
+    <link href="http://www.iooeo.com/2018/05/08/Yii2-%E6%89%A7%E8%A1%8Cphp-yii-exec-%E9%94%99%E8%AF%AF/"/>
+    <id>http://www.iooeo.com/2018/05/08/Yii2-执行php-yii-exec-错误/</id>
+    <published>2018-05-08T05:32:01.000Z</published>
+    <updated>2018-05-08T05:33:14.141Z</updated>
+    
+    <content type="html"><![CDATA[<p>在根目录下运行 php yii，报错 PHP Warning ‘yii\base\ErrorException’ with message ‘exec() has been disabled for security reasons’<br><a id="more"></a><br>编辑php.ini文件，查找disable_functions，删除exec，保存。然后重启PHP就可以了。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在根目录下运行 php yii，报错 PHP Warning ‘yii\base\ErrorException’ with message ‘exec() has been disabled for security reasons’&lt;br&gt;
+    
+    </summary>
+    
+      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
+    
+      <category term="Yii2" scheme="http://www.iooeo.com/categories/PHP/Yii2/"/>
+    
+    
+      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
+    
+      <category term="Yii2" scheme="http://www.iooeo.com/tags/Yii2/"/>
+    
+  </entry>
   
   <entry>
     <title>Symfony 4.1.0-BETA1 包含大量新特性</title>
@@ -1823,48 +1850,6 @@ zset的item是唯一的，但是分数是可以重复的</code></p>
     
     
       <category term="Redis" scheme="http://www.iooeo.com/tags/Redis/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Laravel v5.6.14 发布，PHP 开发框架</title>
-    <link href="http://www.iooeo.com/2018/03/29/Laravel-v5-6-14-%E5%8F%91%E5%B8%83%EF%BC%8CPHP-%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6/"/>
-    <id>http://www.iooeo.com/2018/03/29/Laravel-v5-6-14-发布，PHP-开发框架/</id>
-    <published>2018-03-29T05:52:01.000Z</published>
-    <updated>2018-03-29T05:57:02.625Z</updated>
-    
-    <content type="html"><![CDATA[<p>Laravel v5.6.14 已发布，更新内容如下：<br>新增</p>
-<ul>
-<li>Added SlackMessage::info() method (<a href="https://github.com/laravel/framework/pull/23711" target="_blank" rel="noopener">#23711</a>)</li>
-<li>Added SessionGuard::logoutOtherDevices() method (<a href="https://github.com/laravel/framework/commit/9c51e49a56ff15fc47ac1a6bf232c32c25d14fd0" target="_blank" rel="noopener">9c51e49</a>)</li>
-</ul>
-<p>更改</p>
-<ul>
-<li>Replaced Blade’s or operator with null-coalescing operator (<a href="https://github.com/laravel/framework/commit/13f732ed617e41608e4ae021efc9d13e43375a26" target="_blank" rel="noopener">13f732e</a>)</li>
-</ul>
-<p>修复</p>
-<ul>
-<li>Get Blade compiler from engine resolver (<a href="https://github.com/laravel/framework/pull/23710" target="_blank" rel="noopener">#23710</a>)</li>
-<li>Default to an empty string when validating the URL signatures (<a href="https://github.com/laravel/framework/pull/23721" target="_blank" rel="noopener">#23721</a>)</li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Laravel v5.6.14 已发布，更新内容如下：&lt;br&gt;新增&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Added SlackMessage::info() method (&lt;a href=&quot;https://github.com/laravel/framework/pull/2371
-    
-    </summary>
-    
-      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
-    
-      <category term="Laravel" scheme="http://www.iooeo.com/categories/PHP/Laravel/"/>
-    
-    
-      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
-    
-      <category term="Laravel" scheme="http://www.iooeo.com/tags/Laravel/"/>
     
   </entry>
   
