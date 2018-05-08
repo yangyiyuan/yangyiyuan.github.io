@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://www.iooeo.com/2018/05/08/Symfony-4-1-0-BETA1-%E5%8C%85%E5%90%AB%E5%A4%A7%E9%87%8F%E6%96%B0%E7%89%B9%E6%80%A7/</loc>
+    <lastmod>2018-05-08T01:35:55.877Z</lastmod>
+    <data>
+        <display>
+        <title>Symfony 4.1.0-BETA1 包含大量新特性</title>
+        <pubTime>2018-05-08T01:33:38.000Z</pubTime>
+        
+        <tag>PHP</tag>
+         
+        <tag>Symfony</tag>
+         
+         
+           
+             
+              <breadCrumb title="PHP" url="http://www.iooeo.com/categories/PHP/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.iooeo.com/2018/05/08/HHVM-3-26-%E5%8F%91%E5%B8%83%EF%BC%8C%E5%BC%95%E5%85%A5%E5%85%A8%E6%96%B0-HackC-%E7%BC%96%E8%AF%91%E5%99%A8/</loc>
     <lastmod>2018-05-08T01:32:20.640Z</lastmod>
     <data>
@@ -1965,9 +1987,9 @@
         <title>Mac Python 版本切换</title>
         <pubTime>2017-07-20T03:24:50.000Z</pubTime>
         
-        <tag>Mac</tag>
-         
         <tag>python</tag>
+         
+        <tag>Mac</tag>
          
          
            

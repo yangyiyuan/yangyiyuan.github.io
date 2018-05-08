@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Symfony 4.1.0-BETA1 包含大量新特性]]></title>
+    <url>%2F2018%2F05%2F08%2FSymfony-4-1-0-BETA1-%E5%8C%85%E5%90%AB%E5%A4%A7%E9%87%8F%E6%96%B0%E7%89%B9%E6%80%A7%2F</url>
+    <content type="text"><![CDATA[Symfony 是一款基于 MVC 架构的 PHP 框架。Symfony 致力于减少重复代码的编写，以加速 Web 应用的开发和维护。Symfony 与许多关系型数据库集成的也非常好，成本也较小。 此外，Symfony 致力于在企业背景下创建健壮的应用，同时也给予了开发者强大的配置功能：从文件结构到外部目录，几乎所有的东西都可以自定义。Symfony 也捆绑了一些诸如测试、调试、文档生成等额外的工具来满足企业的开发过程。 Symfony 4.1.0-BETA1 已发布，该版本引入了大量新特性，其中值得关注的有： 支持在调度时配置消息 添加 Kernel::getAnnotatedClassesToCompile() 在记录器面板中默认显示 deprecations 选项卡 添加一个新的时间限制接收器 重定向到正确的 Symfony 版本文档 完整更新请查看 https://symfony.com/blog/symfony-4-1-0-beta1-released Symfony 的向后兼容性较好，因此，升级到该版本不会有太大的问题，查看升级文档以了解更多。 如果想及时了解更多关于 Symfony 的进展，可订阅 Symfony的路线图。]]></content>
+      <categories>
+        <category>PHP</category>
+      </categories>
+      <tags>
+        <tag>PHP</tag>
+        <tag>Symfony</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[HHVM 3.26 发布，引入全新 HackC 编译器]]></title>
     <url>%2F2018%2F05%2F08%2FHHVM-3-26-%E5%8F%91%E5%B8%83%EF%BC%8C%E5%BC%95%E5%85%A5%E5%85%A8%E6%96%B0-HackC-%E7%BC%96%E8%AF%91%E5%99%A8%2F</url>
     <content type="text"><![CDATA[HipHopVM(HHVM) 是 Facebook 推出的用来执行 PHP 代码的虚拟机，它是一个 PHP 的 JIT(Just-In-Time) 编译器，同时具有产生快速代码和即时编译的优点。 HHVM 3.26 已发布，值得关注的更新有： Hack 编译器 —— HackC typechecker 的重新授权以及相关工具和库采用 MIT 开源协议 对 Ubuntu 18.04 的支持 开发团队表示，在历经一年多的开发后，现已在 3.26 版本中默认启用 HackC 编译器。包括用于 Hack 和 PHP 语言的 full-fidelity parser (FFP) 和 bytecode emitter。FFP 已经支持多种工具，比如通过语言服务器协议, hackfmt 和 hhast 以与 Hack 的 IDE 集成。 此外，HackC 通过了 HHVM 的所有测试 —— 包括 PHP 规范测试，并生成了语义上相同的字节码。 授权方面，Hack 现在可通过 MIT 授权获取，3.26 是首个采用该条款的稳定版本。 本次更新内容比较多，详情请查看 https://hhvm.com/blog/2018/05/07/hhvm-3.26.html源码下载：https://github.com/facebook/hhvm/releases/tag/HHVM-3.26.0]]></content>
@@ -930,8 +942,8 @@
         <category>python</category>
       </categories>
       <tags>
-        <tag>Mac</tag>
         <tag>python</tag>
+        <tag>Mac</tag>
       </tags>
   </entry>
   <entry>
