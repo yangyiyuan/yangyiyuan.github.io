@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[HHVM 3.26 发布，引入全新 HackC 编译器]]></title>
+    <url>%2F2018%2F05%2F08%2FHHVM-3-26-%E5%8F%91%E5%B8%83%EF%BC%8C%E5%BC%95%E5%85%A5%E5%85%A8%E6%96%B0-HackC-%E7%BC%96%E8%AF%91%E5%99%A8%2F</url>
+    <content type="text"><![CDATA[HipHopVM(HHVM) 是 Facebook 推出的用来执行 PHP 代码的虚拟机，它是一个 PHP 的 JIT(Just-In-Time) 编译器，同时具有产生快速代码和即时编译的优点。 HHVM 3.26 已发布，值得关注的更新有： Hack 编译器 —— HackC typechecker 的重新授权以及相关工具和库采用 MIT 开源协议 对 Ubuntu 18.04 的支持 开发团队表示，在历经一年多的开发后，现已在 3.26 版本中默认启用 HackC 编译器。包括用于 Hack 和 PHP 语言的 full-fidelity parser (FFP) 和 bytecode emitter。FFP 已经支持多种工具，比如通过语言服务器协议, hackfmt 和 hhast 以与 Hack 的 IDE 集成。 此外，HackC 通过了 HHVM 的所有测试 —— 包括 PHP 规范测试，并生成了语义上相同的字节码。 授权方面，Hack 现在可通过 MIT 授权获取，3.26 是首个采用该条款的稳定版本。 本次更新内容比较多，详情请查看 https://hhvm.com/blog/2018/05/07/hhvm-3.26.html源码下载：https://github.com/facebook/hhvm/releases/tag/HHVM-3.26.0]]></content>
+      <categories>
+        <category>PHP</category>
+      </categories>
+      <tags>
+        <tag>PHP</tag>
+        <tag>HHVM</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Yii2 左侧菜单子级无法高亮的问题]]></title>
     <url>%2F2018%2F05%2F04%2FYii2-%E5%B7%A6%E4%BE%A7%E8%8F%9C%E5%8D%95%E5%AD%90%E7%BA%A7%E6%97%A0%E6%B3%95%E9%AB%98%E4%BA%AE%E7%9A%84%E9%97%AE%E9%A2%98%2F</url>
     <content type="text"><![CDATA[前边安装采用了adminLte后台模板和menu配置之后出现了一个问题，就是点击相关controller的create、update、view这些action的时候不能定位到index的模块，左侧的二级菜单导航不能正常的展开定位高亮，下面说一下原因及解决办法。 首先来找一下处理左侧菜单的代码 目录：{project}/backend/views/layouts/left.php 12345678910111213141516171819202122232425262728&lt;?php $callback = function($menu)&#123; $data = json_decode($menu[&apos;data&apos;], true); $items = $menu[&apos;children&apos;]; $return = [ &apos;label&apos; =&gt; $menu[&apos;name&apos;], &apos;url&apos; =&gt; [$menu[&apos;route&apos;]], ]; //处理我们的配置 if ($data) &#123; //visible isset($data[&apos;visible&apos;]) &amp;&amp; $return[&apos;visible&apos;] = $data[&apos;visible&apos;]; //icon isset($data[&apos;icon&apos;]) &amp;&amp; $data[&apos;icon&apos;] &amp;&amp; $return[&apos;icon&apos;] = $data[&apos;icon&apos;]; //other attribute e.g. class... $return[&apos;options&apos;] = $data; &#125; //没配置图标的显示默认图标 (!isset($return[&apos;icon&apos;]) || !$return[&apos;icon&apos;]) &amp;&amp; $return[&apos;icon&apos;] = &apos;fa fa-circle-o&apos;; $items &amp;&amp; $return[&apos;items&apos;] = $items; return $return; &#125;;?&gt;&lt;?= dmstr\widgets\Menu::widget([ &apos;options&apos; =&gt; [&apos;class&apos; =&gt; &apos;sidebar-menu&apos;], &apos;items&apos; =&gt; MenuHelper::getAssignedMenu(Yii::$app-&gt;user-&gt;id,null,$callback),]); ?&gt; 看到这里，我们不妨打开文件dmstr\widgets\Menu看看这里是怎么实现左侧菜单选中这一困扰众多同学的问题。123456789101112131415161718192021222324252627282930protected function isItemActive($item) &#123; if (isset($item[&apos;url&apos;]) &amp;&amp; is_array($item[&apos;url&apos;]) &amp;&amp; isset($item[&apos;url&apos;][0])) &#123; $route = $item[&apos;url&apos;][0]; if ($route[0] !== &apos;/&apos; &amp;&amp; Yii::$app-&gt;controller) &#123; $route = Yii::$app-&gt;controller-&gt;module-&gt;getUniqueId() . &apos;/&apos; . $route; &#125; $arrayRoute = explode(&apos;/&apos;, ltrim($route, &apos;/&apos;)); $arrayThisRoute = explode(&apos;/&apos;, $this-&gt;route); if ($arrayRoute[0] !== $arrayThisRoute[0]) &#123; return false; &#125; if (isset($arrayRoute[1]) &amp;&amp; $arrayRoute[1] !== $arrayThisRoute[1]) &#123; return false; &#125; if (isset($arrayRoute[2]) &amp;&amp; $arrayRoute[2] !== $arrayThisRoute[2]) &#123; return false; &#125; unset($item[&apos;url&apos;][&apos;#&apos;]); if (count($item[&apos;url&apos;]) &gt; 1) &#123; foreach (array_splice($item[&apos;url&apos;], 1) as $name =&gt; $value) &#123; if ($value !== null &amp;&amp; (!isset($this-&gt;params[$name]) || $this-&gt;params[$name] != $value)) &#123; return false; &#125; &#125; &#125; return true; &#125; return false; &#125; 修改代码解决菜单不高亮的问题 目录：看上面的代码，也就是说左侧菜单高亮的情况是当前路由完全等于菜单路由时菜单才进行激活。我们这里只需要稍稍调整下代码，判断控制到controller而非action即可，但是源码文件我们又不能修改，这里我们拷贝{project}/vendor/dmstr/yii2-adminlte-asset/widgets/Menu.php文件到{project}/backend/components/Menu.php，然后按照下面的方法修改isItemActive方法即可 123456789101112131415161718192021222324252627282930313233343536protected function isItemActive($item)&#123; if (isset($item[&quot;url&quot;]) &amp;&amp; is_array($item[&quot;url&quot;]) &amp;&amp; isset($item[&quot;url&quot;][0])) &#123; //...... //改写了路由的规则，是否高亮判断到controller而非action $routeCount = count($arrayRoute); if ($routeCount == 2) &#123; if ($arrayRoute[0] !== $arrayThisRoute[0]) &#123; return false; &#125; &#125; elseif ($routeCount == 3) &#123; if ($arrayRoute[0] !== $arrayThisRoute[0]) &#123; return false; &#125; if (isset($arrayRoute[1]) &amp;&amp; $arrayRoute[1] !== $arrayThisRoute[1]) &#123; return false; &#125; &#125; else &#123; return false; &#125; // if ($arrayRoute[0] !== $arrayThisRoute[0]) &#123; // return false; // &#125; // if (isset($arrayRoute[1]) &amp;&amp; $arrayRoute[1] !== $arrayThisRoute[1]) &#123; // return false; // &#125; // if (isset($arrayRoute[2]) &amp;&amp; $arrayRoute[2] !== $arrayThisRoute[2]) &#123; // return false; // &#125; //...... return true; &#125; return false;&#125; 如此一来，菜单高亮的问题解决了。]]></content>
@@ -918,8 +930,8 @@
         <category>python</category>
       </categories>
       <tags>
-        <tag>python</tag>
         <tag>Mac</tag>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
