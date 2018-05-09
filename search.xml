@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Flutter Beta 3 发布,谷歌的 Mobile UI 框架]]></title>
+    <url>%2F2018%2F05%2F09%2FFlutter-Beta-3-%E5%8F%91%E5%B8%83-%E8%B0%B7%E6%AD%8C%E7%9A%84-Mobile-UI-%E6%A1%86%E6%9E%B6%2F</url>
+    <content type="text"><![CDATA[谷歌的 Flutter 团队宣布推出了 Flutter 的第三个 beta 版本，旨在让开发者在 iOS 和 Android 上创建高质量的原生用户体验。作为一名移动 APP 开发者，如果想要开发面向全平台（包括 iOS 和 Android 等等）的 APP，以往的操作往往比较繁琐。为此去年 Google 推出了响应式框架 Flutter，现在第三个 Beta 版本正式上线，为移动平台开发 APP 提供了更充足的准备。 Flutter 的目标是解决移动中的两个重要问题：其一是实现原生应用的性能和与平台的集成，其二是提供一个多平台，可移植的 UI 工具包来支持高效的应用开发。 Flutter 同时为新手以及有经验的移动开发者所设计，它可以帮助你在更快地开发出精美且成功的应用。同时 Flutter 还兼具以下优点： 利用保持状态的热重载(Hot Reload)、全新的响应式框架、丰富的控件以及集成的开发工具这些特点进行快速开发 通过可组合的控件集合、丰富的动画库以及分层可扩展的架构来实现富有感染力的灵活界面设计 借助可移植的 GPU 加速的渲染引擎以及高性能本地 ARM 代码运行时以达到跨设备跨平台的高质量用户体验 在 Flutter Beta 3 中，开发团队对 Material Design 小部件进行了许多改进，以实现更大的灵活性和定制性。例如： 添加了一个 BottomAppBar 组件 对 Chips 的支持得到了极大的改善和扩展 InputDecorator 现在支持填充/下划线和大纲模式 FloatingActionButton 现在提供了更大的定位灵活性 滑块(Slider) 现在可以定制拇指和值指示器的颜色和形状 此外，已经增加了对 GIF 和 WebP 等格式的动画资源的支持，以准备将最佳的 meme 应用发布到应用商店！ 详情请参考 https://developers.googleblog.com/2018/05/ready-for-production-apps-flutter-beta-3.html https://medium.com/flutter-io/flutter-beta-3-7d88125245dc]]></content>
+      <categories>
+        <category>Flutter</category>
+      </categories>
+      <tags>
+        <tag>Flutter</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Yii2 执行php yii exec()错误]]></title>
     <url>%2F2018%2F05%2F08%2FYii2-%E6%89%A7%E8%A1%8Cphp-yii-exec-%E9%94%99%E8%AF%AF%2F</url>
     <content type="text"><![CDATA[在根目录下运行 php yii，报错 PHP Warning ‘yii\base\ErrorException’ with message ‘exec() has been disabled for security reasons’编辑php.ini文件，查找disable_functions，删除exec，保存。然后重启PHP就可以了。]]></content>
@@ -955,8 +966,8 @@
         <category>python</category>
       </categories>
       <tags>
-        <tag>Mac</tag>
         <tag>python</tag>
+        <tag>Mac</tag>
       </tags>
   </entry>
   <entry>
