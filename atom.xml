@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.iooeo.com/"/>
-  <updated>2018-05-09T02:08:31.918Z</updated>
+  <updated>2018-05-17T01:35:09.809Z</updated>
   <id>http://www.iooeo.com/</id>
   
   <author>
@@ -14,6 +14,50 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CakePHP 3.6.3 发布，bug 修复版本，PHP 开发框架</title>
+    <link href="http://www.iooeo.com/2018/05/17/CakePHP-3-6-3-%E5%8F%91%E5%B8%83%EF%BC%8Cbug-%E4%BF%AE%E5%A4%8D%E7%89%88%E6%9C%AC%EF%BC%8CPHP-%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6/"/>
+    <id>http://www.iooeo.com/2018/05/17/CakePHP-3-6-3-发布，bug-修复版本，PHP-开发框架/</id>
+    <published>2018-05-17T01:32:52.000Z</published>
+    <updated>2018-05-17T01:35:09.809Z</updated>
+    
+    <content type="html"><![CDATA[<p>PHP 开发框架 CakePHP 3.6.3 发布，这是 3.6 版本分支的维护版本，修复了几个社区报告的问题。<br><a id="more"></a><br>更新内容：</p>
+<ul>
+<li>Improved deprecation messages in ServerRequest, Response and  ViewBuilder.</li>
+<li>Improved API documentation.</li>
+<li>h() no longer modifies non-string scalar values.</li>
+<li>Passing a string as the 2nd parameter to h() is now deprecated.</li>
+<li>The Model.afterSaveCommit event is now fired for entities created via  findOrCreate()</li>
+<li>The console environment now uses the Application class to load routes.   This fixes ensures routes are loaded for class based applications.</li>
+<li>Fixed missing attribute emulation for ServerRequest::$here.</li>
+<li>Security::rijndael() now emits deprecation warnings.</li>
+<li>Automatic identifier quoting can now handle column names with spaces better.</li>
+<li>Corrected a parsing mistake with string route targets.</li>
+<li>Integration test cases now set $_SERVER[‘PHP_SELF’] to / solving   cryptic base path issues if more than one action was called per test method.</li>
+</ul>
+<p>下载地址：</p>
+<ul>
+<li><a href="https://github.com/cakephp/cakephp/releases/download/3.6.3/cakephp-3-6-3.zip" target="_blank" rel="noopener">cakephp-3-6-3.zip</a></li>
+<li><a href="https://github.com/cakephp/cakephp/archive/3.6.3.zip" target="_blank" rel="noopener">Source code (zip)</a></li>
+<li><a href="https://github.com/cakephp/cakephp/archive/3.6.3.tar.gz" target="_blank" rel="noopener">Source code (tar.gz)</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;PHP 开发框架 CakePHP 3.6.3 发布，这是 3.6 版本分支的维护版本，修复了几个社区报告的问题。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
+    
+    
+      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
+    
+      <category term="CakePHP" scheme="http://www.iooeo.com/tags/CakePHP/"/>
+    
+  </entry>
   
   <entry>
     <title>Flutter Beta 3 发布,谷歌的 Mobile UI 框架</title>
@@ -1809,45 +1853,6 @@
     
     
       <category term="Nginx" scheme="http://www.iooeo.com/tags/Nginx/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CakePHP 3.6.0-RC2 发布，PHP 开发框架</title>
-    <link href="http://www.iooeo.com/2018/04/04/CakePHP-3-6-0-RC2-%E5%8F%91%E5%B8%83%EF%BC%8CPHP-%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6/"/>
-    <id>http://www.iooeo.com/2018/04/04/CakePHP-3-6-0-RC2-发布，PHP-开发框架/</id>
-    <published>2018-04-04T01:24:54.000Z</published>
-    <updated>2018-04-04T01:27:24.661Z</updated>
-    
-    <content type="html"><![CDATA[<p>PHP 快速开发框架 CakePHP 3.6.0-RC2 发布，这是3.6.0版本的候选版本，如果在接下来的几周内没有发现重大问题，那么它将成为稳定版本。<br><a id="more"></a></p>
-<h2 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h2><ul>
-<li><a href="https://github.com/cakephp/cakephp/releases/download/3.6.0-RC2/cakephp-3-6-0-RC2.zip" target="_blank" rel="noopener">cakephp-3-6-0-RC2.zip</a></li>
-<li><a href="https://github.com/cakephp/cakephp/archive/3.6.0-RC2.zip" target="_blank" rel="noopener">Source code (zip)</a></li>
-<li><a href="https://github.com/cakephp/cakephp/archive/3.6.0-RC2.tar.gz" target="_blank" rel="noopener">Source code (tar.gz)</a></li>
-</ul>
-<h2 id="更新："><a href="#更新：" class="headerlink" title="更新："></a>更新：</h2><ul>
-<li>增加 Cake \ Database \ Type \ DateTimeType ::setTimezone（），可以在插入数据库之前启用值的自动时区转换。</li>
-<li>增强对 Cake\Filesystem\File 中 UTF8 文件名的支持。</li>
-<li>添加 BodyParserMiddleware，用中间件替换 RequestHandlerComponent 的内容类型分析功能。</li>
-<li>新增 Collection::append(), prepend(), appendItem(), prependItem()。</li>
-<li>每次更改排序字段时，PaginatorHelper 都会将页面参数重置为1。</li>
-<li>Event 不再为子类中定义的属性引发错误。</li>
-</ul>
-<p>详情见<a href="https://github.com/cakephp/cakephp/releases/tag/3.6.0-RC2" target="_blank" rel="noopener">发布公告</a>。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;PHP 快速开发框架 CakePHP 3.6.0-RC2 发布，这是3.6.0版本的候选版本，如果在接下来的几周内没有发现重大问题，那么它将成为稳定版本。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
-    
-    
-      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
-    
-      <category term="CakePHP" scheme="http://www.iooeo.com/tags/CakePHP/"/>
     
   </entry>
   
