@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[ThinkPHP 5.1.14 发布，增加路由缓存，提升速度]]></title>
+    <url>%2F2018%2F05%2F18%2FThinkPHP-5-1-14-%E5%8F%91%E5%B8%83%EF%BC%8C%E5%A2%9E%E5%8A%A0%E8%B7%AF%E7%94%B1%E7%BC%93%E5%AD%98%EF%BC%8C%E6%8F%90%E5%8D%87%E9%80%9F%E5%BA%A6%2F</url>
+    <content type="text"><![CDATA[ThinkPHP V5.1.14 发布，此版本主要对底层容器进行了一些优化改进，并增加了路由缓存功能，可以进一步提升路由性能。支持上一个版本的无缝更新！如果 composer 更新不了，可以尝试remove topthink/think-testing扩展后再次更新。 更新日志 依赖注入的对象参数传入改进 改进核心类的容器实例化 改进日期字段的读取 改进验证类的getScene方法 模型的create方法和save方法支持replace操作 改进Db类的调用机制 App类调整为容器类 改进容器默认绑定 Loader类增加工厂类的实例化方法 增加路由变量默认规则配置参数 增加路由缓存设计 错误处理机制改进 增加清空路由缓存指令 官方完全开发手册内容已经同步更新]]></content>
+      <categories>
+        <category>PHP</category>
+        <category>ThinkPHP</category>
+      </categories>
+      <tags>
+        <tag>PHP</tag>
+        <tag>ThinkPHP</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[CakePHP 3.6.3 发布，bug 修复版本，PHP 开发框架]]></title>
     <url>%2F2018%2F05%2F17%2FCakePHP-3-6-3-%E5%8F%91%E5%B8%83%EF%BC%8Cbug-%E4%BF%AE%E5%A4%8D%E7%89%88%E6%9C%AC%EF%BC%8CPHP-%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6%2F</url>
     <content type="text"><![CDATA[PHP 开发框架 CakePHP 3.6.3 发布，这是 3.6 版本分支的维护版本，修复了几个社区报告的问题。更新内容： Improved deprecation messages in ServerRequest, Response and ViewBuilder. Improved API documentation. h() no longer modifies non-string scalar values. Passing a string as the 2nd parameter to h() is now deprecated. The Model.afterSaveCommit event is now fired for entities created via findOrCreate() The console environment now uses the Application class to load routes. This fixes ensures routes are loaded for class based applications. Fixed missing attribute emulation for ServerRequest::$here. Security::rijndael() now emits deprecation warnings. Automatic identifier quoting can now handle column names with spaces better. Corrected a parsing mistake with string route targets. Integration test cases now set $_SERVER[‘PHP_SELF’] to / solving cryptic base path issues if more than one action was called per test method. 下载地址： cakephp-3-6-3.zip Source code (zip) Source code (tar.gz)]]></content>

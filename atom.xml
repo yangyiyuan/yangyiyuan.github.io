@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.iooeo.com/"/>
-  <updated>2018-05-17T01:35:09.809Z</updated>
+  <updated>2018-05-18T08:09:54.841Z</updated>
   <id>http://www.iooeo.com/</id>
   
   <author>
@@ -14,6 +14,50 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ThinkPHP 5.1.14 发布，增加路由缓存，提升速度</title>
+    <link href="http://www.iooeo.com/2018/05/18/ThinkPHP-5-1-14-%E5%8F%91%E5%B8%83%EF%BC%8C%E5%A2%9E%E5%8A%A0%E8%B7%AF%E7%94%B1%E7%BC%93%E5%AD%98%EF%BC%8C%E6%8F%90%E5%8D%87%E9%80%9F%E5%BA%A6/"/>
+    <id>http://www.iooeo.com/2018/05/18/ThinkPHP-5-1-14-发布，增加路由缓存，提升速度/</id>
+    <published>2018-05-18T08:06:40.000Z</published>
+    <updated>2018-05-18T08:09:54.841Z</updated>
+    
+    <content type="html"><![CDATA[<p>ThinkPHP V5.1.14 发布，此版本主要对底层容器进行了一些优化改进，并增加了路由缓存功能，可以进一步提升路由性能。支持上一个版本的无缝更新！<br><a id="more"></a><br>如果 composer 更新不了，可以尝试remove topthink/think-testing扩展后再次更新。</p>
+<p>更新日志</p>
+<ul>
+<li>依赖注入的对象参数传入改进</li>
+<li>改进核心类的容器实例化</li>
+<li>改进日期字段的读取</li>
+<li>改进验证类的<code>getScene</code>方法</li>
+<li>模型的<code>create</code>方法和<code>save</code>方法支持<code>replace</code>操作</li>
+<li>改进<code>Db</code>类的调用机制</li>
+<li>App类调整为容器类</li>
+<li>改进容器默认绑定</li>
+<li><code>Loader</code>类增加工厂类的实例化方法</li>
+<li>增加路由变量默认规则配置参数</li>
+<li>增加路由缓存设计</li>
+<li>错误处理机制改进</li>
+<li>增加清空路由缓存指令</li>
+</ul>
+<p>官方<a href="https://www.kancloud.cn/manual/thinkphp5_1/content" target="_blank" rel="noopener">完全开发手册</a>内容已经同步更新</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;ThinkPHP V5.1.14 发布，此版本主要对底层容器进行了一些优化改进，并增加了路由缓存功能，可以进一步提升路由性能。支持上一个版本的无缝更新！&lt;br&gt;
+    
+    </summary>
+    
+      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
+    
+      <category term="ThinkPHP" scheme="http://www.iooeo.com/categories/PHP/ThinkPHP/"/>
+    
+    
+      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
+    
+      <category term="ThinkPHP" scheme="http://www.iooeo.com/tags/ThinkPHP/"/>
+    
+  </entry>
   
   <entry>
     <title>CakePHP 3.6.3 发布，bug 修复版本，PHP 开发框架</title>
@@ -1823,36 +1867,6 @@
       <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
     
       <category term="Symfony" scheme="http://www.iooeo.com/tags/Symfony/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Nginx 主线版 1.13.11 发布，Bug 修复版本</title>
-    <link href="http://www.iooeo.com/2018/04/04/Nginx-%E4%B8%BB%E7%BA%BF%E7%89%88-1-13-11-%E5%8F%91%E5%B8%83%EF%BC%8CBug-%E4%BF%AE%E5%A4%8D%E7%89%88%E6%9C%AC/"/>
-    <id>http://www.iooeo.com/2018/04/04/Nginx-主线版-1-13-11-发布，Bug-修复版本/</id>
-    <published>2018-04-04T02:14:16.000Z</published>
-    <updated>2018-04-04T02:19:34.272Z</updated>
-    
-    <content type="html"><![CDATA[<p>Nginx 主线版 1.13.11 已发布，该版本增加了一项新特性，以及修复了两个 bug。<br><a id="more"></a></p>
-<ul>
-<li>新特性：”listen”指令的”proxy_protocol”参数现已支持 PROXY 协议版本 2</li>
-<li>Bugfix: nginx 在 Linux 上不能静态使用 OpenSSL 1.1.1 进行构建</li>
-<li>Bugfix: in the “http_404”, “http_500”, etc. parameters of the “proxy_next_upstream” directive.</li>
-</ul>
-<p>而上个版本 <a href="https://www.oschina.net/news/94501/nginx-1-13-10-released" target="_blank" rel="noopener">Nginx 主线版 1.13.10</a> 主要是新增 ngx_http_grpc_module。</p>
-<p>下载地址：<a href="http://nginx.org/en/download.html" target="_blank" rel="noopener">http://nginx.org/en/download.html</a><br>更新说明：<a href="http://nginx.org/en/CHANGES" target="_blank" rel="noopener">http://nginx.org/en/CHANGES</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Nginx 主线版 1.13.11 已发布，该版本增加了一项新特性，以及修复了两个 bug。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="Nginx" scheme="http://www.iooeo.com/categories/Nginx/"/>
-    
-    
-      <category term="Nginx" scheme="http://www.iooeo.com/tags/Nginx/"/>
     
   </entry>
   
