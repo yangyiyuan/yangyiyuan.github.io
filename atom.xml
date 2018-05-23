@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.iooeo.com/"/>
-  <updated>2018-05-18T08:09:54.841Z</updated>
+  <updated>2018-05-23T05:59:52.100Z</updated>
   <id>http://www.iooeo.com/</id>
   
   <author>
@@ -14,6 +14,55 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PHP 7.2.6 正式发布，多项内容修复</title>
+    <link href="http://www.iooeo.com/2018/05/23/PHP-7-2-6-%E6%AD%A3%E5%BC%8F%E5%8F%91%E5%B8%83%EF%BC%8C%E5%A4%9A%E9%A1%B9%E5%86%85%E5%AE%B9%E4%BF%AE%E5%A4%8D/"/>
+    <id>http://www.iooeo.com/2018/05/23/PHP-7-2-6-正式发布，多项内容修复/</id>
+    <published>2018-05-23T05:56:51.000Z</published>
+    <updated>2018-05-23T05:59:52.100Z</updated>
+    
+    <content type="html"><![CDATA[<p>PHP 7.2.6正式发布了。PHP（PHP：Hypertext Preprocessor）是一种在电脑上执行的脚本语言，主要是用途在于处理动态网页，也包含了命令列执行接口（command line interface），或者产生图形使用者接口（GUI）程式。<br><a id="more"></a><br>版本主要还是修复 bug，改进日志如下：<br>PHP 7.2.6<br>EXIF:</p>
+<ul>
+<li>Fixed bug #76164 (exif_read_data zend_mm_heap corrupted). (cmb)</li>
+</ul>
+<p>FPM:</p>
+<ul>
+<li>Fixed bug #76075 –with-fpm-acl wrongly tries to find libacl on FreeBSD.<br>  (mgorny)</li>
+</ul>
+<p>intl:</p>
+<ul>
+<li>Fixed bug #74385 (Locale::parseLocale() broken with some arguments).<br>  (Anatol)</li>
+</ul>
+<p>Opcache:</p>
+<ul>
+<li>Fixed bug #76205 (PHP-FPM sporadic crash when running Infinitewp). (Dmitry)</li>
+<li>Fixed bug #76275 (Assertion failure in file cache when unserializing empty<br>  try_catch_array). (Nikita)</li>
+<li>Fixed bug #76281 (Opcache causes incorrect “undefined variable” errors).<br>  (Nikita)</li>
+</ul>
+<p>Reflection:</p>
+<ul>
+<li>Fixed arginfo of array_replace(_recursive) and array_merge(_recursive).<br>  (carusogabriel)</li>
+</ul>
+<p>Session:</p>
+<ul>
+<li>Fixed bug #74892 (Url Rewriting (trans_sid) not working on urls that start<br>  with “#”). (Andrew Nester)</li>
+</ul>
+<p>下载链接：<br><a href="http://php.net/distributions/php-7.2.6.tar.gz" target="_blank" rel="noopener">http://php.net/distributions/php-7.2.6.tar.gz</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;PHP 7.2.6正式发布了。PHP（PHP：Hypertext Preprocessor）是一种在电脑上执行的脚本语言，主要是用途在于处理动态网页，也包含了命令列执行接口（command line interface），或者产生图形使用者接口（GUI）程式。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
+    
+    
+      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
+    
+  </entry>
   
   <entry>
     <title>ThinkPHP 5.1.14 发布，增加路由缓存，提升速度</title>
@@ -1815,58 +1864,6 @@
       <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
     
       <category term="WordPress" scheme="http://www.iooeo.com/tags/WordPress/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Symfony 3.4.8 与 4.0.8 发布，bug 修复</title>
-    <link href="http://www.iooeo.com/2018/04/08/Symfony-3-4-8-%E4%B8%8E-4-0-8-%E5%8F%91%E5%B8%83%EF%BC%8Cbug-%E4%BF%AE%E5%A4%8D/"/>
-    <id>http://www.iooeo.com/2018/04/08/Symfony-3-4-8-与-4-0-8-发布，bug-修复/</id>
-    <published>2018-04-08T01:59:12.000Z</published>
-    <updated>2018-04-08T02:13:01.270Z</updated>
-    
-    <content type="html"><![CDATA[<p>Symfony 3.4.8 与 4.0.8 发布了。Symfony 是一款基于 MVC 架构的 PHP 框架。Symfony 致力于减少重复代码的编写，以加速 Web 应用的开发和维护。Symfony 与许多关系型数据库集成的也非常好，成本也较小。<br><a id="more"></a><br>此外，Symfony 致力于在企业背景下创建健壮的应用，同时也给予了开发者强大的配置功能：从文件结构到外部目录，几乎所有的东西都可以自定义。Symfony 也捆绑了一些诸如测试、调试、文档生成等额外的工具来满足企业的开发过程。</p>
-<p><strong>更新内容及下载地址</strong></p>
-<h2 id="v4-0-8"><a href="#v4-0-8" class="headerlink" title="v4.0.8"></a>v4.0.8</h2><h3 id="更新内容"><a href="#更新内容" class="headerlink" title="更新内容"></a>更新内容</h3><ul>
-<li>bug <a href="https://github.com/symfony/symfony/pull/26802" target="_blank" rel="noopener">#26802</a> [Security] register custom providers on ExpressionLanguage directly (<a href="https://github.com/dmaicher" target="_blank" rel="noopener">@dmaicher</a>)</li>
-<li>bug <a href="https://github.com/symfony/symfony/pull/26794" target="_blank" rel="noopener">#26794</a> [PhpUnitBridge] Catch deprecation error handler (<a href="https://github.com/cvilleger" target="_blank" rel="noopener">@cvilleger</a>)</li>
-<li>bug <a href="https://github.com/symfony/symfony/pull/26788" target="_blank" rel="noopener">#26788</a> [Security] Load the user before pre/post auth checks when needed (<a href="https://github.com/chalasr" target="_blank" rel="noopener">@chalasr</a>)</li>
-<li>bug <a href="https://github.com/symfony/symfony/pull/26792" target="_blank" rel="noopener">#26792</a> [Routing] Fix throwing NoConfigurationException instead of 405 (<a href="https://github.com/nicolas-grekas" target="_blank" rel="noopener">@nicolas-grekas</a>)</li>
-<li>bug <a href="https://github.com/symfony/symfony/pull/26774" target="_blank" rel="noopener">#26774</a> [SecurityBundle] Add missing argument to security.authentication.provider.simple (<a href="https://github.com/i3or1s" target="_blank" rel="noopener">@i3or1s</a>, <a href="https://github.com/chalasr" target="_blank" rel="noopener">@chalasr</a>)</li>
-<li>bug <a href="https://github.com/symfony/symfony/pull/26763" target="_blank" rel="noopener">#26763</a> [Finder] Remove duplicate slashes in filenames (<a href="https://github.com/helhum" target="_blank" rel="noopener">@helhum</a>)</li>
-<li>bug <a href="https://github.com/symfony/symfony/pull/26758" target="_blank" rel="noopener">#26758</a> [WebProfilerBundle][HttpKernel] Make FileLinkFormatter URL format generation lazy (<a href="https://github.com/nicolas-grekas" target="_blank" rel="noopener">@nicolas-grekas</a>)</li>
-</ul>
-<h3 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h3><ul>
-<li><a href="https://github.com/symfony/symfony/archive/v4.0.8.zip" target="_blank" rel="noopener">Source code (zip)</a></li>
-<li><a href="https://github.com/symfony/symfony/archive/v4.0.8.tar.gz" target="_blank" rel="noopener">Source code (tar.gz)</a></li>
-</ul>
-<h2 id="v3-4-8"><a href="#v3-4-8" class="headerlink" title="v3.4.8"></a>v3.4.8</h2><h3 id="更新内容-1"><a href="#更新内容-1" class="headerlink" title="更新内容"></a>更新内容</h3><ul>
-<li>bug <a href="https://github.com/symfony/symfony/pull/26802" target="_blank" rel="noopener">#26802</a> [Security] register custom providers on ExpressionLanguage directly (<a href="https://github.com/dmaicher" target="_blank" rel="noopener">@dmaicher</a>)</li>
-<li>bug <a href="https://github.com/symfony/symfony/pull/26794" target="_blank" rel="noopener">#26794</a> [PhpUnitBridge] Catch deprecation error handler (<a href="https://github.com/cvilleger" target="_blank" rel="noopener">@cvilleger</a>)</li>
-<li>bug <a href="https://github.com/symfony/symfony/pull/26788" target="_blank" rel="noopener">#26788</a> [Security] Load the user before pre/post auth checks when needed (<a href="https://github.com/chalasr" target="_blank" rel="noopener">@chalasr</a>)</li>
-<li>bug <a href="https://github.com/symfony/symfony/pull/26792" target="_blank" rel="noopener">#26792</a> [Routing] Fix throwing NoConfigurationException instead of 405 (<a href="https://github.com/nicolas-grekas" target="_blank" rel="noopener">@nicolas-grekas</a>)</li>
-<li>bug <a href="https://github.com/symfony/symfony/pull/26774" target="_blank" rel="noopener">#26774</a> [SecurityBundle] Add missing argument to security.authentication.provider.simple (<a href="https://github.com/i3or1s" target="_blank" rel="noopener">@i3or1s</a>, <a href="https://github.com/chalasr" target="_blank" rel="noopener">@chalasr</a>)</li>
-<li>bug <a href="https://github.com/symfony/symfony/pull/26763" target="_blank" rel="noopener">#26763</a> [Finder] Remove duplicate slashes in filenames (<a href="https://github.com/helhum" target="_blank" rel="noopener">@helhum</a>)</li>
-<li>bug <a href="https://github.com/symfony/symfony/pull/26758" target="_blank" rel="noopener">#26758</a> [WebProfilerBundle][HttpKernel] Make FileLinkFormatter URL format generation lazy (<a href="https://github.com/nicolas-grekas" target="_blank" rel="noopener">@nicolas-grekas</a>)</li>
-</ul>
-<h3 id="下载地址-1"><a href="#下载地址-1" class="headerlink" title="下载地址"></a>下载地址</h3><ul>
-<li><a href="https://github.com/symfony/symfony/archive/v3.4.8.zip" target="_blank" rel="noopener">Source code (zip)</a></li>
-<li><a href="https://github.com/symfony/symfony/archive/v3.4.8.tar.gz" target="_blank" rel="noopener">Source code (tar.gz)</a></li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Symfony 3.4.8 与 4.0.8 发布了。Symfony 是一款基于 MVC 架构的 PHP 框架。Symfony 致力于减少重复代码的编写，以加速 Web 应用的开发和维护。Symfony 与许多关系型数据库集成的也非常好，成本也较小。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
-    
-    
-      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
-    
-      <category term="Symfony" scheme="http://www.iooeo.com/tags/Symfony/"/>
     
   </entry>
   
