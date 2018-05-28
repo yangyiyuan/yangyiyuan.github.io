@@ -1,6 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Symfony 4.0.11 发布，PHP 框架与可重用 PHP 组件集]]></title>
+    <url>%2F2018%2F05%2F28%2FSymfony-4-0-11-%E5%8F%91%E5%B8%83%EF%BC%8CPHP-%E6%A1%86%E6%9E%B6%E4%B8%8E%E5%8F%AF%E9%87%8D%E7%94%A8-PHP-%E7%BB%84%E4%BB%B6%E9%9B%86%2F</url>
+    <content type="text"><![CDATA[Symfony 是一个用于 Web 应用程序的 PHP 框架和一组可重用的 PHP 组件，目前成千上万的 Web 应用程序（包括 BlaBlaCar.com 和 Spotify.com）以及大多数流行的 PHP 项目（包括 Drupal 和 Magento）都在使用 Symfony。Symfony 4.0.11 发布了，这是一个安全更新版本，主要更新内容如下： bug #27364 [DI] 修复对非共享服务的未初始化引用的不良异常 bug #27359 [HttpFoundation] 修复 MimeTypeGuesser 初始化期间的 perf 问题 security #cve-2018-11408 [SecurityBundle] 如果无法配置 security.http_utils 则 fail security #cve-2018-11406 当用户注销时清除 CSRF Token security #cve-2018-11385 为 UsernamePasswordJsonAuthenticationListener 迁移会话 security #cve-2018-11385 将会话身份验证策略添加到 Guard 以避免会话固定 security #cve-2018-11385 将会话策略添加到所有听众以避免任何可能的会话固定 security #cve-2018-11386 [HttpFoundation] 当 MySQL 处于 loose 模式时，打破 PdoSessionHandler 中的无限循环 bug #27341 [WebProfilerBundle] 修正了验证器/转储跟踪CSS bug #27337 [FrameworkBundle] 修复了 CacheClearCommand 中的错字 详情见发布公告。下载地址： Source code (zip) Source code (tar.gz)]]></content>
+      <categories>
+        <category>PHP</category>
+      </categories>
+      <tags>
+        <tag>PHP</tag>
+        <tag>Symfony</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[HHVM 3.26.3 发布，修复 bug 并改进对 IDE 的支持]]></title>
+    <url>%2F2018%2F05%2F28%2FHHVM-3-26-3-%E5%8F%91%E5%B8%83%EF%BC%8C%E4%BF%AE%E5%A4%8D-bug-%E5%B9%B6%E6%94%B9%E8%BF%9B%E5%AF%B9-IDE-%E7%9A%84%E6%94%AF%E6%8C%81%2F</url>
+    <content type="text"><![CDATA[HHVM（HipHopVM） 3.26.3 发布了，HHVM 是 Facebook 推出的用来执行 PHP 代码的虚拟机，它是一个 PHP 的 JIT(Just-In-Time) 编译器，同时具有产生快速代码和即时编译的优点。此次更新版本包含几个 bug 修复以及对 IDE 支持的改进： CVE-2018-6337：在 fork 上清除 folly :: secureRandom(random_bytes()和random_int()) 缓存 HackC: 将范围较小的括号表达式解析为转换 HackC: 修复与特殊的 Hack 类同名的 PHP 类 LSP: IDE 代码格式化功能使用 hackfmt 而不是 hh_format LSP: 格式化代码时，遵守 IDE 提供的缩进宽度和制表符或空格首选项 LSP: 修复了 VSCode 中即用型格式的支持 LSP: 在类自动完成中使用语句应该只提示特征 改进不支持 yield 和 await 魔术功能的检测、处理和错误，提高了 PHP 兼容性 向 .hhconfig 添加 extra_paths= 选项以在项目根目录外包含依赖项。这是实验性特性，可能随时会移除 详情见发布公告。下载地址： Source code (zip) Source code (tar.gz)]]></content>
+      <categories>
+        <category>PHP</category>
+      </categories>
+      <tags>
+        <tag>PHP</tag>
+        <tag>HHVM</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Symfony 2.7.48 发布，PHP 框架与可重用 PHP 组件集]]></title>
+    <url>%2F2018%2F05%2F28%2FSymfony-2-7-48-%E5%8F%91%E5%B8%83%EF%BC%8CPHP-%E6%A1%86%E6%9E%B6%E4%B8%8E%E5%8F%AF%E9%87%8D%E7%94%A8-PHP-%E7%BB%84%E4%BB%B6%E9%9B%86%2F</url>
+    <content type="text"><![CDATA[Symfony 2.7.48 发布了，此版本是安全更新版本，更新内容如下： bug #27359 [HttpFoundation] 修复 MimeTypeGuesser 初始化期间的 perf 问题(@nicolas-grekas) security #cve-2018-11408 [SecurityBundle] 如果无法配置 security.http_utils 则 fail security #cve-2018-11406 当用户注销时清除 CSRF Token security #cve-2018-11385 将会话策略添加到所有听众以避免任何可能的会话固定 security #cve-2018-11386 [HttpFoundation] 当 MySQL 处于 loose 模式时，打破 PdoSessionHandler 中的无限循环 详情见发布公告。 下载地址： Source code (zip) Source code (tar.gz)]]></content>
+      <categories>
+        <category>PHP</category>
+      </categories>
+      <tags>
+        <tag>PHP</tag>
+        <tag>Symfony</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[PHP 7.2.6 正式发布，多项内容修复]]></title>
     <url>%2F2018%2F05%2F23%2FPHP-7-2-6-%E6%AD%A3%E5%BC%8F%E5%8F%91%E5%B8%83%EF%BC%8C%E5%A4%9A%E9%A1%B9%E5%86%85%E5%AE%B9%E4%BF%AE%E5%A4%8D%2F</url>
     <content type="text"><![CDATA[PHP 7.2.6正式发布了。PHP（PHP：Hypertext Preprocessor）是一种在电脑上执行的脚本语言，主要是用途在于处理动态网页，也包含了命令列执行接口（command line interface），或者产生图形使用者接口（GUI）程式。版本主要还是修复 bug，改进日志如下：PHP 7.2.6EXIF: Fixed bug #76164 (exif_read_data zend_mm_heap corrupted). (cmb) FPM: Fixed bug #76075 –with-fpm-acl wrongly tries to find libacl on FreeBSD. (mgorny) intl: Fixed bug #74385 (Locale::parseLocale() broken with some arguments). (Anatol) Opcache: Fixed bug #76205 (PHP-FPM sporadic crash when running Infinitewp). (Dmitry) Fixed bug #76275 (Assertion failure in file cache when unserializing empty try_catch_array). (Nikita) Fixed bug #76281 (Opcache causes incorrect “undefined variable” errors). (Nikita) Reflection: Fixed arginfo of array_replace(_recursive) and array_merge(_recursive). (carusogabriel) Session: Fixed bug #74892 (Url Rewriting (trans_sid) not working on urls that start with “#”). (Andrew Nester) 下载链接：http://php.net/distributions/php-7.2.6.tar.gz]]></content>
