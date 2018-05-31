@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.iooeo.com/"/>
-  <updated>2018-05-30T01:13:16.946Z</updated>
+  <updated>2018-05-31T01:25:10.587Z</updated>
   <id>http://www.iooeo.com/</id>
   
   <author>
@@ -14,6 +14,43 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Symfony 4.1.0 发布，PHP 框架与可重用 PHP 组件集</title>
+    <link href="http://www.iooeo.com/2018/05/31/Symfony-4-1-0-%E5%8F%91%E5%B8%83%EF%BC%8CPHP-%E6%A1%86%E6%9E%B6%E4%B8%8E%E5%8F%AF%E9%87%8D%E7%94%A8-PHP-%E7%BB%84%E4%BB%B6%E9%9B%86/"/>
+    <id>http://www.iooeo.com/2018/05/31/Symfony-4-1-0-发布，PHP-框架与可重用-PHP-组件集/</id>
+    <published>2018-05-31T01:23:30.000Z</published>
+    <updated>2018-05-31T01:25:10.587Z</updated>
+    
+    <content type="html"><![CDATA[<p>Symfony 4.1.0 发布了，此次更新修复了两个 bug：</p>
+<ul>
+<li>bug #27420 还原“feature #26702 标记 ExceptionInterfaces 可抛出 (ostrolucky)” (@nicolas-grekas)</li>
+<li>bug #27415 在 AbstractController 中插入正确的 parameter_bag 服务 (@curry684)</li>
+</ul>
+<p>详情见<a href="https://github.com/symfony/symfony/releases/tag/v4.1.0" target="_blank" rel="noopener">发布公告</a>。</p>
+<p>下载地址：</p>
+<ul>
+<li><a href="https://github.com/symfony/symfony/archive/v4.1.0.zip" target="_blank" rel="noopener">Source code (zip)</a></li>
+<li><a href="https://github.com/symfony/symfony/archive/v4.1.0.tar.gz" target="_blank" rel="noopener">Source code (tar.gz)</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Symfony 4.1.0 发布了，此次更新修复了两个 bug：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;bug #27420 还原“feature #26702 标记 ExceptionInterfaces 可抛出 (ostrolucky)” (@nicolas-grekas)&lt;/li
+    
+    </summary>
+    
+      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
+    
+    
+      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
+    
+      <category term="Symfony" scheme="http://www.iooeo.com/tags/Symfony/"/>
+    
+  </entry>
   
   <entry>
     <title>Phalcon 3.4.0 发布，PHP 的 C 扩展 Web 框架</title>
@@ -782,50 +819,6 @@
       <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
     
       <category term="ThinkPHP" scheme="http://www.iooeo.com/tags/ThinkPHP/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Laravel 5.6.16发布,PHP Web 开发框架</title>
-    <link href="http://www.iooeo.com/2018/04/11/Laravel-5-6-16%E5%8F%91%E5%B8%83-PHP-Web-%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6/"/>
-    <id>http://www.iooeo.com/2018/04/11/Laravel-5-6-16发布-PHP-Web-开发框架/</id>
-    <published>2018-04-11T02:52:59.000Z</published>
-    <updated>2018-04-11T02:57:19.556Z</updated>
-    
-    <content type="html"><![CDATA[<p>Laravel 是一套简洁、优雅的 PHP Web 开发框架(PHP Web Framework)。它可以让你从面条一样杂乱的代码中解脱出来；它可以帮你构建一个完美的网络APP，而且每行代码都可以简洁、富于表达力。<br><a id="more"></a><br><strong>Laravel 5.6.16 发布，新增了几项功能，修复了一个 bug。</strong></p>
-<h3 id="Added"><a href="#Added" class="headerlink" title="Added"></a>Added</h3><ul>
-<li>支持使用类名执行 artisan 命令 (<a href="https://github.com/laravel/framework/pull/23764" target="_blank" rel="noopener">#23764</a>)</li>
-<li>可宏定义 View (<a href="https://github.com/laravel/framework/pull/23787" target="_blank" rel="noopener">#23787</a>)</li>
-<li>新增数据库 Connection :: unsetEventDispatcher（）方法 (<a href="https://github.com/laravel/framework/pull/23832" target="_blank" rel="noopener">#23832</a>)</li>
-<li>支持与 SES 一起使用的 IAM 会话 Token (<a href="https://github.com/laravel/framework/pull/23766" target="_blank" rel="noopener">#23766</a>)</li>
-</ul>
-<h3 id="Changed"><a href="#Changed" class="headerlink" title="Changed"></a>Changed</h3><ul>
-<li>为 required_unless 规则添加了可视化值(<a href="https://github.com/laravel/framework/pull/23833" target="_blank" rel="noopener">#23833</a>)</li>
-</ul>
-<h3 id="Fixed"><a href="#Fixed" class="headerlink" title="Fixed"></a>Fixed</h3><ul>
-<li>修复了使用 PhpRedis 时的 RedisQueue :: blockingPop（）检查 (<a href="https://github.com/laravel/framework/pull/23757" target="_blank" rel="noopener">#23757</a>)</li>
-</ul>
-<h3 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h3><ul>
-<li><a href="https://github.com/laravel/framework/archive/v5.6.16.zip" target="_blank" rel="noopener">Source code (zip)</a></li>
-<li><a href="https://github.com/laravel/framework/archive/v5.6.16.tar.gz" target="_blank" rel="noopener">Source code (tar.gz)</a></li>
-</ul>
-<p>详情见<a href="https://github.com/laravel/framework/releases/tag/v5.6.16" target="_blank" rel="noopener">发布公告</a>。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Laravel 是一套简洁、优雅的 PHP Web 开发框架(PHP Web Framework)。它可以让你从面条一样杂乱的代码中解脱出来；它可以帮你构建一个完美的网络APP，而且每行代码都可以简洁、富于表达力。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
-    
-      <category term="Laravel" scheme="http://www.iooeo.com/categories/PHP/Laravel/"/>
-    
-    
-      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
-    
-      <category term="Laravel" scheme="http://www.iooeo.com/tags/Laravel/"/>
     
   </entry>
   

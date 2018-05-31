@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Symfony 4.1.0 发布，PHP 框架与可重用 PHP 组件集]]></title>
+    <url>%2F2018%2F05%2F31%2FSymfony-4-1-0-%E5%8F%91%E5%B8%83%EF%BC%8CPHP-%E6%A1%86%E6%9E%B6%E4%B8%8E%E5%8F%AF%E9%87%8D%E7%94%A8-PHP-%E7%BB%84%E4%BB%B6%E9%9B%86%2F</url>
+    <content type="text"><![CDATA[Symfony 4.1.0 发布了，此次更新修复了两个 bug： bug #27420 还原“feature #26702 标记 ExceptionInterfaces 可抛出 (ostrolucky)” (@nicolas-grekas) bug #27415 在 AbstractController 中插入正确的 parameter_bag 服务 (@curry684) 详情见发布公告。 下载地址： Source code (zip) Source code (tar.gz)]]></content>
+      <categories>
+        <category>PHP</category>
+      </categories>
+      <tags>
+        <tag>PHP</tag>
+        <tag>Symfony</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Phalcon 3.4.0 发布，PHP 的 C 扩展 Web 框架]]></title>
     <url>%2F2018%2F05%2F30%2FPhalcon-3-4-0-%E5%8F%91%E5%B8%83%EF%BC%8CPHP-%E7%9A%84-C-%E6%89%A9%E5%B1%95-Web-%E6%A1%86%E6%9E%B6%2F</url>
     <content type="text"><![CDATA[Phalcon 3.4.0 已发布，Phalcon 是一个开源的 Web 框架，作为 PHP 语言 C 扩展，它提供了更高的性能与更低的资源消耗。本次更新主要是对 bug 进行了修复，具体如下： Added Phalcon\Mvc\Router::attach to add Route object directly into Router #13326 Added the ability to listen request:beforeAuthorizationResolve and request:afterAuthorizationResolve events. This ability enables using custom authorization resolvers #13327 Added call event afterFetch in Phalcon\Mvc\Model:refresh #12220 Added Phalcon\Http\Response::getReasonPhrase to retrieve the reason phrase from the Statusheader #13314 Added Phalcon\Loader::setFileCheckingCallback to set internal file existence resolver #13360 Added ability to pass aggregation options for Phalcon\Mvc\Collection::aggregate #12302 Added Phalcon\Crypt::setHashAlgo to set the name of hashing algorithm used to the calculating message digest #13379 Added Phalcon\Crypt::getHashAlgo to get the name of hashing algorithm used to the calculating message digest #13379 Added Phalcon\Crypt::useSigning to set if the calculating message digest must used (NOTE: This feature will be enabled by default in Phalcon 4.0.0) #13379 Added Phalcon\Crypt::getAvailableHashAlgos to get a list of registered hashing algorithms suitable for calculating message digest #13379 Added Phalcon\Crypt::__construct so now the cipher can be set at object construction and the calculating message digest can be enabled without the need to call setCipher or useSigningexplicitly #13379 Added Phalcon\Crypt\Mismatch. Exceptions thrown in Phalcon\Crypt will use this class #13379 Added Phalcon\Http\Cookie::setSignKey to set sign key used to generate a message authentication code (eg. message digest) Added Phalcon\Http\Response\Cookies::setSignKey to set sign key used to generate a message authentication code (eg. message digest) Changed Phalcon\Crypt::setCipher so that IV length will be reconfigured during setting the cipher algorithm Changed Phalcon\Crypt::setCipher so that method will throw Phalcon\Crypt\Exception if a cipher is unavailable Fixed regression (#13308) for Phalcon\Debug\Dump::output to correctly work with detailed mode #13315 Fixed Phalcon\Mvc\Model\Query\Builder::having and Phalcon\Mvc\Model\Query\Builder::where to correctly merge the bind types #11487 Fixed Phalcon\Mvc\Model::setSnapshotData to properly sets the old snapshot Do not throw Exception when superglobal does not exist #13252, #13254, #12918 下载地址和完整更新内容请查看 GitHub 发布主页。]]></content>
