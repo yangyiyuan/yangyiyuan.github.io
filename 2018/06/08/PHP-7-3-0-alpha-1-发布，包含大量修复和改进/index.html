@@ -1,0 +1,1641 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="PHP," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Ewan's Blog" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="PHP 7.3.0 alpha 1 已发布，更新内容如下：">
+<meta name="keywords" content="PHP">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PHP 7.3.0 alpha 1 发布，包含大量修复和改进">
+<meta property="og:url" content="http://www.iooeo.com/2018/06/08/PHP-7-3-0-alpha-1-发布，包含大量修复和改进/index.html">
+<meta property="og:site_name" content="Ewan&#39;s Blog">
+<meta property="og:description" content="PHP 7.3.0 alpha 1 已发布，更新内容如下：">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-06-08T05:09:29.556Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PHP 7.3.0 alpha 1 发布，包含大量修复和改进">
+<meta name="twitter:description" content="PHP 7.3.0 alpha 1 已发布，更新内容如下：">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"always","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://www.iooeo.com/2018/06/08/PHP-7-3-0-alpha-1-发布，包含大量修复和改进/"/>
+
+
+
+
+
+  <title>PHP 7.3.0 alpha 1 发布，包含大量修复和改进 | Ewan's Blog</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?cea7ef9cbfe59c235bbe4bb0db874f5b";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Ewan's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Ewan's Blog | 杨依园技术博客 | 专注于PHP，涉及MySQL，Linux，Web，Nginx，Apache，Phalcon，Laravel，Redis，PostgreSql，Composer，Beanstalkd，Swoole</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-php">
+          <a href="/categories/PHP/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-paper-plane"></i> <br />
+            
+            php
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-yii">
+          <a href="/categories/PHP/Yii2/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-star"></i> <br />
+            
+            Yii2
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-swoole">
+          <a href="/categories/PHP/Swoole/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-rocket"></i> <br />
+            
+            swoole
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-mysql">
+          <a href="/categories/MySQL/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-database"></i> <br />
+            
+            mysql
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-hexo">
+          <a href="/categories/Hexo/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-paw"></i> <br />
+            
+            hexo
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-awesome">
+          <a href="/categories/awesome/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-dashboard"></i> <br />
+            
+            awesome
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.iooeo.com/2018/06/08/PHP-7-3-0-alpha-1-发布，包含大量修复和改进/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ewan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ewan's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">PHP 7.3.0 alpha 1 发布，包含大量修复和改进</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-08T13:02:59+08:00">
+                2018-06-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/PHP/" itemprop="url" rel="index">
+                    <span itemprop="name">PHP</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/2018/06/08/PHP-7-3-0-alpha-1-发布，包含大量修复和改进/#SOHUCS" itemprop="discussionUrl">
+                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2018/06/08/PHP-7-3-0-alpha-1-发布，包含大量修复和改进/" itemprop="commentsCount"></span>
+                </a>
+              
+            
+          
+
+          
+          
+             <span id="/2018/06/08/PHP-7-3-0-alpha-1-发布，包含大量修复和改进/" class="leancloud_visitors" data-flag-title="PHP 7.3.0 alpha 1 发布，包含大量修复和改进">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>PHP 7.3.0 alpha 1 已发布，更新内容如下：<br><a id="more"></a></p>
+<h3 id="Core"><a href="#Core" class="headerlink" title="Core:"></a>Core:</h3><ul>
+<li>Improved PHP GC. (Dmitry, Nikita)</li>
+<li>Redesigned the old ext_skel program written in PHP, run:<br>  ‘php ext_skel.php’ for all options. This means there are no dependencies,<br>  thus making it work on Windows out of the box. (Kalle)</li>
+<li>Removed support for BeOS. (Kalle)</li>
+<li>Add PHP_VERSION to phpinfo() <title>. (github/MattJeevas)</title></li>
+<li>Add net_get_interfaces(). (Sara, Joe, Anatol)</li>
+<li>Implemented flexible heredoc and nowdoc syntax, per<br>  RFC <a href="https://wiki.php.net/rfc/flexible_heredoc_nowdoc_syntaxes" target="_blank" rel="noopener">https://wiki.php.net/rfc/flexible_heredoc_nowdoc_syntaxes</a>.<br>  (Thomas Punt)</li>
+<li>Added support for references in list() and array destructuring, per<br>  RFC <a href="https://wiki.php.net/rfc/list_reference_assignment" target="_blank" rel="noopener">https://wiki.php.net/rfc/list_reference_assignment</a>.<br>  (David Walker)</li>
+<li>Fixed bug #75683 (Memory leak in zend_register_functions() in ZTS mode).<br>  (Dmitry)</li>
+<li>Fixed bug #75031 (support append mode in temp/memory streams). (adsr)</li>
+<li>Fixed bug #74860 (Uncaught exceptions not being formatted properly when<br>  error_log set to “syslog”). (Philip Prindeville)</li>
+<li>Fixed bug #75220 (Segfault when calling is_callable on parent).<br>  (andrewnester)</li>
+<li>Fixed bug #69954 (broken links and unused config items in distributed ini<br>  files). (petk)</li>
+<li>Fixed bug #74922 (Composed class has fatal error with duplicate, equal const<br>  properties). (pmmaga)</li>
+<li>Fixed bug #63911 (identical trait methods raise errors during composition).<br>  (pmmaga)</li>
+<li>Fixed bug #75677 (Clang ignores fastcall calling convention on variadic<br>  function). (Li-Wen Hsu)</li>
+<li>Fixed bug #54043 (Remove inconsitency of internal exceptions and user<br>  defined exceptions). (Nikita)</li>
+<li>Fixed bug #53033 (Mathematical operations convert objects to integers).<br>  (Nikita)</li>
+<li>Fixed bug #73108 (Internal class cast handler uses integer instead of<br>  float). (Nikita)</li>
+<li>Fixed bug #75765 (Fatal error instead of Error exception when base class is<br>  not found). (Timur Ibragimov)</li>
+<li>Fixed bug #76198 (Wording: “iterable” is not a scalar type). (Levi Morrison)</li>
+<li>Fixed bug #76137 (config.guess/config.sub do not recognize RISC-V). (cmb)</li>
+</ul>
+<h3 id="BCMath"><a href="#BCMath" class="headerlink" title="BCMath:"></a>BCMath:</h3><ul>
+<li>Fixed bug #66364 (BCMath bcmul ignores scale parameter). (cmb)</li>
+<li>Implemented request #67855 (No way to get current scale in use). (Chris<br>  Wright, cmb)</li>
+<li>Fixed bug #75164 (split_bc_num() is pointless). (cmb)</li>
+<li>Fixed bug #75169 (BCMath errors/warnings bypass PHP’s error handling). (cmb)</li>
+</ul>
+<h3 id="cURL"><a href="#cURL" class="headerlink" title="cURL:"></a>cURL:</h3><ul>
+<li>Fixed bug #74125 (Fixed finding CURL on systems with multiarch support).<br>  (cebe)</li>
+</ul>
+<h3 id="Date"><a href="#Date" class="headerlink" title="Date:"></a>Date:</h3><ul>
+<li>Implemented FR #74668: Add DateTime::createFromImmutable() method.<br>  (majkl578, Rican7)</li>
+<li>Fixed bug #75222 (DateInterval microseconds property always 0). (jhdxr)</li>
+<li>Fixed bug #68406 (calling var_dump on a DateTimeZone object modifies it).<br>  (jhdxr)</li>
+<li>Fixed bug #76131 (mismatch arginfo for date_create). (carusogabriel)</li>
+</ul>
+<h3 id="DBA"><a href="#DBA" class="headerlink" title="DBA:"></a>DBA:</h3><ul>
+<li>Fixed bug #75264 (compiler warnings emitted). (petk)</li>
+</ul>
+<h3 id="GD"><a href="#GD" class="headerlink" title="GD:"></a>GD:</h3><ul>
+<li>Added support for WebP in imagecreatefromstring() (Andreas Treichel, cmb).</li>
+</ul>
+<h3 id="GMP"><a href="#GMP" class="headerlink" title="GMP:"></a>GMP:</h3><ul>
+<li>Export internal structures and accessor helpers for GMP object. (Sara)</li>
+<li>Added gmp_binomial(n, k). (Nikita)</li>
+<li>Added gmp_lcm(a, b). (Nikita)</li>
+<li>Added gmp_perfect_power(a). (Nikita)</li>
+<li>Added gmp_kronecker(a, b). (Nikita)</li>
+</ul>
+<h3 id="interbase"><a href="#interbase" class="headerlink" title="interbase:"></a>interbase:</h3><ul>
+<li>Fixed bug #75453 (Incorrect reflection for ibase_[p]connect). (villfa)</li>
+</ul>
+<h3 id="intl"><a href="#intl" class="headerlink" title="intl:"></a>intl:</h3><ul>
+<li>Fixed bug #75317 (UConverter::setDestinationEncoding changes source instead<br>  of destination). (andrewnester)</li>
+</ul>
+<h3 id="JSON"><a href="#JSON" class="headerlink" title="JSON:"></a>JSON:</h3><ul>
+<li>Added JSON_THROW_ON_ERROR flag. (Andrea)</li>
+</ul>
+<h3 id="LDAP"><a href="#LDAP" class="headerlink" title="LDAP:"></a>LDAP:</h3><ul>
+<li>Added ldap_exop_refresh helper for EXOP REFRESH operation with dds overlay.<br>  (Come)</li>
+<li>Added full support for sending and parsing ldap controls (Come)</li>
+<li>Fixed bug #49876 (Fix LDAP path lookup on 64-bit distros). (dzuelke)</li>
+</ul>
+<h3 id="libxml2"><a href="#libxml2" class="headerlink" title="libxml2:"></a>libxml2:</h3><ul>
+<li>Fixed bug #75871 (use pkg-config where available). (pmmaga)</li>
+</ul>
+<h3 id="litespeed"><a href="#litespeed" class="headerlink" title="litespeed:"></a>litespeed:</h3><ul>
+<li>Fixed bug #75248 (Binary directory doesn’t get created when building<br>  only litespeed SAPI). (petk)</li>
+<li>Fixed bug #75251 (Missing program prefix and suffix). (petk)</li>
+</ul>
+<h3 id="mbstring"><a href="#mbstring" class="headerlink" title="mbstring:"></a>mbstring:</h3><ul>
+<li>Fixed bug #65544 (mb title case conversion-first word in quotation isn’t<br>  capitalized). (Nikita)</li>
+<li>Fixed bug #71298 (MB_CASE_TITLE misbehaves with curled apostrophe/quote.<br>  (Nikita)</li>
+<li>Fixed bug #73528 (Crash in zif_mb_send_mail). (Nikita)</li>
+<li>Fixed bug #74929 (mbstring functions version 7.1.1 are slow compared to 5.3<br>  on Windows). (Nikita)</li>
+<li>Fixed bug #76319 (mb_strtolower with invalid UTF-8 causes segmentation<br>  fault). (Nikita)</li>
+<li>Updated to Oniguruma 6.8.2. (cmb)</li>
+</ul>
+<h3 id="ODBC"><a href="#ODBC" class="headerlink" title="ODBC:"></a>ODBC:</h3><ul>
+<li>Removed support for ODBCRouter. (Kalle)</li>
+<li>Removed support for Birdstep. (Kalle)</li>
+</ul>
+<h3 id="OpenSSL"><a href="#OpenSSL" class="headerlink" title="OpenSSL:"></a>OpenSSL:</h3><ul>
+<li>Added openssl_pkey_derive function. (Jim Zubov)</li>
+</ul>
+<h3 id="PCRE"><a href="#PCRE" class="headerlink" title="PCRE:"></a>PCRE:</h3><ul>
+<li>Implemented <a href="https://wiki.php.net/rfc/pcre2-migration" target="_blank" rel="noopener">https://wiki.php.net/rfc/pcre2-migration</a> (Anatol, Dmitry)</li>
+<li>Fixed bug #75355 (preg_quote() does not quote # control character).<br>  (Michael Moravec)</li>
+</ul>
+<h3 id="PDO-DBlib"><a href="#PDO-DBlib" class="headerlink" title="PDO_DBlib:"></a>PDO_DBlib:</h3><ul>
+<li>Implemented request #69592 (allow 0-column rowsets to be skipped<br>  automatically). (fandrieu)</li>
+<li>Fixed bug #74243 (allow locales.conf to drive datetime format). (fandrieu)</li>
+<li>Expose TDS version as \PDO::DBLIB_ATTR_TDS_VERSION attribute on \PDO<br>  instance. (fandrieu)</li>
+<li>Treat DATETIME2 columns like DATETIME. (fandrieu)</li>
+</ul>
+<h3 id="PDO-OCI"><a href="#PDO-OCI" class="headerlink" title="PDO_OCI:"></a>PDO_OCI:</h3><ul>
+<li>Fixed bug #74631 (PDO_PCO with PHP-FPM: OCI environment initialized<br>  before PHP-FPM sets it up). (Ingmar Runge)</li>
+</ul>
+<h3 id="PDO-SQLite"><a href="#PDO-SQLite" class="headerlink" title="PDO SQLite"></a>PDO SQLite</h3><ul>
+<li>Add support for additional open flags</li>
+</ul>
+<h3 id="pgsql"><a href="#pgsql" class="headerlink" title="pgsql:"></a>pgsql:</h3><ul>
+<li>Added new error constants for pg_result_error(): (Kalle)<ul>
+<li>Requires Postgres 9.3<ul>
+<li>PGSQL_DIAG_SCHEMA_NAME</li>
+<li>PGSQL_DIAG_TABLE_NAME</li>
+<li>PGSQL_DIAG_COLUMN_NAME</li>
+<li>PGSQL_DIAG_DATATYPE_NAME</li>
+<li>PGSQL_DIAG_CONSTRAINT_NAME</li>
+</ul>
+</li>
+<li>Requires Postgres 9.6<ul>
+<li>PGSQL_DIAG_SEVERITY_NONLOCALIZED</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="phar"><a href="#phar" class="headerlink" title="phar:"></a>phar:</h3><ul>
+<li>Fixed bug #74991 (include_path has a 4096 char limit in some cases).<br>  (bwbroersma)</li>
+<li>Fixed bug #65414 (deal with leading slash when adding files correctly).<br>  (bishopb)</li>
+</ul>
+<h3 id="readline"><a href="#readline" class="headerlink" title="readline:"></a>readline:</h3><ul>
+<li>Added completion_append_character and completion_suppress_append options<br>  to readline_info() if linked against libreadline. (krageon)</li>
+</ul>
+<h3 id="Session"><a href="#Session" class="headerlink" title="Session:"></a>Session:</h3><ul>
+<li>Fixed bug #74941 (session fails to start after having headers sent).<br>  (morozov)</li>
+</ul>
+<h3 id="SimpleXML"><a href="#SimpleXML" class="headerlink" title="SimpleXML:"></a>SimpleXML:</h3><ul>
+<li>Fixed bug #54973 (SimpleXML casts integers wrong). (Nikita)</li>
+</ul>
+<h3 id="SOAP"><a href="#SOAP" class="headerlink" title="SOAP:"></a>SOAP:</h3><ul>
+<li>Fixed bug #75464 (Wrong reflection on SoapClient::__setSoapHeaders). (villfa)</li>
+<li>Fixed bug #70469 (SoapClient generates E_ERROR even if exceptions=1 is<br>  used). (Anton Artamonov)</li>
+</ul>
+<h3 id="SPL"><a href="#SPL" class="headerlink" title="SPL:"></a>SPL:</h3><ul>
+<li>Fixed bug #74977 (Appending AppendIterator leads to segfault).<br>  (Andrew Nester)</li>
+<li>Fixed bug #75173 (incorrect behavior of AppendIterator::append in foreach<br>  loop). (jhdxr)</li>
+<li>Fixed bug #74372 (autoloading file with syntax error uses next autoloader,<br>  may hide parse error). (Nikita)</li>
+<li>Fixed bug #75878 (RecursiveTreeIterator::setPostfix has wrong signature).<br>  (cmb)</li>
+<li>Fixed bug #74519 (strange behavior of AppendIterator). (jhdxr)</li>
+<li>Fixed bug #76131 (mismatch arginfo for splarray constructor).<br>  (carusogabriel)</li>
+</ul>
+<h3 id="SQLite3"><a href="#SQLite3" class="headerlink" title="SQLite3:"></a>SQLite3:</h3><ul>
+<li>Updated bundled libsqlite to 3.24.0. (cmb)</li>
+</ul>
+<h3 id="Standard"><a href="#Standard" class="headerlink" title="Standard:"></a>Standard:</h3><ul>
+<li>Added is_countable() function. (Gabriel Caruso)</li>
+<li>Fixed bug #75916 (DNS_CAA record results contain garbage). (Mike,<br>  Philip Sharp)</li>
+<li>Fixed unserialize(), to disable creation of unsupported data structures<br>  through manually crafted strings. (Dmitry)</li>
+<li>Fixed bug #75409 (accept EFAULT in addition to ENOSYS as indicator<br>  that getrandom() is missing). (sarciszewski)</li>
+<li>Fixed bug #74719 (fopen() should accept NULL as context). (Alexander Holman)</li>
+<li>Fixed bug #69948 (path/domain are not sanitized in setcookie). (cmb)</li>
+<li>Fixed bug #75996 (incorrect url in header for mt_rand). (tatarbj)</li>
+<li>Remove superfluous warnings from inet_ntop()/inet_pton(). (daverandom)</li>
+</ul>
+<h3 id="Testing"><a href="#Testing" class="headerlink" title="Testing:"></a>Testing:</h3><ul>
+<li>Implemented request #62055 (Make run-tests.php support –CGI-### sections).<br>  (cmb)</li>
+</ul>
+<h3 id="Tidy"><a href="#Tidy" class="headerlink" title="Tidy:"></a>Tidy:</h3><ul>
+<li>Fixed bug #74707 (Tidy has incorrect ReflectionFunction param counts for<br>  functions taking tidy). (Gabriel Caruso)</li>
+</ul>
+<h3 id="Zlib"><a href="#Zlib" class="headerlink" title="Zlib:"></a>Zlib:</h3><ul>
+<li>Added zlib/level context option for compress.zlib wrapper. (Sara)</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div align="center">
+      
+        <div class="copyright">
+        <p><span>
+        <b>本文地址：</b><a href="/2018/06/08/PHP-7-3-0-alpha-1-发布，包含大量修复和改进/" title="PHP 7.3.0 alpha 1 发布，包含大量修复和改进">http://www.iooeo.com/2018/06/08/PHP-7-3-0-alpha-1-发布，包含大量修复和改进/</a><br/><b>转载请注明出处，谢谢！</b>
+        </span></p>
+        </div>
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="http://ogpq2zwg5.bkt.clouddn.com/WechatIMG15.jpeg" alt="Ewan WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="http://ogpq2zwg5.bkt.clouddn.com/WechatIMG16.jpeg" alt="Ewan Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/PHP/" rel="tag"># PHP</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/05/31/Symfony-4-1-0-发布，PHP-框架与可重用-PHP-组件集/" rel="next" title="Symfony 4.1.0 发布，PHP 框架与可重用 PHP 组件集">
+                <i class="fa fa-chevron-left"></i> Symfony 4.1.0 发布，PHP 框架与可重用 PHP 组件集
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="SOHUCS"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="Ewan" />
+          <p class="site-author-name" itemprop="name">Ewan</p>
+           
+              <p class="site-description motion-element" itemprop="description">The more effort ,the more lucky</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/">
+                <span class="site-state-item-count">116</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">19</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">40</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://resume.iooeo.com/" target="_blank" title="Resume">
+                  
+                    <i class="fa fa-fw fa-handshake-o"></i>
+                  
+                  Resume
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/u/2120563685" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/yangyiyuan" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="mailto:654846126@qq.com" target="_blank" title="Email">
+                  
+                    <i class="fa fa-fw fa-envelope"></i>
+                  
+                  Email
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.firedata.cn/" target="_blank" title="Company">
+                  
+                    <i class="fa fa-fw fa-users"></i>
+                  
+                  Company
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://game.iooeo.com/" target="_blank" title="MyGame">
+                  
+                    <i class="fa fa-fw fa-gamepad"></i>
+                  
+                  MyGame
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.firedata.cn/" title="在职-意静科技" target="_blank">在职-意静科技</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.xd.com/" title="曾供职-心动网络" target="_blank">曾供职-心动网络</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.mobase.cn/" title="曾供职-翼成科技" target="_blank">曾供职-翼成科技</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.blueberrytech.cn/base/" title="曾供职-蓝莓盈动" target="_blank">曾供职-蓝莓盈动</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://old.tumiaoya.com/" title="白宝冰-博客" target="_blank">白宝冰-博客</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.liuxiaojia.cc/" title="刘佳-博客" target="_blank">刘佳-博客</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.pythondev.org" title="曹帅军-博客" target="_blank">曹帅军-博客</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.dannisi.xin" title="李丹-博客" target="_blank">李丹-博客</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://lixuening.cn/" title="李雪宁-博客" target="_blank">李雪宁-博客</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://xcx.iooeo.com/" title="Cow's Love 工作室" target="_blank">Cow's Love 工作室</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Core"><span class="nav-number">1.</span> <span class="nav-text"><a href="#Core" class="headerlink" title="Core:"></a>Core:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BCMath"><span class="nav-number">2.</span> <span class="nav-text"><a href="#BCMath" class="headerlink" title="BCMath:"></a>BCMath:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cURL"><span class="nav-number">3.</span> <span class="nav-text"><a href="#cURL" class="headerlink" title="cURL:"></a>cURL:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Date"><span class="nav-number">4.</span> <span class="nav-text"><a href="#Date" class="headerlink" title="Date:"></a>Date:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DBA"><span class="nav-number">5.</span> <span class="nav-text"><a href="#DBA" class="headerlink" title="DBA:"></a>DBA:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GD"><span class="nav-number">6.</span> <span class="nav-text"><a href="#GD" class="headerlink" title="GD:"></a>GD:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GMP"><span class="nav-number">7.</span> <span class="nav-text"><a href="#GMP" class="headerlink" title="GMP:"></a>GMP:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#interbase"><span class="nav-number">8.</span> <span class="nav-text"><a href="#interbase" class="headerlink" title="interbase:"></a>interbase:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#intl"><span class="nav-number">9.</span> <span class="nav-text"><a href="#intl" class="headerlink" title="intl:"></a>intl:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JSON"><span class="nav-number">10.</span> <span class="nav-text"><a href="#JSON" class="headerlink" title="JSON:"></a>JSON:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#LDAP"><span class="nav-number">11.</span> <span class="nav-text"><a href="#LDAP" class="headerlink" title="LDAP:"></a>LDAP:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#libxml2"><span class="nav-number">12.</span> <span class="nav-text"><a href="#libxml2" class="headerlink" title="libxml2:"></a>libxml2:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#litespeed"><span class="nav-number">13.</span> <span class="nav-text"><a href="#litespeed" class="headerlink" title="litespeed:"></a>litespeed:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mbstring"><span class="nav-number">14.</span> <span class="nav-text"><a href="#mbstring" class="headerlink" title="mbstring:"></a>mbstring:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ODBC"><span class="nav-number">15.</span> <span class="nav-text"><a href="#ODBC" class="headerlink" title="ODBC:"></a>ODBC:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#OpenSSL"><span class="nav-number">16.</span> <span class="nav-text"><a href="#OpenSSL" class="headerlink" title="OpenSSL:"></a>OpenSSL:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PCRE"><span class="nav-number">17.</span> <span class="nav-text"><a href="#PCRE" class="headerlink" title="PCRE:"></a>PCRE:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PDO-DBlib"><span class="nav-number">18.</span> <span class="nav-text"><a href="#PDO-DBlib" class="headerlink" title="PDO_DBlib:"></a>PDO_DBlib:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PDO-OCI"><span class="nav-number">19.</span> <span class="nav-text"><a href="#PDO-OCI" class="headerlink" title="PDO_OCI:"></a>PDO_OCI:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PDO-SQLite"><span class="nav-number">20.</span> <span class="nav-text"><a href="#PDO-SQLite" class="headerlink" title="PDO SQLite"></a>PDO SQLite</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pgsql"><span class="nav-number">21.</span> <span class="nav-text"><a href="#pgsql" class="headerlink" title="pgsql:"></a>pgsql:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#phar"><span class="nav-number">22.</span> <span class="nav-text"><a href="#phar" class="headerlink" title="phar:"></a>phar:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#readline"><span class="nav-number">23.</span> <span class="nav-text"><a href="#readline" class="headerlink" title="readline:"></a>readline:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Session"><span class="nav-number">24.</span> <span class="nav-text"><a href="#Session" class="headerlink" title="Session:"></a>Session:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SimpleXML"><span class="nav-number">25.</span> <span class="nav-text"><a href="#SimpleXML" class="headerlink" title="SimpleXML:"></a>SimpleXML:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SOAP"><span class="nav-number">26.</span> <span class="nav-text"><a href="#SOAP" class="headerlink" title="SOAP:"></a>SOAP:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SPL"><span class="nav-number">27.</span> <span class="nav-text"><a href="#SPL" class="headerlink" title="SPL:"></a>SPL:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SQLite3"><span class="nav-number">28.</span> <span class="nav-text"><a href="#SQLite3" class="headerlink" title="SQLite3:"></a>SQLite3:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Standard"><span class="nav-number">29.</span> <span class="nav-text"><a href="#Standard" class="headerlink" title="Standard:"></a>Standard:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Testing"><span class="nav-number">30.</span> <span class="nav-text"><a href="#Testing" class="headerlink" title="Testing:"></a>Testing:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tidy"><span class="nav-number">31.</span> <span class="nav-text"><a href="#Tidy" class="headerlink" title="Tidy:"></a>Tidy:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Zlib"><span class="nav-number">32.</span> <span class="nav-text"><a href="#Zlib" class="headerlink" title="Zlib:"></a>Zlib:</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright" >
+  
+  &copy;  2013 - 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Ewan</span>
+  &nbsp;
+  <span id="busuanzi_container_site_uv">
+      <i class="fa fa-user-md"></i>
+      本站访客数:<span id="busuanzi_value_site_pv"></span>
+    </span>
+</div>
+
+
+<div class="powered-by">
+  <span class="links-of-author-item">
+    <a href="http://www.miitbeian.gov.cn/" target="_blank" title="备案号">
+    沪ICP备17032516号-1
+    </a>
+  </span>
+</div>
+
+<div class="powered-by">
+  <span class="links-of-author-item">
+    <a href="https://github.com/yangyiyuan" target="_blank" title="GitHub">
+    <i class="fa fa-github-alt"></i>
+    GitHub
+    </a>
+  </span>
+</div>
+
+<div class="theme-info">
+  <span class="links-of-author-item">
+    <a href="http://www.iooeo.com/about/" target="_blank" title="杨依园">
+    <i class="fa fa-fw fa-hand-o-right"></i>
+    做一个有思想的开发者---杨依园
+    </a>
+  </span>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+    <script type="text/javascript">
+    (function(){
+      var appid = 'cyt8r7gzu';
+      var conf = 'a4830425918b568a51dfe3d835fd90db';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      if (width < 960) {
+      window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){
+        window.changyan.api.config({appid:appid,conf:conf})});
+      }
+    })();
+    </script>
+    <script type="text/javascript" src="https://assets.changyan.sohu.com/upload/plugins/plugins.count.js"></script>
+  
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("ilQJ7Pnw4P9y1I1cQlaOoggK-gzGzoHsz", "uwSCLmjySIQiXUJHwkhc5XdT");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

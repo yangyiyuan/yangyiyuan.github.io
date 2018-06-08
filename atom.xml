@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.iooeo.com/"/>
-  <updated>2018-05-31T01:25:10.587Z</updated>
+  <updated>2018-06-08T05:09:29.556Z</updated>
   <id>http://www.iooeo.com/</id>
   
   <author>
@@ -14,6 +14,196 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PHP 7.3.0 alpha 1 发布，包含大量修复和改进</title>
+    <link href="http://www.iooeo.com/2018/06/08/PHP-7-3-0-alpha-1-%E5%8F%91%E5%B8%83%EF%BC%8C%E5%8C%85%E5%90%AB%E5%A4%A7%E9%87%8F%E4%BF%AE%E5%A4%8D%E5%92%8C%E6%94%B9%E8%BF%9B/"/>
+    <id>http://www.iooeo.com/2018/06/08/PHP-7-3-0-alpha-1-发布，包含大量修复和改进/</id>
+    <published>2018-06-08T05:02:59.000Z</published>
+    <updated>2018-06-08T05:09:29.556Z</updated>
+    
+    <content type="html"><![CDATA[<p>PHP 7.3.0 alpha 1 已发布，更新内容如下：<br><a id="more"></a></p>
+<h3 id="Core"><a href="#Core" class="headerlink" title="Core:"></a>Core:</h3><ul>
+<li>Improved PHP GC. (Dmitry, Nikita)</li>
+<li>Redesigned the old ext_skel program written in PHP, run:<br>  ‘php ext_skel.php’ for all options. This means there are no dependencies,<br>  thus making it work on Windows out of the box. (Kalle)</li>
+<li>Removed support for BeOS. (Kalle)</li>
+<li>Add PHP_VERSION to phpinfo() <title>. (github/MattJeevas)</title></li>
+<li>Add net_get_interfaces(). (Sara, Joe, Anatol)</li>
+<li>Implemented flexible heredoc and nowdoc syntax, per<br>  RFC <a href="https://wiki.php.net/rfc/flexible_heredoc_nowdoc_syntaxes" target="_blank" rel="noopener">https://wiki.php.net/rfc/flexible_heredoc_nowdoc_syntaxes</a>.<br>  (Thomas Punt)</li>
+<li>Added support for references in list() and array destructuring, per<br>  RFC <a href="https://wiki.php.net/rfc/list_reference_assignment" target="_blank" rel="noopener">https://wiki.php.net/rfc/list_reference_assignment</a>.<br>  (David Walker)</li>
+<li>Fixed bug #75683 (Memory leak in zend_register_functions() in ZTS mode).<br>  (Dmitry)</li>
+<li>Fixed bug #75031 (support append mode in temp/memory streams). (adsr)</li>
+<li>Fixed bug #74860 (Uncaught exceptions not being formatted properly when<br>  error_log set to “syslog”). (Philip Prindeville)</li>
+<li>Fixed bug #75220 (Segfault when calling is_callable on parent).<br>  (andrewnester)</li>
+<li>Fixed bug #69954 (broken links and unused config items in distributed ini<br>  files). (petk)</li>
+<li>Fixed bug #74922 (Composed class has fatal error with duplicate, equal const<br>  properties). (pmmaga)</li>
+<li>Fixed bug #63911 (identical trait methods raise errors during composition).<br>  (pmmaga)</li>
+<li>Fixed bug #75677 (Clang ignores fastcall calling convention on variadic<br>  function). (Li-Wen Hsu)</li>
+<li>Fixed bug #54043 (Remove inconsitency of internal exceptions and user<br>  defined exceptions). (Nikita)</li>
+<li>Fixed bug #53033 (Mathematical operations convert objects to integers).<br>  (Nikita)</li>
+<li>Fixed bug #73108 (Internal class cast handler uses integer instead of<br>  float). (Nikita)</li>
+<li>Fixed bug #75765 (Fatal error instead of Error exception when base class is<br>  not found). (Timur Ibragimov)</li>
+<li>Fixed bug #76198 (Wording: “iterable” is not a scalar type). (Levi Morrison)</li>
+<li>Fixed bug #76137 (config.guess/config.sub do not recognize RISC-V). (cmb)</li>
+</ul>
+<h3 id="BCMath"><a href="#BCMath" class="headerlink" title="BCMath:"></a>BCMath:</h3><ul>
+<li>Fixed bug #66364 (BCMath bcmul ignores scale parameter). (cmb)</li>
+<li>Implemented request #67855 (No way to get current scale in use). (Chris<br>  Wright, cmb)</li>
+<li>Fixed bug #75164 (split_bc_num() is pointless). (cmb)</li>
+<li>Fixed bug #75169 (BCMath errors/warnings bypass PHP’s error handling). (cmb)</li>
+</ul>
+<h3 id="cURL"><a href="#cURL" class="headerlink" title="cURL:"></a>cURL:</h3><ul>
+<li>Fixed bug #74125 (Fixed finding CURL on systems with multiarch support).<br>  (cebe)</li>
+</ul>
+<h3 id="Date"><a href="#Date" class="headerlink" title="Date:"></a>Date:</h3><ul>
+<li>Implemented FR #74668: Add DateTime::createFromImmutable() method.<br>  (majkl578, Rican7)</li>
+<li>Fixed bug #75222 (DateInterval microseconds property always 0). (jhdxr)</li>
+<li>Fixed bug #68406 (calling var_dump on a DateTimeZone object modifies it).<br>  (jhdxr)</li>
+<li>Fixed bug #76131 (mismatch arginfo for date_create). (carusogabriel)</li>
+</ul>
+<h3 id="DBA"><a href="#DBA" class="headerlink" title="DBA:"></a>DBA:</h3><ul>
+<li>Fixed bug #75264 (compiler warnings emitted). (petk)</li>
+</ul>
+<h3 id="GD"><a href="#GD" class="headerlink" title="GD:"></a>GD:</h3><ul>
+<li>Added support for WebP in imagecreatefromstring() (Andreas Treichel, cmb).</li>
+</ul>
+<h3 id="GMP"><a href="#GMP" class="headerlink" title="GMP:"></a>GMP:</h3><ul>
+<li>Export internal structures and accessor helpers for GMP object. (Sara)</li>
+<li>Added gmp_binomial(n, k). (Nikita)</li>
+<li>Added gmp_lcm(a, b). (Nikita)</li>
+<li>Added gmp_perfect_power(a). (Nikita)</li>
+<li>Added gmp_kronecker(a, b). (Nikita)</li>
+</ul>
+<h3 id="interbase"><a href="#interbase" class="headerlink" title="interbase:"></a>interbase:</h3><ul>
+<li>Fixed bug #75453 (Incorrect reflection for ibase_[p]connect). (villfa)</li>
+</ul>
+<h3 id="intl"><a href="#intl" class="headerlink" title="intl:"></a>intl:</h3><ul>
+<li>Fixed bug #75317 (UConverter::setDestinationEncoding changes source instead<br>  of destination). (andrewnester)</li>
+</ul>
+<h3 id="JSON"><a href="#JSON" class="headerlink" title="JSON:"></a>JSON:</h3><ul>
+<li>Added JSON_THROW_ON_ERROR flag. (Andrea)</li>
+</ul>
+<h3 id="LDAP"><a href="#LDAP" class="headerlink" title="LDAP:"></a>LDAP:</h3><ul>
+<li>Added ldap_exop_refresh helper for EXOP REFRESH operation with dds overlay.<br>  (Come)</li>
+<li>Added full support for sending and parsing ldap controls (Come)</li>
+<li>Fixed bug #49876 (Fix LDAP path lookup on 64-bit distros). (dzuelke)</li>
+</ul>
+<h3 id="libxml2"><a href="#libxml2" class="headerlink" title="libxml2:"></a>libxml2:</h3><ul>
+<li>Fixed bug #75871 (use pkg-config where available). (pmmaga)</li>
+</ul>
+<h3 id="litespeed"><a href="#litespeed" class="headerlink" title="litespeed:"></a>litespeed:</h3><ul>
+<li>Fixed bug #75248 (Binary directory doesn’t get created when building<br>  only litespeed SAPI). (petk)</li>
+<li>Fixed bug #75251 (Missing program prefix and suffix). (petk)</li>
+</ul>
+<h3 id="mbstring"><a href="#mbstring" class="headerlink" title="mbstring:"></a>mbstring:</h3><ul>
+<li>Fixed bug #65544 (mb title case conversion-first word in quotation isn’t<br>  capitalized). (Nikita)</li>
+<li>Fixed bug #71298 (MB_CASE_TITLE misbehaves with curled apostrophe/quote.<br>  (Nikita)</li>
+<li>Fixed bug #73528 (Crash in zif_mb_send_mail). (Nikita)</li>
+<li>Fixed bug #74929 (mbstring functions version 7.1.1 are slow compared to 5.3<br>  on Windows). (Nikita)</li>
+<li>Fixed bug #76319 (mb_strtolower with invalid UTF-8 causes segmentation<br>  fault). (Nikita)</li>
+<li>Updated to Oniguruma 6.8.2. (cmb)</li>
+</ul>
+<h3 id="ODBC"><a href="#ODBC" class="headerlink" title="ODBC:"></a>ODBC:</h3><ul>
+<li>Removed support for ODBCRouter. (Kalle)</li>
+<li>Removed support for Birdstep. (Kalle)</li>
+</ul>
+<h3 id="OpenSSL"><a href="#OpenSSL" class="headerlink" title="OpenSSL:"></a>OpenSSL:</h3><ul>
+<li>Added openssl_pkey_derive function. (Jim Zubov)</li>
+</ul>
+<h3 id="PCRE"><a href="#PCRE" class="headerlink" title="PCRE:"></a>PCRE:</h3><ul>
+<li>Implemented <a href="https://wiki.php.net/rfc/pcre2-migration" target="_blank" rel="noopener">https://wiki.php.net/rfc/pcre2-migration</a> (Anatol, Dmitry)</li>
+<li>Fixed bug #75355 (preg_quote() does not quote # control character).<br>  (Michael Moravec)</li>
+</ul>
+<h3 id="PDO-DBlib"><a href="#PDO-DBlib" class="headerlink" title="PDO_DBlib:"></a>PDO_DBlib:</h3><ul>
+<li>Implemented request #69592 (allow 0-column rowsets to be skipped<br>  automatically). (fandrieu)</li>
+<li>Fixed bug #74243 (allow locales.conf to drive datetime format). (fandrieu)</li>
+<li>Expose TDS version as \PDO::DBLIB_ATTR_TDS_VERSION attribute on \PDO<br>  instance. (fandrieu)</li>
+<li>Treat DATETIME2 columns like DATETIME. (fandrieu)</li>
+</ul>
+<h3 id="PDO-OCI"><a href="#PDO-OCI" class="headerlink" title="PDO_OCI:"></a>PDO_OCI:</h3><ul>
+<li>Fixed bug #74631 (PDO_PCO with PHP-FPM: OCI environment initialized<br>  before PHP-FPM sets it up). (Ingmar Runge)</li>
+</ul>
+<h3 id="PDO-SQLite"><a href="#PDO-SQLite" class="headerlink" title="PDO SQLite"></a>PDO SQLite</h3><ul>
+<li>Add support for additional open flags</li>
+</ul>
+<h3 id="pgsql"><a href="#pgsql" class="headerlink" title="pgsql:"></a>pgsql:</h3><ul>
+<li>Added new error constants for pg_result_error(): (Kalle)<ul>
+<li>Requires Postgres 9.3<ul>
+<li>PGSQL_DIAG_SCHEMA_NAME</li>
+<li>PGSQL_DIAG_TABLE_NAME</li>
+<li>PGSQL_DIAG_COLUMN_NAME</li>
+<li>PGSQL_DIAG_DATATYPE_NAME</li>
+<li>PGSQL_DIAG_CONSTRAINT_NAME</li>
+</ul>
+</li>
+<li>Requires Postgres 9.6<ul>
+<li>PGSQL_DIAG_SEVERITY_NONLOCALIZED</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="phar"><a href="#phar" class="headerlink" title="phar:"></a>phar:</h3><ul>
+<li>Fixed bug #74991 (include_path has a 4096 char limit in some cases).<br>  (bwbroersma)</li>
+<li>Fixed bug #65414 (deal with leading slash when adding files correctly).<br>  (bishopb)</li>
+</ul>
+<h3 id="readline"><a href="#readline" class="headerlink" title="readline:"></a>readline:</h3><ul>
+<li>Added completion_append_character and completion_suppress_append options<br>  to readline_info() if linked against libreadline. (krageon)</li>
+</ul>
+<h3 id="Session"><a href="#Session" class="headerlink" title="Session:"></a>Session:</h3><ul>
+<li>Fixed bug #74941 (session fails to start after having headers sent).<br>  (morozov)</li>
+</ul>
+<h3 id="SimpleXML"><a href="#SimpleXML" class="headerlink" title="SimpleXML:"></a>SimpleXML:</h3><ul>
+<li>Fixed bug #54973 (SimpleXML casts integers wrong). (Nikita)</li>
+</ul>
+<h3 id="SOAP"><a href="#SOAP" class="headerlink" title="SOAP:"></a>SOAP:</h3><ul>
+<li>Fixed bug #75464 (Wrong reflection on SoapClient::__setSoapHeaders). (villfa)</li>
+<li>Fixed bug #70469 (SoapClient generates E_ERROR even if exceptions=1 is<br>  used). (Anton Artamonov)</li>
+</ul>
+<h3 id="SPL"><a href="#SPL" class="headerlink" title="SPL:"></a>SPL:</h3><ul>
+<li>Fixed bug #74977 (Appending AppendIterator leads to segfault).<br>  (Andrew Nester)</li>
+<li>Fixed bug #75173 (incorrect behavior of AppendIterator::append in foreach<br>  loop). (jhdxr)</li>
+<li>Fixed bug #74372 (autoloading file with syntax error uses next autoloader,<br>  may hide parse error). (Nikita)</li>
+<li>Fixed bug #75878 (RecursiveTreeIterator::setPostfix has wrong signature).<br>  (cmb)</li>
+<li>Fixed bug #74519 (strange behavior of AppendIterator). (jhdxr)</li>
+<li>Fixed bug #76131 (mismatch arginfo for splarray constructor).<br>  (carusogabriel)</li>
+</ul>
+<h3 id="SQLite3"><a href="#SQLite3" class="headerlink" title="SQLite3:"></a>SQLite3:</h3><ul>
+<li>Updated bundled libsqlite to 3.24.0. (cmb)</li>
+</ul>
+<h3 id="Standard"><a href="#Standard" class="headerlink" title="Standard:"></a>Standard:</h3><ul>
+<li>Added is_countable() function. (Gabriel Caruso)</li>
+<li>Fixed bug #75916 (DNS_CAA record results contain garbage). (Mike,<br>  Philip Sharp)</li>
+<li>Fixed unserialize(), to disable creation of unsupported data structures<br>  through manually crafted strings. (Dmitry)</li>
+<li>Fixed bug #75409 (accept EFAULT in addition to ENOSYS as indicator<br>  that getrandom() is missing). (sarciszewski)</li>
+<li>Fixed bug #74719 (fopen() should accept NULL as context). (Alexander Holman)</li>
+<li>Fixed bug #69948 (path/domain are not sanitized in setcookie). (cmb)</li>
+<li>Fixed bug #75996 (incorrect url in header for mt_rand). (tatarbj)</li>
+<li>Remove superfluous warnings from inet_ntop()/inet_pton(). (daverandom)</li>
+</ul>
+<h3 id="Testing"><a href="#Testing" class="headerlink" title="Testing:"></a>Testing:</h3><ul>
+<li>Implemented request #62055 (Make run-tests.php support –CGI-### sections).<br>  (cmb)</li>
+</ul>
+<h3 id="Tidy"><a href="#Tidy" class="headerlink" title="Tidy:"></a>Tidy:</h3><ul>
+<li>Fixed bug #74707 (Tidy has incorrect ReflectionFunction param counts for<br>  functions taking tidy). (Gabriel Caruso)</li>
+</ul>
+<h3 id="Zlib"><a href="#Zlib" class="headerlink" title="Zlib:"></a>Zlib:</h3><ul>
+<li>Added zlib/level context option for compress.zlib wrapper. (Sara)</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;PHP 7.3.0 alpha 1 已发布，更新内容如下：&lt;br&gt;
+    
+    </summary>
+    
+      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
+    
+    
+      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
+    
+  </entry>
   
   <entry>
     <title>Symfony 4.1.0 发布，PHP 框架与可重用 PHP 组件集</title>
@@ -766,59 +956,6 @@
       <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
     
       <category term="CakePHP" scheme="http://www.iooeo.com/tags/CakePHP/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ThinkPHP 5.0.17 与 5.1.9 版本发布，包含安全更新</title>
-    <link href="http://www.iooeo.com/2018/04/13/ThinkPHP-5-0-17-%E4%B8%8E-5-1-9-%E7%89%88%E6%9C%AC%E5%8F%91%E5%B8%83%EF%BC%8C%E5%8C%85%E5%90%AB%E5%AE%89%E5%85%A8%E6%9B%B4%E6%96%B0/"/>
-    <id>http://www.iooeo.com/2018/04/13/ThinkPHP-5-0-17-与-5-1-9-版本发布，包含安全更新/</id>
-    <published>2018-04-13T06:44:42.000Z</published>
-    <updated>2018-04-13T06:48:03.724Z</updated>
-    
-    <content type="html"><![CDATA[<p>ThinkPHP 此次同步发布了两个版本的更新，均包含一处安全更新，推荐更新。<br><a id="more"></a></p>
-<h1 id="V5-0-17版本"><a href="#V5-0-17版本" class="headerlink" title="V5.0.17版本"></a>V5.0.17版本</h1><p><strong>V5.0版本已经进入安全更新阶段，不再更新功能，仅作安全修复及BUG修正</strong><br><strong>此次发布的5.0.17版本主要是一些修正和改进，并且包含了一个安全更新。</strong></p>
-<h2 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h2><ul>
-<li>改进Response类<code>create</code>方法</li>
-<li>改进<code>inc/dec</code>查询</li>
-<li>默认模板渲染规则支持直接使用操作方法名</li>
-<li>改进视图驱动</li>
-<li>改进Request类ip方法 支持代理设置</li>
-<li>修正request类的<code>create</code>方法</li>
-<li>闭包查询使用<code>cache(true)</code>抛出异常</li>
-<li>改进composer自动加载文件</li>
-<li>增加<code>expression</code>类及相关方法</li>
-</ul>
-<h1 id="V5-1-9版本"><a href="#V5-1-9版本" class="headerlink" title="V5.1.9版本"></a>V5.1.9版本</h1><p><strong>该版本主要是一些改进和修正，并包含一个安全更新，是一个推荐更新版本。</strong></p>
-<h2 id="更新日志-1"><a href="#更新日志-1" class="headerlink" title="更新日志"></a>更新日志</h2><ul>
-<li>默认模板渲染规则支持配置保持操作方法名</li>
-<li>改进<code>Request</code>类的<code>ip</code>方法</li>
-<li>支持模型软删除字段的默认值定义</li>
-<li>改进路由变量规则对中文的支持</li>
-<li>使用闭包查询的时候使用<code>cache(true)</code> 抛出异常提示</li>
-<li>改进<code>Loader</code>类<code>loadComposerAutoloadFiles</code>方法</li>
-<li>改进查询方法安全性</li>
-<li>修正路由地址中控制器名驼峰问题</li>
-<li>调整上一个版本的<code>module_init</code>和<code>app_begin</code>的钩子顺序问题</li>
-<li>改进CLI模式下运行的问题</li>
-<li>修正社区反馈的其它问题</li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;ThinkPHP 此次同步发布了两个版本的更新，均包含一处安全更新，推荐更新。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
-    
-      <category term="ThinkPHP" scheme="http://www.iooeo.com/categories/PHP/ThinkPHP/"/>
-    
-    
-      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
-    
-      <category term="ThinkPHP" scheme="http://www.iooeo.com/tags/ThinkPHP/"/>
     
   </entry>
   
