@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://www.iooeo.com/2018/06/11/CakePHP-3-6-5-%E5%8F%91%E5%B8%83%EF%BC%8CBug-%E4%BF%AE%E5%A4%8D/</loc>
+    <lastmod>2018-06-11T01:17:41.068Z</lastmod>
+    <data>
+        <display>
+        <title>CakePHP 3.6.5 发布，Bug 修复</title>
+        <pubTime>2018-06-11T01:14:46.000Z</pubTime>
+        
+        <tag>PHP</tag>
+         
+        <tag>CakePHP</tag>
+         
+         
+           
+             
+              <breadCrumb title="PHP" url="http://www.iooeo.com/categories/PHP/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.iooeo.com/2018/06/08/PHP-7-3-0-alpha-1-%E5%8F%91%E5%B8%83%EF%BC%8C%E5%8C%85%E5%90%AB%E5%A4%A7%E9%87%8F%E4%BF%AE%E5%A4%8D%E5%92%8C%E6%94%B9%E8%BF%9B/</loc>
     <lastmod>2018-06-08T05:09:29.556Z</lastmod>
     <data>
@@ -2229,9 +2251,9 @@
         <title>Mac Python 版本切换</title>
         <pubTime>2017-07-20T03:24:50.000Z</pubTime>
         
-        <tag>python</tag>
-         
         <tag>Mac</tag>
+         
+        <tag>python</tag>
          
          
            
