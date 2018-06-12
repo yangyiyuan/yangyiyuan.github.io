@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.iooeo.com/"/>
-  <updated>2018-06-11T01:17:41.068Z</updated>
+  <updated>2018-06-12T01:20:12.555Z</updated>
   <id>http://www.iooeo.com/</id>
   
   <author>
@@ -14,6 +14,46 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>yii2 3.0.0-alpha1 发布，高性能 PHP 框架</title>
+    <link href="http://www.iooeo.com/2018/06/12/yii2-3-0-0-alpha1-%E5%8F%91%E5%B8%83%EF%BC%8C%E9%AB%98%E6%80%A7%E8%83%BD-PHP-%E6%A1%86%E6%9E%B6/"/>
+    <id>http://www.iooeo.com/2018/06/12/yii2-3-0-0-alpha1-发布，高性能-PHP-框架/</id>
+    <published>2018-06-12T01:15:01.000Z</published>
+    <updated>2018-06-12T01:20:12.555Z</updated>
+    
+    <content type="html"><![CDATA[<p>yii2 3.0.0-alpha1 发布了。Yii 2 完全根据 Yii 1.1 版本重写，后者是最流行的 PHP 框架之一。Yii 2 继承了 Yii 的简洁、快速、和高扩展性。Yii 2 需要 PHP 5.4，并且拥有现代 Web 应用开发中最好的实例和协议。<br><a id="more"></a><br>更新内容：</p>
+<ul>
+<li>Bug #16065: Remove using date.timezone at yii\base\Application, use date_default_timezone_get() instead (sashsvamir)</li>
+<li>Bug #12539: yii\filters\ContentNegotiator now generates 406 ‘Not Acceptable’ instead of 415 ‘Unsupported Media Type’ on content-type negotiation fail (PowerGamer1)</li>
+<li>Bug #14458: Fixed yii\filters\VerbFilter uses case-insensitive comparison for the HTTP method name (klimov-paul)</li>
+<li>Enh #879: Caching implementation refactored according to PSR-16 ‘Simple Cache’ specification (klimov-paul)</li>
+<li>Enh #11328: Added support for PSR-7 ‘HTTP Message’ (klimov-paul)</li>
+</ul>
+<p>完整更新内容请查看 <a href="https://github.com/yiisoft/yii2/blob/3.0.0-alpha1/framework/CHANGELOG.md" target="_blank" rel="noopener">ChangeLog</a>。</p>
+<p>下载地址：</p>
+<ul>
+<li><a href="https://github.com/yiisoft/yii2/archive/3.0.0-alpha1.zip" target="_blank" rel="noopener">Source code (zip)</a></li>
+<li><a href="https://github.com/yiisoft/yii2/archive/3.0.0-alpha1.tar.gz" target="_blank" rel="noopener">Source code (tar.gz)</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;yii2 3.0.0-alpha1 发布了。Yii 2 完全根据 Yii 1.1 版本重写，后者是最流行的 PHP 框架之一。Yii 2 继承了 Yii 的简洁、快速、和高扩展性。Yii 2 需要 PHP 5.4，并且拥有现代 Web 应用开发中最好的实例和协议。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
+    
+      <category term="Yii2" scheme="http://www.iooeo.com/categories/PHP/Yii2/"/>
+    
+    
+      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
+    
+      <category term="Yii2" scheme="http://www.iooeo.com/tags/Yii2/"/>
+    
+  </entry>
   
   <entry>
     <title>CakePHP 3.6.5 发布，Bug 修复</title>
@@ -932,35 +972,6 @@
     
     
       <category term="Nginx" scheme="http://www.iooeo.com/tags/Nginx/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Symfony 4.1 发布，改进了 Monolog 集成</title>
-    <link href="http://www.iooeo.com/2018/04/18/Symfony-4-1-%E5%8F%91%E5%B8%83%EF%BC%8C%E6%94%B9%E8%BF%9B%E4%BA%86-Monolog-%E9%9B%86%E6%88%90/"/>
-    <id>http://www.iooeo.com/2018/04/18/Symfony-4-1-发布，改进了-Monolog-集成/</id>
-    <published>2018-04-18T00:57:20.000Z</published>
-    <updated>2018-04-18T00:59:59.802Z</updated>
-    
-    <content type="html"><![CDATA[<p>Symfony 4.1 发布了。Symfony 是一款基于 MVC 架构的 PHP 框架。Symfony 致力于减少重复代码的编写，以加速 Web 应用的开发和维护。Symfony 与许多关系型数据库集成的也非常好，成本也较小。<br><a id="more"></a><br>此外，Symfony 致力于在企业背景下创建健壮的应用，同时也给予了开发者强大的配置功能：从文件结构到外部目录，几乎所有的东西都可以自定义。Symfony 也捆绑了一些诸如测试、调试、文档生成等额外的工具来满足企业的开发过程。</p>
-<p>更新内容：<br>Symfony 4.1改进了<a href="https://symfony.com/doc/current/logging.html" target="_blank" rel="noopener">Monolog集成</a>以允许排除与特定HTTP代码相关的日志消息。例如，使用 fingers_crossed处理程序时，请使用以下配置忽略有关日志403和404错误的日志：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"># config/packages/monolog.yaml</div><div class="line">monolog:</div><div class="line">    handlers:</div><div class="line">        main:</div><div class="line">            # ...</div><div class="line">            type: &apos;fingers_crossed&apos;</div><div class="line">            excluded_http_codes: [403, 404]</div></pre></td></tr></table></figure></p>
-<p>对于更复杂的需求，也可以仅为特定URL排除日志，并将其定义为正则表达式模式：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"># config/packages/monolog.yaml</div><div class="line">monolog:</div><div class="line">    handlers:</div><div class="line">        main:</div><div class="line">            # ...</div><div class="line">            excluded_http_codes: [&#123; 400: [&apos;^/foo&apos;, &apos;^/bar&apos;] &#125;, 403, 404]</div></pre></td></tr></table></figure></p>
-<p>XML配置，示例如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&lt;!-- config/packages/monolog.xml --&gt;</div><div class="line">&lt;monolog:config&gt;</div><div class="line">    &lt;monolog:handler type=&quot;fingers_crossed&quot; name=&quot;main&quot; handler=&quot;...&quot;&gt;</div><div class="line">        &lt;!-- ... --&gt;</div><div class="line">        &lt;monolog:excluded-http-code code=&quot;400&quot;&gt;</div><div class="line">            &lt;monolog:url&gt;^/foo&lt;/monolog:url&gt;</div><div class="line">            &lt;monolog:url&gt;^/bar&lt;/monolog:url&gt;</div><div class="line">        &lt;/monolog:excluded-http-code&gt;</div><div class="line">        &lt;monolog:excluded-http-code code=&quot;403&quot; /&gt;</div><div class="line">        &lt;monolog:excluded-http-code code=&quot;404&quot; /&gt;</div><div class="line">    &lt;/monolog:handler&gt;</div><div class="line">&lt;/monolog:config&gt;</div></pre></td></tr></table></figure></p>
-<p>完整内容可查看<a href="https://symfony.com/blog/new-in-symfony-4-1-ignore-specific-http-codes-from-logs?utm_source=Symfony%20Blog%20Feed&amp;utm_medium=feed" target="_blank" rel="noopener">发布主页</a>。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Symfony 4.1 发布了。Symfony 是一款基于 MVC 架构的 PHP 框架。Symfony 致力于减少重复代码的编写，以加速 Web 应用的开发和维护。Symfony 与许多关系型数据库集成的也非常好，成本也较小。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
-    
-    
-      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
-    
-      <category term="Symfony" scheme="http://www.iooeo.com/tags/Symfony/"/>
     
   </entry>
   

@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[yii2 3.0.0-alpha1 发布，高性能 PHP 框架]]></title>
+    <url>%2F2018%2F06%2F12%2Fyii2-3-0-0-alpha1-%E5%8F%91%E5%B8%83%EF%BC%8C%E9%AB%98%E6%80%A7%E8%83%BD-PHP-%E6%A1%86%E6%9E%B6%2F</url>
+    <content type="text"><![CDATA[yii2 3.0.0-alpha1 发布了。Yii 2 完全根据 Yii 1.1 版本重写，后者是最流行的 PHP 框架之一。Yii 2 继承了 Yii 的简洁、快速、和高扩展性。Yii 2 需要 PHP 5.4，并且拥有现代 Web 应用开发中最好的实例和协议。更新内容： Bug #16065: Remove using date.timezone at yii\base\Application, use date_default_timezone_get() instead (sashsvamir) Bug #12539: yii\filters\ContentNegotiator now generates 406 ‘Not Acceptable’ instead of 415 ‘Unsupported Media Type’ on content-type negotiation fail (PowerGamer1) Bug #14458: Fixed yii\filters\VerbFilter uses case-insensitive comparison for the HTTP method name (klimov-paul) Enh #879: Caching implementation refactored according to PSR-16 ‘Simple Cache’ specification (klimov-paul) Enh #11328: Added support for PSR-7 ‘HTTP Message’ (klimov-paul) 完整更新内容请查看 ChangeLog。 下载地址： Source code (zip) Source code (tar.gz)]]></content>
+      <categories>
+        <category>PHP</category>
+        <category>Yii2</category>
+      </categories>
+      <tags>
+        <tag>PHP</tag>
+        <tag>Yii2</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[CakePHP 3.6.5 发布，Bug 修复]]></title>
     <url>%2F2018%2F06%2F11%2FCakePHP-3-6-5-%E5%8F%91%E5%B8%83%EF%BC%8CBug-%E4%BF%AE%E5%A4%8D%2F</url>
     <content type="text"><![CDATA[PHP 开发框架 CakePHP 3.6.5 发布，这是 3.6 版本分支的维护版本，修复了几个社区报告的问题。更新内容： Improved deprecation warning text. Plugin::load() now uses concrete plugin classes if a plugin has adopted new style plugins. The mimetype for .bmp was added to Response. Plugin::routes() had a deprecation warning added. This method is no longer necessary when using an Application class. Missing deprecation warnings were added to Response. IntegrationTestCase once again accepts array URLs when generating requests. Email messages no correctly word-wrap multi-byte characters. Http\Client restores the error handler after a socket error. AppShell is now included in the list of auto-discovered shells. ConsoleIntegrationTestCase now catches StopException and sets the test case exitCode property accordingly. Cell::__debugInfo() no longer emits a notice error. Pagination metadata now includes the start &amp; end record numbers. The Model.afterSaveCommit event always recieves an ArrayObject for $options now. 下载地址： cakephp-3-6-5.zip Source code (zip) Source code (tar.gz)]]></content>
