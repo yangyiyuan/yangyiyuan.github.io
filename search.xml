@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Swoole 4.0 正式版发布，面向生产环境的 PHP 协程引擎]]></title>
+    <url>%2F2018%2F06%2F15%2FSwoole-4-0-%E6%AD%A3%E5%BC%8F%E7%89%88%E5%8F%91%E5%B8%83%EF%BC%8C%E9%9D%A2%E5%90%91%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83%E7%9A%84-PHP-%E5%8D%8F%E7%A8%8B%E5%BC%95%E6%93%8E%2F</url>
+    <content type="text"><![CDATA[Swoole虽然在2016年就支持了协程特性，但由于底层是基于setjmp/longjmp实现的stackless方案。因此在某些场景下，如call_user_func、array_map、__destruct中无法使用协程。大型应用程序中逻辑非常复杂，多人协作的团队中，开发者很容易踩到坑。在禁止场景中使用协程API会出现各种莫名其妙的问题发生。限制了协程的应用范围。 新版本4.0基于boost.context 1.60汇编代码实现了全新的协程内核。在保存PHP函数调用栈的基础上，增加了C栈的上下文存储。实现了对所有PHP语法的支持。现在在任意PHP的函数，包括call_user_func、反射、魔术方法、array_map中均可使用协程。现在可以在PHP代码中任意位置使用协程，开发者不再需要担心使用场景问题。4.0版本我们与SwooleDistributed/Swoft/EasySwoole等框架作者进行了紧密合作，在大量项目中进行了灰度试用。稳定性和健壮性均已达到工业级的水准。完全可用于大型项目的生产环境中。123456789go(function() &#123; array_map(&quot;test&quot;, array(&quot;func start\n&quot;)); echo &quot;co end\n&quot;;&#125;); function test($p) &#123; echo $p; co::sleep(1); echo &quot;func end \n&quot;;&#125; 4.0分支使用了C++11标准，建议使用gcc-4.8或更高版本。 全局变量隔离新版本中底层对全局变量进行了隔离，现在可以使用Swoole\Process创建多个Swoole\Server实例了。12345678910111213141516for ($i = 0; $i &lt; 2; $i++)&#123; $p = new swoole_process(function () use ($i) &#123; $port = 9501 + $i; $http = new swoole_http_server(&quot;127.0.0.1&quot;, $port); $http-&gt;on(&quot;start&quot;, function ($server) use ($port) &#123; echo &quot;Swoole http server is started at http://127.0.0.1:&#123;$port&#125;\n&quot;; &#125;); $http-&gt;on(&quot;request&quot;, function ($request, $response) &#123; $response-&gt;header(&quot;Content-Type&quot;, &quot;text/plain&quot;); $response-&gt;end(&quot;Hello World\n&quot;); &#125;); $http-&gt;start(); &#125;, false, false); $p-&gt;start();&#125; 其他更新 修复http2服务器无法向Chrome浏览器客户端发送超过16K数据的问题 修复BASE模式下Task进程无法重启的问题 增加Channel-&gt;peek方法，用于窥视数据 修复Server-&gt;pause/resume在SWOOLE_PROCESS下无法使用的问题 移除Linux AIO，现在无论如何设置都使用线程池实现异步文件IO 支持MySQL存储过程 下载 4.0 GITHUB：https://github.com/swoole/swoole-src/releases/tag/v4.0.0 开源中国：https://gitee.com/swoole/swoole/tree/v4.0.0/ PECL：https://pecl.php.net/package/swoole/4.0.0]]></content>
+      <categories>
+        <category>PHP</category>
+        <category>Swoole</category>
+      </categories>
+      <tags>
+        <tag>PHP</tag>
+        <tag>Swoole</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[yii2 3.0.0-alpha1 发布，高性能 PHP 框架]]></title>
     <url>%2F2018%2F06%2F12%2Fyii2-3-0-0-alpha1-%E5%8F%91%E5%B8%83%EF%BC%8C%E9%AB%98%E6%80%A7%E8%83%BD-PHP-%E6%A1%86%E6%9E%B6%2F</url>
     <content type="text"><![CDATA[yii2 3.0.0-alpha1 发布了。Yii 2 完全根据 Yii 1.1 版本重写，后者是最流行的 PHP 框架之一。Yii 2 继承了 Yii 的简洁、快速、和高扩展性。Yii 2 需要 PHP 5.4，并且拥有现代 Web 应用开发中最好的实例和协议。更新内容： Bug #16065: Remove using date.timezone at yii\base\Application, use date_default_timezone_get() instead (sashsvamir) Bug #12539: yii\filters\ContentNegotiator now generates 406 ‘Not Acceptable’ instead of 415 ‘Unsupported Media Type’ on content-type negotiation fail (PowerGamer1) Bug #14458: Fixed yii\filters\VerbFilter uses case-insensitive comparison for the HTTP method name (klimov-paul) Enh #879: Caching implementation refactored according to PSR-16 ‘Simple Cache’ specification (klimov-paul) Enh #11328: Added support for PSR-7 ‘HTTP Message’ (klimov-paul) 完整更新内容请查看 ChangeLog。 下载地址： Source code (zip) Source code (tar.gz)]]></content>
@@ -1098,8 +1111,8 @@
         <category>python</category>
       </categories>
       <tags>
-        <tag>python</tag>
         <tag>Mac</tag>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
