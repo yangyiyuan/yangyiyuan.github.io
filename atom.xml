@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.iooeo.com/"/>
-  <updated>2018-06-15T01:29:05.931Z</updated>
+  <updated>2018-06-19T02:15:48.047Z</updated>
   <id>http://www.iooeo.com/</id>
   
   <author>
@@ -14,6 +14,44 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>HHVM 3.27.0 LTS 发布，改进性能和对 IDE 的支持</title>
+    <link href="http://www.iooeo.com/2018/06/19/HHVM-3-27-0-LTS-%E5%8F%91%E5%B8%83%EF%BC%8C%E6%94%B9%E8%BF%9B%E6%80%A7%E8%83%BD%E5%92%8C%E5%AF%B9-IDE-%E7%9A%84%E6%94%AF%E6%8C%81/"/>
+    <id>http://www.iooeo.com/2018/06/19/HHVM-3-27-0-LTS-发布，改进性能和对-IDE-的支持/</id>
+    <published>2018-06-19T02:13:56.000Z</published>
+    <updated>2018-06-19T02:15:48.047Z</updated>
+    
+    <content type="html"><![CDATA[<p>HHVM 是 Facebook 推出的用来执行 PHP 代码的虚拟机，它是一个 PHP 的 JIT(Just-In-Time) 编译器，同时具有产生快速代码和即时编译的优点。<br><a id="more"></a><br>HHVM 3.27.0 已发布，这是最新的  LTS 版本，并包含性能、IDE、类型检查器和一些其他改进：</p>
+<ul>
+<li>HackC 现在是唯一受支持的前端；遗留的分析器仍然包含在内，但已不受支持，预计将在 3.28 中被彻底删除；</li>
+<li>移除对 XDebug 的支持；</li>
+<li>删除 ODBC 扩展；</li>
+<li>向 .hhconfig 添加 forward_compatibility_level 选项以使管理升级变得更容易；</li>
+<li>改进 HackC 中的 PHP 支持；</li>
+<li>当在 .hhconfig 中设置 disallow_unsafe_comparisons = true 时，不允许在 Hack 代码中的不兼容类型之间进行比较；</li>
+<li>当在 .hhconfig 中设置 disallow_non_arraykey_keys = true 时，强制在 Hack 代码中使用容器密钥。</li>
+</ul>
+<p>完整更新内容请查阅发行说明：</p>
+<ul>
+<li><a href="https://hhvm.com/blog/2018/06/18/hhvm-3.27.0.html" target="_blank" rel="noopener">https://hhvm.com/blog/2018/06/18/hhvm-3.27.0.html</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;HHVM 是 Facebook 推出的用来执行 PHP 代码的虚拟机，它是一个 PHP 的 JIT(Just-In-Time) 编译器，同时具有产生快速代码和即时编译的优点。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
+    
+    
+      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
+    
+      <category term="HHVM" scheme="http://www.iooeo.com/tags/HHVM/"/>
+    
+  </entry>
   
   <entry>
     <title>Swoole 4.0 正式版发布，面向生产环境的 PHP 协程引擎</title>
@@ -931,57 +969,6 @@
       <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
     
       <category term="Symfony" scheme="http://www.iooeo.com/tags/Symfony/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ThinkPHP 5.0.19&amp;5.1.12 版本发布 — 祝大家劳动节快乐！</title>
-    <link href="http://www.iooeo.com/2018/04/27/ThinkPHP-5-0-19-5-1-12-%E7%89%88%E6%9C%AC%E5%8F%91%E5%B8%83-%E2%80%94-%E7%A5%9D%E5%A4%A7%E5%AE%B6%E5%8A%B3%E5%8A%A8%E8%8A%82%E5%BF%AB%E4%B9%90%EF%BC%81/"/>
-    <id>http://www.iooeo.com/2018/04/27/ThinkPHP-5-0-19-5-1-12-版本发布-—-祝大家劳动节快乐！/</id>
-    <published>2018-04-27T06:56:38.000Z</published>
-    <updated>2018-04-27T07:00:22.787Z</updated>
-    
-    <content type="html"><![CDATA[<p>官方发布了V5.0.19和V5.1.12两个版本（均为无缝升级），提前祝大家五一节日快乐！<br><a id="more"></a></p>
-<h2 id="V5-0-19"><a href="#V5-0-19" class="headerlink" title="V5.0.19"></a>V5.0.19</h2><p>该版本属于改进版本，主要改进了主从查询的及时性，和composer自动加载及内置模板引擎的一处可能的安全隐患，支持上一个版本无缝升级。</p>
-<h3 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h3><ul>
-<li>改进composer自动加载</li>
-<li>改进模板引擎一处安全隐患</li>
-<li>改进comment方法解析</li>
-<li>改进分布式写入数据后及时读取的问题</li>
-<li>改进url操作方法的自动转换</li>
-<li>改进分页类魔术方法的返回值</li>
-<li>SQL日志增加主从标记</li>
-</ul>
-<p>官方<a href="https://www.kancloud.cn/manual/thinkphp5/content" target="_blank" rel="noopener">完全开发手册</a>内容已经同步更新。</p>
-<h2 id="V5-1-12"><a href="#V5-1-12" class="headerlink" title="V5.1.12"></a>V5.1.12</h2><p>该版本主要改进了主从查询的及时性，并支持动态设置请求数据，支持上一个版本无缝升级。</p>
-<h3 id="更新日志-1"><a href="#更新日志-1" class="headerlink" title="更新日志"></a>更新日志</h3><ul>
-<li>Request类支持动态设置请求数据</li>
-<li>改进<code>comment</code>方法解析</li>
-<li>修正App类<code>__unset</code>方法</li>
-<li>改进url生成的域名绑定</li>
-<li>改进主从查询的及时性</li>
-<li>修正<code>value</code>的数据缓存功能</li>
-<li>改进分页类的集合对象方法调用</li>
-<li>改进Db类的代码提示</li>
-<li>SQL日志增加主从标记</li>
-</ul>
-<p>官方<a href="https://www.kancloud.cn/manual/thinkphp5_1/content" target="_blank" rel="noopener">完全开发手册</a>内容已经同步更新。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;官方发布了V5.0.19和V5.1.12两个版本（均为无缝升级），提前祝大家五一节日快乐！&lt;br&gt;
-    
-    </summary>
-    
-      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
-    
-      <category term="ThinkPHP" scheme="http://www.iooeo.com/categories/PHP/ThinkPHP/"/>
-    
-    
-      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
-    
-      <category term="ThinkPHP" scheme="http://www.iooeo.com/tags/ThinkPHP/"/>
     
   </entry>
   
