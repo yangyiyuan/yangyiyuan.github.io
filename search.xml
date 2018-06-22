@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[PHP 7.2.7 和 7.3.0 alpha 2 发布，包含大量修复]]></title>
+    <url>%2F2018%2F06%2F22%2FPHP-7-2-7-%E5%92%8C-7-3-0-alpha-2-%E5%8F%91%E5%B8%83%EF%BC%8C%E5%8C%85%E5%90%AB%E5%A4%A7%E9%87%8F%E4%BF%AE%E5%A4%8D%2F</url>
+    <content type="text"><![CDATA[PHP 7.2.7 已发布，这是一个 bug 修复版本，内容包括：Core: Fixed bug #76337 (segfault when opcache enabled + extension use zend_register_class_alias). CLI Server: Fixed bug #76333 (PHP built-in server does not find files if root path contains special characters). OpenSSL: Fixed bug #76296 (openssl_pkey_get_public does not respect open_basedir). Fixed bug #76174 (openssl extension fails to build with LibreSSL 2.7). SPL: Fixed bug #76367 (NoRewindIterator segfault 11). Standard: Fixed bug #76410 (SIGV in zend_mm_alloc_small). Fixed bug #76335 (“link(): Bad file descriptor” with non-ASCII path). 下载地址：http://www.php.net/downloads.php 同时发布的还有 PHP 7.3.0alpha2，更新细节可查阅： https://github.com/php/php-src/blob/php-7.3.0alpha2/NEWS]]></content>
+      <categories>
+        <category>PHP</category>
+      </categories>
+      <tags>
+        <tag>PHP</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[ThinkPHP 5.1.17 版本发布 —— 增加控制器中间件]]></title>
     <url>%2F2018%2F06%2F19%2FThinkPHP-5-1-17-%E7%89%88%E6%9C%AC%E5%8F%91%E5%B8%83-%E2%80%94%E2%80%94-%E5%A2%9E%E5%8A%A0%E6%8E%A7%E5%88%B6%E5%99%A8%E4%B8%AD%E9%97%B4%E4%BB%B6%2F</url>
     <content type="text"><![CDATA[该版本主要增加了控制器中间件的支持，改进了路由功能，并且修正了社区反馈的一些问题。支持上一个版本无缝更新~ 更新日志 修正软删除的delete方法 修正Query类Count方法 改进多对多detach方法 改进Request类Session方法 增加控制器中间件支持 模型类增加jsonAssoc属性用于定义json数据是否返回数组 修正Request类method方法请求伪装 改进静态路由的匹配 分组首页路由自动完整匹配 改进sqlsrv的column方法 日志类的apart_level配置支持true自动生成对应类型的日志文件 改进204输出判断 修正cli下页面输出的BUG 验证类使用更高效的ctype验证机制 改进Request类cookie方法 修正软删除的withTrashed方法 改进多态一对多的预载入查询 改进Query类column方法的缓存读取 Query类增加whereBetweenTimeField方法 改进分组下多个相同路由规则的合并匹配问题 路由类增加getRule/getRuleList方法获取定义的路由 官方完全开发手册已经同步更新!]]></content>

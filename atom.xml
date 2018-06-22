@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.iooeo.com/"/>
-  <updated>2018-06-19T05:34:03.377Z</updated>
+  <updated>2018-06-22T01:24:43.255Z</updated>
   <id>http://www.iooeo.com/</id>
   
   <author>
@@ -14,6 +14,53 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PHP 7.2.7 和 7.3.0 alpha 2 发布，包含大量修复</title>
+    <link href="http://www.iooeo.com/2018/06/22/PHP-7-2-7-%E5%92%8C-7-3-0-alpha-2-%E5%8F%91%E5%B8%83%EF%BC%8C%E5%8C%85%E5%90%AB%E5%A4%A7%E9%87%8F%E4%BF%AE%E5%A4%8D/"/>
+    <id>http://www.iooeo.com/2018/06/22/PHP-7-2-7-和-7-3-0-alpha-2-发布，包含大量修复/</id>
+    <published>2018-06-22T01:23:12.000Z</published>
+    <updated>2018-06-22T01:24:43.255Z</updated>
+    
+    <content type="html"><![CDATA[<p>PHP 7.2.7 已发布，这是一个 bug 修复版本，内容包括：<br><a id="more"></a><br>Core:</p>
+<ul>
+<li>Fixed bug #76337 (segfault when opcache enabled + extension use zend_register_class_alias).</li>
+</ul>
+<p>CLI Server:</p>
+<ul>
+<li>Fixed bug #76333 (PHP built-in server does not find files if root path contains special characters).</li>
+</ul>
+<p>OpenSSL:</p>
+<ul>
+<li>Fixed bug #76296 (openssl_pkey_get_public does not respect open_basedir).</li>
+<li>Fixed bug #76174 (openssl extension fails to build with LibreSSL 2.7).</li>
+</ul>
+<p>SPL:</p>
+<ul>
+<li>Fixed bug #76367 (NoRewindIterator segfault 11).</li>
+</ul>
+<p>Standard:</p>
+<ul>
+<li>Fixed bug #76410 (SIGV in zend_mm_alloc_small).</li>
+<li>Fixed bug #76335 (“link(): Bad file descriptor” with non-ASCII path).</li>
+</ul>
+<p>下载地址：<a href="http://www.php.net/downloads.php" target="_blank" rel="noopener">http://www.php.net/downloads.php</a></p>
+<p>同时发布的还有 PHP 7.3.0alpha2，更新细节可查阅：</p>
+<p><a href="https://github.com/php/php-src/blob/php-7.3.0alpha2/NEWS" target="_blank" rel="noopener">https://github.com/php/php-src/blob/php-7.3.0alpha2/NEWS</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;PHP 7.2.7 已发布，这是一个 bug 修复版本，内容包括：&lt;br&gt;
+    
+    </summary>
+    
+      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
+    
+    
+      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
+    
+  </entry>
   
   <entry>
     <title>ThinkPHP 5.1.17 版本发布 —— 增加控制器中间件</title>
@@ -931,41 +978,6 @@
     <summary type="html">
     
       &lt;p&gt;前边安装采用了adminLte后台模板和menu配置之后出现了一个问题，就是点击相关controller的create、update、view这些action的时候不能定位到index的模块，左侧的二级菜单导航不能正常的展开定位高亮，下面说一下原因及解决办法。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
-    
-      <category term="Yii2" scheme="http://www.iooeo.com/categories/PHP/Yii2/"/>
-    
-    
-      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
-    
-      <category term="Yii2" scheme="http://www.iooeo.com/tags/Yii2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Yii2 modules模块路由美化</title>
-    <link href="http://www.iooeo.com/2018/05/04/Yii2-modules%E6%A8%A1%E5%9D%97%E8%B7%AF%E7%94%B1%E7%BE%8E%E5%8C%96/"/>
-    <id>http://www.iooeo.com/2018/05/04/Yii2-modules模块路由美化/</id>
-    <published>2018-05-04T02:12:57.000Z</published>
-    <updated>2018-05-04T02:26:56.941Z</updated>
-    
-    <content type="html"><![CDATA[<p>最近在写项目的时候为了降低项目的耦合度，很多模块都独立出来一个模块（modules）。<br><a id="more"></a><br>随之带来了几个问题</p>
-<h2 id="问题一"><a href="#问题一" class="headerlink" title="问题一"></a>问题一</h2><blockquote>
-<p>modules配置增加</p>
-</blockquote>
-<p>采用了单独文件(modules.php)维护:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">$modules = [</div><div class="line">    &apos;base&apos; =&gt; [</div><div class="line">        &apos;class&apos; =&gt; &apos;api\modules\base\Module&apos;,</div><div class="line">    ],</div><div class="line">    &apos;user&apos; =&gt; [</div><div class="line">        &apos;class&apos; =&gt; &apos;api\modules\user\Module&apos;,</div><div class="line">    ],</div><div class="line">    &apos;admin&apos; =&gt; [</div><div class="line">        &apos;class&apos; =&gt; &apos;mdm\admin\Module&apos;,</div><div class="line">    ],</div><div class="line">    &apos;system&apos; =&gt; [</div><div class="line">        &apos;class&apos; =&gt; &apos;api\modules\system\Module&apos;,</div><div class="line">    ]</div><div class="line">];</div><div class="line">return $modules;</div></pre></td></tr></table></figure></p>
-<h2 id="问题二"><a href="#问题二" class="headerlink" title="问题二"></a>问题二</h2><blockquote>
-<p>modules增加了以后对应的命名空间也多了起来，路由看起来就不太美丽了。</p>
-</blockquote>
-<p>解决方案采用了配置路由是controller加key的方案。配置好了以后就由原来的<br><code>/system/systems/startup-config</code>改为了<code>/system/startup-config</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">$rules = [</div><div class="line">    [</div><div class="line">        &apos;class&apos; =&gt; &apos;yii\rest\UrlRule&apos;,</div><div class="line">        &apos;controller&apos; =&gt; [&apos;system&apos; =&gt; &apos;system/system&apos;],</div><div class="line">        &apos;extraPatterns&apos; =&gt; [</div><div class="line">            &apos;GET startup-config&apos; =&gt; &apos;startup-config&apos;,</div><div class="line">        ]</div><div class="line">    ],</div><div class="line">];</div><div class="line">return $rules;</div></pre></td></tr></table></figure></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;最近在写项目的时候为了降低项目的耦合度，很多模块都独立出来一个模块（modules）。&lt;br&gt;
     
     </summary>
     
