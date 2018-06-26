@@ -95,7 +95,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="PHP,Swoole," />
+  <meta name="keywords" content="python," />
 
 
 
@@ -113,18 +113,25 @@
 
 
 
-<meta name="description" content="I/O即Input/Output,输入和输出的意思。在计算机的世界里，涉及到数据交换的地方，比如磁盘、网络等，就需要I/O接口。">
-<meta name="keywords" content="PHP,Swoole">
+<meta name="description" content="Day01 - 初识PythonPython简介Python的历史 1989年圣诞节：Guido von Rossum开始写Python语言的编译器。 1991年2月：第一个Python编译器（同时也是解释器）诞生，它是用C语言实现的（后面又出现了Java和C#实现的版本Jython和IronPython，以及PyPy、Brython、Pyston等其他实现），可以调用C语言的库函数。在最早的版本">
+<meta name="keywords" content="python">
 <meta property="og:type" content="article">
-<meta property="og:title" content=" swoole I&#x2F;O 模型">
-<meta property="og:url" content="http://www.iooeo.com/2017/07/31/swoole-I-O-模型/index.html">
+<meta property="og:title" content="Day01 - 初识Python">
+<meta property="og:url" content="http://www.iooeo.com/2018/06/26/Day01-初识Python/index.html">
 <meta property="og:site_name" content="Ewan&#39;s Blog">
-<meta property="og:description" content="I/O即Input/Output,输入和输出的意思。在计算机的世界里，涉及到数据交换的地方，比如磁盘、网络等，就需要I/O接口。">
+<meta property="og:description" content="Day01 - 初识PythonPython简介Python的历史 1989年圣诞节：Guido von Rossum开始写Python语言的编译器。 1991年2月：第一个Python编译器（同时也是解释器）诞生，它是用C语言实现的（后面又出现了Java和C#实现的版本Jython和IronPython，以及PyPy、Brython、Pyston等其他实现），可以调用C语言的库函数。在最早的版本">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-07-31T09:04:44.000Z">
+<meta property="og:image" content="http://ogpq2zwg5.bkt.clouddn.com/python-idle.png">
+<meta property="og:image" content="http://ogpq2zwg5.bkt.clouddn.com/python-ipython.png">
+<meta property="og:image" content="http://ogpq2zwg5.bkt.clouddn.com/python-jupyter-1.png">
+<meta property="og:image" content="http://ogpq2zwg5.bkt.clouddn.com/python-jupyter-2.png">
+<meta property="og:image" content="http://ogpq2zwg5.bkt.clouddn.com/python-sublime.png">
+<meta property="og:image" content="http://ogpq2zwg5.bkt.clouddn.com/python-pycharm.png">
+<meta property="og:updated_time" content="2018-06-26T09:28:51.738Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content=" swoole I&#x2F;O 模型">
-<meta name="twitter:description" content="I/O即Input/Output,输入和输出的意思。在计算机的世界里，涉及到数据交换的地方，比如磁盘、网络等，就需要I/O接口。">
+<meta name="twitter:title" content="Day01 - 初识Python">
+<meta name="twitter:description" content="Day01 - 初识PythonPython简介Python的历史 1989年圣诞节：Guido von Rossum开始写Python语言的编译器。 1991年2月：第一个Python编译器（同时也是解释器）诞生，它是用C语言实现的（后面又出现了Java和C#实现的版本Jython和IronPython，以及PyPy、Brython、Pyston等其他实现），可以调用C语言的库函数。在最早的版本">
+<meta name="twitter:image" content="http://ogpq2zwg5.bkt.clouddn.com/python-idle.png">
 
 
 
@@ -152,13 +159,13 @@
 
 
 
-  <link rel="canonical" href="http://www.iooeo.com/2017/07/31/swoole-I-O-模型/"/>
+  <link rel="canonical" href="http://www.iooeo.com/2018/06/26/Day01-初识Python/"/>
 
 
 
 
 
-  <title> swoole I/O 模型 | Ewan's Blog</title>
+  <title>Day01 - 初识Python | Ewan's Blog</title>
   
 
 
@@ -361,7 +368,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://www.iooeo.com/2017/07/31/swoole-I-O-模型/">
+    <link itemprop="mainEntityOfPage" href="http://www.iooeo.com/2018/06/26/Day01-初识Python/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Ewan">
@@ -378,7 +385,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline"> swoole I/O 模型</h1>
+          <h1 class="post-title" itemprop="name headline">Day01 - 初识Python</h1>
         
 
         <div class="post-meta">
@@ -390,8 +397,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-31T16:49:12+08:00">
-                2017-07-31
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-26T17:09:41+08:00">
+                2018-06-26
               </time>
             
 
@@ -413,19 +420,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/PHP/" itemprop="url" rel="index">
-                    <span itemprop="name">PHP</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/PHP/Swoole/" itemprop="url" rel="index">
-                    <span itemprop="name">Swoole</span>
+                  <a href="/categories/python/" itemprop="url" rel="index">
+                    <span itemprop="name">python</span>
                   </a>
                 </span>
 
@@ -443,8 +439,8 @@
                 <i class="fa fa-comment-o"></i>
               </span>
               
-                <a href="/2017/07/31/swoole-I-O-模型/#SOHUCS" itemprop="discussionUrl">
-                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2017/07/31/swoole-I-O-模型/" itemprop="commentsCount"></span>
+                <a href="/2018/06/26/Day01-初识Python/#SOHUCS" itemprop="discussionUrl">
+                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2018/06/26/Day01-初识Python/" itemprop="commentsCount"></span>
                 </a>
               
             
@@ -452,7 +448,7 @@
 
           
           
-             <span id="/2017/07/31/swoole-I-O-模型/" class="leancloud_visitors" data-flag-title=" swoole I/O 模型">
+             <span id="/2018/06/26/Day01-初识Python/" class="leancloud_visitors" data-flag-title="Day01 - 初识Python">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -480,19 +476,103 @@
       
 
       
-        <p>I/O即Input/Output,输入和输出的意思。在计算机的世界里，涉及到数据交换的地方，比如磁盘、网络等，就需要I/O接口。<br><a id="more"></a><br>通常，I/O是相对的。比如说你打开浏览器，通过网络I/O获取我们网站的网页，浏览器首先会往服务器发送请求，这是一个Output操作，随后服务器给浏览器返回信息，这就是一个Input操作。以上都是基于浏览器而言。但是，有些操作就比较特殊。比如程序在运行时，数据被加载在内存中，通过程序往磁盘写数据，对内存而言，这就是单方面的的Output。<br>I/O模型通常有很多种，我们简单介绍下同步I/O和异步I/O。</p>
-<h2 id="同步I-O"><a href="#同步I-O" class="headerlink" title="同步I/O"></a>同步I/O</h2><ul>
-<li>实际上我们刚刚介绍的浏览器请求服务器的过程正是同步I/O的例子。</li>
-<li>那我们再比如，假设我们要通过程序往磁盘写大量的数据，如果没有磁盘I/O操作，php程序在内存中执行的速度是非常快的，但是磁盘写数据的过程相对而言就是漫长的，CPU就需要等待磁盘I/O操作之后才能继续执行其他代码，像上面这两种情况，我们都称之为同步I/O。</li>
+        <h2 id="Day01-初识Python"><a href="#Day01-初识Python" class="headerlink" title="Day01 - 初识Python"></a>Day01 - 初识Python</h2><h3 id="Python简介"><a href="#Python简介" class="headerlink" title="Python简介"></a>Python简介</h3><h4 id="Python的历史"><a href="#Python的历史" class="headerlink" title="Python的历史"></a>Python的历史</h4><ol>
+<li>1989年圣诞节：Guido von Rossum开始写Python语言的编译器。</li>
+<li>1991年2月：第一个Python编译器（同时也是解释器）诞生，它是用C语言实现的（后面又出现了Java和C#实现的版本Jython和IronPython，以及PyPy、Brython、Pyston等其他实现），可以调用C语言的库函数。在最早的版本中，Python已经提供了对“类”，“函数”，“异常处理”等构造块的支持，同时提供了“列表”和“字典”等核心数据类型，同时支持以模块为基础的拓展系统。</li>
+<li>1994年1月：Python 1.0正式发布。</li>
+<li>2000年10月16日：Python 2.0发布，增加了实现完整的<a href="https://zh.wikipedia.org/wiki/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6_(%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%91%E5%AD%B8" target="_blank" rel="noopener">垃圾回收</a>)，并且支持<a href="https://zh.wikipedia.org/wiki/Unicode" target="_blank" rel="noopener">Unicode</a>。与此同时，Python的整个开发过程更加透明，社区对开发进度的影响逐渐扩大，生态圈开始慢慢形成。</li>
+<li>2008年12月3日：Python 3.0发布，此版不完全兼容之前的Python代码，不过很多新特性后来也被移植到旧的Python 2.6/2.7版本，因为目前还有公司在项目和运维中使用Python 2.x版本的代码。</li>
+</ol>
+<p>目前我们使用的Python 3.6.x的版本是在2016年的12月23日发布的，Python的版本号分为三段，形如A.B.C。其中A表示大版本号，一般当整体重写，或出现不向后兼容的改变时，增加A；B表示功能更新，出现新功能时增加B；C表示小的改动（如修复了某个Bug），只要有修改就增加C。如果对Python的历史感兴趣，可以查看一篇名为<a href="http://www.cnblogs.com/vamei/archive/2013/02/06/2892628.html" target="_blank" rel="noopener">《Python简史》</a>的博文。</p>
+<a id="more"></a>
+<h4 id="Python的优缺点"><a href="#Python的优缺点" class="headerlink" title="Python的优缺点"></a>Python的优缺点</h4><p>Python的优点很多，简单的可以总结为以下几点。</p>
+<ol>
+<li>简单和明确，做一件事只有一种方法。</li>
+<li>学习曲线低，与其他很多语言比上手更容易。</li>
+<li>开放源代码，拥有强大的社区和生态圈。</li>
+<li>解释型语言，完美的平台可移植性。</li>
+<li>支持两种主流的编程范式，可以使用面向对象和函数式编程。</li>
+<li>可扩展性和可嵌入性，可以调用C/C++代码也可以在C/C++中调用。</li>
+<li>代码规范程度高，可读性强，适合有代码洁癖和强迫症的人群。</li>
+</ol>
+<p>Python的缺点主要集中在以下几点。</p>
+<ol>
+<li>执行效率低下，因此计算密集型任务可以由C/C++编写。</li>
+<li>代码无法加密，但是现在的公司很多都不是卖软件而是卖服务，这个问题慢慢会淡化。</li>
+<li>在开发时可以选择的框架太多，有选择的地方就有错误。</li>
+</ol>
+<h4 id="Python的应用领域"><a href="#Python的应用领域" class="headerlink" title="Python的应用领域"></a>Python的应用领域</h4><p>目前Python在云基础设施、DevOps、网络爬虫开发、数据分析挖掘、机器学习等领域都有着广泛的应用，因此也产生了服务器开发、数据接口开发、自动化运维、科学计算和数据可视化、聊天机器人开发、图像识别和处理等一系列的职位。</p>
+<h3 id="搭建编程环境"><a href="#搭建编程环境" class="headerlink" title="搭建编程环境"></a>搭建编程环境</h3><h4 id="Windows环境"><a href="#Windows环境" class="headerlink" title="Windows环境"></a>Windows环境</h4><p>可以在<a href="https://www.python.org" target="_blank" rel="noopener">Python的官方网站</a>下载到Python的Windows安装程序（exe文件），需要注意的是如果在Windows 7环境下安装需要先安装Service Pack 1补丁包（可以通过一些工具软件自动安装系统补丁的功能来安装），安装过程建议勾选“Add Python 3.6 to PATH”（将Python 3.6添加到PATH环境变量）并选择自定义安装，在设置“Optional Features”界面最好将“pip”、“tcl/tk”、“Python test suite”等项全部勾选上。强烈建议使用自定义的安装路径并保证路径中没有中文。安装完成会看到“Setup was successful”的提示，但是在启动Python环境时可能会因为缺失一些动态链接库文件而导致Python解释器无法运行，常见的问题主要是api-ms-win-crt*.dll缺失以及更新DirectX之后导致某些动态链接库文件缺失，前者可以参照<a href="">《api-ms-win-crt*.dll缺失原因分析和解决方法》</a>一文讲解的方法进行处理或者直接在<a href="https://www.microsoft.com/zh-cn/download/details.aspx?id=48145" target="_blank" rel="noopener">微软官网</a>下载Visual C++ Redistributable for Visual Studio 2015文件进行修复，后者可以下载一个DirectX修复工具进行修复。</p>
+<h4 id="Linux环境"><a href="#Linux环境" class="headerlink" title="Linux环境"></a>Linux环境</h4><p>Linux环境自带了Python 2.x版本，但是如果要更新到3.x的版本，可以在<a href="https://www.python.org" target="_blank" rel="noopener">Python的官方网站</a>下载Python的源代码并通过源代码构建安装的方式进行安装，具体的步骤如下所示。</p>
+<p>安装依赖库（因为没有这些依赖库可能在源代码构件安装时因为缺失底层依赖库而失败）。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum -y install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libpcap-devel xz-devel</div></pre></td></tr></table></figure>
+<p>下载Python源代码并解压缩到指定目录。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">wget https://www.python.org/ftp/python/3.6.1/Python-3.6.1.tar.xz</div><div class="line">xz -d Python-3.6.1.tar.xz</div><div class="line">tar -xvf Python-3.6.1.tar</div></pre></td></tr></table></figure>
+<p>切换至Python源代码目录并执行下面的命令进行配置和安装。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">cd Python-3.6.1</div><div class="line">./configure --prefix=/usr/local/python3.6 --enable-optimizations</div><div class="line">make &amp;&amp; make install</div></pre></td></tr></table></figure>
+<p>创建软链接，这样就可以直接通过python3直接启动Python解释器。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ln -s /usr/local/python3.6/bin/python3 /usr/bin/python3</div></pre></td></tr></table></figure>
+<h4 id="MacOS环境"><a href="#MacOS环境" class="headerlink" title="MacOS环境"></a>MacOS环境</h4><p>MacOS也是自带了Python 2.x版本的，可以通过<a href="https://www.python.org" target="_blank" rel="noopener">Python的官方网站</a>提供的安装文件（pkg文件）安装3.x的版本。默认安装完成后，可以通过在终端执行python命令来启动2.x版本的Python解释器，可以通过执行python3命令来启动3.x版本的Python解释器，当然也可以通过重新设置软链接来修改启动Python解释器的命令。</p>
+<h3 id="从终端运行Python程序"><a href="#从终端运行Python程序" class="headerlink" title="从终端运行Python程序"></a>从终端运行Python程序</h3><h4 id="确认Python的版本"><a href="#确认Python的版本" class="headerlink" title="确认Python的版本"></a>确认Python的版本</h4><p>在终端或命令行提示符中键入下面的命令。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">python --version</div></pre></td></tr></table></figure>
+<p>当然也可以先输入python进入交互式环境，再执行以下的代码检查Python的版本。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> sys</div><div class="line"></div><div class="line">print(sys.version_info)</div><div class="line">print(sys.version)</div></pre></td></tr></table></figure>
+<h4 id="编写Python源代码"><a href="#编写Python源代码" class="headerlink" title="编写Python源代码"></a>编写Python源代码</h4><p>可以用文本编辑工具（推荐使用Sublime、Atom、TextMate、VSCode等高级文本编辑工具）编写Python源代码并将其命名为hello.py保存起来，代码内容如下所示。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">print(<span class="string">'hello, world!'</span>)</div></pre></td></tr></table></figure>
+<h4 id="运行程序"><a href="#运行程序" class="headerlink" title="运行程序"></a>运行程序</h4><p>切换到源代码所在的目录并执行下面的命令，看看屏幕上是否输出了”hello, world!”。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">python hello.py</div></pre></td></tr></table></figure>
+<h3 id="代码中的注释"><a href="#代码中的注释" class="headerlink" title="代码中的注释"></a>代码中的注释</h3><p>注释是编程语言的一个重要组成部分，用于在源代码中解释代码的作用从而增强程序的可读性和可维护性，当然也可以将源代码中不需要参与运行的代码段通过注释来去掉，这一点在调试程序的时候经常用到。注释在随源代码进入预处理器或编译时会被移除，不会在目标代码中保留也不会影响程序的执行结果。</p>
+<ol>
+<li>单行注释 - 以#和空格开头的部分</li>
+<li>多行注释 - 三个引号开头，三个引号结尾</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="string">"""</span></div><div class="line"></div><div class="line">第一个Python程序 - hello, world!</div><div class="line">向伟大的Dennis M. Ritchie先生致敬</div><div class="line"></div><div class="line">Version: 0.1</div><div class="line">Author: 骆昊</div><div class="line">Date: 2018-02-26</div><div class="line"></div><div class="line">"""</div><div class="line"></div><div class="line">print(<span class="string">'hello, world!'</span>)</div><div class="line"><span class="comment"># print("你好,世界！")</span></div><div class="line">print(<span class="string">'你好'</span>, <span class="string">'世界'</span>)</div><div class="line">print(<span class="string">'hello'</span>, <span class="string">'world'</span>, sep=<span class="string">', '</span>, end=<span class="string">'!'</span>)</div><div class="line">print(<span class="string">'goodbye, world'</span>, end=<span class="string">'!\n'</span>)</div></pre></td></tr></table></figure>
+<h3 id="其他工具介绍"><a href="#其他工具介绍" class="headerlink" title="其他工具介绍"></a>其他工具介绍</h3><h4 id="IDLE-自带的集成开发工具"><a href="#IDLE-自带的集成开发工具" class="headerlink" title="IDLE - 自带的集成开发工具"></a>IDLE - 自带的集成开发工具</h4><p>IDLE是安装Python环境时自带的集成开发工具，如下图所示。但是由于IDLE的用户体验并不是那么好所以很少在实际开发中被采用。</p>
+<p><img src="http://ogpq2zwg5.bkt.clouddn.com/python-idle.png" alt=""></p>
+<h4 id="IPython-更好的交互式编程工具"><a href="#IPython-更好的交互式编程工具" class="headerlink" title="IPython - 更好的交互式编程工具"></a>IPython - 更好的交互式编程工具</h4><p>IPython是一种基于Python的交互式解释器。相较于原生的Python Shell，IPython提供了更为强大的编辑和交互功能。可以通过Python的包管理工具pip安装IPython和Jupyter，具体的操作如下所示。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pip install ipython jupyter</div></pre></td></tr></table></figure>
+<p>或者</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">python -m pip install ipython jupyter</div></pre></td></tr></table></figure>
+<p>安装成功后，可以通过下面的ipython命令启动IPython，如下图所示。</p>
+<p><img src="http://ogpq2zwg5.bkt.clouddn.com/python-ipython.png" alt=""></p>
+<p>当然我们也可以通过Jupyter运行名为notebook的项目在浏览器窗口中进行交互式操作。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">jupyter notebook</div></pre></td></tr></table></figure>
+<p><img src="http://ogpq2zwg5.bkt.clouddn.com/python-jupyter-1.png" alt=""></p>
+<p><img src="http://ogpq2zwg5.bkt.clouddn.com/python-jupyter-2.png" alt=""></p>
+<h4 id="Sublime-文本编辑神器"><a href="#Sublime-文本编辑神器" class="headerlink" title="Sublime - 文本编辑神器"></a>Sublime - 文本编辑神器</h4><p><img src="http://ogpq2zwg5.bkt.clouddn.com/python-sublime.png" alt=""></p>
+<ul>
+<li><p>首先可以通过<a href="https://www.sublimetext.com/" target="_blank" rel="noopener">官方网站</a>下载安装程序安装Sublime 3或Sublime 2。</p>
+</li>
+<li><p>安装包管理工具。通过快捷键Ctrl+`或者在View菜单中选择Show Console打开控制台，输入下面的代码。</p>
+<ul>
+<li>Sublime 3</li>
 </ul>
-<p>php本身是单线程的，当php进程被挂起的时候，像上面的读取磁盘数据，往磁盘写数据，在I/O操作之前php代码就没办法继续执行了。<br>因为I/O操作阻塞了当前线程，如果某用户也想从磁盘上读取或者写数据，就需要等待。</p>
-<p>有些人要反驳了，这不对呀，我经历不是这样的，很多人可以同时访问我的网站，这没问题的。<br>这个没必要纠结，php本身是单进程单线程的，用户可以同时访问你的网站实际上是web服务器的功劳。这就是我们之前讨论过的，如何解决多任务的问题。<br>web服务器的进程模型暂时不多讨论，免得懵。<br>如果不考虑web服务器，是不是当前进程一旦阻塞，其他人访问php都会被阻塞啦？答案是肯定的。要解决这个问题，又回到我们一直强调的多进程或者多线程。</p>
-<p>但是，如果为了解决并发问题，系统开启了大量的进程，就像我们之前说的，操作系统在进程或者线程间切换同样会造成CPU大量的开销。有没有更好的解决方案呢？</p>
-<h2 id="异步I-O"><a href="#异步I-O" class="headerlink" title="异步I/O"></a>异步I/O</h2><p>答案就是异步I/O。我们再来强调一遍异步I/O是要解决什么问题的：<em>同一线程内，执行一些耗时的任务时，其他代码是不能继续执行的，要等待该任务操作完之后才可以。</em></p>
-<h2 id="同步I-O和异步I-O区别"><a href="#同步I-O和异步I-O区别" class="headerlink" title="同步I/O和异步I/O区别"></a>同步I/O和异步I/O区别</h2><p>同步I/O模型下，主线程只能被挂起等待，但是在异步I/O模型中，主线程发起I/O指令后，可以继续执行其他指令，没有被挂起，也没有切换线程的操作。由此看来，使用异步I/O明显可以提高了系统性能。</p>
-<blockquote>
-<p>其实I/O模型远不止我们介绍的这两种，有兴趣的可以借助google更深层次的了解一下。</p>
-</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span>  urllib.request,os;pf=<span class="string">'Package Control.sublime-package'</span>;ipp=sublime.installed_packages_path();urllib.request.install_opener(urllib.request.build_opener(urllib.request.ProxyHandler()));open(os.path.join(ipp,pf),<span class="string">'wb'</span>).write(urllib.request.urlopen(<span class="string">'http://sublime.wbond.net/'</span>+pf.replace(<span class="string">' '</span>,<span class="string">'%20'</span>)).read())</div></pre></td></tr></table></figure>
+<ul>
+<li>Sublime 2</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span>  urllib2,os;pf=<span class="string">'Package Control.sublime-package'</span>;ipp=sublime.installed_packages_path();os.makedirs(ipp)ifnotos.path.exists(ipp)elseNone;urllib2.install_opener(urllib2.build_opener(urllib2.ProxyHandler()));open(os.path.join(ipp,pf),<span class="string">'wb'</span>).write(urllib2.urlopen(<span class="string">'http://sublime.wbond.net/'</span>+pf.replace(<span class="string">' '</span>,<span class="string">'%20'</span>)).read());print(<span class="string">'Please restart Sublime Text to finish installation'</span>)</div></pre></td></tr></table></figure>
+</li>
+<li><p>安装插件。通过Preference菜单的Package Control或快捷键Ctrl+Shift+P打开命令面板，在面板中输入Install Package就可以找到安装插件的工具，然后再查找需要的插件。我们推荐大家安装以下几个插件。</p>
+<ul>
+<li>SublimeCodeIntel - 代码自动补全工具插件</li>
+<li>Emmet - 前端开发代码模板插件</li>
+<li>Git - 版本控制工具插件</li>
+<li>Python PEP8 Autoformat - PEP8规范自动格式化插件</li>
+<li>ConvertToUTF8 - 将本地编码转换为UTF-8</li>
+</ul>
+</li>
+</ul>
+<h4 id="PyCharm-Python开发神器"><a href="#PyCharm-Python开发神器" class="headerlink" title="PyCharm - Python开发神器"></a>PyCharm - Python开发神器</h4><p>PyCharm的安装、配置和使用我们在后面会进行介绍。</p>
+<p><img src="http://ogpq2zwg5.bkt.clouddn.com/python-pycharm.png" alt=""></p>
+<h3 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h3><ol>
+<li><p>在Python交互环境中下面的代码查看结果并将内容翻译成中文。</p>
+ <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">import this</div><div class="line"></div><div class="line">Beautiful is better than ugly.</div><div class="line">Explicit is better than implicit.</div><div class="line">Simple is better than complex.</div><div class="line">Complex is better than complicated.</div><div class="line">Flat is better than nested.</div><div class="line">Sparse is better than dense.</div><div class="line">Readability counts.</div><div class="line">Special cases aren't special enough to break the rules.</div><div class="line">Although practicality beats purity.</div><div class="line">Errors should never pass silently.</div><div class="line">Unless explicitly silenced.</div><div class="line">In the face of ambiguity, refuse the temptation to guess.</div><div class="line">There should be one-- and preferably only one --obvious way to do it.</div><div class="line">Although that way may not be obvious at first unless you're Dutch.</div><div class="line">Now is better than never.</div><div class="line">Although never is often better than *right* now.</div><div class="line">If the implementation is hard to explain, it's a bad idea.</div><div class="line">If the implementation is easy to explain, it may be a good idea.</div><div class="line">Namespaces are one honking great idea -- let's do more of those!</div></pre></td></tr></table></figure>
+</li>
+<li><p>学习使用turtle在屏幕上绘制图形。</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> turtle</div><div class="line"></div><div class="line">turtle.pensize(<span class="number">4</span>)</div><div class="line">turtle.pencolor(<span class="string">'red'</span>)</div><div class="line">turtle.forward(<span class="number">100</span>)</div><div class="line">turtle.right(<span class="number">90</span>)</div><div class="line">turtle.forward(<span class="number">100</span>)</div><div class="line">turtle.right(<span class="number">90</span>)</div><div class="line">turtle.forward(<span class="number">100</span>)</div><div class="line">turtle.right(<span class="number">90</span>)</div><div class="line">turtle.forward(<span class="number">100</span>)</div><div class="line">turtle.mainloop()</div></pre></td></tr></table></figure>
+</li>
+</ol>
 
       
     </div>
@@ -508,7 +588,7 @@
       
         <div class="copyright">
         <p><span>
-        <b>本文地址：</b><a href="/2017/07/31/swoole-I-O-模型/" title=" swoole I/O 模型">http://www.iooeo.com/2017/07/31/swoole-I-O-模型/</a><br/><b>转载请注明出处，谢谢！</b>
+        <b>本文地址：</b><a href="/2018/06/26/Day01-初识Python/" title="Day01 - 初识Python">http://www.iooeo.com/2018/06/26/Day01-初识Python/</a><br/><b>转载请注明出处，谢谢！</b>
         </span></p>
         </div>
         
@@ -548,9 +628,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/PHP/" rel="tag"># PHP</a>
-          
-            <a href="/tags/Swoole/" rel="tag"># Swoole</a>
+            <a href="/tags/python/" rel="tag"># python</a>
           
         </div>
       
@@ -563,8 +641,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/07/31/swoole-进程与线程篇/" rel="next" title="swoole 进程与线程篇">
-                <i class="fa fa-chevron-left"></i> swoole 进程与线程篇
+              <a href="/2018/06/26/Symfony-4-1-1-发布，PHP-框架与可重用-PHP-组件集/" rel="next" title="Symfony 4.1.1 发布，PHP 框架与可重用 PHP 组件集">
+                <i class="fa fa-chevron-left"></i> Symfony 4.1.1 发布，PHP 框架与可重用 PHP 组件集
               </a>
             
           </div>
@@ -572,10 +650,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/07/31/swoole-网络通讯协议篇/" rel="prev" title="swoole 网络通讯协议篇">
-                swoole 网络通讯协议篇 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -844,7 +918,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#同步I-O"><span class="nav-number">1.</span> <span class="nav-text"><a href="#&#x540C;&#x6B65;I-O" class="headerlink" title="&#x540C;&#x6B65;I/O"></a>&#x540C;&#x6B65;I/O</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#异步I-O"><span class="nav-number">2.</span> <span class="nav-text"><a href="#&#x5F02;&#x6B65;I-O" class="headerlink" title="&#x5F02;&#x6B65;I/O"></a>&#x5F02;&#x6B65;I/O</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#同步I-O和异步I-O区别"><span class="nav-number">3.</span> <span class="nav-text"><a href="#&#x540C;&#x6B65;I-O&#x548C;&#x5F02;&#x6B65;I-O&#x533A;&#x522B;" class="headerlink" title="&#x540C;&#x6B65;I/O&#x548C;&#x5F02;&#x6B65;I/O&#x533A;&#x522B;"></a>&#x540C;&#x6B65;I/O&#x548C;&#x5F02;&#x6B65;I/O&#x533A;&#x522B;</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Day01-初识Python"><span class="nav-number">1.</span> <span class="nav-text"><a href="#Day01-&#x521D;&#x8BC6;Python" class="headerlink" title="Day01 - &#x521D;&#x8BC6;Python"></a>Day01 - &#x521D;&#x8BC6;Python</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Python简介"><span class="nav-number">1.1.</span> <span class="nav-text"><a href="#Python&#x7B80;&#x4ECB;" class="headerlink" title="Python&#x7B80;&#x4ECB;"></a>Python&#x7B80;&#x4ECB;</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Python的历史"><span class="nav-number">1.1.1.</span> <span class="nav-text"><a href="#Python&#x7684;&#x5386;&#x53F2;" class="headerlink" title="Python&#x7684;&#x5386;&#x53F2;"></a>Python&#x7684;&#x5386;&#x53F2;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Python的优缺点"><span class="nav-number">1.1.2.</span> <span class="nav-text"><a href="#Python&#x7684;&#x4F18;&#x7F3A;&#x70B9;" class="headerlink" title="Python&#x7684;&#x4F18;&#x7F3A;&#x70B9;"></a>Python&#x7684;&#x4F18;&#x7F3A;&#x70B9;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Python的应用领域"><span class="nav-number">1.1.3.</span> <span class="nav-text"><a href="#Python&#x7684;&#x5E94;&#x7528;&#x9886;&#x57DF;" class="headerlink" title="Python&#x7684;&#x5E94;&#x7528;&#x9886;&#x57DF;"></a>Python&#x7684;&#x5E94;&#x7528;&#x9886;&#x57DF;</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#搭建编程环境"><span class="nav-number">1.2.</span> <span class="nav-text"><a href="#&#x642D;&#x5EFA;&#x7F16;&#x7A0B;&#x73AF;&#x5883;" class="headerlink" title="&#x642D;&#x5EFA;&#x7F16;&#x7A0B;&#x73AF;&#x5883;"></a>&#x642D;&#x5EFA;&#x7F16;&#x7A0B;&#x73AF;&#x5883;</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Windows环境"><span class="nav-number">1.2.1.</span> <span class="nav-text"><a href="#Windows&#x73AF;&#x5883;" class="headerlink" title="Windows&#x73AF;&#x5883;"></a>Windows&#x73AF;&#x5883;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Linux环境"><span class="nav-number">1.2.2.</span> <span class="nav-text"><a href="#Linux&#x73AF;&#x5883;" class="headerlink" title="Linux&#x73AF;&#x5883;"></a>Linux&#x73AF;&#x5883;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#MacOS环境"><span class="nav-number">1.2.3.</span> <span class="nav-text"><a href="#MacOS&#x73AF;&#x5883;" class="headerlink" title="MacOS&#x73AF;&#x5883;"></a>MacOS&#x73AF;&#x5883;</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#从终端运行Python程序"><span class="nav-number">1.3.</span> <span class="nav-text"><a href="#&#x4ECE;&#x7EC8;&#x7AEF;&#x8FD0;&#x884C;Python&#x7A0B;&#x5E8F;" class="headerlink" title="&#x4ECE;&#x7EC8;&#x7AEF;&#x8FD0;&#x884C;Python&#x7A0B;&#x5E8F;"></a>&#x4ECE;&#x7EC8;&#x7AEF;&#x8FD0;&#x884C;Python&#x7A0B;&#x5E8F;</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#确认Python的版本"><span class="nav-number">1.3.1.</span> <span class="nav-text"><a href="#&#x786E;&#x8BA4;Python&#x7684;&#x7248;&#x672C;" class="headerlink" title="&#x786E;&#x8BA4;Python&#x7684;&#x7248;&#x672C;"></a>&#x786E;&#x8BA4;Python&#x7684;&#x7248;&#x672C;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#编写Python源代码"><span class="nav-number">1.3.2.</span> <span class="nav-text"><a href="#&#x7F16;&#x5199;Python&#x6E90;&#x4EE3;&#x7801;" class="headerlink" title="&#x7F16;&#x5199;Python&#x6E90;&#x4EE3;&#x7801;"></a>&#x7F16;&#x5199;Python&#x6E90;&#x4EE3;&#x7801;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#运行程序"><span class="nav-number">1.3.3.</span> <span class="nav-text"><a href="#&#x8FD0;&#x884C;&#x7A0B;&#x5E8F;" class="headerlink" title="&#x8FD0;&#x884C;&#x7A0B;&#x5E8F;"></a>&#x8FD0;&#x884C;&#x7A0B;&#x5E8F;</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码中的注释"><span class="nav-number">1.4.</span> <span class="nav-text"><a href="#&#x4EE3;&#x7801;&#x4E2D;&#x7684;&#x6CE8;&#x91CA;" class="headerlink" title="&#x4EE3;&#x7801;&#x4E2D;&#x7684;&#x6CE8;&#x91CA;"></a>&#x4EE3;&#x7801;&#x4E2D;&#x7684;&#x6CE8;&#x91CA;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他工具介绍"><span class="nav-number">1.5.</span> <span class="nav-text"><a href="#&#x5176;&#x4ED6;&#x5DE5;&#x5177;&#x4ECB;&#x7ECD;" class="headerlink" title="&#x5176;&#x4ED6;&#x5DE5;&#x5177;&#x4ECB;&#x7ECD;"></a>&#x5176;&#x4ED6;&#x5DE5;&#x5177;&#x4ECB;&#x7ECD;</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#IDLE-自带的集成开发工具"><span class="nav-number">1.5.1.</span> <span class="nav-text"><a href="#IDLE-&#x81EA;&#x5E26;&#x7684;&#x96C6;&#x6210;&#x5F00;&#x53D1;&#x5DE5;&#x5177;" class="headerlink" title="IDLE - &#x81EA;&#x5E26;&#x7684;&#x96C6;&#x6210;&#x5F00;&#x53D1;&#x5DE5;&#x5177;"></a>IDLE - &#x81EA;&#x5E26;&#x7684;&#x96C6;&#x6210;&#x5F00;&#x53D1;&#x5DE5;&#x5177;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#IPython-更好的交互式编程工具"><span class="nav-number">1.5.2.</span> <span class="nav-text"><a href="#IPython-&#x66F4;&#x597D;&#x7684;&#x4EA4;&#x4E92;&#x5F0F;&#x7F16;&#x7A0B;&#x5DE5;&#x5177;" class="headerlink" title="IPython - &#x66F4;&#x597D;&#x7684;&#x4EA4;&#x4E92;&#x5F0F;&#x7F16;&#x7A0B;&#x5DE5;&#x5177;"></a>IPython - &#x66F4;&#x597D;&#x7684;&#x4EA4;&#x4E92;&#x5F0F;&#x7F16;&#x7A0B;&#x5DE5;&#x5177;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Sublime-文本编辑神器"><span class="nav-number">1.5.3.</span> <span class="nav-text"><a href="#Sublime-&#x6587;&#x672C;&#x7F16;&#x8F91;&#x795E;&#x5668;" class="headerlink" title="Sublime - &#x6587;&#x672C;&#x7F16;&#x8F91;&#x795E;&#x5668;"></a>Sublime - &#x6587;&#x672C;&#x7F16;&#x8F91;&#x795E;&#x5668;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#PyCharm-Python开发神器"><span class="nav-number">1.5.4.</span> <span class="nav-text"><a href="#PyCharm-Python&#x5F00;&#x53D1;&#x795E;&#x5668;" class="headerlink" title="PyCharm - Python&#x5F00;&#x53D1;&#x795E;&#x5668;"></a>PyCharm - Python&#x5F00;&#x53D1;&#x795E;&#x5668;</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#练习"><span class="nav-number">1.6.</span> <span class="nav-text"><a href="#&#x7EC3;&#x4E60;" class="headerlink" title="&#x7EC3;&#x4E60;"></a>&#x7EC3;&#x4E60;</span></a></li></ol></li></ol></div>
             
 
           </div>
