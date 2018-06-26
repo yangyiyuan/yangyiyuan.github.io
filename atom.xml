@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.iooeo.com/"/>
-  <updated>2018-06-26T01:47:07.171Z</updated>
+  <updated>2018-06-26T01:52:13.636Z</updated>
   <id>http://www.iooeo.com/</id>
   
   <author>
@@ -14,6 +14,92 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Symfony 4.1.1 发布，PHP 框架与可重用 PHP 组件集</title>
+    <link href="http://www.iooeo.com/2018/06/26/Symfony-4-1-1-%E5%8F%91%E5%B8%83%EF%BC%8CPHP-%E6%A1%86%E6%9E%B6%E4%B8%8E%E5%8F%AF%E9%87%8D%E7%94%A8-PHP-%E7%BB%84%E4%BB%B6%E9%9B%86/"/>
+    <id>http://www.iooeo.com/2018/06/26/Symfony-4-1-1-发布，PHP-框架与可重用-PHP-组件集/</id>
+    <published>2018-06-26T01:48:20.000Z</published>
+    <updated>2018-06-26T01:52:13.636Z</updated>
+    
+    <content type="html"><![CDATA[<p>Symfony 4.1.1 发布了，Symfony 是一款基于 MVC 架构的 PHP 框架。Symfony 致力于减少重复代码的编写，以加速 Web 应用的开发和维护。Symfony 与许多关系型数据库集成的也非常好，成本也较小。此外，Symfony 致力于在企业背景下创建健壮的应用，同时也给予了开发者强大的配置功能：从文件结构到外部目录，几乎所有的东西都可以自定义。Symfony 也捆绑了一些诸如测试、调试、文档生成等额外的工具来满足企业的开发过程。<br><a id="more"></a><br>此次更新主要进行了 bug 修复，内容如下：</p>
+<ul>
+<li>bug #27626 [TwigBundle][DX] Only add the Twig WebLinkExtension if the WebLink component is enabled (@thewilkybarkid)</li>
+<li>bug #27702 [TwigBundle] bump lowest deps to fix issue with “double-colon” controller service refs (@nicolas-grekas)</li>
+<li>bug #27701 [SecurityBundle] Dont throw if “security.http_utils” is not found (@nicolas-grekas)</li>
+<li>bug #27690 [DI] Resolve env placeholder in logs (@ro0NL)</li>
+<li>bug #27687 [HttpKernel] fix argument’s error messages in ServiceValueResolver (@nicolas-grekas)</li>
+<li>bug #27614 [VarDumper] Fix dumping by splitting Server/Connection out of Dumper/ServerDumper (@nicolas-grekas)</li>
+<li>bug #27681 [DI] Avoid leaking unused env placeholders (@ro0NL)</li>
+<li>bug #26534 allow_extra_attributes does not throw an exception as documented (@deviantintegral)</li>
+<li>bug #27664 [FrameworkBundle] Ignore keepQueryParams attribute when generating route redirect (@vudaltsov)</li>
+<li>bug #27668 [Lock] use ‘r+’ for fopen (fixes issue on Solaris) (@fritzmg)</li>
+<li>bug #27669 [Filesystem] fix file lock on SunOS (@fritzmg)</li>
+<li>bug #27662 [HttpKernel] fix handling of nested Error instances (@xabbuh)</li>
+<li>bug #27651 [Messenger] Fixed MessengerPass::guessHandledClasses return type (@massimilianobraglia)</li>
+<li>bug #26845 [Config] Fixing GlobResource when inside phar archive (@vworldat)</li>
+<li>bug #27382 [Form] Fix error when rendering a DateIntervalType form with exactly 0 weeks (@krixon)</li>
+<li>bug #27309 Fix surrogate not using original request (@Toflar)</li>
+<li>bug #27467 [HttpKernel] fix session tracking in surrogate master requests (@nicolas-grekas)</li>
+<li>bug #27632 [HttpFoundation] Ensure RedisSessionHandler::updateTimestamp returns a boolean (@MatTheCat)</li>
+<li>bug #27630 [Validator][Form] Remove BOM in some xlf files (@gautierderuette)</li>
+<li>bug #27596 [Framework][Workflow] Added support for interfaces (@vudaltsov)</li>
+<li>bug #27593 [ProxyManagerBridge] Fixed support of private services (@nicolas-grekas)</li>
+<li>bug #27591 [VarDumper] Fix dumping ArrayObject and ArrayIterator instances (@nicolas-grekas)</li>
+<li>bug #27528 [FrameworkBundle] give access to non-shared services when using test.service_container (@nicolas-grekas)</li>
+<li>bug #27584 Avoid calling eval when there is no script embedded in the toolbar (@stof)</li>
+<li>bug #27581 Fix bad method call with guard authentication + session migration (@weaverryan)</li>
+<li>bug #27576 [Cache] Fix expiry comparisons in array-based pools (@nicolas-grekas)</li>
+<li>bug #27566 [FrameworkBundle] fix for allowing single colon controller notation (@dmaicher)</li>
+<li>bug #27556 Avoiding session migration for stateless firewall UsernamePasswordJsonAuthenticationListener (@weaverryan)</li>
+<li>bug #27452 Avoid migration on stateless firewalls (@weaverryan)</li>
+<li>bug #27568 [DI] Deduplicate generated proxy classes (@nicolas-grekas)</li>
+<li>bug #27511 [Routing] fix matching host patterns, utf8 prefixes and non-capturing groups (@nicolas-grekas)</li>
+<li>bug #27326 [Serializer] deserialize from xml: Fix a collection that contains the only one element (@webnet-fr)</li>
+<li>bug #27562 [HttpKernel] Log/Collect exceptions at prio 0 (@ro0NL)</li>
+<li>bug #27567 [PhpUnitBridge] Fix error on some Windows OS (@Nsbx)</li>
+<li>bug #27357 [Lock] Remove released semaphore (@jderusse)</li>
+<li>bug #27416 TagAwareAdapter over non-binary memcached connections corrupts memcache (@aleksey Prilipko)</li>
+<li>bug #27514 [Debug] Pass previous exception to FatalErrorException (@pmontoya)</li>
+<li>bug #27516 Revert “bug #26138 [HttpKernel] Catch HttpExceptions when templating is not installed (cilefen)” (@nicolas-grekas)</li>
+<li>bug #27501 [FrameworkBundle] Fix test-container on kernel reboot, revert to returning the real container from Client::getContainer() (@nicolas-grekas)</li>
+<li>bug #27472 [DI] Ignore missing tree root nodes on validate (@ro0NL)</li>
+<li>bug #27458 [WebProfilerBundle] fixed getSession when no session has been set deprecation warnings (@GregOriol)</li>
+<li>bug #27318 [Cache] memcache connect should not add duplicate entries on sequential calls (@aleksey Prilipko)</li>
+<li>bug #27498 [Routing] Don’t reorder past variable-length placeholders (@nanocom, @nicolas-grekas)</li>
+<li>bug #27496 [DebugBundle] DebugBundle::registerCommands should be noop (@ogizanagi)</li>
+<li>bug #27485 [BrowserKit] Fix a BC break in Client affecting Panthère (@dunglas)</li>
+<li>bug #27470 [DI] Remove default env type check on validate (@ro0NL)</li>
+<li>bug #27454 [FrameworkBundle][TwigBridge] Fix BC break from strong dependency on CSRF token storage (@tgalopin)</li>
+<li>bug #27389 [Serializer] Fix serializer tries to denormalize null values on nullable properties (@ogizanagi)</li>
+<li>bug #27272 [FrameworkBundle] Change priority of AddConsoleCommandPass to TYPE_BEFORE_REMOVING (@upyx)</li>
+<li>bug #27396 [HttpKernel] fix registering IDE links (@nicolas-grekas)</li>
+<li>bug #26973 [HttpKernel] Set first trusted proxy as REMOTE_ADDR in InlineFragmentRenderer. (@kmadejski)</li>
+<li>bug #27303 [Process] Consider “executable” suffixes first on Windows (@sanmai)</li>
+<li>bug #27297 Triggering RememberMe’s loginFail() when token cannot be created (@weaverryan)</li>
+</ul>
+<p><a href="https://github.com/symfony/symfony/releases/tag/v4.1.1" target="_blank" rel="noopener">发布公告</a></p>
+<p>下载地址：</p>
+<ul>
+<li><a href="https://github.com/symfony/symfony/archive/v4.1.1.zip" target="_blank" rel="noopener">Source code (zip)</a></li>
+<li><a href="https://github.com/symfony/symfony/archive/v4.1.1.tar.gz" target="_blank" rel="noopener">Source code (tar.gz)</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Symfony 4.1.1 发布了，Symfony 是一款基于 MVC 架构的 PHP 框架。Symfony 致力于减少重复代码的编写，以加速 Web 应用的开发和维护。Symfony 与许多关系型数据库集成的也非常好，成本也较小。此外，Symfony 致力于在企业背景下创建健壮的应用，同时也给予了开发者强大的配置功能：从文件结构到外部目录，几乎所有的东西都可以自定义。Symfony 也捆绑了一些诸如测试、调试、文档生成等额外的工具来满足企业的开发过程。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
+    
+    
+      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
+    
+      <category term="Symfony" scheme="http://www.iooeo.com/tags/Symfony/"/>
+    
+  </entry>
   
   <entry>
     <title>CakePHP 3.6.6 发布，bug 修复版本</title>
@@ -962,40 +1048,6 @@
       <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
     
       <category term="Symfony" scheme="http://www.iooeo.com/tags/Symfony/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HHVM 3.26 发布，引入全新 HackC 编译器</title>
-    <link href="http://www.iooeo.com/2018/05/08/HHVM-3-26-%E5%8F%91%E5%B8%83%EF%BC%8C%E5%BC%95%E5%85%A5%E5%85%A8%E6%96%B0-HackC-%E7%BC%96%E8%AF%91%E5%99%A8/"/>
-    <id>http://www.iooeo.com/2018/05/08/HHVM-3-26-发布，引入全新-HackC-编译器/</id>
-    <published>2018-05-08T01:30:50.000Z</published>
-    <updated>2018-05-08T01:32:20.640Z</updated>
-    
-    <content type="html"><![CDATA[<p>HipHopVM(HHVM) 是 Facebook 推出的用来执行 PHP 代码的虚拟机，它是一个 PHP 的 JIT(Just-In-Time) 编译器，同时具有产生快速代码和即时编译的优点。<br><a id="more"></a></p>
-<h2 id="HHVM-3-26-已发布，值得关注的更新有："><a href="#HHVM-3-26-已发布，值得关注的更新有：" class="headerlink" title="HHVM 3.26 已发布，值得关注的更新有："></a>HHVM 3.26 已发布，值得关注的更新有：</h2><ul>
-<li>Hack 编译器 —— HackC</li>
-<li>typechecker 的重新授权以及相关工具和库采用 MIT 开源协议</li>
-<li>对 Ubuntu 18.04 的支持</li>
-</ul>
-<p>开发团队表示，在历经一年多的开发后，现已在 3.26 版本中默认启用 HackC 编译器。包括用于 Hack 和 PHP 语言的 full-fidelity parser (FFP) 和 bytecode emitter。FFP 已经支持多种工具，比如通过语言服务器协议, hackfmt 和 hhast 以与 Hack 的 IDE 集成。</p>
-<p>此外，HackC 通过了 HHVM 的所有测试 —— 包括 PHP 规范测试，并生成了语义上相同的字节码。</p>
-<p>授权方面，Hack 现在可通过 MIT 授权获取，3.26 是首个采用该条款的稳定版本。</p>
-<p>本次更新内容比较多，详情请查看 <a href="https://hhvm.com/blog/2018/05/07/hhvm-3.26.html" target="_blank" rel="noopener">https://hhvm.com/blog/2018/05/07/hhvm-3.26.html</a><br>源码下载：<a href="https://github.com/facebook/hhvm/releases/tag/HHVM-3.26.0" target="_blank" rel="noopener">https://github.com/facebook/hhvm/releases/tag/HHVM-3.26.0</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;HipHopVM(HHVM) 是 Facebook 推出的用来执行 PHP 代码的虚拟机，它是一个 PHP 的 JIT(Just-In-Time) 编译器，同时具有产生快速代码和即时编译的优点。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
-    
-    
-      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
-    
-      <category term="HHVM" scheme="http://www.iooeo.com/tags/HHVM/"/>
     
   </entry>
   
