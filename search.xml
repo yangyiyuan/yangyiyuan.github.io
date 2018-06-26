@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[CakePHP 3.6.6 发布，bug 修复版本]]></title>
+    <url>%2F2018%2F06%2F26%2FCakePHP-3-6-6-%E5%8F%91%E5%B8%83%EF%BC%8Cbug-%E4%BF%AE%E5%A4%8D%E7%89%88%E6%9C%AC%2F</url>
+    <content type="text"><![CDATA[CakePHP 3.6.6 发布了，这是 3.6 分支的维护版本，修复了几个社区报告的问题。CakePHP 是一个运用了诸如 ActiveRecord、Association Data Mapping、Front Controller 和 MVC 等著名设计模式的快速开发框架。该项目主要目标是提供一个可以让各种层次的 PHP 开发人员快速地开发出健壮的 Web 应用，而 又不失灵活性。此次更新内容包括： IntegrationTestCase 现在 string 化所有请求数据，这更好地模拟了如何处理 HTTP POST 数据。 改进 API 文档。 使用 {var} 的路由正确地计算它们的静态路径段，使得路由解析能够正常工作。 在创建标识符时 Http\Client 不再小写化 cookie 名字。 Database\Query::fetchAll(‘obj’) 返回所有结果而不是只返回一行。 Table::saveMany() 现在在因为数据库死锁或其它操作错误而导致保存失败时恢复实体状态。 改进旧插件和新插件加载系统之间的兼容性。 BaseApplication::addPlugin() 现在创建一个动态插件类而不是抛出错误。 TranslateBehavior 现在继承父模型使用的表定位器。 EntityTrait::setDirty() 默认第二个参数为真 EntityTrait::setErrors() 不再在内部使用 array_merge()，解决了为多行字段添加错误时的问题。 详情见发布公告。 下载地址： Source code (zip) Source code (tar.gz)]]></content>
+      <categories>
+        <category>PHP</category>
+      </categories>
+      <tags>
+        <tag>PHP</tag>
+        <tag>CakePHP</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[PHP 7.2.7 和 7.3.0 alpha 2 发布，包含大量修复]]></title>
     <url>%2F2018%2F06%2F22%2FPHP-7-2-7-%E5%92%8C-7-3-0-alpha-2-%E5%8F%91%E5%B8%83%EF%BC%8C%E5%8C%85%E5%90%AB%E5%A4%A7%E9%87%8F%E4%BF%AE%E5%A4%8D%2F</url>
     <content type="text"><![CDATA[PHP 7.2.7 已发布，这是一个 bug 修复版本，内容包括：Core: Fixed bug #76337 (segfault when opcache enabled + extension use zend_register_class_alias). CLI Server: Fixed bug #76333 (PHP built-in server does not find files if root path contains special characters). OpenSSL: Fixed bug #76296 (openssl_pkey_get_public does not respect open_basedir). Fixed bug #76174 (openssl extension fails to build with LibreSSL 2.7). SPL: Fixed bug #76367 (NoRewindIterator segfault 11). Standard: Fixed bug #76410 (SIGV in zend_mm_alloc_small). Fixed bug #76335 (“link(): Bad file descriptor” with non-ASCII path). 下载地址：http://www.php.net/downloads.php 同时发布的还有 PHP 7.3.0alpha2，更新细节可查阅： https://github.com/php/php-src/blob/php-7.3.0alpha2/NEWS]]></content>
