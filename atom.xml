@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.iooeo.com/"/>
-  <updated>2018-06-26T09:28:51.738Z</updated>
+  <updated>2018-07-02T07:42:34.930Z</updated>
   <id>http://www.iooeo.com/</id>
   
   <author>
@@ -14,6 +14,54 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ThinkPHP 5.1.18 版本发布，完善 Swoole/Workerman 支持</title>
+    <link href="http://www.iooeo.com/2018/07/02/ThinkPHP-5-1-18-%E7%89%88%E6%9C%AC%E5%8F%91%E5%B8%83%EF%BC%8C%E5%AE%8C%E5%96%84-Swoole-Workerman-%E6%94%AF%E6%8C%81/"/>
+    <id>http://www.iooeo.com/2018/07/02/ThinkPHP-5-1-18-版本发布，完善-Swoole-Workerman-支持/</id>
+    <published>2018-07-02T07:31:24.000Z</published>
+    <updated>2018-07-02T07:42:34.930Z</updated>
+    
+    <content type="html"><![CDATA[<p>V5.1.18版本主要完善了对<code>Swoole</code>和<code>Workerman</code>的<code>HttpServer</code>运行支持，改进<code>Request</code>类，并修正了一些已知的问题。<br><a id="more"></a></p>
+<h3 id="主要更新"><a href="#主要更新" class="headerlink" title="主要更新"></a>主要更新</h3><ul>
+<li>改进关联<code>append</code>方法的处理</li>
+<li>路由初始化和检测方法分离</li>
+<li>修正<code>destroy</code>方法强制删除</li>
+<li><code>app_init</code>钩子位置移入<code>run</code>方法</li>
+<li><code>think-swoole</code>扩展更新到2.0版本</li>
+<li><code>think-worker</code>扩展更新到2.0版本</li>
+<li>改进Url生成的域名自动识别</li>
+<li><code>Request</code>类增加<code>setPathinfo</code>方法和<code>setHost</code>方法</li>
+<li><code>Request</code>类增加<code>withGet</code>/<code>withPost</code>/<code>withHeader</code>/<code>withServer</code>/<code>withCookie</code>/<code>withEnv</code>方法进行赋值操作</li>
+<li>Route类改进<code>host</code>属性的获取</li>
+<li>解决注解路由配置不生效的问题</li>
+<li>取消Test日志驱动，改为使用<code>close</code>设置关闭全局日志写入</li>
+<li>修正路由的<code>response</code>参数</li>
+<li>修正204响应输出的判断</li>
+</ul>
+<p>从<code>5.1.17</code>版本可以无缝升级到<code>5.1.18</code>。由于取消了Test日志驱动，如果使用了Test日志驱动，请在log.php中改为使用下面的配置全局关闭。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&apos;close&apos;  =&gt; true,</div></pre></td></tr></table></figure></p>
+<h3 id="Swoole-Workerman支持"><a href="#Swoole-Workerman支持" class="headerlink" title="Swoole/Workerman支持"></a>Swoole/Workerman支持</h3><p>该版本开始，可以更好的支持Swoole和Workerman的HTTPServer运行。<br>在你的项目根目录下面，安装或者更新think-swoole（或者think-worker）扩展<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$composer require topthink/think-swoole</div><div class="line">// 或者</div><div class="line">$composer require topthink/think-worker</div></pre></td></tr></table></figure></p>
+<p>然后启动HttpServer服务<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$php think swoole</div><div class="line">// 或者</div><div class="line">$php think worker</div></pre></td></tr></table></figure></p>
+<p>注意：swoole不支持windows服务器</p>
+<p>官方<a href="https://www.kancloud.cn/manual/thinkphp5_1/content" target="_blank" rel="noopener">完全开发手册</a>已经同步更新！</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;V5.1.18版本主要完善了对&lt;code&gt;Swoole&lt;/code&gt;和&lt;code&gt;Workerman&lt;/code&gt;的&lt;code&gt;HttpServer&lt;/code&gt;运行支持，改进&lt;code&gt;Request&lt;/code&gt;类，并修正了一些已知的问题。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
+    
+      <category term="ThinkPHP" scheme="http://www.iooeo.com/categories/PHP/ThinkPHP/"/>
+    
+    
+      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
+    
+      <category term="ThinkPHP" scheme="http://www.iooeo.com/tags/ThinkPHP/"/>
+    
+  </entry>
   
   <entry>
     <title>Day01 - 初识Python</title>
@@ -1110,33 +1158,6 @@
     
     
       <category term="Flutter" scheme="http://www.iooeo.com/tags/Flutter/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Yii2 执行php yii exec()错误</title>
-    <link href="http://www.iooeo.com/2018/05/08/Yii2-%E6%89%A7%E8%A1%8Cphp-yii-exec-%E9%94%99%E8%AF%AF/"/>
-    <id>http://www.iooeo.com/2018/05/08/Yii2-执行php-yii-exec-错误/</id>
-    <published>2018-05-08T05:32:01.000Z</published>
-    <updated>2018-05-08T05:33:14.141Z</updated>
-    
-    <content type="html"><![CDATA[<p>在根目录下运行 php yii，报错 PHP Warning ‘yii\base\ErrorException’ with message ‘exec() has been disabled for security reasons’<br><a id="more"></a><br>编辑php.ini文件，查找disable_functions，删除exec，保存。然后重启PHP就可以了。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;在根目录下运行 php yii，报错 PHP Warning ‘yii\base\ErrorException’ with message ‘exec() has been disabled for security reasons’&lt;br&gt;
-    
-    </summary>
-    
-      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
-    
-      <category term="Yii2" scheme="http://www.iooeo.com/categories/PHP/Yii2/"/>
-    
-    
-      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
-    
-      <category term="Yii2" scheme="http://www.iooeo.com/tags/Yii2/"/>
     
   </entry>
   
