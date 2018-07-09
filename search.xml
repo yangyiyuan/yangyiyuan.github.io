@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[WordPress 4.9.7 发布，修复安全漏洞]]></title>
+    <url>%2F2018%2F07%2F09%2FWordPress-4-9-7-%E5%8F%91%E5%B8%83%EF%BC%8C%E4%BF%AE%E5%A4%8D%E5%AE%89%E5%85%A8%E6%BC%8F%E6%B4%9E%2F</url>
+    <content type="text"><![CDATA[WordPress 4.9.7发布了，修复了两个有关任意文件删除的安全漏洞。除此之外，还提供了其他17个漏洞的修复程序，以提高稳定性。RIPS Tech 在博客文章中写道：利用漏洞使攻击者能够删除 WordPress 安装的任何文件。如果没有可用的当前备份可能带来灾难性的后果，攻击者可以利用任意文件删除的能力来避开一些安全措施并在 Web 服务器上执行任意代码。 主要修复的问题包括： Taxonomy: Improve cache handling for term queries. Posts, Post Types: Clear post password cookie when logging out. Widgets: Allow basic HTML tags in sidebar descriptions on Widgets admin screen. Community Events Dashboard: Always show the nearest WordCamp if one is coming up, even if there are multiple Meetups happening first. Privacy: Make sure default privacy policy content does not cause a fatal error when flushing rewrite rules outside of the admin context. 下载地址： https://wordpress.org/download/]]></content>
+      <categories>
+        <category>PHP</category>
+      </categories>
+      <tags>
+        <tag>PHP</tag>
+        <tag>WordPress</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[ThinkPHP 5.1.18 版本发布，完善 Swoole/Workerman 支持]]></title>
     <url>%2F2018%2F07%2F02%2FThinkPHP-5-1-18-%E7%89%88%E6%9C%AC%E5%8F%91%E5%B8%83%EF%BC%8C%E5%AE%8C%E5%96%84-Swoole-Workerman-%E6%94%AF%E6%8C%81%2F</url>
     <content type="text"><![CDATA[V5.1.18版本主要完善了对Swoole和Workerman的HttpServer运行支持，改进Request类，并修正了一些已知的问题。 主要更新 改进关联append方法的处理 路由初始化和检测方法分离 修正destroy方法强制删除 app_init钩子位置移入run方法 think-swoole扩展更新到2.0版本 think-worker扩展更新到2.0版本 改进Url生成的域名自动识别 Request类增加setPathinfo方法和setHost方法 Request类增加withGet/withPost/withHeader/withServer/withCookie/withEnv方法进行赋值操作 Route类改进host属性的获取 解决注解路由配置不生效的问题 取消Test日志驱动，改为使用close设置关闭全局日志写入 修正路由的response参数 修正204响应输出的判断 从5.1.17版本可以无缝升级到5.1.18。由于取消了Test日志驱动，如果使用了Test日志驱动，请在log.php中改为使用下面的配置全局关闭。1&apos;close&apos; =&gt; true, Swoole/Workerman支持该版本开始，可以更好的支持Swoole和Workerman的HTTPServer运行。在你的项目根目录下面，安装或者更新think-swoole（或者think-worker）扩展123$composer require topthink/think-swoole// 或者$composer require topthink/think-worker 然后启动HttpServer服务123$php think swoole// 或者$php think worker 注意：swoole不支持windows服务器 官方完全开发手册已经同步更新！]]></content>
