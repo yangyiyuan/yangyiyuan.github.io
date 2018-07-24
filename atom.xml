@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.iooeo.com/"/>
-  <updated>2018-07-20T01:34:20.171Z</updated>
+  <updated>2018-07-24T01:36:52.607Z</updated>
   <id>http://www.iooeo.com/</id>
   
   <author>
@@ -14,6 +14,83 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Symfony 4.1.2 发布，PHP 框架与可重用 PHP 组件集</title>
+    <link href="http://www.iooeo.com/2018/07/24/Symfony-4-1-2-%E5%8F%91%E5%B8%83%EF%BC%8CPHP-%E6%A1%86%E6%9E%B6%E4%B8%8E%E5%8F%AF%E9%87%8D%E7%94%A8-PHP-%E7%BB%84%E4%BB%B6%E9%9B%86/"/>
+    <id>http://www.iooeo.com/2018/07/24/Symfony-4-1-2-发布，PHP-框架与可重用-PHP-组件集/</id>
+    <published>2018-07-24T01:33:03.000Z</published>
+    <updated>2018-07-24T01:36:52.607Z</updated>
+    
+    <content type="html"><![CDATA[<p>Symfony 4.1.2 发布了，Symfony 是一款基于 MVC 架构的 PHP 框架。Symfony 致力于减少重复代码的编写，以加速 Web 应用的开发和维护。Symfony 与许多关系型数据库集成的也非常好，成本也较小。此外，Symfony 致力于在企业背景下创建健壮的应用，同时也给予了开发者强大的配置功能：从文件结构到外部目录，几乎所有的东西都可以自定义。Symfony 也捆绑了一些诸如测试、调试、文档生成等额外的工具来满足企业的开发过程。<br><a id="more"></a><br>此次更新修复了一些 bug，内容如下：</p>
+<ul>
+<li>bug #28005 [HttpKernel] Fixed templateExists on parse error of the template name (@yceruto)</li>
+<li>bug #28013 [Messenger] Add missing typehint on chain sender (@sroze)</li>
+<li>bug #27997 Serbo-Croatian has Serbian plural rule (@kylekatarnls)</li>
+<li>bug #26193 Fix false-positive deprecation notices for TranslationLoader and WriteCheckSessionHandler (@iquito)</li>
+<li>bug #27827 [Serializer] Supports nested abstract items (@sroze)</li>
+<li>bug #27958 [Form] Remaining changes for bootstrap 4 file fields (@apfelbox)</li>
+<li>bug #27919 [Form] Improve rendering of file field in bootstrap 4 (@apfelbox)</li>
+<li>bug #27941 [WebProfilerBundle] Fixed icon alignment issue using Bootstrap 4.1.2 (@jmsche)</li>
+<li>bug #27937 [HttpFoundation] reset callback on StreamedResponse when setNotModified() is called (@rubencm)</li>
+<li>bug #27927 [HttpFoundation] Suppress side effects in ‘get’ and ‘has’ methods of NamespacedAttributeBag (@webnet-fr)</li>
+<li>bug #27913 [EventDispatcher] Clear orphaned events on reset (@acasademont)</li>
+<li>bug #27923 [Form/Profiler] Massively reducing memory footprint of form profiling pages… (@VincentChalnot)</li>
+<li>bug #27918 [Console] correctly return parameter’s default value on “–” (@seschwar)</li>
+<li>bug #27826 [Serializer] Fix serialization of items with groups across entities and discrimination map (@sroze)</li>
+<li>bug #27904 [Filesystem] fix lock file permissions (@fritzmg)</li>
+<li>bug #27903 [Lock] fix lock file permissions (@fritzmg)</li>
+<li>bug #27889 [Form] Replace .initialism with .text-uppercase. (@vudaltsov)</li>
+<li>bug #27902 Fix the detection of the Process new argument (@stof)</li>
+<li>bug #27885 [HttpFoundation] don’t encode cookie name for BC (@nicolas-grekas)</li>
+<li>bug #27782 [DI] Fix dumping ignore-on-uninitialized references to synthetic services (@nicolas-grekas)</li>
+<li>bug #27435 [OptionResolver] resolve arrays (@Doctrs)</li>
+<li>bug #27728 [TwigBridge] Fix missing path and separators in loader paths list on debug:twig output (@yceruto)</li>
+<li>bug #27837 [PropertyInfo] Fix dock block lookup fallback loop (@DerManoMann)</li>
+<li>bug #27848 [Workflow] Fixed BC break (@lyrixx)</li>
+<li>bug #27758 [WebProfilerBundle] Prevent toolbar links color override by css (@alcalyn)</li>
+<li>bug #27847 [Security] Fix accepting null as $uidKey in LdapUserProvider (@louhde)</li>
+<li>bug #27820 [Messenger] Fix a bug when having more than one named handler per message subscriber (@sroze)</li>
+<li>bug #27834 [DI] Don’t show internal service id on binding errors (@nicolas-grekas)</li>
+<li>bug #27831 Check for Hyper terminal on all operating systems. (@azjezz)</li>
+<li>bug #27794 Add color support for Hyper terminal . (@azjezz)</li>
+<li>bug #27809 [HttpFoundation] Fix tests: new message for status 425 (@dunglas)</li>
+<li>bug #27618 [PropertyInfo] added handling of nullable types in PhpDoc (@oxan)</li>
+<li>bug #27659 [HttpKernel] Make AbstractTestSessionListener compatible with CookieClearingLogoutHandler (@thewilkybarkid)</li>
+<li>bug #27752 [Cache] provider does not respect option maxIdLength with versioning enabled (@Constantine Shtompel)</li>
+<li>bug #27773 [Serializer] Class discriminator and serialization groups (@sroze)</li>
+<li>bug #27710 [DependencyInjection] fix handling of empty DI extension configs (@xabbuh)</li>
+<li>bug #27776 [ProxyManagerBridge] Fix support of private services (bis) (@nicolas-grekas)</li>
+<li>bug #27714 [HttpFoundation] fix session tracking counter (@nicolas-grekas, @dmaicher)</li>
+<li>bug #27727 [Routing] Disallow object usage inside Route (@paxal)</li>
+<li>bug #27736 [Routing] fix too much greediness in host-matching regex (@nicolas-grekas)</li>
+<li>bug #27747 [HttpFoundation] fix registration of session proxies (@nicolas-grekas)</li>
+<li>bug #27754 [HttpFoundation] missing namespace for RedisProxy (@Bonfante)</li>
+<li>bug #27722 Redesign the Debug error page in prod (@javiereguiluz)</li>
+<li>bug #27716 [DI] fix dumping deprecated service in yaml (@nicolas-grekas)</li>
+</ul>
+<p><a href="https://github.com/symfony/symfony/releases/tag/v4.1.2" target="_blank" rel="noopener">发布公告</a></p>
+<p>下载地址：</p>
+<ul>
+<li><a href="https://github.com/symfony/symfony/archive/v4.1.2.zip" target="_blank" rel="noopener">Source code (zip)</a></li>
+<li><a href="https://github.com/symfony/symfony/archive/v4.1.2.tar.gz" target="_blank" rel="noopener">Source code (tar.gz)</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Symfony 4.1.2 发布了，Symfony 是一款基于 MVC 架构的 PHP 框架。Symfony 致力于减少重复代码的编写，以加速 Web 应用的开发和维护。Symfony 与许多关系型数据库集成的也非常好，成本也较小。此外，Symfony 致力于在企业背景下创建健壮的应用，同时也给予了开发者强大的配置功能：从文件结构到外部目录，几乎所有的东西都可以自定义。Symfony 也捆绑了一些诸如测试、调试、文档生成等额外的工具来满足企业的开发过程。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
+    
+    
+      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
+    
+      <category term="Symfony" scheme="http://www.iooeo.com/tags/Symfony/"/>
+    
+  </entry>
   
   <entry>
     <title>HHVM 发布 3.27.1 和 3.24.8 版本</title>
@@ -1152,44 +1229,6 @@
       <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
     
       <category term="HHVM" scheme="http://www.iooeo.com/tags/HHVM/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Symfony 2.7.48 发布，PHP 框架与可重用 PHP 组件集</title>
-    <link href="http://www.iooeo.com/2018/05/28/Symfony-2-7-48-%E5%8F%91%E5%B8%83%EF%BC%8CPHP-%E6%A1%86%E6%9E%B6%E4%B8%8E%E5%8F%AF%E9%87%8D%E7%94%A8-PHP-%E7%BB%84%E4%BB%B6%E9%9B%86/"/>
-    <id>http://www.iooeo.com/2018/05/28/Symfony-2-7-48-发布，PHP-框架与可重用-PHP-组件集/</id>
-    <published>2018-05-28T01:23:30.000Z</published>
-    <updated>2018-05-28T07:30:06.327Z</updated>
-    
-    <content type="html"><![CDATA[<p>Symfony 2.7.48 发布了，此版本是安全更新版本，更新内容如下：<br><a id="more"></a></p>
-<ul>
-<li>bug #27359 [HttpFoundation] 修复 MimeTypeGuesser 初始化期间的 perf 问题(@nicolas-grekas)</li>
-<li>security #cve-2018-11408 [SecurityBundle]  如果无法配置 security.http_utils 则 fail</li>
-<li>security #cve-2018-11406 当用户注销时清除 CSRF Token</li>
-<li>security #cve-2018-11385 将会话策略添加到所有听众以避免任何可能的会话固定</li>
-<li>security #cve-2018-11386 [HttpFoundation] 当 MySQL 处于 loose 模式时，打破 PdoSessionHandler 中的无限循环</li>
-</ul>
-<p>详情见<a href="https://github.com/symfony/symfony/releases/tag/v2.7.48" target="_blank" rel="noopener">发布公告</a>。</p>
-<p>下载地址：</p>
-<ul>
-<li><a href="https://github.com/symfony/symfony/archive/v2.7.48.zip" target="_blank" rel="noopener">Source code (zip)</a></li>
-<li><a href="https://github.com/symfony/symfony/archive/v2.7.48.tar.gz" target="_blank" rel="noopener">Source code (tar.gz)</a></li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Symfony 2.7.48 发布了，此版本是安全更新版本，更新内容如下：&lt;br&gt;
-    
-    </summary>
-    
-      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
-    
-    
-      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
-    
-      <category term="Symfony" scheme="http://www.iooeo.com/tags/Symfony/"/>
     
   </entry>
   
