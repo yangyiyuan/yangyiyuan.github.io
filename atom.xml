@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.iooeo.com/"/>
-  <updated>2018-07-24T01:36:52.607Z</updated>
+  <updated>2018-07-25T01:54:19.037Z</updated>
   <id>http://www.iooeo.com/</id>
   
   <author>
@@ -14,6 +14,43 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CakePHP 3.6.8 发布，PHP 快速开发框架</title>
+    <link href="http://www.iooeo.com/2018/07/25/CakePHP-3-6-8-%E5%8F%91%E5%B8%83%EF%BC%8CPHP-%E5%BF%AB%E9%80%9F%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6/"/>
+    <id>http://www.iooeo.com/2018/07/25/CakePHP-3-6-8-发布，PHP-快速开发框架/</id>
+    <published>2018-07-25T01:52:22.000Z</published>
+    <updated>2018-07-25T01:54:19.037Z</updated>
+    
+    <content type="html"><![CDATA[<p>CakePHP 3.6.8 发布了，这是 3.6 分支的维护版本，修复了几个社区报告的问题。CakePHP 是一个运用了诸如 ActiveRecord、Association Data Mapping、Front Controller 和 MVC 等著名设计模式的快速开发框架。该项目主要目标是提供一个可以让各种层次的 PHP 开发人员快速地开发出健壮的 Web 应用，而又不失灵活性。<br><a id="more"></a><br>此次更新内容如下：</p>
+<ul>
+<li>默认情况下启用 session.use_strict_mode。</li>
+<li>改进了 i18n 功能的 API 文档。</li>
+<li>改进了弃用 docstrings。</li>
+<li>Router :: url() 现在确保将 App.base 应用于在 CLI 上下文中生成的 URL。</li>
+</ul>
+<p>详情见<a href="https://github.com/cakephp/cakephp/releases/tag/3.6.8" target="_blank" rel="noopener">发布公告</a>。</p>
+<p>下载地址：</p>
+<ul>
+<li><a href="https://github.com/cakephp/cakephp/archive/3.6.8.zip" target="_blank" rel="noopener">Source code (zip)</a></li>
+<li><a href="https://github.com/cakephp/cakephp/archive/3.6.8.tar.gz" target="_blank" rel="noopener">Source code (tar.gz)</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;CakePHP 3.6.8 发布了，这是 3.6 分支的维护版本，修复了几个社区报告的问题。CakePHP 是一个运用了诸如 ActiveRecord、Association Data Mapping、Front Controller 和 MVC 等著名设计模式的快速开发框架。该项目主要目标是提供一个可以让各种层次的 PHP 开发人员快速地开发出健壮的 Web 应用，而又不失灵活性。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
+    
+    
+      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
+    
+      <category term="CakePHP" scheme="http://www.iooeo.com/tags/CakePHP/"/>
+    
+  </entry>
   
   <entry>
     <title>Symfony 4.1.2 发布，PHP 框架与可重用 PHP 组件集</title>
@@ -1188,47 +1225,6 @@
       <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
     
       <category term="Symfony" scheme="http://www.iooeo.com/tags/Symfony/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HHVM 3.26.3 发布，修复 bug 并改进对 IDE 的支持</title>
-    <link href="http://www.iooeo.com/2018/05/28/HHVM-3-26-3-%E5%8F%91%E5%B8%83%EF%BC%8C%E4%BF%AE%E5%A4%8D-bug-%E5%B9%B6%E6%94%B9%E8%BF%9B%E5%AF%B9-IDE-%E7%9A%84%E6%94%AF%E6%8C%81/"/>
-    <id>http://www.iooeo.com/2018/05/28/HHVM-3-26-3-发布，修复-bug-并改进对-IDE-的支持/</id>
-    <published>2018-05-28T01:23:48.000Z</published>
-    <updated>2018-05-28T07:32:15.275Z</updated>
-    
-    <content type="html"><![CDATA[<p>HHVM（HipHopVM） 3.26.3 发布了，HHVM 是 Facebook 推出的用来执行 PHP 代码的虚拟机，它是一个 PHP 的 JIT(Just-In-Time) 编译器，同时具有产生快速代码和即时编译的优点。此次更新版本包含几个 bug 修复以及对 IDE 支持的改进：<br><a id="more"></a></p>
-<ul>
-<li>CVE-2018-6337：在 fork 上清除 folly :: secureRandom(random_bytes()和random_int()) 缓存</li>
-<li>HackC: 将范围较小的括号表达式解析为转换</li>
-<li>HackC: 修复与特殊的 Hack 类同名的 PHP 类</li>
-<li>LSP: IDE 代码格式化功能使用 hackfmt 而不是 hh_format</li>
-<li>LSP: 格式化代码时，遵守 IDE 提供的缩进宽度和制表符或空格首选项</li>
-<li>LSP: 修复了 VSCode 中即用型格式的支持</li>
-<li>LSP: 在类自动完成中使用语句应该只提示特征</li>
-<li>改进不支持 yield 和 await 魔术功能的检测、处理和错误，提高了 PHP 兼容性</li>
-<li>向 .hhconfig 添加 extra_paths= 选项以在项目根目录外包含依赖项。这是实验性特性，可能随时会移除</li>
-</ul>
-<p>详情见<a href="https://hhvm.com/blog/2018/05/24/hhvm-3.26.3.html" target="_blank" rel="noopener">发布公告</a>。<br>下载地址：</p>
-<ul>
-<li><a href="https://github.com/facebook/hhvm/archive/HHVM-3.26.3.zip" target="_blank" rel="noopener">Source code (zip)</a></li>
-<li><a href="https://github.com/facebook/hhvm/archive/HHVM-3.26.3.tar.gz" target="_blank" rel="noopener">Source code (tar.gz)</a></li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;HHVM（HipHopVM） 3.26.3 发布了，HHVM 是 Facebook 推出的用来执行 PHP 代码的虚拟机，它是一个 PHP 的 JIT(Just-In-Time) 编译器，同时具有产生快速代码和即时编译的优点。此次更新版本包含几个 bug 修复以及对 IDE 支持的改进：&lt;br&gt;
-    
-    </summary>
-    
-      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
-    
-    
-      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
-    
-      <category term="HHVM" scheme="http://www.iooeo.com/tags/HHVM/"/>
     
   </entry>
   
