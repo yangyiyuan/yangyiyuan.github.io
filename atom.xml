@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.iooeo.com/"/>
-  <updated>2018-07-25T01:54:19.037Z</updated>
+  <updated>2018-07-26T05:28:25.116Z</updated>
   <id>http://www.iooeo.com/</id>
   
   <author>
@@ -14,6 +14,51 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ThinkPHP 5.1.20 版本发布，支持动态定义获取器</title>
+    <link href="http://www.iooeo.com/2018/07/26/ThinkPHP-5-1-20-%E7%89%88%E6%9C%AC%E5%8F%91%E5%B8%83%EF%BC%8C%E6%94%AF%E6%8C%81%E5%8A%A8%E6%80%81%E5%AE%9A%E4%B9%89%E8%8E%B7%E5%8F%96%E5%99%A8/"/>
+    <id>http://www.iooeo.com/2018/07/26/ThinkPHP-5-1-20-版本发布，支持动态定义获取器/</id>
+    <published>2018-07-26T05:27:08.000Z</published>
+    <updated>2018-07-26T05:28:25.116Z</updated>
+    
+    <content type="html"><![CDATA[<p>该版本主要增加了Db和模型的动态获取器的支持，并修正了一些已知问题。支持上一个版本的无缝升级！</p>
+<ul>
+<li>Db类添加获取器支持</li>
+<li>支持模型及关联模型字段动态定义获取器</li>
+<li>动态获取器支持<code>JSON</code>字段</li>
+<li>改进路由的<code>before</code>行为执行（匹配后执行）</li>
+<li><code>Config</code>类支持<code>Yaconf</code></li>
+<li>改进Url生成的端口问题</li>
+<li>Request类增加<code>setUrl</code>和<code>setbaseUrl</code>方法</li>
+<li>改进页面trace的信息显示</li>
+<li>修正<code>MorphOne</code>关联</li>
+<li>命令行添加查看版本指令</li>
+<li>think-swoole和think-worker扩展更新版本</li>
+</ul>
+<p>官方<a href="https://www.kancloud.cn/manual/thinkphp5_1/content" target="_blank" rel="noopener">完全开发手册</a>已经同步更新！</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;该版本主要增加了Db和模型的动态获取器的支持，并修正了一些已知问题。支持上一个版本的无缝升级！&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Db类添加获取器支持&lt;/li&gt;
+&lt;li&gt;支持模型及关联模型字段动态定义获取器&lt;/li&gt;
+&lt;li&gt;动态获取器支持&lt;code&gt;JSON&lt;/code&gt;字段&lt;/
+    
+    </summary>
+    
+      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
+    
+      <category term="ThinkPHP" scheme="http://www.iooeo.com/categories/PHP/ThinkPHP/"/>
+    
+    
+      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
+    
+      <category term="ThinkPHP" scheme="http://www.iooeo.com/tags/ThinkPHP/"/>
+    
+  </entry>
   
   <entry>
     <title>CakePHP 3.6.8 发布，PHP 快速开发框架</title>
@@ -1183,48 +1228,6 @@
       <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
     
       <category term="Phalcon" scheme="http://www.iooeo.com/tags/Phalcon/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Symfony 4.0.11 发布，PHP 框架与可重用 PHP 组件集</title>
-    <link href="http://www.iooeo.com/2018/05/28/Symfony-4-0-11-%E5%8F%91%E5%B8%83%EF%BC%8CPHP-%E6%A1%86%E6%9E%B6%E4%B8%8E%E5%8F%AF%E9%87%8D%E7%94%A8-PHP-%E7%BB%84%E4%BB%B6%E9%9B%86/"/>
-    <id>http://www.iooeo.com/2018/05/28/Symfony-4-0-11-发布，PHP-框架与可重用-PHP-组件集/</id>
-    <published>2018-05-28T01:24:03.000Z</published>
-    <updated>2018-05-28T07:30:09.079Z</updated>
-    
-    <content type="html"><![CDATA[<p>Symfony 是一个用于 Web 应用程序的 PHP 框架和一组可重用的 PHP 组件，目前成千上万的 Web 应用程序（包括 BlaBlaCar.com 和 Spotify.com）以及大多数流行的 PHP 项目（包括 Drupal 和 Magento）都在使用 Symfony。<br><a id="more"></a><br>Symfony 4.0.11 发布了，这是一个安全更新版本，主要更新内容如下：</p>
-<ul>
-<li>bug #27364 [DI] 修复对非共享服务的未初始化引用的不良异常</li>
-<li>bug #27359 [HttpFoundation] 修复 MimeTypeGuesser 初始化期间的 perf 问题</li>
-<li>security #cve-2018-11408 [SecurityBundle] 如果无法配置 security.http_utils 则 fail</li>
-<li>security #cve-2018-11406 当用户注销时清除 CSRF Token</li>
-<li>security #cve-2018-11385 为 UsernamePasswordJsonAuthenticationListener 迁移会话</li>
-<li>security #cve-2018-11385 将会话身份验证策略添加到 Guard 以避免会话固定</li>
-<li>security #cve-2018-11385 将会话策略添加到所有听众以避免任何可能的会话固定</li>
-<li>security #cve-2018-11386 [HttpFoundation] 当 MySQL 处于 loose 模式时，打破 PdoSessionHandler 中的无限循环</li>
-<li>bug #27341 [WebProfilerBundle] 修正了验证器/转储跟踪CSS</li>
-<li>bug #27337 [FrameworkBundle] 修复了 CacheClearCommand 中的错字</li>
-</ul>
-<p>详情见<a href="https://github.com/symfony/symfony/releases/tag/v4.0.11" target="_blank" rel="noopener">发布公告</a>。<br>下载地址：</p>
-<ul>
-<li><a href="https://github.com/symfony/symfony/archive/v4.0.11.zip" target="_blank" rel="noopener">Source code (zip)</a></li>
-<li><a href="https://github.com/symfony/symfony/archive/v4.0.11.tar.gz" target="_blank" rel="noopener">Source code (tar.gz)</a></li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Symfony 是一个用于 Web 应用程序的 PHP 框架和一组可重用的 PHP 组件，目前成千上万的 Web 应用程序（包括 BlaBlaCar.com 和 Spotify.com）以及大多数流行的 PHP 项目（包括 Drupal 和 Magento）都在使用 Symfony。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
-    
-    
-      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
-    
-      <category term="Symfony" scheme="http://www.iooeo.com/tags/Symfony/"/>
     
   </entry>
   
