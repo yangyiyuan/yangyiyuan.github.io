@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.iooeo.com/"/>
-  <updated>2018-07-26T05:28:25.116Z</updated>
+  <updated>2018-07-27T01:05:23.504Z</updated>
   <id>http://www.iooeo.com/</id>
   
   <author>
@@ -14,6 +14,42 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CakePHP 3.6.9 发布，PHP 快速开发框架</title>
+    <link href="http://www.iooeo.com/2018/07/27/CakePHP-3-6-9-%E5%8F%91%E5%B8%83%EF%BC%8CPHP-%E5%BF%AB%E9%80%9F%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6/"/>
+    <id>http://www.iooeo.com/2018/07/27/CakePHP-3-6-9-发布，PHP-快速开发框架/</id>
+    <published>2018-07-27T01:03:46.000Z</published>
+    <updated>2018-07-27T01:05:23.504Z</updated>
+    
+    <content type="html"><![CDATA[<p>CakePHP 3.6.9 发布了，这是 3.6 分支的维护版本，修复了几个社区报告的问题。CakePHP 是一个运用了诸如 ActiveRecord、Association Data Mapping、Front Controller 和 MVC 等著名设计模式的快速开发框架。该项目主要目标是提供一个可以让各种层次的 PHP 开发人员快速地开发出健壮的 Web 应用，而又不失灵活性。<br><a id="more"></a></p>
+<p>Bugfixes：</p>
+<ul>
+<li>修复了 Entity 类名称变形中的回归。</li>
+<li>修复了使用 / 作为字符串参数构造 ServerRequest。</li>
+</ul>
+<p>详情见<a href="https://github.com/cakephp/cakephp/releases/tag/3.6.9" target="_blank" rel="noopener">发布公告</a>。</p>
+<p>下载地址：</p>
+<ul>
+<li><a href="https://github.com/cakephp/cakephp/archive/3.6.9.zip" target="_blank" rel="noopener">Source code (zip)</a></li>
+<li><a href="https://github.com/cakephp/cakephp/archive/3.6.9.tar.gz" target="_blank" rel="noopener">Source code (tar.gz)</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;CakePHP 3.6.9 发布了，这是 3.6 分支的维护版本，修复了几个社区报告的问题。CakePHP 是一个运用了诸如 ActiveRecord、Association Data Mapping、Front Controller 和 MVC 等著名设计模式的快速开发框架。该项目主要目标是提供一个可以让各种层次的 PHP 开发人员快速地开发出健壮的 Web 应用，而又不失灵活性。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
+    
+    
+      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
+    
+      <category term="CakePHP" scheme="http://www.iooeo.com/tags/CakePHP/"/>
+    
+  </entry>
   
   <entry>
     <title>ThinkPHP 5.1.20 版本发布，支持动态定义获取器</title>
@@ -1180,54 +1216,6 @@
       <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
     
       <category term="Symfony" scheme="http://www.iooeo.com/tags/Symfony/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Phalcon 3.4.0 发布，PHP 的 C 扩展 Web 框架</title>
-    <link href="http://www.iooeo.com/2018/05/30/Phalcon-3-4-0-%E5%8F%91%E5%B8%83%EF%BC%8CPHP-%E7%9A%84-C-%E6%89%A9%E5%B1%95-Web-%E6%A1%86%E6%9E%B6/"/>
-    <id>http://www.iooeo.com/2018/05/30/Phalcon-3-4-0-发布，PHP-的-C-扩展-Web-框架/</id>
-    <published>2018-05-30T01:11:02.000Z</published>
-    <updated>2018-05-30T01:13:16.946Z</updated>
-    
-    <content type="html"><![CDATA[<p>Phalcon 3.4.0 已发布，Phalcon 是一个开源的 Web 框架，作为 PHP 语言 C 扩展，它提供了更高的性能与更低的资源消耗。<br><a id="more"></a><br>本次更新主要是对 bug 进行了修复，具体如下：</p>
-<ul>
-<li>Added Phalcon\Mvc\Router::attach to add Route object directly into Router #13326</li>
-<li>Added the ability to listen request:beforeAuthorizationResolve and request:afterAuthorizationResolve events. This ability enables using custom authorization resolvers #13327</li>
-<li>Added call event afterFetch in Phalcon\Mvc\Model:refresh #12220</li>
-<li>Added Phalcon\Http\Response::getReasonPhrase to retrieve the reason phrase from the Statusheader #13314</li>
-<li>Added Phalcon\Loader::setFileCheckingCallback to set internal file existence resolver #13360</li>
-<li>Added ability to pass aggregation options for Phalcon\Mvc\Collection::aggregate #12302</li>
-<li>Added Phalcon\Crypt::setHashAlgo to set the name of hashing algorithm used to the calculating message digest #13379</li>
-<li>Added Phalcon\Crypt::getHashAlgo to get the name of hashing algorithm used to the calculating message digest #13379</li>
-<li>Added Phalcon\Crypt::useSigning to set if the calculating message digest must used (NOTE: This feature will be enabled by default in Phalcon 4.0.0) #13379</li>
-<li>Added Phalcon\Crypt::getAvailableHashAlgos to get a list of registered hashing algorithms suitable for calculating message digest #13379</li>
-<li>Added Phalcon\Crypt::__construct so now the cipher can be set at object construction and the calculating message digest can be enabled without the need to call setCipher or useSigningexplicitly #13379</li>
-<li>Added Phalcon\Crypt\Mismatch. Exceptions thrown in Phalcon\Crypt will use this class #13379</li>
-<li>Added Phalcon\Http\Cookie::setSignKey to set sign key used to generate a message authentication code (eg. message digest)</li>
-<li>Added Phalcon\Http\Response\Cookies::setSignKey to set sign key used to generate a message authentication code (eg. message digest)</li>
-<li>Changed Phalcon\Crypt::setCipher so that IV length will be reconfigured during setting the cipher algorithm</li>
-<li>Changed Phalcon\Crypt::setCipher so that method will throw Phalcon\Crypt\Exception if a cipher is unavailable</li>
-<li>Fixed regression (#13308) for Phalcon\Debug\Dump::output to correctly work with detailed mode #13315</li>
-<li>Fixed Phalcon\Mvc\Model\Query\Builder::having and Phalcon\Mvc\Model\Query\Builder::where to correctly merge the bind types #11487</li>
-<li>Fixed Phalcon\Mvc\Model::setSnapshotData to properly sets the old snapshot</li>
-<li>Do not throw Exception when superglobal does not exist #13252, #13254, #12918</li>
-</ul>
-<p>下载地址和完整更新内容请查看 <a href="https://github.com/phalcon/cphalcon/releases/tag/v3.3.1" target="_blank" rel="noopener">GitHub 发布主页</a>。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Phalcon 3.4.0 已发布，Phalcon 是一个开源的 Web 框架，作为 PHP 语言 C 扩展，它提供了更高的性能与更低的资源消耗。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
-    
-    
-      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
-    
-      <category term="Phalcon" scheme="http://www.iooeo.com/tags/Phalcon/"/>
     
   </entry>
   

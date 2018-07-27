@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[CakePHP 3.6.9 发布，PHP 快速开发框架]]></title>
+    <url>%2F2018%2F07%2F27%2FCakePHP-3-6-9-%E5%8F%91%E5%B8%83%EF%BC%8CPHP-%E5%BF%AB%E9%80%9F%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6%2F</url>
+    <content type="text"><![CDATA[CakePHP 3.6.9 发布了，这是 3.6 分支的维护版本，修复了几个社区报告的问题。CakePHP 是一个运用了诸如 ActiveRecord、Association Data Mapping、Front Controller 和 MVC 等著名设计模式的快速开发框架。该项目主要目标是提供一个可以让各种层次的 PHP 开发人员快速地开发出健壮的 Web 应用，而又不失灵活性。 Bugfixes： 修复了 Entity 类名称变形中的回归。 修复了使用 / 作为字符串参数构造 ServerRequest。 详情见发布公告。 下载地址： Source code (zip) Source code (tar.gz)]]></content>
+      <categories>
+        <category>PHP</category>
+      </categories>
+      <tags>
+        <tag>PHP</tag>
+        <tag>CakePHP</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[ThinkPHP 5.1.20 版本发布，支持动态定义获取器]]></title>
     <url>%2F2018%2F07%2F26%2FThinkPHP-5-1-20-%E7%89%88%E6%9C%AC%E5%8F%91%E5%B8%83%EF%BC%8C%E6%94%AF%E6%8C%81%E5%8A%A8%E6%80%81%E5%AE%9A%E4%B9%89%E8%8E%B7%E5%8F%96%E5%99%A8%2F</url>
     <content type="text"><![CDATA[该版本主要增加了Db和模型的动态获取器的支持，并修正了一些已知问题。支持上一个版本的无缝升级！ Db类添加获取器支持 支持模型及关联模型字段动态定义获取器 动态获取器支持JSON字段 改进路由的before行为执行（匹配后执行） Config类支持Yaconf 改进Url生成的端口问题 Request类增加setUrl和setbaseUrl方法 改进页面trace的信息显示 修正MorphOne关联 命令行添加查看版本指令 think-swoole和think-worker扩展更新版本 官方完全开发手册已经同步更新！]]></content>
