@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.iooeo.com/"/>
-  <updated>2018-07-27T01:05:23.504Z</updated>
+  <updated>2018-08-07T01:10:46.025Z</updated>
   <id>http://www.iooeo.com/</id>
   
   <author>
@@ -14,6 +14,42 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CakePHP 3.6.10 发布，PHP 快速开发框架</title>
+    <link href="http://www.iooeo.com/2018/08/07/CakePHP-3-6-10-%E5%8F%91%E5%B8%83%EF%BC%8CPHP-%E5%BF%AB%E9%80%9F%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6/"/>
+    <id>http://www.iooeo.com/2018/08/07/CakePHP-3-6-10-发布，PHP-快速开发框架/</id>
+    <published>2018-08-07T01:08:27.000Z</published>
+    <updated>2018-08-07T01:10:46.025Z</updated>
+    
+    <content type="html"><![CDATA[<p>CakePHP 3.6.10 发布了，这是 3.6 分支的维护版本，修复了几个社区报告的问题。CakePHP 是一个运用了诸如 ActiveRecord、Association Data Mapping、Front Controller 和 MVC 等著名设计模式的快速开发框架。该项目主要目标是提供一个可以让各种层次的 PHP 开发人员快速地开发出健壮的 Web 应用，而又不失灵活性。<br><a id="more"></a><br>Bug 修复：</p>
+<ul>
+<li>File validation methods now work with PSR7 UploadedFileInterface objects  more consistently.</li>
+<li>Improved API documentation.</li>
+</ul>
+<p>详见<a href="https://github.com/cakephp/cakephp/releases/tag/3.6.10" target="_blank" rel="noopener">发布说明</a>。</p>
+<p>下载地址：</p>
+<ul>
+<li><a href="https://github.com/cakephp/cakephp/releases/download/3.6.10/cakephp-3-6-10.zip" target="_blank" rel="noopener">cakephp-3-6-10.zip</a></li>
+<li><a href="https://github.com/cakephp/cakephp/archive/3.6.10.zip" target="_blank" rel="noopener">Source code (zip)</a></li>
+<li><a href="https://github.com/cakephp/cakephp/archive/3.6.10.tar.gz" target="_blank" rel="noopener">Source code (tar.gz)</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;CakePHP 3.6.10 发布了，这是 3.6 分支的维护版本，修复了几个社区报告的问题。CakePHP 是一个运用了诸如 ActiveRecord、Association Data Mapping、Front Controller 和 MVC 等著名设计模式的快速开发框架。该项目主要目标是提供一个可以让各种层次的 PHP 开发人员快速地开发出健壮的 Web 应用，而又不失灵活性。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
+    
+    
+      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
+    
+      <category term="CakePHP" scheme="http://www.iooeo.com/tags/CakePHP/"/>
+    
+  </entry>
   
   <entry>
     <title>CakePHP 3.6.9 发布，PHP 快速开发框架</title>
@@ -1179,43 +1215,6 @@
     
     
       <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Symfony 4.1.0 发布，PHP 框架与可重用 PHP 组件集</title>
-    <link href="http://www.iooeo.com/2018/05/31/Symfony-4-1-0-%E5%8F%91%E5%B8%83%EF%BC%8CPHP-%E6%A1%86%E6%9E%B6%E4%B8%8E%E5%8F%AF%E9%87%8D%E7%94%A8-PHP-%E7%BB%84%E4%BB%B6%E9%9B%86/"/>
-    <id>http://www.iooeo.com/2018/05/31/Symfony-4-1-0-发布，PHP-框架与可重用-PHP-组件集/</id>
-    <published>2018-05-31T01:23:30.000Z</published>
-    <updated>2018-05-31T01:25:10.587Z</updated>
-    
-    <content type="html"><![CDATA[<p>Symfony 4.1.0 发布了，此次更新修复了两个 bug：</p>
-<ul>
-<li>bug #27420 还原“feature #26702 标记 ExceptionInterfaces 可抛出 (ostrolucky)” (@nicolas-grekas)</li>
-<li>bug #27415 在 AbstractController 中插入正确的 parameter_bag 服务 (@curry684)</li>
-</ul>
-<p>详情见<a href="https://github.com/symfony/symfony/releases/tag/v4.1.0" target="_blank" rel="noopener">发布公告</a>。</p>
-<p>下载地址：</p>
-<ul>
-<li><a href="https://github.com/symfony/symfony/archive/v4.1.0.zip" target="_blank" rel="noopener">Source code (zip)</a></li>
-<li><a href="https://github.com/symfony/symfony/archive/v4.1.0.tar.gz" target="_blank" rel="noopener">Source code (tar.gz)</a></li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Symfony 4.1.0 发布了，此次更新修复了两个 bug：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;bug #27420 还原“feature #26702 标记 ExceptionInterfaces 可抛出 (ostrolucky)” (@nicolas-grekas)&lt;/li
-    
-    </summary>
-    
-      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
-    
-    
-      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
-    
-      <category term="Symfony" scheme="http://www.iooeo.com/tags/Symfony/"/>
     
   </entry>
   

@@ -361,6 +361,169 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.iooeo.com/2014/09/17/MySQL安装dpkg错误解决方案/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ewan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ewan's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2014/09/17/MySQL安装dpkg错误解决方案/" itemprop="url">MySQL安装dpkg错误解决方案</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2014-09-17T17:39:04+08:00">
+                2014-09-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/MySQL/" itemprop="url" rel="index">
+                    <span itemprop="name">MySQL</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/2014/09/17/MySQL安装dpkg错误解决方案/#SOHUCS" itemprop="discussionUrl">
+                  <span id="url::http://www.iooeo.com/2014/09/17/MySQL安装dpkg错误解决方案/" class="cy_cmt_count" data-xid="2014/09/17/MySQL安装dpkg错误解决方案/" itemprop="commentsCount" ></span>
+                </a>
+              
+            
+          
+
+          
+          
+             <span id="/2014/09/17/MySQL安装dpkg错误解决方案/" class="leancloud_visitors" data-flag-title="MySQL安装dpkg错误解决方案">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ul>
+<li><p>Ewan在Ubuntu下安装MySQL的时候出现了一下错误问题：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">start: Job failed to start</div><div class="line">invoke-rc.d: initscript mysql, action &quot;start&quot; failed.</div><div class="line">dpkg: error processing mysql-server-5.5 (--configure):</div><div class="line">subprocess installed post-installation script returned error exit status 1</div><div class="line">dpkg: dependency problems prevent configuration of mysql-server:</div><div class="line">mysql-server depends on mysql-server-5.5; however:</div><div class="line">Package mysql-server-5.5 is not configured yet.</div><div class="line">dpkg: error processing mysql-server (--configure):</div><div class="line">dependency problems - leaving unconfigured</div><div class="line">No apport report written because the error message indicates its a followup error from a previous failure.</div><div class="line">Errors were encountered while processing:</div><div class="line">mysql-server-5.5</div><div class="line">mysql-server</div><div class="line">E: Sub-process /usr/bin/dpkg returned an error code (1)</div></pre></td></tr></table></figure>
+</li>
+<li><p>经查证，现给出解决办法：<br>删除MySQL前，先删除/var/lib/mysql和/etc/mysql</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ sudo rm /var/lib/mysql/ -R</div><div class="line">$ sudo rm /etc/mysql/ -R</div><div class="line">$ sudo apt-get autoremove mysql* --purge</div><div class="line">$ sudo apt-get remove apparmor</div><div class="line">$ sudo apt-get install mysql-server mysql-common</div></pre></td></tr></table></figure>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div align="center">
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://www.iooeo.com/2014/09/14/About-Me/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1202,7 +1365,7 @@ SELECT * FROM t1 ORDER BY key_part1 DESC, key_part2 DESC;</code><br>但是以下
           
             <div class="site-state-item site-state-posts">
               <a href="/">
-                <span class="site-state-item-count">134</span>
+                <span class="site-state-item-count">135</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
