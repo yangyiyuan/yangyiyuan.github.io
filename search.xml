@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[PHP 7.1.21 和 7.2.9 正式发布，多项内容修复]]></title>
+    <url>%2F2018%2F08%2F15%2FPHP-7-1-21-%E5%92%8C-7-2-9-%E6%AD%A3%E5%BC%8F%E5%8F%91%E5%B8%83%EF%BC%8C%E5%A4%9A%E9%A1%B9%E5%86%85%E5%AE%B9%E4%BF%AE%E5%A4%8D%2F</url>
+    <content type="text"><![CDATA[PHP（外文名:PHP: Hypertext Preprocessor，中文名：“超文本预处理器”）是一种通用开源脚本语言。语法吸收了C语言、Java和Perl的特点，利于学习，使用广泛，主要适用于Web开发领域。PHP 独特的语法混合了C、Java、Perl以及PHP自创的语法。它可以比CGI或者Perl更快速地执行动态网页。用PHP做出的动态页面与其他的编程语言相比，PHP是将程序嵌入到HTML（标准通用标记语言下的一个应用）文档中去执行，执行效率比完全生成HTML标记的CGI要高许多；PHP还可以执行编译后代码，编译可以达到加密和优化代码运行，使代码运行更快。 PHP 7.2.9 Calendar:. Fixed bug #52974 (jewish.c: compile error under Windows with GBK charset). (cmb) Filter:. Fixed bug #76366 (References in sub-array for filtering breaks the filter). (ZiHang Gao) PDO_Firebird:. Fixed bug #76488 (Memory leak when fetching a BLOB field). (Simonov Denis) PDO_PgSQL:. Fixed bug #75402 (Possible Memory Leak using PDO::CURSOR_SCROLL option). (Anatol) SQLite3:. Fixed #76665 (SQLite3Stmt::bindValue() with SQLITE3_FLOAT doesn’t juggle). (cmb) Standard:. Fixed bug #73817 (Incorrect entries in get_html_translation_table). (cmb). Fixed bug #68553 (array_column: null values in $index_key become incrementing keys in result). (Laruence). Fixed bug #76643 (Segmentation fault when using output_add_rewrite_var). (cmb) Zip:. Fixed bug #76524 (ZipArchive memory leak (OVERWRITE flag and empty archive)). (Timur Ibragimov) PHP 7.1.21 Calendar:. Fixed bug #52974 (jewish.c: compile error under Windows with GBK charset). (cmb) Filter:. Fixed bug #76366 (References in sub-array for filtering breaks the filter). (ZiHang Gao) PDO_Firebird:. Fixed bug #76488 (Memory leak when fetching a BLOB field). (Simonov Denis) PDO_PgSQL:. Fixed bug #75402 (Possible Memory Leak using PDO::CURSOR_SCROLL option). (Anatol) SQLite3:. Fixed #76665 (SQLite3Stmt::bindValue() with SQLITE3_FLOAT doesn’t juggle). (cmb) Standard:. Fixed bug #68553 (array_column: null values in $index_key become incrementing keys in result). (Laruence). Fixed bug #73817 (Incorrect entries in get_html_translation_table). (cmb). Fixed bug #76643 (Segmentation fault when using output_add_rewrite_var). (cmb) Zip:. Fixed bug #76524 (ZipArchive memory leak (OVERWRITE flag and empty archive)). (Timur Ibragimov)]]></content>
+      <categories>
+        <category>PHP</category>
+      </categories>
+      <tags>
+        <tag>PHP</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[ThinkPHP 5.1.22 发布，增加搜索器和 withJoin 方法]]></title>
     <url>%2F2018%2F08%2F10%2FThinkPHP-5-1-22-%E5%8F%91%E5%B8%83%EF%BC%8C%E5%A2%9E%E5%8A%A0%E6%90%9C%E7%B4%A2%E5%99%A8%E5%92%8C-withJoin-%E6%96%B9%E6%B3%95%2F</url>
     <content type="text"><![CDATA[该版本主要增加了模型搜索器和withJoin方法，完善了模型输出和对Yaconf的支持，修正了一些社区反馈的BUG。支持上一个版本的无缝升级！主要更新 改进一对一关联的table识别问题 改进内置Facade类 增加withJoin方法支持join方式的一对一关联查询 改进join预载入查询的空数据问题 改进Config类的load方法支持快速加载配置文件 改进execute方法和事务的断线重连 改进memcache驱动的has方法 模型类支持定义搜索器方法 完善Config类对Yaconf的支持 改进模型的hidden/visible/append/withAttr方法，支持在查询方法前后调用，以及支持数据集对象 数据集对象增加where方法根据字段或者关联数据过滤数据 改进AJAX请求的204判断 官方完全开发手册已经同步更新]]></content>
