@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.iooeo.com/"/>
-  <updated>2018-08-15T06:39:42.501Z</updated>
+  <updated>2018-08-16T01:12:52.988Z</updated>
   <id>http://www.iooeo.com/</id>
   
   <author>
@@ -14,6 +14,45 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>HHVM 发布 3.27.2 发布，Bug 修复版本</title>
+    <link href="http://www.iooeo.com/2018/08/16/HHVM-%E5%8F%91%E5%B8%83-3-27-2-%E5%8F%91%E5%B8%83%EF%BC%8CBug-%E4%BF%AE%E5%A4%8D%E7%89%88%E6%9C%AC/"/>
+    <id>http://www.iooeo.com/2018/08/16/HHVM-发布-3-27-2-发布，Bug-修复版本/</id>
+    <published>2018-08-16T01:11:39.000Z</published>
+    <updated>2018-08-16T01:12:52.988Z</updated>
+    
+    <content type="html"><![CDATA[<p>HHVM 是 Facebook 推出的用来执行 PHP 代码的虚拟机，它是一个 PHP 的 JIT(Just-In-Time) 编译器，同时具有产生快速代码和即时编译的优点。<br><a id="more"></a><br>HHVM 3.27.2 是一个纯 bug 修复版本，更新内容如下： </p>
+<ul>
+<li>Fix various crashes on MacOS due to differing assembler conventions</li>
+<li>Fix deadlock when calling HH\facts_parse in multiple simultaneous requests</li>
+<li>Fix conditional breakpoints in debugger</li>
+<li>Fix hang in debugger shutdown</li>
+<li>Fix IDE symbol search for namespaced symbols that start with a lowercase letter; this usually means namespaced functions.</li>
+<li>Fix hh_client crash on shutdown in some situations</li>
+<li>Fix crash when an unsupported experimental feature was enabled</li>
+</ul>
+<p>发行说明</p>
+<ul>
+<li><a href="http://hhvm.com/blog/2018/08/15/hhvm-3.27.2.html" target="_blank" rel="noopener">http://hhvm.com/blog/2018/08/15/hhvm-3.27.2.html</a></li>
+<li><a href="https://github.com/facebook/hhvm/releases/tag/HHVM-3.27.2" target="_blank" rel="noopener">https://github.com/facebook/hhvm/releases/tag/HHVM-3.27.2</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;HHVM 是 Facebook 推出的用来执行 PHP 代码的虚拟机，它是一个 PHP 的 JIT(Just-In-Time) 编译器，同时具有产生快速代码和即时编译的优点。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
+    
+    
+      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
+    
+      <category term="HHVM" scheme="http://www.iooeo.com/tags/HHVM/"/>
+    
+  </entry>
   
   <entry>
     <title>PHP 7.1.21 和 7.2.9 正式发布，多项内容修复</title>
@@ -1036,46 +1075,6 @@
       <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
     
       <category term="Swoole" scheme="http://www.iooeo.com/tags/Swoole/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>yii2 3.0.0-alpha1 发布，高性能 PHP 框架</title>
-    <link href="http://www.iooeo.com/2018/06/12/yii2-3-0-0-alpha1-%E5%8F%91%E5%B8%83%EF%BC%8C%E9%AB%98%E6%80%A7%E8%83%BD-PHP-%E6%A1%86%E6%9E%B6/"/>
-    <id>http://www.iooeo.com/2018/06/12/yii2-3-0-0-alpha1-发布，高性能-PHP-框架/</id>
-    <published>2018-06-12T01:15:01.000Z</published>
-    <updated>2018-06-12T01:20:12.555Z</updated>
-    
-    <content type="html"><![CDATA[<p>yii2 3.0.0-alpha1 发布了。Yii 2 完全根据 Yii 1.1 版本重写，后者是最流行的 PHP 框架之一。Yii 2 继承了 Yii 的简洁、快速、和高扩展性。Yii 2 需要 PHP 5.4，并且拥有现代 Web 应用开发中最好的实例和协议。<br><a id="more"></a><br>更新内容：</p>
-<ul>
-<li>Bug #16065: Remove using date.timezone at yii\base\Application, use date_default_timezone_get() instead (sashsvamir)</li>
-<li>Bug #12539: yii\filters\ContentNegotiator now generates 406 ‘Not Acceptable’ instead of 415 ‘Unsupported Media Type’ on content-type negotiation fail (PowerGamer1)</li>
-<li>Bug #14458: Fixed yii\filters\VerbFilter uses case-insensitive comparison for the HTTP method name (klimov-paul)</li>
-<li>Enh #879: Caching implementation refactored according to PSR-16 ‘Simple Cache’ specification (klimov-paul)</li>
-<li>Enh #11328: Added support for PSR-7 ‘HTTP Message’ (klimov-paul)</li>
-</ul>
-<p>完整更新内容请查看 <a href="https://github.com/yiisoft/yii2/blob/3.0.0-alpha1/framework/CHANGELOG.md" target="_blank" rel="noopener">ChangeLog</a>。</p>
-<p>下载地址：</p>
-<ul>
-<li><a href="https://github.com/yiisoft/yii2/archive/3.0.0-alpha1.zip" target="_blank" rel="noopener">Source code (zip)</a></li>
-<li><a href="https://github.com/yiisoft/yii2/archive/3.0.0-alpha1.tar.gz" target="_blank" rel="noopener">Source code (tar.gz)</a></li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;yii2 3.0.0-alpha1 发布了。Yii 2 完全根据 Yii 1.1 版本重写，后者是最流行的 PHP 框架之一。Yii 2 继承了 Yii 的简洁、快速、和高扩展性。Yii 2 需要 PHP 5.4，并且拥有现代 Web 应用开发中最好的实例和协议。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="PHP" scheme="http://www.iooeo.com/categories/PHP/"/>
-    
-      <category term="Yii2" scheme="http://www.iooeo.com/categories/PHP/Yii2/"/>
-    
-    
-      <category term="PHP" scheme="http://www.iooeo.com/tags/PHP/"/>
-    
-      <category term="Yii2" scheme="http://www.iooeo.com/tags/Yii2/"/>
     
   </entry>
   
